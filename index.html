@@ -8,375 +8,191 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080c12;--bg2:#0d1220;--surface:#141d2e;--surface2:#1a2540;
+  --border:rgba(100,130,200,0.12);--border2:rgba(100,130,200,0.25);
+  --gold:#c8a96e;--gold2:#e8c98e;--gold-dim:rgba(200,169,110,0.13);
+  --cyan:#4fc3c3;--cyan-dim:rgba(79,195,195,0.11);
+  --text:#e8eaf0;--text2:#9aa3b8;--text3:#5a6480;
+  --green:#4ade80;--green-bg:rgba(74,222,128,0.09);
+  --blue:#60a5fa;--blue-bg:rgba(96,165,250,0.09);
+  --amber:#fbbf24;--amber-bg:rgba(251,191,36,0.09);
+  --purple:#a78bfa;--purple-bg:rgba(167,139,250,0.09);
+  --red:#f87171;--red-bg:rgba(248,113,113,0.09);
+  --gray-bg:rgba(148,163,184,0.07);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% 10%,rgba(79,195,195,0.035) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(200,169,110,0.035) 0%,transparent 60%);pointer-events:none;z-index:0}
+a{color:inherit;text-decoration:none}
 
-:root {
-  --bg: #080c12;
-  --bg2: #0d1220;
-  --bg3: #111827;
-  --surface: #141d2e;
-  --surface2: #1a2540;
-  --border: rgba(100,130,200,0.12);
-  --border2: rgba(100,130,200,0.22);
-  --gold: #c8a96e;
-  --gold2: #e8c98e;
-  --gold-dim: rgba(200,169,110,0.15);
-  --cyan: #4fc3c3;
-  --cyan-dim: rgba(79,195,195,0.12);
-  --text: #e8eaf0;
-  --text2: #9aa3b8;
-  --text3: #5a6480;
-  --green: #4ade80;
-  --green-bg: rgba(74,222,128,0.1);
-  --blue: #60a5fa;
-  --blue-bg: rgba(96,165,250,0.1);
-  --amber: #fbbf24;
-  --amber-bg: rgba(251,191,36,0.1);
-  --purple: #a78bfa;
-  --purple-bg: rgba(167,139,250,0.1);
-  --red: #f87171;
-  --red-bg: rgba(248,113,113,0.1);
-  --gray-bg: rgba(148,163,184,0.08);
-}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(8,12,18,0.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:54px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--gold);letter-spacing:0.02em}
 
-html { scroll-behavior: smooth; }
+/* TAB BAR */
+.tab-bar{display:flex;gap:2px;background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;overflow-x:auto;scrollbar-width:none}
+.tab-bar::-webkit-scrollbar{display:none}
+.tab-btn{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--text3);padding:14px 18px;border:none;background:transparent;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.18s;display:flex;align-items:center;gap:7px}
+.tab-btn:hover{color:var(--text2)}
+.tab-btn.active{color:var(--cyan);border-bottom-color:var(--cyan)}
 
-body {
-  font-family: 'Outfit', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+/* PANELS */
+.panel{display:none;max-width:1100px;margin:0 auto;padding:40px 24px 60px;animation:fadeIn 0.25s ease}
+.panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* Background constellation effect */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(79,195,195,0.04) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(200,169,110,0.04) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 60% at 50% 50%, rgba(96,165,250,0.02) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
+/* HERO */
+.hero{text-align:center;padding:48px 0 40px;border-bottom:1px solid var(--border);margin-bottom:36px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);padding:5px 14px;border-radius:20px;margin-bottom:22px}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5.5vw,60px);font-weight:300;line-height:1.1;color:var(--text);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:15px;color:var(--text2);font-weight:300;max-width:620px;line-height:1.75;margin:0 auto 26px}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.hero-link{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);background:var(--surface);border:1px solid var(--border2);padding:6px 14px;border-radius:20px;transition:all 0.18s;display:flex;align-items:center;gap:6px}
+.hero-link:hover{color:var(--gold);border-color:rgba(200,169,110,0.35);background:var(--gold-dim)}
+.hero-link .dot{width:5px;height:5px;border-radius:50%}
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+/* STATS */
+.stats-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:36px}
+.stat-cell{background:var(--bg2);padding:20px 16px;text-align:center;transition:background 0.18s}
+.stat-cell:hover{background:var(--surface)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:var(--gold);line-height:1}
+.stat-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-top:5px;text-transform:uppercase;letter-spacing:0.1em}
 
-/* ── NAV ── */
-nav {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(8,12,18,0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 24px;
-}
-.nav-inner {
-  max-width: 1100px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  height: 56px;
-}
-.nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-weight: 600;
-  color: var(--gold); letter-spacing: 0.02em;
-}
-.nav-links { display: flex; gap: 6px; }
-.nav-link {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--text3);
-  padding: 6px 12px; border-radius: 6px;
-  text-decoration: none; letter-spacing: 0.05em;
-  transition: all 0.2s;
-}
-.nav-link:hover { color: var(--cyan); background: var(--cyan-dim); }
+/* SECTION HEADERS */
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.12em}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text)}
 
-/* ── HERO ── */
-.hero {
-  padding: 80px 0 60px;
-  border-bottom: 1px solid var(--border);
-  text-align: center;
-}
-.hero-sub { margin-left: auto; margin-right: auto; }
-.hero-meta { justify-content: center; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--cyan);
-  background: var(--cyan-dim);
-  border: 1px solid rgba(79,195,195,0.2);
-  padding: 5px 14px; border-radius: 20px;
-  margin-bottom: 24px;
-  animation: fadeUp 0.6s ease both;
-}
-.hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); animation: pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+/* GOAL CARDS */
+.goals-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.goal-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;position:relative;overflow:hidden;transition:border-color 0.18s,transform 0.18s}
+.goal-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.goal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.goal-card.c-gold::before{background:linear-gradient(90deg,var(--gold),transparent)}
+.goal-card.c-cyan::before{background:linear-gradient(90deg,var(--cyan),transparent)}
+.goal-card.c-green::before{background:linear-gradient(90deg,var(--green),transparent)}
+.goal-card.c-purple::before{background:linear-gradient(90deg,var(--purple),transparent)}
+.goal-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:9px}
+.goal-title{font-size:13px;font-weight:500;color:var(--text);line-height:1.4}
+.chip{font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+.chip-gold{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(251,191,36,0.2)}
+.chip-cyan{background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2)}
+.chip-green{background:var(--green-bg);color:var(--green);border:1px solid rgba(74,222,128,0.2)}
+.chip-purple{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(167,139,250,0.2)}
+.goal-detail{font-size:12px;color:var(--text2);line-height:1.6}
+.goal-deadline{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-top:12px;padding-top:11px;border-top:1px solid var(--border)}
 
-.hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 6vw, 64px);
-  font-weight: 300; line-height: 1.1;
-  color: var(--text);
-  animation: fadeUp 0.6s 0.1s ease both;
-}
-.hero h1 em { font-style: italic; color: var(--gold); }
-.hero-sub {
-  font-size: 16px; color: var(--text2); font-weight: 300;
-  max-width: 620px; line-height: 1.7; margin-top: 16px;
-  animation: fadeUp 0.6s 0.2s ease both;
-}
-.hero-meta {
-  display: flex; flex-wrap: wrap; gap: 20px; margin-top: 28px;
-  animation: fadeUp 0.6s 0.3s ease both;
-}
-.hero-meta-item {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--text3);
-  display: flex; align-items: center; gap: 6px;
-}
-.hero-meta-item span { color: var(--gold); }
+/* FILTER BAR */
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.filter-btn{font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 13px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:6px}
+.filter-btn:hover{color:var(--text);border-color:rgba(100,130,200,0.4)}
+.filter-btn.active{background:var(--surface2);color:var(--text);border-color:rgba(100,130,200,0.4)}
+.fcount{background:rgba(100,130,200,0.13);color:var(--text3);border-radius:8px;padding:1px 6px;font-size:10px}
+.filter-btn.active .fcount{background:rgba(79,195,195,0.18);color:var(--cyan)}
 
-@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+/* SEARCH */
+.search-bar{width:100%;padding:10px 16px;background:var(--surface);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'Outfit',sans-serif;font-size:14px;margin-bottom:14px;outline:none;transition:border-color 0.2s}
+.search-bar:focus{border-color:rgba(79,195,195,0.4)}
+.search-bar::placeholder{color:var(--text3)}
 
-/* ── STATS STRIP ── */
-.stats-strip {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1px; background: var(--border);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 0;
-}
-.stat-cell {
-  background: var(--bg2); padding: 24px 20px;
-  text-align: center;
-  transition: background 0.2s;
-}
-.stat-cell:hover { background: var(--surface); }
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 40px; font-weight: 600;
-  color: var(--gold); line-height: 1;
-}
-.stat-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--text3);
-  margin-top: 6px; text-transform: uppercase; letter-spacing: 0.1em;
-}
+/* PROF CARDS */
+.prof-list{display:flex;flex-direction:column;gap:8px}
+.prof-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.15s}
+.prof-card:hover{border-color:var(--border2)}
+.prof-card.open{border-color:rgba(100,130,200,0.35)}
+.prof-row{display:flex;align-items:center;gap:14px;padding:13px 16px;cursor:pointer;user-select:none}
+.prof-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;flex-shrink:0}
+.prof-info{flex:1;min-width:0}
+.prof-name{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prof-inst{font-size:11px;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prof-right{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.status-pill{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 9px;border-radius:12px;white-space:nowrap}
+.sent-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
+.chevron{width:13px;height:13px;color:var(--text3);transition:transform 0.2s;flex-shrink:0}
+.prof-card.open .chevron{transform:rotate(180deg)}
+.prof-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border)}
+.prof-card.open .prof-body{display:block}
+.pbg{padding-top:14px;display:grid;gap:12px}
+.fl{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-bottom:3px}
+.fv{font-size:13px;color:var(--text);line-height:1.6}
+.fq{font-style:italic;color:var(--text2);border-left:2px solid var(--gold);padding-left:11px;font-size:13px;line-height:1.6}
+.action-tag{display:inline-flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);color:var(--cyan);border-radius:6px;padding:5px 11px;font-size:12px}
+.timeline-tag{display:inline-flex;align-items:center;gap:6px;background:var(--gold-dim);border:1px solid rgba(200,169,110,0.22);color:var(--gold);border-radius:6px;padding:5px 11px;font-family:'JetBrains Mono',monospace;font-size:11px}
+.no-results{text-align:center;padding:40px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3)}
+.hidden{display:none!important}
 
-/* ── SECTIONS ── */
-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
-.section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
-.section-tag {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--cyan);
-  text-transform: uppercase; letter-spacing: 0.12em;
-}
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px; font-weight: 400; color: var(--text);
-}
+.s-confirmed{background:var(--green-bg);color:var(--green);border:1px solid rgba(74,222,128,0.22)}
+.s-warm{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(96,165,250,0.22)}
+.s-engaged{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(251,191,36,0.18)}
+.s-awaiting{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(167,139,250,0.18)}
+.s-ooo{background:rgba(100,116,139,0.13);color:#94a3b8;border:1px solid rgba(100,116,139,0.18)}
+.s-no-position{background:var(--gray-bg);color:var(--text3);border:1px solid var(--border)}
+.s-declined{background:var(--red-bg);color:var(--red);border:1px solid rgba(248,113,113,0.18)}
+.av-confirmed{background:rgba(74,222,128,0.1);color:var(--green)}
+.av-warm{background:rgba(96,165,250,0.1);color:var(--blue)}
+.av-engaged{background:rgba(251,191,36,0.1);color:var(--amber)}
+.av-awaiting{background:rgba(167,139,250,0.1);color:var(--purple)}
+.av-ooo{background:rgba(100,116,139,0.1);color:#94a3b8}
+.av-no-position{background:rgba(148,163,184,0.08);color:var(--text3)}
+.av-declined{background:rgba(248,113,113,0.08);color:var(--red)}
 
-/* ── GOALS ── */
-.goals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-.goal-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px; padding: 20px;
-  position: relative; overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.goal-card:hover { border-color: var(--border2); transform: translateY(-2px); }
-.goal-card::before {
-  content: ''; position: absolute;
-  top: 0; left: 0; right: 0; height: 2px;
-}
-.goal-card.priority::before { background: linear-gradient(90deg, var(--gold), transparent); }
-.goal-card.active::before { background: linear-gradient(90deg, var(--cyan), transparent); }
-.goal-card.pending::before { background: linear-gradient(90deg, var(--purple), transparent); }
-.goal-card.complete::before { background: linear-gradient(90deg, var(--green), transparent); }
+/* PAPER CARDS */
+.paper-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-bottom:32px}
+.paper-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;position:relative;overflow:hidden;transition:border-color 0.18s,transform 0.18s}
+.paper-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.paper-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.paper-card.target::before{background:linear-gradient(90deg,var(--cyan),transparent)}
+.paper-card.finding::before{background:linear-gradient(90deg,var(--gold),transparent)}
+.paper-card.alt::before{background:linear-gradient(90deg,var(--purple),transparent)}
+.ptag{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px}
+.ptag.t-cyan{color:var(--cyan)} .ptag.t-gold{color:var(--gold)} .ptag.t-purple{color:var(--purple)}
+.ptitle{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--text);margin-bottom:8px;line-height:1.3}
+.pdesc{font-size:13px;color:var(--text2);line-height:1.65}
+.pfoot{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.pdoc-item{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:8px;transition:border-color 0.15s;gap:12px}
+.pdoc-item:hover{border-color:var(--border2)}
+.pdoc-name{font-size:13px;color:var(--text);font-weight:500}
+.pdoc-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-top:2px}
+.pdoc-link{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);padding:5px 12px;border-radius:6px;transition:all 0.15s;white-space:nowrap;flex-shrink:0}
+.pdoc-link:hover{background:rgba(79,195,195,0.2)}
 
-.goal-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
-.goal-title { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.4; }
-.goal-chip {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px; padding: 3px 8px; border-radius: 10px;
-  white-space: nowrap; flex-shrink: 0;
-}
-.chip-priority { background: var(--amber-bg); color: var(--amber); border: 1px solid rgba(251,191,36,0.2); }
-.chip-active { background: var(--cyan-dim); color: var(--cyan); border: 1px solid rgba(79,195,195,0.2); }
-.chip-pending { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(167,139,250,0.2); }
-.chip-complete { background: var(--green-bg); color: var(--green); border: 1px solid rgba(74,222,128,0.2); }
+/* CALENDAR */
+.events-list{display:flex;flex-direction:column;gap:8px}
+.ev-item{display:flex;gap:14px;padding:13px 16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;align-items:flex-start;transition:border-color 0.15s}
+.ev-item:hover{border-color:var(--border2)}
+.ev-date-col{flex-shrink:0;text-align:center;min-width:46px}
+.ev-day{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;line-height:1}
+.ev-mon{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em}
+.ev-body{flex:1}
+.ev-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px}
+.ev-detail{font-size:12px;color:var(--text2);line-height:1.5}
+.ev-cat{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:10px;white-space:nowrap;margin-top:6px;display:inline-block}
+.ec-gold{background:var(--amber-bg);color:var(--amber)}
+.ec-cyan{background:var(--cyan-dim);color:var(--cyan)}
+.ec-green{background:var(--green-bg);color:var(--green)}
+.ec-purple{background:var(--purple-bg);color:var(--purple)}
+.ec-red{background:var(--red-bg);color:var(--red)}
+.ev-item.past .ev-title{color:var(--text2)}
+.ev-item.past .ev-day{color:var(--text3)}
+.ev-item.today-ev{border-color:rgba(79,195,195,0.35);background:rgba(79,195,195,0.04)}
 
-.goal-detail { font-size: 13px; color: var(--text2); line-height: 1.6; }
-.goal-deadline {
-  display: flex; align-items: center; gap: 6px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--text3);
-  margin-top: 12px; padding-top: 12px;
-  border-top: 1px solid var(--border);
-}
-.goal-deadline::before { content: '◷'; font-size: 11px; }
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.leg-item{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
+.leg-dot{width:8px;height:8px;border-radius:50%}
 
-/* ── FILTER BAR ── */
-.filter-bar {
-  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;
-}
-.filter-btn {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--border2);
-  background: transparent; color: var(--text3);
-  cursor: pointer; transition: all 0.15s;
-  display: flex; align-items: center; gap: 6px;
-}
-.filter-btn:hover { color: var(--text); border-color: rgba(100,130,200,0.4); }
-.filter-btn.active { background: var(--surface2); color: var(--text); border-color: rgba(100,130,200,0.4); }
-.filter-count {
-  background: rgba(100,130,200,0.15);
-  color: var(--text3); border-radius: 8px;
-  padding: 1px 6px; font-size: 10px;
-}
-.filter-btn.active .filter-count { background: rgba(79,195,195,0.2); color: var(--cyan); }
+/* FOOTER */
+footer{text-align:center;padding:28px 24px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);border-top:1px solid var(--border)}
+footer a{color:var(--gold)}
+footer a:hover{color:var(--gold2)}
 
-/* ── PROF CARDS ── */
-.prof-list { display: flex; flex-direction: column; gap: 8px; }
-.prof-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px; overflow: hidden;
-  transition: border-color 0.15s;
-}
-.prof-card:hover { border-color: var(--border2); }
-.prof-card.open { border-color: rgba(100,130,200,0.35); }
-
-.prof-row {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 18px; cursor: pointer;
-  user-select: none;
-}
-.prof-av {
-  width: 38px; height: 38px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; flex-shrink: 0;
-}
-.prof-info { flex: 1; min-width: 0; }
-.prof-name {
-  font-size: 14px; font-weight: 500; color: var(--text);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.prof-inst {
-  font-size: 12px; color: var(--text3);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.prof-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.status-pill {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; padding: 3px 10px; border-radius: 12px;
-  white-space: nowrap;
-}
-.sent-date {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--text3);
-}
-.chevron {
-  width: 14px; height: 14px; color: var(--text3);
-  transition: transform 0.2s; flex-shrink: 0;
-}
-.prof-card.open .chevron { transform: rotate(180deg); }
-
-.prof-body {
-  display: none; padding: 0 18px 18px;
-  border-top: 1px solid var(--border);
-}
-.prof-card.open .prof-body { display: block; }
-.prof-body-grid { padding-top: 16px; display: grid; gap: 14px; }
-.field-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--text3);
-  margin-bottom: 4px;
-}
-.field-value { font-size: 13px; color: var(--text); line-height: 1.6; }
-.field-quote {
-  font-style: italic; color: var(--text2);
-  border-left: 2px solid var(--gold);
-  padding-left: 12px; font-size: 13px; line-height: 1.6;
-}
-.action-tag {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--cyan-dim);
-  border: 1px solid rgba(79,195,195,0.2);
-  color: var(--cyan); border-radius: 6px;
-  padding: 5px 12px; font-size: 12px;
-}
-.timeline-tag {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--gold-dim);
-  border: 1px solid rgba(200,169,110,0.25);
-  color: var(--gold); border-radius: 6px;
-  padding: 5px 12px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-}
-
-/* STATUS PILL VARIANTS */
-.s-confirmed { background: var(--green-bg); color: var(--green); border: 1px solid rgba(74,222,128,0.25); }
-.s-warm { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(96,165,250,0.25); }
-.s-engaged { background: var(--amber-bg); color: var(--amber); border: 1px solid rgba(251,191,36,0.2); }
-.s-awaiting { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(167,139,250,0.2); }
-.s-ooo { background: rgba(100,116,139,0.15); color: #94a3b8; border: 1px solid rgba(100,116,139,0.2); }
-.s-no-position { background: var(--gray-bg); color: var(--text3); border: 1px solid var(--border); }
-.s-declined { background: var(--red-bg); color: var(--red); border: 1px solid rgba(248,113,113,0.2); }
-
-/* AVATAR VARIANTS */
-.av-confirmed { background: rgba(74,222,128,0.12); color: var(--green); }
-.av-warm { background: rgba(96,165,250,0.12); color: var(--blue); }
-.av-engaged { background: rgba(251,191,36,0.12); color: var(--amber); }
-.av-awaiting { background: rgba(167,139,250,0.12); color: var(--purple); }
-.av-ooo { background: rgba(100,116,139,0.12); color: #94a3b8; }
-.av-no-position { background: rgba(148,163,184,0.1); color: var(--text3); }
-.av-declined { background: rgba(248,113,113,0.1); color: var(--red); }
-
-/* ── FOOTER ── */
-footer {
-  padding: 32px 0; text-align: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--text3);
-}
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { color: var(--gold2); }
-
-/* ── SEARCH ── */
-.search-bar {
-  width: 100%; padding: 10px 16px;
-  background: var(--surface); border: 1px solid var(--border2);
-  border-radius: 8px; color: var(--text);
-  font-family: 'Outfit', sans-serif; font-size: 14px;
-  margin-bottom: 16px; outline: none;
-  transition: border-color 0.2s;
-}
-.search-bar:focus { border-color: rgba(79,195,195,0.4); }
-.search-bar::placeholder { color: var(--text3); }
-
-/* ── NO RESULTS ── */
-.no-results {
-  text-align: center; padding: 40px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; color: var(--text3);
-}
-
-/* ── SCROLL ANIMATION ── */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* ── RESPONSIVE ── */
 @media(max-width:600px){
   .prof-right .sent-date,.prof-right .chevron{display:none}
-  .hero h1{font-size:32px}
-  .stats-strip{grid-template-columns:repeat(2,1fr)}
-  .nav-links{display:none}
+  .hero h1{font-size:30px}
 }
 </style>
 </head>
@@ -385,314 +201,305 @@ footer a:hover { color: var(--gold2); }
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">PhD Quest</div>
-    <div class="nav-links">
-      <a href="#goals" class="nav-link">Goals</a>
-      <a href="#outreach" class="nav-link">Outreach</a>
-      <a href="#paper" class="nav-link">Paper</a>
-    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)">Asad Ikram · 2026</div>
   </div>
 </nav>
 
-<div class="container">
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('overview',this)">&#9672; Overview</button>
+  <button class="tab-btn" onclick="switchTab('outreach',this)">&#9705; Outreach</button>
+  <button class="tab-btn" onclick="switchTab('papers',this)">&#9671; Papers &amp; Docs</button>
+  <button class="tab-btn" onclick="switchTab('calendar',this)">&#9711; Calendar</button>
+</div>
+
+<!-- TAB 1: OVERVIEW -->
+<div class="panel active" id="panel-overview">
+
   <div class="hero">
-    <div class="hero-badge">Active campaign · April 2026</div>
+    <div class="hero-badge">Active campaign &middot; April 2026</div>
     <h1>The <em>PhD Quest</em><br>of Asad Ikram</h1>
     <p class="hero-sub">Pursuing a fully funded PhD in computational social science — cross-platform measurement invariance, social listening validity, and bias-corrected public opinion estimation from social media data.</p>
-    <div class="hero-meta">
-      <div class="hero-meta-item">Chevening Scholar <span>2024/25</span></div>
-      <div class="hero-meta-item">MSc Data Analytics <span>Distinction · Portsmouth</span></div>
-      <div class="hero-meta-item">CTO <span>ArtemisAI</span></div>
-      <div class="hero-meta-item">Data Engineer <span>M+C Saatchi Fluency</span></div>
+    <div class="hero-links">
+      <a href="https://www.chevening.org/" target="_blank" class="hero-link">
+        <span class="dot" style="background:var(--gold)"></span>Chevening Scholar 2024/25
+      </a>
+      <a href="https://www.port.ac.uk/" target="_blank" class="hero-link">
+        <span class="dot" style="background:var(--cyan)"></span>MSc Data Analytics &middot; Distinction &middot; Portsmouth
+      </a>
+      <a href="https://www.artemisai.co.uk/" target="_blank" class="hero-link">
+        <span class="dot" style="background:var(--purple)"></span>CTO &middot; ArtemisAI
+      </a>
+      <a href="https://www.mcsaatchifluency.com/" target="_blank" class="hero-link">
+        <span class="dot" style="background:var(--blue)"></span>Data Engineer &middot; M+C Saatchi Fluency
+      </a>
+    </div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="stat-cell"><div class="stat-num">57</div><div class="stat-label">Contacted</div></div>
+    <div class="stat-cell"><div class="stat-num">24</div><div class="stat-label">Replies</div></div>
+    <div class="stat-cell"><div class="stat-num">7</div><div class="stat-label">Warm / positive</div></div>
+    <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label">Confirmed supervisors</div></div>
+  </div>
+
+  <div class="sec-head"><span class="sec-tag">Active</span><h2 class="sec-title">Goals &amp; Milestones</h2></div>
+  <div class="goals-grid">
+    <div class="goal-card c-gold">
+      <div class="goal-top"><div class="goal-title">ICWSM 2027 paper — with Dr Ella Haig</div><span class="chip chip-gold">Priority</span></div>
+      <div class="goal-detail">Convert MSc dissertation (279k posts, BERT F1 0.878, cross-platform divergence) into a short paper. Target: ICWSM Round 1 ~May 2026. Co-author: Dr Ella Haig, University of Portsmouth.</div>
+      <div class="goal-deadline">&#9711; Must submit before Oct 2026 Edinburgh deadline</div>
+    </div>
+    <div class="goal-card c-cyan">
+      <div class="goal-top"><div class="goal-title">Edinburgh CDT in Responsible NLP</div><span class="chip chip-cyan">Apply Oct 2026</span></div>
+      <div class="goal-detail">Prof. Walid Magdy (SMASH) confirmed supervisor. Dr Björn Ross confirmed strong fit. Fully funded — stipend + fees waived. Sept 2026 start.</div>
+      <div class="goal-deadline">&#9711; Application window opens Oct 2026</div>
+    </div>
+    <div class="goal-card c-green">
+      <div class="goal-top"><div class="goal-title">Master Research Proposal — FINAL v4</div><span class="chip chip-green">Complete</span></div>
+      <div class="goal-detail"><em>Platform Measurement Invariance and Bias-Corrected Public Opinion Estimation.</em> Multi-group CFA, PABD protocol, Bayesian correction, TSE framework, BES/UKHLS validation. 19 refs.</div>
+      <div class="goal-deadline">&#9711; Asad_Ikram_PhD_Proposal_FINAL_v4.docx</div>
+    </div>
+    <div class="goal-card c-purple">
+      <div class="goal-top"><div class="goal-title">USC Ferrara + CMU Carley — Fall 2026</div><span class="chip chip-purple">Oct 2026</span></div>
+      <div class="goal-detail">Both replied positively. USC: Khoury CS. CMU: Societal Computing. Apply-in-fall for 2027 intake. List both as supervisors.</div>
+      <div class="goal-deadline">&#9711; Apply October 2026</div>
+    </div>
+    <div class="goal-card c-purple">
+      <div class="goal-top"><div class="goal-title">SOUNDS Observatory — Saarland</div><span class="chip chip-purple">Jun 2026</span></div>
+      <div class="goal-detail">Prof. Ingmar Weber replied warmly. PhD + data engineer positions expected summer 2026. Check sounds-observatory.org.</div>
+      <div class="goal-deadline">&#9711; Check June 2026</div>
+    </div>
+    <div class="goal-card c-cyan">
+      <div class="goal-top"><div class="goal-title">Matti Nelimarkka — Helsinki follow-up</div><span class="chip chip-cyan">Reply sent</span></div>
+      <div class="goal-detail">Replied asking for concrete direction. Detailed reply sent 14 Apr — measurement invariance (CFA), causal decomposition, Bayesian correction vs BES data. Awaiting response.</div>
+      <div class="goal-deadline">&#9711; Awaiting Nelimarkka reply</div>
     </div>
   </div>
 </div>
 
-<div class="stats-strip">
-  <div class="stat-cell">
-    <div class="stat-num" id="stat-sent">57</div>
-    <div class="stat-label">Professors contacted</div>
-  </div>
-  <div class="stat-cell">
-    <div class="stat-num" id="stat-replies">24</div>
-    <div class="stat-label">Replies received</div>
-  </div>
-  <div class="stat-cell">
-    <div class="stat-num" id="stat-warm">7</div>
-    <div class="stat-label">Warm / positive</div>
-  </div>
-  <div class="stat-cell">
-    <div class="stat-num" id="stat-confirmed">2</div>
-    <div class="stat-label">Confirmed supervisors</div>
-  </div>
-
+<!-- TAB 2: OUTREACH -->
+<div class="panel" id="panel-outreach">
+  <div class="sec-head"><span class="sec-tag">Log</span><h2 class="sec-title">Professor Outreach</h2></div>
+  <input type="text" class="search-bar" id="search" placeholder="Search by name, institution, or topic..." oninput="renderProfs()">
+  <div class="filter-bar" id="filter-bar"></div>
+  <div class="prof-list" id="prof-list"></div>
+  <div class="no-results hidden" id="no-results">No professors match this filter.</div>
 </div>
 
-<div class="container">
+<!-- TAB 3: PAPERS & DOCS -->
+<div class="panel" id="panel-papers">
+  <div class="sec-head"><span class="sec-tag">Research</span><h2 class="sec-title">Papers &amp; Reference Documents</h2></div>
 
-  <!-- GOALS -->
-  <section id="goals">
-    <div class="section-header reveal">
-      <span class="section-tag">01 /</span>
-      <h2 class="section-title">Active Goals &amp; Milestones</h2>
+  <div class="paper-grid">
+    <div class="paper-card target">
+      <div class="ptag t-cyan">Target venue</div>
+      <div class="ptitle">ICWSM 2027</div>
+      <div class="pdesc">International AAAI Conference on Web and Social Media. Primary venue for CSS and social media research. Round 1 submission estimated May 2026. Co-author: Dr Ella Haig.</div>
+      <div class="pfoot"><span>Short paper track</span><span>May 2026 deadline</span></div>
     </div>
-    <div class="goals-grid reveal">
-
-      <div class="goal-card priority">
-        <div class="goal-top">
-          <div class="goal-title">ICWSM 2027 paper — with Dr Ella Haig</div>
-          <span class="goal-chip chip-priority">Priority</span>
-        </div>
-        <div class="goal-detail">Convert MSc dissertation (279k posts, BERT F1 0.878, cross-platform sentiment divergence) into a short paper. Target: ICWSM Round 1 ~May 2026. Co-author: Dr Ella Haig, University of Portsmouth. Central contribution: cross-platform divergence is structural, directional, and large enough to reverse conclusions.</div>
-        <div class="goal-deadline">Must submit before Oct 2026 Edinburgh scholarship deadline</div>
-      </div>
-
-      <div class="goal-card active">
-        <div class="goal-top">
-          <div class="goal-title">Edinburgh CDT in Responsible NLP</div>
-          <span class="goal-chip chip-active">Apply Oct 2026</span>
-        </div>
-        <div class="goal-detail">Prof. Walid Magdy (SMASH) confirmed as supervisor. Dr Björn Ross (Edinburgh) confirmed strong fit. Fully funded — stipend + fees. Edinburgh CDT in Designing Responsible NLP starts September 2026. Application deadline January 2027 cycle.</div>
-        <div class="goal-deadline">Application window opens Oct 2026</div>
-      </div>
-
-      <div class="goal-card complete">
-        <div class="goal-top">
-          <div class="goal-title">Master Research Proposal — FINAL v4</div>
-          <span class="goal-chip chip-complete">Complete</span>
-        </div>
-        <div class="goal-detail">Title: <em>Platform Measurement Invariance and Bias-Corrected Public Opinion Estimation from Social Media Data.</em> Sections: Motivation, Background, Lit Review (TSE framework, Piccardi 2025), RQs, Originality, Methodology (multi-group CFA, PABD, Bayesian correction), Ethics, Timeline. 19 refs A–W.</div>
-        <div class="goal-deadline">Asad_Ikram_PhD_Proposal_FINAL_v4.docx</div>
-      </div>
-
-      <div class="goal-card pending">
-        <div class="goal-top">
-          <div class="goal-title">USC Ferrara + CMU Carley — Fall 2026</div>
-          <span class="goal-chip chip-pending">Oct 2026</span>
-        </div>
-        <div class="goal-detail">Both supervisors replied positively and confirmed apply-in-fall for 2027 intake. USC: Khoury College of Computer Sciences. CMU: School of Computer Science, Societal Computing programme. List both as potential supervisors.</div>
-        <div class="goal-deadline">Apply October 2026</div>
-      </div>
-
-      <div class="goal-card pending">
-        <div class="goal-top">
-          <div class="goal-title">SOUNDS Observatory — Ingmar Weber, Saarland</div>
-          <span class="goal-chip chip-pending">Jun 2026</span>
-        </div>
-        <div class="goal-detail">Prof. Weber replied warmly. PhD + data engineer positions linked to SOUNDS Observatory expected summer 2026. Also potential data engineer roles before PhD start.</div>
-        <div class="goal-deadline">Check website June 2026</div>
-      </div>
-
-      <div class="goal-card active">
-        <div class="goal-top">
-          <div class="goal-title">Matti Nelimarkka — Helsinki follow-up</div>
-          <span class="goal-chip chip-active">Reply sent</span>
-        </div>
-        <div class="goal-detail">Nelimarkka replied asking for concrete research direction. Detailed reply sent 14 Apr clarifying: measurement invariance testing (multi-group CFA), causal decomposition (matched natural experiments), Bayesian correction validated against BES data. Awaiting his response.</div>
-        <div class="goal-deadline">Awaiting Nelimarkka reply · Helsinki window open</div>
-      </div>
-
+    <div class="paper-card finding">
+      <div class="ptag t-gold">Central finding</div>
+      <div class="ptitle">Cross-platform sentiment divergence is structural</div>
+      <div class="pdesc">Same UK policy events produced opposite sentiment conclusions across Twitter, Reddit, YouTube, Quora. BERT macro-F1 0.878 on 279,000 posts confirms divergences are systematic and learnable — not noise.</div>
+      <div class="pfoot"><span>MSc Dissertation · Portsmouth 2025</span></div>
     </div>
-  </section>
-
-  <!-- PAPER -->
-  <section id="paper">
-    <div class="section-header reveal">
-      <span class="section-tag">02 /</span>
-      <h2 class="section-title">Research Paper Pipeline</h2>
-    </div>
-    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
-
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Target venue</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text);margin-bottom:6px;">ICWSM 2027</div>
-        <div style="font-size:13px;color:var(--text2);line-height:1.6;">International AAAI Conference on Web and Social Media. Primary venue for computational social science and social media research. Round 1 submission estimated May 2026.</div>
-        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);">Co-author · Dr Ella Haig, Univ. of Portsmouth</div>
-        </div>
+    <div class="paper-card alt">
+      <div class="ptag t-purple">Alternative venues</div>
+      <div class="ptitle">Fallback submission targets</div>
+      <div class="pdesc" style="line-height:2.2">
+        <span style="color:var(--text)">EPJ Data Science</span> &middot; broad CSS scope<br>
+        <span style="color:var(--text)">Social Media + Society</span> &middot; platform research<br>
+        <span style="color:var(--text)">Political Communication</span> &middot; policy analytics<br>
+        <span style="color:var(--text)">Big Data &amp; Society</span> &middot; methodology focus
       </div>
-
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Central finding</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text);margin-bottom:8px;">Cross-platform sentiment divergence is structural</div>
-        <div style="font-size:13px;color:var(--text2);line-height:1.6;">Same UK policy events produced opposite sentiment conclusions across Twitter, Reddit, YouTube, Quora. Divergences are consistent, directional, and learnable — BERT macro-F1 0.878 on cross-platform corpus confirms structural origin.</div>
-      </div>
-
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),transparent);"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--purple);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Alternative venues</div>
-        <div style="font-size:13px;color:var(--text2);line-height:1.8;">
-          <span style="color:var(--text);">EPJ Data Science</span> · broad CSS scope<br>
-          <span style="color:var(--text);">Social Media + Society</span> · platform research<br>
-          <span style="color:var(--text);">Political Communication</span> · policy analytics<br>
-          <span style="color:var(--text);">Big Data &amp; Society</span> · methodology focus
-        </div>
-      </div>
-
     </div>
-  </section>
+  </div>
 
-  <!-- OUTREACH -->
-  <section id="outreach">
-    <div class="section-header reveal">
-      <span class="section-tag">03 /</span>
-      <h2 class="section-title">Professor Outreach Log</h2>
-    </div>
+  <div class="sec-head"><span class="sec-tag">Drive</span><h2 class="sec-title">Reference Documents</h2></div>
+  <p style="font-size:13px;color:var(--text2);margin-bottom:18px;line-height:1.6">Key documents from Google Drive. Click to open.</p>
 
-    <input type="text" class="search-bar reveal" id="search" placeholder="Search by name, institution, or topic…" oninput="renderProfs()">
+  <div class="pdoc-item">
+    <div><div class="pdoc-name">PhD Research Proposal — FINAL v4</div><div class="pdoc-meta">Platform Measurement Invariance and Bias-Corrected Public Opinion Estimation &middot; Apr 2026</div></div>
+    <a class="pdoc-link" href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank">Open &#8599;</a>
+  </div>
+  <div class="pdoc-item">
+    <div><div class="pdoc-name">MSc Dissertation</div><div class="pdoc-meta">Cross-platform sentiment divergence &middot; 279k posts &middot; BERT F1 0.878 &middot; Portsmouth 2025</div></div>
+    <a class="pdoc-link" href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank">Open &#8599;</a>
+  </div>
+  <div class="pdoc-item">
+    <div><div class="pdoc-name">ICWSM Paper Draft</div><div class="pdoc-meta">In preparation &middot; Co-author: Dr Ella Haig &middot; Target May 2026</div></div>
+    <a class="pdoc-link" href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank">Open &#8599;</a>
+  </div>
+  <div class="pdoc-item">
+    <div><div class="pdoc-name">Full CV — 2026</div><div class="pdoc-meta">Asad_Ikram_Full_Resume_2026.pdf &middot; Attached to all outreach emails</div></div>
+    <a class="pdoc-link" href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank">Open &#8599;</a>
+  </div>
+  <div style="text-align:center;margin-top:20px">
+    <a href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);padding:9px 20px;border-radius:8px;display:inline-block">
+      Open full Drive folder &#8599;
+    </a>
+  </div>
+</div>
 
-    <div class="filter-bar reveal" id="filter-bar"></div>
-    <div class="prof-list" id="prof-list"></div>
-    <div class="no-results hidden" id="no-results">No professors match this filter.</div>
-  </section>
-
+<!-- TAB 4: CALENDAR -->
+<div class="panel" id="panel-calendar">
+  <div class="sec-head"><span class="sec-tag">Schedule</span><h2 class="sec-title">PhD Quest Timeline</h2></div>
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--cyan)"></div>Application</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--gold)"></div>Paper / Writing</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Follow-up</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--purple)"></div>Monitor</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--red)"></div>Deadline</div>
+  </div>
+  <div class="events-list" id="events-list"></div>
 </div>
 
 <footer>
-  <div class="container">
-    <p>Asad Ikram · <a href="https://linkedin.com/in/asad-ikram98" target="_blank">linkedin.com/in/asad-ikram98</a> · <a href="https://asad-ikram-mc.github.io/portfolio" target="_blank">portfolio</a> · asad.ikram53@gmail.com</p>
-    <p style="margin-top:6px;font-size:10px;">Updated April 2026 · PhD Quest tracker</p>
+  <div style="max-width:1100px;margin:0 auto">
+    Asad Ikram &middot;
+    <a href="https://linkedin.com/in/asad-ikram98" target="_blank">LinkedIn</a> &middot;
+    <a href="https://asad-ikram-mc.github.io/portfolio" target="_blank">Portfolio</a> &middot;
+    asad.ikram53@gmail.com &middot; Updated April 2026
   </div>
 </footer>
 
 <script>
-const PROFS = [
-  {name:"Prof. Walid Magdy",inst:"University of Edinburgh · SMASH",topic:"Arabic NLP, Cross-Platform Social Media Analytics and Multilingual CSS",status:"confirmed",sent:"31 Mar 2026",summary:"Emailed SMASH group about cross-platform NLP and measurement validity research. Magdy replied asking about funding preferences, then confirmed willing to supervise. Strongly encouraged publication first — noted scholarship competition is intense.",response:"\"Yes, please list me as a potential supervisor. But I have to be honest, the competition for scholarships are crazy. Please do your best to get a publication by then, since it can support your application significantly.\"",timeline:"Apply Oct 2026 · Edinburgh CDT + scholarship deadline",action:"Get ICWSM paper submitted before Oct 2026 application. List Magdy as supervisor."},
-  {name:"Dr Björn Ross",inst:"University of Edinburgh · CDT Responsible NLP",topic:"Social Bot Detection, Misinformation Infrastructure and CSS Data Methods",status:"confirmed",sent:"17 Mar 2026",summary:"Ross replied calling it a great fit but noted timing was late. Directed to CDT in Designing Responsible NLP for the September 2026 cohort.",response:"\"This sounds like a great fit for my research! I'm afraid however that your email is coming too late in the recruitment cycle. We typically advertise PhD positions around October.\"",timeline:"CDT in Responsible NLP · Sept 2026 start · Jan 2027 deadline",action:"Apply to Edinburgh CDT. Ross is confirmed fit supervisor."},
-  {name:"Prof. Tiziano Piccardi",inst:"Johns Hopkins University",topic:"Social Media Feed Algorithms, Platform-Independent Measurement and Algorithmic Amplification Bias",status:"warm",sent:"2 Apr 2026",summary:"Piccardi's 2025 Science paper on reranking partisan content is the key methodological reference in the proposal. Replied confirming end-of-year application deadline. Warm, directed to apply formally through JHU.",response:"Confirmed end-of-year application deadline. Positive response — directed to apply formally through JHU doctoral cycle.",timeline:"Apply end-of-year 2026 · JHU formal cycle · follow up Nov 2026",action:"Draft formal JHU application. Follow up November 2026."},
-  {name:"Prof. Emilio Ferrara",inst:"USC · HUMANS Lab",topic:"LLM-Powered Disinformation, Social Bot Detection and Platform Manipulation",status:"warm",sent:"30 Mar 2026",summary:"Ferrara replied calling the background genuinely exciting. Confirmed on sabbatical — directed to apply through USC Khoury CS Fall 2026.",response:"\"Your background is genuinely exciting.\" Directed to apply through Khoury College of Computer Sciences PhD program Fall 2026.",timeline:"Apply Fall 2026 · USC Khoury CS",action:"Apply October 2026 to Khoury CS. Mention Ferrara in application."},
-  {name:"Prof. Kathleen Carley",inst:"Carnegie Mellon · CASOS / IDeaS",topic:"Social Cybersecurity, Dynamic Network Analysis and Cross-Platform Disinformation",status:"warm",sent:"30 Mar 2026",summary:"Carley replied twice: first confirming January admissions cycle for 2027 intake; then clarifying apply to School of CS, Societal Computing program, list her as supervisor. Potential fit depending on funding.",response:"\"There is a potential fit. It will depend on funding. Apply to the school of computer science but to the program in Societal Computing and you would list me as a potential supervisor.\"",timeline:"Apply Fall 2026 · CMU Societal Computing",action:"Apply October 2026. List Carley as supervisor in Societal Computing application."},
-  {name:"Dr Petter Törnberg",inst:"University of Amsterdam",topic:"LLMs, Social Media Political Communication and Generative Social Simulation",status:"warm",sent:"1 Apr 2026",summary:"Törnberg replied calling it a very strong and well-aligned profile. No open positions currently but said he would notify when something opens.",response:"\"This sounds like a very strong and well-aligned profile, and the connection you draw to questions around measurement, platform dynamics, and LLM-based analysis is compelling.\"",timeline:"No current position · will notify when opens",action:"Monitor. Follow up if no notification by September 2026."},
-  {name:"Prof. Jana Lasser",inst:"University of Graz · Complex Social Systems",topic:"Recommendation Algorithms, Misinformation Spread and Social Media as Government Policy Signal",status:"warm",sent:"2 Apr 2026",summary:"Lasser replied positively, encouraging about fit. No open positions now but ongoing grant applications may create positions. Suggested checking back.",response:"\"I have a number of ongoing grant applications that might lead to open PhD positions in the future.\"",timeline:"Check back Nov 2026 · grant results expected",action:"Follow up November 2026 on grant outcomes."},
-  {name:"Prof. Fabian Stephany",inst:"Oxford Internet Institute",topic:"Digital Labour, Platform Economies and Computational Social Science",status:"warm",sent:"Prior session",summary:"Positive response. Directed to November 2026 application cycle at OII. Strong institutional fit for CSS and platform research.",response:"Positive — directed to November 2026 OII doctoral application cycle.",timeline:"Nov 2026 · OII application cycle",action:"Apply November 2026 to OII doctoral programme."},
-  {name:"Dr Matti Nelimarkka",inst:"University of Helsinki · Social Computing Group",topic:"Computational Methods for Social Science, Digital Democracy and Cross-Platform Measurement",status:"engaged",sent:"6 Apr 2026",summary:"Nelimarkka replied asking for more concrete research direction. Noted profile is interesting but needs specificity for a 4+ year commitment. Detailed reply sent 14 Apr with concrete RQs: measurement invariance (multi-group CFA), causal decomposition, Bayesian correction.",response:"\"Your profile is interesting, but I am having a difficult time to identify what you'd like to work on the PhD in more concrete terms. As this is usually a 4+ years progress, this should be something that you find interesting.\"",timeline:"Awaiting reply · Helsinki twice-yearly application window",action:"Reply sent 14 Apr. Awaiting Nelimarkka's response."},
-  {name:"Prof. Ingmar Weber",inst:"Saarland University · I2SC / SOUNDS",topic:"Societal Computing, Social Media Analytics and Data-Driven Governance",status:"engaged",sent:"17 Mar 2026",summary:"Weber replied positively — SOUNDS Observatory PhD and data engineer positions expected summer 2026. Said to check website.",response:"\"We'll likely post PhD positions related to SOUNDS by this summer.\"",timeline:"Check SOUNDS website June 2026",action:"Calendar reminder set 1 Jun 2026. Check sounds-observatory.org."},
-  {name:"Prof. Axel Bruns",inst:"QUT · Digital Media Research Centre",topic:"Polarisation, Platform Architecture and Cross-Platform Public Debate",status:"engaged",sent:"17 Mar 2026",summary:"Bruns cannot supervise directly but directed to submit DMRC supervision enquiry form. Form submitted. Colleagues being assessed.",response:"\"I'm afraid I don't have the capacity to take on any additional PhD students myself at this point, but there is a chance that one of my colleagues might.\"",timeline:"DMRC form submitted · awaiting colleague response",action:"Follow up with DMRC if no response by May 2026."},
-  {name:"Prof. Joshua Tucker",inst:"NYU · CSMaP",topic:"Social Media, Algorithmic Curation and Political Discourse",status:"engaged",sent:"13 Mar 2026",summary:"Tucker replied noting US system requires fall application through department. Encouraged the data infrastructure angle. Apply Fall 2026.",response:"\"Different system in the US — applications through the department, and you apply in the fall. And the data infrastructure point is a good one.\"",timeline:"Apply Fall 2026 · NYU department",action:"Apply NYU Fall 2026."},
-  {name:"Prof. Isabelle Augenstein",inst:"CopeNLU · University of Copenhagen",topic:"Explainable Stance Detection, Social NLP and Cross-Platform Attitude Analysis",status:"awaiting",sent:"31 Mar 2026",summary:"OOO auto-reply received — back 8 April. CopeNLU is actively recruiting for Spring and Autumn 2026 via ELLIS. High priority given active recruitment.",response:"OOO auto-reply: back 8 April 2026.",timeline:"Expected reply after 8 Apr · ELLIS Autumn 2026 recruitment open",action:"Check inbox now — she is back. High priority follow-up."},
-  {name:"Prof. Marian-Andrei Rizoiu",inst:"UTS · Behavioral Data Science Lab",topic:"Attention Dynamics, Information Diffusion Modelling and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"6 Apr 2026",summary:"OOO auto-reply received — back 13 April. Rizoiu's work on information diffusion and platform dynamics is relevant to causal decomposition component.",response:"OOO: back 13 April 2026.",timeline:"Expected reply now — he returned 13 Apr",action:"Check inbox. He is back. Follow up if no reply by Apr 21."},
-  {name:"Prof. Chris Bail",inst:"Duke University · Polarization Lab",topic:"Social Media Prism Dynamics, AI-Mediated Polarisation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"6 Apr 2026",summary:"Top-priority target. Bail's social media prism theory is central to the proposal's theoretical framing in Section 2.2. Email pitched prism dynamics as the mechanism underlying platform-specific measurement non-equivalence.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up if no reply by April 21."},
-  {name:"Dr Claudia Wagner",inst:"GESIS / RWTH Aachen",topic:"Digital Trace Methodology, Total Error Framework and Cross-Platform Sentiment",status:"awaiting",sent:"31 Mar 2026",summary:"Wagner's Total Survey Error framework (extended to digital trace data, Nature 2021) is now foundational in the proposal. Her theoretical language is embedded in Section 2.1.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Sandra González-Bailón",inst:"UPenn · Annenberg / CIND",topic:"Information Networks, Algorithmic Exposure and Cross-Platform Political Discourse",status:"awaiting",sent:"31 Mar 2026",summary:"González-Bailón's Facebook ideological segregation paper (Science 2023) is directly cited in the proposal. Strong fit with CIND's cross-platform information network research.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Dr Dong Nguyen",inst:"Utrecht University · NLP and Society Lab",topic:"NLP Measurement Validity, Construct Validity Frameworks and Social Media Analytics",status:"awaiting",sent:"31 Mar 2026",summary:"Nguyen's 2021 paper on NLP as social measurement (Frontiers in AI) is foundational in the proposal's lit review. Strong theoretical fit with her construct validity framing.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Dirk Hovy",inst:"Bocconi University · MilaNLP Lab",topic:"Demographic Bias in NLP, Sociolinguistic Variation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"2 Apr 2026",summary:"Hovy's work on demographic bias in NLP is directly relevant to the multilingual Arabic, Urdu, Hindi extension in Paper 3 of the proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Markus Strohmaier",inst:"University of Mannheim",topic:"Computational Social Science Methods, LLM Bias and Digital Behavioral Data",status:"awaiting",sent:"31 Mar 2026",summary:"Strohmaier co-authored Wagner et al. 2021 (Measuring algorithmically infused societies, Nature) — now a key reference in the proposal. Direct match.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. David Garcia",inst:"University of Konstanz · Social Data Science Lab",topic:"Social and Algorithmic Drivers of Political Discourse, Computational Affective Science",status:"awaiting",sent:"31 Mar 2026",summary:"Garcia's work on social and algorithmic drivers of political discourse is directly relevant. Metzler and Garcia 2024 (Perspectives on Psychological Science) is cited in the proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Kate Starbird",inst:"University of Washington · HCDE",topic:"Collective Sensemaking, Participatory Disinformation and Cross-Platform Crisis Dynamics",status:"awaiting",sent:"6 Apr 2026",summary:"Starbird's work on crisis misinformation and collective sensemaking across platforms is relevant to the divergence framing.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Hang Jiang",inst:"Northeastern University",topic:"LLMs for Civic Decision-Making, Human-AI Narrative Synthesis and Cross-Platform Sentiment",status:"awaiting",sent:"6 Apr 2026",summary:"Jiang is actively recruiting PhD students for Fall 2026. His research on LLMs applied to political communication and public discourse maps directly onto the PhD proposal.",response:"No reply yet.",timeline:"Actively recruiting Fall 2026 — high priority",action:"Follow up April 21. High priority."},
-  {name:"Dr Gregor Wiedemann",inst:"Leibniz Institute · Social Media Observatory",topic:"Social Media Observatory CSS Position (Ref: PB1-26-06)",status:"awaiting",sent:"3 Apr 2026",summary:"Applied to advertised PhD position at the Hans-Bredow-Institut Social Media Observatory project.",response:"No reply yet.",timeline:"Advertised position · awaiting",action:"Follow up if no reply by May 2026."},
-  {name:"Prof. Hannele Seeck",inst:"LUT University",topic:"Ideology, AI-Mediated Propaganda and Cross-Platform Sentiment Measurement",status:"ooo",sent:"6 Apr 2026",summary:"Auto-reply received — travelling. No return date specified. Admin contact provided for urgent matters.",response:"OOO — travelling. Contact admin for urgent matters.",timeline:"Awaiting return",action:"Follow up in 2 weeks."},
-  {name:"Prof. Johannes Bjerva",inst:"Aalborg University Copenhagen",topic:"NLP, Multilingual Models and Social Media Analytics",status:"ooo",sent:"3 Apr 2026",summary:"Auto-reply received — paternity leave until 14 May 2026.",response:"On paternity leave until 14 May 2026.",timeline:"Expected reply after 14 May",action:"Follow up after 14 May."},
-  {name:"Prof. Annie Waldherr",inst:"University of Vienna · CCS Lab",topic:"Computational Communication Science, Digitised Public Spheres and Cross-Platform Political Discourse",status:"awaiting",sent:"1 Apr 2026",summary:"OOO reply — back 7 April. Awaiting substantive reply.",response:"OOO until 7 April.",timeline:"Expected reply — she is back",action:"Check inbox. Follow up if no reply by Apr 21."},
-  {name:"Dr Philipp Lorenz-Spreen",inst:"TU Dresden / MPI Human Development",topic:"Collective Attention, Platform Design and Social Media as Government Policy Signal",status:"awaiting",sent:"2 Apr 2026",summary:"Auto-reply indicated his primary email changed to TU Dresden. Email resent to correct address.",response:"Auto-reply: primary email changed to philipp.lorenz-spreen@tu-dresden.de",timeline:"Awaiting reply to resent email",action:"Resend to TU Dresden address if no reply by Apr 21."},
-  {name:"Prof. Arkaitz Zubiaga",inst:"Queen Mary University of London",topic:"Stance Detection, Social Media NLP and Cross-Platform Policy Discourse",status:"no-position",sent:"17 Mar 2026",summary:"Replied — late in year for 2026/27, no opportunities for recruitment. Suggested keeping in touch for 2027 cycle.",response:"\"It's now late in the year to have opportunities for recruitment for 2026/27, so I'm sorry that there are no opportunities this year.\"",timeline:"Check again Sep 2026 for 2027 cycle",action:"Follow up September 2026."},
-  {name:"Dr Sanne Kruikemeier",inst:"Wageningen University · Strategic Communication",topic:"Social Media Polarisation Measurement, Data-Driven Targeting and Cross-Platform Sentiment Validity",status:"no-position",sent:"6 Apr 2026",summary:"Replied — no PhD funding or open positions currently within the Strategic Communication group.",response:"\"At the moment, we do not have any PhD funding or open positions available within the Strategic Communication group.\"",timeline:"No current position",action:"No further action needed."},
-  {name:"Prof. Matteo Magnani",inst:"Uppsala University · InfoLab",topic:"Multilayer Network Analysis, Cross-Platform Political Discourse and Social Data Science",status:"no-position",sent:"30 Mar 2026",summary:"Replied — no open positions currently.",response:"\"Unfortunately I do not currently have open positions.\"",timeline:"No current position",action:"No further action."},
-  {name:"Prof. Taha Yasseri",inst:"Trinity College Dublin · CSHM",topic:"Government-Society Interactions, Social Media Collective Action and Large-Scale Transactional Data",status:"awaiting",sent:"31 Mar 2026",summary:"Email sent. Yasseri's work on government-society interactions and large-scale social data is relevant to the government analytics angle of the proposal.",response:"No reply yet.",timeline:"Awaiting",action:"Follow up April 21."},
-  {name:"Prof. Luca Maria Aiello",inst:"IT University of Copenhagen",topic:"Social Dynamics, NLP-Based Relationship Modelling and Cross-Platform Collective Action",status:"awaiting",sent:"31 Mar 2026",summary:"Email sent. Aiello's work on social dynamics and NLP-based modelling at ITU Copenhagen is relevant.",response:"No reply yet.",timeline:"Awaiting",action:"Follow up April 21."},
-  {name:"Prof. Rebekah Tromble",inst:"GWU · IDDP",topic:"Platform Data Access, Political Communication and Social Media Methodology",status:"awaiting",sent:"17 Mar 2026",summary:"Email sent to IDDP at GWU. Tromble's work on platform data access and political communication methodology is directly relevant.",response:"No reply yet.",timeline:"Awaiting",action:"Follow up."},
-  {name:"Dr Milena Tsvetkova",inst:"LSE · HUMANET Lab",topic:"Human-Machine Networks, Social Contagion and Collective Behaviour on Social Media",status:"declined",sent:"31 Mar 2026",summary:"Declined — background not typical for LSE PhD students. Noted they usually accept formal social science training rather than engineering/CS backgrounds.",response:"\"To be frank, your background is not typical for our PhD students. We usually accept students with a formal training in the social sciences.\"",timeline:"Not a fit",action:"No further action."},
+function switchTab(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+const PROFS=[
+  {name:"Prof. Walid Magdy",inst:"University of Edinburgh · SMASH",topic:"Arabic NLP, Cross-Platform Social Media Analytics and Multilingual CSS",status:"confirmed",sent:"31 Mar 2026",summary:"Emailed SMASH group. Magdy confirmed willing to supervise after asking about funding preferences. Strongly encouraged publication first.",response:"\"Yes, please list me as a potential supervisor. But I have to be honest, the competition for scholarships are crazy. Please do your best to get a publication by then.\"",timeline:"Apply Oct 2026 · Edinburgh CDT + scholarship",action:"Get ICWSM paper submitted. List Magdy as supervisor."},
+  {name:"Dr Björn Ross",inst:"University of Edinburgh · CDT Responsible NLP",topic:"Social Bot Detection, Misinformation Infrastructure and CSS Data Methods",status:"confirmed",sent:"17 Mar 2026",summary:"Ross replied: great fit. Too late for current cycle — directed to CDT in Designing Responsible NLP.",response:"\"This sounds like a great fit for my research! I'm afraid however that your email is coming too late in the recruitment cycle.\"",timeline:"CDT in Responsible NLP · Sept 2026 · Jan 2027 deadline",action:"Apply Edinburgh CDT. Ross confirmed fit supervisor."},
+  {name:"Prof. Tiziano Piccardi",inst:"Johns Hopkins University",topic:"Social Media Feed Algorithms, Platform-Independent Measurement and Algorithmic Amplification Bias",status:"warm",sent:"2 Apr 2026",summary:"Piccardi's 2025 Science paper is the key methodological reference. Replied confirming end-of-year JHU deadline.",response:"Confirmed end-of-year application deadline. Warm — directed to apply formally through JHU.",timeline:"Apply end-of-year 2026 · JHU formal cycle",action:"Draft formal JHU application. Follow up Nov 2026."},
+  {name:"Prof. Emilio Ferrara",inst:"USC · HUMANS Lab",topic:"LLM-Powered Disinformation, Social Bot Detection and Platform Manipulation",status:"warm",sent:"30 Mar 2026",summary:"Ferrara replied calling the background genuinely exciting. On sabbatical — directed to apply Khoury CS Fall 2026.",response:"\"Your background is genuinely exciting.\" Apply through Khoury College of Computer Sciences PhD program Fall 2026.",timeline:"Apply Fall 2026 · USC Khoury CS",action:"Apply Oct 2026 to Khoury CS. Mention Ferrara."},
+  {name:"Prof. Kathleen Carley",inst:"Carnegie Mellon · CASOS / IDeaS",topic:"Social Cybersecurity, Dynamic Network Analysis and Cross-Platform Disinformation",status:"warm",sent:"30 Mar 2026",summary:"Carley replied twice. Confirmed: apply CS School, Societal Computing programme, list her as supervisor. Potential fit depending on funding.",response:"\"There is a potential fit. It will depend on funding. Apply to the school of computer science to the program in Societal Computing.\"",timeline:"Apply Fall 2026 · CMU Societal Computing",action:"Apply October 2026. List Carley as supervisor."},
+  {name:"Dr Petter Törnberg",inst:"University of Amsterdam",topic:"LLMs, Social Media Political Communication and Generative Social Simulation",status:"warm",sent:"1 Apr 2026",summary:"Törnberg replied: very strong and well-aligned profile. No open positions currently but will notify.",response:"\"This sounds like a very strong and well-aligned profile, and the connection you draw to questions around measurement, platform dynamics, and LLM-based analysis is compelling.\"",timeline:"No current position · will notify",action:"Monitor. Follow up if no notification by Sep 2026."},
+  {name:"Prof. Jana Lasser",inst:"University of Graz",topic:"Recommendation Algorithms, Misinformation Spread and Social Media as Government Policy Signal",status:"warm",sent:"2 Apr 2026",summary:"Lasser replied positively. No open positions but ongoing grant applications may create positions.",response:"\"I have a number of ongoing grant applications that might lead to open PhD positions in the future.\"",timeline:"Check back Nov 2026 · grant results pending",action:"Follow up November 2026."},
+  {name:"Prof. Fabian Stephany",inst:"Oxford Internet Institute",topic:"Digital Labour, Platform Economies and Computational Social Science",status:"warm",sent:"Prior session",summary:"Positive response. Directed to Nov 2026 OII application cycle.",response:"Positive — directed to November 2026 OII cycle.",timeline:"Nov 2026 · OII application cycle",action:"Apply November 2026 to OII doctoral programme."},
+  {name:"Dr Matti Nelimarkka",inst:"University of Helsinki · Social Computing",topic:"Computational Methods for Social Science, Digital Democracy and Cross-Platform Measurement",status:"engaged",sent:"6 Apr 2026",summary:"Asked for concrete research direction. Detailed reply sent 14 Apr with specific RQs: measurement invariance (CFA), causal decomposition, Bayesian correction.",response:"\"Your profile is interesting, but I am having a difficult time to identify what you'd like to work on the PhD in more concrete terms.\"",timeline:"Awaiting reply · Helsinki twice-yearly window",action:"Reply sent 14 Apr. Awaiting Nelimarkka response."},
+  {name:"Prof. Ingmar Weber",inst:"Saarland University · I2SC / SOUNDS",topic:"Societal Computing, Social Media Analytics and Data-Driven Governance",status:"engaged",sent:"17 Mar 2026",summary:"Weber replied positively — SOUNDS Observatory PhD positions expected summer 2026.",response:"\"We'll likely post PhD positions related to SOUNDS by this summer.\"",timeline:"Check SOUNDS website June 2026",action:"Calendar reminder set 1 Jun 2026."},
+  {name:"Prof. Axel Bruns",inst:"QUT · Digital Media Research Centre",topic:"Polarisation, Platform Architecture and Cross-Platform Public Debate",status:"engaged",sent:"17 Mar 2026",summary:"Cannot supervise directly but directed to submit DMRC supervision enquiry form. Form submitted.",response:"\"I'm afraid I don't have the capacity to take on any additional PhD students myself, but there is a chance that one of my colleagues might.\"",timeline:"DMRC form submitted · awaiting colleague response",action:"Follow up DMRC if no response by May 2026."},
+  {name:"Prof. Joshua Tucker",inst:"NYU · CSMaP",topic:"Social Media, Algorithmic Curation and Political Discourse",status:"engaged",sent:"13 Mar 2026",summary:"Tucker replied: US system requires fall application through department.",response:"\"Different system in the US — applications through the department, and you apply in the fall.\"",timeline:"Apply Fall 2026 · NYU department",action:"Apply NYU Fall 2026."},
+  {name:"Prof. Isabelle Augenstein",inst:"CopeNLU · University of Copenhagen",topic:"Explainable Stance Detection, Social NLP and Cross-Platform Attitude Analysis",status:"awaiting",sent:"31 Mar 2026",summary:"OOO until 8 April. CopeNLU actively recruiting Spring and Autumn 2026 via ELLIS. High priority.",response:"OOO auto-reply: back 8 April 2026.",timeline:"Expected reply after 8 Apr · ELLIS Autumn 2026 open",action:"Check inbox now — she is back. High priority."},
+  {name:"Prof. Marian-Andrei Rizoiu",inst:"UTS · Behavioral Data Science Lab",topic:"Attention Dynamics, Information Diffusion Modelling and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"6 Apr 2026",summary:"OOO until 13 April. Back now — check inbox.",response:"OOO: back 13 April 2026.",timeline:"Expected reply now — he returned 13 Apr",action:"Check inbox. Follow up if no reply by Apr 21."},
+  {name:"Prof. Chris Bail",inst:"Duke University · Polarization Lab",topic:"Social Media Prism Dynamics, AI-Mediated Polarisation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"6 Apr 2026",summary:"Top-priority target. Bail's prism theory is central to the proposal's theoretical framing (Section 2.2).",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up if no reply by April 21."},
+  {name:"Dr Claudia Wagner",inst:"GESIS / RWTH Aachen",topic:"Digital Trace Methodology, Total Error Framework and Cross-Platform Sentiment",status:"awaiting",sent:"31 Mar 2026",summary:"Wagner's Total Survey Error framework (Nature 2021) is foundational in the proposal. Her language embedded in Section 2.1.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
+  {name:"Prof. Sandra Gonzalez-Bailon",inst:"UPenn · Annenberg / CIND",topic:"Information Networks, Algorithmic Exposure and Cross-Platform Political Discourse",status:"awaiting",sent:"31 Mar 2026",summary:"Her Facebook ideological segregation paper (Science 2023) directly cited in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
+  {name:"Dr Dong Nguyen",inst:"Utrecht University · NLP and Society Lab",topic:"NLP Measurement Validity, Construct Validity Frameworks and Social Media Analytics",status:"awaiting",sent:"31 Mar 2026",summary:"Nguyen's 2021 paper on NLP as social measurement is foundational in proposal lit review.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
+  {name:"Prof. Dirk Hovy",inst:"Bocconi University · MilaNLP Lab",topic:"Demographic Bias in NLP, Sociolinguistic Variation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"2 Apr 2026",summary:"Work on demographic bias in NLP relevant to multilingual extension.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
+  {name:"Prof. Markus Strohmaier",inst:"University of Mannheim",topic:"Computational Social Science Methods, LLM Bias and Digital Behavioral Data",status:"awaiting",sent:"31 Mar 2026",summary:"Co-authored Wagner et al. 2021 (Nature) — key reference in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
+  {name:"Prof. David Garcia",inst:"University of Konstanz · Social Data Science Lab",topic:"Social and Algorithmic Drivers of Political Discourse, Computational Affective Science",status:"awaiting",sent:"31 Mar 2026",summary:"Metzler and Garcia 2024 cited in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
+  {name:"Prof. Kate Starbird",inst:"University of Washington · HCDE",topic:"Collective Sensemaking, Participatory Disinformation and Cross-Platform Crisis Dynamics",status:"awaiting",sent:"6 Apr 2026",summary:"Crisis misinformation work relevant to cross-platform divergence framing.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
+  {name:"Prof. Hang Jiang",inst:"Northeastern University",topic:"LLMs for Civic Decision-Making, Human-AI Narrative Synthesis and Cross-Platform Sentiment",status:"awaiting",sent:"6 Apr 2026",summary:"Actively recruiting PhD students Fall 2026. LLMs and political communication aligns well.",response:"No reply yet.",timeline:"Actively recruiting Fall 2026 — high priority",action:"Follow up April 21. High priority."},
+  {name:"Dr Gregor Wiedemann",inst:"Leibniz Institute · Social Media Observatory",topic:"Social Media Observatory CSS Position (Ref: PB1-26-06)",status:"awaiting",sent:"3 Apr 2026",summary:"Applied to advertised position at Hans-Bredow-Institut.",response:"No reply yet.",timeline:"Advertised position · awaiting",action:"Follow up if no reply by May."},
+  {name:"Prof. Annie Waldherr",inst:"University of Vienna · CCS Lab",topic:"Computational Communication Science, Digitised Public Spheres and Cross-Platform Political Discourse",status:"awaiting",sent:"1 Apr 2026",summary:"OOO until 7 April. Back now.",response:"OOO until 7 April.",timeline:"Expected reply — she is back",action:"Check inbox. Follow up if no reply by Apr 21."},
+  {name:"Dr Philipp Lorenz-Spreen",inst:"TU Dresden / MPI Human Development",topic:"Collective Attention, Platform Design and Social Media as Government Policy Signal",status:"awaiting",sent:"2 Apr 2026",summary:"Auto-reply indicated new TU Dresden email address. Resent to correct address.",response:"Auto-reply: primary email changed to philipp.lorenz-spreen@tu-dresden.de",timeline:"Awaiting reply to resent email",action:"Resend if no reply by Apr 21."},
+  {name:"Prof. Taha Yasseri",inst:"Trinity College Dublin · CSHM",topic:"Government-Society Interactions, Social Media Collective Action and Large-Scale Transactional Data",status:"awaiting",sent:"31 Mar 2026",summary:"Government-society interactions and large-scale social data relevant to government analytics angle.",response:"No reply yet.",timeline:"Awaiting",action:"Follow up April 21."},
+  {name:"Prof. Hannele Seeck",inst:"LUT University",topic:"Ideology, AI-Mediated Propaganda and Cross-Platform Sentiment Measurement",status:"ooo",sent:"6 Apr 2026",summary:"Auto-reply — travelling. No return date specified.",response:"OOO — travelling. Contact admin for urgent matters.",timeline:"Awaiting return",action:"Follow up in 2 weeks."},
+  {name:"Prof. Johannes Bjerva",inst:"Aalborg University Copenhagen",topic:"NLP, Multilingual Models and Social Media Analytics",status:"ooo",sent:"3 Apr 2026",summary:"Paternity leave until 14 May 2026.",response:"On paternity leave until 14 May 2026.",timeline:"Expected reply after 14 May",action:"Follow up after 14 May."},
+  {name:"Prof. Arkaitz Zubiaga",inst:"Queen Mary University of London",topic:"Stance Detection, Social Media NLP and Cross-Platform Policy Discourse",status:"no-position",sent:"17 Mar 2026",summary:"Late in year for 2026/27, no opportunities. Check 2027 cycle.",response:"\"It's now late in the year to have opportunities for recruitment for 2026/27.\"",timeline:"Check Sep 2026 for 2027 cycle",action:"Follow up September 2026."},
+  {name:"Dr Sanne Kruikemeier",inst:"Wageningen University",topic:"Social Media Polarisation Measurement, Data-Driven Targeting and Cross-Platform Sentiment Validity",status:"no-position",sent:"6 Apr 2026",summary:"No PhD funding or open positions currently.",response:"\"At the moment, we do not have any PhD funding or open positions available.\"",timeline:"No current position",action:"No further action."},
+  {name:"Prof. Matteo Magnani",inst:"Uppsala University · InfoLab",topic:"Multilayer Network Analysis, Cross-Platform Political Discourse and Social Data Science",status:"no-position",sent:"30 Mar 2026",summary:"No open positions currently.",response:"\"Unfortunately I do not currently have open positions.\"",timeline:"No current position",action:"No further action."},
+  {name:"Dr Milena Tsvetkova",inst:"LSE · HUMANET Lab",topic:"Human-Machine Networks, Social Contagion and Collective Behaviour on Social Media",status:"declined",sent:"31 Mar 2026",summary:"Background not typical for LSE PhD students. They usually require formal social science training.",response:"\"To be frank, your background is not typical for our PhD students. We usually accept students with a formal training in the social sciences.\"",timeline:"Not a fit",action:"No further action."},
 ];
 
-const STATUS_LABELS = {confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO','no-position':'No position',declined:'Declined'};
-const STATUS_ORDER = {confirmed:0,warm:1,engaged:2,ooo:3,awaiting:4,'no-position':5,declined:6};
-const FILTERS = [
-  {key:'all',label:'All'},
-  {key:'confirmed',label:'Confirmed'},
-  {key:'warm',label:'Warm'},
-  {key:'engaged',label:'Engaged'},
-  {key:'awaiting',label:'Awaiting'},
-  {key:'ooo',label:'OOO'},
-  {key:'no-position',label:'No position'},
-  {key:'declined',label:'Declined'},
-];
+const SL={confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO','no-position':'No position',declined:'Declined'};
+const SO={confirmed:0,warm:1,engaged:2,ooo:3,awaiting:4,'no-position':5,declined:6};
+const FILTERS=[{key:'all',label:'All'},{key:'confirmed',label:'Confirmed'},{key:'warm',label:'Warm'},{key:'engaged',label:'Engaged'},{key:'awaiting',label:'Awaiting'},{key:'ooo',label:'OOO'},{key:'no-position',label:'No position'},{key:'declined',label:'Declined'}];
+let curFilter='all';
 
-let currentFilter = 'all';
-
-function initials(name){return name.replace('Prof.','').replace('Dr','').trim().split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('');}
+function initials(n){return n.replace('Prof.','').replace('Dr','').trim().split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('');}
 
 function buildFilterBar(){
-  const bar = document.getElementById('filter-bar');
+  const bar=document.getElementById('filter-bar');
   FILTERS.forEach(f=>{
-    const count = f.key==='all' ? PROFS.length : PROFS.filter(p=>p.status===f.key).length;
-    const btn = document.createElement('button');
-    btn.className = 'filter-btn' + (f.key==='all'?' active':'');
-    btn.innerHTML = `${f.label} <span class="filter-count">${count}</span>`;
-    btn.onclick = ()=>{ currentFilter=f.key; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderProfs(); };
+    const cnt=f.key==='all'?PROFS.length:PROFS.filter(p=>p.status===f.key).length;
+    const btn=document.createElement('button');
+    btn.className='filter-btn'+(f.key==='all'?' active':'');
+    btn.innerHTML=f.label+' <span class="fcount">'+cnt+'</span>';
+    btn.onclick=()=>{curFilter=f.key;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderProfs();};
     bar.appendChild(btn);
   });
 }
 
 function renderProfs(){
-  const q = document.getElementById('search').value.toLowerCase();
-  const list = document.getElementById('prof-list');
-  const noRes = document.getElementById('no-results');
-  const sorted = [...PROFS].sort((a,b)=>(STATUS_ORDER[a.status]||99)-(STATUS_ORDER[b.status]||99));
-  const filtered = sorted.filter(p=>{
-    const matchFilter = currentFilter==='all'||p.status===currentFilter;
-    const matchSearch = !q || p.name.toLowerCase().includes(q)||p.inst.toLowerCase().includes(q)||p.topic.toLowerCase().includes(q)||p.summary.toLowerCase().includes(q);
-    return matchFilter && matchSearch;
+  const q=document.getElementById('search').value.toLowerCase();
+  const list=document.getElementById('prof-list');
+  const noRes=document.getElementById('no-results');
+  const sorted=[...PROFS].sort((a,b)=>(SO[a.status]||99)-(SO[b.status]||99));
+  const filtered=sorted.filter(p=>{
+    const mf=curFilter==='all'||p.status===curFilter;
+    const ms=!q||[p.name,p.inst,p.topic,p.summary].some(s=>s.toLowerCase().includes(q));
+    return mf&&ms;
   });
   list.innerHTML='';
   if(!filtered.length){noRes.classList.remove('hidden');return;}
   noRes.classList.add('hidden');
   filtered.forEach(p=>{
-    const sl = STATUS_LABELS[p.status]||p.status;
-    const card = document.createElement('div');
+    const sl=SL[p.status]||p.status;
+    const card=document.createElement('div');
     card.className='prof-card';
-    card.innerHTML=`
-      <div class="prof-row" onclick="this.parentElement.classList.toggle('open')">
-        <div class="prof-av av-${p.status}">${initials(p.name)}</div>
-        <div class="prof-info">
-          <div class="prof-name">${p.name}</div>
-          <div class="prof-inst">${p.inst}</div>
-        </div>
-        <div class="prof-right">
-          <span class="status-pill s-${p.status}">${sl}</span>
-          <span class="sent-date">${p.sent}</span>
-          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-      </div>
-      <div class="prof-body">
-        <div class="prof-body-grid">
-          <div>
-            <div class="field-label">Topic pitched</div>
-            <div class="field-value">${p.topic}</div>
-          </div>
-          <div>
-            <div class="field-label">Summary</div>
-            <div class="field-value">${p.summary}</div>
-          </div>
-          ${p.response?`<div>
-            <div class="field-label">Their response</div>
-            <div class="field-quote">${p.response}</div>
-          </div>`:''}
-          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-            <div>
-              <div class="field-label">Timeline</div>
-              <span class="timeline-tag">${p.timeline}</span>
-            </div>
-            <div style="flex:1;min-width:200px;">
-              <div class="field-label">Action required</div>
-              <span class="action-tag">${p.action}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
+    card.innerHTML='<div class="prof-row" onclick="this.parentElement.classList.toggle(\'open\')">'
+      +'<div class="prof-av av-'+p.status+'">'+initials(p.name)+'</div>'
+      +'<div class="prof-info"><div class="prof-name">'+p.name+'</div><div class="prof-inst">'+p.inst+'</div></div>'
+      +'<div class="prof-right"><span class="status-pill s-'+p.status+'">'+sl+'</span>'
+      +'<span class="sent-date">'+p.sent+'</span>'
+      +'<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>'
+      +'<div class="prof-body"><div class="pbg">'
+      +'<div><div class="fl">Topic pitched</div><div class="fv">'+p.topic+'</div></div>'
+      +'<div><div class="fl">Summary</div><div class="fv">'+p.summary+'</div></div>'
+      +(p.response?'<div><div class="fl">Their response</div><div class="fq">'+p.response+'</div></div>':'')
+      +'<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start">'
+      +'<div><div class="fl">Timeline</div><span class="timeline-tag">'+p.timeline+'</span></div>'
+      +'<div style="flex:1;min-width:180px"><div class="fl">Action required</div><span class="action-tag">'+p.action+'</span></div>'
+      +'</div></div></div>';
     list.appendChild(card);
   });
 }
 
-// Scroll reveal
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const EVENTS=[
+  {d:14,m:4,y:2026,title:"Today — reply sent to Matti Nelimarkka",detail:"Sent detailed reply with concrete research direction: measurement invariance (multi-group CFA), causal decomposition (matched natural experiments), Bayesian correction validated against BES data.",cat:"ec-green"},
+  {d:21,m:4,y:2026,title:"Follow-up round — all awaiting professors",detail:"Follow up with: Bail (Duke), Wagner (GESIS), Gonzalez-Bailon (Penn), Nguyen (Utrecht), Hovy (Bocconi), Strohmaier (Mannheim), Garcia (Konstanz), Starbird (UW), Hang Jiang (Northeastern), Augenstein (CopeNLU), Rizoiu (UTS), Waldherr (Vienna), Lorenz-Spreen (TU Dresden).",cat:"ec-green"},
+  {d:30,m:4,y:2026,title:"ICWSM 2027 paper — begin writing with Dr Ella Haig",detail:"Start converting dissertation into ICWSM short paper. Central contribution: structural cross-platform divergence. Contact Dr Haig to align on timeline and authorship roles.",cat:"ec-gold"},
+  {d:14,m:5,y:2026,title:"Bjerva (AAU Copenhagen) returns from paternity leave",detail:"Prof. Johannes Bjerva returns 14 May. Send follow-up email about NLP/multilingual models PhD positions at AAU Copenhagen.",cat:"ec-green"},
+  {d:1,m:6,y:2026,title:"Check SOUNDS Observatory — Ingmar Weber, Saarland",detail:"Prof. Weber confirmed PhD and data engineer positions expected summer 2026. Check sounds-observatory.org for open listings.",cat:"ec-purple"},
+  {d:15,m:6,y:2026,title:"ICWSM paper — first draft target",detail:"Target date for first complete draft to share with Dr Ella Haig. Focus: cross-platform divergence finding, measurement invariance framing, implications for government social listening.",cat:"ec-gold"},
+  {d:1,m:9,y:2026,title:"Check Zubiaga (QMUL) for 2027 cycle",detail:"Zubiaga said too late for 2026/27 but to check again for 2027 cycle. Also check Tornberg (UvA) — will notify if position opens.",cat:"ec-green"},
+  {d:1,m:10,y:2026,title:"Apply — USC (Ferrara) + CMU (Carley)",detail:"Both supervisors confirmed apply-in-fall for 2027 intake. USC: Khoury College of Computer Sciences. CMU: School of Computer Science, Societal Computing programme. Prepare strong application with research proposal.",cat:"ec-cyan"},
+  {d:1,m:10,y:2026,title:"Edinburgh CDT application window opens",detail:"CDT in Designing Responsible NLP. Walid Magdy confirmed supervisor. Bjorn Ross confirmed fit. Fully funded stipend + fees. Prepare application — ICWSM submission must be in progress as evidence.",cat:"ec-cyan"},
+  {d:31,m:10,y:2026,title:"HARD DEADLINE — ICWSM paper must be submitted",detail:"Paper must be submitted or under review before Edinburgh scholarship deadline. This is the non-negotiable hard deadline for the ICWSM 2027 short paper with Dr Ella Haig.",cat:"ec-red"},
+  {d:1,m:11,y:2026,title:"Check Jana Lasser (Graz) — grant results",detail:"Prof. Lasser has ongoing grant applications that may create PhD positions. Check by November for outcomes and potential openings.",cat:"ec-purple"},
+  {d:1,m:11,y:2026,title:"Follow up Piccardi (JHU) + Apply OII Oxford (Stephany)",detail:"Piccardi: prepare JHU application package. Stephany (OII Oxford): November 2026 application cycle opens. Prepare DPhil application for Oxford Internet Institute.",cat:"ec-cyan"},
+  {d:7,m:1,y:2027,title:"Edinburgh CDT — application deadline",detail:"UKRI CDT in Responsible and Trustworthy NLP. Supervisors: Walid Magdy + Bjorn Ross. Fully funded. Submit with ICWSM paper as evidence of publication progress. This is the priority application.",cat:"ec-red"},
+];
+
+function buildCalendar(){
+  const list=document.getElementById('events-list');
+  const now=new Date(2026,3,14);
+  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const catLabel={'ec-cyan':'Application','ec-gold':'Paper / Writing','ec-green':'Follow-up','ec-purple':'Monitor','ec-red':'Deadline'};
+  const sorted=[...EVENTS].sort((a,b)=>new Date(a.y,a.m-1,a.d)-new Date(b.y,b.m-1,b.d));
+  sorted.forEach(ev=>{
+    const evDate=new Date(ev.y,ev.m-1,ev.d);
+    const isPast=evDate<now&&evDate.toDateString()!==now.toDateString();
+    const isToday=evDate.toDateString()===now.toDateString();
+    const dayColor=isPast?'var(--text3)':isToday?'var(--cyan)':'var(--gold)';
+    const item=document.createElement('div');
+    item.className='ev-item'+(isPast?' past':'')+(isToday?' today-ev':'');
+    item.innerHTML='<div class="ev-date-col"><div class="ev-day" style="color:'+dayColor+'">'+ev.d+'</div><div class="ev-mon">'+months[ev.m-1]+' '+ev.y+'</div></div>'
+      +'<div class="ev-body"><div class="ev-title">'+ev.title+'</div><div class="ev-detail">'+ev.detail+'</div>'
+      +'<span class="ev-cat '+ev.cat+'">'+catLabel[ev.cat]+'</span></div>';
+    list.appendChild(item);
+  });
+}
 
 buildFilterBar();
 renderProfs();
+buildCalendar();
 </script>
 </body>
 </html>
