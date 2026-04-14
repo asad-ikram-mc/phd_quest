@@ -95,7 +95,10 @@ nav {
 .hero {
   padding: 80px 0 60px;
   border-bottom: 1px solid var(--border);
+  text-align: center;
 }
+.hero-sub { margin-left: auto; margin-right: auto; }
+.hero-meta { justify-content: center; }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: 'JetBrains Mono', monospace;
@@ -421,14 +424,7 @@ footer a:hover { color: var(--gold2); }
     <div class="stat-num" id="stat-confirmed">2</div>
     <div class="stat-label">Confirmed supervisors</div>
   </div>
-  <div class="stat-cell">
-    <div class="stat-num">279k</div>
-    <div class="stat-label">Dissertation posts</div>
-  </div>
-  <div class="stat-cell">
-    <div class="stat-num">0.878</div>
-    <div class="stat-label">BERT macro-F1</div>
-  </div>
+
 </div>
 
 <div class="container">
@@ -599,7 +595,7 @@ const PROFS = [
   {name:"Dr Milena Tsvetkova",inst:"LSE · HUMANET Lab",topic:"Human-Machine Networks, Social Contagion and Collective Behaviour on Social Media",status:"declined",sent:"31 Mar 2026",summary:"Declined — background not typical for LSE PhD students. Noted they usually accept formal social science training rather than engineering/CS backgrounds.",response:"\"To be frank, your background is not typical for our PhD students. We usually accept students with a formal training in the social sciences.\"",timeline:"Not a fit",action:"No further action."},
 ];
 
-const STATUS_LABELS = {confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO',no-position:'No position',declined:'Declined'};
+const STATUS_LABELS = {confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO','no-position':'No position',declined:'Declined'};
 const STATUS_ORDER = {confirmed:0,warm:1,engaged:2,ooo:3,awaiting:4,'no-position':5,declined:6};
 const FILTERS = [
   {key:'all',label:'All'},
