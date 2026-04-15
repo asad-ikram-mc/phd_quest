@@ -272,8 +272,8 @@ footer a:hover{color:var(--gold2)}
 
   <div class="stats-strip">
     <div class="stat-cell"><div class="stat-num">57</div><div class="stat-label">Contacted</div></div>
-    <div class="stat-cell"><div class="stat-num">24</div><div class="stat-label">Replies</div></div>
-    <div class="stat-cell"><div class="stat-num">7</div><div class="stat-label">Warm / positive</div></div>
+    <div class="stat-cell"><div class="stat-num">26</div><div class="stat-label">Replies</div></div>
+    <div class="stat-cell"><div class="stat-num">8</div><div class="stat-label">Warm / positive</div></div>
     <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label">Confirmed supervisors</div></div>
   </div>
 
@@ -300,9 +300,14 @@ footer a:hover{color:var(--gold2)}
       <div class="goal-deadline">&#9711; Apply October 2026</div>
     </div>
     <div class="goal-card c-purple">
-      <div class="goal-top"><div class="goal-title">SOUNDS Observatory — Saarland</div><span class="chip chip-purple">Jun 2026</span></div>
-      <div class="goal-detail">Prof. Ingmar Weber replied warmly. PhD + data engineer positions expected summer 2026. Check sounds-observatory.org.</div>
-      <div class="goal-deadline">&#9711; Check June 2026</div>
+      <div class="goal-top"><div class="goal-title">SOUNDS Observatory — Graduate School PhD</div><span class="chip chip-purple">Late Summer 2026</span></div>
+      <div class="goal-detail">Prof. Weber confirmed: graduate school linked to SOUNDS is being set up — the person leading it was just hired. PhD call expected late summer 2026. Also team member / data engineer positions (no C1 German required) posting imminently. AWS Lambda monitor deployed — emails daily on new postings.</div>
+      <div class="goal-deadline">&#9711; Watch SOUNDS LinkedIn · Lambda monitor active</div>
+    </div>
+    <div class="goal-card c-purple">
+      <div class="goal-top"><div class="goal-title">SOUNDS PostDoc W2833 — Computational Social Sciences</div><span class="chip chip-purple">Check fit</span></div>
+      <div class="goal-detail">New position appeared 15 Apr: "Academic Postdoctoral Researcher for Computational Social Sciences (m/f/x)" at SOUNDS transformation programme (Ref W2833). Requires completed PhD — likely out of reach now but worth reading the JD to understand what SOUNDS is hiring for.</div>
+      <div class="goal-deadline">&#9711; Read W2833 JD · assess requirements</div>
     </div>
     <div class="goal-card c-cyan">
       <div class="goal-top"><div class="goal-title">Matti Nelimarkka — Helsinki follow-up</div><span class="chip chip-cyan">Reply sent</span></div>
@@ -373,6 +378,40 @@ footer a:hover{color:var(--gold2)}
     <a href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);padding:9px 20px;border-radius:8px;display:inline-block">
       Open full Drive folder &#8599;
     </a>
+  </div>
+
+  <div style="margin-top:36px">
+    <div class="sec-head"><span class="sec-tag">Monitor</span><h2 class="sec-title">SOUNDS Job Monitor</h2></div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.6">AWS Lambda running daily at 12:00 PKT. Scrapes Saarland University jobs pages and emails when new SOUNDS / CSS / data engineer positions appear.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:16px">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;border-left:3px solid var(--green)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Status</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text)">Live &#x2713;</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px">Deployed 15 Apr 2026 · eu-west-2</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;border-left:3px solid var(--cyan)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Schedule</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text)">Daily 07:00 UTC</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px">12:00 PKT every morning</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;border-left:3px solid var(--amber)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Last run</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text)">15 Apr 2026</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px">Found W2833 PostDoc + Team Lead N2302</div>
+      </div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px">Watching for</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2);padding:3px 10px;border-radius:12px">data development pool</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2);padding:3px 10px;border-radius:12px">data engineer</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2);padding:3px 10px;border-radius:12px">sounds + data</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2);padding:3px 10px;border-radius:12px">sounds + PhD</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2);padding:3px 10px;border-radius:12px">sounds + researcher</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2);padding:3px 10px;border-radius:12px">sounds graduate school</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2);padding:3px 10px;border-radius:12px">English (m/f/x) only</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -447,11 +486,11 @@ const PROFS=[
   {name:"Dr Petter Törnberg",inst:"University of Amsterdam",topic:"LLMs, Social Media Political Communication and Generative Social Simulation",status:"warm",sent:"1 Apr 2026",summary:"Törnberg replied: very strong and well-aligned profile. No open positions currently but will notify.",response:"\"This sounds like a very strong and well-aligned profile, and the connection you draw to questions around measurement, platform dynamics, and LLM-based analysis is compelling.\"",timeline:"No current position · will notify",action:"Monitor. Follow up if no notification by Sep 2026."},
   {name:"Prof. Jana Lasser",inst:"University of Graz",topic:"Recommendation Algorithms, Misinformation Spread and Social Media as Government Policy Signal",status:"warm",sent:"2 Apr 2026",summary:"Lasser replied positively. No open positions but ongoing grant applications may create positions.",response:"\"I have a number of ongoing grant applications that might lead to open PhD positions in the future.\"",timeline:"Check back Nov 2026 · grant results pending",action:"Follow up November 2026."},
   {name:"Prof. Fabian Stephany",inst:"Oxford Internet Institute",topic:"Digital Labour, Platform Economies and Computational Social Science",status:"warm",sent:"Prior session",summary:"Positive response. Directed to Nov 2026 OII application cycle.",response:"Positive — directed to November 2026 OII cycle.",timeline:"Nov 2026 · OII application cycle",action:"Apply November 2026 to OII doctoral programme."},
-  {name:"Dr Matti Nelimarkka",inst:"University of Helsinki · Social Computing",topic:"Computational Methods for Social Science, Digital Democracy and Cross-Platform Measurement",status:"engaged",sent:"6 Apr 2026",summary:"Asked for concrete research direction. Detailed reply sent 14 Apr with specific RQs: measurement invariance (CFA), causal decomposition, Bayesian correction.",response:"\"Your profile is interesting, but I am having a difficult time to identify what you'd like to work on the PhD in more concrete terms.\"",timeline:"Awaiting reply · Helsinki twice-yearly window",action:"Reply sent 14 Apr. Awaiting Nelimarkka response."},
-  {name:"Prof. Ingmar Weber",inst:"Saarland University · I2SC / SOUNDS",topic:"Societal Computing, Social Media Analytics and Data-Driven Governance",status:"engaged",sent:"17 Mar 2026",summary:"Weber replied positively — SOUNDS Observatory PhD positions expected summer 2026.",response:"\"We'll likely post PhD positions related to SOUNDS by this summer.\"",timeline:"Check SOUNDS website June 2026",action:"Calendar reminder set 1 Jun 2026."},
+  {name:"Dr Matti Nelimarkka",inst:"University of Helsinki · Social Computing",topic:"Computational Methods for Social Science, Digital Democracy and Cross-Platform Measurement",status:"engaged",sent:"6 Apr 2026",summary:"Asked for concrete research direction 7 Apr. Detailed reply sent 14 Apr with specific RQs: measurement invariance (multi-group CFA), causal decomposition (matched natural experiments), Bayesian correction validated against BES data. Draft also saved to Gmail. Awaiting his response.",response:"\"Your profile is interesting, but I am having a difficult time to identify what you'd like to work on the PhD in more concrete terms.\"",timeline:"Awaiting reply · Helsinki twice-yearly window",action:"Await reply. If no response by Apr 25, follow up."},
+  {name:"Prof. Ingmar Weber",inst:"Saarland University · I2SC / SOUNDS",topic:"Societal Computing, Social Media Analytics and Data-Driven Governance",status:"warm",sent:"17 Mar 2026",summary:"Three-email exchange. Weber confirmed: (1) Team Lead requires C1 German — not applicable. (2) Team member / data engineer positions coming soon — no German required. (3) SOUNDS graduate school is being set up — person leading it just hired, PhD call expected late summer 2026. Lambda monitor deployed to track new postings daily.",response:"\"There will soon also be openings for team member positions. I'm still hoping that the graduate school linked to SOUNDS will be announced soon. The person leading that has just been hired. So an initial call for applications in (late) summer still seems feasible.\"",timeline:"Monitor SOUNDS LinkedIn for team member posts · PhD call expected late summer 2026",action:"Follow SOUNDS LinkedIn. Apply to team member role when posted. Watch for graduate school PhD call."},
   {name:"Prof. Axel Bruns",inst:"QUT · Digital Media Research Centre",topic:"Polarisation, Platform Architecture and Cross-Platform Public Debate",status:"engaged",sent:"17 Mar 2026",summary:"Cannot supervise directly but directed to submit DMRC supervision enquiry form. Form submitted.",response:"\"I'm afraid I don't have the capacity to take on any additional PhD students myself, but there is a chance that one of my colleagues might.\"",timeline:"DMRC form submitted · awaiting colleague response",action:"Follow up DMRC if no response by May 2026."},
   {name:"Prof. Joshua Tucker",inst:"NYU · CSMaP",topic:"Social Media, Algorithmic Curation and Political Discourse",status:"engaged",sent:"13 Mar 2026",summary:"Tucker replied: US system requires fall application through department.",response:"\"Different system in the US — applications through the department, and you apply in the fall.\"",timeline:"Apply Fall 2026 · NYU department",action:"Apply NYU Fall 2026."},
-  {name:"Prof. Isabelle Augenstein",inst:"CopeNLU · University of Copenhagen",topic:"Explainable Stance Detection, Social NLP and Cross-Platform Attitude Analysis",status:"awaiting",sent:"31 Mar 2026",summary:"OOO until 8 April. CopeNLU actively recruiting Spring and Autumn 2026 via ELLIS. High priority.",response:"OOO auto-reply: back 8 April 2026.",timeline:"Expected reply after 8 Apr · ELLIS Autumn 2026 open",action:"Check inbox now — she is back. High priority."},
+  {name:"Prof. Isabelle Augenstein",inst:"CopeNLU · University of Copenhagen",topic:"Explainable Stance Detection, Social NLP and Cross-Platform Attitude Analysis",status:"awaiting",sent:"31 Mar 2026",summary:"OOO until 8 April. Follow-up sent 15 Apr after she returned. CopeNLU actively recruiting Spring and Autumn 2026 via ELLIS. High priority.",response:"OOO auto-reply: back 8 April. Follow-up sent 15 Apr.",timeline:"Awaiting reply · ELLIS Autumn 2026 open",action:"Await reply. If no response by Apr 25, nudge again."},
   {name:"Prof. Marian-Andrei Rizoiu",inst:"UTS · Behavioral Data Science Lab",topic:"Attention Dynamics, Information Diffusion Modelling and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"6 Apr 2026",summary:"OOO until 13 April. Back now — check inbox.",response:"OOO: back 13 April 2026.",timeline:"Expected reply now — he returned 13 Apr",action:"Check inbox. Follow up if no reply by Apr 21."},
   {name:"Prof. Chris Bail",inst:"Duke University · Polarization Lab",topic:"Social Media Prism Dynamics, AI-Mediated Polarisation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"6 Apr 2026",summary:"Top-priority target. Bail's prism theory is central to the proposal's theoretical framing (Section 2.2).",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up if no reply by April 21."},
   {name:"Dr Claudia Wagner",inst:"GESIS / RWTH Aachen",topic:"Digital Trace Methodology, Total Error Framework and Cross-Platform Sentiment",status:"awaiting",sent:"31 Mar 2026",summary:"Wagner's Total Survey Error framework (Nature 2021) is foundational in the proposal. Her language embedded in Section 2.1.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
@@ -530,6 +569,9 @@ function renderProfs(){
 
 const EVENTS=[
   {d:14,m:4,y:2026,cat:"ec-green",dc:"dc-green",title:"Reply sent to Matti Nelimarkka",detail:"Sent detailed reply with concrete research direction: measurement invariance (multi-group CFA), causal decomposition (matched natural experiments), Bayesian correction validated against BES data. Helsinki has twice-yearly application windows.",action:"Await Nelimarkka reply. If no response within 10 days, follow up politely."},
+  {d:15,m:4,y:2026,cat:"ec-green",dc:"dc-green",title:"Augenstein follow-up sent (CopeNLU Copenhagen)",detail:"Sent follow-up to Prof. Augenstein after she returned from OOO on 8 April. CopeNLU actively recruiting for Autumn 2026 via ELLIS. High priority contact.",action:"Await reply. If no response by Apr 25, send one more nudge."},
+  {d:15,m:4,y:2026,cat:"ec-purple",dc:"dc-purple",title:"Weber: SOUNDS graduate school confirmed + team roles imminent",detail:"Prof. Weber confirmed team member / data engineer positions coming soon (no C1 German required). SOUNDS graduate school PhD call expected late summer 2026 — person leading it just hired. AWS Lambda monitor deployed and running — emails you daily on new postings.",action:"Follow SOUNDS LinkedIn now. Lambda monitor is live — you will be alerted automatically."},
+  {d:15,m:4,y:2026,cat:"ec-gold",dc:"dc-gold",title:"SOUNDS PostDoc W2833 detected — Computational Social Sciences",detail:"Lambda monitor detected on first run: Academic Postdoctoral Researcher for Computational Social Sciences (m/f/x) at SOUNDS. Ref W2833. Likely requires completed PhD but confirms SOUNDS is actively building CSS research capacity.",action:"Read W2833 JD PDF to check exact requirements. Even if not applicable now, useful intelligence on what SOUNDS is building."},
   {d:21,m:4,y:2026,cat:"ec-green",dc:"dc-green",title:"Follow-up round — all awaiting professors",detail:"15 professors have had no reply or OOO responses. Send polite follow-up to: Bail (Duke), Wagner (GESIS), Gonzalez-Bailon (Penn), Nguyen (Utrecht), Hovy (Bocconi), Strohmaier (Mannheim), Garcia (Konstanz), Starbird (UW), Hang Jiang (Northeastern), Augenstein (CopeNLU), Rizoiu (UTS), Waldherr (Vienna), Lorenz-Spreen (TU Dresden), Yasseri (TCD).",action:"Draft and send one follow-up email per professor. Keep it to 2 sentences: reference original email, ask if they had a chance to review it."},
   {d:30,m:4,y:2026,cat:"ec-gold",dc:"dc-gold",title:"ICWSM 2027 paper — begin writing",detail:"Start converting MSc dissertation into ICWSM short paper (4–6 pages). Central contribution: cross-platform sentiment divergence is structural, directional, and large enough to reverse public opinion conclusions. Contact Dr Ella Haig to align on timeline, authorship, and division of writing tasks.",action:"Email Dr Ella Haig. Open Overleaf (AAAI 2026 template, main.tex already started). Draft abstract and introduction this week."},
   {d:14,m:5,y:2026,cat:"ec-green",dc:"dc-green",title:"Bjerva (AAU Copenhagen) — paternity leave ends",detail:"Prof. Johannes Bjerva returns from paternity leave on 14 May 2026. He has open PhD positions in NLP and multilingual models at Aalborg University Copenhagen. Email was sent 3 Apr but auto-replied with leave notice.",action:"Send follow-up email to jbjerva@cs.aau.dk on 14 May. Reference original email. Ask about NLP/multilingual PhD positions."},
