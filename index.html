@@ -322,8 +322,16 @@ footer a:hover{color:var(--gold2)}
   <div class="sec-head"><span class="sec-tag">Log</span><h2 class="sec-title">Professor Outreach</h2></div>
   <input type="text" class="search-bar" id="search" placeholder="Search by name, institution, or topic..." oninput="renderProfs()">
   <div class="filter-bar" id="filter-bar"></div>
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;">Sort by date:</span>
+    <button class="filter-btn active" id="sort-newest" onclick="setSort('newest',this)">Newest first</button>
+    <button class="filter-btn" id="sort-oldest" onclick="setSort('oldest',this)">Oldest first</button>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-left:8px;">Period:</span>
+    <button class="filter-btn active" id="period-all" onclick="setPeriod('all',this)">All</button>
+    <button class="filter-btn" id="period-apr" onclick="setPeriod('apr',this)">April</button>
+    <button class="filter-btn" id="period-mar" onclick="setPeriod('mar',this)">March</button>
+  </div>
   <div class="prof-list" id="prof-list"></div>
-  <div class="no-results hidden" id="no-results">No professors match this filter.</div>
 </div>
 
 <!-- TAB 3: PAPERS & DOCS -->
@@ -516,7 +524,29 @@ const PROFS=[
 const SL={confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO','no-position':'No position',declined:'Declined'};
 const SO={confirmed:0,warm:1,engaged:2,ooo:3,awaiting:4,'no-position':5,declined:6};
 const FILTERS=[{key:'all',label:'All'},{key:'confirmed',label:'Confirmed'},{key:'warm',label:'Warm'},{key:'engaged',label:'Engaged'},{key:'awaiting',label:'Awaiting'},{key:'ooo',label:'OOO'},{key:'no-position',label:'No position'},{key:'declined',label:'Declined'}];
-let curFilter='all';
+let curFilter='all', curSort='newest', curPeriod='all';
+
+// Parse "31 Mar 2026" → Date object for sorting
+function parseSentDate(s){
+  if(!s||s==='Prior session') return new Date(2026,2,1);
+  const months={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  const p=s.split(' ');
+  return new Date(parseInt(p[2]),months[p[1]],parseInt(p[0]));
+}
+
+function setSort(val,btn){
+  curSort=val;
+  document.querySelectorAll('#sort-newest,#sort-oldest').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProfs();
+}
+
+function setPeriod(val,btn){
+  curPeriod=val;
+  document.querySelectorAll('#period-all,#period-apr,#period-mar').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProfs();
+}
 
 function initials(n){return n.replace('Prof.','').replace('Dr','').trim().split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('');}
 
@@ -527,7 +557,7 @@ function buildFilterBar(){
     const btn=document.createElement('button');
     btn.className='filter-btn'+(f.key==='all'?' active':'');
     btn.innerHTML=f.label+' <span class="fcount">'+cnt+'</span>';
-    btn.onclick=()=>{curFilter=f.key;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderProfs();};
+    btn.onclick=()=>{curFilter=f.key;document.querySelectorAll('.filter-bar .filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderProfs();};
     bar.appendChild(btn);
   });
 }
@@ -536,15 +566,39 @@ function renderProfs(){
   const q=document.getElementById('search').value.toLowerCase();
   const list=document.getElementById('prof-list');
   const noRes=document.getElementById('no-results');
-  const sorted=[...PROFS].sort((a,b)=>(SO[a.status]||99)-(SO[b.status]||99));
-  const filtered=sorted.filter(p=>{
-    const mf=curFilter==='all'||p.status===curFilter;
-    const ms=!q||[p.name,p.inst,p.topic,p.summary].some(s=>s.toLowerCase().includes(q));
-    return mf&&ms;
+
+  let filtered=PROFS.filter(p=>{
+    // Status filter
+    if(curFilter!=='all'&&p.status!==curFilter) return false;
+    // Period filter
+    if(curPeriod!=='all'){
+      const d=parseSentDate(p.sent);
+      if(curPeriod==='apr'&&d.getMonth()!==3) return false;
+      if(curPeriod==='mar'&&d.getMonth()!==2) return false;
+    }
+    // Search filter
+    if(q&&![p.name,p.inst,p.topic,p.summary].some(s=>s.toLowerCase().includes(q))) return false;
+    return true;
   });
+
+  // Sort
+  filtered.sort((a,b)=>{
+    const da=parseSentDate(a.sent), db=parseSentDate(b.sent);
+    if(curSort==='newest'){
+      if(db-da!==0) return db-da;
+    } else {
+      if(da-db!==0) return da-db;
+    }
+    // Secondary sort: status
+    return (SO[a.status]||99)-(SO[b.status]||99);
+  });
+
   list.innerHTML='';
-  if(!filtered.length){noRes.classList.remove('hidden');return;}
-  noRes.classList.add('hidden');
+  if(!filtered.length){
+    list.innerHTML='<div class="no-results">No professors match this filter.</div>';
+    return;
+  }
+
   filtered.forEach(p=>{
     const sl=SL[p.status]||p.status;
     const card=document.createElement('div');
