@@ -162,26 +162,61 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,12,18,0.9);backdrop-filt
 .pdoc-link:hover{background:rgba(79,195,195,0.2)}
 
 /* CALENDAR */
-.events-list{display:flex;flex-direction:column;gap:8px}
-.ev-item{display:flex;gap:14px;padding:13px 16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;align-items:flex-start;transition:border-color 0.15s}
-.ev-item:hover{border-color:var(--border2)}
-.ev-date-col{flex-shrink:0;text-align:center;min-width:46px}
-.ev-day{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;line-height:1}
-.ev-mon{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em}
-.ev-body{flex:1}
-.ev-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px}
-.ev-detail{font-size:12px;color:var(--text2);line-height:1.5}
-.ev-cat{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:10px;white-space:nowrap;margin-top:6px;display:inline-block}
+.cal-outer{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+@media(max-width:800px){.cal-outer{grid-template-columns:1fr}}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.cal-nav-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--text)}
+.cal-nav-btn{background:var(--surface);border:1px solid var(--border2);color:var(--text2);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all 0.15s}
+.cal-nav-btn:hover{background:var(--surface2);color:var(--text)}
+.cal-grid-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.cal-dow-row{display:grid;grid-template-columns:repeat(7,1fr);background:var(--surface2);border-bottom:1px solid var(--border)}
+.cal-dow{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);text-align:center;padding:10px 0;text-transform:uppercase;letter-spacing:0.08em}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-cell{min-height:72px;padding:6px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;cursor:default;transition:background 0.12s}
+.cal-cell:nth-child(7n){border-right:none}
+.cal-cell.has-ev{cursor:pointer}
+.cal-cell.has-ev:hover{background:var(--surface2)}
+.cal-cell.other-month .cal-dnum{color:var(--text3);opacity:0.3}
+.cal-cell.is-today{background:rgba(79,195,195,0.06)}
+.cal-cell.is-today .cal-dnum{color:var(--cyan);font-weight:600}
+.cal-dnum{font-size:12px;color:var(--text2);line-height:1;margin-bottom:4px}
+.cal-dots{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px}
+.cal-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.cal-cell.selected{background:rgba(200,169,110,0.08);outline:1px solid rgba(200,169,110,0.3)}
+/* Sidebar */
+.cal-sidebar{display:flex;flex-direction:column;gap:10px}
+.sidebar-header{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-bottom:4px}
+.ev-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;border-left:3px solid transparent;transition:border-color 0.15s}
+.ev-card:hover{border-color:var(--border2)}
+.ev-card-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-bottom:5px}
+.ev-card-title{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:4px}
+.ev-card-cat{font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:8px;display:inline-block;margin-top:2px}
+/* Modal */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.modal-bg.hidden{display:none}
+.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:14px;width:100%;max-width:520px;padding:28px;position:relative;animation:fadeIn 0.2s ease}
+.modal-close{position:absolute;top:16px;right:16px;background:var(--surface);border:1px solid var(--border2);color:var(--text3);width:28px;height:28px;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all 0.15s}
+.modal-close:hover{color:var(--text);background:var(--surface2)}
+.modal-date{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.08em}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text);line-height:1.3;margin-bottom:14px}
+.modal-detail{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:16px}
+.modal-action-label{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-bottom:8px}
+.modal-action{background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);color:var(--cyan);border-radius:8px;padding:10px 14px;font-size:13px;line-height:1.5}
+.modal-cat{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 10px;border-radius:10px;display:inline-block;margin-bottom:16px}
+/* shared cat colours */
 .ec-gold{background:var(--amber-bg);color:var(--amber)}
 .ec-cyan{background:var(--cyan-dim);color:var(--cyan)}
 .ec-green{background:var(--green-bg);color:var(--green)}
 .ec-purple{background:var(--purple-bg);color:var(--purple)}
 .ec-red{background:var(--red-bg);color:var(--red)}
-.ev-item.past .ev-title{color:var(--text2)}
-.ev-item.past .ev-day{color:var(--text3)}
-.ev-item.today-ev{border-color:rgba(79,195,195,0.35);background:rgba(79,195,195,0.04)}
-
-.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+/* dot colours */
+.dc-gold{background:var(--amber)}
+.dc-cyan{background:var(--cyan)}
+.dc-green{background:var(--green)}
+.dc-purple{background:var(--purple)}
+.dc-red{background:var(--red)}
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
 .leg-item{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
 .leg-dot{width:8px;height:8px;border-radius:50%}
 
@@ -346,12 +381,44 @@ footer a:hover{color:var(--gold2)}
   <div class="sec-head"><span class="sec-tag">Schedule</span><h2 class="sec-title">PhD Quest Timeline</h2></div>
   <div class="legend">
     <div class="leg-item"><div class="leg-dot" style="background:var(--cyan)"></div>Application</div>
-    <div class="leg-item"><div class="leg-dot" style="background:var(--gold)"></div>Paper / Writing</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--amber)"></div>Paper / Writing</div>
     <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Follow-up</div>
     <div class="leg-item"><div class="leg-dot" style="background:var(--purple)"></div>Monitor</div>
     <div class="leg-item"><div class="leg-dot" style="background:var(--red)"></div>Deadline</div>
   </div>
-  <div class="events-list" id="events-list"></div>
+  <div class="cal-outer">
+    <div>
+      <div class="cal-nav">
+        <button class="cal-nav-btn" id="cal-prev" onclick="calNav(-1)">&#8592;</button>
+        <div class="cal-nav-title" id="cal-title"></div>
+        <button class="cal-nav-btn" id="cal-next" onclick="calNav(1)">&#8594;</button>
+      </div>
+      <div class="cal-grid-wrap">
+        <div class="cal-dow-row">
+          <div class="cal-dow">Mon</div><div class="cal-dow">Tue</div><div class="cal-dow">Wed</div>
+          <div class="cal-dow">Thu</div><div class="cal-dow">Fri</div><div class="cal-dow">Sat</div><div class="cal-dow">Sun</div>
+        </div>
+        <div class="cal-days" id="cal-days"></div>
+      </div>
+    </div>
+    <div class="cal-sidebar">
+      <div class="sidebar-header" id="sidebar-header">Upcoming events</div>
+      <div id="sidebar-events"></div>
+    </div>
+  </div>
+</div>
+
+<!-- EVENT MODAL -->
+<div class="modal-bg hidden" id="modal-bg" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal(null)">&#10005;</button>
+    <div class="modal-date" id="modal-date"></div>
+    <div class="modal-title" id="modal-title"></div>
+    <span class="modal-cat" id="modal-cat"></span>
+    <div class="modal-detail" id="modal-detail"></div>
+    <div class="modal-action-label">Action required</div>
+    <div class="modal-action" id="modal-action"></div>
+  </div>
 </div>
 
 <footer>
@@ -462,44 +529,174 @@ function renderProfs(){
 }
 
 const EVENTS=[
-  {d:14,m:4,y:2026,title:"Today — reply sent to Matti Nelimarkka",detail:"Sent detailed reply with concrete research direction: measurement invariance (multi-group CFA), causal decomposition (matched natural experiments), Bayesian correction validated against BES data.",cat:"ec-green"},
-  {d:21,m:4,y:2026,title:"Follow-up round — all awaiting professors",detail:"Follow up with: Bail (Duke), Wagner (GESIS), Gonzalez-Bailon (Penn), Nguyen (Utrecht), Hovy (Bocconi), Strohmaier (Mannheim), Garcia (Konstanz), Starbird (UW), Hang Jiang (Northeastern), Augenstein (CopeNLU), Rizoiu (UTS), Waldherr (Vienna), Lorenz-Spreen (TU Dresden).",cat:"ec-green"},
-  {d:30,m:4,y:2026,title:"ICWSM 2027 paper — begin writing with Dr Ella Haig",detail:"Start converting dissertation into ICWSM short paper. Central contribution: structural cross-platform divergence. Contact Dr Haig to align on timeline and authorship roles.",cat:"ec-gold"},
-  {d:14,m:5,y:2026,title:"Bjerva (AAU Copenhagen) returns from paternity leave",detail:"Prof. Johannes Bjerva returns 14 May. Send follow-up email about NLP/multilingual models PhD positions at AAU Copenhagen.",cat:"ec-green"},
-  {d:1,m:6,y:2026,title:"Check SOUNDS Observatory — Ingmar Weber, Saarland",detail:"Prof. Weber confirmed PhD and data engineer positions expected summer 2026. Check sounds-observatory.org for open listings.",cat:"ec-purple"},
-  {d:15,m:6,y:2026,title:"ICWSM paper — first draft target",detail:"Target date for first complete draft to share with Dr Ella Haig. Focus: cross-platform divergence finding, measurement invariance framing, implications for government social listening.",cat:"ec-gold"},
-  {d:1,m:9,y:2026,title:"Check Zubiaga (QMUL) for 2027 cycle",detail:"Zubiaga said too late for 2026/27 but to check again for 2027 cycle. Also check Tornberg (UvA) — will notify if position opens.",cat:"ec-green"},
-  {d:1,m:10,y:2026,title:"Apply — USC (Ferrara) + CMU (Carley)",detail:"Both supervisors confirmed apply-in-fall for 2027 intake. USC: Khoury College of Computer Sciences. CMU: School of Computer Science, Societal Computing programme. Prepare strong application with research proposal.",cat:"ec-cyan"},
-  {d:1,m:10,y:2026,title:"Edinburgh CDT application window opens",detail:"CDT in Designing Responsible NLP. Walid Magdy confirmed supervisor. Bjorn Ross confirmed fit. Fully funded stipend + fees. Prepare application — ICWSM submission must be in progress as evidence.",cat:"ec-cyan"},
-  {d:31,m:10,y:2026,title:"HARD DEADLINE — ICWSM paper must be submitted",detail:"Paper must be submitted or under review before Edinburgh scholarship deadline. This is the non-negotiable hard deadline for the ICWSM 2027 short paper with Dr Ella Haig.",cat:"ec-red"},
-  {d:1,m:11,y:2026,title:"Check Jana Lasser (Graz) — grant results",detail:"Prof. Lasser has ongoing grant applications that may create PhD positions. Check by November for outcomes and potential openings.",cat:"ec-purple"},
-  {d:1,m:11,y:2026,title:"Follow up Piccardi (JHU) + Apply OII Oxford (Stephany)",detail:"Piccardi: prepare JHU application package. Stephany (OII Oxford): November 2026 application cycle opens. Prepare DPhil application for Oxford Internet Institute.",cat:"ec-cyan"},
-  {d:7,m:1,y:2027,title:"Edinburgh CDT — application deadline",detail:"UKRI CDT in Responsible and Trustworthy NLP. Supervisors: Walid Magdy + Bjorn Ross. Fully funded. Submit with ICWSM paper as evidence of publication progress. This is the priority application.",cat:"ec-red"},
+  {d:14,m:4,y:2026,cat:"ec-green",dc:"dc-green",title:"Reply sent to Matti Nelimarkka",detail:"Sent detailed reply with concrete research direction: measurement invariance (multi-group CFA), causal decomposition (matched natural experiments), Bayesian correction validated against BES data. Helsinki has twice-yearly application windows.",action:"Await Nelimarkka reply. If no response within 10 days, follow up politely."},
+  {d:21,m:4,y:2026,cat:"ec-green",dc:"dc-green",title:"Follow-up round — all awaiting professors",detail:"15 professors have had no reply or OOO responses. Send polite follow-up to: Bail (Duke), Wagner (GESIS), Gonzalez-Bailon (Penn), Nguyen (Utrecht), Hovy (Bocconi), Strohmaier (Mannheim), Garcia (Konstanz), Starbird (UW), Hang Jiang (Northeastern), Augenstein (CopeNLU), Rizoiu (UTS), Waldherr (Vienna), Lorenz-Spreen (TU Dresden), Yasseri (TCD).",action:"Draft and send one follow-up email per professor. Keep it to 2 sentences: reference original email, ask if they had a chance to review it."},
+  {d:30,m:4,y:2026,cat:"ec-gold",dc:"dc-gold",title:"ICWSM 2027 paper — begin writing",detail:"Start converting MSc dissertation into ICWSM short paper (4–6 pages). Central contribution: cross-platform sentiment divergence is structural, directional, and large enough to reverse public opinion conclusions. Contact Dr Ella Haig to align on timeline, authorship, and division of writing tasks.",action:"Email Dr Ella Haig. Open Overleaf (AAAI 2026 template, main.tex already started). Draft abstract and introduction this week."},
+  {d:14,m:5,y:2026,cat:"ec-green",dc:"dc-green",title:"Bjerva (AAU Copenhagen) — paternity leave ends",detail:"Prof. Johannes Bjerva returns from paternity leave on 14 May 2026. He has open PhD positions in NLP and multilingual models at Aalborg University Copenhagen. Email was sent 3 Apr but auto-replied with leave notice.",action:"Send follow-up email to jbjerva@cs.aau.dk on 14 May. Reference original email. Ask about NLP/multilingual PhD positions."},
+  {d:1,m:6,y:2026,cat:"ec-purple",dc:"dc-purple",title:"Check SOUNDS Observatory positions — Weber, Saarland",detail:"Prof. Ingmar Weber replied: PhD and data engineer positions related to SOUNDS Observatory expected summer 2026. SOUNDS is a cross-platform social media observatory project at Saarland University.",action:"Visit sounds-observatory.org and Saarland I2SC lab page. Apply immediately if positions are posted."},
+  {d:15,m:6,y:2026,cat:"ec-gold",dc:"dc-gold",title:"ICWSM paper — first complete draft target",detail:"First draft of the ICWSM 2027 short paper should be complete and shared with Dr Ella Haig for feedback. Paper must clearly present: (1) research gap, (2) cross-platform dataset and NLP methodology, (3) divergence finding, (4) implications for measurement validity.",action:"Share draft with Dr Ella Haig by this date. Incorporate her feedback within 2 weeks."},
+  {d:1,m:9,y:2026,cat:"ec-green",dc:"dc-green",title:"Check Zubiaga (QMUL) + monitor Tornberg (UvA)",detail:"Arkaitz Zubiaga (QMUL) said too late for 2026/27 but to reconnect for 2027 cycle. Petter Tornberg (UvA) confirmed strong fit and said he will notify if a position opens — check if anything has changed.",action:"Email Zubiaga: brief re-introduction, mention ICWSM paper progress. Check Tornberg's group page for new positions."},
+  {d:1,m:10,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Apply — USC (Ferrara) + CMU (Carley)",detail:"Prof. Ferrara (USC HUMANS Lab) and Prof. Carley (CMU CASOS/IDeaS) both confirmed: apply in fall for 2027 intake. USC: Khoury College of Computer Sciences PhD program. CMU: School of Computer Science, Societal Computing programme. Mention each supervisor by name in application.",action:"Prepare applications for both programmes. Use Master Research Proposal v4 as statement of purpose base. Attach CV and ICWSM paper (submitted or under review)."},
+  {d:1,m:10,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Edinburgh CDT — application window opens",detail:"CDT in Designing Responsible NLP at University of Edinburgh. Prof. Walid Magdy confirmed supervisor (SMASH group). Dr Bjorn Ross confirmed strong fit. Fully funded: stipend + tuition fees waived. Sept 2026 cohort or Jan 2027 deadline depending on cycle.",action:"Begin CDT application. List Walid Magdy as supervisor, Bjorn Ross as co-supervisor. Submit ICWSM paper as evidence of in-progress publication. Use Master Research Proposal v4 as research statement."},
+  {d:31,m:10,y:2026,cat:"ec-red",dc:"dc-red",title:"HARD DEADLINE — ICWSM paper must be submitted",detail:"The ICWSM short paper must be submitted or formally under review by this date. This is non-negotiable — it feeds directly into the Edinburgh scholarship application as evidence of research productivity. Without this, the Edinburgh application is significantly weaker.",action:"ICWSM paper submitted to easychair by this date. If not ready for full submission, submit as a preprint to arXiv and reference it in the Edinburgh application."},
+  {d:1,m:11,y:2026,cat:"ec-purple",dc:"dc-purple",title:"Check Jana Lasser (Graz) — grant outcomes",detail:"Prof. Jana Lasser replied positively in April but had no open positions. She mentioned ongoing grant applications that might create PhD positions. Check by November.",action:"Email Jana Lasser: brief update on ICWSM paper progress, ask if grants have come through and whether PhD positions have opened."},
+  {d:1,m:11,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Apply — OII Oxford (Stephany) + follow up Piccardi (JHU)",detail:"Fabian Stephany (Oxford Internet Institute) directed to November 2026 cycle. Tiziano Piccardi (JHU) confirmed end-of-year deadline. Both are warm contacts — prepare tailored applications. OII DPhil is prestigious and CSS-focused. JHU directly aligns with Piccardi's platform-independent measurement work.",action:"Submit OII DPhil application (November cycle). Prepare JHU application and send Piccardi a follow-up with the full application and ICWSM paper reference."},
+  {d:7,m:1,y:2027,cat:"ec-red",dc:"dc-red",title:"Edinburgh CDT — FINAL application deadline",detail:"UKRI CDT in Responsible and Trustworthy Natural Language Processing. This is the priority application. Fully funded — UKRI stipend plus fees waived. Supervisors: Prof. Walid Magdy (confirmed) + Dr Bjorn Ross (confirmed fit). The CDT starts September 2026 cohort and this is the main intake deadline.",action:"Submit complete CDT application by midnight 7 January 2027. Must include: research statement (use Proposal v4), CV, two references (Dr Ella Haig + academic/professional), and ICWSM paper (submitted or preprint). This is the most important application deadline in the campaign."},
 ];
 
-function buildCalendar(){
-  const list=document.getElementById('events-list');
-  const now=new Date(2026,3,14);
-  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const catLabel={'ec-cyan':'Application','ec-gold':'Paper / Writing','ec-green':'Follow-up','ec-purple':'Monitor','ec-red':'Deadline'};
-  const sorted=[...EVENTS].sort((a,b)=>new Date(a.y,a.m-1,a.d)-new Date(b.y,b.m-1,b.d));
-  sorted.forEach(ev=>{
-    const evDate=new Date(ev.y,ev.m-1,ev.d);
-    const isPast=evDate<now&&evDate.toDateString()!==now.toDateString();
-    const isToday=evDate.toDateString()===now.toDateString();
-    const dayColor=isPast?'var(--text3)':isToday?'var(--cyan)':'var(--gold)';
-    const item=document.createElement('div');
-    item.className='ev-item'+(isPast?' past':'')+(isToday?' today-ev':'');
-    item.innerHTML='<div class="ev-date-col"><div class="ev-day" style="color:'+dayColor+'">'+ev.d+'</div><div class="ev-mon">'+months[ev.m-1]+' '+ev.y+'</div></div>'
-      +'<div class="ev-body"><div class="ev-title">'+ev.title+'</div><div class="ev-detail">'+ev.detail+'</div>'
-      +'<span class="ev-cat '+ev.cat+'">'+catLabel[ev.cat]+'</span></div>';
-    list.appendChild(item);
+const CAT_LABELS={'ec-cyan':'Application','ec-gold':'Paper / Writing','ec-green':'Follow-up','ec-purple':'Monitor','ec-red':'Deadline'};
+const MONTHS_FULL=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MONTHS_SHORT=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const TODAY=new Date(2026,3,14);
+
+let calYear=2026, calMonth=3; // 0-indexed; April 2026
+
+function evKey(d,m,y){return y+'-'+m+'-'+d;}
+function buildEvMap(){
+  const map={};
+  EVENTS.forEach(e=>{
+    const k=evKey(e.d,e.m-1,e.y);
+    if(!map[k])map[k]=[];
+    map[k].push(e);
   });
+  return map;
+}
+const EV_MAP=buildEvMap();
+
+function renderCalendar(){
+  const title=document.getElementById('cal-title');
+  const grid=document.getElementById('cal-days');
+  title.textContent=MONTHS_FULL[calMonth]+' '+calYear;
+  grid.innerHTML='';
+
+  const firstDay=new Date(calYear,calMonth,1);
+  const lastDay=new Date(calYear,calMonth+1,0);
+  // Start on Monday: getDay() returns 0=Sun, so shift
+  let startDow=firstDay.getDay(); // 0=Sun
+  startDow=startDow===0?6:startDow-1; // convert to Mon=0
+
+  // Pad with prev month days
+  const prevLast=new Date(calYear,calMonth,0);
+  for(let i=startDow-1;i>=0;i--){
+    const d=prevLast.getDate()-i;
+    const cell=makeCell(d,calMonth-1<0?calYear-1:calYear,calMonth-1<0?11:calMonth-1,true);
+    grid.appendChild(cell);
+  }
+  // Current month
+  for(let d=1;d<=lastDay.getDate();d++){
+    const cell=makeCell(d,calYear,calMonth,false);
+    grid.appendChild(cell);
+  }
+  // Fill remaining to complete grid rows
+  const total=startDow+lastDay.getDate();
+  const remaining=(7-total%7)%7;
+  for(let d=1;d<=remaining;d++){
+    const cell=makeCell(d,calMonth+1>11?calYear+1:calYear,calMonth+1>11?0:calMonth+1,true);
+    grid.appendChild(cell);
+  }
+
+  renderSidebar();
+}
+
+function makeCell(d,y,m,otherMonth){
+  const cell=document.createElement('div');
+  cell.className='cal-cell'+(otherMonth?' other-month':'');
+  const k=evKey(d,m,y);
+  const evs=EV_MAP[k]||[];
+  const isToday=d===TODAY.getDate()&&m===TODAY.getMonth()&&y===TODAY.getFullYear();
+  if(isToday)cell.classList.add('is-today');
+  if(evs.length)cell.classList.add('has-ev');
+
+  const dnum=document.createElement('div');
+  dnum.className='cal-dnum';
+  dnum.textContent=d;
+  cell.appendChild(dnum);
+
+  if(evs.length){
+    const dots=document.createElement('div');
+    dots.className='cal-dots';
+    evs.slice(0,4).forEach(e=>{
+      const dot=document.createElement('div');
+      dot.className='cal-dot '+e.dc;
+      dots.appendChild(dot);
+    });
+    cell.appendChild(dots);
+    cell.onclick=()=>openDayModal(evs,d,m,y);
+  }
+  return cell;
+}
+
+function renderSidebar(){
+  const header=document.getElementById('sidebar-header');
+  const container=document.getElementById('sidebar-events');
+  container.innerHTML='';
+
+  // Show upcoming events from today onwards, sorted, max 8
+  const now=TODAY.getTime();
+  const upcoming=EVENTS
+    .map(e=>({...e,ts:new Date(e.y,e.m-1,e.d).getTime()}))
+    .filter(e=>e.ts>=now)
+    .sort((a,b)=>a.ts-b.ts)
+    .slice(0,8);
+
+  header.textContent='Upcoming events ('+upcoming.length+')';
+
+  if(!upcoming.length){
+    container.innerHTML='<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;color:var(--text3);padding:16px;text-align:center">No upcoming events</div>';
+    return;
+  }
+
+  upcoming.forEach(e=>{
+    const card=document.createElement('div');
+    card.className='ev-card';
+    const borderMap={'ec-cyan':'var(--cyan)','ec-gold':'var(--amber)','ec-green':'var(--green)','ec-purple':'var(--purple)','ec-red':'var(--red)'};
+    card.style.borderLeftColor=borderMap[e.cat]||'transparent';
+    card.innerHTML='<div class="ev-card-date">'+e.d+' '+MONTHS_SHORT[e.m-1]+' '+e.y+'</div>'
+      +'<div class="ev-card-title">'+e.title+'</div>'
+      +'<span class="ev-card-cat '+e.cat+'">'+CAT_LABELS[e.cat]+'</span>';
+    card.onclick=()=>openModal(e,e.d,e.m-1,e.y);
+    card.style.cursor='pointer';
+    container.appendChild(card);
+  });
+}
+
+function openDayModal(evs,d,m,y){
+  if(evs.length===1){openModal(evs[0],d,m,y);return;}
+  // Multiple events on same day — show first, could extend to list
+  openModal(evs[0],d,m,y);
+}
+
+function openModal(ev,d,m,y){
+  const days=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  const dow=new Date(y,m,d).getDay();
+  const dowName=days[dow===0?6:dow-1];
+  document.getElementById('modal-date').textContent=dowName+', '+d+' '+MONTHS_FULL[m]+' '+y;
+  document.getElementById('modal-title').textContent=ev.title;
+  document.getElementById('modal-cat').className='modal-cat '+ev.cat;
+  document.getElementById('modal-cat').textContent=CAT_LABELS[ev.cat];
+  document.getElementById('modal-detail').textContent=ev.detail;
+  document.getElementById('modal-action').textContent=ev.action;
+  document.getElementById('modal-bg').classList.remove('hidden');
+}
+
+function closeModal(e){
+  if(e===null||e.target===document.getElementById('modal-bg')){
+    document.getElementById('modal-bg').classList.add('hidden');
+  }
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('modal-bg').classList.add('hidden');});
+
+function calNav(dir){
+  calMonth+=dir;
+  if(calMonth>11){calMonth=0;calYear++;}
+  if(calMonth<0){calMonth=11;calYear--;}
+  renderCalendar();
 }
 
 buildFilterBar();
 renderProfs();
-buildCalendar();
+renderCalendar();
 </script>
 </body>
 </html>
