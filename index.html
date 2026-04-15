@@ -694,9 +694,11 @@ function calNav(dir){
   renderCalendar();
 }
 
-buildFilterBar();
-renderProfs();
-renderCalendar();
+document.addEventListener('DOMContentLoaded', function() {
+  buildFilterBar();
+  renderProfs();
+  renderCalendar();
+});
 </script>
 </body>
 </html>
