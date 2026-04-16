@@ -285,7 +285,10 @@ footer a:hover{color:var(--gold2)}
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">PhD Quest</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)">Asad Ikram · 2026</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);display:flex;align-items:center;gap:12px">
+      <span id="last-refreshed" style="color:var(--text3)"></span>
+      <span>Asad Ikram · 2026</span>
+    </div>
   </div>
 </nav>
 
@@ -1137,6 +1140,10 @@ function toggleDone(id, el){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Last refreshed — updated manually on each "Refresh all my phd" run
+  const LAST_REFRESHED = '16 Apr 2026, 22:00 PKT';
+  document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
+
   buildFilterBar();
   renderProfs();
   renderCalendar();
