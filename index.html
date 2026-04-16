@@ -220,8 +220,47 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,12,18,0.9);backdrop-filt
 .leg-item{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
 .leg-dot{width:8px;height:8px;border-radius:50%}
 
-/* FOOTER */
-footer{text-align:center;padding:28px 24px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);border-top:1px solid var(--border)}
+/* TODAY ACTIONS */
+.today-wrap{margin-bottom:36px;position:relative}
+.today-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.today-title-row{display:flex;align-items:center;gap:12px}
+.today-pulse{width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(79,195,195,0.4);animation:todaypulse 2s infinite}
+@keyframes todaypulse{0%{box-shadow:0 0 0 0 rgba(79,195,195,0.5)}70%{box-shadow:0 0 0 10px rgba(79,195,195,0)}100%{box-shadow:0 0 0 0 rgba(79,195,195,0)}}
+.today-label{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text);font-weight:400}
+.today-date-badge{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.22);padding:4px 12px;border-radius:20px}
+.today-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
+.today-empty{text-align:center;padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:12px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3)}
+.action-list{display:flex;flex-direction:column;gap:10px}
+.action-item{display:flex;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.18s,transform 0.18s;cursor:default}
+.action-item:hover{border-color:var(--border2);transform:translateY(-1px)}
+.action-stripe{width:4px;flex-shrink:0}
+.action-stripe.s-red{background:var(--red)}
+.action-stripe.s-gold{background:var(--amber)}
+.action-stripe.s-cyan{background:var(--cyan)}
+.action-stripe.s-green{background:var(--green)}
+.action-stripe.s-purple{background:var(--purple)}
+.action-body{padding:14px 16px;flex:1;display:flex;align-items:flex-start;gap:14px}
+.action-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:1px}
+.action-icon.i-red{background:var(--red-bg)}
+.action-icon.i-gold{background:var(--amber-bg)}
+.action-icon.i-cyan{background:var(--cyan-dim)}
+.action-icon.i-green{background:var(--green-bg)}
+.action-icon.i-purple{background:var(--purple-bg)}
+.action-content{flex:1}
+.action-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px;line-height:1.4}
+.action-detail{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:8px}
+.action-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.action-tag-pill{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 9px;border-radius:10px}
+.action-tag-pill.p-red{background:var(--red-bg);color:var(--red);border:1px solid rgba(248,113,113,0.2)}
+.action-tag-pill.p-gold{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(251,191,36,0.2)}
+.action-tag-pill.p-cyan{background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2)}
+.action-tag-pill.p-green{background:var(--green-bg);color:var(--green);border:1px solid rgba(74,222,128,0.2)}
+.action-tag-pill.p-purple{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(167,139,250,0.2)}
+.action-check{width:22px;height:22px;border-radius:6px;border:1px solid var(--border2);background:transparent;cursor:pointer;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all 0.15s;font-size:11px;color:transparent}
+.action-check:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim)}
+.action-check.done{background:var(--green-bg);border-color:var(--green);color:var(--green)}
+.action-item.done-item{opacity:0.45}
+.action-item.done-item .action-title{text-decoration:line-through;color:var(--text3)}
 footer a{color:var(--gold)}
 footer a:hover{color:var(--gold2)}
 
@@ -275,6 +314,19 @@ footer a:hover{color:var(--gold2)}
     <div class="stat-cell"><div class="stat-num">26</div><div class="stat-label">Replies</div></div>
     <div class="stat-cell"><div class="stat-num">8</div><div class="stat-label">Warm / positive</div></div>
     <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label">Confirmed supervisors</div></div>
+  </div>
+
+  <!-- TODAY ACTIONS -->
+  <div class="today-wrap">
+    <div class="today-header">
+      <div class="today-title-row">
+        <div class="today-pulse"></div>
+        <div class="today-label">Today's Actions</div>
+        <span class="today-date-badge" id="today-date-badge"></span>
+      </div>
+      <div class="today-count" id="today-count"></div>
+    </div>
+    <div id="today-list"></div>
   </div>
 
   <div class="sec-head"><span class="sec-tag">Active</span><h2 class="sec-title">Goals &amp; Milestones</h2></div>
@@ -799,10 +851,190 @@ function calNav(dir){
   renderCalendar();
 }
 
+// ── TODAY ACTIONS ENGINE ─────────────────────────────────────────────────────
+// All possible actions. Each has a `trigger` function that receives today's Date
+// and returns true if it should appear today or is overdue.
+const TODAY_ACTIONS = [
+  {
+    id:'augenstein-reply',
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
+    tag:'p-cyan', tagLabel:'Awaiting reply',
+    title:'Check inbox — Augenstein (CopeNLU Copenhagen)',
+    detail:'Follow-up sent 15 Apr. She has been back since 8 April. CopeNLU actively recruiting Autumn 2026 via ELLIS. High priority — check for reply daily until received.',
+    trigger: d => d >= new Date(2026,3,15),
+  },
+  {
+    id:'waldherr-reply',
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
+    tag:'p-cyan', tagLabel:'Awaiting reply',
+    title:'Check inbox — Waldherr (Vienna CCS Lab)',
+    detail:'Follow-up sent 15 Apr after 8 days of silence post-OOO. Check if she has replied. If nothing by 22 Apr, send one final nudge.',
+    trigger: d => d >= new Date(2026,3,15),
+  },
+  {
+    id:'rizoiu-reply',
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
+    tag:'p-cyan', tagLabel:'Awaiting reply',
+    title:'Check inbox — Rizoiu (UTS Behavioral Data Science)',
+    detail:'Back since 13 April. OOO auto-reply only so far. Give him until 20 Apr then follow up.',
+    trigger: d => d >= new Date(2026,3,13),
+  },
+  {
+    id:'nelimarkka-reply',
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
+    tag:'p-cyan', tagLabel:'Awaiting reply',
+    title:'Check inbox — Nelimarkka (Helsinki Social Computing)',
+    detail:'Detailed reply sent 14 Apr with concrete RQs: multi-group CFA, causal decomposition, Bayesian correction. Helsinki has twice-yearly windows. Nudge if no reply by 25 Apr.',
+    trigger: d => d >= new Date(2026,3,14),
+  },
+  {
+    id:'batch-followup',
+    stripe:'s-red', icon:'i-red', iconChar:'🔁',
+    tag:'p-red', tagLabel:'Due 21 Apr — ' + (new Date() >= new Date(2026,3,21) ? 'OVERDUE' : 'in ' + Math.max(0, Math.ceil((new Date(2026,3,21)-new Date())/(1000*60*60*24))) + ' days'),
+    title:'Batch follow-up — 13 awaiting professors',
+    detail:'Bail (Duke), Wagner (GESIS), González-Bailón (Penn), Nguyen (Utrecht), Hovy (Bocconi), Strohmaier (Mannheim), Garcia (Konstanz), Starbird (UW), Hang Jiang (Northeastern), Lorenz-Spreen (TU Dresden), Yasseri (TCD), Nagler (NYU), Aiello (ITU Copenhagen). All emailed 31 Mar–6 Apr with no reply.',
+    trigger: d => d >= new Date(2026,3,15),
+  },
+  {
+    id:'overleaf-ella',
+    stripe:'s-gold', icon:'i-gold', iconChar:'📄',
+    tag:'p-gold', tagLabel:'Before Tue 21 Apr',
+    title:'Share Overleaf draft with Dr Ella Haig — before Tuesday meeting',
+    detail:'Meeting is Tuesday 21 Apr at 10:00 AM UK / 14:00 PKT. You told her you would share the Overleaf draft before the meeting. She needs it to review in advance.',
+    trigger: d => d >= new Date(2026,3,16) && d <= new Date(2026,3,21),
+  },
+  {
+    id:'sounds-linkedin',
+    stripe:'s-purple', icon:'i-purple', iconChar:'🔔',
+    tag:'p-purple', tagLabel:'Monitor',
+    title:'Follow SOUNDS Observatory on LinkedIn',
+    detail:'Weber confirmed team member / data engineer positions coming soon — no C1 German required. He linked the LinkedIn page explicitly. Follow it now so you see the posting the moment it goes up.',
+    trigger: d => d >= new Date(2026,3,15) && d <= new Date(2026,4,15),
+  },
+  {
+    id:'sounds-w2833',
+    stripe:'s-purple', icon:'i-purple', iconChar:'📋',
+    tag:'p-purple', tagLabel:'Check fit',
+    title:'Read SOUNDS PostDoc JD — W2833 Computational Social Sciences',
+    detail:'New position detected by Lambda monitor on 15 Apr. "Academic Postdoctoral Researcher for Computational Social Sciences (m/f/x)" — SOUNDS transformation programme. PDF: uni-saarland.de → Academic Jobs → W2833.',
+    trigger: d => d >= new Date(2026,3,15) && d <= new Date(2026,3,25),
+  },
+  {
+    id:'ella-meeting',
+    stripe:'s-gold', icon:'i-gold', iconChar:'📞',
+    tag:'p-gold', tagLabel:'TODAY — 14:00 PKT',
+    title:'Meeting: Dr Ella Haig — ICWSM paper venue + timeline',
+    detail:'10:00 AM UK / 14:00 PKT. Agenda: agree target venue (ICWSM vs EPJ Data Science), review Overleaf structure, agree timeline and division of writing. Have the Overleaf link ready.',
+    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()===21,
+  },
+  {
+    id:'bjerva-followup',
+    stripe:'s-green', icon:'i-green', iconChar:'✉',
+    tag:'p-green', tagLabel:'Due 14 May',
+    title:'Follow up — Bjerva (AAU Copenhagen) returns from paternity leave',
+    detail:'Prof. Johannes Bjerva returns from paternity leave 14 May. Email him on that day about NLP/multilingual PhD positions.',
+    trigger: d => d.getFullYear()===2026 && d.getMonth()===4 && d.getDate()>=14,
+  },
+  {
+    id:'sounds-summer',
+    stripe:'s-purple', icon:'i-purple', iconChar:'🔎',
+    tag:'p-purple', tagLabel:'Check Jun 2026',
+    title:'Check SOUNDS Observatory for PhD/team positions',
+    detail:'Weber confirmed PhD call + team member positions expected by summer. Check sounds-observatory.org and SOUNDS LinkedIn for new postings.',
+    trigger: d => d.getFullYear()===2026 && d.getMonth()===5,
+  },
+  {
+    id:'icwsm-draft',
+    stripe:'s-gold', icon:'i-gold', iconChar:'✍',
+    tag:'p-gold', tagLabel:'Due 30 Apr',
+    title:'Begin writing ICWSM 2027 paper with Dr Ella Haig',
+    detail:'Start converting dissertation into ICWSM short paper. Central contribution: structural cross-platform divergence is directional and large enough to reverse public opinion conclusions. Coordinate with Dr Ella post-meeting.',
+    trigger: d => d >= new Date(2026,3,22) && d <= new Date(2026,3,30),
+  },
+  {
+    id:'icwsm-deadline',
+    stripe:'s-red', icon:'i-red', iconChar:'🚨',
+    tag:'p-red', tagLabel:'HARD DEADLINE 31 Oct',
+    title:'ICWSM paper must be submitted — hard deadline',
+    detail:'Paper must be submitted or under review before Edinburgh scholarship deadline. Without this the Edinburgh CDT application is significantly weaker.',
+    trigger: d => d.getFullYear()===2026 && d.getMonth()===9 && d.getDate()>=24,
+  },
+];
+
+function buildTodayActions(){
+  const now = new Date();
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+  // Date badge
+  document.getElementById('today-date-badge').textContent =
+    days[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+
+  // Filter applicable actions
+  const active = TODAY_ACTIONS.filter(a => a.trigger(now));
+
+  const countEl = document.getElementById('today-count');
+  const listEl  = document.getElementById('today-list');
+
+  if(!active.length){
+    countEl.textContent = '';
+    listEl.innerHTML = '<div class="today-empty">✓ Nothing due today. Check back tomorrow.</div>';
+    return;
+  }
+
+  countEl.textContent = active.length + ' action' + (active.length!==1?'s':'') + ' due';
+
+  // Load done state from sessionStorage (resets on tab close — intentional)
+  const done = new Set(JSON.parse(sessionStorage.getItem('today-done')||'[]'));
+
+  listEl.innerHTML = '';
+  const wrap = document.createElement('div');
+  wrap.className = 'action-list';
+
+  active.forEach(a => {
+    const isDone = done.has(a.id);
+    const item = document.createElement('div');
+    item.className = 'action-item' + (isDone?' done-item':'');
+    item.innerHTML =
+      `<div class="action-stripe ${a.stripe}"></div>
+       <div class="action-body">
+         <div class="action-icon ${a.icon}">${a.iconChar}</div>
+         <div class="action-content">
+           <div class="action-title">${a.title}</div>
+           <div class="action-detail">${a.detail}</div>
+           <div class="action-meta">
+             <span class="action-tag-pill ${a.tag}">${a.tagLabel}</span>
+           </div>
+         </div>
+         <div class="action-check ${isDone?'done':''}" title="Mark done" onclick="toggleDone('${a.id}',this)">✓</div>
+       </div>`;
+    wrap.appendChild(item);
+  });
+
+  listEl.appendChild(wrap);
+  countEl.textContent = active.length + ' action' + (active.length!==1?'s':'') + ' due';
+}
+
+function toggleDone(id, el){
+  const done = new Set(JSON.parse(sessionStorage.getItem('today-done')||'[]'));
+  const card = el.closest('.action-item');
+  if(done.has(id)){
+    done.delete(id);
+    el.classList.remove('done');
+    card.classList.remove('done-item');
+  } else {
+    done.add(id);
+    el.classList.add('done');
+    card.classList.add('done-item');
+  }
+  sessionStorage.setItem('today-done', JSON.stringify([...done]));
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   buildFilterBar();
   renderProfs();
   renderCalendar();
+  buildTodayActions();
 });
 </script>
 </body>
