@@ -883,14 +883,7 @@ function calNav(dir){
 // and returns true if it should appear today or is overdue.
 const TODAY_ACTIONS = [
   // ── IMMEDIATE (urgent:true) — do today ──────────────────────────────────
-  {
-    id:'theocharis-reply', urgent:true,
-    stripe:'s-green', icon:'i-green', iconChar:'✉',
-    tag:'p-green', tagLabel:'Reply today',
-    title:'Reply to Theocharis (TUM) — warm response received',
-    detail:'He replied within 18 hours calling your platform heterogeneity framing "very interesting". No current opening but PhD call expected ~September 2026 at his chair. He will keep your profile in mind. Send a short warm thank-you today confirming you will watch for the September call.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()===17,
-  },
+
   {
     id:'ella-meeting', urgent:true,
     stripe:'s-gold', icon:'i-gold', iconChar:'📞',
