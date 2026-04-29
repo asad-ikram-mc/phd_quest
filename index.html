@@ -579,7 +579,7 @@ const PROFS=[
   {name:"Prof. Dirk Hovy",inst:"Bocconi University · MilaNLP Lab",topic:"Demographic Bias in NLP, Sociolinguistic Variation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"2 Apr 2026",summary:"Work on demographic bias in NLP relevant to multilingual extension.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. Markus Strohmaier",inst:"University of Mannheim",topic:"Computational Social Science Methods, LLM Bias and Digital Behavioral Data",status:"awaiting",sent:"31 Mar 2026",summary:"Co-authored Wagner et al. 2021 (Nature) — key reference in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. David Garcia",inst:"University of Konstanz · Social Data Science Lab",topic:"Social and Algorithmic Drivers of Political Discourse, Computational Affective Science",status:"awaiting",sent:"31 Mar 2026",summary:"Metzler and Garcia 2024 cited in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Kate Starbird",inst:"University of Washington · HCDE / Center for an Informed Public",topic:"Collective Sensemaking, Participatory Disinformation and Cross-Platform Crisis Dynamics",status:"warm",sent:"6 Apr 2026",summary:"Replied 27 Apr. Called interest areas, expertise and research questions 'very well aligned' with her lab and UW CIP's research mission. Planning to admit ONE PhD student in Fall 2027-28 cycle — expects it to be very competitive but explicitly welcomed an application. Offered to connect with current/past students and directed to Kathleen Rascon (HCDE grad advisor) for application process questions.",response:"\"Your interest areas, expertise, and research questions sound very well aligned with my lab and the research mission at the UW Center for an Informed Public. I plan to admit one new PhD student in the next application cycle (next Fall, for admission in 2027-2028). It is likely to be very competitive. But I would welcome an application from you.\"",timeline:"Warm · apply Fall 2027-28 cycle · UW HCDE deadline ~Dec 2026",action:"Reply warmly today. Thank her, confirm you will apply for the 2027-28 cycle. Ask if connecting with a current student would be possible. Contact Kathleen Rascon at HCDE about application requirements. Set calendar reminder for UW HCDE deadline (~Dec 2026)."},
+  {name:"Prof. Kate Starbird",inst:"University of Washington · HCDE / Center for an Informed Public",topic:"Collective Sensemaking, Participatory Disinformation and Cross-Platform Crisis Dynamics",status:"warm",sent:"6 Apr 2026",summary:"Replied 27 Apr. Called interest areas, expertise and research questions 'very well aligned' with her lab and UW CIP's research mission. Planning to admit ONE PhD student in Fall 2027-28 cycle — expects it to be very competitive but explicitly welcomed an application. Offered to connect with current/past students. Asad replied 29 Apr: confirmed 2027-28 application, mentioned ICWSM paper by October, asked about current student connection. Kathleen Rascon (HCDE grad advisor) also emailed for deadline confirmation.",response:"\"Your interest areas, expertise, and research questions sound very well aligned with my lab and the research mission at the UW Center for an Informed Public. I plan to admit one new PhD student in the next application cycle (next Fall, for admission in 2027-2028). It is likely to be very competitive. But I would welcome an application from you.\" — Replied 29 Apr: confirmed application, ICWSM paper mention, asked about current student intro.",timeline:"Warm · apply Fall 2027-28 · UW HCDE deadline ~Dec 15 2026 · awaiting Rascon reply",action:"Await reply from Kathleen Rascon (krascon@uw.edu) re: exact deadline. If Starbird offers student contact, reach out. Begin UW HCDE SOP in November."},
   {name:"Prof. Hang Jiang",inst:"Northeastern University",topic:"LLMs for Civic Decision-Making, Human-AI Narrative Synthesis and Cross-Platform Sentiment",status:"awaiting",sent:"6 Apr 2026",summary:"Actively recruiting PhD students Fall 2026. LLMs and political communication aligns well.",response:"No reply yet.",timeline:"Actively recruiting Fall 2026 — high priority",action:"Follow up April 21. High priority."},
   {name:"Dr Gregor Wiedemann",inst:"Leibniz Institute · Social Media Observatory",topic:"Social Media Observatory CSS Position (Ref: PB1-26-06)",status:"awaiting",sent:"3 Apr 2026",summary:"Applied to advertised position at Hans-Bredow-Institut.",response:"No reply yet.",timeline:"Advertised position · awaiting",action:"Follow up if no reply by May."},
   {name:"Prof. Annie Waldherr",inst:"University of Vienna · CCS Lab",topic:"Computational Communication Science, Digitised Public Spheres and Cross-Platform Political Discourse",status:"awaiting",sent:"1 Apr 2026",summary:"OOO until 7 April. Back now.",response:"OOO until 7 April.",timeline:"Expected reply — she is back",action:"Check inbox. Follow up if no reply by Apr 21."},
@@ -1058,14 +1058,6 @@ const TODAY_ACTIONS = [
     trigger: d => d.getFullYear()===2026 && d.getMonth()===9,
   },
   {
-    id:'starbird-reply', urgent:true,
-    stripe:'s-green', icon:'i-green', iconChar:'✉',
-    tag:'p-green', tagLabel:'Reply today',
-    title:'Reply to Prof. Kate Starbird (UW CIP) — major warm response',
-    detail:'She replied calling your expertise "very well aligned" with her lab and UW CIP. Planning to admit ONE student for 2027-28 — explicitly welcomed your application. Reply warmly today: thank her, confirm you will apply, and ask if connecting with a current student would be possible.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()>=29,
-  },
-  {
     id:'edinburgh-deadline', urgent:false,
     stripe:'s-red', icon:'i-red', iconChar:'⏰',
     tag:'p-red', tagLabel:'7 Jan 2027',
@@ -1158,7 +1150,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '29 Apr 2026, 09:30 PKT';
+  const LAST_REFRESHED = '29 Apr 2026, 21:00 PKT';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
 
   buildFilterBar();
