@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#05080f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>PhD Quest — Asad Ikram</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -252,11 +255,114 @@ header{position:sticky;top:0;z-index:100;background:rgba(5,8,15,0.93);backdrop-f
 
 footer a{color:var(--gold)}
 footer a:hover{color:var(--gold2)}
-@media(max-width:600px){
-  .prof-right .sent-date,.prof-right .chevron{display:none}
-  .hero h1{font-size:34px}
-  .tab-btn{padding:12px 15px;font-size:12px}
-  .panel{padding:28px 16px 60px}
+/* ── TABLET (≤900px) ── */
+@media(max-width:900px){
+  .goals-grid{grid-template-columns:1fr}
+  .paper-grid{grid-template-columns:1fr}
+  .cal-outer{grid-template-columns:1fr}
+  .cal-sidebar{margin-top:8px}
+}
+
+/* ── MOBILE (≤640px) ── */
+@media(max-width:640px){
+  /* Header */
+  .header-inner{padding:0 16px}
+  .header-top{height:52px}
+  .header-logo{font-size:17px}
+  .header-meta span:last-child{display:none}
+  #last-refreshed{font-size:10px}
+
+  /* Tabs — scrollable row, no centering on small screens */
+  .tab-bar{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .tab-bar::-webkit-scrollbar{display:none}
+  .tab-btn{padding:13px 18px;font-size:12px;flex-shrink:0}
+
+  /* Panel */
+  .panel{padding:28px 16px 72px}
+
+  /* Hero */
+  .hero{padding:40px 0 36px;margin-bottom:32px}
+  .hero h1{font-size:clamp(30px,9vw,44px);line-height:1.1}
+  .hero-sub{font-size:15px;line-height:1.75;max-width:100%}
+  .hero-badge{font-size:11px;padding:6px 14px}
+  .hero-links{gap:8px}
+  .hero-link{font-size:11px;padding:7px 13px}
+
+  /* Stats */
+  .stats-strip{grid-template-columns:repeat(2,1fr);margin-bottom:32px;border-radius:12px}
+  .stat-cell{padding:20px 12px}
+  .stat-num{font-size:38px}
+  .stat-label{font-size:11px}
+
+  /* Section headers */
+  .sec-head{margin-bottom:18px}
+  .sec-title{font-size:24px}
+  .sec-tag{font-size:11px}
+
+  /* Today Actions */
+  .today-wrap{margin-bottom:32px}
+  .today-label{font-size:22px}
+  .today-date-badge{font-size:11px;padding:5px 12px}
+  .action-tabs{width:100%}
+  .action-tab{flex:1;justify-content:center;font-size:12px;padding:10px 14px}
+  .action-body{padding:16px 14px;gap:12px}
+  .action-icon{width:36px;height:36px;font-size:16px;border-radius:10px}
+  .action-title{font-size:16px;margin-bottom:6px}
+  .action-detail{font-size:14px;line-height:1.7}
+  .action-tag-pill{font-size:11px;padding:3px 10px}
+  .action-check{width:26px;height:26px}
+
+  /* Goal cards */
+  .goals-grid{grid-template-columns:1fr;gap:14px;margin-bottom:32px}
+  .goal-card{padding:20px;border-radius:14px}
+  .goal-title{font-size:16px}
+  .goal-detail{font-size:14px;line-height:1.72}
+  .goal-deadline{font-size:11px}
+  .chip{font-size:11px;padding:4px 10px}
+
+  /* Filter bar */
+  .filter-bar{gap:6px}
+  .filter-btn{font-size:12px;padding:7px 13px}
+  .search-bar{font-size:15px;padding:12px 15px}
+
+  /* Prof cards */
+  .prof-row{padding:16px 16px;gap:12px}
+  .prof-av{width:38px;height:38px;font-size:12px}
+  .prof-name{font-size:15px}
+  .prof-inst{font-size:13px}
+  .status-pill{font-size:11px;padding:4px 10px}
+  .sent-date{display:none}
+  .prof-body{padding:0 16px 18px}
+  .pbg{gap:14px;padding-top:16px}
+  .fl{font-size:11px}
+  .fv{font-size:15px}
+  .fq{font-size:15px;padding-left:13px}
+  .action-tag{font-size:13px;padding:7px 12px}
+  .timeline-tag{font-size:12px;padding:7px 12px}
+
+  /* Paper cards */
+  .paper-grid{grid-template-columns:1fr;gap:14px}
+  .paper-card{padding:20px;border-radius:14px}
+  .ptitle{font-size:20px}
+  .pdesc{font-size:14px}
+  .pdoc-item{padding:13px 14px;gap:10px}
+  .pdoc-name{font-size:14px}
+  .pdoc-link{font-size:12px;padding:7px 12px}
+
+  /* Calendar */
+  .cal-nav-title{font-size:20px}
+  .cal-cell{min-height:56px;padding:5px}
+  .cal-dnum{font-size:12px}
+  .cal-dow{font-size:10px;padding:10px 0}
+  .cal-dot{width:6px;height:6px}
+  .ev-card{padding:14px}
+  .ev-card-title{font-size:14px}
+  .ev-card-date{font-size:11px}
+  .modal{padding:24px 20px;border-radius:14px}
+  .modal-title{font-size:22px}
+  .modal-detail{font-size:15px}
+  .modal-action{font-size:14px;padding:12px 14px}
+  .modal-close{top:14px;right:14px}
 }
 </style>
 </head>
