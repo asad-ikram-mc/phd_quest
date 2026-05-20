@@ -75,55 +75,55 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,12,18,0.9);backdrop-filt
 .goal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
 .goal-card.c-gold::before{background:linear-gradient(90deg,var(--gold),transparent)}
 .goal-card.c-cyan::before{background:linear-gradient(90deg,var(--cyan),transparent)}
-.goal-card.c-green::before{background:linear-gradient(90deg,var(--green),transparent)}
+.goal-card.c-red::before{background:linear-gradient(90deg,var(--red),transparent)}
 .goal-card.c-purple::before{background:linear-gradient(90deg,var(--purple),transparent)}
-.goal-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:9px}
-.goal-title{font-size:13px;font-weight:500;color:var(--text);line-height:1.4}
-.chip{font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+.goal-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+.goal-title{font-size:16px;font-weight:500;color:var(--text);line-height:1.4}
+.chip{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:10px;white-space:nowrap;flex-shrink:0}
 .chip-gold{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(251,191,36,0.2)}
 .chip-cyan{background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(79,195,195,0.2)}
 .chip-green{background:var(--green-bg);color:var(--green);border:1px solid rgba(74,222,128,0.2)}
 .chip-purple{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(167,139,250,0.2)}
-.goal-detail{font-size:12px;color:var(--text2);line-height:1.6}
-.goal-deadline{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-top:12px;padding-top:11px;border-top:1px solid var(--border)}
+.goal-detail{font-size:14px;color:var(--text2);line-height:1.7}
+.goal-deadline{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);margin-top:12px;padding-top:11px;border-top:1px solid var(--border)}
 
 /* FILTER BAR */
 .filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
-.filter-btn{font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 13px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:6px}
+.filter-btn{font-family:'JetBrains Mono',monospace;font-size:12px;padding:7px 14px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:6px}
 .filter-btn:hover{color:var(--text);border-color:rgba(100,130,200,0.4)}
 .filter-btn.active{background:var(--surface2);color:var(--text);border-color:rgba(100,130,200,0.4)}
-.fcount{background:rgba(100,130,200,0.13);color:var(--text3);border-radius:8px;padding:1px 6px;font-size:10px}
+.fcount{background:rgba(100,130,200,0.13);color:var(--text3);border-radius:8px;padding:1px 7px;font-size:11px}
 .filter-btn.active .fcount{background:rgba(79,195,195,0.18);color:var(--cyan)}
 
 /* SEARCH */
-.search-bar{width:100%;padding:10px 16px;background:var(--surface);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'Outfit',sans-serif;font-size:14px;margin-bottom:14px;outline:none;transition:border-color 0.2s}
+.search-bar{width:100%;padding:11px 16px;background:var(--surface);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'Outfit',sans-serif;font-size:15px;margin-bottom:14px;outline:none;transition:border-color 0.2s}
 .search-bar:focus{border-color:rgba(79,195,195,0.4)}
 .search-bar::placeholder{color:var(--text3)}
 
 /* PROF CARDS */
-.prof-list{display:flex;flex-direction:column;gap:8px}
-.prof-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.15s}
+.prof-list{display:flex;flex-direction:column;gap:10px}
+.prof-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.15s}
 .prof-card:hover{border-color:var(--border2)}
 .prof-card.open{border-color:rgba(100,130,200,0.35)}
-.prof-row{display:flex;align-items:center;gap:14px;padding:13px 16px;cursor:pointer;user-select:none}
-.prof-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;flex-shrink:0}
+.prof-row{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none}
+.prof-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;flex-shrink:0}
 .prof-info{flex:1;min-width:0}
-.prof-name{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.prof-inst{font-size:11px;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prof-name{font-size:15px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prof-inst{font-size:13px;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .prof-right{display:flex;align-items:center;gap:9px;flex-shrink:0}
-.status-pill{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 9px;border-radius:12px;white-space:nowrap}
-.sent-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
-.chevron{width:13px;height:13px;color:var(--text3);transition:transform 0.2s;flex-shrink:0}
+.status-pill{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:12px;white-space:nowrap}
+.sent-date{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3)}
+.chevron{width:14px;height:14px;color:var(--text3);transition:transform 0.2s;flex-shrink:0}
 .prof-card.open .chevron{transform:rotate(180deg)}
-.prof-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border)}
+.prof-body{display:none;padding:0 18px 18px;border-top:1px solid var(--border)}
 .prof-card.open .prof-body{display:block}
-.pbg{padding-top:14px;display:grid;gap:12px}
-.fl{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-bottom:3px}
-.fv{font-size:13px;color:var(--text);line-height:1.6}
-.fq{font-style:italic;color:var(--text2);border-left:2px solid var(--gold);padding-left:11px;font-size:13px;line-height:1.6}
-.action-tag{display:inline-flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);color:var(--cyan);border-radius:6px;padding:5px 11px;font-size:12px}
-.timeline-tag{display:inline-flex;align-items:center;gap:6px;background:var(--gold-dim);border:1px solid rgba(200,169,110,0.22);color:var(--gold);border-radius:6px;padding:5px 11px;font-family:'JetBrains Mono',monospace;font-size:11px}
-.no-results{text-align:center;padding:40px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3)}
+.pbg{padding-top:16px;display:grid;gap:14px}
+.fl{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-bottom:4px}
+.fv{font-size:15px;color:var(--text);line-height:1.7}
+.fq{font-style:italic;color:var(--text2);border-left:3px solid var(--gold);padding-left:13px;font-size:15px;line-height:1.7}
+.action-tag{display:inline-flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid rgba(79,195,195,0.2);color:var(--cyan);border-radius:6px;padding:6px 13px;font-size:13px}
+.timeline-tag{display:inline-flex;align-items:center;gap:6px;background:var(--gold-dim);border:1px solid rgba(200,169,110,0.22);color:var(--gold);border-radius:6px;padding:6px 13px;font-family:'JetBrains Mono',monospace;font-size:12px}
+.no-results{text-align:center;padding:40px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text3)}
 .hidden{display:none!important}
 
 .s-confirmed{background:var(--green-bg);color:var(--green);border:1px solid rgba(74,222,128,0.22)}
@@ -257,8 +257,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,12,18,0.9);backdrop-filt
 .action-icon.i-green{background:var(--green-bg)}
 .action-icon.i-purple{background:var(--purple-bg)}
 .action-content{flex:1}
-.action-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px;line-height:1.4}
-.action-detail{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:8px}
+.action-title{font-size:16px;font-weight:500;color:var(--text);margin-bottom:5px;line-height:1.4}
+.action-detail{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:10px}
 .action-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .action-tag-pill{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 9px;border-radius:10px}
 .action-tag-pill.p-red{background:var(--red-bg);color:var(--red);border:1px solid rgba(248,113,113,0.2)}
@@ -351,40 +351,45 @@ footer a:hover{color:var(--gold2)}
 
   <div class="sec-head"><span class="sec-tag">Active</span><h2 class="sec-title">Goals &amp; Milestones</h2></div>
   <div class="goals-grid">
+    <div class="goal-card c-red" style="border-color:rgba(248,113,113,0.45);box-shadow:0 0 0 1px rgba(248,113,113,0.15)">
+      <div class="goal-top"><div class="goal-title" style="font-size:18px">🎯 Define the novelty — the #1 blocker</div><span class="chip" style="background:var(--red-bg);color:var(--red);border:1px solid rgba(248,113,113,0.3);font-size:12px">BLOCKING EVERYTHING</span></div>
+      <div class="goal-detail">Both Dr Ella Haig AND Nelimarkka flagged the same problem: "platforms produce different signals" is NOT a novel contribution on its own — Nelimarkka et al. (2020) and others already showed this. The novel contribution is: <strong style="color:var(--text)">the first formal measurement invariance test (multi-group CFA) applied to cross-platform political sentiment data</strong>, producing a validated bias-correction protocol checked against BES ground truth. Nothing in the literature does this formally. That is the paper. Nail this sentence first.</div>
+      <div class="goal-deadline" style="font-size:12px">&#9711; Step 1: Read Nelimarkka (2020) · Step 2: Write the one-sentence contribution · Step 3: Put it in Overleaf abstract</div>
+    </div>
     <div class="goal-card c-gold">
-      <div class="goal-top"><div class="goal-title">ICWSM 2027 paper — with Dr Ella Haig</div><span class="chip chip-gold">Priority</span></div>
-      <div class="goal-detail">Convert MSc dissertation (279k posts, BERT F1 0.878, cross-platform divergence) into a short paper. Target: ICWSM Round 1 ~May 2026. Co-author: Dr Ella Haig, University of Portsmouth.</div>
-      <div class="goal-deadline">&#9711; Must submit before Oct 2026 Edinburgh deadline</div>
+      <div class="goal-top"><div class="goal-title">ICWSM 2027 paper — with Dr Ella Haig</div><span class="chip chip-gold">In progress</span></div>
+      <div class="goal-detail">Convert MSc dissertation (279k posts, BERT F1 0.878, cross-platform divergence) into a short paper. Overleaf draft exists. Blocking issue: novelty framing (see above). Target ICWSM Round 2 ~Sep 2026. Co-author: Dr Ella Haig, University of Portsmouth. Paper must be submitted before Edinburgh CDT Jan 7 2027 deadline.</div>
+      <div class="goal-deadline">&#9711; Must submit before Oct 2026 · Edinburgh deadline Jan 7 2027</div>
     </div>
     <div class="goal-card c-cyan">
-      <div class="goal-top"><div class="goal-title">Edinburgh CDT in Responsible NLP</div><span class="chip chip-cyan">Apply Oct 2026</span></div>
-      <div class="goal-detail">Prof. Walid Magdy (SMASH) confirmed supervisor. Dr Björn Ross confirmed strong fit. Fully funded — stipend + fees waived. Sept 2026 start.</div>
-      <div class="goal-deadline">&#9711; Application window opens Oct 2026</div>
+      <div class="goal-top"><div class="goal-title">Edinburgh CDT in Responsible NLP — top priority application</div><span class="chip chip-cyan">Apply Jan 2027</span></div>
+      <div class="goal-detail">Prof. Walid Magdy (SMASH) confirmed supervisor. Dr Björn Ross confirmed strong fit. Fully funded — UKRI stipend + fees waived. HARD DEADLINE: 7 January 2027. Application requires ICWSM paper submitted or under review. This is the most important application in the campaign.</div>
+      <div class="goal-deadline">&#9711; HARD DEADLINE 7 Jan 2027 · Paper must be under review</div>
     </div>
     <div class="goal-card c-green">
-      <div class="goal-top"><div class="goal-title">Master Research Proposal — FINAL v4</div><span class="chip chip-green">Complete</span></div>
-      <div class="goal-detail"><em>Platform Measurement Invariance and Bias-Corrected Public Opinion Estimation.</em> Multi-group CFA, PABD protocol, Bayesian correction, TSE framework, BES/UKHLS validation. 19 refs.</div>
-      <div class="goal-deadline">&#9711; Asad_Ikram_PhD_Proposal_FINAL_v4.docx</div>
+      <div class="goal-top"><div class="goal-title">UW HCDE (Starbird) — explicitly welcomed application</div><span class="chip chip-green">Apply Dec 2026</span></div>
+      <div class="goal-detail">Prof. Kate Starbird (UW Center for an Informed Public) replied 27 Apr: "Your interest areas, expertise, and research questions sound very well aligned." Planning ONE PhD intake for 2027-28. HCDE PhD deadline ~December 15 2026. Apply via Fulbright Pakistan route (deadline Sep 15 2026) to fund this.</div>
+      <div class="goal-deadline">&#9711; Deadline ~Dec 15 2026 · Fulbright Sep 15</div>
+    </div>
+    <div class="goal-card c-green">
+      <div class="goal-top"><div class="goal-title">JHU CS (Gligorić) — explicitly recruiting</div><span class="chip chip-green">Apply Dec 2026</span></div>
+      <div class="goal-detail">Prof. Kristina Gligorić (JHU CS, joined Oct 2025) is explicitly looking for PhD students. Her NAACL 2025 paper on LLM annotations for statistically valid CSS estimates is the measurement validity problem from a different angle. Apply to JHU CS PhD listing her as advisor. Deadline December 15 2026. Email her now.</div>
+      <div class="goal-deadline">&#9711; Email her NOW · JHU CS PhD deadline Dec 15 2026</div>
     </div>
     <div class="goal-card c-purple">
-      <div class="goal-top"><div class="goal-title">USC Ferrara + CMU Carley — Fall 2026</div><span class="chip chip-purple">Oct 2026</span></div>
-      <div class="goal-detail">Both replied positively. USC: Khoury CS. CMU: Societal Computing. Apply-in-fall for 2027 intake. List both as supervisors.</div>
-      <div class="goal-deadline">&#9711; Apply October 2026</div>
-    </div>
-    <div class="goal-card c-purple">
-      <div class="goal-top"><div class="goal-title">SOUNDS Observatory — Graduate School PhD</div><span class="chip chip-purple">Late Summer 2026</span></div>
-      <div class="goal-detail">Prof. Weber confirmed: graduate school linked to SOUNDS is being set up — the person leading it was just hired. PhD call expected late summer 2026. Also team member / data engineer positions (no C1 German required) posting imminently. AWS Lambda monitor deployed — emails daily on new postings.</div>
-      <div class="goal-deadline">&#9711; Watch SOUNDS LinkedIn · Lambda monitor active</div>
-    </div>
-    <div class="goal-card c-purple">
-      <div class="goal-top"><div class="goal-title">SOUNDS PostDoc W2833 — Computational Social Sciences</div><span class="chip chip-purple">Check fit</span></div>
-      <div class="goal-detail">New position appeared 15 Apr: "Academic Postdoctoral Researcher for Computational Social Sciences (m/f/x)" at SOUNDS transformation programme (Ref W2833). Requires completed PhD — likely out of reach now but worth reading the JD to understand what SOUNDS is hiring for.</div>
-      <div class="goal-deadline">&#9711; Read W2833 JD · assess requirements</div>
+      <div class="goal-top"><div class="goal-title">SOUNDS Observatory — PhD + team positions</div><span class="chip chip-purple">Check June 2026</span></div>
+      <div class="goal-detail">Prof. Weber confirmed graduate school PhD call + team member / data engineer positions (no C1 German) expected summer 2026. AWS Lambda monitor deployed — emails daily on new postings. Also check SOUNDS LinkedIn page manually from June onwards.</div>
+      <div class="goal-deadline">&#9711; Check sounds-observatory.org now · Lambda monitor active</div>
     </div>
     <div class="goal-card c-cyan">
-      <div class="goal-top"><div class="goal-title">Matti Nelimarkka — Helsinki follow-up</div><span class="chip chip-cyan">Reply sent</span></div>
-      <div class="goal-detail">Replied asking for concrete direction. Detailed reply sent 14 Apr — measurement invariance (CFA), causal decomposition, Bayesian correction vs BES data. Awaiting response.</div>
-      <div class="goal-deadline">&#9711; Awaiting Nelimarkka reply</div>
+      <div class="goal-top"><div class="goal-title">TUM Digital Governance (Theocharis) — Sep 2026 call</div><span class="chip chip-cyan">Watch Sep 2026</span></div>
+      <div class="goal-detail">Replied warmly April 17: "very interesting" framing. No current opening but PhD call expected September 2026. Check https://www.hfp.tum.de/en/digitalgovernance/ from August. Re-contact with updated CV and ICWSM paper draft when call appears. DAAD scholarship can fund this route.</div>
+      <div class="goal-deadline">&#9711; Check website from Aug 2026 · DAAD application Oct–Nov</div>
+    </div>
+    <div class="goal-card c-gold">
+      <div class="goal-top"><div class="goal-title">Master Research Proposal — FINAL v4</div><span class="chip chip-green">Complete</span></div>
+      <div class="goal-detail"><em>Platform Measurement Invariance and Bias-Corrected Public Opinion Estimation.</em> Multi-group CFA, PABD protocol, Bayesian correction, TSE framework, BES/UKHLS validation. 19 refs. Send with every application.</div>
+      <div class="goal-deadline">&#9711; Asad_Ikram_PhD_Proposal_FINAL_v4.docx · attach to all emails</div>
     </div>
   </div>
 </div>
@@ -884,204 +889,130 @@ function calNav(dir){
 // All possible actions. Each has a `trigger` function that receives today's Date
 // and returns true if it should appear today or is overdue.
 const TODAY_ACTIONS = [
-  // ── IMMEDIATE (urgent:true) — do today ──────────────────────────────────
+
+  // ══════════════════════════════════════════════════════
+  // IMMEDIATE — things to act on now (May 2026)
+  // ══════════════════════════════════════════════════════
 
   {
-    id:'ella-meeting', urgent:true,
-    stripe:'s-gold', icon:'i-gold', iconChar:'📞',
-    tag:'p-gold', tagLabel:'TODAY — 14:00 PKT',
-    title:'Meeting: Dr Ella Haig — ICWSM paper venue + timeline',
-    detail:'10:00 AM UK / 14:00 PKT. Agree target venue (ICWSM vs EPJ Data Science), review Overleaf structure, timeline and division of writing. Have the Overleaf link ready.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()===21,
+    id:'novelty-paper', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'🎯',
+    tag:'p-red', tagLabel:'#1 PRIORITY — BLOCKING EVERYTHING',
+    title:'Define the novelty — what is the paper\'s specific contribution?',
+    detail:'Both Dr Ella Haig AND Nelimarkka raised this. Observing that platforms produce different signals is NOT novel (Nelimarkka 2020, plus decades of prior work). The novel contribution must be: (1) the first formal MEASUREMENT INVARIANCE TEST (multi-group CFA) applied to cross-platform political sentiment — proving non-equivalence isn\'t assumed but measured, and (2) a BIAS-CORRECTION protocol that actually fixes it and is validated against BES ground truth. That is the gap. Nothing else in the literature does both. Write this in one sentence and put it in the paper abstract first.',
+    trigger: d => d >= new Date(2026,4,20),
   },
   {
-    id:'overleaf-ella', urgent:true,
-    stripe:'s-gold', icon:'i-gold', iconChar:'📄',
-    tag:'p-gold', tagLabel:'Before Tue 21 Apr',
-    title:'Share Overleaf draft with Dr Ella Haig',
-    detail:'Meeting is Tuesday 21 Apr at 10:00 AM UK / 14:00 PKT. Share the Overleaf link before the meeting so she can review in advance. You promised this in your email.',
-    trigger: d => d >= new Date(2026,3,16) && d < new Date(2026,3,21),
+    id:'read-nelimarkka-2020', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'📄',
+    tag:'p-red', tagLabel:'Must read before replying',
+    title:'Read Nelimarkka et al. (2020) — Platformed Interactions',
+    detail:'Nelimarkka cited this in his May 1 reply as the prior work your thesis needs to position against. DOI: 10.1177/2056305120903856. Social Media + Society 6(2). Finnish 2015 election campaign, candidate-constituent interaction across platforms. Read it and identify: what did they measure, what method, what did they find, and WHY your multi-group CFA + bias-correction approach goes further. This is the key citation you need to engage with directly.',
+    trigger: d => d >= new Date(2026,4,20) && d <= new Date(2026,4,31),
   },
   {
-    id:'batch-followup', urgent:true,
-    stripe:'s-red', icon:'i-red', iconChar:'🔁',
-    tag:'p-red', tagLabel: (() => { const due=new Date(2026,3,21); const diff=Math.ceil((due-new Date())/(864e5)); return diff>0?'Due in '+diff+' days':'OVERDUE'; })(),
-    title:'Batch follow-up — 13 awaiting professors',
-    detail:'Bail (Duke), Wagner (GESIS), González-Bailón (Penn), Nguyen (Utrecht), Hovy (Bocconi), Strohmaier (Mannheim), Garcia (Konstanz), Starbird (UW), Hang Jiang (Northeastern), Lorenz-Spreen (TU Dresden), Yasseri (TCD), Nagler (NYU), Aiello (ITU Copenhagen). All emailed 31 Mar–6 Apr, no reply.',
-    trigger: d => d >= new Date(2026,3,19) && d <= new Date(2026,3,25),
-  },
-  {
-    id:'nelimarkka-reply-may', urgent:true,
+    id:'reply-nelimarkka', urgent:true,
     stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Reply needed',
-    title:'Reply to Nelimarkka (Helsinki) — sharpen novelty framing',
-    detail:'He replied 1 May saying "platforms are different" is not novel. Cited his 2020 Platformed Interactions paper. Read it, then reply showing your MEASUREMENT INVARIANCE framing (multi-group CFA) is the formal contribution — not just observing differences, but formally testing and correcting for non-equivalence. That IS novel.',
-    trigger: d => d >= new Date(2026,4,1) && d <= new Date(2026,4,14),
+    tag:'p-cyan', tagLabel:'Reply after reading paper',
+    title:'Reply to Nelimarkka — show you\'ve read his work and nail the novelty',
+    detail:'His May 1 reply was constructive, not a rejection. He wants to see you engaging seriously with the state of the art. After reading his 2020 paper: reply with 3 sentences showing (a) you\'ve read it, (b) where your CFA approach goes beyond it, (c) whether Helsinki has a supervision window coming up.',
+    trigger: d => d >= new Date(2026,4,20) && d <= new Date(2026,5,7),
   },
   {
-    id:'gligoric-email', urgent:true,
+    id:'email-gligoric', urgent:true,
     stripe:'s-green', icon:'i-green', iconChar:'✉',
-    tag:'p-green', tagLabel:'New target — email now',
-    title:'Email Prof. Kristina Gligorić (JHU CS) — strong alignment',
-    detail:'New professor identified. Her NAACL 2025 paper on LLM annotations for statistically valid CSS estimates is the computational measurement validity problem from a different angle. Explicitly looking for PhD students — apply to JHU CS PhD listing her as advisor. Deadline December 15.',
-    trigger: d => d >= new Date(2026,4,1) && d <= new Date(2026,4,14),
+    tag:'p-green', tagLabel:'New target — strong fit',
+    title:'Email Prof. Kristina Gligorić (JHU CS) — explicitly recruiting',
+    detail:'New professor at JHU CS, joined Oct 2025. Her NAACL 2025 paper on LLM annotations for statistically valid CSS estimates is exactly the measurement validity problem from a different angle. She explicitly says on her website: apply to JHU CS PhD listing her as advisor, deadline December 15. Draft email using master pattern: hook on her NAACL 2025 paper\'s core question (when can we trust LLM-generated annotations as valid social science measures?) — that IS your dissertation\'s question applied to cross-platform sentiment.',
+    trigger: d => d >= new Date(2026,4,20) && d <= new Date(2026,5,7),
   },
   {
-    id:'rizoiu-nudge', urgent:true,
+    id:'followup-hovy', urgent:true,
     stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Follow up today',
-    title:'Follow up — Rizoiu (UTS) if no reply',
-    detail:'Back since 13 Apr. If still no reply by today, send a polite 2-sentence follow-up.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()===20,
+    tag:'p-cyan', tagLabel:'Follow up — calendar reminder hit',
+    title:'Follow up — Dirk Hovy (Bocconi, MilaNLP)',
+    detail:'Emailed 2 Apr 2026. No reply after 7 weeks. Calendar reminder set for 1 Jun. His ERC Starting Grant on sociodemographic variables in NLP is directly relevant. Send one short follow-up. Italy PNRR PhD funding cycle is still open.',
+    trigger: d => d >= new Date(2026,5,1),
   },
   {
-    id:'waldherr-nudge', urgent:true,
+    id:'followup-anderson', urgent:true,
     stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Final nudge today',
-    title:'Send final follow-up — Waldherr (Vienna)',
-    detail:'No reply since follow-up sent 15 Apr. Send one last short nudge today, then move on.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()===22,
+    tag:'p-cyan', tagLabel:'Follow up — calendar reminder hit',
+    title:'Follow up — Ashton Anderson (U of Toronto, CSS Lab)',
+    detail:'Emailed 2 Apr 2026. No reply after 7 weeks. Calendar reminder set for 1 Jun. Nature 2021 paper on Reddit polarisation via community embeddings. Canada fall PhD cycle — apply UofT CS if positive response.',
+    trigger: d => d >= new Date(2026,5,1),
   },
   {
-    id:'augenstein-nudge', urgent:true,
-    stripe:'s-red', icon:'i-red', iconChar:'✉',
-    tag:'p-red', tagLabel:'High priority nudge',
-    title:'Nudge Augenstein (CopeNLU) if no reply',
-    detail:'Follow-up sent 15 Apr. CopeNLU actively recruiting Autumn 2026 via ELLIS. If still no reply, send one more short message today.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()===25,
-  },
-  {
-    id:'nelimarkka-nudge', urgent:true,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Nudge today',
-    title:'Nudge Nelimarkka (Helsinki) if no reply',
-    detail:'Detailed reply sent 14 Apr. If still no response today, send a short nudge. Helsinki has twice-yearly application windows.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===3 && d.getDate()===25,
-  },
-  {
-    id:'sounds-w2833', urgent:true,
-    stripe:'s-purple', icon:'i-purple', iconChar:'📋',
-    tag:'p-purple', tagLabel:'Check fit',
-    title:'Read SOUNDS PostDoc JD — W2833',
-    detail:'Lambda detected "Academic PostDoc in Computational Social Sciences (m/f/x)" on 15 Apr. Check if requirements fit. PDF on uni-saarland.de under Academic Jobs → W2833.',
-    trigger: d => d >= new Date(2026,3,15) && d <= new Date(2026,3,22),
-  },
-  {
-    id:'icwsm-draft', urgent:true,
-    stripe:'s-gold', icon:'i-gold', iconChar:'✍',
-    tag:'p-gold', tagLabel:'Due 30 Apr',
-    title:'Begin writing ICWSM 2027 paper',
-    detail:'Start converting dissertation into ICWSM short paper post-Ella meeting. Central contribution: structural cross-platform divergence is directional and large enough to reverse public opinion conclusions.',
-    trigger: d => d >= new Date(2026,3,22) && d <= new Date(2026,3,30),
-  },
-  {
-    id:'icwsm-deadline', urgent:true,
-    stripe:'s-red', icon:'i-red', iconChar:'🚨',
-    tag:'p-red', tagLabel:'HARD DEADLINE',
-    title:'ICWSM paper — must be submitted today',
-    detail:'Paper must be submitted or under review before Edinburgh scholarship deadline. Without this the Edinburgh CDT application is significantly weaker.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===9 && d.getDate()>=31,
-  },
-  {
-    id:'bjerva-email', urgent:true,
-    stripe:'s-green', icon:'i-green', iconChar:'✉',
-    tag:'p-green', tagLabel:'Act today',
-    title:'Email Bjerva — back from paternity leave today',
-    detail:'Prof. Johannes Bjerva returns from paternity leave 14 May. Email him today about NLP/multilingual PhD positions at AAU Copenhagen.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===4 && d.getDate()===14,
-  },
-
-  // ── ON THE HORIZON (urgent:false) — monitor / upcoming ──────────────────
-  // Awaiting replies — visible in horizon until nudge date
-  {
-    id:'augenstein-watch', urgent:false,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Awaiting reply',
-    title:'Awaiting — Augenstein (CopeNLU Copenhagen)',
-    detail:'Follow-up sent 15 Apr. CopeNLU actively recruiting Autumn 2026 via ELLIS. If no reply by 25 Apr, a nudge will appear in Immediate.',
-    trigger: d => d >= new Date(2026,3,15) && d < new Date(2026,3,25),
-  },
-  {
-    id:'waldherr-watch', urgent:false,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Awaiting reply',
-    title:'Awaiting — Waldherr (Vienna CCS Lab)',
-    detail:'Follow-up sent 15 Apr. If no reply by 22 Apr, a final nudge will appear in Immediate.',
-    trigger: d => d >= new Date(2026,3,15) && d < new Date(2026,3,22),
-  },
-  {
-    id:'rizoiu-watch', urgent:false,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Awaiting reply',
-    title:'Awaiting — Rizoiu (UTS Behavioral Data Science)',
-    detail:'Back since 13 Apr. If no reply by 20 Apr, a follow-up will appear in Immediate.',
-    trigger: d => d >= new Date(2026,3,15) && d < new Date(2026,3,20),
-  },
-  {
-    id:'nelimarkka-watch', urgent:false,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Awaiting reply',
-    title:'Awaiting — Nelimarkka (Helsinki)',
-    detail:'Detailed reply sent 14 Apr. If no response by 25 Apr, a nudge will appear in Immediate.',
-    trigger: d => d >= new Date(2026,3,14) && d < new Date(2026,3,25),
-  },
-  {
-    id:'sounds-linkedin', urgent:false,
+    id:'sounds-check', urgent:true,
     stripe:'s-purple', icon:'i-purple', iconChar:'🔔',
-    tag:'p-purple', tagLabel:'Monitor',
-    title:'Follow SOUNDS Observatory on LinkedIn',
-    detail:'Weber confirmed team member / data engineer positions coming soon — no C1 German required. Follow the LinkedIn page so you see postings the moment they go up.',
-    trigger: d => d >= new Date(2026,3,15) && d <= new Date(2026,4,15),
+    tag:'p-purple', tagLabel:'Check now — Weber said summer',
+    title:'Check SOUNDS Observatory for PhD + team member positions',
+    detail:'Prof. Ingmar Weber confirmed team member and PhD positions would be posted by summer 2026. Check sounds-observatory.org and the SOUNDS LinkedIn page NOW. The Lambda monitor will email you automatically but also check manually. Graduate school PhD call expected late summer.',
+    trigger: d => d >= new Date(2026,5,1),
+  },
+
+  // ══════════════════════════════════════════════════════
+  // HORIZON — watch / upcoming
+  // ══════════════════════════════════════════════════════
+
+  {
+    id:'icwsm-paper-write', urgent:false,
+    stripe:'s-gold', icon:'i-gold', iconChar:'✍',
+    tag:'p-gold', tagLabel:'Target: Oct 2026 submission',
+    title:'Write ICWSM paper with Dr Ella — once novelty is nailed',
+    detail:'The paper is already drafted in Overleaf (AAAI/ICWSM format, 11 pages). The blocking issue is novelty framing. Once that sentence exists — "the first formal measurement invariance test of cross-platform political sentiment, producing a validated bias-correction protocol" — the rest of the paper follows. Dr Ella is co-author. Target ICWSM 2027 Round 2 (~Sep 2026) or Round 1 if the paper moves fast.',
+    trigger: d => d >= new Date(2026,4,20) && d <= new Date(2026,9,1),
   },
   {
-    id:'sounds-summer', urgent:false,
-    stripe:'s-purple', icon:'i-purple', iconChar:'🔎',
-    tag:'p-purple', tagLabel:'June 2026',
-    title:'Check SOUNDS Observatory — PhD + team member positions',
-    detail:'Weber confirmed PhD call + team member positions expected by summer. Check sounds-observatory.org and SOUNDS LinkedIn regularly. Lambda monitor will email you automatically.',
-    trigger: d => d >= new Date(2026,4,1) && d <= new Date(2026,6,31),
+    id:'fulbright-deadline', urgent:false,
+    stripe:'s-gold', icon:'i-gold', iconChar:'🎓',
+    tag:'p-gold', tagLabel:'Sep 15 2026 deadline',
+    title:'Fulbright Foreign Student Program — apply for US PhD (Starbird / Gligorić)',
+    detail:'Pakistan applies through USEFP (US Educational Foundation in Pakistan). Fulbright covers full PhD funding at any US university. Deadline September 15 2026. Directly enables Starbird (UW) and Gligorić (JHU) applications. Start gathering documents: transcripts, English test, references, statement of purpose. USEFP application at usefpak.org.',
+    trigger: d => d >= new Date(2026,5,1) && d <= new Date(2026,8,15),
   },
   {
-    id:'bjerva-watchout', urgent:false,
-    stripe:'s-green', icon:'i-green', iconChar:'📅',
-    tag:'p-green', tagLabel:'Coming up 14 May',
-    title:'Bjerva (AAU Copenhagen) returns from paternity leave — 14 May',
-    detail:'Mark your calendar. When he returns, email him about NLP/multilingual PhD positions. His research on multilingual NLP fits the proposal.',
-    trigger: d => d >= new Date(2026,3,20) && d < new Date(2026,4,14),
-  },
-  {
-    id:'zubiaga-sep', urgent:false,
-    stripe:'s-green', icon:'i-green', iconChar:'🔄',
-    tag:'p-green', tagLabel:'September 2026',
-    title:'Re-contact Zubiaga (QMUL) + Törnberg (UvA)',
-    detail:'Zubiaga: too late for 2026/27, reconnect in Sep for 2027 cycle. Törnberg: warm response, said he would notify if a position opens — check his group page.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===8,
-  },
-  {
-    id:'us-apps-oct', urgent:false,
+    id:'commonwealth-scholarship', urgent:false,
     stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
-    tag:'p-cyan', tagLabel:'October 2026',
-    title:'Apply USC (Ferrara) + CMU (Carley) + Edinburgh CDT',
-    detail:'All three confirmed apply-in-fall. USC Khoury CS, CMU Societal Computing, Edinburgh CDT Responsible NLP. Prepare research statement and have ICWSM paper submitted or under review.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===8,
+    tag:'p-cyan', tagLabel:'~Nov 2026 deadline',
+    title:'Commonwealth PhD Scholarship — UK universities (Edinburgh / Loughborough)',
+    detail:'Pakistan is a Commonwealth member. Covers full UK PhD tuition + stipend £20,780/yr. Directly enables Edinburgh CDT (Magdy) and Loughborough (Chadwick) applications. Apply through CSC (Commonwealth Scholarships Commission). Usually opens August, deadline November. Gather: transcripts, 2 references, research statement, acceptance from supervisor.',
+    trigger: d => d >= new Date(2026,6,1) && d <= new Date(2026,10,30),
   },
   {
-    id:'oii-jhu-nov', urgent:false,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
-    tag:'p-cyan', tagLabel:'November 2026',
-    title:'Apply OII Oxford (Stephany) + follow up JHU (Piccardi)',
-    detail:'Stephany directed to November OII cycle. Piccardi confirmed end-of-year JHU deadline. Prepare both applications. Reference the ICWSM paper submission in each.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===9,
+    id:'theocharis-tum-check', urgent:false,
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'🔎',
+    tag:'p-cyan', tagLabel:'Check Sep 2026',
+    title:'Check TUM Digital Governance for PhD call — Theocharis',
+    detail:'Theocharis replied warmly Apr 17, said PhD call expected around September 2026 at his chair. Check https://www.hfp.tum.de/en/digitalgovernance/ for open positions. Re-contact with updated CV and ICWSM paper draft.',
+    trigger: d => d >= new Date(2026,7,15) && d <= new Date(2026,9,30),
   },
   {
-    id:'edinburgh-deadline', urgent:false,
+    id:'daad-germany', urgent:false,
+    stripe:'s-green', icon:'i-green', iconChar:'🎓',
+    tag:'p-green', tagLabel:'Apply Oct–Nov 2026',
+    title:'DAAD Research Grant — Germany (Jungherr at Bamberg / Theocharis at TUM)',
+    detail:'DAAD (German Academic Exchange Service) funds full PhD stipends for international students in Germany. Directly complementary to Jungherr (Bamberg) and Theocharis (TUM) — both warm contacts. Apply Oct–Nov 2026 for 2027 entry. Requires: acceptance from German supervisor, research proposal, language skills. See daad.de.',
+    trigger: d => d >= new Date(2026,9,1) && d <= new Date(2026,10,30),
+  },
+  {
+    id:'uw-hcde-apply', urgent:false,
+    stripe:'s-red', icon:'i-red', iconChar:'🎓',
+    tag:'p-red', tagLabel:'Deadline ~Dec 15 2026',
+    title:'Apply — UW HCDE PhD (Starbird) + JHU CS PhD (Gligorić)',
+    detail:'Both deadlines are December 15 2026. Starbird explicitly welcomed your application. Gligorić is actively recruiting. Both need: Statement of Purpose (reference their specific work), ICWSM paper submitted or preprint, CV, two references. Start SOP in November. Contact Kathleen Rascon (krascon@uw.edu) for UW HCDE guidance.',
+    trigger: d => d >= new Date(2026,10,1) && d <= new Date(2026,11,15),
+  },
+  {
+    id:'edinburgh-cdt-apply', urgent:false,
     stripe:'s-red', icon:'i-red', iconChar:'⏰',
-    tag:'p-red', tagLabel:'7 Jan 2027',
-    title:'Edinburgh CDT application deadline approaching',
-    detail:'UKRI CDT in Responsible and Trustworthy NLP. Supervisors: Walid Magdy + Björn Ross. Fully funded. Must submit with ICWSM paper as evidence of research productivity.',
+    tag:'p-red', tagLabel:'HARD DEADLINE 7 Jan 2027',
+    title:'Edinburgh CDT application — most important deadline',
+    detail:'UKRI CDT in Responsible and Trustworthy NLP. Supervisors: Prof. Walid Magdy (confirmed) + Dr Björn Ross (confirmed fit). Fully funded — UKRI stipend + fees waived. Submit with ICWSM paper (submitted or preprint), research statement, two references. This is the #1 priority application.',
     trigger: d => d.getFullYear()===2026 && d.getMonth()===11,
   },
 ];
+
 
 let curActionTab = 'urgent';
 
@@ -1166,7 +1097,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '20 May 2026, 09:00 PKT';
+  const LAST_REFRESHED = '20 May 2026, 14:00 PKT';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
 
   buildFilterBar();
