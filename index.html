@@ -410,7 +410,7 @@ footer a:hover{color:var(--gold2)}
   </div>
 
   <div class="stats-strip">
-    <div class="stat-cell"><div class="stat-num">83</div><div class="stat-label">Contacted / tracked</div></div>
+    <div class="stat-cell"><div class="stat-num">87</div><div class="stat-label">Contacted / tracked</div></div>
     <div class="stat-cell"><div class="stat-num">30</div><div class="stat-label">Replies</div></div>
     <div class="stat-cell"><div class="stat-num">10</div><div class="stat-label">Warm / positive</div></div>
     <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label">Confirmed supervisors</div></div>
@@ -706,6 +706,9 @@ const PROFS=[
   {name:"CMU Machine Learning PhD",inst:"Carnegie Mellon University · Machine Learning Department",topic:"Machine Learning, Computational Social Science, AI for Social Good",status:"new",sent:"—",summary:"Prof. Kathleen Carley (CASOS Lab) replied positively — 'Potential fit.' CMU ML PhD is the programme to list her as advisor. Fully funded. Applications for Fall 2027 open Sep 9 2026. Early deadline Nov 18 2026, final deadline Dec 9 2026.",response:"Carley replied: 'Potential fit.' Apply Fall 2026 for 2027 intake.",timeline:"Apply Nov 18 2026 (early) · Dec 9 2026 (final) · ml.cmu.edu",action:"List Prof. Kathleen Carley as primary advisor. Reference cross-platform measurement invariance proposal. Apply by early deadline Nov 18 for best consideration."},
   {name:"Glasgow CDT — Socially Intelligent AI (SOCIAL)",inst:"University of Glasgow · School of Computing Science",topic:"Socially Intelligent AI Agents, Social Behaviour Modelling, Computational Social Science, NLP",status:"new",sent:"—",summary:"CDT in Socially Intelligent Artificial Agents covers AI agents, social behaviour, computational social modelling, NLP. Funded studentships for October 2027 start. Deadline 31 January 2027. Strong NLP + social science intersection. Glasgow is Russell Group with strong CSS research.",response:"Not yet applied.",timeline:"Deadline 31 Jan 2027 · gla.ac.uk/schools/computing",action:"Check CDT project list. Identify supervisor working on social media, NLP or CSS. Apply by January 31 2027."},
   {name:"Open University Business School PhD ⚠️ URGENT",inst:"The Open University · Business School",topic:"Digital Media, Computational Social Science, Data-Driven Research",status:"new",sent:"—",summary:"OU Business School funded PhD studentships — February 2027 entry. Deadline 9 June 2026 midday BST — THIS WEEK. Proposal 1,000-2,000 words required. Check project topics for CSS/social media fit. OU accepts international students for distance learning.",response:"Not yet applied. DEADLINE THIS WEEK.",timeline:"⚠️ DEADLINE 9 JUNE 2026 — THIS WEEK — midday BST",action:"Visit business-school.open.ac.uk/research/research-degrees/phd-studentships IMMEDIATELY. Check if any project fits your proposal. If yes, submit today."},
+  {name:"Prof. Francesco Pierri — ELLIS PhD ⚠️ DEADLINE 15 JUN",inst:"Politecnico di Milano · DEIB Data Science Lab / ELLIS Unit Milan",topic:"Responsible AI, Computational Social Science, Social Media Analysis, Misinformation, AI Auditing",status:"new",sent:"—",summary:"CRITICAL FIND — deadline 15 June 2026 (this Sunday). ELLIS-backed PhD position on Responsible AI / CSS at PoliMi. Supervisor is Francesco Pierri: Assistant Professor studying trustworthy AI + social media misinformation + generative AI impact on digital ecosystems. Affiliated with Indiana University OSOME (same lab as Kwak). Research topics: generative AI, online misinformation, social media analysis, AI auditing, societal impact of AI. He visited Augenstein's CopeNLU lab in Mar 2026. PhD within ELLIS Unit Milan — European exchange included. Your dissertation (cross-platform NLP, sentiment, misinformation measurement) maps directly onto his research agenda. Email him TODAY as expression of interest, then apply formally.",response:"Not yet contacted. Act immediately.",timeline:"⚠️ DEADLINE 15 JUNE 2026 — THIS SUNDAY — ellis.eu/research/jobs",action:"1. Email Pierri TODAY at DEIB (f.pierri@polimi.it) as expression of interest — 3 sentences, hook on his misinformation + social media AI work. 2. Apply formally via ELLIS portal at ellis.eu/research/jobs before 15 Jun 2026. This is the best new opportunity found — act now."},
+  {name:"Hertie School Berlin — PhD CSS Data Science Lab",inst:"Hertie School of Governance · Berlin",topic:"Computational Social Science, Polarisation, Digital Governance, Data-Driven Policy",status:"new",sent:"—",summary:"Hertie School's Data Science Lab is actively looking for PhD proposals in CSS across methodological and substantive areas. Also has positions on Polarisation and Democracy. Rolling applications — no fixed deadline posted. Berlin-based, German-language environment but research in English. Connected to WZB Berlin Social Science Center. Strong policy + CSS intersection.",response:"Not yet contacted.",timeline:"Rolling applications — contact Data Science Lab now",action:"Email Hertie School Data Science Lab (datasciencelab.berlin) with research proposal. Rolling basis — apply sooner rather than later. Also check specific positions at hertie-school.org/en/phd/apply-for-a-phd/open-phd-positions."},
+  {name:"ELLIS PhD Programme — Annual Call (October 2026)",inst:"European Laboratory for Learning and Intelligent Systems · Pan-European",topic:"Machine Learning, NLP, Social Sciences & Humanities, Responsible AI, CSS",status:"new",sent:"—",summary:"ELLIS is Europe's premier AI research network. Annual PhD call opens October 2026 for Class of 2027. Interdisciplinary track allows co-supervision with non-ML faculty (social sciences, humanities). NLP, Social Sciences & Humanities, and Responsible AI are all listed research areas. Joint supervision across European countries. 6-month exchange with international advisor. Deadline typically 31 October. Augenstein (CopeNLU, Copenhagen) is an ELLIS member — if she responds, this is the funding vehicle.",response:"Not yet applied. 2026 cycle closed Oct 2025. Apply Oct 2026 for 2027.",timeline:"Apply Oct–Nov 2026 — ellis.eu/phd-postdoc",action:"Monitor ellis.eu from September 2026. Apply for Class of 2027 as soon as portal opens. Identify ELLIS fellows/scholars working on NLP+CSS+Social Media. Augenstein (CopeNLU) is an ELLIS member — her position directly connects to this programme."},
 ];
 
 const SL={confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO','no-position':'No position',declined:'Declined'};
@@ -1038,6 +1041,15 @@ const TODAY_ACTIONS = [
   },
 
   {
+  {
+    id:'pierri-polimi', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'🚨',
+    tag:'p-red', tagLabel:'DEADLINE SUNDAY 15 JUN',
+    title:'Apply — ELLIS PhD, Pierri (Politecnico di Milano) — this Sunday',
+    detail:'Francesco Pierri is recruiting a PhD on Responsible AI/CSS/social media analysis at ELLIS Unit Milan. Topics: generative AI, social media analysis, AI auditing, online misinformation — direct overlap with your dissertation. He visited Augenstein\'s CopeNLU lab in Mar 2026 and is affiliated with IU OSOME (same lab as Kwak). Email him today as expression of interest (f.pierri@polimi.it), then apply at ellis.eu/research/jobs by 15 June.',
+    trigger: d => d >= new Date(2026,5,2) && d <= new Date(2026,5,15),
+  },
+  {
     id:'ou-deadline', urgent:true,
     stripe:'s-red', icon:'i-red', iconChar:'⚠️',
     tag:'p-red', tagLabel:'DEADLINE TODAY — midday BST',
@@ -1196,7 +1208,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '2 Jun 2026, 20:30 PKT';
+  const LAST_REFRESHED = '2 Jun 2026, 21:00 PKT';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
 
   buildFilterBar();
