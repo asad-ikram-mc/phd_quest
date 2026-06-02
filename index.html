@@ -382,6 +382,7 @@ footer a:hover{color:var(--gold2)}
       <button class="tab-btn" onclick="switchTab('outreach',this)">◉ Outreach</button>
       <button class="tab-btn" onclick="switchTab('papers',this)">◇ Papers &amp; Docs</button>
       <button class="tab-btn" onclick="switchTab('calendar',this)">○ Calendar</button>
+      <button class="tab-btn" onclick="switchTab('claude',this)" style="color:var(--cyan)">✦ Claude's Plan</button>
     </nav>
   </div>
 </header>
@@ -674,6 +675,235 @@ footer a:hover{color:var(--gold2)}
     <div class="modal-action-label">Action required</div>
     <div class="modal-action" id="modal-action"></div>
   </div>
+</div>
+
+<!-- TAB 5: CLAUDE'S PLAN -->
+<div class="panel" id="panel-claude">
+
+  <!-- Header -->
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--border);flex-wrap:wrap">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:10px">✦ Claude's Recommended Plan</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:300;color:var(--text);line-height:1.2;margin-bottom:12px">What to do,<br><em style="color:var(--gold)">and in what order.</em></h2>
+      <p style="font-size:16px;color:var(--text2);max-width:580px;line-height:1.75">Based on everything I know about your campaign — your confirmed supervisors, warm contacts, paper status, scholarship deadlines and the novelty blocker — here is the clearest path to a funded PhD offer before January 2027.</p>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 24px;min-width:220px;flex-shrink:0">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px">Campaign health</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <span style="font-size:14px;color:var(--text2)">Confirmed supervisors</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--green);font-weight:500">2 ✓</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <span style="font-size:14px;color:var(--text2)">Warm contacts</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--cyan);font-weight:500">10 ✓</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <span style="font-size:14px;color:var(--text2)">ICWSM paper</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--amber);font-weight:500">Blocked</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <span style="font-size:14px;color:var(--text2)">Edinburgh CDT</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--green);font-weight:500">7 Jan 2027</span>
+        </div>
+        <div style="height:1px;background:var(--border);margin:2px 0"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <span style="font-size:14px;color:var(--text2)">Overall status</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);font-weight:500">On track ⚡</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: DO TODAY -->
+  <div style="margin-bottom:48px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--red-bg);border:1px solid rgba(240,112,112,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔴</div>
+      <div>
+        <div style="font-size:20px;font-weight:500;color:var(--text)">Do today</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">2 June 2026 — time-sensitive</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+
+      <div style="background:var(--surface);border:1px solid rgba(240,112,112,0.35);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--red);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
+            <div style="font-size:17px;font-weight:500;color:var(--text)">🚨 Email Francesco Pierri — ELLIS PhD deadline is Sunday 15 Jun</div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--red-bg);color:var(--red);border:1px solid rgba(240,112,112,0.22);white-space:nowrap;flex-shrink:0">5 days left</span>
+          </div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:12px">This is the best new opportunity in months. Prof. Pierri at Politecnico di Milano is recruiting a PhD on Responsible AI / CSS / social media misinformation within the ELLIS Unit Milan — your dissertation is a direct match. He visited Augenstein's CopeNLU in March and is affiliated with IU OSOME (Kwak's network). Email him <strong style="color:var(--text)">today as an expression of interest</strong> at f.pierri@polimi.it, then apply formally at ellis.eu/research/jobs by Sunday.</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(56,201,201,0.2);border-radius:8px;padding:8px 14px">Hook: "Your work on AI-amplified misinformation and the social media analysis pipeline I built at Fluency for UK Government are the same problem from opposite ends."</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid rgba(56,201,201,0.25);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--cyan);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
+            <div style="font-size:17px;font-weight:500;color:var(--text)">Register for Oxford OII DPhil notification</div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(56,201,201,0.22);white-space:nowrap;flex-shrink:0">2 mins</span>
+          </div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Go to ox.ac.uk/admissions/graduate/courses/dphil-social-data-science and register your email to be notified the moment the 2027-28 application cycle opens. Fabian Stephany is OII faculty and has been warm — this takes 2 minutes and means you won't miss the opening window in September.</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid rgba(56,201,201,0.25);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--cyan);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
+            <div style="font-size:17px;font-weight:500;color:var(--text)">Send 2-sentence follow-ups to Hovy and Anderson</div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(56,201,201,0.22);white-space:nowrap;flex-shrink:0">10 mins</span>
+          </div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Both emailed 2 April — no reply in 2 months. Calendar reminders fired 1 June. Each follow-up is literally 2 sentences: "I wanted to follow up on my email from April regarding PhD opportunities. I remain very interested and would welcome any thoughts on fit." Done.</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid rgba(104,153,255,0.25);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--blue);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
+            <div style="font-size:17px;font-weight:500;color:var(--text)">Check SOUNDS Observatory for positions</div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--blue-bg);color:var(--blue);border:1px solid rgba(91,168,255,0.22);white-space:nowrap;flex-shrink:0">5 mins</span>
+          </div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Weber explicitly said summer 2026. Check sounds-observatory.org and the SOUNDS LinkedIn page manually today — the Lambda monitor will email you but a manual check costs nothing. Team member positions (no C1 German) and graduate school PhD call are both expected.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 2: THIS WEEK -->
+  <div style="margin-bottom:48px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--amber-bg);border:1px solid rgba(245,200,66,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🟡</div>
+      <div>
+        <div style="font-size:20px;font-weight:500;color:var(--text)">This week</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">2–9 June 2026 — high priority</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--red);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Write the novelty sentence — unblocks everything</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:10px">This is the single highest-leverage action in the entire campaign. One sentence: <em style="color:var(--text)">"We present the first formal measurement invariance test of cross-platform political sentiment using multi-group CFA, demonstrating directional non-equivalence that reverses public opinion conclusions, and a Bayesian bias-correction protocol validated against BES ground truth."</em> Put this in the Overleaf abstract. Everything else — the ICWSM paper, Edinburgh CDT, every application — flows from this sentence existing.</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);background:var(--amber-bg);border:1px solid rgba(245,200,66,0.2);border-radius:8px;padding:8px 14px">Why it's novel: nobody has applied multi-group CFA to cross-platform sentiment. Nelimarkka showed platforms differ. You show they're formally non-equivalent by measurement standards — that's a different claim entirely.</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--gold);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Reply to Nelimarkka — show you've read his 2020 paper</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Read Nelimarkka et al. (2020) <em>Platformed Interactions</em> (DOI: 10.1177/2056305120903856). Then reply in 3 sentences: (1) acknowledge his paper and what it found, (2) explain how multi-group CFA is a formal test that goes beyond observing differences, (3) ask if Helsinki has a supervision window. He gave you constructive feedback — responding well here could turn him from engaged to warm.</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--green);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Email Kristina Gligorić (JHU CS) — she is explicitly recruiting</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Her NAACL 2025 paper asks: when can LLM annotations produce statistically valid CSS estimates? Your dissertation asks: when can cross-platform sentiment data produce valid public opinion estimates? These are the same measurement validity question. She co-authored with Piccardi (already warm). Apply to JHU CS listing her as advisor — deadline December 15 2026. Email her this week.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 3: THIS MONTH -->
+  <div style="margin-bottom:48px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--green-bg);border:1px solid rgba(61,214,140,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🟢</div>
+      <div>
+        <div style="font-size:20px;font-weight:500;color:var(--text)">This month — June 2026</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">Set up the pipeline for autumn applications</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px">
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Start Fulbright Pakistan application</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">Deadline September 15 2026 via USEFP. Covers full PhD funding at any US university — directly enables Starbird (UW), Gligorić (JHU) and Carley (CMU). Start gathering: transcripts, English test score, two reference letters, statement of purpose draft.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--green)">→ usefpak.org</div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Open Overleaf and write 500 words</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">The paper draft already exists. The novelty sentence is the blocker — once you have it, write the introduction paragraph around it. Target ICWSM Round 2 (~Sep 2026). You do not need a complete paper now. You need a direction and an abstract. 500 words this week is enough to unblock everything.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold)">→ Overleaf draft with Dr Ella Haig</div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Apply to Berkman Klein Center (Harvard)</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">The 2026-2027 fellowship call is open. This is not a PhD but a Harvard BKC affiliation strengthens every application in your pipeline. Covers platform governance, AI and democratic information flows — direct alignment with your work. The application is a research proposal — you already have one.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--purple)">→ cyber.harvard.edu</div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Email Hertie School Data Science Lab</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">Rolling applications — no fixed deadline. They are actively looking for CSS PhD proposals in Berlin. This is a low-effort, potentially high-return move. Send your proposal with a covering email. Berlin has no tuition fees for PhD students.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan)">→ datasciencelab.berlin</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 4: THE BIGGER PICTURE -->
+  <div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--indigo-dim);border:1px solid rgba(123,140,222,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔭</div>
+      <div>
+        <div style="font-size:20px;font-weight:500;color:var(--text)">The bigger picture</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">July–January 2027 — the path to a funded offer</div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div style="position:relative;padding-left:28px">
+      <div style="position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom, var(--red), var(--amber), var(--green), var(--cyan));border-radius:2px;opacity:0.4"></div>
+
+      <div style="margin-bottom:28px;position:relative">
+        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px rgba(245,200,66,0.5)"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);margin-bottom:6px">July – August 2026</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">ICWSM paper drafted + SOUNDS positions check</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">The paper should be in full draft by end of July, circulated to Dr Ella, and ready for submission in August. Also check SOUNDS Observatory — Weber said late summer for PhD call. Apply to team member / data engineer position if posted (it shows seriousness and gets you into the ecosystem).</div>
+      </div>
+
+      <div style="margin-bottom:28px;position:relative">
+        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 8px rgba(240,112,112,0.5)"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red);margin-bottom:6px">September 15 2026 — HARD</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">Fulbright Pakistan application deadline</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">Submit Fulbright USEFP application. This is the funding route for Starbird (UW), Gligorić (JHU) and Carley (CMU). Without this, you're relying on those programmes being internally funded. With it, you arrive with your own funding and become a much more attractive candidate.</div>
+      </div>
+
+      <div style="margin-bottom:28px;position:relative">
+        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px rgba(56,201,201,0.5)"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);margin-bottom:6px">September – October 2026</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">Apply TUM (Theocharis call) + ELLIS programme opens + MCML opens</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">Theocharis said PhD call expected September at his chair — monitor hfp.tum.de and contact him directly. ELLIS annual call opens October (Class of 2027) — Augenstein is ELLIS member. MCML (TUM+LMU) opens November. All three are European routes with strong CSS alignment.</div>
+      </div>
+
+      <div style="margin-bottom:28px;position:relative">
+        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--purple);box-shadow:0 0 8px rgba(165,140,240,0.5)"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);margin-bottom:6px">November – December 2026</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">US applications: UW HCDE + JHU CS + CMU ML (all Dec 15)</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">All three US deadlines cluster around December 15. By this point you should have: ICWSM paper submitted or preprint, Fulbright application in, research statement finalised. Starbird (UW) explicitly welcomed your application. Gligorić (JHU) explicitly recruiting. Carley (CMU) confirmed potential fit. Apply to all three with the same research statement, customised per lab.</div>
+      </div>
+
+      <div style="position:relative">
+        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(212,168,83,0.6)"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">7 January 2027 — THE DEADLINE</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">Edinburgh CDT — fully funded, confirmed supervisors</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72;margin-bottom:10px">This is the number one application. Walid Magdy confirmed supervision. Björn Ross confirmed fit. Fully funded UKRI stipend + fees. HARD DEADLINE 7 January 2027 at midnight. The application requires your ICWSM paper — that's why everything above flows from getting the paper done first. If you do nothing else from this list, submit this application.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);background:var(--gold-dim);border:1px solid rgba(212,168,83,0.22);border-radius:8px;padding:10px 16px">The path: Novelty sentence → paper draft → ICWSM submission → Edinburgh CDT application. In that order. Everything else is parallel.</div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 <footer>
