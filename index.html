@@ -410,7 +410,7 @@ footer a:hover{color:var(--gold2)}
   </div>
 
   <div class="stats-strip">
-    <div class="stat-cell"><div class="stat-num">79</div><div class="stat-label">Contacted</div></div>
+    <div class="stat-cell"><div class="stat-num">83</div><div class="stat-label">Contacted / tracked</div></div>
     <div class="stat-cell"><div class="stat-num">30</div><div class="stat-label">Replies</div></div>
     <div class="stat-cell"><div class="stat-num">10</div><div class="stat-label">Warm / positive</div></div>
     <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label">Confirmed supervisors</div></div>
@@ -702,6 +702,10 @@ const PROFS=[
   {name:"Prof. Ashton Anderson",inst:"University of Toronto · CS / Computational Social Science Lab",topic:"Political Polarisation, Cultural Structure of Platforms and Cross-Platform Community Dynamics",status:"awaiting",sent:"2 Apr 2026",summary:"Emailed 2 Apr 2026. No reply in 2 months. Calendar follow-up reminder fired 1 Jun 2026. His Nature 2021 paper on Reddit polarisation via community embeddings and work on platform-specific cultural structure directly relevant to cross-platform measurement validity. Canada fall PhD application cycle.",response:"No reply yet — 2 months elapsed.",timeline:"Overdue follow-up — send now",action:"Send short 2-sentence follow-up today. Canada PhD cycle: UofT CS applications typically due in December 2026."},
   {name:"MCML PhD Programme",inst:"Munich Center for Machine Learning · TUM + LMU Munich",topic:"Machine Learning, AI and Computational Social Science — fully funded positions",status:"new",sent:"—",summary:"MCML (joint TUM/LMU initiative) runs an annual PhD Matchmaking Programme. 2026 cycle received 1,500+ international applications. 2027 cycle will open Nov 2026, deadline ~14 Nov 2026. Fully funded TV-L E13 positions (3 years). Theocharis is a TUM professor in the same ecosystem. This route would connect to MCML supervisors working at the intersection of NLP, CSS and computational social science. MSc Distinction from Portsmouth should convert favourably to German grade system.",response:"Not yet applied — 2026 cycle closed Mar 2026. Apply in 2027 cycle.",timeline:"Apply Nov 2026 — deadline ~14 Nov 2026",action:"Monitor mcml.ai from October 2026. Apply as soon as 2027 cycle opens. Identify specific MCML supervisors working on NLP/CSS (check mcml.ai/opportunities/for-phd-applicants/mm2026-pis). Note: Theocharis is TUM — MCML route may overlap."},
   {name:"Berkman Klein Center Fellowship",inst:"Harvard University · Berkman Klein Center for Internet & Society",topic:"AI and Society, Platform Governance, Social Media and Democratic Information Flows",status:"new",sent:"—",summary:"BKC runs annual fellowship calls for researchers working at the intersection of technology and society. 2026-2027 open call live. Focus areas include how AI changes human relationships, platform governance, and social cognition. Strong alignment with government social listening, platform measurement validity and ArtemisAI's applied work. Not a PhD programme but a research fellowship — could run concurrently with a PhD application cycle, strengthen profile, and provide Harvard affiliation.",response:"Not yet applied.",timeline:"Check 2026-2027 open call — cyber.harvard.edu/page/open-call-fellowship-applications",action:"Read the BKC open call. Consider applying for the 2026-2027 fellowship. A BKC affiliation significantly strengthens Edinburgh CDT and US PhD applications. cyber.harvard.edu"},
+  {name:"Oxford DPhil Social Data Science (OII)",inst:"University of Oxford · Oxford Internet Institute",topic:"Social Media Data, AI/ML, Algorithm Auditing, Network Science, Digital Governance",status:"new",sent:"—",summary:"Direct fit. OII DPhil covers large-scale social media data collection, AI, ML, algorithm auditing and measurement. 2026-27 entry closed — 2027-28 applications open ~Sep 2026. Funding via ESRC Grand Union DTP (Oxford+Brunel+OU) and Clarendon Scholarships (200+ fully funded places annually). Fabian Stephany (warm contact) is OII faculty — directed you to November 2026 cycle. Register for email notification at ox.ac.uk/admissions/graduate.",response:"Not yet applied. 2026-27 closed. Register for 2027-28 notification.",timeline:"Register NOW · apply Jan 2027 deadline · ESRC Grand Union DTP",action:"Register for notification at OII website today. Contact Stephany to confirm OII November cycle. Apply via ESRC Grand Union DTP route for full funding."},
+  {name:"CMU Machine Learning PhD",inst:"Carnegie Mellon University · Machine Learning Department",topic:"Machine Learning, Computational Social Science, AI for Social Good",status:"new",sent:"—",summary:"Prof. Kathleen Carley (CASOS Lab) replied positively — 'Potential fit.' CMU ML PhD is the programme to list her as advisor. Fully funded. Applications for Fall 2027 open Sep 9 2026. Early deadline Nov 18 2026, final deadline Dec 9 2026.",response:"Carley replied: 'Potential fit.' Apply Fall 2026 for 2027 intake.",timeline:"Apply Nov 18 2026 (early) · Dec 9 2026 (final) · ml.cmu.edu",action:"List Prof. Kathleen Carley as primary advisor. Reference cross-platform measurement invariance proposal. Apply by early deadline Nov 18 for best consideration."},
+  {name:"Glasgow CDT — Socially Intelligent AI (SOCIAL)",inst:"University of Glasgow · School of Computing Science",topic:"Socially Intelligent AI Agents, Social Behaviour Modelling, Computational Social Science, NLP",status:"new",sent:"—",summary:"CDT in Socially Intelligent Artificial Agents covers AI agents, social behaviour, computational social modelling, NLP. Funded studentships for October 2027 start. Deadline 31 January 2027. Strong NLP + social science intersection. Glasgow is Russell Group with strong CSS research.",response:"Not yet applied.",timeline:"Deadline 31 Jan 2027 · gla.ac.uk/schools/computing",action:"Check CDT project list. Identify supervisor working on social media, NLP or CSS. Apply by January 31 2027."},
+  {name:"Open University Business School PhD ⚠️ URGENT",inst:"The Open University · Business School",topic:"Digital Media, Computational Social Science, Data-Driven Research",status:"new",sent:"—",summary:"OU Business School funded PhD studentships — February 2027 entry. Deadline 9 June 2026 midday BST — THIS WEEK. Proposal 1,000-2,000 words required. Check project topics for CSS/social media fit. OU accepts international students for distance learning.",response:"Not yet applied. DEADLINE THIS WEEK.",timeline:"⚠️ DEADLINE 9 JUNE 2026 — THIS WEEK — midday BST",action:"Visit business-school.open.ac.uk/research/research-degrees/phd-studentships IMMEDIATELY. Check if any project fits your proposal. If yes, submit today."},
 ];
 
 const SL={confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO','no-position':'No position',declined:'Declined'};
@@ -1033,9 +1037,22 @@ const TODAY_ACTIONS = [
     trigger: d => d >= new Date(2026,5,1) && d <= new Date(2026,7,31),
   },
 
-  // ══════════════════════════════════════════════════════
-  // HORIZON — watch / upcoming
-  // ══════════════════════════════════════════════════════
+  {
+    id:'ou-deadline', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'⚠️',
+    tag:'p-red', tagLabel:'DEADLINE TODAY — midday BST',
+    title:'Open University Business School PhD — deadline 9 June 2026',
+    detail:'Funded PhD studentships for February 2027 entry. Deadline is TODAY 9 June 2026 at midday BST. Check business-school.open.ac.uk/research/research-degrees/phd-studentships for projects. If any fit your proposal (social media, CSS, NLP, digital media), submit today. Proposal is only 1,000-2,000 words.',
+    trigger: d => d.getFullYear()===2026 && d.getMonth()===5 && d.getDate()<=9,
+  },
+  {
+    id:'oxford-oii-register', urgent:true,
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
+    tag:'p-cyan', tagLabel:'Register today',
+    title:'Register for Oxford OII DPhil notification — 2027-28 cycle',
+    detail:'Oxford DPhil in Social Data Science (OII) is closed for 2026-27 but 2027-28 opens ~Sep 2026. Register at ox.ac.uk/admissions/graduate/courses/dphil-social-data-science to be emailed the moment it opens. Also contact Fabian Stephany (warm contact) to confirm the November OII application window.',
+    trigger: d => d >= new Date(2026,5,2) && d <= new Date(2026,5,20),
+  },
 
   {
     id:'icwsm-paper-write', urgent:false,
@@ -1179,7 +1196,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '2 Jun 2026, 19:00 PKT';
+  const LAST_REFRESHED = '2 Jun 2026, 20:30 PKT';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
 
   buildFilterBar();
