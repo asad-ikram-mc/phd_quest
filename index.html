@@ -215,6 +215,46 @@ header{position:sticky;top:0;z-index:100;background:rgba(5,8,15,0.93);backdrop-f
 .leg-dot{width:9px;height:9px;border-radius:50%}
 
 /* TODAY ACTIONS */
+
+/* PRIORITY LIST */
+.prio-wrap{margin-bottom:44px}
+.prio-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.prio-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--text);line-height:1.1}
+.prio-sub{font-size:14px;color:var(--text2);margin-top:6px;max-width:640px;line-height:1.6}
+.prio-legend{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);display:flex;gap:14px;flex-wrap:wrap}
+.prio-legend span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.prio-legend .lg-now::before{background:var(--red)} .prio-legend .lg-week::before{background:var(--amber)} .prio-legend .lg-month::before{background:var(--cyan)} .prio-legend .lg-later::before{background:var(--purple)}
+.prio-list{display:flex;flex-direction:column;gap:10px}
+.prio-item{display:flex;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.15s}
+.prio-item:hover{border-color:var(--border2)}
+.prio-item.done{opacity:0.42}
+.prio-item.done .prio-name{text-decoration:line-through}
+.prio-rank{width:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--gold);border-right:1px solid var(--border)}
+.prio-rank.r-now{background:var(--red-bg);color:var(--red)} .prio-rank.r-week{background:var(--amber-bg);color:var(--amber)} .prio-rank.r-month{background:var(--cyan-dim);color:var(--cyan)} .prio-rank.r-later{background:var(--purple-bg);color:var(--purple)}
+.prio-body{flex:1;padding:14px 16px;min-width:0}
+.prio-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.prio-name{font-size:16px;font-weight:500;color:var(--text);line-height:1.4}
+.prio-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex-shrink:0}
+.prio-pill{font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 10px;border-radius:12px;border:1px solid var(--border2);color:var(--text3);white-space:nowrap}
+.prio-pill.p-due{color:var(--red);background:var(--red-bg);border-color:rgba(240,112,112,0.3)}
+.prio-pill.p-soon{color:var(--amber);background:var(--amber-bg);border-color:rgba(245,200,66,0.3)}
+.prio-pill.p-ok{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(56,201,201,0.3)}
+.prio-pill.p-time{color:var(--text2)}
+.prio-why{font-size:14px;color:var(--text2);line-height:1.6;margin-top:6px}
+.prio-req{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 14px}
+.prio-req li{font-size:13px;color:var(--text2);line-height:1.55;padding-left:16px;position:relative}
+.prio-req li::before{content:'\25A1';position:absolute;left:0;top:0;color:var(--text3);font-size:12px}
+.prio-link{display:inline-block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);word-break:break-all}
+.prio-check{width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text3);font-size:18px;border-left:1px solid var(--border);transition:all 0.15s}
+.prio-check:hover{color:var(--green);background:var(--green-bg)}
+.prio-check.on{color:var(--green);background:var(--green-bg)}
+.prio-kit{margin-top:14px;background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:14px 18px}
+.prio-kit-title{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px}
+.prio-kit ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:4px 16px}
+.prio-kit li{font-size:13px;color:var(--text2);line-height:1.55;padding-left:16px;position:relative}
+.prio-kit li::before{content:'\25A1';position:absolute;left:0;color:var(--text3);font-size:12px}
+@media(max-width:640px){.prio-rank{width:40px;font-size:22px}.prio-body{padding:12px}.prio-name{font-size:15px}.prio-title{font-size:26px}}
+
 .today-wrap{margin-bottom:48px}
 .today-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
 .today-title-row{display:flex;align-items:center;gap:14px}
@@ -426,6 +466,29 @@ footer a:hover{color:var(--gold2)}
     <div id="last-updated-bar" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:7px;white-space:nowrap;padding:5px 14px;background:var(--surface);border:1px solid var(--border);border-radius:20px">
       <span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;flex-shrink:0;box-shadow:0 0 5px rgba(61,214,140,0.5)"></span>
       <span id="last-updated-text">Last updated: 19 Aug 2026, 21:30 PKT</span>
+    </div>
+  </div>
+
+  <!-- PRIORITY LIST -->
+  <div class="prio-wrap" id="prio-wrap">
+    <div class="prio-head">
+      <div>
+        <div class="prio-title">Priority list — start here</div>
+        <div class="prio-sub">Ordered by what it costs you to miss it. Each row says exactly what you need in hand before you sit down. Tick items off as you go; ticks persist in this browser. Days-left counters update from today's date.</div>
+      </div>
+      <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
+    </div>
+    <div class="prio-list" id="prio-list"></div>
+    <div class="prio-kit">
+      <div class="prio-kit-title">Build once, reuse everywhere (do these on day one, before any application)</div>
+      <ul>
+        <li>Updated CV as PDF (Asad_Ikram_Full_Resume_2026.pdf): add the novelty brief URL, the web-scraping guide, ArtemisAI, Fluency government pipelines</li>
+        <li>Scans: MSc degree + transcript (Portsmouth), BSc degree + transcript, CNIC/passport, English evidence (UK degree letter or IELTS)</li>
+        <li>A 2-page application letter skeleton: (1) scraping asymmetry, (2) dissertation numbers (279k, F1 0.878, divergence), (3) the measurement-validity contribution with the brief link, (4) fit paragraph to swap per post</li>
+        <li>Research proposal v5: update v4's method section to G-theory variance split + invariance/DIF + test equating so it matches the paper</li>
+        <li>Two referees lined up and warned: Dr Ella Haig + one professional (Fluency) or academic; ask Magdy for the Commonwealth supporting statement in early Sep</li>
+        <li>One-paragraph plain-English pitch of the brief (asadfix.github.io/publish_proposal) to paste into every email</li>
+      </ul>
     </div>
   </div>
 
@@ -1596,6 +1659,139 @@ const TODAY_ACTIONS = [
 ];
 
 
+
+// ── PRIORITY LIST ─────────────────────────────────────────────────────────────
+// Ordered by cost of missing. due = [y, m(1-12), d] or null. tier: now | week | month | later
+const PRIORITIES = [
+  {id:'p-utrecht', tier:'now', due:[2026,8,20], time:'2 h (optional)',
+   name:'Utrecht PhD "What Moves Us?" — only if you can send it today',
+   why:'Salaried 4-year PhD, multimodal social-media analysis + scraping + data donation, start 1 Oct. Closes 20 Aug. Worth it only if a CV + one-page letter can go out today; if not, skip without guilt.',
+   req:['CV (PDF)','One-page letter: scraping asymmetry + measurement validity + why Utrecht (Kim / Lubbers / Salah)','Apply via the uu.nl vacancy form'],
+   link:'https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/phd-a-multimodal-analysis-of-emotion-narrative-and-migration-politics-online'},
+  {id:'p-ella', tier:'now', due:null, time:'15 min',
+   name:'Send the reply to Dr Ella (Outlook) and propose meeting slots',
+   why:'The paper is the critical path for Edinburgh. The draft is written (ella_reply_draft.md): accepts Eni\'s diagnosis, methods-paper reframe, poster to ICWSM Round 3 (15 Jan 2027), arXiv by December, three meeting slots in the week of 24 Aug.',
+   req:['Open Outlook thread with ella.haig@port.ac.uk','Paste the draft, adjust the three slots to your real availability','Send'],
+   link:null},
+  {id:'p-nelimarkka', tier:'now', due:[2026,9,7], time:'30 min email · then joint application',
+   name:'Reply to Nelimarkka with the brief and ask him to supervise a Helsinki salaried application (call 24 Aug – 7 Sep)',
+   why:'Helsinki\'s university-funded, salaried doctoral positions (up to 4 years, start Jan 2027) must be prepared jointly with a supervisor. Nelimarkka critiqued your novelty on 1 May; the vetted brief answers him. If he says yes this is a salaried CSS PhD in January.',
+   req:['5-sentence email: acknowledge Platformed Interactions (2020), link asadfix.github.io/publish_proposal, state the three-step method, ask the direct supervision question for the 24 Aug – 7 Sep call','CV attached','If yes: joint application on the UH form + separate study-right application (Social Sciences programme call 2–15 Sep)'],
+   link:'https://www.helsinki.fi/en/research/doctoral-school/university-funded-doctoral-researcher-positions'},
+  {id:'p-hec', tier:'now', due:[2026,8,28], time:'3–4 h',
+   name:'HEC Overseas Scholarship Phase-III — online application, closes 28 Aug 16:00 PKT',
+   why:'Government of Pakistan fully funded PhD abroad at any QS/THE Top-200 university; first time in a decade that social sciences / governance and digital transformation are eligible. Replaces Fulbright (closed) as your funding route for Edinburgh, Oxford, UW, JHU, CMU.',
+   req:['Account on scholarships.hec.gov.pk','Rs 3,000 fee via 1LINK','CNIC, degree + transcript scans, CGPA (3.0+), age ≤35 (no relaxation)','Preferred universities list (Top-200): Edinburgh, Oxford, UW, JHU, CMU, Northeastern, Cornell','Choose field: Digital Transformation & Emerging Technologies (AI / data science) or Social Sciences, Business & Governance','Register for HAT the moment the date is posted (mandatory, valid 2 yrs)','Note: tuition capped at USD 4,000/yr at non-partner universities; admission letter NOT needed now'],
+   link:'https://www.hec.gov.pk/english/scholarshipsgrants/OSSPhase-III/Pages/default.aspx'},
+  {id:'p-audit', tier:'week', due:null, time:'1–2 days',
+   name:'Run the anchor-density audit on the dissertation corpus before the Ella meeting',
+   why:'Decides whether four platforms survive, two, or whether a targeted scrape is needed. Walk into the meeting with the feasibility question half-answered.',
+   req:['Raw corpus (Colab / Drive) loaded','List of 5–10 UK fiscal shocks 2018–2025 with dates: 23 Sep 2022 mini-budget (centrepiece), Budgets, Autumn Statements, BoE rate decisions','Count posts per platform per 48-hour and 2-week window; recount per-platform totals','One table + one paragraph of conclusions for Ella'],
+   link:null},
+  {id:'p-daad', tier:'week', due:[2026,8,31], time:'1 h of emails · apply only if a letter lands',
+   name:'DAAD doctoral grant (Pakistan deadline 31 Aug) — ask four German contacts for a supervisor letter, then decide',
+   why:'€1,400/month for 3 years from May 2027, but it needs a German professor\'s confirmation letter. TUM has no vacancy and Jungherr has not replied, so this is a long shot. One short email each, then let it go on 30 Aug if nothing lands.',
+   req:['Emails to Jungherr (Bamberg), Strohmaier (Mannheim), Garcia (Konstanz), Lorenz-Spreen (TU Dresden) with the brief link and the explicit letter ask','If a letter arrives: DAAD portal application with proposal + schedule, CV, motivation letter, transcripts, one academic reference'],
+   link:'https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57135739'},
+  {id:'p-hasselt', tier:'week', due:[2026,8,31], time:'2 h',
+   name:'Hasselt ERC PROPEL PhD (Wouters) — closes 31 Aug 23:59 CET, interviews 2 Sep',
+   why:'Two full PhD scholarships (2+2 years, start Jan 2027) on protest, public opinion and social-media content analysis in Python/R. Good fit. One fetch of the ad 404\'d and another showed it live, so confirm first.',
+   req:['Re-open academicpositions.com ad 250988 and confirm it is live','CV + letter framed around measuring public opinion from mixed media','Keep 2 Sep free for interview'],
+   link:'https://academicpositions.com/ad/hasselt-university/2026/phd-student-protest-politics-2-mandates/250988'},
+  {id:'p-emails', tier:'week', due:null, time:'2 h',
+   name:'Send the outreach batch that never went out: Gligorić, Pierri (PoliMi EOI), Hovy, Anderson, Weber, Theocharis',
+   why:'Gmail shows no PhD outreach since 1 June. Gligorić is recruiting for 15 Dec; Pierri has a new scholarship closing 18 Sep; Hovy / Anderson get one-line nudges; Weber / Theocharis get two-line notes asking whether their calls are still coming.',
+   req:['Master pattern, no em-dashes, CV attached, brief link in every email','Gligorić hook: NAACL 2025 LLM-annotation validity = same measurement question','Pierri hook: auditing web-connected agents + your anti-bot measurement work (web-scraping-guide.com)'],
+   link:null},
+  {id:'p-commonwealth', tier:'month', due:[2026,10,20], time:'3 h over Sep–Oct',
+   name:'Commonwealth PhD Scholarship 2027/28 — opens 8 Sep, closes 20 Oct 16:00 BST, via HEC nomination',
+   why:'The Edinburgh funding companion. Pakistan applies through HEC as nominating agency, whose internal deadline may be earlier, so check HEC\'s Commonwealth page the week it opens.',
+   req:['Check HEC Commonwealth page on 8 Sep for the internal cut-off','Transcripts, two references (PDF)','UK supervisor supporting statement from Magdy (ask early Sep)','Research statement (proposal v5)'],
+   link:'https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships-for-least-developed-countries-and-fragile-states/'},
+  {id:'p-vu', tier:'month', due:[2026,9,14], time:'3 h',
+   name:'VU Amsterdam PhD Social Data Science (Roozenbeek) — closes 14 Sep 23:59',
+   why:'Salaried 4-year position (€3,204–4,051/month, start 4 Jan 2027) studying the market behind disinformation by scraping illicit online marketplaces at scale. Very few communication-science applicants can do that; you do it for a living.',
+   req:['CV','Application letter max 2 pages: scraping asymmetry first, then measurement validity, honest note on R','Submit via the Apply button on the vacancy page'],
+   link:'https://workingat.vu.nl/vacancies/phd-position-in-social-data-science-amsterdam-1330114'},
+  {id:'p-sdu', tier:'month', due:[2026,9,15], time:'4 h',
+   name:'SDU Odense PhD "Navigating Negativity" — closes 15 Sep 23:59 CEST',
+   why:'Salaried 3-year PhD running a data-donation hub and automated content analysis across outlets and social feeds. Digital-trace measurement validity is the job description. Start 1 Nov.',
+   req:['2-page project proposal: cross-platform / feed-level measurement validity + your data-donation-ready pipeline experience','CV, transcripts, degree','Apply via the SDU Oracle portal (job 4168)'],
+   link:'https://www.jobs.ac.uk/job/DSL655/phd-student-with-strong-computational-profile-for-the-project-navigating-negativity-what-is-a-healthy-news-diet'},
+  {id:'p-polimi', tier:'month', due:[2026,9,18], time:'3 h',
+   name:'PoliMi PhD scholarship with Pierri (auditing web-connected AI agents) — closes 18 Sep 14:00 CET',
+   why:'Thematic scholarship 5722-5460 (Pierri + Brambilla), ~€1,500 net/month for 3 years, start 1 Nov, open to foreign citizens. Your anti-bot / scraping measurement expertise is the hook. Email Pierri first (see the outreach batch).',
+   req:['PoliMi application portal account, €25.82 fee','CV, transcripts, degree certificates','Research statement tailored to scholarship 5722-5460 (read the topic sheet PDF)','Optional: also tick the open-subject CS&E scholarships (5708-5455) naming social-media sentiment'],
+   link:'https://www.polimi.it/en/phd/prospective-phd-candidates/admission/calls-and-open-positions/ciclo-42/2nd-call'},
+  {id:'p-oii', tier:'month', due:null, time:'2 min',
+   name:'Register for the Oxford OII DPhil 2027-28 notification (opens September)',
+   why:'Stephany (warm) is OII faculty; Clarendon consideration is automatic if you apply by the course deadline (~early Jan 2027).',
+   req:['Register your email on the DPhil Social Data Science course page'],
+   link:'https://www.ox.ac.uk/admissions/graduate/courses/dphil-social-data-science'},
+  {id:'p-csh', tier:'later', due:[2026,10,15], time:'3 h',
+   name:'Complexity Science Hub Vienna Graduate Program — closes 15 Oct (midnight Vienna)',
+   why:'Fully funded PhD, €39,649/year + travel, misinformation named as a theme; Garcia and Lasser are faculty, so write to both first.',
+   req:['Email Lasser and Garcia in September mentioning the CSH call','CV, transcripts, statement, references per the CSH form'],
+   link:'https://csh.ac.at/education/graduate-program/'},
+  {id:'p-edinburgh', tier:'later', due:[2027,1,7], time:'2 days over Oct–Dec',
+   name:'Edinburgh CDT (Magdy + Ross) — opens ~Oct, deadline ~7 Jan 2027 (confirm when posted)',
+   why:'The #1 application. Magdy: "please do your best to get a publication by then" — the arXiv preprint is what it cites. Glasgow is no longer a backup.',
+   req:['Statement of Intent (≤1,000 words) + Statement of Alignment (≤1,500 words) as one PDF','CV, English certificate, degree transcripts','Two academic references (ask Dr Ella now)','arXiv preprint live by mid-Dec','Apply via EUCLID, no fee; confirm the 2027 date on responsiblenlp.org in October'],
+   link:'https://www.responsiblenlp.org/'},
+  {id:'p-us-block', tier:'later', due:[2026,12,15], time:'1 week spread over Nov–Dec',
+   name:'US / EU December block: 1 Dec cluster, UW HCDE 2 Dec, NYU CDS 3 Dec, CMU 18 Nov / 9 Dec, JHU 15 Dec',
+   why:'Northeastern NetSci, Cornell IS, Northwestern TSB, UMSI (verify), EPFL EDIC all close 1 Dec; UW HCDE 2 Dec (Starbird welcomed you); CMU early 18 Nov, final 9 Dec (Carley); JHU CS 15 Dec (Gligorić / Piccardi). Same research statement, customised per lab. Funding: HEC if awarded, else departmental.',
+   req:['Research statement + per-lab fit paragraphs','3 references (US programmes want three)','TOEFL/IELTS evidence where required','UW: SOP 250 + 1,000 words, diversity statement, 2–4 faculty matches; contact Kathleen Rascon (krascon@uw.edu)','Preprint on arXiv'],
+   link:null},
+  {id:'p-paper', tier:'later', due:[2027,1,15], time:'Sep–Jan, the main project',
+   name:'Paper: reframe → annotate 1,000–1,500 posts → analysis → arXiv by Dec → ICWSM Round 3 poster 15 Jan 2027',
+   why:'Round 2 (15 Sep) is full papers only and too soon; posters are accepted only in Round 3. The preprint is the evidence every December / January application cites.',
+   req:['Agreed plan with Ella (platforms, gold-set size, second annotator, venue)','Annotation of 1,000–1,500 posts from anchor windows','Multilevel model + invariance/DIF + equating + naive-vs-adjusted simulation','Update the novelty brief to the reframed plan','arXiv by mid-Dec; ICWSM Round 3 submission 15 Jan 2027 23:59 AoE'],
+   link:'https://www.icwsm.org/2027/submit/'},
+];
+
+function renderPriorities(){
+  const el=document.getElementById('prio-list'); if(!el) return;
+  const now=new Date(); now.setHours(0,0,0,0);
+  const done=new Set(JSON.parse(localStorage.getItem('prio-done')||'[]'));
+  el.innerHTML='';
+  PRIORITIES.forEach((p,idx)=>{
+    let duePill='';
+    if(p.due){
+      const d=new Date(p.due[0],p.due[1]-1,p.due[2]);
+      const days=Math.round((d-now)/86400000);
+      const label=d.getDate()+' '+MONTHS_SHORT[d.getMonth()]+(d.getFullYear()!==now.getFullYear()?' '+d.getFullYear():'');
+      let cls='p-ok', txt=label+' · '+days+' days';
+      if(days<0){cls='p-due';txt=label+' · passed';}
+      else if(days===0){cls='p-due';txt=label+' · TODAY';}
+      else if(days<=10){cls='p-due';txt=label+' · '+days+' day'+(days===1?'':'s')+' left';}
+      else if(days<=30){cls='p-soon';}
+      duePill='<span class="prio-pill '+cls+'">'+txt+'</span>';
+    } else {
+      duePill='<span class="prio-pill p-soon">no hard date · do it now</span>';
+    }
+    const item=document.createElement('div');
+    item.className='prio-item'+(done.has(p.id)?' done':'');
+    item.innerHTML=
+      '<div class="prio-rank r-'+p.tier+'">'+(idx+1)+'</div>'
+      +'<div class="prio-body">'
+      +  '<div class="prio-top"><div class="prio-name">'+p.name+'</div><div class="prio-meta">'+duePill+'<span class="prio-pill p-time">'+p.time+'</span></div></div>'
+      +  '<div class="prio-why">'+p.why+'</div>'
+      +  '<ul class="prio-req">'+p.req.map(r=>'<li>'+r+'</li>').join('')+'</ul>'
+      +  (p.link?'<a class="prio-link" href="'+p.link+'" target="_blank">'+p.link.replace(/^https?:\/\//,'')+' &#8599;</a>':'')
+      +'</div>'
+      +'<div class="prio-check'+(done.has(p.id)?' on':'')+'" title="Mark done" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
+    el.appendChild(item);
+  });
+}
+function togglePrio(id,el){
+  const done=new Set(JSON.parse(localStorage.getItem('prio-done')||'[]'));
+  const item=el.closest('.prio-item');
+  if(done.has(id)){done.delete(id);el.classList.remove('on');item.classList.remove('done');}
+  else{done.add(id);el.classList.add('on');item.classList.add('done');}
+  localStorage.setItem('prio-done',JSON.stringify([...done]));
+}
+
 let curActionTab = 'urgent';
 
 function switchActionTab(tab){
@@ -1688,6 +1884,7 @@ document.addEventListener('DOMContentLoaded', function() {
   renderProfs();
   renderCalendar();
   buildTodayActions();
+  renderPriorities();
 });
 </script>
 </body>
