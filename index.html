@@ -394,7 +394,7 @@ footer a:hover{color:var(--gold2)}
 <div class="panel active" id="panel-overview">
 
   <div class="hero">
-    <div class="hero-badge">Active campaign &middot; 18 June 2026</div>
+    <div class="hero-badge">Active campaign &middot; 19 August 2026</div>
     <h1>The <em>PhD Quest</em><br>of Asad Ikram</h1>
     <p class="hero-sub">Pursuing a fully funded PhD in computational social science — cross-platform measurement invariance, social listening validity, and bias-corrected public opinion estimation from social media data.</p>
     <div class="hero-links">
@@ -414,7 +414,7 @@ footer a:hover{color:var(--gold2)}
   </div>
 
   <div class="stats-strip">
-    <div class="stat-cell"><div class="stat-num">102</div><div class="stat-label">Contacted / tracked</div></div>
+    <div class="stat-cell"><div class="stat-num">105</div><div class="stat-label">Contacted / tracked</div></div>
     <div class="stat-cell"><div class="stat-num">30</div><div class="stat-label">Replies</div></div>
     <div class="stat-cell"><div class="stat-num">10</div><div class="stat-label">Warm / positive</div></div>
     <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label">Confirmed supervisors</div></div>
@@ -425,7 +425,7 @@ footer a:hover{color:var(--gold2)}
     <div style="flex:1;height:1px;background:var(--border)"></div>
     <div id="last-updated-bar" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:7px;white-space:nowrap;padding:5px 14px;background:var(--surface);border:1px solid var(--border);border-radius:20px">
       <span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;flex-shrink:0;box-shadow:0 0 5px rgba(61,214,140,0.5)"></span>
-      <span id="last-updated-text">Last updated: 18 Jun 2026, 20:00 PKT</span>
+      <span id="last-updated-text">Last updated: 19 Aug 2026, 21:30 PKT</span>
     </div>
   </div>
 
@@ -451,25 +451,25 @@ footer a:hover{color:var(--gold2)}
 
   <div class="sec-head"><span class="sec-tag">Active</span><h2 class="sec-title">Goals &amp; Milestones</h2></div>
   <div class="goals-grid">
-    <div class="goal-card c-red" style="border-color:rgba(248,113,113,0.45);box-shadow:0 0 0 1px rgba(248,113,113,0.15)">
-      <div class="goal-top"><div class="goal-title" style="font-size:18px">🎯 Define the novelty — the #1 blocker</div><span class="chip" style="background:var(--red-bg);color:var(--red);border:1px solid rgba(248,113,113,0.3);font-size:12px">BLOCKING EVERYTHING</span></div>
-      <div class="goal-detail">Both Dr Ella Haig AND Nelimarkka flagged the same problem: "platforms produce different signals" is NOT a novel contribution on its own — Nelimarkka et al. (2020) and others already showed this. The novel contribution is: <strong style="color:var(--text)">the first formal measurement invariance test (multi-group CFA) applied to cross-platform political sentiment data</strong>, producing a validated bias-correction protocol checked against BES ground truth. Nothing in the literature does this formally. That is the paper. Nail this sentence first.</div>
-      <div class="goal-deadline" style="font-size:12px">&#9711; Step 1: Read Nelimarkka (2020) · Step 2: Write the one-sentence contribution · Step 3: Put it in Overleaf abstract</div>
+    <div class="goal-card c-green" style="border-color:rgba(61,214,140,0.45);box-shadow:0 0 0 1px rgba(61,214,140,0.15)">
+      <div class="goal-top"><div class="goal-title" style="font-size:18px">🎯 Novelty defined and vetted — now it is a data problem</div><span class="chip chip-green" style="font-size:12px">UNBLOCKED</span></div>
+      <div class="goal-detail">The novelty brief is live at <a href="https://asadfix.github.io/publish_proposal/" target="_blank" style="color:var(--cyan)">asadfix.github.io/publish_proposal</a> and was independently vetted by Dr Ella's ICWSM-experienced colleague (Eni). Verdict: <strong style="color:var(--text)">the contribution holds</strong>: treat each platform as a survey mode and apply the psychometric equivalence toolkit (G-theory variance split, invariance + DIF, test equating on shared fiscal events) to machine-labelled sentiment. Nobody has done this. What does NOT yet hold is the data: 200-post gold set is too small, anchor events are not pre-identified, corpus is sparse outside event windows.</div>
+      <div class="goal-deadline" style="font-size:12px">&#9711; Next: anchor-density audit · expand gold set to 1,000-1,500 · reframe as methods paper · reply to Ella + meet</div>
     </div>
-    <div class="goal-card c-gold">
-      <div class="goal-top"><div class="goal-title">ICWSM 2027 paper — with Dr Ella Haig</div><span class="chip chip-gold">LaTeX drafted</span></div>
-      <div class="goal-detail">11-page ICWSM paper drafted in Overleaf (AAAI two-column LaTeX template, main.tex + references.bib). Ella confirmed as co-author. Paper centres on cross-platform platform divergence effect as central contribution. Blocking issue: novelty framing — reviewers will ask why this is stronger than Nelimarkka (2020). Answer: multi-group CFA as formal measurement invariance test, not just descriptive divergence. Figures need adding from Colab. Target ICWSM Round 2 ~Sep 2026.</div>
-      <div class="goal-deadline">&#9711; Overleaf draft exists · add figures · fix novelty framing · submit Sep 2026</div>
+    <div class="goal-card c-red" style="border-color:rgba(240,112,112,0.45);box-shadow:0 0 0 1px rgba(240,112,112,0.15)">
+      <div class="goal-top"><div class="goal-title">ICWSM 2027 paper — with Dr Ella Haig (critical path)</div><span class="chip" style="background:var(--red-bg);color:var(--red);border:1px solid rgba(240,112,112,0.3);font-size:12px">REPLY TO ELLA OVERDUE</span></div>
+      <div class="goal-detail">Ella approved the arXiv-first plan and forwarded Eni's five-prompt Gemini critique. It confirms novelty but says the existing dataset cannot carry the psychometric claims as-is. Salvage path agreed in principle: reframe as a <strong style="color:var(--text)">measurement-methods paper</strong> around the Sept 2022 mini-budget plus 5-6 fiscal events in tight windows; multilevel model (posts within events, platform as fixed effect); naive-vs-adjusted index simulation; gold set to 1,000-1,500 posts; narrow platforms if the density audit says so; <strong style="color:var(--text)">poster / short-paper track first</strong>. Realistic target: arXiv preprint by Dec 2026, ICWSM Round 3 (15 Jan 2027); the 15 Sep round is too tight for proper annotation. Magdy asked for a publication before the 7 Jan CDT deadline, so the preprint is what the Edinburgh application will cite.</div>
+      <div class="goal-deadline">&#9711; Reply to Ella this week (draft ready) · audit anchor density · annotate · arXiv by Dec · ICWSM 15 Jan 2027</div>
     </div>
     <div class="goal-card c-cyan">
       <div class="goal-top"><div class="goal-title">Edinburgh CDT in Responsible NLP — top priority application</div><span class="chip chip-cyan">Apply Jan 2027</span></div>
-      <div class="goal-detail">Prof. Walid Magdy (SMASH) confirmed supervisor. Dr Björn Ross confirmed strong fit. Fully funded — UKRI stipend + fees waived. HARD DEADLINE: 7 January 2027. Application requires ICWSM paper submitted or under review. This is the most important application in the campaign.</div>
-      <div class="goal-deadline">&#9711; HARD DEADLINE 7 Jan 2027 · Paper must be under review</div>
+      <div class="goal-detail">Prof. Walid Magdy (SMASH) confirmed supervisor. Dr Björn Ross confirmed strong fit. Fully funded for internationals: overseas fees + UKRI stipend. Verified: the CDT page says the next intake usually opens in October; the 2027 deadline is not yet posted (7 Jan follows the 2026 pattern, unconfirmed). Pack: Statement of Intent (1,000 w) + Statement of Alignment (1,500 w) in one PDF, CV, English cert, two academic references, via EUCLID. Cite the arXiv preprint. This is the most important application in the campaign.</div>
+      <div class="goal-deadline">&#9711; Opens ~Oct · deadline ~7 Jan 2027 (confirm) · responsiblenlp.org</div>
     </div>
     <div class="goal-card c-green">
-      <div class="goal-top"><div class="goal-title">UW HCDE (Starbird) — explicitly welcomed application</div><span class="chip chip-green">Apply Dec 2026</span></div>
-      <div class="goal-detail">Prof. Kate Starbird (UW Center for an Informed Public) replied 27 Apr: "Your interest areas, expertise, and research questions sound very well aligned." Planning ONE PhD intake for 2027-28. HCDE PhD deadline ~December 15 2026. Apply via Fulbright Pakistan route (deadline Sep 15 2026) to fund this.</div>
-      <div class="goal-deadline">&#9711; Deadline ~Dec 15 2026 · Fulbright Sep 15</div>
+      <div class="goal-top"><div class="goal-title">UW HCDE (Starbird) — explicitly welcomed application</div><span class="chip chip-green">Deadline 2 Dec 2026</span></div>
+      <div class="goal-detail">Prof. Kate Starbird (UW Center for an Informed Public) replied 27 Apr: "Your interest areas, expertise, and research questions sound very well aligned." Planning ONE PhD intake for 2027-28. Verified: HCDE has a single annual deadline, <strong style="color:var(--text)">2 December 2026, 11:59 pm Pacific</strong> (not 15 Dec); portal opens September; no GRE; SOP in two parts (250 + 1,000 words), diversity statement, 3 references, 2-4 faculty matches. Funding: HEC Phase-III if awarded, otherwise departmental.</div>
+      <div class="goal-deadline">&#9711; Deadline 2 Dec 2026 · hcde.washington.edu/phd/application</div>
     </div>
     <div class="goal-card c-green">
       <div class="goal-top"><div class="goal-title">JHU CS (Gligorić) — explicitly recruiting</div><span class="chip chip-green">Apply Dec 2026</span></div>
@@ -477,14 +477,14 @@ footer a:hover{color:var(--gold2)}
       <div class="goal-deadline">&#9711; Email her NOW · JHU CS PhD deadline Dec 15 2026</div>
     </div>
     <div class="goal-card c-purple">
-      <div class="goal-top"><div class="goal-title">SOUNDS Observatory — PhD + team positions</div><span class="chip chip-purple">Check June 2026</span></div>
+      <div class="goal-top"><div class="goal-title">SOUNDS Observatory — PhD + team positions</div><span class="chip chip-purple">Late-summer call due</span></div>
       <div class="goal-detail">Prof. Weber confirmed graduate school PhD call + team member / data engineer positions (no C1 German) expected summer 2026. AWS Lambda monitor deployed — emails daily on new postings. Also check SOUNDS LinkedIn page manually from June onwards.</div>
       <div class="goal-deadline">&#9711; Check sounds-observatory.org now · Lambda monitor active</div>
     </div>
-    <div class="goal-card c-red" style="border-color:rgba(240,112,112,0.5);box-shadow:0 0 0 1px rgba(240,112,112,0.15)">
-      <div class="goal-top"><div class="goal-title">🚨 ELLIS PhD — Pierri, Politecnico di Milano</div><span class="chip" style="background:var(--red-bg);color:var(--red);border:1px solid rgba(240,112,112,0.3);font-size:12px">DEADLINE SUN 15 JUN</span></div>
-      <div class="goal-detail">Prof. Francesco Pierri is recruiting a PhD on Responsible AI / CSS / social media analysis / AI auditing / misinformation at ELLIS Unit Milan. Direct overlap with your dissertation. Affiliated with IU OSOME (Kwak's lab). Visited Augenstein's CopeNLU in March 2026. ELLIS programme includes 6-month European exchange. Email f.pierri@polimi.it today as expression of interest, then apply at ellis.eu/research/jobs.</div>
-      <div class="goal-deadline">&#9711; Email TODAY · Apply at ellis.eu by Sunday 15 Jun 2026</div>
+    <div class="goal-card c-purple">
+      <div class="goal-top"><div class="goal-title">ELLIS PhD — Pierri, Politecnico di Milano</div><span class="chip chip-purple">15 Jun deadline passed · re-check</span></div>
+      <div class="goal-detail">The 15 June 2026 ELLIS round closed and no application or email to f.pierri@polimi.it went out from Gmail. Pierri's Responsible AI / CSS / misinformation line at ELLIS Unit Milan remains a strong fit, and the PoliMi call is usually repeated. Re-check ellis.eu/research/jobs and the PoliMi doctoral school for the next round, and send the expression-of-interest email anyway so he knows your name before the next call.</div>
+      <div class="goal-deadline">&#9711; Email Pierri now · watch ELLIS annual call (opens ~Oct 2026)</div>
     </div>
     <div class="goal-card c-cyan">
       <div class="goal-top"><div class="goal-title">Oxford DPhil Social Data Science (OII)</div><span class="chip chip-cyan">Apply Jan 2027</span></div>
@@ -506,20 +506,30 @@ footer a:hover{color:var(--gold2)}
       <div class="goal-detail">Data Science Lab actively seeking PhD proposals in CSS. Also has positions on polarisation and democracy. Rolling applications — no fixed deadline. Berlin-based, connected to WZB Berlin Social Science Center. Email datasciencelab.berlin with your proposal now.</div>
       <div class="goal-deadline">&#9711; Rolling · Contact datasciencelab.berlin now</div>
     </div>
-    <div class="goal-card c-gold">
-      <div class="goal-top"><div class="goal-title">Fulbright Foreign Student Program (Pakistan)</div><span class="chip chip-gold">Deadline Sep 15 2026</span></div>
-      <div class="goal-detail">Pakistan applies through USEFP. Covers full PhD funding at any US university (Starbird at UW, Gligorić at JHU, Carley at CMU). Deadline September 15 2026. Start gathering: transcripts, English test, two references, statement of purpose. Apply at usefpak.org.</div>
-      <div class="goal-deadline">&#9711; Deadline Sep 15 2026 · usefpak.org</div>
+    <div class="goal-card c-red" style="border-color:rgba(240,112,112,0.45);box-shadow:0 0 0 1px rgba(240,112,112,0.15)">
+      <div class="goal-top"><div class="goal-title">🇵🇰 HEC Overseas Scholarship Phase-III — fully funded PhD abroad</div><span class="chip" style="background:var(--red-bg);color:var(--red);border:1px solid rgba(240,112,112,0.3);font-size:12px">DEADLINE 28 AUG, 16:00 PKT</span></div>
+      <div class="goal-detail">Government of Pakistan, back after ten years, now including "Digital Transformation & Emerging Technologies" and "Social Sciences, Business & Governance". Verified on hec.gov.pk: online registration 9-28 Aug 2026, Rs 3,000 fee, age max 35, CGPA 3.0+, HAT mandatory (date TBA), admission letter <strong style="color:var(--text)">not</strong> required at application, any QS/THE Top-200 university of your choice. Tuition capped at USD 4,000/yr at non-partner universities, so combine with Edinburgh CDT / Oxford fee waivers. This is the funding that replaces the closed Fulbright cycle for the US routes.</div>
+      <div class="goal-deadline">&#9711; scholarships.hec.gov.pk · apply before 28 Aug 16:00 · register for HAT</div>
     </div>
-    <div class="goal-card c-cyan">
-      <div class="goal-top"><div class="goal-title">Commonwealth PhD Scholarship — UK universities</div><span class="chip chip-cyan">Deadline ~Nov 2026</span></div>
-      <div class="goal-detail">Pakistan is Commonwealth member. Covers full UK PhD tuition + £21,805/yr stipend. Directly enables Edinburgh CDT (Magdy) and Loughborough (Chadwick). Opens August 2026, deadline November. Gather: transcripts, 2 references, research statement, supervisor acceptance letter.</div>
-      <div class="goal-deadline">&#9711; Apply Aug–Nov 2026 · cscuk.fcdo.gov.uk</div>
+    <div class="goal-card c-gold">
+      <div class="goal-top"><div class="goal-title">🇳🇱 VU Amsterdam — PhD Social Data Science (Roozenbeek), scraping is the method</div><span class="chip chip-gold">Deadline 14 Sep 2026</span></div>
+      <div class="goal-detail">"The Economy of Digital Influence Operations" (Vidi-funded): fake engagement, bot networks and illicit online marketplaces studied at scale. Supervisors Jon Roozenbeek + Ivar Vermeulen. 4-year employment contract, €3,204-4,051 gross/month, start 4 Jan 2027. Wants quantitative methods, time series, Python and R. Apply with CV + 2-page letter at workingat.vu.nl. The project cannot be done without large-scale scraping; that asymmetry is the whole case.</div>
+      <div class="goal-deadline">&#9711; workingat.vu.nl/vacancies/phd-position-in-social-data-science-amsterdam-1330114 · 14 Sep 23:59</div>
     </div>
     <div class="goal-card c-purple">
-      <div class="goal-top"><div class="goal-title">DAAD Scholarship — Germany (Jungherr/Theocharis)</div><span class="chip chip-purple">Apply Oct–Nov 2026</span></div>
-      <div class="goal-detail">DAAD funds full PhD stipends for international students in Germany. Directly enables Jungherr (Bamberg) and Theocharis (TUM) routes — both warm contacts. Apply October–November 2026 for 2027 entry. Requires: acceptance from German supervisor, research proposal. daad.de.</div>
-      <div class="goal-deadline">&#9711; Apply Oct–Nov 2026 · daad.de</div>
+      <div class="goal-top"><div class="goal-title">Fulbright Foreign Student Program (Pakistan) — 2027 cycle closed</div><span class="chip chip-purple">2028 cycle opens ~Feb 2027</span></div>
+      <div class="goal-detail">Verified on usefp.org: the 2027 competition closed on 1 April 2026; the "15 Sep" date in the old plan was wrong. Next cycle opens around February 2027 with an April/May deadline, requires GRE General (145+ per section) and three references. Take the GRE over the winter if the US applications survive December. For 2027 entry the live Pakistani funding route is HEC Phase-III.</div>
+      <div class="goal-deadline">&#9711; usefp.org · watch for the 2028 call in Feb 2027</div>
+    </div>
+    <div class="goal-card c-cyan">
+      <div class="goal-top"><div class="goal-title">Commonwealth PhD Scholarship 2027/28 — via HEC nomination</div><span class="chip chip-cyan">Opens 8 Sep · closes 20 Oct 2026</span></div>
+      <div class="goal-detail">Verified: opens Tue 8 Sep 2026, closes Tue 20 Oct 2026 at 16:00 BST; Pakistan eligible (LDC & fragile states list). No direct applications: go through HEC as nominating agency, whose internal deadline may be earlier. Funds airfare, tuition, £1,712/month stipend, fieldwork and family allowances. Directly enables Edinburgh CDT (Magdy) and Loughborough (Chadwick). Needs transcripts, 2 references and a UK supervisor supporting statement from Magdy.</div>
+      <div class="goal-deadline">&#9711; 8 Sep - 20 Oct 2026 · cscuk.fcdo.gov.uk · check HEC's Commonwealth page</div>
+    </div>
+    <div class="goal-card c-purple">
+      <div class="goal-top"><div class="goal-title">DAAD Doctoral Research Grant — Germany (Jungherr / Theocharis)</div><span class="chip" style="background:var(--red-bg);color:var(--red);border:1px solid rgba(240,112,112,0.3);font-size:12px">PAKISTAN DEADLINE 31 AUG</span></div>
+      <div class="goal-detail">Verified: for Pakistan the DAAD doctoral research grant closes 31 Aug 2026 (other countries 21 Oct); funding from May 2027, €1,400/month for 3 years. The mandatory supervisor confirmation letter from a German professor is the blocker. TUM Digital Governance currently lists no vacancies; Jungherr (Bamberg) has not replied. Send a short ask to Jungherr, Strohmaier (Mannheim), Garcia (Konstanz) and Lorenz-Spreen (TU Dresden) today with the brief attached; if no letter lands by 30 Aug, skip this cycle.</div>
+      <div class="goal-deadline">&#9711; 31 Aug 2026 via DAAD portal · needs supervisor letter</div>
     </div>
     <div class="goal-card c-green">
       <div class="goal-top"><div class="goal-title">Weizenbaum Institute — PhD AI/ML/NLP Berlin</div><span class="chip chip-green">Rolling — apply now</span></div>
@@ -532,16 +542,18 @@ footer a:hover{color:var(--gold2)}
       <div class="goal-deadline">&#9711; euraxess.ec.europa.eu/jobs/229261 · check current status</div>
     </div>
     <div class="goal-card c-cyan">
-      <div class="goal-top"><div class="goal-title">Cambridge ERA:AI Fellowship — 10 weeks, July 2026</div><span class="chip chip-cyan">Check deadline</span></div>
-      <div class="goal-detail">Fully funded 10-week research fellowship at Cambridge on AI safety and governance. Starts 6 July 2026. Not a PhD but a Cambridge affiliation — strengthens Edinburgh CDT and all US PhD applications. Fellows collaborate on cutting-edge AI safety research. Global applicants welcome.</div>
-      <div class="goal-deadline">&#9711; Check programme page for deadline · starts 6 July 2026</div>
+      <div class="goal-top"><div class="goal-title">Cambridge ERA:AI Fellowship — 2026 cohort passed</div><span class="chip chip-cyan">Next cohort 2027</span></div>
+      <div class="goal-detail">The July 2026 cohort has started without an application. Keep on the list for the 2027 round (applications typically open in the spring). Same logic as before: a Cambridge affiliation strengthens every PhD application, and the research proposal already exists.</div>
+      <div class="goal-deadline">&#9711; Re-check erafellowship.org in Feb-Mar 2027</div>
     </div>
     <div class="goal-card c-gold">
       <div class="goal-top"><div class="goal-title">University of Luxembourg — PhD CLARITY Misinformation</div><span class="chip chip-gold">Check deadline</span></div>
       <div class="goal-detail">FNR-funded PhD at SnT Luxembourg on misinformation/disinformation (CLARITY project). Supervised by Prof. Gabriele Lenzini. Luxembourg PhD salary ~€39k gross per year — among the highest in Europe. Research in English. Direct NLP + misinformation alignment.</div>
       <div class="goal-deadline">&#9711; uni.lu/en/research/snt · contact Prof. Lenzini</div>
     </div>
-      <div class="goal-detail"><em>Platform Measurement Invariance and Bias-Corrected Public Opinion Estimation.</em> Multi-group CFA, PABD protocol, Bayesian correction, TSE framework, BES/UKHLS validation. 19 refs. Send with every application.</div>
+    <div class="goal-card c-cyan">
+      <div class="goal-top"><div class="goal-title">Master Research Proposal v4 — attach to every application</div><span class="chip chip-cyan">Ready</span></div>
+      <div class="goal-detail"><em>Platform Measurement Invariance and Bias-Corrected Public Opinion Estimation.</em> Multi-group CFA, PABD protocol, Bayesian correction, TSE framework, BES/UKHLS validation. 19 refs. Send with every application. Note: the paper with Dr Ella has since moved to G-theory variance decomposition + invariance/DIF + test equating; align the proposal's method section before the autumn applications.</div>
       <div class="goal-deadline">&#9711; Asad_Ikram_PhD_Proposal_FINAL_v4.docx · attach to all emails</div>
     </div>
   </div>
@@ -571,15 +583,15 @@ footer a:hover{color:var(--gold2)}
   <div class="paper-grid">
     <div class="paper-card target">
       <div class="ptag t-cyan">Target venue</div>
-      <div class="ptitle">ICWSM 2027</div>
-      <div class="pdesc">International AAAI Conference on Web and Social Media. Primary venue for CSS and social media research. Round 1 submission estimated May 2026. Co-author: Dr Ella Haig.</div>
-      <div class="pfoot"><span>Short paper track</span><span>May 2026 deadline</span></div>
+      <div class="ptitle">ICWSM 2027 — Edinburgh, May 2027</div>
+      <div class="pdesc">International AAAI Conference on Web and Social Media. Three rounds feed ICWSM 2027: 15 May 2026 (passed), 15 Sep 2026, 15 Jan 2027. Plan agreed with Dr Ella: arXiv preprint first (approved), then poster / short-paper track. Realistic target is the 15 Jan 2027 round with the preprint posted by Dec 2026. Edinburgh venue lines up with Prof. Magdy's SMASH group.</div>
+      <div class="pfoot"><span>Poster / short paper</span><span>15 Jan 2027 (fallback 15 Sep 2026)</span></div>
     </div>
     <div class="paper-card finding">
-      <div class="ptag t-gold">Central finding</div>
-      <div class="ptitle">Cross-platform sentiment divergence is structural</div>
-      <div class="pdesc">Same UK policy events produced opposite sentiment conclusions across Twitter, Reddit, YouTube, Quora. BERT macro-F1 0.878 on 279,000 posts confirms divergences are systematic and learnable — not noise.</div>
-      <div class="pfoot"><span>MSc Dissertation · Portsmouth 2025</span></div>
+      <div class="ptag t-gold">The contribution</div>
+      <div class="ptitle">Platform as measurement mode: is the gap the public, or the platform?</div>
+      <div class="pdesc">Dissertation: 279k posts, BERT macro-F1 0.878, platforms diverge on the same UK fiscal events. Paper: treat each platform as a survey mode and apply the psychometric equivalence toolkit (G-theory variance split, invariance + DIF, test equating on shared fiscal events) to machine-labelled sentiment. Vetted by Eni (ICWSM reviewer): novelty holds; data must expand (gold set 1,000-1,500, pre-identified anchor events, mini-budget centrepiece). Full brief: <a href="https://asadfix.github.io/publish_proposal/" target="_blank" style="color:var(--cyan)">asadfix.github.io/publish_proposal</a></div>
+      <div class="pfoot"><span>MSc Dissertation · Portsmouth 2025</span><span>Novelty brief live</span></div>
     </div>
     <div class="paper-card alt">
       <div class="ptag t-purple">Alternative venues</div>
@@ -605,7 +617,7 @@ footer a:hover{color:var(--gold2)}
     <a class="pdoc-link" href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank">Open &#8599;</a>
   </div>
   <div class="pdoc-item">
-    <div><div class="pdoc-name">ICWSM Paper Draft</div><div class="pdoc-meta">In preparation &middot; Co-author: Dr Ella Haig &middot; Target May 2026</div></div>
+    <div><div class="pdoc-name">ICWSM Paper Draft (Overleaf) + Novelty Brief</div><div class="pdoc-meta">main.tex / references.bib in Overleaf &middot; Co-author: Dr Ella Haig &middot; Brief: asadfix.github.io/publish_proposal &middot; Reframe to methods paper pending Ella meeting</div></div>
     <a class="pdoc-link" href="https://drive.google.com/drive/folders/1qNHjryx38w8jarsqcyCqkl1VGOQ08Qbl" target="_blank">Open &#8599;</a>
   </div>
   <div class="pdoc-item">
@@ -706,7 +718,7 @@ footer a:hover{color:var(--gold2)}
     <div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:10px">✦ Claude's Recommended Plan</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:300;color:var(--text);line-height:1.2;margin-bottom:12px">What to do,<br><em style="color:var(--gold)">and in what order.</em></h2>
-      <p style="font-size:16px;color:var(--text2);max-width:580px;line-height:1.75">Based on everything I know about your campaign — your confirmed supervisors, warm contacts, paper status, scholarship deadlines and the novelty blocker — here is the clearest path to a funded PhD offer before January 2027.</p>
+      <p style="font-size:16px;color:var(--text2);max-width:580px;line-height:1.75">Based on everything I know about your campaign — your confirmed supervisors, warm contacts, paper status, scholarship deadlines and the paper's data gap — here is the clearest path to a funded PhD offer before January 2027.</p>
     </div>
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 24px;min-width:220px;flex-shrink:0">
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px">Campaign health</div>
@@ -721,16 +733,16 @@ footer a:hover{color:var(--gold2)}
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
           <span style="font-size:14px;color:var(--text2)">ICWSM paper</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--amber);font-weight:500">Blocked</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--amber);font-weight:500">Reframing</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
           <span style="font-size:14px;color:var(--text2)">Edinburgh CDT</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--green);font-weight:500">7 Jan 2027</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--green);font-weight:500">~7 Jan 2027</span>
         </div>
         <div style="height:1px;background:var(--border);margin:2px 0"></div>
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
           <span style="font-size:14px;color:var(--text2)">Overall status</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);font-weight:500">On track ⚡</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--red);font-weight:500">2 months idle ⚠</span>
         </div>
       </div>
     </div>
@@ -742,7 +754,7 @@ footer a:hover{color:var(--gold2)}
       <div style="width:36px;height:36px;border-radius:10px;background:var(--red-bg);border:1px solid rgba(240,112,112,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔴</div>
       <div>
         <div style="font-size:20px;font-weight:500;color:var(--text)">Do today</div>
-        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">118 June 2026 — time-sensitive</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">19 August 2026 — the campaign has been idle since mid-June; restart with these</div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px">
@@ -751,44 +763,44 @@ footer a:hover{color:var(--gold2)}
         <div style="width:5px;background:var(--red);flex-shrink:0"></div>
         <div style="padding:18px 20px;flex:1">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
-            <div style="font-size:17px;font-weight:500;color:var(--text)">🚨 Email Francesco Pierri — ELLIS PhD deadline is Sunday 15 Jun</div>
+            <div style="font-size:17px;font-weight:500;color:var(--text)">Send the reply to Dr Ella and propose a meeting</div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--red-bg);color:var(--red);border:1px solid rgba(240,112,112,0.22);white-space:nowrap;flex-shrink:0">15 mins — draft ready</span>
+          </div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:12px">Ella approved the arXiv preprint and forwarded Eni's critique weeks ago and it is still unanswered. The draft (ella_reply_draft.md) accepts the diagnosis, proposes the methods-paper reframe and the poster / short-paper track, explains why the 15 Sep round is too tight, and offers three slots in the week of 24 Aug. Send it from Outlook.</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(56,201,201,0.2);border-radius:8px;padding:8px 14px">Why first: the paper is the critical path for Edinburgh (Magdy: "get a publication by then"), and Ella is waiting on you.</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid rgba(240,112,112,0.35);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--red);flex-shrink:0"></div>
+        <div style="padding:18px 20px;flex:1">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
+            <div style="font-size:17px;font-weight:500;color:var(--text)">HEC Overseas Scholarship Phase-III — check eligibility and HAT today</div>
             <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--red-bg);color:var(--red);border:1px solid rgba(240,112,112,0.22);white-space:nowrap;flex-shrink:0">9 days left</span>
           </div>
-          <div style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:12px"><strong style="color:var(--text)">1. Francesco Pierri (Politecnico di Milano)</strong> — ELLIS PhD on Responsible AI / CSS / misinformation. Email f.pierri@polimi.it as expression of interest, apply at ellis.eu/research/jobs.<br><br><strong style="color:var(--text)">2. Tuba Bircan (VUB Brussels)</strong> — NEW: Fully funded PhD on AI & Social Inequalities. Apply at jobs.vub.be. Needs 1-page research outline. Both same Sunday deadline — do both this weekend.</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(56,201,201,0.2);border-radius:8px;padding:8px 14px">Hook for Pierri: "Your work on AI-amplified misinformation and the government social listening pipeline I built at Fluency are the same problem from opposite ends."</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Government of Pakistan fully funded PhD abroad, back after ten years and now including Social Sciences / Governance and Digital Transformation. Online deadline 28 Aug 2026, 4:00 PM PKT. Needs a valid HAT score. Verify the age limit, field list and whether an admission offer is required on hec.gov.pk before investing time. If eligible, this can fund Edinburgh, Oxford or any US programme and removes the single biggest risk in the campaign.</div>
         </div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid rgba(56,201,201,0.25);border-radius:14px;overflow:hidden;display:flex">
-        <div style="width:5px;background:var(--cyan);flex-shrink:0"></div>
+      <div style="background:var(--surface);border:1px solid rgba(212,168,83,0.3);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--gold);flex-shrink:0"></div>
         <div style="padding:18px 20px;flex:1">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
-            <div style="font-size:17px;font-weight:500;color:var(--text)">Register for Oxford OII DPhil notification</div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(56,201,201,0.22);white-space:nowrap;flex-shrink:0">2 mins</span>
+            <div style="font-size:17px;font-weight:500;color:var(--text)">DAAD (Pakistan deadline 31 Aug): ask the German contacts for a supervisor letter, or let it go</div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--gold-dim);color:var(--gold);border:1px solid rgba(212,168,83,0.22);white-space:nowrap;flex-shrink:0">12 days</span>
           </div>
-          <div style="font-size:15px;color:var(--text2);line-height:1.75">Go to ox.ac.uk/admissions/graduate/courses/dphil-social-data-science and register your email to be notified the moment the 2027-28 application cycle opens. Fabian Stephany is OII faculty and has been warm — this takes 2 minutes and means you won't miss the opening window in September.</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">The DAAD doctoral grant closes 31 Aug for applicants from Pakistan and needs a German professor's confirmation letter. TUM (Theocharis) has no vacancy right now and Jungherr has not replied, so this is a long shot: one short email each to Jungherr, Strohmaier, Garcia and Lorenz-Spreen with the novelty brief, then move on. Note: Fulbright 2027 is already closed (deadline was 1 Apr 2026), so for US funding the live route is HEC.</div>
         </div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid rgba(56,201,201,0.25);border-radius:14px;overflow:hidden;display:flex">
-        <div style="width:5px;background:var(--cyan);flex-shrink:0"></div>
+      <div style="background:var(--surface);border:1px solid rgba(212,168,83,0.3);border-radius:14px;overflow:hidden;display:flex">
+        <div style="width:5px;background:var(--gold);flex-shrink:0"></div>
         <div style="padding:18px 20px;flex:1">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
-            <div style="font-size:17px;font-weight:500;color:var(--text)">Send 2-sentence follow-ups to Hovy and Anderson</div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(56,201,201,0.22);white-space:nowrap;flex-shrink:0">10 mins</span>
+            <div style="font-size:17px;font-weight:500;color:var(--text)">Read the VU Amsterdam / Roozenbeek vacancy and decide</div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--gold-dim);color:var(--gold);border:1px solid rgba(212,168,83,0.22);white-space:nowrap;flex-shrink:0">26 days to 14 Sep</span>
           </div>
-          <div style="font-size:15px;color:var(--text2);line-height:1.75">Both emailed 2 April — no reply in 2 months. Calendar reminders fired 1 June. Each follow-up is literally 2 sentences: "I wanted to follow up on my email from April regarding PhD opportunities. I remain very interested and would welcome any thoughts on fit." Done.</div>
-        </div>
-      </div>
-
-      <div style="background:var(--surface);border:1px solid rgba(104,153,255,0.25);border-radius:14px;overflow:hidden;display:flex">
-        <div style="width:5px;background:var(--blue);flex-shrink:0"></div>
-        <div style="padding:18px 20px;flex:1">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap">
-            <div style="font-size:17px;font-weight:500;color:var(--text)">Check SOUNDS Observatory for positions</div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 11px;border-radius:12px;background:var(--blue-bg);color:var(--blue);border:1px solid rgba(91,168,255,0.22);white-space:nowrap;flex-shrink:0">5 mins</span>
-          </div>
-          <div style="font-size:15px;color:var(--text2);line-height:1.75">Weber explicitly said summer 2026. Check sounds-observatory.org and the SOUNDS LinkedIn page manually today — the Lambda monitor will email you but a manual check costs nothing. Team member positions (no C1 German) and graduate school PhD call are both expected.</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">"The Economy of Digital Influence Operations": the market infrastructure behind disinformation, studied by scraping illicit online marketplaces at scale. Very few communication-science applicants can do that well; you do it for a living. Employment contract, €3,204-4,051 gross/month, start 4 Jan 2027. It was already in your LinkedIn saved items.</div>
         </div>
       </div>
 
@@ -801,7 +813,7 @@ footer a:hover{color:var(--gold2)}
       <div style="width:36px;height:36px;border-radius:10px;background:var(--amber-bg);border:1px solid rgba(245,200,66,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🟡</div>
       <div>
         <div style="font-size:20px;font-weight:500;color:var(--text)">This week</div>
-        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">2–9 June 2026 — high priority</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">19–26 August 2026 — high priority</div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px">
@@ -809,25 +821,25 @@ footer a:hover{color:var(--gold2)}
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">
         <div style="width:5px;background:var(--red);flex-shrink:0"></div>
         <div style="padding:18px 20px;flex:1">
-          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Write the novelty sentence — unblocks everything</div>
-          <div style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:10px">This is the single highest-leverage action in the entire campaign. One sentence: <em style="color:var(--text)">"We present the first formal measurement invariance test of cross-platform political sentiment using multi-group CFA, demonstrating directional non-equivalence that reverses public opinion conclusions, and a Bayesian bias-correction protocol validated against BES ground truth."</em> Put this in the Overleaf abstract. Everything else — the ICWSM paper, Edinburgh CDT, every application — flows from this sentence existing.</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);background:var(--amber-bg);border:1px solid rgba(245,200,66,0.2);border-radius:8px;padding:8px 14px">Why it's novel: nobody has applied multi-group CFA to cross-platform sentiment. Nelimarkka showed platforms differ. You show they're formally non-equivalent by measurement standards — that's a different claim entirely.</div>
+          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Run the anchor-density audit before you meet Ella</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:10px">One or two days of work. List 5-10 UK fiscal shocks (the Sept 2022 mini-budget as centrepiece, plus Budgets, Autumn Statements and BoE rate decisions), define 48-hour and two-week windows, and count posts per platform per window from the raw data. Recount the per-platform totals while you are in there; the dissertation tables disagree. Walk into the meeting with the feasibility question half-answered.</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);background:var(--amber-bg);border:1px solid rgba(245,200,66,0.2);border-radius:8px;padding:8px 14px">Three outcomes: four platforms dense enough (proceed) · two or three (narrow, which is fine) · even the big ones thin (scrape a targeted patch, which is your wheelhouse).</div>
         </div>
       </div>
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">
         <div style="width:5px;background:var(--gold);flex-shrink:0"></div>
         <div style="padding:18px 20px;flex:1">
-          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Reply to Nelimarkka — show you've read his 2020 paper</div>
-          <div style="font-size:15px;color:var(--text2);line-height:1.75">Read Nelimarkka et al. (2020) <em>Platformed Interactions</em> (DOI: 10.1177/2056305120903856). Then reply in 3 sentences: (1) acknowledge his paper and what it found, (2) explain how multi-group CFA is a formal test that goes beyond observing differences, (3) ask if Helsinki has a supervision window. He gave you constructive feedback — responding well here could turn him from engaged to warm.</div>
+          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Send the five emails that never went out in June</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Gmail shows no PhD outreach since 1 June. (1) Gligorić (JHU): master pattern, hook on her NAACL 2025 LLM-annotation validity work, she is recruiting for 15 Dec. (2) Nelimarkka: reply to his 1 May critique with the vetted novelty brief; it answers him directly. (3) Hovy and (4) Anderson: one-line nudges, then park if silent. (5) Pierri: expression of interest for the next ELLIS round. Attach the CV, no em-dashes.</div>
         </div>
       </div>
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">
-        <div style="width:5px;background:var(--green);flex-shrink:0"></div>
+        <div style="width:5px;background:var(--purple);flex-shrink:0"></div>
         <div style="padding:18px 20px;flex:1">
-          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Email Kristina Gligorić (JHU CS) — she is explicitly recruiting</div>
-          <div style="font-size:15px;color:var(--text2);line-height:1.75">Her NAACL 2025 paper asks: when can LLM annotations produce statistically valid CSS estimates? Your dissertation asks: when can cross-platform sentiment data produce valid public opinion estimates? These are the same measurement validity question. She co-authored with Piccardi (already warm). Apply to JHU CS listing her as advisor — deadline December 15 2026. Email her this week.</div>
+          <div style="font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px">Check the two late-summer calls: SOUNDS (Weber) and TUM (Theocharis)</div>
+          <div style="font-size:15px;color:var(--text2);line-height:1.75">Weber said late summer for the SOUNDS graduate school call; Theocharis said around September for his chair. Check sounds-observatory.org, Saarland jobs, SOUNDS LinkedIn and hfp.tum.de/en/digitalgovernance, then send each a two-line note with the brief link so you are on their radar when the call lands.</div>
         </div>
       </div>
 
@@ -839,34 +851,34 @@ footer a:hover{color:var(--gold2)}
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
       <div style="width:36px;height:36px;border-radius:10px;background:var(--green-bg);border:1px solid rgba(61,214,140,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🟢</div>
       <div>
-        <div style="font-size:20px;font-weight:500;color:var(--text)">This month — June 2026</div>
-        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">Set up the pipeline for autumn applications</div>
+        <div style="font-size:20px;font-weight:500;color:var(--text)">This month — to mid-September 2026</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">Get the paper moving and the funding applications in</div>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px">
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Start Fulbright Pakistan application</div>
-        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">Deadline September 15 2026 via USEFP. Covers full PhD funding at any US university — directly enables Starbird (UW), Gligorić (JHU) and Carley (CMU). Start gathering: transcripts, English test score, two reference letters, statement of purpose draft.</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--green)">→ usefpak.org</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Meet Ella, agree the reframe, start annotating</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">Agree: methods paper, mini-budget centrepiece, platforms to keep, gold-set size and second annotator, venue (poster / short paper, Round 3). Then start the 1,000-1,500-post annotation; it is the real cost and it gates everything.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold)">→ Update the novelty brief afterwards</div>
       </div>
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Open Overleaf and write 500 words</div>
-        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">The paper draft already exists. The novelty sentence is the blocker — once you have it, write the introduction paragraph around it. Target ICWSM Round 2 (~Sep 2026). You do not need a complete paper now. You need a direction and an abstract. 500 words this week is enough to unblock everything.</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold)">→ Overleaf draft with Dr Ella Haig</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Submit HEC (28 Aug) and VU Amsterdam (14 Sep)</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">HEC Phase-III is the funding that travels with you; VU is a salaried position where scraping is the method. Both need a tailored statement; reuse the proposal and the novelty brief. Fulbright is off the table until the 2028 call in Feb 2027.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--green)">→ scholarships.hec.gov.pk · workingat.vu.nl</div>
       </div>
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Apply to Berkman Klein Center (Harvard)</div>
-        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">The 2026-2027 fellowship call is open. This is not a PhD but a Harvard BKC affiliation strengthens every application in your pipeline. Covers platform governance, AI and democratic information flows — direct alignment with your work. The application is a research proposal — you already have one.</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--purple)">→ cyber.harvard.edu</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Commonwealth Scholarship: check the 2027 route for Pakistan</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">Verified: opens 8 Sep, closes 20 Oct 2026 at 16:00 BST. Pakistan applies via HEC nomination (check HEC's earlier internal date). Ask Magdy for the UK supervisor supporting statement in early September.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan)">→ cscuk.fcdo.gov.uk</div>
       </div>
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Email Hertie School Data Science Lab</div>
-        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">Rolling applications — no fixed deadline. They are actively looking for CSS PhD proposals in Berlin. This is a low-effort, potentially high-return move. Send your proposal with a covering email. Berlin has no tuition fees for PhD students.</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan)">→ datasciencelab.berlin</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px">Align the research proposal with the paper</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:10px">Proposal v4 still says multi-group CFA + Bayesian correction; the paper has moved to G-theory variance decomposition + invariance/DIF + test equating. Update the method section once so every autumn application tells the same story.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--purple)">→ Asad_Ikram_PhD_Proposal_FINAL_v5</div>
       </div>
 
     </div>
@@ -878,48 +890,47 @@ footer a:hover{color:var(--gold2)}
       <div style="width:36px;height:36px;border-radius:10px;background:var(--indigo-dim);border:1px solid rgba(123,140,222,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔭</div>
       <div>
         <div style="font-size:20px;font-weight:500;color:var(--text)">The bigger picture</div>
-        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">July–January 2027 — the path to a funded offer</div>
+        <div style="font-size:14px;color:var(--text3);font-family:'JetBrains Mono',monospace">August 2026 – January 2027 — the path to a funded offer</div>
       </div>
     </div>
 
-    <!-- Timeline -->
     <div style="position:relative;padding-left:28px">
       <div style="position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom, var(--red), var(--amber), var(--green), var(--cyan));border-radius:2px;opacity:0.4"></div>
 
       <div style="margin-bottom:28px;position:relative">
-        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px rgba(245,200,66,0.5)"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);margin-bottom:6px">July – August 2026</div>
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">ICWSM paper drafted + SOUNDS positions check</div>
-        <div style="font-size:15px;color:var(--text2);line-height:1.72">The paper should be in full draft by end of July, circulated to Dr Ella, and ready for submission in August. Also check SOUNDS Observatory — Weber said late summer for PhD call. Apply to team member / data engineer position if posted (it shows seriousness and gets you into the ecosystem).</div>
+        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 8px rgba(240,112,112,0.5)"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red);margin-bottom:6px">28 August 2026</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">HEC Overseas Scholarship Phase-III closes</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">If eligible, this is the cheapest insurance in the campaign: Government of Pakistan funding that travels with you to whichever programme says yes.</div>
       </div>
 
       <div style="margin-bottom:28px;position:relative">
-        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 8px rgba(240,112,112,0.5)"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red);margin-bottom:6px">September 15 2026 — HARD</div>
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">Fulbright Pakistan application deadline</div>
-        <div style="font-size:15px;color:var(--text2);line-height:1.72">Submit Fulbright USEFP application. This is the funding route for Starbird (UW), Gligorić (JHU) and Carley (CMU). Without this, you're relying on those programmes being internally funded. With it, you arrive with your own funding and become a much more attractive candidate.</div>
+        <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px rgba(245,200,66,0.5)"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);margin-bottom:6px">31 August – 15 September 2026</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">DAAD (31 Aug, long shot) · Commonwealth opens (8 Sep) · VU Amsterdam (14 Sep) · ICWSM Round 2 passes</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">VU goes in. ICWSM Round 2 (15 Sep) is full papers only, so it passes without a submission; the poster goes to Round 3 on 15 Jan. By now the Ella meeting has happened and the annotation has started. Fulbright is not on this list: the 2027 cycle closed on 1 April.</div>
       </div>
 
       <div style="margin-bottom:28px;position:relative">
         <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px rgba(56,201,201,0.5)"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);margin-bottom:6px">September – October 2026</div>
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">Apply TUM (Theocharis call) + ELLIS programme opens + MCML opens</div>
-        <div style="font-size:15px;color:var(--text2);line-height:1.72">Theocharis said PhD call expected September at his chair — monitor hfp.tum.de and contact him directly. ELLIS annual call opens October (Class of 2027) — Augenstein is ELLIS member. MCML (TUM+LMU) opens November. All three are European routes with strong CSS alignment.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);margin-bottom:6px">October – November 2026</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">Edinburgh CDT opens · Commonwealth closes (20 Oct) · ELLIS (Oct) · OII opens · MCML (14 Nov) · CMU early (18 Nov)</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">The European and UK routes cluster here. Edinburgh CDT applications open around October; Commonwealth closes 20 Oct at 16:00 BST via HEC; ELLIS call opens in October; MCML 14 Nov; CMU early deadline 18 Nov. As of 19 Aug TUM Digital Governance lists no vacancies and no SOUNDS graduate-school call has appeared; keep checking, do not wait on them.</div>
       </div>
 
       <div style="margin-bottom:28px;position:relative">
         <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--purple);box-shadow:0 0 8px rgba(165,140,240,0.5)"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);margin-bottom:6px">November – December 2026</div>
-        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">US applications: UW HCDE + JHU CS + CMU ML (all Dec 15)</div>
-        <div style="font-size:15px;color:var(--text2);line-height:1.72">All three US deadlines cluster around December 15. By this point you should have: ICWSM paper submitted or preprint, Fulbright application in, research statement finalised. Starbird (UW) explicitly welcomed your application. Gligorić (JHU) explicitly recruiting. Carley (CMU) confirmed potential fit. Apply to all three with the same research statement, customised per lab.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);margin-bottom:6px">December 2026</div>
+        <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">UW HCDE (2 Dec) · CMU final (9 Dec) · arXiv preprint live · JHU CS + NYU (15 Dec)</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72">UW HCDE closes 2 Dec, earlier than the old plan assumed. The preprint goes up by mid-December so the remaining applications can cite it. Starbird welcomed the application, Gligorić is recruiting, Piccardi said end of year, Carley said potential fit. Same research statement, customised per lab.</div>
       </div>
 
       <div style="position:relative">
         <div style="position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(212,168,83,0.6)"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">7 January 2027 — THE DEADLINE</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">~7 January 2027 — THE DEADLINE · then 15 Jan ICWSM R3</div>
         <div style="font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px">Edinburgh CDT — fully funded, confirmed supervisors</div>
-        <div style="font-size:15px;color:var(--text2);line-height:1.72;margin-bottom:10px">This is the number one application. Walid Magdy confirmed supervision. Björn Ross confirmed fit. Fully funded UKRI stipend + fees. HARD DEADLINE 7 January 2027 at midnight. The application requires your ICWSM paper — that's why everything above flows from getting the paper done first. If you do nothing else from this list, submit this application.</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);background:var(--gold-dim);border:1px solid rgba(212,168,83,0.22);border-radius:8px;padding:10px 16px">The path: Novelty sentence → paper draft → ICWSM submission → Edinburgh CDT application. In that order. Everything else is parallel.</div>
+        <div style="font-size:15px;color:var(--text2);line-height:1.72;margin-bottom:10px">Walid Magdy confirmed supervision, Björn Ross confirmed fit. Submit by midnight 7 Jan 2027 with the research statement, CV, two references and the preprint. A week later the poster goes to ICWSM 2027 Round 3. (Glasgow's Social AI CDT has finished recruiting, so it is no longer a backup.)</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);background:var(--gold-dim);border:1px solid rgba(212,168,83,0.22);border-radius:8px;padding:10px 16px">The path: reply to Ella → anchor audit → annotate → arXiv preprint → Edinburgh CDT → ICWSM Round 3. Funding (HEC 28 Aug, Commonwealth 20 Oct) runs in parallel and none of it waits for the paper.</div>
       </div>
 
     </div>
@@ -932,7 +943,7 @@ footer a:hover{color:var(--gold2)}
     Asad Ikram &middot;
     <a href="https://linkedin.com/in/asad-ikram98" target="_blank">LinkedIn</a> &middot;
     <a href="https://asad-ikram-mc.github.io/portfolio" target="_blank">Portfolio</a> &middot;
-    asad.ikram53@gmail.com &middot; Updated April 2026
+    asad.ikram53@gmail.com &middot; Updated August 2026
   </div>
 </footer>
 
@@ -953,8 +964,8 @@ const PROFS=[
   {name:"Dr Petter Törnberg",inst:"University of Amsterdam",topic:"LLMs, Social Media Political Communication and Generative Social Simulation",status:"warm",sent:"1 Apr 2026",summary:"Törnberg replied: very strong and well-aligned profile. No open positions currently but will notify.",response:"\"This sounds like a very strong and well-aligned profile, and the connection you draw to questions around measurement, platform dynamics, and LLM-based analysis is compelling.\"",timeline:"No current position · will notify",action:"Monitor. Follow up if no notification by Sep 2026."},
   {name:"Prof. Jana Lasser",inst:"University of Graz",topic:"Recommendation Algorithms, Misinformation Spread and Social Media as Government Policy Signal",status:"warm",sent:"2 Apr 2026",summary:"Lasser replied positively. No open positions but ongoing grant applications may create positions.",response:"\"I have a number of ongoing grant applications that might lead to open PhD positions in the future.\"",timeline:"Check back Nov 2026 · grant results pending",action:"Follow up November 2026."},
   {name:"Prof. Fabian Stephany",inst:"Oxford Internet Institute",topic:"Digital Labour, Platform Economies and Computational Social Science",status:"warm",sent:"Prior session",summary:"Positive response. Directed to Nov 2026 OII application cycle.",response:"Positive — directed to November 2026 OII cycle.",timeline:"Nov 2026 · OII application cycle",action:"Apply November 2026 to OII doctoral programme."},
-  {name:"Dr Matti Nelimarkka",inst:"University of Helsinki · Social Computing",topic:"Computational Methods for Social Science, Digital Democracy and Cross-Platform Measurement",status:"engaged",sent:"6 Apr 2026",summary:"Three-message exchange. Asked for concrete research direction 7 Apr — detailed reply sent with CFA/causal decomposition/BES validation. Replied again 1 May: constructive critique — said cross-platform differences being different is not novel enough, cited his own 2020 Platformed Interactions paper (Social Media + Society). Told you to follow up on state of the art to nail down PhD scope. NOT a decline — an invitation to sharpen the proposal with proper literature grounding.",response:"\"I think this thesis requires a bit more work still to examine this topic. Cross-platform studies are much needed and still rarely conducted, but the fact that they are different is not novel.\" Cited: Nelimarkka et al. (2020) Platformed Interactions, Social Media + Society 6(2).",timeline:"Engaged · read his 2020 paper · reply with sharpened novelty framing",action:"Read Nelimarkka et al. (2020) Platformed Interactions. Identify what IS novel beyond 'platforms are different' — focus on the MEASUREMENT INVARIANCE framing (multi-group CFA) as the formal contribution. Reply showing you have read the paper and can position your work clearly beyond it."},
-  {name:"Prof. Ingmar Weber",inst:"Saarland University · I2SC / SOUNDS",topic:"Societal Computing, Social Media Analytics and Data-Driven Governance",status:"warm",sent:"17 Mar 2026",summary:"Three-email exchange. Weber confirmed: (1) Team Lead requires C1 German — not applicable. (2) Team member / data engineer positions coming soon — no German required. (3) SOUNDS graduate school is being set up — person leading it just hired, PhD call expected late summer 2026. Lambda monitor deployed to track new postings daily.",response:"\"There will soon also be openings for team member positions. I'm still hoping that the graduate school linked to SOUNDS will be announced soon. The person leading that has just been hired. So an initial call for applications in (late) summer still seems feasible.\"",timeline:"Monitor SOUNDS LinkedIn for team member posts · PhD call expected late summer 2026",action:"Follow SOUNDS LinkedIn. Apply to team member role when posted. Watch for graduate school PhD call."},
+  {name:"Dr Matti Nelimarkka",inst:"University of Helsinki · Social Computing",topic:"Computational Methods for Social Science, Digital Democracy and Cross-Platform Measurement",status:"engaged",sent:"6 Apr 2026",summary:"Three-message exchange. Asked for concrete research direction 7 Apr — detailed reply sent with CFA/causal decomposition/BES validation. Replied again 1 May: constructive critique — said cross-platform differences being different is not novel enough, cited his own 2020 Platformed Interactions paper (Social Media + Society). Told you to follow up on state of the art to nail down PhD scope. NOT a decline — an invitation to sharpen the proposal with proper literature grounding.",response:"\"I think this thesis requires a bit more work still to examine this topic. Cross-platform studies are much needed and still rarely conducted, but the fact that they are different is not novel.\" Cited: Nelimarkka et al. (2020) Platformed Interactions, Social Media + Society 6(2).",timeline:"Engaged · read his 2020 paper · reply with sharpened novelty framing",action:"Still unanswered since 1 May (3.5 months). You now have the vetted novelty brief (asadfix.github.io/publish_proposal) which answers his critique directly: platforms as survey modes, measurement equivalence + equating on machine-labelled sentiment, explicitly beyond 'platforms differ'. Reply with 4-5 sentences: acknowledge Platformed Interactions (2020), link the brief, ask whether Helsinki has a supervision window for 2027."},
+  {name:"Prof. Ingmar Weber",inst:"Saarland University · I2SC / SOUNDS",topic:"Societal Computing, Social Media Analytics and Data-Driven Governance",status:"warm",sent:"17 Mar 2026",summary:"Three-email exchange. Weber confirmed: (1) Team Lead requires C1 German — not applicable. (2) Team member / data engineer positions coming soon — no German required. (3) SOUNDS graduate school is being set up — person leading it just hired, PhD call expected late summer 2026. Lambda monitor deployed to track new postings daily.",response:"\"There will soon also be openings for team member positions. I'm still hoping that the graduate school linked to SOUNDS will be announced soon. The person leading that has just been hired. So an initial call for applications in (late) summer still seems feasible.\"",timeline:"Late-summer PhD call still not posted as of 19 Aug 2026 · sounds-observatory.org not resolving",action:"Checked 19 Aug: no SOUNDS / Weber PhD or graduate-school call on the Saarland jobs pages or I2SC; sounds-observatory.org did not resolve. Email Weber a short note asking whether the graduate school call is still expected this year, with the novelty brief link. Keep the Lambda monitor running."},
   {name:"Prof. Axel Bruns",inst:"QUT · Digital Media Research Centre",topic:"Polarisation, Platform Architecture and Cross-Platform Public Debate",status:"declined",sent:"17 Mar 2026",summary:"Directed to DMRC supervision enquiry form. Form submitted. ALRT Brendan Keogh replied 20 Apr: unable to find supervisors with combined capacity and expertise. School has more applicants than supervisors.",response:"ALRT Brendan Keogh (19 Apr): \"I was unable to find supervisors with the combined capacity and expertise to take your project forward to a formal application.\"",timeline:"Closed — no supervisor available at QUT",action:"No further action at QUT."},
   {name:"Prof. Joshua Tucker",inst:"NYU · CSMaP",topic:"Social Media, Algorithmic Curation and Political Discourse",status:"engaged",sent:"13 Mar 2026",summary:"Tucker replied: US system requires fall application through department.",response:"\"Different system in the US — applications through the department, and you apply in the fall.\"",timeline:"Apply Fall 2026 · NYU department",action:"Apply NYU Fall 2026."},
   {name:"Prof. Isabelle Augenstein",inst:"CopeNLU · University of Copenhagen",topic:"Explainable Stance Detection, Social NLP and Cross-Platform Attitude Analysis",status:"awaiting",sent:"31 Mar 2026",summary:"OOO until 8 April. Follow-up sent 15 Apr after she returned. CopeNLU actively recruiting Spring and Autumn 2026 via ELLIS. High priority.",response:"OOO auto-reply: back 8 April. Follow-up sent 15 Apr.",timeline:"Awaiting reply · ELLIS Autumn 2026 open",action:"Await reply. If no response by Apr 25, nudge again."},
@@ -963,10 +974,10 @@ const PROFS=[
   {name:"Dr Claudia Wagner",inst:"GESIS / RWTH Aachen",topic:"Digital Trace Methodology, Total Error Framework and Cross-Platform Sentiment",status:"awaiting",sent:"31 Mar 2026",summary:"Wagner's Total Survey Error framework (Nature 2021) is foundational in the proposal. Her language embedded in Section 2.1.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. Sandra Gonzalez-Bailon",inst:"UPenn · Annenberg / CIND",topic:"Information Networks, Algorithmic Exposure and Cross-Platform Political Discourse",status:"awaiting",sent:"31 Mar 2026",summary:"Her Facebook ideological segregation paper (Science 2023) directly cited in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Dr Dong Nguyen",inst:"Utrecht University · NLP and Society Lab",topic:"NLP Measurement Validity, Construct Validity Frameworks and Social Media Analytics",status:"awaiting",sent:"31 Mar 2026",summary:"Nguyen's 2021 paper on NLP as social measurement is foundational in proposal lit review.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Dirk Hovy",inst:"Bocconi University · MilaNLP Lab",topic:"Demographic Bias in NLP, Sociolinguistic Variation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"2 Apr 2026",summary:"Emailed 2 Apr 2026. No reply in 2 months. Calendar follow-up reminder fired 1 Jun 2026. His ERC Starting Grant on sociodemographic variables in NLP and work on demographic bias in sentiment systems is directly relevant. Italy PNRR PhD funding cycle open.",response:"No reply yet — 2 months elapsed.",timeline:"Overdue follow-up — send now",action:"Send short 2-sentence follow-up today referencing original email. Italy has PhD application windows in autumn 2026."},
+  {name:"Prof. Dirk Hovy",inst:"Bocconi University · MilaNLP Lab",topic:"Demographic Bias in NLP, Sociolinguistic Variation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"2 Apr 2026",summary:"Emailed 2 Apr 2026. No reply in 4.5 months and no follow-up was ever sent (Gmail sent folder checked 19 Aug). Calendar reminder fired 1 Jun 2026. His ERC Starting Grant on sociodemographic variables in NLP and work on demographic bias in sentiment systems is directly relevant. Italy PNRR PhD funding cycle open.",response:"No reply — 4.5 months elapsed, no follow-up sent.",timeline:"Overdue follow-up — one last nudge before Sep, then park",action:"Send one 2-sentence follow-up now referencing the April email and the ICWSM paper in progress. Italy PhD windows (Bocconi, PNRR) open in autumn 2026; if still silent by mid-Sep, park."},
   {name:"Prof. Markus Strohmaier",inst:"University of Mannheim",topic:"Computational Social Science Methods, LLM Bias and Digital Behavioral Data",status:"awaiting",sent:"31 Mar 2026",summary:"Co-authored Wagner et al. 2021 (Nature) — key reference in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. David Garcia",inst:"University of Konstanz · Social Data Science Lab",topic:"Social and Algorithmic Drivers of Political Discourse, Computational Affective Science",status:"awaiting",sent:"31 Mar 2026",summary:"Metzler and Garcia 2024 cited in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
-  {name:"Prof. Kate Starbird",inst:"University of Washington · HCDE / Center for an Informed Public",topic:"Collective Sensemaking, Participatory Disinformation and Cross-Platform Crisis Dynamics",status:"warm",sent:"6 Apr 2026",summary:"Replied 27 Apr. Called interest areas, expertise and research questions 'very well aligned' with her lab and UW CIP's research mission. Planning to admit ONE PhD student in Fall 2027-28 cycle — expects it to be very competitive but explicitly welcomed an application. Offered to connect with current/past students. Asad replied 29 Apr: confirmed 2027-28 application, mentioned ICWSM paper by October, asked about current student connection. Kathleen Rascon (HCDE grad advisor) also emailed for deadline confirmation.",response:"\"Your interest areas, expertise, and research questions sound very well aligned with my lab and the research mission at the UW Center for an Informed Public. I plan to admit one new PhD student in the next application cycle (next Fall, for admission in 2027-2028). It is likely to be very competitive. But I would welcome an application from you.\" — Replied 29 Apr: confirmed application, ICWSM paper mention, asked about current student intro.",timeline:"Warm · apply Fall 2027-28 · UW HCDE deadline ~Dec 15 2026 · awaiting Rascon reply",action:"Await reply from Kathleen Rascon (krascon@uw.edu) re: exact deadline. If Starbird offers student contact, reach out. Begin UW HCDE SOP in November."},
+  {name:"Prof. Kate Starbird",inst:"University of Washington · HCDE / Center for an Informed Public",topic:"Collective Sensemaking, Participatory Disinformation and Cross-Platform Crisis Dynamics",status:"warm",sent:"6 Apr 2026",summary:"Replied 27 Apr. Called interest areas, expertise and research questions 'very well aligned' with her lab and UW CIP's research mission. Planning to admit ONE PhD student in Fall 2027-28 cycle — expects it to be very competitive but explicitly welcomed an application. Offered to connect with current/past students. Asad replied 29 Apr: confirmed 2027-28 application, mentioned ICWSM paper by October, asked about current student connection. Kathleen Rascon (HCDE grad advisor) also emailed for deadline confirmation.",response:"\"Your interest areas, expertise, and research questions sound very well aligned with my lab and the research mission at the UW Center for an Informed Public. I plan to admit one new PhD student in the next application cycle (next Fall, for admission in 2027-2028). It is likely to be very competitive. But I would welcome an application from you.\" — Replied 29 Apr: confirmed application, ICWSM paper mention, asked about current student intro.",timeline:"Warm · apply Fall 2027-28 · UW HCDE deadline VERIFIED 2 Dec 2026, 11:59 pm Pacific (single annual deadline)",action:"Portal opens September. No GRE. SOP in two parts (250 + 1,000 words), diversity statement, 3 references, 2-4 faculty matches, TOEFL. Begin the SOP in October, not November. Contact Kathleen Rascon (krascon@uw.edu) for guidance and ask Starbird for the student intro she offered."},
   {name:"Prof. Hang Jiang",inst:"Northeastern University",topic:"LLMs for Civic Decision-Making, Human-AI Narrative Synthesis and Cross-Platform Sentiment",status:"awaiting",sent:"6 Apr 2026",summary:"Actively recruiting PhD students Fall 2026. LLMs and political communication aligns well.",response:"No reply yet.",timeline:"Actively recruiting Fall 2026 — high priority",action:"Follow up April 21. High priority."},
   {name:"Dr Gregor Wiedemann",inst:"Leibniz Institute · Social Media Observatory",topic:"Social Media Observatory CSS Position (Ref: PB1-26-06)",status:"awaiting",sent:"3 Apr 2026",summary:"Applied to advertised position at Hans-Bredow-Institut.",response:"No reply yet.",timeline:"Advertised position · awaiting",action:"Follow up if no reply by May."},
   {name:"Prof. Annie Waldherr",inst:"University of Vienna · CCS Lab",topic:"Computational Communication Science, Digitised Public Spheres and Cross-Platform Political Discourse",status:"awaiting",sent:"1 Apr 2026",summary:"OOO until 7 April. Back now.",response:"OOO until 7 April.",timeline:"Expected reply — she is back",action:"Check inbox. Follow up if no reply by Apr 21."},
@@ -989,35 +1000,38 @@ const PROFS=[
   {name:"Prof. Luca Maria Aiello",inst:"IT University of Copenhagen",topic:"Social Dynamics, NLP-Based Relationship Modelling and Cross-Platform Collective Action",status:"awaiting",sent:"31 Mar 2026",summary:"Emailed about PhD at ITU Copenhagen. Research on social dynamics and NLP-based modelling connects to cross-platform measurement.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. Andreas Jungherr",inst:"University of Bamberg · Chair of Political Science, Digital Transformation",topic:"Digital Trace Data Validity, Attention vs Opinion and Cross-Platform Measurement Invariance",status:"awaiting",sent:"16 Apr 2026",summary:"Highest-priority new contact. His 2017 SSCR paper 'attention not support' is the most precise theoretical statement of the dissertation's central finding. Currently leading 3 funded EU/Volkswagen projects on AI in political deliberation. Bamberg Graduate School explicitly lists him as interested in supervising PhDs on digitalisation and politics.",response:"No reply yet.",timeline:"Awaiting · follow up ~Apr 30",action:"Await reply. Follow up if no response by April 30."},
   {name:"Prof. Chris Bail",inst:"Duke University · Polarization Lab / Society-Centered AI Initiative",topic:"Social Media Prism Dynamics, AI-Mediated Polarisation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"16 Apr 2026",summary:"Resent to correct email christopher.bail@duke.edu after original bounced from chris.bail@duke.edu on 6 Apr. Bail's Social Media Prism theory is central to the proposal's theoretical framing. SCAI focus on designing AI for social rather than engagement goals is the framework ArtemisAI needs.",response:"No reply yet. (Previous send on 6 Apr bounced — wrong address.)",timeline:"Awaiting · follow up ~Apr 30",action:"Await reply. Follow up if no response by April 30."},
-  {name:"Prof. Yannis Theocharis",inst:"Technical University of Munich · Chair of Digital Governance",topic:"Platform Heterogeneity, Affordance-Driven Participation and Cross-Platform Measurement Validity",status:"warm",sent:"16 Apr 2026",summary:"Replied within 18 hours. Found the background and platform heterogeneity framing 'very interesting'. No current PhD opening at his chair but TUM-level funded programmes exist — check PhD opportunities section. Likely to open a call around September 2026. Will keep profile in mind.",response:"\"I found your background and the problem you outline very interesting, particularly the way you connect platform heterogeneity to challenges in cross-platform measurement.\" No current opening at chair. TUM-level PhD programmes available. Call expected ~September 2026. Will keep profile in mind.",timeline:"Warm · PhD call expected Sep 2026 · keep eye on website",action:"Check TUM PhD opportunities page regularly. Re-contact in September when call opens. Reply to thank him and confirm you will watch for the call."},
+  {name:"Prof. Yannis Theocharis",inst:"Technical University of Munich · Chair of Digital Governance",topic:"Platform Heterogeneity, Affordance-Driven Participation and Cross-Platform Measurement Validity",status:"warm",sent:"16 Apr 2026",summary:"Replied within 18 hours. Found the background and platform heterogeneity framing 'very interesting'. No current PhD opening at his chair but TUM-level funded programmes exist — check PhD opportunities section. Likely to open a call around September 2026. Will keep profile in mind.",response:"\"I found your background and the problem you outline very interesting, particularly the way you connect platform heterogeneity to challenges in cross-platform measurement.\" No current opening at chair. TUM-level PhD programmes available. Call expected ~September 2026. Will keep profile in mind.",timeline:"Warm · PhD call expected Sep 2026 · keep eye on website",action:"Checked 19 Aug 2026: hfp.tum.de/en/digitalgovernance/vacancies says no vacancies at the chair; HfP open-positions list has only a postdoc (deadline 30 Sep) and a student assistant. Send him a two-line note in early September with the novelty brief link and ask whether the call is still planned; also needed as a possible DAAD supervisor letter (31 Aug, long shot)."},
   {name:"Prof. Haewoon Kwak",inst:"Indiana University Bloomington · Luddy School / SoDA Lab",topic:"Platform Structural Properties, Cross-Platform Stance Detection and Social Media Measurement Validity",status:"awaiting",sent:"16 Apr 2026",summary:"Hooked on his foundational 9,500-cited 'What is Twitter — a social network or news media?' (WWW 2010) insight that platform structural properties determine information flow type. His cross-platform stance detection work with Jisun An (mask/Trump coupling) is the analytical framework the dissertation's divergences require. He is a co-author with Jungherr on Reddit political discussions.",response:"No reply yet.",timeline:"Awaiting · follow up ~Apr 30",action:"Await reply. Follow up if no response by April 30."},
   {name:"Prof. Yulin Yu",inst:"University of Arizona · College of Information Science (joining Fall 2026)",topic:"Dataset Novelty, Cross-Platform Combination Validity and Computational Social Science Measurement",status:"awaiting",sent:"16 Apr 2026",summary:"Explicitly inviting PhD outreach for 2027 cycle on her website. PNAS 2024 paper on unusual dataset combinations and scientific impact maps directly onto the dissertation's cross-platform combination validity question. Joining Arizona as tenure-track in Fall 2026 — building first PhD cohort.",response:"No reply yet.",timeline:"2027 cycle · she explicitly invited early contact",action:"Await reply. She invited early outreach — response likely."},
   {name:"Prof. Andrew Chadwick",inst:"Loughborough University · O3C / Department of Communication and Media",topic:"Platform Credibility Norms, Everyday Sharing and Cross-Platform Public Opinion Measurement",status:"awaiting",sent:"16 Apr 2026",summary:"Hooked on his Everyday Misinformation Project (Leverhulme 2021–2024) and 2024 Digital Journalism paper on conflict avoidance in personal messaging. His finding that platform-specific sharing norms are invisible to sentiment models is the empirical underpinning of why the dissertation found cross-platform divergence. Hybrid Media System framework (Oxford University Press, 2nd ed.) is foundational.",response:"No reply yet.",timeline:"Awaiting · follow up ~May 10",action:"Follow up if no response by May 10."},
   {name:"Prof. Kristina Gligorić",inst:"Johns Hopkins University · Computer Science / CLSP",topic:"LLM Validity for Social Science, Simulated Survey Responses and Computational Measurement",status:"new",sent:"—",summary:"New target identified May 2026. Joining JHU CS Oct 2025. Explicitly looking for PhD students — apply to JHU CS PhD programme listing her as advisor, deadline December 15. Her NAACL 2025 paper on using LLM annotations for statistically valid CSS estimates and her ACL 2026 paper on simulating survey responses are the most directly relevant work to the measurement validity problem. She co-organised IC2S2 tutorial on simulating survey responses with LLMs. Strong alignment with bias-correction angle of the proposal.",response:"Not yet contacted.",timeline:"Apply JHU CS PhD — deadline Dec 15 2026",action:"Draft and send outreach email. Hook on her NAACL 2025 work on LLM annotations for valid social science estimates — this is the computational measurement validity problem from a different angle. JHU CS PhD application deadline December 15."},
-  {name:"Prof. Ashton Anderson",inst:"University of Toronto · CS / Computational Social Science Lab",topic:"Political Polarisation, Cultural Structure of Platforms and Cross-Platform Community Dynamics",status:"awaiting",sent:"2 Apr 2026",summary:"Emailed 2 Apr 2026. No reply in 2 months. Calendar follow-up reminder fired 1 Jun 2026. His Nature 2021 paper on Reddit polarisation via community embeddings and work on platform-specific cultural structure directly relevant to cross-platform measurement validity. Canada fall PhD application cycle.",response:"No reply yet — 2 months elapsed.",timeline:"Overdue follow-up — send now",action:"Send short 2-sentence follow-up today. Canada PhD cycle: UofT CS applications typically due in December 2026."},
+  {name:"Prof. Ashton Anderson",inst:"University of Toronto · CS / Computational Social Science Lab",topic:"Political Polarisation, Cultural Structure of Platforms and Cross-Platform Community Dynamics",status:"awaiting",sent:"2 Apr 2026",summary:"Emailed 2 Apr 2026. No reply in 4.5 months and no follow-up was ever sent (Gmail sent folder checked 19 Aug). Calendar reminder fired 1 Jun 2026. His Nature 2021 paper on Reddit polarisation via community embeddings and work on platform-specific cultural structure directly relevant to cross-platform measurement validity. Canada fall PhD application cycle.",response:"No reply — 4.5 months elapsed, no follow-up sent.",timeline:"Overdue follow-up — one last nudge, then park",action:"Send one 2-sentence follow-up now. UofT CS PhD applications typically due early-mid December 2026; if still silent by mid-Sep, park."},
   {name:"MCML PhD Programme",inst:"Munich Center for Machine Learning · TUM + LMU Munich",topic:"Machine Learning, AI and Computational Social Science — fully funded positions",status:"new",sent:"—",summary:"MCML (joint TUM/LMU initiative) runs an annual PhD Matchmaking Programme. 2026 cycle received 1,500+ international applications. 2027 cycle will open Nov 2026, deadline ~14 Nov 2026. Fully funded TV-L E13 positions (3 years). Theocharis is a TUM professor in the same ecosystem. This route would connect to MCML supervisors working at the intersection of NLP, CSS and computational social science. MSc Distinction from Portsmouth should convert favourably to German grade system.",response:"Not yet applied — 2026 cycle closed Mar 2026. Apply in 2027 cycle.",timeline:"Apply Nov 2026 — deadline ~14 Nov 2026",action:"Monitor mcml.ai from October 2026. Apply as soon as 2027 cycle opens. Identify specific MCML supervisors working on NLP/CSS (check mcml.ai/opportunities/for-phd-applicants/mm2026-pis). Note: Theocharis is TUM — MCML route may overlap."},
   {name:"Berkman Klein Center Fellowship",inst:"Harvard University · Berkman Klein Center for Internet & Society",topic:"AI and Society, Platform Governance, Social Media and Democratic Information Flows",status:"new",sent:"—",summary:"BKC runs annual fellowship calls for researchers working at the intersection of technology and society. 2026-2027 open call live. Focus areas include how AI changes human relationships, platform governance, and social cognition. Strong alignment with government social listening, platform measurement validity and ArtemisAI's applied work. Not a PhD programme but a research fellowship — could run concurrently with a PhD application cycle, strengthen profile, and provide Harvard affiliation.",response:"Not yet applied.",timeline:"Check 2026-2027 open call — cyber.harvard.edu/page/open-call-fellowship-applications",action:"Read the BKC open call. Consider applying for the 2026-2027 fellowship. A BKC affiliation significantly strengthens Edinburgh CDT and US PhD applications. cyber.harvard.edu"},
   {name:"Oxford DPhil Social Data Science (OII)",inst:"University of Oxford · Oxford Internet Institute",topic:"Social Media Data, AI/ML, Algorithm Auditing, Network Science, Digital Governance",status:"new",sent:"—",summary:"Direct fit. OII DPhil covers large-scale social media data collection, AI, ML, algorithm auditing and measurement. 2026-27 entry closed — 2027-28 applications open ~Sep 2026. Funding via ESRC Grand Union DTP (Oxford+Brunel+OU) and Clarendon Scholarships (200+ fully funded places annually). Fabian Stephany (warm contact) is OII faculty — directed you to November 2026 cycle. Register for email notification at ox.ac.uk/admissions/graduate.",response:"Not yet applied. 2026-27 closed. Register for 2027-28 notification.",timeline:"Register NOW · apply Jan 2027 deadline · ESRC Grand Union DTP",action:"Register for notification at OII website today. Contact Stephany to confirm OII November cycle. Apply via ESRC Grand Union DTP route for full funding."},
   {name:"CMU Machine Learning PhD",inst:"Carnegie Mellon University · Machine Learning Department",topic:"Machine Learning, Computational Social Science, AI for Social Good",status:"new",sent:"—",summary:"Prof. Kathleen Carley (CASOS Lab) replied positively — 'Potential fit.' CMU ML PhD is the programme to list her as advisor. Fully funded. Applications for Fall 2027 open Sep 9 2026. Early deadline Nov 18 2026, final deadline Dec 9 2026.",response:"Carley replied: 'Potential fit.' Apply Fall 2026 for 2027 intake.",timeline:"Apply Nov 18 2026 (early) · Dec 9 2026 (final) · ml.cmu.edu",action:"List Prof. Kathleen Carley as primary advisor. Reference cross-platform measurement invariance proposal. Apply by early deadline Nov 18 for best consideration."},
-  {name:"Glasgow CDT — Socially Intelligent AI (SOCIAL)",inst:"University of Glasgow · School of Computing Science",topic:"Socially Intelligent AI Agents, Social Behaviour Modelling, Computational Social Science, NLP",status:"new",sent:"—",summary:"CDT in Socially Intelligent Artificial Agents covers AI agents, social behaviour, computational social modelling, NLP. Funded studentships for October 2027 start. Deadline 31 January 2027. Strong NLP + social science intersection. Glasgow is Russell Group with strong CSS research.",response:"Not yet applied.",timeline:"Deadline 31 Jan 2027 · gla.ac.uk/schools/computing",action:"Check CDT project list. Identify supervisor working on social media, NLP or CSS. Apply by January 31 2027."},
-  {name:"Open University Business School PhD",inst:"The Open University · Business School",topic:"Digital Media, Computational Social Science, Data-Driven Research",status:"new",sent:"—",summary:"OU Business School funded PhD studentships — February 2027 entry. Deadline 9 June 2026 midday BST — THIS WEEK. Proposal 1,000-2,000 words required. Check project topics for CSS/social media fit. OU accepts international students for distance learning.",response:"Not yet applied. DEADLINE THIS WEEK.",timeline:"Deadline 9 June 2026 — check if still accepting",action:"Visit business-school.open.ac.uk/research/research-degrees/phd-studentships IMMEDIATELY. Check if any project fits your proposal. If yes, submit today."},
-  {name:"Prof. Francesco Pierri — ELLIS PhD ⚠️ DEADLINE 15 JUN",inst:"Politecnico di Milano · DEIB Data Science Lab / ELLIS Unit Milan",topic:"Responsible AI, Computational Social Science, Social Media Analysis, Misinformation, AI Auditing",status:"new",sent:"—",summary:"CRITICAL FIND — deadline 15 June 2026 (this Sunday). ELLIS-backed PhD position on Responsible AI / CSS at PoliMi. Supervisor is Francesco Pierri: Assistant Professor studying trustworthy AI + social media misinformation + generative AI impact on digital ecosystems. Affiliated with Indiana University OSOME (same lab as Kwak). Research topics: generative AI, online misinformation, social media analysis, AI auditing, societal impact of AI. He visited Augenstein's CopeNLU lab in Mar 2026. PhD within ELLIS Unit Milan — European exchange included. Your dissertation (cross-platform NLP, sentiment, misinformation measurement) maps directly onto his research agenda. Email him TODAY as expression of interest, then apply formally.",response:"Not yet contacted. Act immediately.",timeline:"⚠️ DEADLINE 15 JUNE 2026 — THIS SUNDAY — ellis.eu/research/jobs",action:"1. Email Pierri TODAY at DEIB (f.pierri@polimi.it) as expression of interest — 3 sentences, hook on his misinformation + social media AI work. 2. Apply formally via ELLIS portal at ellis.eu/research/jobs before 15 Jun 2026. This is the best new opportunity found — act now."},
+  {name:"Glasgow CDT — Socially Intelligent AI (SOCIAL) — CLOSED",inst:"University of Glasgow · School of Computing Science",topic:"Socially Intelligent AI Agents, Social Behaviour Modelling, Computational Social Science, NLP",status:"no-position",sent:"—",summary:"Verified 19 Aug 2026 on socialcdt.org: the CDT has completed student recruitment and reached maximum capacity; last cohort 2023-2027; no further funded intake. The earlier 31 Jan 2027 deadline in this tracker was wrong.",response:"No 2027 intake.",timeline:"Closed",action:"Remove from the plan. If Glasgow stays of interest, look at individual School of Computing Science studentships instead."},
+  {name:"Open University Business School PhD (9 Jun deadline passed)",inst:"The Open University · Business School",topic:"Digital Media, Computational Social Science, Data-Driven Research",status:"new",sent:"—",summary:"OU Business School funded PhD studentships — February 2027 entry. Deadline 9 June 2026 midday BST — THIS WEEK. Proposal 1,000-2,000 words required. Check project topics for CSS/social media fit. OU accepts international students for distance learning.",response:"Not applied. 9 Jun 2026 deadline passed.",timeline:"Closed for Feb 2027 entry",action:"No action. Re-check in spring 2027 if still searching."},
+  {name:"Prof. Francesco Pierri — ELLIS PhD (15 Jun round closed)",inst:"Politecnico di Milano · DEIB Data Science Lab / ELLIS Unit Milan",topic:"Responsible AI, Computational Social Science, Social Media Analysis, Misinformation, AI Auditing",status:"new",sent:"—",summary:"CRITICAL FIND — deadline 15 June 2026 (this Sunday). ELLIS-backed PhD position on Responsible AI / CSS at PoliMi. Supervisor is Francesco Pierri: Assistant Professor studying trustworthy AI + social media misinformation + generative AI impact on digital ecosystems. Affiliated with Indiana University OSOME (same lab as Kwak). Research topics: generative AI, online misinformation, social media analysis, AI auditing, societal impact of AI. He visited Augenstein's CopeNLU lab in Mar 2026. PhD within ELLIS Unit Milan — European exchange included. Your dissertation (cross-platform NLP, sentiment, misinformation measurement) maps directly onto his research agenda. Email him TODAY as expression of interest, then apply formally.",response:"Not contacted. 15 Jun 2026 round closed without an application (no email in Gmail sent folder).",timeline:"Missed 15 Jun round · PoliMi/ELLIS calls recur · next ELLIS annual call opens ~Oct 2026",action:"Send the expression-of-interest email now anyway (f.pierri@polimi.it) so he knows your name before the next round. Watch ellis.eu/research/jobs and the PoliMi doctoral school page for the autumn call."},
   {name:"Hertie School Berlin — PhD CSS Data Science Lab",inst:"Hertie School of Governance · Berlin",topic:"Computational Social Science, Polarisation, Digital Governance, Data-Driven Policy",status:"new",sent:"—",summary:"Hertie School's Data Science Lab is actively looking for PhD proposals in CSS across methodological and substantive areas. Also has positions on Polarisation and Democracy. Rolling applications — no fixed deadline posted. Berlin-based, German-language environment but research in English. Connected to WZB Berlin Social Science Center. Strong policy + CSS intersection.",response:"Not yet contacted.",timeline:"Rolling applications — contact Data Science Lab now",action:"Email Hertie School Data Science Lab (datasciencelab.berlin) with research proposal. Rolling basis — apply sooner rather than later. Also check specific positions at hertie-school.org/en/phd/apply-for-a-phd/open-phd-positions."},
   {name:"ELLIS PhD Programme — Annual Call (October 2026)",inst:"European Laboratory for Learning and Intelligent Systems · Pan-European",topic:"Machine Learning, NLP, Social Sciences & Humanities, Responsible AI, CSS",status:"new",sent:"—",summary:"ELLIS is Europe's premier AI research network. Annual PhD call opens October 2026 for Class of 2027. Interdisciplinary track allows co-supervision with non-ML faculty (social sciences, humanities). NLP, Social Sciences & Humanities, and Responsible AI are all listed research areas. Joint supervision across European countries. 6-month exchange with international advisor. Deadline typically 31 October. Augenstein (CopeNLU, Copenhagen) is an ELLIS member — if she responds, this is the funding vehicle.",response:"Not yet applied. 2026 cycle closed Oct 2025. Apply Oct 2026 for 2027.",timeline:"Apply Oct–Nov 2026 — ellis.eu/phd-postdoc",action:"Monitor ellis.eu from September 2026. Apply for Class of 2027 as soon as portal opens. Identify ELLIS fellows/scholars working on NLP+CSS+Social Media. Augenstein (CopeNLU) is an ELLIS member — her position directly connects to this programme."},
   {name:"Weizenbaum Institute — PhD AI/ML/NLP",inst:"Weizenbaum Institute · Berlin (joint FU Berlin / HU Berlin / TU Berlin / WZB)",topic:"AI/ML/NLP, Digitalization and Society, Social Impact of AI, Open Science",status:"new",sent:"—",summary:"Berlin leading digitalisation institute recruiting PhD in AI/ML/NLP. Group: Digitalization and Opening up Science. Position until Oct 2027. Requirements: NLP/ML experience, ideally publications. Partners include WZB, FU Berlin, HU Berlin, TU Berlin. Rolling applications.",response:"Not yet applied. Rolling deadline.",timeline:"Apply immediately · weizenbaum-institut.de/en/news",action:"Apply via Weizenbaum portal. Submit: motivation letter, CV, publications list, transcripts, writing sample. Contact: personal@weizenbaum-institut.de"},
   {name:"UvA ASCoR — PhD Misinformation & Public Opinion",inst:"University of Amsterdam · Amsterdam School of Communication Research",topic:"Misinformation Risk Perceptions, Public Opinion, Political Communication, Social Media",status:"new",sent:"—",summary:"Fully funded 4-year PhD at ASCoR UvA on misinformation risk perceptions and public opinion. Supervisors: Linda Bos, Michael Hameleers, Toni van der Meer. Embedded in Political Communication group. Direct overlap with cross-platform measurement and misinformation framing. Voorveld (UvA ASCoR) already in your pipeline — same research group.",response:"Not yet applied. Check current open status on EURAXESS.",timeline:"Check euraxess.ec.europa.eu job 229261 · ASCoR UvA",action:"Check if still open at euraxess.ec.europa.eu/jobs/229261. Email Toni van der Meer or Michael Hameleers directly. Your cross-platform misinformation measurement work is a direct fit."},
-  {name:"Cambridge ERA:AI Research Fellowship 2026",inst:"University of Cambridge · ERA:AI Programme",topic:"AI Safety, AI Governance, Responsible AI, Societal Impact",status:"new",sent:"—",summary:"10-week fully funded intensive research fellowship at Cambridge on AI safety and governance, starting 6 July 2026. Open globally. Not a PhD but prestigious Cambridge affiliation that strengthens Edinburgh CDT and US PhD applications. Fellows collaborate on cutting-edge AI safety research.",response:"Not yet applied.",timeline:"Starts 6 July 2026 · check ERA:AI programme page for deadline",action:"Check ERA:AI fellowship application page. 10-week programme July–September 2026. Cambridge affiliation before autumn PhD applications. Apply now if deadline not yet passed."},
+  {name:"Cambridge ERA:AI Research Fellowship (2026 cohort passed)",inst:"University of Cambridge · ERA:AI Programme",topic:"AI Safety, AI Governance, Responsible AI, Societal Impact",status:"new",sent:"—",summary:"10-week fully funded intensive research fellowship at Cambridge on AI safety and governance, starting 6 July 2026. Open globally. Not a PhD but prestigious Cambridge affiliation that strengthens Edinburgh CDT and US PhD applications. Fellows collaborate on cutting-edge AI safety research.",response:"Not applied. 2026 cohort started 6 Jul 2026.",timeline:"Re-check Feb-Mar 2027 for the 2027 cohort",action:"Park until early 2027."},
   {name:"University of Luxembourg — PhD Misinformation/CLARITY",inst:"University of Luxembourg · SnT / IRiSC Team",topic:"Misinformation, Disinformation, Community Analysis, Trust, Transparency, NLP",status:"new",sent:"—",summary:"Fully funded PhD at ULux on misinformation in FNR-funded CLARITY project. Supervised by Prof. Gabriele Lenzini at SnT. Luxembourg PhD salary ~€39k gross per year — among highest in Europe. Research in English. International environment.",response:"Not yet applied.",timeline:"Check uni.lu/en/research/snt for current deadline",action:"Apply at uni.lu or contact Prof. Gabriele Lenzini directly. Luxembourg is tax-efficient with excellent salaries. CLARITY project is FNR-funded with strong institutional support."},
-  {name:"Prof. Tuba Bircan — VUB PhD ⚠️ DEADLINE 15 JUN",inst:"Vrije Universiteit Brussel · AIMS Lab (AI, Migration & Society)",topic:"AI & Social Inequalities, Computational Social Science, Big Data Analytics, Algorithmic Bias",status:"new",sent:"—",summary:"CRITICAL — deadline 15 June 2026 (same day as Pierri). Prof. Bircan (VUB, Brussels) leads the AIMS Lab and is recruiting a fully funded PhD on AI and social inequalities. Topics: algorithmic bias and fairness, trust in AI, data-driven decision-making in public institutions, societal implications of AI, ethically responsible use of AI. Both quantitative and computational approaches welcome. MSc in statistics, data science, computational social science or social sciences with strong quantitative focus required. Starting 15 September 2026. Interviews 22-26 June 2026. She also holds a position at Cambridge Kavli Centre and has worked with Utrecht University Social and Affective Computing Group. Strong overlap with your CSS+AI angle.",response:"Not yet applied. Deadline 15 June 2026.",timeline:"⚠️ DEADLINE 15 JUNE 2026 — jobs.vub.be — THIS SUNDAY",action:"Apply at jobs.vub.be by 15 June 2026. Requires: CV, motivation letter, academic transcripts, diploma, and 1-page research topic outline on sociology + AI. Focus your outline on: algorithmic bias in social media measurement, AI-based public sentiment systems, cross-platform data validity. Contact: Tuba.Bircan@vub.be"},
+  {name:"Prof. Tuba Bircan — VUB PhD (15 Jun deadline passed)",inst:"Vrije Universiteit Brussel · AIMS Lab (AI, Migration & Society)",topic:"AI & Social Inequalities, Computational Social Science, Big Data Analytics, Algorithmic Bias",status:"new",sent:"—",summary:"CRITICAL — deadline 15 June 2026 (same day as Pierri). Prof. Bircan (VUB, Brussels) leads the AIMS Lab and is recruiting a fully funded PhD on AI and social inequalities. Topics: algorithmic bias and fairness, trust in AI, data-driven decision-making in public institutions, societal implications of AI, ethically responsible use of AI. Both quantitative and computational approaches welcome. MSc in statistics, data science, computational social science or social sciences with strong quantitative focus required. Starting 15 September 2026. Interviews 22-26 June 2026. She also holds a position at Cambridge Kavli Centre and has worked with Utrecht University Social and Affective Computing Group. Strong overlap with your CSS+AI angle.",response:"Not applied. 15 Jun 2026 deadline passed (position started 15 Sep 2026).",timeline:"Closed for 2026 · AIMS Lab recruits regularly",action:"Low priority. Keep Tuba.Bircan@vub.be on the list; re-check jobs.vub.be in spring 2027 if the European routes are still open."},
   {name:"ILLC PhD — Social Media + LLMs (Törnberg's lab)",inst:"University of Amsterdam · ILLC / Institute for Logic Language and Computation",topic:"LLMs for Social Media Analysis, Political Discourse, Misinformation and Platform Improvement",status:"new",sent:"—",summary:"Fully funded 4-year PhD position at ILLC UvA on 'Improving Social Media Using Large Language Models' (NWO VIDI project). Work at intersection of LLMs, social media and politics. PI is connected to Törnberg's UvA network — Törnberg is already warm to your profile. Candidate should have strong background in CS/AI/NLP and interest in political communication, social media analysis and CSS. Monthly salary €3,059–€3,881. Open deadline — apply now while it is still open.",response:"Original deadline was 6 Sep 2025 — position may be filled. Email PI directly to check if still open before applying.",timeline:"CHECK STATUS — original deadline Sep 2025, may be filled — email PI",action:"Apply immediately at ILLC jobs page. This overlaps directly with Törnberg's research at UvA and your dissertation's LLM-based sentiment pipeline. Email Törnberg to mention you are applying to this position — he is already warm and may be able to flag your application internally."},
-  {name:"NYU Steinhardt — PhD Statistics & Computational Social Science",inst:"New York University · Steinhardt School of Culture, Education, Human Development",topic:"Statistics, Computational Social Science, Political Communication, Social Media Analytics",status:"new",sent:"—",summary:"NYU Steinhardt PhD in Statistics and Computational Social Science — fully funded for Fall 2027 intake. No GRE required for 2026 admissions cycle. Tucker (NYU CSMaP) is already in the pipeline and said apply through department. This is the programme. Strong CSS track, quantitative social science, social media and political communication. Fully funded.",response:"Not yet applied. Tucker already directed you here.",timeline:"Apply Fall 2026 for 2027 intake · deadline ~Dec 2026 · steinhardt.nyu.edu",action:"Apply Fall 2026. List Tucker as potential faculty. No GRE required. Prepare research statement referencing CSS measurement and cross-platform analysis. steinhardt.nyu.edu/degree/phd-statistics-and-computational-social-science"},
+  {name:"NYU Steinhardt — PhD Statistics & Computational Social Science",inst:"New York University · Steinhardt School of Culture, Education, Human Development",topic:"Statistics, Computational Social Science, Political Communication, Social Media Analytics",status:"new",sent:"—",summary:"NYU Steinhardt PhD in Statistics and Computational Social Science — fully funded for Fall 2027 intake. No GRE required for 2026 admissions cycle. Tucker (NYU CSMaP) is already in the pipeline and said apply through department. This is the programme. Strong CSS track, quantitative social science, social media and political communication. Fully funded.",response:"Not yet applied. Tucker already directed you here.",timeline:"Apply Fall 2026 for 2027 intake · deadline ~Dec 2026 (verify on steinhardt.nyu.edu in Sep)",action:"Apply Fall 2026. List Tucker as potential faculty. No GRE required. Prepare research statement referencing CSS measurement and cross-platform analysis. steinhardt.nyu.edu/degree/phd-statistics-and-computational-social-science"},
   {name:"UvA — Two PhD Positions in CSS [CHECK STATUS] 🇳🇱",inst:"University of Amsterdam · Urban Impact Lab / PLANET-NL · Netherlands",topic:"Population-Scale Network Analysis, Polarisation, Political Behaviour, CSS",status:"new",sent:"—",summary:"Two fully funded 4-year PhD positions at UvA on large-scale social network analysis, in collaboration with the City of Amsterdam Urban Impact Lab and PLANET-NL (national NWO infrastructure for network analysis). Research areas: social segregation, polarisation, political behaviour, or public health. Candidates from social sciences (political science, communication sciences, sociology) or computational science explicitly welcome. Expected start Spring 2026 — may still be open. Salary €3,059–€3,881/month.",response:"Not yet applied. Check if still open.",timeline:"Check werkenbij.uva.nl — started Spring 2026, check vacancy status",action:"Check werkenbij.uva.nl/en/vacancies/two-phd-positions-in-computational-social-science-netherlands-14658 for deadline and open status. Your cross-platform polarisation measurement work maps directly onto the polarisation + political behaviour research direction. Törnberg is at UvA — mention his warm response in your application."},
   {name:"Leiden University LIACS — PhD Socially Aware NLP 🇳🇱",inst:"Leiden University · Leiden Institute of Advanced Computer Science (LIACS)",topic:"Emotionally and Socially Aware NLP, Bias and Fairness, Human-AI Interaction, LLMs",status:"new",sent:"—",summary:"Fully funded PhD at Leiden LIACS on making NLP systems emotionally and socially aware. Research combines computational modelling (NLP, ML, deep learning) with human-centred research. Background in bias and fairness, emotion and affective interaction, or user-centred evaluation is a strong advantage. Your BERT sentiment pipeline and cross-platform bias-correction work connects directly. Leiden is top-5 Dutch research university. No Dutch language required.",response:"Not yet applied.",timeline:"Check academictransfer.com/nl/jobs/355237 for deadline status",action:"Apply at academictransfer.com/nl/jobs/355237. Your BERT fine-tuning, cross-platform bias analysis and affective NLP work is a strong fit. Email supervisor at LIACS to express interest before applying formally."},
-  {name:"Leiden University — PhD LLM-Based NLU (Formal Methods) 🇳🇱",inst:"Leiden University · LIACS · Netherlands",topic:"Formal Methods for Transparent LLM-Based Natural Language Understanding, NLP, Python",status:"new",sent:"—",summary:"Fully funded PhD at Leiden on formal methods for transparent, efficient LLM-based NLU. Deadline 26 June 2026. Requires MSc in AI/CS/etc, NLP skills and Python. More technical/formal methods focused than CSS — but strong Leiden NLP group. Salary €3,059–€3,881/month.",response:"Not yet applied.",timeline:"⚠️ DEADLINE 26 JUNE 2026 · academicpositions.com/jobs/employer/leiden-university",action:"Check the Leiden University job listing before 26 June 2026. More technical than your CSS focus but worth considering if you want a Dutch NLP position. Apply via Leiden LIACS jobs portal."},
-  {name:"TU Wien — PhD NLP/ML for Social Science Applications 🇦🇹",inst:"TU Wien · Faculty of Informatics / Data Science Research Unit · Vienna, Austria",topic:"NLP/ML for Social Science, Social Media Analysis, Text Mining, Complexity Science",status:"new",sent:"—",summary:"4-year fully funded PhD at TU Wien (Vienna) in NLP/ML for social science applications. Research-first role with ~4h/week teaching. Access to GPUs. Salary €3,776/month+. TU Wien explicitly wants NLP for societally-relevant phenomena including social media. Listed on ELLIS jobs page with deadline 9 July 2026. The Data Science Research Unit is affiliated with the Complexity Science Hub — strong CSS connection. Research topics include bias compensation in NLP, trustworthy information extraction from social media, and using NLP outputs in policy-relevant analysis. Direct alignment with your cross-platform sentiment measurement and bias-correction work.",response:"Not yet applied.",timeline:"⚠️ DEADLINE 9 JULY 2026 — ellis.eu/research/jobs — TU Wien",action:"Apply via ELLIS jobs portal (deadline 9 Jul 2026) or TU Wien jobs portal. Email the Data Science Research Unit head to express interest. Your dissertation cross-platform NLP + bias correction angle directly fits their social science NLP focus. Strong salary: €3,776/month+."},
+  {name:"Leiden University — PhD LLM-Based NLU (Formal Methods) 🇳🇱 (26 Jun deadline passed)",inst:"Leiden University · LIACS · Netherlands",topic:"Formal Methods for Transparent LLM-Based Natural Language Understanding, NLP, Python",status:"new",sent:"—",summary:"Fully funded PhD at Leiden on formal methods for transparent, efficient LLM-based NLU. Deadline 26 June 2026. Requires MSc in AI/CS/etc, NLP skills and Python. More technical/formal methods focused than CSS — but strong Leiden NLP group. Salary €3,059–€3,881/month.",response:"Not applied. 26 Jun 2026 deadline passed.",timeline:"Closed",action:"No action. Was a marginal fit (formal methods, not CSS)."},
+  {name:"TU Wien — PhD NLP/ML for Social Science Applications 🇦🇹 (9 Jul deadline passed)",inst:"TU Wien · Faculty of Informatics / Data Science Research Unit · Vienna, Austria",topic:"NLP/ML for Social Science, Social Media Analysis, Text Mining, Complexity Science",status:"new",sent:"—",summary:"4-year fully funded PhD at TU Wien (Vienna) in NLP/ML for social science applications. Research-first role with ~4h/week teaching. Access to GPUs. Salary €3,776/month+. TU Wien explicitly wants NLP for societally-relevant phenomena including social media. Listed on ELLIS jobs page with deadline 9 July 2026. The Data Science Research Unit is affiliated with the Complexity Science Hub — strong CSS connection. Research topics include bias compensation in NLP, trustworthy information extraction from social media, and using NLP outputs in policy-relevant analysis. Direct alignment with your cross-platform sentiment measurement and bias-correction work.",response:"Not applied. 9 Jul 2026 deadline passed.",timeline:"Closed · TU Wien Data Science Research Unit recruits repeatedly via ELLIS",action:"Re-check ellis.eu/research/jobs and TU Wien jobs for the next NLP-for-social-science opening; the fit is strong enough to email the unit head directly when one appears."},
   {name:"University of Copenhagen (SODAS) — PhD CSS/AI/Science of Science",inst:"University of Copenhagen · Center for Social Data Science (SODAS)",topic:"Computational Social Science, Science of Science, AI Fairness, Network Science, NLP",status:"new",sent:"—",summary:"Multiple PhD positions at SODAS Copenhagen in the research group led by Prof. Roberta Sinatra. ERC Consolidator Grant + Villum Foundation funded. Topics: science of science, AI fairness, CSS, network science. Particularly interested in applicants with NLP, applied ML, algorithmic bias and fairness. Copenhagen is top-5 European university for CSS. Augenstein (CopeNLU, Copenhagen) is already warm to your application — SODAS is the same university, different group but same ecosystem. Strong institutional support.",response:"Not yet applied.",timeline:"Check sodas.ku.dk for current openings — ERC-funded positions",action:"Check sodas.ku.dk for open PhD positions. Contact Prof. Roberta Sinatra group directly. Mention Augenstein as a warm contact in the same university. Your algorithmic bias and fairness in NLP + cross-platform CSS work is a direct fit."},
   {name:"University of Würzburg — PhD NLP Theory 🇩🇪",inst:"University of Würzburg · Germany",topic:"NLP Theory, Computational Linguistics, AI, Data Science, Mathematics",status:"new",sent:"—",summary:"Fully funded PhD at University of Würzburg in NLP Theory. Listed on PhDFinder as open. Fields: computer science, mathematics, AI, data science, computational linguistics. Germany — no tuition fees, standard TV-L salary. More theoretical NLP focus than CSS but worth checking if there is a social/applied component.",response:"Not yet applied.",timeline:"Check phdfinder.com or uni-wuerzburg.de for current deadline",action:"Check the position details at University of Würzburg. If there is a social media or CSS application component, apply. Germany has no PhD tuition fees."},
 
+  {name:"HEC Overseas Scholarship Phase-III (Govt of Pakistan) 🇵🇰 ⚠️ 28 AUG",inst:"Higher Education Commission Pakistan · Overseas Scholarship for MS/MPhil & PhD, Phase-III Batch-IV",topic:"Fully funded PhD abroad at any QS/THE Top-200 university · fields include Digital Transformation & Emerging Technologies and Social Sciences, Business & Governance",status:"new",sent:"—",summary:"Found via email 12 Aug 2026 and verified on hec.gov.pk 19 Aug. First time in ten years the scheme includes social sciences and governance. Online registration 9-28 Aug 2026, closes 28 Aug at 1600 hrs PKT, Rs 3,000 fee via 1LINK. Eligibility: 18 years of education (MS/MPhil), CGPA 3.0+, max one second division, age max 35 (40 public sector, no relaxation), not enrolled or on another Govt scholarship. HAT mandatory (date TBA, valid 2 years); exemption only with an unconditional Fall 2026 Top-200 admission. No GRE/IELTS required by HEC. Admission letter NOT required at application: you name your preferred Top-200 universities and shortlisted candidates secure admission later. Funds stipend, tuition, insurance, airfare; tuition capped at USD 4,000/yr at non-partner universities (secure fee waivers, e.g. Edinburgh CDT covers fees).",response:"Open now. Closes 28 Aug 2026, 16:00 PKT.",timeline:"⚠️ 28 AUG 2026 16:00 PKT · scholarships.hec.gov.pk · HAT date TBA",action:"Apply before 28 Aug. Name Edinburgh (Magdy/Ross), Oxford OII, UW, JHU, CMU as preferred universities. Register for HAT as soon as the date is posted. Keep HEC-attested degree copies ready for the shortlisting stage."},
+  {name:"VU Amsterdam — PhD Social Data Science (Roozenbeek) 🇳🇱 ⚠️ 14 SEP",inst:"Vrije Universiteit Amsterdam · Communication Science, Faculty of Social Sciences",topic:"The Economy of Digital Influence Operations (Vidi) · fake engagement, bot networks, illicit online marketplaces · large-scale web scraping",status:"new",sent:"—",summary:"From the 26 Aug scraping-opportunities sweep; verified on workingat.vu.nl 19 Aug. 4-year PhD (1-year contract extended to 4), €3,204 rising to €4,051 gross/month, start 4 Jan 2027. Supervisors Assoc. Prof. Jon Roozenbeek and Ivar Vermeulen. Wants a (research) master's in social data science / communication science / psychology / economics, quantitative methods incl. time series, Python and R, excellent written English; Russian or Mandarin a plus. Apply with CV + application letter (max 2 pages, EN or NL). Posted by Roozenbeek himself on LinkedIn and already in your saved items. Studying illicit online marketplaces at scale is web scraping; very few communication-science applicants can do it well. Dutch PhD = employment contract with pension and holiday pay.",response:"Open. Closes Mon 14 Sep 2026, 23:59.",timeline:"⚠️ 14 SEP 2026 23:59 · workingat.vu.nl/vacancies/phd-position-in-social-data-science-amsterdam-1330114",action:"Write the 2-page letter around the scraping asymmetry (Dubizzle 500+ scrapers, Fix.com 50M points, Ford LENS fleet, web-scraping-guide.com) plus the measurement-validity angle. Mention R competence honestly. Submit by 14 Sep."},
+  {name:"DAAD Doctoral Research Grant — Pakistan deadline 31 Aug 🇩🇪",inst:"DAAD · Research Grants, Doctoral Programmes in Germany (2027 intake)",topic:"Full PhD stipend in Germany · €1,400/month, 3 years + possible 4th · funding from May 2027",status:"new",sent:"—",summary:"Verified 19 Aug on the DAAD scholarship database: applicants from Pakistan must apply by 31 Aug 2026 (general deadline for other countries 21 Oct). Selection Feb 2027. Requires a supervisor confirmation letter from a German professor, research proposal and schedule, CV, motivation letter, transcripts, one academic reference; last degree within 6 years. Apply via the DAAD portal. Possible supervisors in the pipeline: Jungherr (Bamberg, awaiting), Theocharis (TUM, no vacancy), Strohmaier (Mannheim), Garcia (Konstanz), Lorenz-Spreen (TU Dresden).",response:"Open until 31 Aug 2026. Supervisor letter is the blocker.",timeline:"⚠️ 31 AUG 2026 · DAAD portal · needs German supervisor letter",action:"Send a short ask today to Jungherr, Strohmaier, Garcia and Lorenz-Spreen with the novelty brief. If a letter arrives by 30 Aug, apply; otherwise skip without guilt and revisit the 21 Oct general route only if a German supervisor emerges."},
 ];
 
 const SL={confirmed:'Confirmed supervisor',warm:'Warm / positive',engaged:'Engaged',awaiting:'Awaiting reply',ooo:'OOO','no-position':'No position',declined:'Declined'};
@@ -1130,23 +1144,34 @@ const EVENTS=[
   {d:14,m:5,y:2026,cat:"ec-green",dc:"dc-green",title:"Bjerva (AAU Copenhagen) — paternity leave ends",detail:"Prof. Johannes Bjerva returns from paternity leave on 14 May 2026. He has open PhD positions in NLP and multilingual models at Aalborg University Copenhagen. Email was sent 3 Apr but auto-replied with leave notice.",action:"Send follow-up email to jbjerva@cs.aau.dk on 14 May. Reference original email. Ask about NLP/multilingual PhD positions."},
   {d:1,m:6,y:2026,cat:"ec-purple",dc:"dc-purple",title:"Check SOUNDS Observatory positions — Weber, Saarland",detail:"Prof. Ingmar Weber replied: PhD and data engineer positions related to SOUNDS Observatory expected summer 2026. SOUNDS is a cross-platform social media observatory project at Saarland University.",action:"Visit sounds-observatory.org and Saarland I2SC lab page. Apply immediately if positions are posted."},
   {d:15,m:6,y:2026,cat:"ec-gold",dc:"dc-gold",title:"ICWSM paper — first complete draft target",detail:"First draft of the ICWSM 2027 short paper should be complete and shared with Dr Ella Haig for feedback. Paper must clearly present: (1) research gap, (2) cross-platform dataset and NLP methodology, (3) divergence finding, (4) implications for measurement validity.",action:"Share draft with Dr Ella Haig by this date. Incorporate her feedback within 2 weeks."},
+  {d:19,m:8,y:2026,cat:"ec-gold",dc:"dc-gold",title:"Refresh: reply to Dr Ella + Eni critique accepted",detail:"Campaign refreshed 19 Aug after a two-month gap. Gmail shows no PhD outreach or professor replies since June. Ella approved the arXiv preprint and forwarded Eni's critique (novelty holds; data must expand). Reply drafted (ella_reply_draft.md).",action:"Send the Ella reply from Outlook today and propose meeting slots for the week of 24 Aug."},
+  {d:28,m:8,y:2026,cat:"ec-red",dc:"dc-red",title:"HEC Overseas Scholarship Phase-III — online deadline 4 PM PKT",detail:"Government of Pakistan fully funded MS/MPhil/PhD abroad. First time in a decade that Social Sciences / Governance and Digital Transformation fields are included. Requires a valid HAT score. Verify eligibility and the exact rules on hec.gov.pk.",action:"Submit the HEC online application before 4:00 PM PKT on 28 Aug 2026 if eligible."},
+  {d:14,m:9,y:2026,cat:"ec-red",dc:"dc-red",title:"VU Amsterdam PhD Social Data Science (Roozenbeek) — deadline",detail:"Economy of Digital Influence Operations (Vidi). 4-year employment contract, €3,204-4,051 gross/month, start 4 Jan 2027. Web scraping of illicit online marketplaces is central to the project.",action:"Submit at workingat.vu.nl by 14 Sep 2026 with CV, letter and the novelty brief link."},
+  {d:31,m:8,y:2026,cat:"ec-red",dc:"dc-red",title:"DAAD Doctoral Research Grant — Pakistan deadline",detail:"DAAD database lists 31 Aug 2026 as the deadline for applicants from Pakistan (funding from May 2027). Requires a German supervisor confirmation letter, so only viable if Jungherr / Strohmaier / Garcia / Lorenz-Spreen reply in time.",action:"Ask the German contacts for a supervisor letter today; if none lands by 30 Aug, let this cycle go."},
+  {d:8,m:9,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Commonwealth PhD Scholarship 2027/28 opens",detail:"Applications open 8 Sep and close 20 Oct 2026 at 16:00 BST. Pakistan applies via HEC nomination; HEC's internal deadline may be earlier.",action:"Check HEC's Commonwealth page and start the form; ask Magdy for the UK supervisor supporting statement."},
+  {d:15,m:9,y:2026,cat:"ec-gold",dc:"dc-gold",title:"ICWSM 2027 Round 2 closes (full papers only)",detail:"Round 2 (15 Sep, 23:59 AoE) accepts full papers only. Posters and short formats are accepted only in Round 3 (15 Jan 2027). The reframed methods paper targets Round 3 after the arXiv preprint. Note: Fulbright Pakistan 2027 is NOT due today; it closed 1 Apr 2026.",action:"No submission. Confirm the Round 3 plan with Ella."},
+  {d:20,m:10,y:2026,cat:"ec-red",dc:"dc-red",title:"Commonwealth PhD Scholarship — closes 16:00 BST",detail:"Edinburgh funding companion. Via HEC nomination.",action:"Submit before 16:00 BST (and before HEC's internal cut-off)."},
+  {d:2,m:12,y:2026,cat:"ec-red",dc:"dc-red",title:"UW HCDE PhD (Starbird) — deadline 11:59 pm Pacific",detail:"Verified: HCDE has a single annual deadline on 2 December, not 15 December. Statement of purpose (250 + 1,000 words), diversity statement, 3 references, 2-4 faculty matches, TOEFL for internationals, no GRE.",action:"Submit UW HCDE application. Reference Starbird's reply. Contact Kathleen Rascon (krascon@uw.edu) beforehand."},
+  {d:18,m:11,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"CMU Machine Learning PhD — early deadline (Carley)",detail:"Final deadline 9 Dec 2026. Carley confirmed potential fit.",action:"Submit CMU ML PhD application listing Carley as advisor."},
+  {d:15,m:12,y:2026,cat:"ec-red",dc:"dc-red",title:"JHU CS PhD (Gligoric / Piccardi) — deadline 11:59 pm ET",detail:"Verified: JHU CS fall deadline is 15 Dec; portal opened ~15 Aug. All PhD students funded. Gligoric recruiting; Piccardi said apply end of year. NYU Steinhardt (Tucker) also ~Dec.",action:"Submit JHU CS application listing Gligoric (and Piccardi) as potential advisors, with the arXiv preprint."},
+  {d:15,m:1,y:2027,cat:"ec-gold",dc:"dc-gold",title:"ICWSM 2027 Round 3 — submit the poster / short paper",detail:"Target round for the reframed measurement-methods paper with Dr Ella. arXiv preprint should already be live by December so the Edinburgh CDT application can cite it.",action:"Submit to ICWSM 2027 Round 3."},
   {d:1,m:9,y:2026,cat:"ec-green",dc:"dc-green",title:"Check Zubiaga (QMUL) + monitor Tornberg (UvA)",detail:"Arkaitz Zubiaga (QMUL) said too late for 2026/27 but to reconnect for 2027 cycle. Petter Tornberg (UvA) confirmed strong fit and said he will notify if a position opens — check if anything has changed.",action:"Email Zubiaga: brief re-introduction, mention ICWSM paper progress. Check Tornberg's group page for new positions."},
   {d:1,m:9,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Re-contact Theocharis (TUM) — PhD call expected",detail:"Theocharis replied warmly on 17 Apr, found the platform heterogeneity framing 'very interesting'. Confirmed a PhD call is expected around September 2026 at his chair. Told you to keep an eye on the website.",action:"Check https://www.hfp.tum.de/en/digitalgovernance/ for open PhD call. Email Theocharis to confirm interest and attach updated CV and ICWSM paper draft."},
   {d:1,m:10,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Apply — USC (Ferrara) + CMU (Carley)",detail:"Prof. Ferrara (USC HUMANS Lab) and Prof. Carley (CMU CASOS/IDeaS) both confirmed: apply in fall for 2027 intake. USC: Khoury College of Computer Sciences PhD program. CMU: School of Computer Science, Societal Computing programme. Mention each supervisor by name in application.",action:"Prepare applications for both programmes. Use Master Research Proposal v4 as statement of purpose base. Attach CV and ICWSM paper (submitted or under review)."},
   {d:1,m:10,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Edinburgh CDT — application window opens",detail:"CDT in Designing Responsible NLP at University of Edinburgh. Prof. Walid Magdy confirmed supervisor (SMASH group). Dr Bjorn Ross confirmed strong fit. Fully funded: stipend + tuition fees waived. Sept 2026 cohort or Jan 2027 deadline depending on cycle.",action:"Begin CDT application. List Walid Magdy as supervisor, Bjorn Ross as co-supervisor. Submit ICWSM paper as evidence of in-progress publication. Use Master Research Proposal v4 as research statement."},
-  {d:31,m:10,y:2026,cat:"ec-red",dc:"dc-red",title:"HARD DEADLINE — ICWSM paper must be submitted",detail:"The ICWSM short paper must be submitted or formally under review by this date. This is non-negotiable — it feeds directly into the Edinburgh scholarship application as evidence of research productivity. Without this, the Edinburgh application is significantly weaker.",action:"ICWSM paper submitted to easychair by this date. If not ready for full submission, submit as a preprint to arXiv and reference it in the Edinburgh application."},
+  {d:15,m:12,y:2026,cat:"ec-gold",dc:"dc-gold",title:"arXiv preprint must be live — evidence for Edinburgh CDT",detail:"The reframed measurement-methods paper (mini-budget centrepiece, expanded gold set, multilevel model + invariance/DIF + equating) should be on arXiv by mid-December so the Edinburgh CDT application (7 Jan) and the US applications can cite it. Ella has approved arXiv-first.",action:"Post the preprint to arXiv; then submit the poster / short paper to ICWSM Round 3 on 15 Jan 2027."},
   {d:1,m:11,y:2026,cat:"ec-purple",dc:"dc-purple",title:"Check Jana Lasser (Graz) — grant outcomes",detail:"Prof. Jana Lasser replied positively in April but had no open positions. She mentioned ongoing grant applications that might create PhD positions. Check by November.",action:"Email Jana Lasser: brief update on ICWSM paper progress, ask if grants have come through and whether PhD positions have opened."},
   {d:1,m:11,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"Apply — OII Oxford (Stephany) + follow up Piccardi (JHU)",detail:"Fabian Stephany (Oxford Internet Institute) directed to November 2026 cycle. Tiziano Piccardi (JHU) confirmed end-of-year deadline. Both are warm contacts — prepare tailored applications. OII DPhil is prestigious and CSS-focused. JHU directly aligns with Piccardi's platform-independent measurement work.",action:"Submit OII DPhil application (November cycle). Prepare JHU application and send Piccardi a follow-up with the full application and ICWSM paper reference."},
-  {d:1,m:12,y:2026,cat:"ec-red",dc:"dc-red",title:"Apply — UW HCDE (Starbird) — deadline ~December 2026",detail:"Prof. Kate Starbird (UW Center for an Informed Public) replied warmly 27 Apr, explicitly welcoming an application for 2027-28 intake. Planning to admit ONE PhD student — will be very competitive. UW HCDE PhD application deadline is typically December 15. Contact Kathleen Rascon (HCDE grad advisor) to confirm exact deadline.",action:"Submit UW HCDE PhD application. Reference Starbird's reply in your statement of purpose. Include ICWSM paper. Contact Kathleen Rascon at krascon@uw.edu for application guidance. Ask Starbird if she can connect you with a current student beforehand."},
+  {d:1,m:12,y:2026,cat:"ec-red",dc:"dc-red",title:"Final check — UW HCDE (Starbird) closes tomorrow, 2 Dec",detail:"Prof. Kate Starbird (UW Center for an Informed Public) replied warmly 27 Apr, explicitly welcoming an application for 2027-28 intake. Planning to admit ONE PhD student — will be very competitive. UW HCDE PhD application deadline is typically December 15. Contact Kathleen Rascon (HCDE grad advisor) to confirm exact deadline.",action:"Submit UW HCDE PhD application. Reference Starbird's reply in your statement of purpose. Include ICWSM paper. Contact Kathleen Rascon at krascon@uw.edu for application guidance. Ask Starbird if she can connect you with a current student beforehand."},
   {d:7,m:1,y:2027,cat:"ec-red",dc:"dc-red",title:"Edinburgh CDT — FINAL application deadline",detail:"UKRI CDT in Responsible and Trustworthy Natural Language Processing. This is the priority application. Fully funded — UKRI stipend plus fees waived. Supervisors: Prof. Walid Magdy (confirmed) + Dr Bjorn Ross (confirmed fit). The CDT starts September 2026 cohort and this is the main intake deadline.",action:"Submit complete CDT application by midnight 7 January 2027. Must include: research statement (use Proposal v4), CV, two references (Dr Ella Haig + academic/professional), and ICWSM paper (submitted or preprint). This is the most important application deadline in the campaign."},
 ];
 
 const CAT_LABELS={'ec-cyan':'Application','ec-gold':'Paper / Writing','ec-green':'Follow-up','ec-purple':'Monitor','ec-red':'Deadline'};
 const MONTHS_FULL=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const MONTHS_SHORT=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const TODAY=new Date(2026,3,14);
+const TODAY=new Date(); TODAY.setHours(0,0,0,0);
 
-let calYear=2026, calMonth=3; // 0-indexed; April 2026
+let calYear=TODAY.getFullYear(), calMonth=TODAY.getMonth(); // follows the real date
 
 function evKey(d,m,y){return y+'-'+m+'-'+d;}
 function buildEvMap(){
@@ -1297,186 +1322,189 @@ function calNav(dir){
 const TODAY_ACTIONS = [
 
   // ══════════════════════════════════════════════════════
-  // IMMEDIATE — things to act on now (May 2026)
+  // IMMEDIATE — act now (rebuilt 19 Aug 2026 for Aug 2026 – Jan 2027)
   // ══════════════════════════════════════════════════════
 
   {
-    id:'novelty-paper', urgent:true,
-    stripe:'s-red', icon:'i-red', iconChar:'🎯',
-    tag:'p-red', tagLabel:'#1 PRIORITY — BLOCKING EVERYTHING',
-    title:'Define the novelty — what is the paper\'s specific contribution?',
-    detail:'Both Dr Ella Haig AND Nelimarkka raised this. Observing that platforms produce different signals is NOT novel. The contribution is: (1) the first formal MEASUREMENT INVARIANCE TEST (multi-group CFA) applied to cross-platform political sentiment — proving non-equivalence isn\'t assumed but measured, and (2) a BIAS-CORRECTION protocol validated against BES ground truth. Write this in one sentence. Put it in the Overleaf abstract first.',
-    trigger: d => d >= new Date(2026,4,20),
+    id:'reply-ella', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'✉',
+    tag:'p-red', tagLabel:'#1 PRIORITY — critical path',
+    title:'Reply to Dr Ella Haig with the feasibility view and propose a meeting',
+    detail:'Ella approved the arXiv preprint and forwarded Eni\'s critique. The reply has been sitting unanswered. Accept the diagnosis (gold set too small, anchor events needed), propose the methods-paper reframe and the poster / short-paper track, offer meeting slots (draft ready: ella_reply_draft.md). Send from Outlook (the Ella thread is on the Portsmouth address).',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,8,10),
   },
   {
-    id:'followup-hovy', urgent:true,
+    id:'hec-overseas', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'🇵🇰',
+    tag:'p-red', tagLabel:'DEADLINE 28 AUG 2026, 4 PM',
+    title:'HEC Overseas Scholarship Phase-III (Govt of Pakistan) — fully funded PhD abroad',
+    detail:'VERIFIED on hec.gov.pk (Phase-III, Batch-IV): online registration 9-28 Aug 2026, closes 28 Aug at 1600 hrs PKT; fee Rs 3,000 via 1LINK; apply at scholarships.hec.gov.pk. Fields include "Digital Transformation & Emerging Technologies" (AI, data science, big data) and "Social Sciences, Business & Governance" (communication & media, public policy). Eligibility: 18 years of education, CGPA 3.0+, age max 35 (no relaxation), not on another Govt scholarship. HAT is mandatory (date TBA; valid 2 yrs). Admission letter NOT required at application; you name any QS/THE Top-200 university yourself and shortlisted candidates secure admission later. Caveat: tuition capped at USD 4,000/yr at non-partner universities, so pair it with Edinburgh CDT / Oxford fee waivers. This is the funding route that replaces Fulbright, which is closed for 2027.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,7,28),
+  },
+  {
+    id:'daad-pakistan', urgent:true,
+    stripe:'s-gold', icon:'i-gold', iconChar:'🇩🇪',
+    tag:'p-gold', tagLabel:'DEADLINE 31 AUG 2026 (Pakistan)',
+    title:'DAAD Doctoral Research Grant — Pakistan-specific deadline 31 Aug, needs a German supervisor letter',
+    detail:'VERIFIED: for applicants from Pakistan the DAAD doctoral research grant closes 31 Aug 2026 (general deadline for other countries is 21 Oct). €1,400/month for 3 years + insurance, travel, research allowance; funding starts May 2027 at the earliest. The blocker is the mandatory supervisor confirmation letter from a German professor: Jungherr (Bamberg, awaiting reply), Theocharis (TUM, no vacancy right now), Strohmaier (Mannheim), Garcia (Konstanz), Lorenz-Spreen (TU Dresden). Realistic only if one of them answers this week; send each a short ask today with the novelty brief attached, and otherwise let it go without guilt. Apply via the DAAD portal, not the Islamabad IC.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,7,31),
+  },
+  {
+    id:'vu-roozenbeek', urgent:true,
+    stripe:'s-gold', icon:'i-gold', iconChar:'🇳🇱',
+    tag:'p-gold', tagLabel:'DEADLINE 14 SEP 2026',
+    title:'Apply — VU Amsterdam PhD Social Data Science (Jon Roozenbeek), web scraping is the method',
+    detail:'"The Economy of Digital Influence Operations" (Vidi-funded): market infrastructure behind disinformation, fake engagement, bot networks, illicit online marketplaces. 4-year employment contract, €3,204 rising to €4,051 gross/month, start 4 Jan 2027. The project cannot be done without large-scale scraping, which is your strongest differentiator. Posted by Roozenbeek himself on LinkedIn. VERIFIED: closes Mon 14 Sep 2026 23:59; supervisors Jon Roozenbeek + Ivar Vermeulen; wants quantitative methods, time series, Python AND R, excellent written English; apply with CV + application letter (max 2 pages) via the Apply button at workingat.vu.nl/vacancies/phd-position-in-social-data-science-amsterdam-1330114. No nationality restriction.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,8,14),
+  },
+  {
+    id:'anchor-audit', urgent:true,
+    stripe:'s-gold', icon:'i-gold', iconChar:'📊',
+    tag:'p-gold', tagLabel:'1-2 days — before the Ella meeting',
+    title:'Run the anchor-density audit on the dissertation corpus',
+    detail:'List 5-10 UK fiscal shocks (Sept 2022 mini-budget centrepiece; Budgets, Autumn Statements, BoE rate decisions 2018-2025). Define 48-hour and 2-week windows. Count posts per platform per window from the raw data and recount the per-platform totals (the dissertation tables disagree). This single check decides whether four platforms survive, or two, or whether a targeted scrape is needed.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,8,15),
+  },
+  {
+    id:'email-batch-aug', urgent:true,
     stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Overdue — 2 months',
-    title:'Follow up — Prof. Dirk Hovy (Bocconi, MilaNLP)',
-    detail:'Emailed 2 Apr 2026. No reply in 2 months. Calendar reminder fired 1 Jun. His ERC Starting Grant on sociodemographic variables in NLP is directly relevant. Send 2 sentences referencing your original email.',
-    trigger: d => d >= new Date(2026,5,1),
+    tag:'p-cyan', tagLabel:'5 emails — never sent in June',
+    title:'Send the outreach batch that never went out: Gligorić, Nelimarkka, Hovy, Anderson, Pierri',
+    detail:'Gmail sent folder shows no PhD outreach since 1 June. Gligorić (JHU, recruiting for 15 Dec) and Nelimarkka (reply to his 1 May critique with the vetted novelty brief) are the two that matter. Hovy and Anderson get a one-line nudge. Pierri gets the expression of interest for the next ELLIS round. Master pattern, no em-dashes, CV attached.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,8,15),
   },
   {
-    id:'followup-anderson', urgent:true,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'✉',
-    tag:'p-cyan', tagLabel:'Overdue — 2 months',
-    title:'Follow up — Prof. Ashton Anderson (U of Toronto, CSS Lab)',
-    detail:'Emailed 2 Apr 2026. No reply in 2 months. Calendar reminder fired 1 Jun. Nature 2021 paper on Reddit polarisation via community embeddings. Send 2 sentences today.',
-    trigger: d => d >= new Date(2026,5,1),
-  },
-  {
-    id:'sounds-check', urgent:true,
-    stripe:'s-purple', icon:'i-purple', iconChar:'🔔',
-    tag:'p-purple', tagLabel:'Check NOW — Weber said summer',
-    title:'Check SOUNDS Observatory for PhD + team member positions',
-    detail:'Weber confirmed positions by summer 2026. Check sounds-observatory.org and SOUNDS LinkedIn now. Lambda monitor emails you automatically but also check manually.',
-    trigger: d => d >= new Date(2026,5,1),
-  },
-  {
-    id:'email-gligoric', urgent:true,
-    stripe:'s-green', icon:'i-green', iconChar:'✉',
-    tag:'p-green', tagLabel:'Strong fit — not yet emailed',
-    title:'Email Prof. Kristina Gligorić (JHU CS) — explicitly recruiting',
-    detail:'Her NAACL 2025 paper on LLM annotations for statistically valid CSS estimates is the measurement validity problem from a different angle. Explicitly inviting PhD applications — deadline December 15. Draft email using master pattern hooking on her NAACL 2025 core question.',
-    trigger: d => d >= new Date(2026,4,20),
-  },
-  {
-    id:'berkman-klein', urgent:true,
-    stripe:'s-purple', icon:'i-purple', iconChar:'🎓',
-    tag:'p-purple', tagLabel:'Fellowship — apply now',
-    title:'Read Berkman Klein Center open call — Harvard fellowship 2026-27',
-    detail:'BKC 2026-2027 fellowship call is live. Focus areas include platform governance, AI and democratic information flows — direct alignment. A Harvard BKC affiliation would significantly strengthen Edinburgh CDT and all US PhD applications. Read the call at cyber.harvard.edu',
-    trigger: d => d >= new Date(2026,5,1) && d <= new Date(2026,7,31),
-  },
-
-  {
-    id:'tuwien-nlp', urgent:true,
-    stripe:'s-gold', icon:'i-gold', iconChar:'🎓',
-    tag:'p-gold', tagLabel:'Deadline 9 Jul 2026',
-    title:'Apply — TU Wien PhD NLP/ML for Social Science (Vienna)',
-    detail:'4-year funded PhD at TU Wien on NLP/ML for social science applications. €3,776/month+. Social media, bias compensation, societally-relevant NLP. Deadline 9 July 2026 on ELLIS jobs page. Direct alignment with your cross-platform bias-correction work. Apply via ellis.eu/research/jobs.',
-    trigger: d => d >= new Date(2026,5,18) && d <= new Date(2026,6,9),
-  },
-  {
-    id:'cambridge-eraai', urgent:true,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
-    tag:'p-cyan', tagLabel:'Starts Jul 6 — check deadline',
-    title:'Cambridge ERA:AI Fellowship — starts 6 July, check deadline now',
-    detail:'10-week fully funded research fellowship at Cambridge on AI safety and governance. Starts July 6 2026. Adding a Cambridge affiliation before your Edinburgh CDT and US PhD applications this autumn is genuinely valuable. Check the programme page for the application deadline today.',
-    trigger: d => d >= new Date(2026,5,6) && d <= new Date(2026,5,25),
-  },
-  {
-    id:'weizenbaum-apply', urgent:true,
-    stripe:'s-green', icon:'i-green', iconChar:'✉',
-    tag:'p-green', tagLabel:'Rolling — apply now',
-    title:'Apply — Weizenbaum Institute PhD AI/ML/NLP Berlin',
-    detail:'Berlin federal institute (FU Berlin, HU Berlin, TU Berlin, WZB) recruiting PhD in AI/ML/NLP. Rolling deadline — the longer you wait the more competitive it gets. Salary up to EG 13 TVöD. Apply at weizenbaum-institut.de with CV, motivation letter, publications list, writing sample.',
-    trigger: d => d >= new Date(2026,5,6) && d <= new Date(2026,6,15),
-  },
-  {
-    id:'pierri-polimi', urgent:true,
-    stripe:'s-red', icon:'i-red', iconChar:'🚨',
-    tag:'p-red', tagLabel:'DEADLINE SUN 15 JUN',
-    title:'Apply — ELLIS PhD, Pierri (Politecnico di Milano)',
-    detail:'Francesco Pierri is recruiting a PhD on Responsible AI/CSS/social media analysis at ELLIS Unit Milan. Direct overlap with your dissertation — misinformation, social media analysis, AI auditing. Email f.pierri@polimi.it today as expression of interest, then apply at ellis.eu/research/jobs by 15 June.',
-    trigger: d => d >= new Date(2026,5,6) && d <= new Date(2026,5,15),
-  },
-  {
-    id:'bircan-vub', urgent:true,
-    stripe:'s-red', icon:'i-red', iconChar:'🚨',
-    tag:'p-red', tagLabel:'DEADLINE SUN 15 JUN',
-    title:'Apply — VUB PhD, Prof. Tuba Bircan (Brussels) — AI & Social Inequalities',
-    detail:'Fully funded 4-year PhD at VUB Brussels on AI and social inequalities. Topics: algorithmic bias, trust in AI, data-driven public institutions, responsible CSS. Deadline 15 June. Apply at jobs.vub.be — need CV, motivation letter, transcripts, and 1-page research topic outline. Contact: Tuba.Bircan@vub.be.',
-    trigger: d => d >= new Date(2026,5,6) && d <= new Date(2026,5,15),
-  },
-  {
-    id:'illc-uva', urgent:true,
-    stripe:'s-gold', icon:'i-gold', iconChar:'✉',
-    tag:'p-gold', tagLabel:'Check status — original deadline Sep 2025',
-    title:'CHECK STATUS — ILLC UvA PhD on LLMs + Social Media',
-    detail:'Original application deadline was September 2025 — position may already be filled. Email the PI or Törnberg (already warm at UvA) to ask if the position is still open before spending time on a full application.',
-    trigger: d => d >= new Date(2026,5,6) && d <= new Date(2026,6,15),
-  },
-  {
-    id:'leiden-llm-deadline', urgent:true,
-    stripe:'s-gold', icon:'i-gold', iconChar:'🎓',
-    tag:'p-gold', tagLabel:'Deadline 26 Jun 2026',
-    title:'Leiden University — PhD LLM-Based NLU deadline 26 June',
-    detail:'Fully funded PhD at Leiden LIACS on formal methods for transparent LLM-based NLU. More technical than your CSS focus but strong Dutch NLP group. Salary €3,059–€3,881/month. Deadline 26 June 2026 — check Leiden jobs portal.',
-    trigger: d => d >= new Date(2026,5,8) && d <= new Date(2026,5,26),
-  },
-  {
-    id:'uva-css-check', urgent:true,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'🇳🇱',
-    tag:'p-cyan', tagLabel:'Check if still open',
-    title:'UvA — Two PhD Positions in CSS (Urban Impact Lab / PLANET-NL)',
-    detail:'Two fully funded 4-year PhDs at UvA on network analysis, polarisation and political behaviour. Collaboration with City of Amsterdam. Your cross-platform polarisation work is a direct fit. Törnberg is at UvA — mention his warm response. Check werkenbij.uva.nl vacancy 14658 for open status.',
-    trigger: d => d >= new Date(2026,5,8) && d <= new Date(2026,6,15),
+    id:'sounds-tum-check', urgent:true,
+    stripe:'s-purple', icon:'i-purple', iconChar:'🔎',
+    tag:'p-purple', tagLabel:'Both calls due now',
+    title:'Check SOUNDS (Weber) and TUM Digital Governance (Theocharis) for the late-summer PhD calls',
+    detail:'Weber said the SOUNDS graduate school call was feasible for late summer 2026; Theocharis said a call at his chair was expected around September. Check sounds-observatory.org, the Saarland jobs pages, SOUNDS LinkedIn, and hfp.tum.de/en/digitalgovernance. Email each a two-line note with the novelty brief link to stay on their radar.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,9,15),
   },
   {
     id:'oxford-oii-register', urgent:true,
     stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
-    tag:'p-cyan', tagLabel:'Register today — 2 mins',
-    title:'Register for Oxford OII DPhil email notification',
-    detail:'2027-28 cycle opens ~Sep 2026. Register at ox.ac.uk/admissions/graduate to get notified the moment it opens. Fabian Stephany (warm) is OII faculty. Takes 2 minutes — do it now.',
-    trigger: d => d >= new Date(2026,5,6) && d <= new Date(2026,5,25),
+    tag:'p-cyan', tagLabel:'2 minutes',
+    title:'Register for the Oxford OII DPhil 2027-28 notification (if not done in June)',
+    detail:'Cycle opens ~September. ox.ac.uk/admissions/graduate/courses/dphil-social-data-science. Fabian Stephany (warm) is OII faculty. Clarendon consideration is automatic.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,8,30),
+  },
+  {
+    id:'edinburgh-cdt-prep', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'⏰',
+    tag:'p-red', tagLabel:'Opens ~Oct · HARD DEADLINE 7 Jan 2027',
+    title:'Edinburgh CDT (Magdy + Ross) — prepare the application pack',
+    detail:'VERIFIED: the CDT page says applications for the next intake usually open in October; the 2027 deadline is not yet published (7 Jan follows the 2026 pattern, treat as unconfirmed until responsiblenlp.org posts the 2027 call). Pack: Statement of Intent (max 1,000 words) + Statement of Alignment (max 1,500 words) as one PDF, CV, English certificate, two academic references, degree transcripts, via EUCLID, no fee. Fully funded for internationals incl. overseas fees + UKRI stipend. Update Proposal v4 to the G-theory / invariance / equating framing; ask Dr Ella for a reference now. Commonwealth (closes 20 Oct) and HEC (28 Aug) are the funding companions. Magdy: "please do your best to get a publication by then."',
+    trigger: d => d >= new Date(2026,9,1) && d <= new Date(2027,0,7),
+  },
+  {
+    id:'commonwealth-apply', urgent:true,
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
+    tag:'p-cyan', tagLabel:'Opens 8 Sep · closes 20 Oct 2026, 16:00 BST',
+    title:'Commonwealth PhD Scholarship 2027/28 (CSC) — the Edinburgh funding route, via HEC nomination',
+    detail:'VERIFIED: applications open Tue 8 Sep 2026 and close Tue 20 Oct 2026 at 16:00 BST; study from Sep/Oct 2027; Pakistan is eligible (LDC & fragile states category). No direct applications: Pakistan applies through its nominating agency (HEC), whose internal deadline may be earlier, so check HEC\'s Commonwealth page the week it opens. Funds airfare, tuition, £1,712/month stipend (£2,000 London), fieldwork, family allowances. Needs transcripts, two references and a UK supervisor supporting statement from Magdy: ask him in September.',
+    trigger: d => d >= new Date(2026,8,1) && d <= new Date(2026,9,20),
+  },
+  {
+    id:'cmu-apply', urgent:true,
+    stripe:'s-green', icon:'i-green', iconChar:'🎓',
+    tag:'p-green', tagLabel:'Early 18 Nov · final 9 Dec 2026',
+    title:'Apply — CMU Machine Learning PhD (Carley, CASOS)',
+    detail:'Carley: "Potential fit." Applications open 9 Sep. Use the updated research statement; list Carley as advisor.',
+    trigger: d => d >= new Date(2026,9,15) && d <= new Date(2026,11,9),
+  },
+  {
+    id:'us-dec15', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'🎓',
+    tag:'p-red', tagLabel:'UW HCDE 2 Dec · JHU CS 15 Dec 2026',
+    title:'Apply — UW HCDE (Starbird, 2 Dec) + JHU CS (Gligorić / Piccardi, 15 Dec) + NYU Steinhardt (Tucker)',
+    detail:'VERIFIED: UW HCDE has one deadline a year, 2 Dec 2026 at 11:59 pm Pacific (not 15 Dec); portal opens September; GRE not required; statement of purpose in two sections (250 + 1,000 words), diversity statement, 3 references, 2-4 faculty matches. JHU CS: 15 Dec 2026, 11:59 pm ET, portal already open; all PhD students funded. Starbird welcomed the application (one intake, very competitive). Contact Kathleen Rascon (krascon@uw.edu) for HCDE guidance. Include the arXiv preprint. Funding: HEC Phase-III if awarded, otherwise departmental.',
+    trigger: d => d >= new Date(2026,9,15) && d <= new Date(2026,11,15),
+  },
+  {
+    id:'edinburgh-cdt-submit', urgent:true,
+    stripe:'s-red', icon:'i-red', iconChar:'⏰',
+    tag:'p-red', tagLabel:'HARD DEADLINE 7 Jan 2027',
+    title:'SUBMIT Edinburgh CDT application — most important deadline in the campaign',
+    detail:'UKRI CDT in Responsible and Trustworthy NLP. Magdy confirmed, Ross confirmed. Fully funded. Submit by midnight 7 Jan 2027 with research statement, CV, two references and the preprint.',
+    trigger: d => d >= new Date(2026,11,1) && d <= new Date(2027,0,7),
   },
 
+  // ══════════════════════════════════════════════════════
+  // ON THE HORIZON — be aware, act on the date
+  // ══════════════════════════════════════════════════════
+
   {
-    id:'icwsm-paper-write', urgent:false,
+    id:'icwsm-plan', urgent:false,
     stripe:'s-gold', icon:'i-gold', iconChar:'✍',
-    tag:'p-gold', tagLabel:'Target: Oct 2026 submission',
-    title:'Write ICWSM paper with Dr Ella — once novelty is nailed',
-    detail:'The paper is already drafted in Overleaf (AAAI/ICWSM format, 11 pages). The blocking issue is novelty framing. Once that sentence exists — "the first formal measurement invariance test of cross-platform political sentiment, producing a validated bias-correction protocol" — the rest of the paper follows. Dr Ella is co-author. Target ICWSM 2027 Round 2 (~Sep 2026) or Round 1 if the paper moves fast.',
-    trigger: d => d >= new Date(2026,4,20) && d <= new Date(2026,9,1),
+    tag:'p-gold', tagLabel:'arXiv by Dec · ICWSM R3 15 Jan 2027',
+    title:'ICWSM paper: reframe as methods paper, expand gold set, preprint, then poster / short paper',
+    detail:'After the Ella meeting: update the novelty brief to the reframed plan; annotate 1,000-1,500 posts from anchor windows (second annotator on a subset); multilevel model + invariance/DIF + equating + naive-vs-adjusted simulation; write up; arXiv preprint by Dec 2026 (cited in Edinburgh CDT); submit to ICWSM Round 3 on 15 Jan 2027. The 15 Sep round is full papers only and not realistic for proper annotation anyway; posters are a Round 3 (15 Jan) item.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2027,0,15),
   },
   {
-    id:'fulbright-deadline', urgent:false,
-    stripe:'s-gold', icon:'i-gold', iconChar:'🎓',
-    tag:'p-gold', tagLabel:'Sep 15 2026 deadline',
-    title:'Fulbright Foreign Student Program — apply for US PhD (Starbird / Gligorić)',
-    detail:'Pakistan applies through USEFP (US Educational Foundation in Pakistan). Fulbright covers full PhD funding at any US university. Deadline September 15 2026. Directly enables Starbird (UW) and Gligorić (JHU) applications. Start gathering documents: transcripts, English test, references, statement of purpose. USEFP application at usefpak.org.',
-    trigger: d => d >= new Date(2026,5,1) && d <= new Date(2026,8,15),
+    id:'icwsm-r2-decision', urgent:false,
+    stripe:'s-gold', icon:'i-gold', iconChar:'⚖',
+    tag:'p-gold', tagLabel:'ICWSM Round 2 (15 Sep) is full papers only',
+    title:'ICWSM Round 2 closes 15 Sep: full papers only, so the poster goes to Round 3 (15 Jan 2027)',
+    detail:'VERIFIED on icwsm.org/2027/submit: Round 2 (15 Sep 2026, 23:59 AoE) accepts full papers (up to 11 pages) only; posters (up to 5 pages), demos and datasets are accepted only in Round 3 (15 Jan 2027, 23:59 AoE, notification 15 Mar 2027). The venue decision is therefore made: arXiv preprint by December, poster to Round 3. Tell Ella in the reply.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2026,8,15),
   },
   {
-    id:'commonwealth-scholarship', urgent:false,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
-    tag:'p-cyan', tagLabel:'~Nov 2026 deadline',
-    title:'Commonwealth PhD Scholarship — UK universities (Edinburgh / Loughborough)',
-    detail:'Pakistan is a Commonwealth member. Covers full UK PhD tuition + stipend £20,780/yr. Directly enables Edinburgh CDT (Magdy) and Loughborough (Chadwick) applications. Apply through CSC (Commonwealth Scholarships Commission). Usually opens August, deadline November. Gather: transcripts, 2 references, research statement, acceptance from supervisor.',
-    trigger: d => d >= new Date(2026,6,1) && d <= new Date(2026,10,30),
-  },
-  {
-    id:'theocharis-tum-check', urgent:false,
-    stripe:'s-cyan', icon:'i-cyan', iconChar:'🔎',
-    tag:'p-cyan', tagLabel:'Check Sep 2026',
-    title:'Check TUM Digital Governance for PhD call — Theocharis',
-    detail:'Theocharis replied warmly Apr 17, said PhD call expected around September 2026 at his chair. Check https://www.hfp.tum.de/en/digitalgovernance/ for open positions. Re-contact with updated CV and ICWSM paper draft.',
-    trigger: d => d >= new Date(2026,7,15) && d <= new Date(2026,9,30),
+    id:'ellis-call', urgent:false,
+    stripe:'s-purple', icon:'i-purple', iconChar:'🇪🇺',
+    tag:'p-purple', tagLabel:'Opens ~Oct · closes ~31 Oct 2026',
+    title:'ELLIS PhD Programme annual call (Class of 2027) — Augenstein, Pierri, TU Wien routes',
+    detail:'VERIFIED: ELLIS says the next call is expected to open in October 2026 (last cycle ran 1-31 Oct). Funding comes from the advisor, not ELLIS. Docs: motivation letter, CV, transcripts, 2-3 references. Interdisciplinary track allows CSS co-supervision.',
+    trigger: d => d >= new Date(2026,8,1) && d <= new Date(2026,9,31),
   },
   {
     id:'daad-germany', urgent:false,
-    stripe:'s-green', icon:'i-green', iconChar:'🎓',
-    tag:'p-green', tagLabel:'Apply Oct–Nov 2026',
+    stripe:'s-green', icon:'i-green', iconChar:'🇩🇪',
+    tag:'p-green', tagLabel:'Apply Oct-Nov 2026',
     title:'DAAD Research Grant — Germany (Jungherr at Bamberg / Theocharis at TUM)',
-    detail:'DAAD (German Academic Exchange Service) funds full PhD stipends for international students in Germany. Directly complementary to Jungherr (Bamberg) and Theocharis (TUM) — both warm contacts. Apply Oct–Nov 2026 for 2027 entry. Requires: acceptance from German supervisor, research proposal, language skills. See daad.de.',
-    trigger: d => d >= new Date(2026,9,1) && d <= new Date(2026,10,30),
+    detail:'Requires a German supervisor acceptance plus research proposal. Pair with the Theocharis call check. daad.de',
+    trigger: d => d >= new Date(2026,8,15) && d <= new Date(2026,10,30),
   },
   {
-    id:'uw-hcde-apply', urgent:false,
-    stripe:'s-red', icon:'i-red', iconChar:'🎓',
-    tag:'p-red', tagLabel:'Deadline ~Dec 15 2026',
-    title:'Apply — UW HCDE PhD (Starbird) + JHU CS PhD (Gligorić)',
-    detail:'Both deadlines are December 15 2026. Starbird explicitly welcomed your application. Gligorić is actively recruiting. Both need: Statement of Purpose (reference their specific work), ICWSM paper submitted or preprint, CV, two references. Start SOP in November. Contact Kathleen Rascon (krascon@uw.edu) for UW HCDE guidance.',
-    trigger: d => d >= new Date(2026,10,1) && d <= new Date(2026,11,15),
+    id:'mcml-matchmaking', urgent:false,
+    stripe:'s-purple', icon:'i-purple', iconChar:'🎓',
+    tag:'p-purple', tagLabel:'Deadline 14 Nov 2026',
+    title:'MCML PhD Matchmaking (TUM + LMU Munich), 2027 cycle',
+    detail:'Opens ~October. Munich route that pairs naturally with Theocharis and DAAD.',
+    trigger: d => d >= new Date(2026,9,1) && d <= new Date(2026,10,14),
   },
   {
-    id:'edinburgh-cdt-apply', urgent:false,
-    stripe:'s-red', icon:'i-red', iconChar:'⏰',
-    tag:'p-red', tagLabel:'HARD DEADLINE 7 Jan 2027',
-    title:'Edinburgh CDT application — most important deadline',
-    detail:'UKRI CDT in Responsible and Trustworthy NLP. Supervisors: Prof. Walid Magdy (confirmed) + Dr Björn Ross (confirmed fit). Fully funded — UKRI stipend + fees waived. Submit with ICWSM paper (submitted or preprint), research statement, two references. This is the #1 priority application.',
-    trigger: d => d.getFullYear()===2026 && d.getMonth()===11,
+    id:'oii-apply', urgent:false,
+    stripe:'s-cyan', icon:'i-cyan', iconChar:'🎓',
+    tag:'p-cyan', tagLabel:'Nov 2026 / Jan 2027 cycle',
+    title:'Apply — Oxford OII DPhil Social Data Science (Stephany) + follow up Piccardi (JHU)',
+    detail:'VERIFIED: Oxford 2027-28 applications open September 2026; OII deadline not yet published (last cycle closed 9 Jan 2026 at 12:00 UK, expect similar). Clarendon consideration is automatic if you apply by the course deadline. Stephany pointed to this cycle. Piccardi (JHU) asked for the end-of-year application, deadline 15 Dec.',
+    trigger: d => d >= new Date(2026,9,15) && d <= new Date(2027,0,20),
+  },
+  {
+    id:'lasser-graz', urgent:false,
+    stripe:'s-purple', icon:'i-purple', iconChar:'🔎',
+    tag:'p-purple', tagLabel:'Check Nov 2026',
+    title:'Check Jana Lasser (Graz) on grant outcomes',
+    detail:'She had grants pending in April that could create PhD positions. One short email in November with the preprint link.',
+    trigger: d => d >= new Date(2026,10,1) && d <= new Date(2026,10,30),
+  },
+  {
+    id:'fulbright-2028', urgent:false,
+    stripe:'s-gold', icon:'i-gold', iconChar:'🇺🇸',
+    tag:'p-gold', tagLabel:'2027 cycle CLOSED (1 Apr 2026) · 2028 opens ~Feb 2027',
+    title:'Fulbright Pakistan (USEFP): 2027 cycle already closed; prepare for the 2028 cycle',
+    detail:'VERIFIED on usefp.org: the Fulbright Foreign Student (Degree) Program 2027 competition closed on 1 Apr 2026, so the "15 Sep 2026" date in the old plan was wrong. Next cycle historically opens ~Feb with an April/May deadline. Requires GRE General (min 145 per section) and 3 references. Take the GRE in winter if the US routes survive the December round. For 2027 US funding, HEC Phase-III (28 Aug) is the live option.',
+    trigger: d => d >= new Date(2026,7,19) && d <= new Date(2027,3,30),
+  },
+  {
+    id:'rolling-europe', urgent:false,
+    stripe:'s-green', icon:'i-green', iconChar:'✉',
+    tag:'p-green', tagLabel:'Rolling — low effort',
+    title:'Rolling European routes: Weizenbaum (Berlin), Hertie Data Science Lab, Luxembourg CLARITY, Copenhagen SODAS',
+    detail:'Each is one email with the proposal and the novelty brief link. Do them in one sitting once the Ella reply and the HEC / Fulbright / VU applications are out.',
+    trigger: d => d >= new Date(2026,8,1) && d <= new Date(2026,11,31),
   },
 ];
 
@@ -1564,7 +1592,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '18 Jun 2026, 20:00 PKT';
+  const LAST_REFRESHED = '19 Aug 2026, 21:30 PKT';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
   const luEl = document.getElementById('last-updated-text');
   if(luEl) luEl.textContent = 'Last updated: ' + LAST_REFRESHED;
