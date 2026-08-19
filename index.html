@@ -28,24 +28,25 @@
   --gray-bg:rgba(148,163,184,0.06);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;font-size:16px;line-height:1.6}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 45% at 15% 0%,rgba(56,201,201,0.045) 0%,transparent 65%),radial-gradient(ellipse 50% 40% at 85% 90%,rgba(212,168,83,0.045) 0%,transparent 65%);pointer-events:none;z-index:0}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 45% at 15% 0%,rgba(56,201,201,0.03) 0%,transparent 65%);pointer-events:none;z-index:0}
 a{color:inherit;text-decoration:none}
 
 /* HEADER */
 header{position:sticky;top:0;z-index:100;background:rgba(5,8,15,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.header-inner{max-width:1140px;margin:0 auto;padding:0 28px}
-.header-top{display:flex;align-items:center;justify-content:space-between;height:58px}
+.header-inner{max-width:940px;margin:0 auto;padding:0 24px}
+.header-top{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
 .header-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--gold);letter-spacing:0.03em}
 .header-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);display:flex;align-items:center;gap:14px}
 #last-refreshed{color:var(--cyan);opacity:0.8}
 .tab-bar{display:flex;justify-content:center;gap:2px;border-top:1px solid var(--border)}
-.tab-btn{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;color:var(--text3);padding:15px 26px;border:none;background:transparent;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.18s;display:flex;align-items:center;gap:8px}
+.tab-ico{display:none}
+.tab-btn{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;color:var(--text3);padding:13px 22px;border:none;background:transparent;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.18s;display:flex;align-items:center;gap:8px}
 .tab-btn:hover{color:var(--text2)}
 .tab-btn.active{color:var(--cyan);border-bottom-color:var(--cyan)}
 
 /* PANELS */
-.panel{display:none;max-width:1140px;margin:0 auto;padding:52px 28px 80px;animation:fadeIn 0.25s ease}
+.panel{display:none;max-width:940px;margin:0 auto;padding:36px 24px 80px;animation:fadeIn 0.25s ease}
 .panel.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
@@ -216,11 +217,51 @@ header{position:sticky;top:0;z-index:100;background:rgba(5,8,15,0.93);backdrop-f
 
 /* TODAY ACTIONS */
 
+/* NOW HEAD (compact opener) */
+.now-head{padding:8px 0 26px;border-bottom:1px solid var(--border);margin-bottom:28px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block}
+.now-title{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,48px);font-weight:500;line-height:1.08;color:var(--text);margin-bottom:10px}
+.now-title em{color:var(--gold);font-style:italic}
+.now-lede{font-size:15px;color:var(--text2);max-width:640px;line-height:1.65}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}
+.stat-mini{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+.stat-mini b{display:block;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--gold);line-height:1}
+.stat-mini span{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em}
+/* Upcoming dates */
+.dates-wrap{margin-bottom:36px}
+.dates-list{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface)}
+.date-row{display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.15s}
+.date-row:last-child{border-bottom:none}
+.date-row:hover{background:var(--surface2)}
+.date-when{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3);width:64px;flex-shrink:0}
+.date-when b{display:block;color:var(--text);font-size:15px;font-weight:500}
+.date-title{flex:1;font-size:14px;color:var(--text2);line-height:1.45;min-width:0}
+.date-days{font-family:'JetBrains Mono',monospace;font-size:11px;white-space:nowrap;flex-shrink:0;padding:3px 9px;border-radius:10px;border:1px solid var(--border2);color:var(--text3)}
+.date-days.soon{color:var(--red);border-color:rgba(240,112,112,0.3);background:var(--red-bg)}
+/* Collapsible sections */
+details.fold{border:1px solid var(--border);border-radius:14px;background:var(--surface);margin-bottom:18px;overflow:hidden}
+details.fold>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px;font-weight:500;color:var(--text)}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary small{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);font-weight:400}
+details.fold>summary .chev{color:var(--text3);transition:transform 0.2s;font-size:12px}
+details.fold[open]>summary .chev{transform:rotate(90deg)}
+details.fold>summary:hover{background:var(--surface2)}
+details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)}
+/* Priority: collapsible rows */
+.prio-top{cursor:pointer}
+.prio-item.collapsed .prio-why,.prio-item.collapsed .prio-req,.prio-item.collapsed .prio-link{display:none}
+.prio-item.collapsed .prio-body{padding:12px 16px}
+.prio-toggle{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(56,201,201,0.25);padding:6px 12px;border-radius:12px;cursor:pointer}
+.prio-hint{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);margin-top:8px}
+
 /* PRIORITY LIST */
 .prio-wrap{margin-bottom:44px}
 .prio-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.prio-head>div:first-child{flex:1 1 380px;min-width:0}
+.prio-head>div:last-child{flex-shrink:0}
 .prio-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--text);line-height:1.1}
-.prio-sub{font-size:14px;color:var(--text2);margin-top:6px;max-width:640px;line-height:1.6}
+.prio-sub{font-size:14px;color:var(--text2);margin-top:6px;max-width:560px;line-height:1.6}
 .prio-legend{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);display:flex;gap:14px;flex-wrap:wrap}
 .prio-legend span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
 .prio-legend .lg-now::before{background:var(--red)} .prio-legend .lg-week::before{background:var(--amber)} .prio-legend .lg-month::before{background:var(--cyan)} .prio-legend .lg-later::before{background:var(--purple)}
@@ -298,6 +339,39 @@ header{position:sticky;top:0;z-index:100;background:rgba(5,8,15,0.93);backdrop-f
 
 footer a{color:var(--gold)}
 footer a:hover{color:var(--gold2)}
+
+/* ── MOBILE NAV (≤700px): fixed bottom tab bar ── */
+@media(max-width:700px){
+  header{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(5,8,15,0.98)}
+  .tab-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(5,8,15,0.96);backdrop-filter:blur(18px);border-top:1px solid var(--border2);justify-content:space-around;gap:0;padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .tab-btn{flex:1;flex-direction:column;gap:3px;padding:6px 2px;font-size:10px;letter-spacing:0;border-bottom:none;border-radius:10px;min-width:0}
+  .tab-btn.active{background:var(--cyan-dim)}
+  .tab-ico{display:block;font-size:18px;line-height:1}
+  .tab-label-long{display:none}
+  .panel{padding:20px 14px calc(96px + env(safe-area-inset-bottom))}
+  .header-top{height:50px}
+  .now-head{padding:4px 0 18px;margin-bottom:20px}
+  .now-title{font-size:30px}
+  .now-lede{font-size:14px}
+  .eyebrow #last-updated-text,.eyebrow #last-updated-text+*,.eyebrow span[style*="opacity"]{display:none}
+  .stat-row{grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px}
+  .stat-mini{padding:8px 8px;text-align:center}
+  .stat-mini b{font-size:20px}
+  .stat-mini span{font-size:9px;letter-spacing:0.04em}
+  .prio-title{font-size:24px}
+  .prio-sub{font-size:13px}
+  .prio-legend{display:none}
+  .prio-req{grid-template-columns:1fr}
+  .prio-meta{width:100%}
+  .prio-pill.p-time{white-space:normal;line-height:1.4}
+  details.fold>summary{font-size:15px;padding:14px 14px}
+  details.fold>summary small{display:block;margin-top:3px;font-size:10px}
+  details.fold>.fold-body{padding:4px 12px 14px}
+  .date-when{width:56px}
+  .date-title{font-size:13px}
+  footer{padding-bottom:110px}
+}
+
 /* ── TABLET (≤900px) ── */
 @media(max-width:900px){
   .goals-grid{grid-template-columns:1fr}
@@ -316,9 +390,6 @@ footer a:hover{color:var(--gold2)}
   #last-refreshed{font-size:10px}
 
   /* Tabs — scrollable row, no centering on small screens */
-  .tab-bar{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .tab-bar::-webkit-scrollbar{display:none}
-  .tab-btn{padding:13px 18px;font-size:12px;flex-shrink:0}
 
   /* Panel */
   .panel{padding:28px 16px 72px}
@@ -369,11 +440,13 @@ footer a:hover{color:var(--gold2)}
   .search-bar{font-size:15px;padding:12px 15px}
 
   /* Prof cards */
-  .prof-row{padding:16px 16px;gap:12px}
-  .prof-av{width:38px;height:38px;font-size:12px}
-  .prof-name{font-size:15px}
-  .prof-inst{font-size:13px}
-  .status-pill{font-size:11px;padding:4px 10px}
+  .prof-row{padding:14px 14px;gap:10px;flex-wrap:wrap}
+  .prof-av{width:36px;height:36px;font-size:11px}
+  .prof-info{flex:1 1 55%}
+  .prof-name{font-size:15px;white-space:normal;line-height:1.3}
+  .prof-inst{font-size:12px;white-space:normal}
+  .prof-right{margin-left:46px;width:100%;justify-content:space-between}
+  .status-pill{font-size:10px;padding:3px 9px}
   .sent-date{display:none}
   .prof-body{padding:0 16px 18px}
   .pbg{gap:14px;padding-top:16px}
@@ -421,11 +494,11 @@ footer a:hover{color:var(--gold2)}
       </div>
     </div>
     <nav class="tab-bar">
-      <button class="tab-btn active" onclick="switchTab('overview',this)">◈ Overview</button>
-      <button class="tab-btn" onclick="switchTab('outreach',this)">◉ Outreach</button>
-      <button class="tab-btn" onclick="switchTab('papers',this)">◇ Papers &amp; Docs</button>
-      <button class="tab-btn" onclick="switchTab('calendar',this)">○ Calendar</button>
-      <button class="tab-btn" onclick="switchTab('claude',this)" style="color:var(--cyan)">✦ Claude's Plan</button>
+      <button class="tab-btn active" onclick="switchTab('overview',this)"><span class="tab-ico">◈</span>Now</button>
+      <button class="tab-btn" onclick="switchTab('outreach',this)"><span class="tab-ico">◉</span>Outreach</button>
+      <button class="tab-btn" onclick="switchTab('papers',this)"><span class="tab-ico">◇</span>Papers<span class="tab-label-long">&nbsp;&amp; Docs</span></button>
+      <button class="tab-btn" onclick="switchTab('calendar',this)"><span class="tab-ico">○</span>Calendar</button>
+      <button class="tab-btn" onclick="switchTab('claude',this)"><span class="tab-ico">✦</span>Plan</button>
     </nav>
   </div>
 </header>
@@ -433,41 +506,17 @@ footer a:hover{color:var(--gold2)}
 <!-- TAB 1: OVERVIEW -->
 <div class="panel active" id="panel-overview">
 
-  <div class="hero">
-    <div class="hero-badge">Active campaign &middot; 19 August 2026</div>
-    <h1>The <em>PhD Quest</em><br>of Asad Ikram</h1>
-    <p class="hero-sub">Pursuing a fully funded PhD in computational social science — cross-platform measurement invariance, social listening validity, and bias-corrected public opinion estimation from social media data.</p>
-    <div class="hero-links">
-      <a href="https://www.chevening.org/" target="_blank" class="hero-link">
-        <span class="dot" style="background:var(--gold)"></span>Chevening Scholar 2024/25
-      </a>
-      <a href="https://www.port.ac.uk/" target="_blank" class="hero-link">
-        <span class="dot" style="background:var(--cyan)"></span>MSc Data Analytics &middot; Distinction &middot; Portsmouth
-      </a>
-      <a href="https://www.artemisai.co.uk/" target="_blank" class="hero-link">
-        <span class="dot" style="background:var(--purple)"></span>CTO &middot; ArtemisAI
-      </a>
-      <a href="https://www.mcsaatchifluency.com/" target="_blank" class="hero-link">
-        <span class="dot" style="background:var(--blue)"></span>Data Engineer &middot; M+C Saatchi Fluency
-      </a>
+  <section class="now-head">
+    <div class="eyebrow"><span class="dot"></span><span>PhD Quest · Asad Ikram</span><span style="opacity:0.5">·</span><span id="last-updated-text" style="color:var(--text3)">Last updated: 19 Aug 2026, 22:00 PKT</span></div>
+    <h1 class="now-title">What to do <em>next</em></h1>
+    <p class="now-lede">Campaign for a fully funded PhD in computational social science: cross-platform measurement validity, social-listening bias, public-opinion estimation from social media. The list below is the whole plan in order; everything else on this site is detail.</p>
+    <div class="stat-row">
+      <div class="stat-mini"><b>117</b><span>Tracked</span></div>
+      <div class="stat-mini"><b>30</b><span>Replies</span></div>
+      <div class="stat-mini"><b>10</b><span>Warm</span></div>
+      <div class="stat-mini"><b>2</b><span>Confirmed</span></div>
     </div>
-  </div>
-
-  <div class="stats-strip">
-    <div class="stat-cell"><div class="stat-num">117</div><div class="stat-label">Contacted / tracked</div></div>
-    <div class="stat-cell"><div class="stat-num">30</div><div class="stat-label">Replies</div></div>
-    <div class="stat-cell"><div class="stat-num">10</div><div class="stat-label">Warm / positive</div></div>
-    <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label">Confirmed supervisors</div></div>
-  </div>
-
-  <!-- LAST UPDATED BAR -->
-  <div style="display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-bottom:36px;margin-top:-24px">
-    <div style="flex:1;height:1px;background:var(--border)"></div>
-    <div id="last-updated-bar" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:7px;white-space:nowrap;padding:5px 14px;background:var(--surface);border:1px solid var(--border);border-radius:20px">
-      <span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;flex-shrink:0;box-shadow:0 0 5px rgba(61,214,140,0.5)"></span>
-      <span id="last-updated-text">Last updated: 19 Aug 2026, 21:30 PKT</span>
-    </div>
-  </div>
+  </section>
 
   <!-- PRIORITY LIST -->
   <div class="prio-wrap" id="prio-wrap">
@@ -476,9 +525,13 @@ footer a:hover{color:var(--gold2)}
         <div class="prio-title">Priority list — start here</div>
         <div class="prio-sub">Ordered by what it costs you to miss it. Each row says exactly what you need in hand before you sit down. Tick items off as you go; ticks persist in this browser. Days-left counters update from today's date.</div>
       </div>
-      <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+        <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
+        <button class="prio-toggle" id="prio-toggle" onclick="togglePrioAll()">Expand all</button>
+      </div>
     </div>
     <div class="prio-list" id="prio-list"></div>
+    <div class="prio-hint">Tap a row to open it. "Do now" rows start open; the rest stay folded until you need them.</div>
     <div class="prio-kit">
       <div class="prio-kit-title">Build once, reuse everywhere (do these on day one, before any application)</div>
       <ul>
@@ -492,8 +545,17 @@ footer a:hover{color:var(--gold2)}
     </div>
   </div>
 
-  <!-- TODAY ACTIONS -->
-  <div class="today-wrap">
+  <!-- UPCOMING DATES -->
+  <div class="dates-wrap">
+    <div class="sec-head"><span class="sec-tag">Next</span><h2 class="sec-title">Upcoming dates</h2></div>
+    <div class="dates-list" id="dates-list"></div>
+  </div>
+
+  <!-- TODAY ACTIONS (folded) -->
+  <details class="fold" id="fold-actions">
+    <summary><span>Action engine <small>auto-generated from today's date</small></span><span class="chev">&#9654;</span></summary>
+    <div class="fold-body">
+  <div class="today-wrap" style="margin-bottom:0;margin-top:12px">
     <div class="today-header">
       <div class="today-title-row">
         <div class="today-pulse"></div>
@@ -511,9 +573,14 @@ footer a:hover{color:var(--gold2)}
     </div>
     <div id="today-list"></div>
   </div>
+    </div>
+  </details>
 
-  <div class="sec-head"><span class="sec-tag">Active</span><h2 class="sec-title">Goals &amp; Milestones</h2></div>
-  <div class="goals-grid">
+  <!-- GOALS (folded) -->
+  <details class="fold" id="fold-goals">
+    <summary><span>Goals &amp; milestones <small>every application and funding route, one card each</small></span><span class="chev">&#9654;</span></summary>
+    <div class="fold-body">
+  <div class="goals-grid" style="margin-top:14px">
     <div class="goal-card c-green" style="border-color:rgba(61,214,140,0.45);box-shadow:0 0 0 1px rgba(61,214,140,0.15)">
       <div class="goal-top"><div class="goal-title" style="font-size:18px">🎯 Novelty defined and vetted — now it is a data problem</div><span class="chip chip-green" style="font-size:12px">UNBLOCKED</span></div>
       <div class="goal-detail">The novelty brief is live at <a href="https://asadfix.github.io/publish_proposal/" target="_blank" style="color:var(--cyan)">asadfix.github.io/publish_proposal</a> and was independently vetted by Dr Ella's ICWSM-experienced colleague (Eni). Verdict: <strong style="color:var(--text)">the contribution holds</strong>: treat each platform as a survey mode and apply the psychometric equivalence toolkit (G-theory variance split, invariance + DIF, test equating on shared fiscal events) to machine-labelled sentiment. Nobody has done this. What does NOT yet hold is the data: 200-post gold set is too small, anchor events are not pre-identified, corpus is sparse outside event windows.</div>
@@ -625,6 +692,8 @@ footer a:hover{color:var(--gold2)}
       <div class="goal-deadline">&#9711; Asad_Ikram_PhD_Proposal_FINAL_v4.docx · attach to all emails</div>
     </div>
   </div>
+    </div>
+  </details>
 </div>
 
 <!-- TAB 2: OUTREACH -->
@@ -786,7 +855,7 @@ footer a:hover{color:var(--gold2)}
     <div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:10px">✦ Claude's Recommended Plan</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:300;color:var(--text);line-height:1.2;margin-bottom:12px">What to do,<br><em style="color:var(--gold)">and in what order.</em></h2>
-      <p style="font-size:16px;color:var(--text2);max-width:580px;line-height:1.75">Based on everything I know about your campaign — your confirmed supervisors, warm contacts, paper status, scholarship deadlines and the paper's data gap — here is the clearest path to a funded PhD offer before January 2027.</p>
+      <p style="font-size:15px;color:var(--text2);max-width:580px;line-height:1.7"><span style="color:var(--gold)">The ordered to-do list lives on the Now tab.</span> This tab is the reasoning behind it. Based on everything I know about your campaign — your confirmed supervisors, warm contacts, paper status, scholarship deadlines and the paper's data gap — here is the clearest path to a funded PhD offer before January 2027.</p>
     </div>
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 24px;min-width:220px;flex-shrink:0">
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px">Campaign health</div>
@@ -1008,7 +1077,7 @@ footer a:hover{color:var(--gold2)}
 
 <footer>
   <div style="max-width:1100px;margin:0 auto">
-    Asad Ikram &middot;
+    Asad Ikram &middot; Chevening Scholar 2024/25 &middot; MSc Data Analytics (Distinction), Portsmouth &middot; CTO <a href="https://www.artemisai.co.uk/" target="_blank">ArtemisAI</a> &middot; Data Engineer <a href="https://www.mcsaatchifluency.com/" target="_blank">M+C Saatchi Fluency</a><br>
     <a href="https://linkedin.com/in/asad-ikram98" target="_blank">LinkedIn</a> &middot;
     <a href="https://asad-ikram-mc.github.io/portfolio" target="_blank">Portfolio</a> &middot;
     asad.ikram53@gmail.com &middot; Updated August 2026
@@ -1038,7 +1107,6 @@ const PROFS=[
   {name:"Prof. Joshua Tucker",inst:"NYU · CSMaP",topic:"Social Media, Algorithmic Curation and Political Discourse",status:"engaged",sent:"13 Mar 2026",summary:"Tucker replied: US system requires fall application through department.",response:"\"Different system in the US — applications through the department, and you apply in the fall.\"",timeline:"Apply Fall 2026 · NYU department",action:"Apply NYU Fall 2026."},
   {name:"Prof. Isabelle Augenstein",inst:"CopeNLU · University of Copenhagen",topic:"Explainable Stance Detection, Social NLP and Cross-Platform Attitude Analysis",status:"awaiting",sent:"31 Mar 2026",summary:"OOO until 8 April. Follow-up sent 15 Apr after she returned. CopeNLU actively recruiting Spring and Autumn 2026 via ELLIS. High priority.",response:"OOO auto-reply: back 8 April. Follow-up sent 15 Apr.",timeline:"Awaiting reply · ELLIS Autumn 2026 open",action:"Await reply. If no response by Apr 25, nudge again."},
   {name:"Prof. Marian-Andrei Rizoiu",inst:"UTS · Behavioral Data Science Lab",topic:"Attention Dynamics, Information Diffusion Modelling and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"6 Apr 2026",summary:"OOO until 13 April. Back now — check inbox.",response:"OOO: back 13 April 2026.",timeline:"Expected reply now — he returned 13 Apr",action:"Check inbox. Follow up if no reply by Apr 21."},
-  {name:"Prof. Chris Bail",inst:"Duke University · Polarization Lab",topic:"Social Media Prism Dynamics, AI-Mediated Polarisation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"16 Apr 2026",summary:"Top-priority target. Bail's prism theory is central to the proposal's theoretical framing (Section 2.2). Original send on 6 Apr bounced (wrong address chris.bail@duke.edu). Resent 16 Apr to correct address christopher.bail@duke.edu.",response:"Original bounced. Resent 16 Apr to christopher.bail@duke.edu.",timeline:"Awaiting · follow up ~Apr 30",action:"Await reply. Follow up if no response by April 30."},
   {name:"Dr Claudia Wagner",inst:"GESIS / RWTH Aachen",topic:"Digital Trace Methodology, Total Error Framework and Cross-Platform Sentiment",status:"awaiting",sent:"31 Mar 2026",summary:"Wagner's Total Survey Error framework (Nature 2021) is foundational in the proposal. Her language embedded in Section 2.1.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. Sandra Gonzalez-Bailon",inst:"UPenn · Annenberg / CIND",topic:"Information Networks, Algorithmic Exposure and Cross-Platform Political Discourse",status:"awaiting",sent:"31 Mar 2026",summary:"Her Facebook ideological segregation paper (Science 2023) directly cited in proposal.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Dr Dong Nguyen",inst:"Utrecht University · NLP and Society Lab",topic:"NLP Measurement Validity, Construct Validity Frameworks and Social Media Analytics",status:"awaiting",sent:"31 Mar 2026",summary:"Nguyen's 2021 paper on NLP as social measurement is foundational in proposal lit review.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
@@ -1067,7 +1135,7 @@ const PROFS=[
   {name:"Prof. Nello Cristianini",inst:"University of Bath",topic:"AI and Society, Algorithmic Governance and Social Media as Policy Signal",status:"awaiting",sent:"31 Mar 2026",summary:"Emailed about PhD at Bath. Research on AI and society, algorithmic governance connects to measurement validity in government social listening.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. Luca Maria Aiello",inst:"IT University of Copenhagen",topic:"Social Dynamics, NLP-Based Relationship Modelling and Cross-Platform Collective Action",status:"awaiting",sent:"31 Mar 2026",summary:"Emailed about PhD at ITU Copenhagen. Research on social dynamics and NLP-based modelling connects to cross-platform measurement.",response:"No reply yet.",timeline:"Awaiting · follow up Apr 21",action:"Follow up April 21."},
   {name:"Prof. Andreas Jungherr",inst:"University of Bamberg · Chair of Political Science, Digital Transformation",topic:"Digital Trace Data Validity, Attention vs Opinion and Cross-Platform Measurement Invariance",status:"awaiting",sent:"16 Apr 2026",summary:"Highest-priority new contact. His 2017 SSCR paper 'attention not support' is the most precise theoretical statement of the dissertation's central finding. Currently leading 3 funded EU/Volkswagen projects on AI in political deliberation. Bamberg Graduate School explicitly lists him as interested in supervising PhDs on digitalisation and politics.",response:"No reply yet.",timeline:"Awaiting · follow up ~Apr 30",action:"Await reply. Follow up if no response by April 30."},
-  {name:"Prof. Chris Bail",inst:"Duke University · Polarization Lab / Society-Centered AI Initiative",topic:"Social Media Prism Dynamics, AI-Mediated Polarisation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"16 Apr 2026",summary:"Resent to correct email christopher.bail@duke.edu after original bounced from chris.bail@duke.edu on 6 Apr. Bail's Social Media Prism theory is central to the proposal's theoretical framing. SCAI focus on designing AI for social rather than engagement goals is the framework ArtemisAI needs.",response:"No reply yet. (Previous send on 6 Apr bounced — wrong address.)",timeline:"Awaiting · follow up ~Apr 30",action:"Await reply. Follow up if no response by April 30."},
+  {name:"Prof. Chris Bail",inst:"Duke University · Polarization Lab / Society-Centered AI Initiative",topic:"Social Media Prism Dynamics, AI-Mediated Polarisation and Cross-Platform Sentiment Measurement",status:"awaiting",sent:"16 Apr 2026",summary:"Resent to correct email christopher.bail@duke.edu after original bounced from chris.bail@duke.edu on 6 Apr. Bail's Social Media Prism theory is central to the proposal's theoretical framing. SCAI focus on designing AI for social rather than engagement goals is the framework ArtemisAI needs.",response:"No reply as of 19 Aug 2026 (4 months). Previous send on 6 Apr bounced, wrong address.",timeline:"Awaiting · one nudge then park",action:"One 2-sentence nudge with the novelty brief link; if silent by mid-Sep, park."},
   {name:"Prof. Yannis Theocharis",inst:"Technical University of Munich · Chair of Digital Governance",topic:"Platform Heterogeneity, Affordance-Driven Participation and Cross-Platform Measurement Validity",status:"warm",sent:"16 Apr 2026",summary:"Replied within 18 hours. Found the background and platform heterogeneity framing 'very interesting'. No current PhD opening at his chair but TUM-level funded programmes exist — check PhD opportunities section. Likely to open a call around September 2026. Will keep profile in mind.",response:"\"I found your background and the problem you outline very interesting, particularly the way you connect platform heterogeneity to challenges in cross-platform measurement.\" No current opening at chair. TUM-level PhD programmes available. Call expected ~September 2026. Will keep profile in mind.",timeline:"Warm · PhD call expected Sep 2026 · keep eye on website",action:"Checked 19 Aug 2026: hfp.tum.de/en/digitalgovernance/vacancies says no vacancies at the chair; HfP open-positions list has only a postdoc (deadline 30 Sep) and a student assistant. Send him a two-line note in early September with the novelty brief link and ask whether the call is still planned; also needed as a possible DAAD supervisor letter (31 Aug, long shot)."},
   {name:"Prof. Haewoon Kwak",inst:"Indiana University Bloomington · Luddy School / SoDA Lab",topic:"Platform Structural Properties, Cross-Platform Stance Detection and Social Media Measurement Validity",status:"awaiting",sent:"16 Apr 2026",summary:"Hooked on his foundational 9,500-cited 'What is Twitter — a social network or news media?' (WWW 2010) insight that platform structural properties determine information flow type. His cross-platform stance detection work with Jisun An (mask/Trump coupling) is the analytical framework the dissertation's divergences require. He is a co-author with Jungherr on Reddit political discussions.",response:"No reply yet.",timeline:"Awaiting · follow up ~Apr 30",action:"Await reply. Follow up if no response by April 30."},
   {name:"Prof. Yulin Yu",inst:"University of Arizona · College of Information Science (joining Fall 2026)",topic:"Dataset Novelty, Cross-Platform Combination Validity and Computational Social Science Measurement",status:"awaiting",sent:"16 Apr 2026",summary:"Explicitly inviting PhD outreach for 2027 cycle on her website. PNAS 2024 paper on unusual dataset combinations and scientific impact maps directly onto the dissertation's cross-platform combination validity question. Joining Arizona as tenure-track in Fall 2026 — building first PhD cohort.",response:"No reply yet.",timeline:"2027 cycle · she explicitly invited early contact",action:"Await reply. She invited early outreach — response likely."},
@@ -1771,17 +1839,39 @@ function renderPriorities(){
       duePill='<span class="prio-pill p-soon">no hard date · do it now</span>';
     }
     const item=document.createElement('div');
-    item.className='prio-item'+(done.has(p.id)?' done':'');
+    const startOpen = (p.tier==='now') && !done.has(p.id);
+    item.className='prio-item'+(done.has(p.id)?' done':'')+(startOpen?'':' collapsed');
     item.innerHTML=
       '<div class="prio-rank r-'+p.tier+'">'+(idx+1)+'</div>'
       +'<div class="prio-body">'
-      +  '<div class="prio-top"><div class="prio-name">'+p.name+'</div><div class="prio-meta">'+duePill+'<span class="prio-pill p-time">'+p.time+'</span></div></div>'
+      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+p.name+'</div><div class="prio-meta">'+duePill+'<span class="prio-pill p-time">'+p.time+'</span></div></div>'
       +  '<div class="prio-why">'+p.why+'</div>'
       +  '<ul class="prio-req">'+p.req.map(r=>'<li>'+r+'</li>').join('')+'</ul>'
-      +  (p.link?'<a class="prio-link" href="'+p.link+'" target="_blank">'+p.link.replace(/^https?:\/\//,'')+' &#8599;</a>':'')
+      +  (p.link?'<a class="prio-link" href="'+p.link+'" target="_blank">Open: '+p.link.replace(/^https?:\/\//,'').split('/')[0]+' &#8599;</a>':'')
       +'</div>'
       +'<div class="prio-check'+(done.has(p.id)?' on':'')+'" title="Mark done" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
     el.appendChild(item);
+  });
+}
+let prioAllOpen=false;
+function togglePrioAll(){
+  prioAllOpen=!prioAllOpen;
+  document.querySelectorAll('#prio-list .prio-item').forEach(i=>i.classList.toggle('collapsed',!prioAllOpen));
+  document.getElementById('prio-toggle').textContent=prioAllOpen?'Collapse all':'Expand all';
+}
+function renderDates(){
+  const el=document.getElementById('dates-list'); if(!el) return;
+  const now=new Date(); now.setHours(0,0,0,0);
+  const up=EVENTS.map(e=>({...e,ts:new Date(e.y,e.m-1,e.d)})).filter(e=>e.ts>=now).sort((a,b)=>a.ts-b.ts).slice(0,10);
+  el.innerHTML='';
+  up.forEach(e=>{
+    const days=Math.round((e.ts-now)/86400000);
+    const row=document.createElement('div'); row.className='date-row';
+    row.innerHTML='<div class="date-when"><b>'+e.d+' '+MONTHS_SHORT[e.m-1]+'</b>'+(e.y!==now.getFullYear()?e.y:'')+'</div>'
+      +'<div class="date-title">'+e.title+'</div>'
+      +'<div class="date-days'+(days<=10?' soon':'')+'">'+(days===0?'today':days+'d')+'</div>';
+    row.onclick=()=>openModal(e,e.d,e.m-1,e.y);
+    el.appendChild(row);
   });
 }
 function togglePrio(id,el){
@@ -1875,7 +1965,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '19 Aug 2026, 21:30 PKT';
+  const LAST_REFRESHED = '19 Aug 2026, 22:00 PKT';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
   const luEl = document.getElementById('last-updated-text');
   if(luEl) luEl.textContent = 'Last updated: ' + LAST_REFRESHED;
@@ -1885,6 +1975,7 @@ document.addEventListener('DOMContentLoaded', function() {
   renderCalendar();
   buildTodayActions();
   renderPriorities();
+  renderDates();
 });
 </script>
 </body>
