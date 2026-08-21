@@ -507,7 +507,7 @@ footer a:hover{color:var(--gold2)}
 <div class="panel active" id="panel-overview">
 
   <section class="now-head">
-    <div class="eyebrow"><span class="dot"></span><span>PhD Quest · Asad Ikram</span><span style="opacity:0.5">·</span><span id="last-updated-text" style="color:var(--text3)">Last updated: 20 Aug 2026, 13:30 PKT</span></div>
+    <div class="eyebrow"><span class="dot"></span><span>PhD Quest · Asad Ikram</span><span style="opacity:0.5">·</span><span id="last-updated-text" style="color:var(--text3)">Last updated: 22 Aug 2026, 12:30 PKT</span></div>
     <h1 class="now-title">What to do <em>next</em></h1>
     <p class="now-lede">Campaign for a fully funded PhD in computational social science: cross-platform measurement validity, social-listening bias, public-opinion estimation from social media. The list below is the whole plan in order; everything else on this site is detail.</p>
     <div class="stat-row">
@@ -1686,11 +1686,11 @@ const TODAY_ACTIONS = [
 // ── PRIORITY LIST ─────────────────────────────────────────────────────────────
 // Ordered by cost of missing. due = [y, m(1-12), d] or null. tier: now | week | month | later
 const PRIORITIES = [
-  {id:'p-ella', tier:'now', due:null, time:'15 min',
-   name:'Send the reply to Dr Ella (Outlook) and propose meeting slots',
-   why:'The paper is the critical path for Edinburgh. The draft is written (ella_reply_draft.md): accepts Eni\'s diagnosis, methods-paper reframe, poster to ICWSM Round 3 (15 Jan 2027), arXiv by December, three meeting slots in the week of 24 Aug.',
-   req:['Open Outlook thread with ella.haig@port.ac.uk','Paste the draft, adjust the three slots to your real availability','Send'],
-   link:null},
+  {id:'p-ella', tier:'now', due:null, time:'sent · waiting',
+   name:'Ella reply SENT 21 Aug — collect her answers to the seven questions',
+   why:'Sent from Outlook 21 Aug, 20:58. The arXiv draft is FINISHED (v1.4: six-step protocol, 500-run simulation, dissertation evidence; 23 pages, 12 figures) and posting to cs.SI in Aug/Sep is gated only on her answers to the seven questions boxed on the brief. ICWSM is a separate track for the meeting.',
+   req:['If no reply by Wed 26 Aug, send a one-line nudge','Collect her seven answers (email or meeting)','On sign-off: run ARXIV_CHECKLIST.md in the arxiv_thesis repo and post to arXiv (cs.SI, cross-list cs.CL)'],
+   link:'https://asadfix.github.io/publish_proposal/#paper'},
   {id:'p-utrecht', tier:'now', due:[2026,8,31], time:'2-3 h prep',
    name:'Utrecht "What Moves Us?" - APPLIED 20 Aug. Prepare for interviews on 31 August',
    why:'Application submitted on deadline day with a tailored CV, panel-reviewed letter, certified transcript and certificate. First interviews are 31 August. You are in a live process with named supervisors who have read a letter hooking their own work - one of the best near-term chances on this list.',
@@ -1920,7 +1920,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '20 Aug 2026, 13:30 PKT';
+  const LAST_REFRESHED = '22 Aug 2026, 12:30 PKT';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
   const luEl = document.getElementById('last-updated-text');
   if(luEl) luEl.textContent = 'Last updated: ' + LAST_REFRESHED;
