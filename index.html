@@ -340,6 +340,24 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 footer a{color:var(--gold)}
 footer a:hover{color:var(--gold2)}
 
+/* ── FIT + PATTERN TABS ── */
+.fit-nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:18px 0}
+.fn{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-align:center}
+.fn b{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--gold);line-height:1.1}
+.fn span{font-size:11px;color:var(--text3);line-height:1.4;display:block;margin-top:4px}
+.fit-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:12px}
+.fit-card h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--text);margin-bottom:8px}
+.fc-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:4px}
+.fit-card p,.fit-card li{font-size:13.5px;color:var(--text2);line-height:1.65}
+.fit-card ul{margin:6px 0 0 18px}
+.fit-card .hl{color:var(--gold)}
+.fit-card a{color:var(--cyan)}
+.pat-block{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--cyan);border-radius:10px;padding:13px 16px;margin:10px 0;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;color:var(--text2);white-space:pre-wrap;overflow-x:auto}
+.pat-step{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:22px 0 6px}
+.check-item{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 14px;margin-bottom:8px;font-size:13px;color:var(--text2);line-height:1.6}
+.check-item b{color:var(--text)}
+.check-n{font-family:'JetBrains Mono',monospace;color:var(--cyan);font-size:12px;flex-shrink:0;background:var(--cyan-dim);border-radius:6px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+
 /* ── MOBILE NAV (≤700px): fixed bottom tab bar ── */
 @media(max-width:700px){
   header{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(5,8,15,0.98)}
@@ -497,6 +515,8 @@ footer a:hover{color:var(--gold2)}
       <button class="tab-btn active" onclick="switchTab('overview',this)"><span class="tab-ico">◈</span>Now</button>
       <button class="tab-btn" onclick="switchTab('outreach',this)"><span class="tab-ico">◉</span>Outreach</button>
       <button class="tab-btn" onclick="switchTab('papers',this)"><span class="tab-ico">◇</span>Papers<span class="tab-label-long">&nbsp;&amp; Docs</span></button>
+      <button class="tab-btn" onclick="switchTab('fit',this)"><span class="tab-ico">◆</span>Why me</button>
+      <button class="tab-btn" onclick="switchTab('pattern',this)"><span class="tab-ico">✉</span>Emails</button>
       <button class="tab-btn" onclick="switchTab('calendar',this)"><span class="tab-ico">○</span>Calendar</button>
       <button class="tab-btn" onclick="switchTab('claude',this)"><span class="tab-ico">✦</span>Plan</button>
     </nav>
@@ -792,6 +812,130 @@ footer a:hover{color:var(--gold2)}
       </div>
     </div>
   </div>
+</div>
+
+<!-- TAB: WHY ME -->
+<div class="panel" id="panel-fit">
+  <div class="sec-head"><span class="sec-tag">Case</span><h2 class="sec-title">Why I Am Fit For This</h2></div>
+  <p style="font-size:14.5px;color:var(--text2);max-width:640px;line-height:1.7;margin-bottom:6px">The one-paragraph version, reusable in any letter or interview: <span style="color:var(--text)">I have spent six years building the social media measurement pipelines that governments and brands act on, I found their central validity flaw in my own MSc research, and I have already turned that flaw into a written methods paper. The field's usual bottleneck, collecting platform data at scale, is my day job. The field's open question, whether those measurements mean the same thing across platforms, is my research.</span></p>
+
+  <div class="fit-nums">
+    <div class="fn"><b>6+</b><span>years building platform data pipelines in production</span></div>
+    <div class="fn"><b>500+</b><span>scrapers led across 15 MENA countries at Dubizzle Labs</span></div>
+    <div class="fn"><b>50M+</b><span>data points from 200+ sources at Fix.com</span></div>
+    <div class="fn"><b>279k</b><span>posts analysed across four platforms in the dissertation</span></div>
+    <div class="fn"><b>0.878</b><span>macro-F1, fine-tuned BERT, human-validated (kappa ~0.78)</span></div>
+    <div class="fn"><b>23pp</b><span>methods paper with Dr Ella Haig, arXiv imminent</span></div>
+    <div class="fn"><b>500</b><span>simulation replications behind the paper's headline result</span></div>
+    <div class="fn"><b>70,000+</b><span>applicants; Chevening selected me as one of its scholars</span></div>
+  </div>
+
+  <div class="fit-card">
+    <span class="fc-tag">1 · I build the instruments</span>
+    <h3>Six years inside the industry this research audits</h3>
+    <ul>
+      <li><span class="hl">M+C Saatchi Fluency</span> (Dec 2024 - present): I designed and operate the multi-platform social listening pipeline behind campaign intelligence for <b style="color:var(--text)">UK Government departments</b>, Amazon, Ford, Nike and Reckitt: Sprinklr and Brandwatch feeds plus custom crawlers into AWS, with SageMaker NLP sentiment models. Senior government communications teams read these reports. I run the Ford LENS fleet: ~70 spiders across 44 domains at 99%+ uptime.</li>
+      <li><span class="hl">Dubizzle Labs</span> (2022 - 2024): led a 3-engineer team owning 500+ regional scrapers across 15 countries in four languages; redesigned the layered warehouse, throughput up 60%; promoted twice in two years.</li>
+      <li><span class="hl">Fix.com</span> (2023 - present): Scrapy pipelines processing 50M+ data points from 200+ sources; Great Expectations validation cut bad production data 70%.</li>
+      <li><span class="hl">Freelance since 2018</span>: 300+ five-star data projects across 400+ websites; author of web-scraping-guide.com, a free public reference covering 86 tools and the legal, ethical and anti-bot landscape.</li>
+    </ul>
+    <p style="margin-top:10px">Why it matters for a PhD: <b style="color:var(--text)">collection risk, the usual killer of platform research projects, is removed.</b> Any data a design needs, I can get, at scale, under the platform's rules.</p>
+  </div>
+
+  <div class="fit-card">
+    <span class="fc-tag">2 · I did the research</span>
+    <h3>From a Distinction dissertation to a finished paper</h3>
+    <ul>
+      <li><span class="hl">MSc dissertation</span> (Portsmouth 2025, Distinction, supervisor Dr Ella Haig): cross-platform NLP framework on ~279,000 posts from Twitter/X, Reddit, YouTube and Quora on UK economic policy. Fine-tuned BERT at macro-F1 0.878 against BiLSTM and lexicon baselines, human validation, McNemar and bootstrap testing, NRC emotion analysis, LIME explainability, Prophet forecasting. Central finding: the same policy event produces structurally different sentiment profiles per platform.</li>
+      <li><span class="hl">The methods paper</span> (with Dr Ella Haig, arXiv imminent): "Is the Platform Part of the Measurement?" treats each platform as a survey mode and specifies a six-step psychometric equivalence protocol. Across 500 known-truth replications, a pooled index reports the wrong sign of aggregate sentiment on about a quarter of days; a measurement-adjusted index does not. 23 pages, 12 figures, reviewed by an ICWSM-experienced researcher. <a href="https://asadfix.github.io/publish_proposal/#paper" target="_blank">Project brief &#8599;</a></li>
+      <li><span class="hl">Next</span>: the four-platform empirical application is pre-specified in the paper as the follow-up study; ICWSM 2027 is the target venue for the applied work.</li>
+    </ul>
+    <p style="margin-top:10px">Why it matters: <b style="color:var(--text)">I arrive with publication momentum, not a promise of it.</b> The first paper of the PhD is written before day one.</p>
+  </div>
+
+  <div class="fit-card">
+    <span class="fc-tag">3 · I live the problem</span>
+    <h3>ArtemisAI: the research question as a commercial reality</h3>
+    <p>I am founder and CTO of <a href="https://www.artemisai.co.uk" target="_blank">ArtemisAI Ltd</a>, a UK social media intelligence platform (launching late 2026): six production NLP model endpoints on SageMaker, 111,000+ posts and 3.2M+ comments processed, CLIP visual and Node2Vec graph embeddings, engagement prediction, crisis detection, an LLM analysis layer. Its honest commercial problem is exactly the research gap: <b style="color:var(--text)">we pool platform scores every day and cannot say what the pooled number measures.</b> No vendor in the industry documents cross-platform equivalence testing. I know because I have read their documentation and built their competitors' pipelines.</p>
+  </div>
+
+  <div class="fit-card">
+    <span class="fc-tag">4 · What a supervisor gets</span>
+    <h3>The practical case</h3>
+    <ul>
+      <li>A student whose <b style="color:var(--text)">first paper is already written</b> and whose empirical follow-up is pre-specified.</li>
+      <li><b style="color:var(--text)">Engineering self-sufficiency</b>: infrastructure, scraping, cloud and MLOps need no training and no budget line.</li>
+      <li>A question held for years and <b style="color:var(--text)">tested against pushback</b>: it survived an ICWSM-experienced reviewer and a sceptical field lecturer, and got sharper both times.</li>
+      <li>The <b style="color:var(--text)">Chevening credential</b> (selected from 70,000+ applicants) and a Distinction MSc behind it.</li>
+      <li>A person who runs a company and two jobs and still ships research: <b style="color:var(--text)">the work arrives.</b></li>
+    </ul>
+  </div>
+
+  <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);letter-spacing:.05em;margin-top:16px">PATH: 2018 freelance data work &rarr; 2022 Dubizzle Labs (senior) &rarr; 2023 Fix.com &rarr; 2024 Chevening &rarr; 2025 MSc Distinction + ArtemisAI founded + Fluency (UK Gov) &rarr; 2026 the paper with Dr Haig &rarr; 2027 the PhD</p>
+</div>
+
+<!-- TAB: EMAIL PATTERN -->
+<div class="panel" id="panel-pattern">
+  <div class="sec-head"><span class="sec-tag">Playbook</span><h2 class="sec-title">The Master Email Pattern &middot; v2</h2></div>
+  <p style="font-size:13.5px;color:var(--text2);max-width:640px;line-height:1.7;margin-bottom:4px">Every outreach email follows this. Gold standards: the Bail and T&ouml;rnberg emails. v2 (25 Aug 2026) upgrades every draft from "dissertation finding" to "finished paper", and folds in the lessons from the Nelimarkka and Ella exchanges. Full version with the worked Bail example: <a href="Master_PhD_Email_Pattern.md" target="_blank" style="color:var(--cyan)">Master_PhD_Email_Pattern.md &#8599;</a></p>
+
+  <div class="pat-step">The six checks, before any send</div>
+  <div class="check-item"><span class="check-n">1</span><span>Does the email name the professor's <b>own theory, framework or specific paper</b>?</span></div>
+  <div class="check-item"><span class="check-n">2</span><span>Does the dissertation finding <b>land inside that theory</b>?</span></div>
+  <div class="check-item"><span class="check-n">3</span><span>Is ArtemisAI's commercial gap expressed as <b>the professor's unsolved research problem</b>?</span></div>
+  <div class="check-item"><span class="check-n">4</span><span>Does the bridging question use <b>the professor's exact vocabulary</b>?</span></div>
+  <div class="check-item"><span class="check-n">5</span><span><b>The Nelimarkka test:</b> would the claim survive "the fact that platforms differ is not novel"? Start where their literature stops, and show you read what they cite.</span></div>
+  <div class="check-item"><span class="check-n">6</span><span><b>The AI test:</b> read it aloud. No em-dashes, no dramatic fragments, contractions where natural. If it sounds like a model, redraft.</span></div>
+
+  <div class="pat-step">The structure, eight parts</div>
+  <div class="pat-block">1 OPEN   "I am writing to enquire about PhD opportunities at [inst] for [year] entry"
+         + hook on THEIR named paper, their core claim in their words
+2 WHY    Chevening built around a specific professional problem: government
+         decisions rest on pipelines that cannot [the failure THEIR work names]
+3 PROOF  Six years building those pipelines: Fluency (Sprinklr for UK Gov +
+         Amazon, Ford, Nike, Reckitt) · Dubizzle (500+ scrapers, MENA) ·
+         Fix.com (50M points, 200+ sources)
+4a DISS  279,000 posts · four platforms · BERT macro-F1 0.878 · finding:
+         same event, structurally different profiles per platform
+4b PAPER "Is the Platform Part of the Measurement?" with Dr Ella Haig:
+         six-step equivalence protocol + 500-replication simulation; pooled
+         index gets the SIGN wrong ~1/4 of days; adjusted index does not.
+         23pp · arXiv [link once live]
+5 GAP    ArtemisAI: their theoretical problem is my operational one -
+         we cannot say what our pooled scores measure
+6 BRIDGE The doctoral question, restated in THEIR exact terminology
+7 FUND   "I am looking for a fully funded position for [year] entry"
+8 ASK    Fit? Worth a formal application? CV attached; paper, dissertation
+         or proposal on request</div>
+  <p style="font-size:12.5px;color:var(--text3);line-height:1.6">Numbers never mix: <span style="color:var(--text2)">279k / 0.878 / four platforms</span> belong to the dissertation; <span style="color:var(--text2)">500 replications / wrong sign a quarter of days / off by an eighth / 23 pages</span> belong to the paper.</p>
+
+  <div class="pat-step">Subject line</div>
+  <div class="pat-block">PhD Enquiry, [year] - [Their Concept], [Your Angle] and Cross-Platform [Measurement / Validity / Estimation]</div>
+
+  <div class="pat-step">The escalations</div>
+  <div class="check-item"><span class="check-n">&#9993;</span><span><b>Follow-up</b> = two sentences + <b>one fact that changed</b> (the paper posted, a result, an acceptance). Never a bare nudge.</span></div>
+  <div class="check-item"><span class="check-n">&#9825;</span><span><b>Warm reply, no opening</b> = thank, name the window they mentioned, give the one thing that will have changed by then (the arXiv paper), stop.</span></div>
+  <div class="check-item"><span class="check-n">&#9888;</span><span><b>Critique reply</b> (the Nelimarkka lesson) = do the homework first, quote their words back and answer under them, read what they cite, move the claim one step past their literature.</span></div>
+  <div class="check-item"><span class="check-n">&#9670;</span><span><b>Pitch page</b> (high stakes only) = a one-page site answering their critique with the literature map, the paper's stats and a work-package plan. Worked example: <a href="https://asadfix.github.io/helsinki_proposal/" target="_blank" style="color:var(--cyan)">asadfix.github.io/helsinki_proposal</a></span></div>
+  <div class="check-item"><span class="check-n">&#8986;</span><span><b>Late reply</b> (the Ella lesson) = apologise once, real reason in two plain sentences, then show the finished work. The work is the apology.</span></div>
+
+  <div class="pat-step">Hooks used so far</div>
+  <div class="pat-block">Bail (Duke)          prism refracting identity, not a mirror reflecting opinion
+Jungherr (Bamberg)   Twitter metrics measure attention, not support (SSCR 2017)
+Theocharis (TUM)     platforms are several tools with distinct affordances
+Kwak (Indiana)       WWW 2010: structure determines information flow type
+Yu (Arizona)         PNAS 2024: unusual dataset combinations; hers productive,
+                     mine measurement-valid - same question, opposite directions
+Chadwick (Loughborough)  conflict avoidance in messaging; sharing norms
+                     invisible to sentiment models
+Starbird (UW)        collective sensemaking across platforms
+Gligoric (JHU)       NAACL 2025: when do LLM annotations give valid estimates
+Nelimarkka (Helsinki) Platformed Interactions 2020 + Berg &amp; Nelimarkka 2023
+                     (JASIST): same images, different services, divergent
+                     outputs - his observation, upgraded to a measurement model</div>
+
+  <div class="pat-step">Never</div>
+  <p style="font-size:13px;color:var(--text2);line-height:1.8">Generic hooks &middot; describing their field back to them &middot; leading with the CV &middot; novelty claims without the state of the art &middot; em-dashes &middot; AI-sounding prose &middot; a missing attachment &middot; an unverified address (two bounced) &middot; a follow-up with nothing new in it.</p>
 </div>
 
 <!-- TAB 4: CALENDAR -->
