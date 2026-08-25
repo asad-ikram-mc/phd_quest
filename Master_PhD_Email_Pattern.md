@@ -103,9 +103,11 @@ protocol inside the professor's framework.
 I am also CTO and co-founder of ArtemisAI (https://www.artemisai.co.uk), a
 UK-based social media intelligence platform currently in early access
 development. ArtemisAI runs its NLP models simultaneously across brand social
-data, delivering sentiment velocity monitoring, crisis detection, virality
-prediction and audience segmentation, built on AWS SageMaker, GPT-4, Pinecone
-and Redshift. [The problem their research identifies theoretically is the
+data through a six-model NLP suite with a three-tier LLM fallback cascade,
+3.39M comments ingested, CLIP multimodal fusion and video intelligence, built
+on AWS SageMaker and Redshift. When useful, the concrete detail: in production
+our two model tiers agree on 82.9% of sentiment labels and 0.0% of toxicity
+labels, while the toxicity model reports 96.7% average confidence. [The problem their research identifies theoretically is the
 problem ArtemisAI faces operationally every day: we cannot say what our
 pooled scores measure.]
 ```
