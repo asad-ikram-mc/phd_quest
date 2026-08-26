@@ -271,7 +271,8 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 .prio-item.done{opacity:0.42}
 .prio-item.done .prio-name{text-decoration:line-through}
 .prio-rank{width:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--gold);border-right:1px solid var(--border)}
-.prio-rank.r-now{background:var(--red-bg);color:var(--red)} .prio-rank.r-week{background:var(--amber-bg);color:var(--amber)} .prio-rank.r-month{background:var(--cyan-dim);color:var(--cyan)} .prio-rank.r-later{background:var(--purple-bg);color:var(--purple)}
+.prio-rank.r-now{background:var(--red-bg);color:var(--red)} .prio-rank.r-week{background:var(--amber-bg);color:var(--amber)} .prio-rank.r-month{background:var(--cyan-dim);color:var(--cyan)} .prio-rank.r-later{background:var(--purple-bg);color:var(--purple)} .prio-rank.r-followup{background:var(--green-bg);color:var(--green)}
+.prio-sec{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(61,214,140,0.25)}
 .prio-body{flex:1;padding:14px 16px;min-width:0}
 .prio-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .prio-name{font-size:16px;font-weight:500;color:var(--text);line-height:1.4}
@@ -1854,21 +1855,6 @@ const TODAY_ACTIONS = [
 // ── PRIORITY LIST ─────────────────────────────────────────────────────────────
 // Ordered by cost of missing. due = [y, m(1-12), d] or null. tier: now | week | month | later
 const PRIORITIES = [
-  {id:'p-ella', tier:'now', due:null, time:'sent · waiting',
-   name:'Ella reply SENT 21 Aug — collect her answers to the seven questions',
-   why:'Sent from Outlook 21 Aug, 20:58. The arXiv draft is FINISHED (v1.4: six-step protocol, 500-run simulation, dissertation evidence; 23 pages, 12 figures) and posting to cs.SI in Aug/Sep is gated only on her answers to the seven questions boxed on the brief. ICWSM is a separate track for the meeting.',
-   req:['If no reply by Wed 26 Aug, send a one-line nudge','Collect her seven answers (email or meeting)','On sign-off: run ARXIV_CHECKLIST.md in the arxiv_thesis repo and post to arXiv (cs.SI, cross-list cs.CL)'],
-   link:'https://asadfix.github.io/publish_proposal/#paper'},
-  {id:'p-utrecht', tier:'now', due:[2026,8,31], time:'2-3 h prep',
-   name:'Utrecht "What Moves Us?" - APPLIED 20 Aug. Prepare for interviews on 31 August',
-   why:'Application submitted on deadline day with a tailored CV, panel-reviewed letter, certified transcript and certificate. First interviews are 31 August. NOTE: the referee heads-up was cut from the sent Ella email, so BOTH referee notes (Ella + Jareed) still need to go - do that first. You are in a live process with named supervisors who have read a letter hooking their own work - one of the best near-term chances on this list.',
-   req:['Send the heads-up to Ella and Jareed that Utrecht may contact them','Re-read your letter and their project text before the interview','Prepare 3 stories: the Dubizzle contradiction, the mini-budget divergence finding, and how you would design the first study; plus 2 questions for them (data-donation design, survey-experiment plans)','Test camera/mic; keep 31 Aug free (CEST hours)'],
-   link:'https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/phd-a-multimodal-analysis-of-emotion-narrative-and-migration-politics-online'},
-  {id:'p-nelimarkka', tier:'now', due:[2026,9,7], time:'waiting · then joint application',
-   name:'SENT 26 Aug: Nelimarkka reply with the Calibrating the Observatory proposal — await his answer (call closes 7 Sep)',
-   why:'The reply went out 26 Aug 19:08, threaded in his own thread, with the proposal PDF one click away on the pitch page. If he says yes this is a salaried CSS PhD from January; the application needs his SIGNED supervision plan before 7 Sep 23:59.',
-   req:['Await reply; if silent by 1 Sep send the two-line nudge (one new fact: the arXiv link once live)','On yes: rewrite the PP26 boxes in your own words (drafts in the proposal appendix, inside every character cap), supervision plan to him for signature, submit before 7 Sep 23:59','Separate study-right application: Social Sciences programme call 2–15 Sep · keep 2–4 Nov free for Zoom interviews'],
-   link:'https://asadfix.github.io/helsinki_proposal/'},
   {id:'p-edinburgh', tier:'week', due:[2027,1,7], time:'2 days over Oct–Dec',
    name:'Edinburgh CDT (Magdy + Ross) — opens ~Oct, deadline ~7 Jan 2027 (confirm when posted)',
    why:'The #1 application. Magdy: "please do your best to get a publication by then" — the arXiv preprint is what it cites. Glasgow is no longer a backup.',
@@ -1939,6 +1925,21 @@ const PRIORITIES = [
    why:'Round 2 (15 Sep) is full papers only and too soon; posters are accepted only in Round 3. The preprint is the evidence every December / January application cites.',
    req:['Agreed plan with Ella (platforms, gold-set size, second annotator, venue)','Annotation of 1,000–1,500 posts from anchor windows','Multilevel model + invariance/DIF + equating + naive-vs-adjusted simulation','Update the novelty brief to the reframed plan','arXiv by mid-Dec; ICWSM Round 3 submission 15 Jan 2027 23:59 AoE'],
    link:'https://www.icwsm.org/2027/submit/'},
+  {id:'p-ella', tier:'followup', due:null, time:'sent · waiting',
+   name:'Ella reply SENT 21 Aug — collect her answers to the seven questions',
+   why:'Sent from Outlook 21 Aug, 20:58. The arXiv draft is FINISHED (v1.4: six-step protocol, 500-run simulation, dissertation evidence; 23 pages, 12 figures) and posting to cs.SI in Aug/Sep is gated only on her answers to the seven questions boxed on the brief. ICWSM is a separate track for the meeting.',
+   req:['If no reply by Wed 26 Aug, send a one-line nudge','Collect her seven answers (email or meeting)','On sign-off: run ARXIV_CHECKLIST.md in the arxiv_thesis repo and post to arXiv (cs.SI, cross-list cs.CL)'],
+   link:'https://asadfix.github.io/publish_proposal/#paper'},
+  {id:'p-utrecht', tier:'followup', due:[2026,8,31], time:'2-3 h prep',
+   name:'Utrecht "What Moves Us?" — APPLIED 20 Aug · follow-up: referee heads-ups + 31 Aug interview prep',
+   why:'Application submitted on deadline day with a tailored CV, panel-reviewed letter, certified transcript and certificate. First interviews are 31 August. NOTE: the referee heads-up was cut from the sent Ella email, so BOTH referee notes (Ella + Jareed) still need to go - do that first. You are in a live process with named supervisors who have read a letter hooking their own work - one of the best near-term chances on this list.',
+   req:['Send the heads-up to Ella and Jareed that Utrecht may contact them','Re-read your letter and their project text before the interview','Prepare 3 stories: the Dubizzle contradiction, the mini-budget divergence finding, and how you would design the first study; plus 2 questions for them (data-donation design, survey-experiment plans)','Test camera/mic; keep 31 Aug free (CEST hours)'],
+   link:'https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/phd-a-multimodal-analysis-of-emotion-narrative-and-migration-politics-online'},
+  {id:'p-nelimarkka', tier:'followup', due:[2026,9,7], time:'waiting · then joint application',
+   name:'SENT 26 Aug: Nelimarkka reply with the Calibrating the Observatory proposal — await his answer (call closes 7 Sep)',
+   why:'The reply went out 26 Aug 19:08, threaded in his own thread, with the proposal PDF one click away on the pitch page. If he says yes this is a salaried CSS PhD from January; the application needs his SIGNED supervision plan before 7 Sep 23:59.',
+   req:['Await reply; if silent by 1 Sep send the two-line nudge (one new fact: the arXiv link once live)','On yes: rewrite the PP26 boxes in your own words (drafts in the proposal appendix, inside every character cap), supervision plan to him for signature, submit before 7 Sep 23:59','Separate study-right application: Social Sciences programme call 2–15 Sep · keep 2–4 Nov free for Zoom interviews'],
+   link:'https://asadfix.github.io/helsinki_proposal/'},
 ];
 
 function renderPriorities(){
@@ -1946,7 +1947,9 @@ function renderPriorities(){
   const now=new Date(); now.setHours(0,0,0,0);
   const done=new Set(JSON.parse(localStorage.getItem('prio-done')||'[]'));
   el.innerHTML='';
-  PRIORITIES.forEach((p,idx)=>{
+  const actives=PRIORITIES.filter(p=>p.tier!=='followup');
+  const fups=PRIORITIES.filter(p=>p.tier==='followup');
+  const renderOne=(p,idx)=>{
     let duePill='';
     if(p.due){
       const d=new Date(p.due[0],p.due[1]-1,p.due[2]);
@@ -1974,7 +1977,12 @@ function renderPriorities(){
       +'</div>'
       +'<div class="prio-check'+(done.has(p.id)?' on':'')+'" title="Mark done" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
     el.appendChild(item);
-  });
+  };
+  actives.forEach(renderOne);
+  if(fups.length){
+    const h=document.createElement('div');h.className='prio-sec';h.textContent='Done \u2014 sent or submitted \u00b7 needs follow-up';el.appendChild(h);
+    fups.forEach((p,i)=>renderOne(p,actives.length+i));
+  }
 }
 let prioAllOpen=false;
 function togglePrioAll(){
