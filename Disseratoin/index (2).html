@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My contribution &middot; Asad Ikram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --paper:#fbfaf7;--paper-2:#ffffff;--ink:#1c1b19;--ink-soft:#55524c;--ink-faint:#8a857d;
+    --line:#e6e1d8;--line-2:#d8d2c6;--accent:#7a1f2b;--accent-soft:#a8424f;--teal:#1f6b63;
+    --wash:#f3efe7;--glow:#e7b53c;--glow-soft:rgba(231,181,60,.55);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:740px;margin:0 auto;padding:0 26px}
+
+  @keyframes glowPulse{0%,100%{box-shadow:0 0 0 1px var(--glow-soft),0 0 18px -2px var(--glow-soft)}50%{box-shadow:0 0 0 1px var(--glow),0 0 36px 2px var(--glow-soft)}}
+  @keyframes dotGlow{0%,100%{box-shadow:0 0 6px 1px var(--glow-soft);opacity:.9}50%{box-shadow:0 0 14px 3px var(--glow-soft);opacity:1}}
+  .glow-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:#7a5b14;background:rgba(231,181,60,.14);border:1px solid rgba(231,181,60,.5);padding:5px 12px;border-radius:100px;animation:glowPulse 2.8s ease-in-out infinite}
+  .glow-badge .spark{width:7px;height:7px;border-radius:50%;background:var(--glow);animation:dotGlow 2.8s ease-in-out infinite}
+  .glow-ring{animation:glowPulse 3s ease-in-out infinite}
+
+  .meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:22px 0;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.04em;color:var(--ink-faint)}
+  .meta .tag{text-transform:uppercase;letter-spacing:.18em;font-size:11.5px}
+
+  .hero{padding:60px 0 30px}
+  .eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;font-weight:500}
+  h1{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(32px,5.4vw,54px);line-height:1.07;letter-spacing:-.015em;margin-bottom:24px}
+  h1 em{font-style:italic;color:var(--accent)}
+  .lede{font-size:clamp(18px,2.3vw,22px);color:var(--ink-soft);font-weight:300;line-height:1.6;max-width:642px}
+  .lede strong{color:var(--ink);font-weight:500}
+
+  .source{margin:34px 0 8px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:var(--paper-2);border:1px solid rgba(231,181,60,.5);border-radius:12px;padding:18px 22px}
+  .source .ico{width:42px;height:42px;border-radius:9px;background:var(--wash);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+  .source .txt{flex:1;min-width:200px}
+  .source .txt .t{font-family:"Fraunces";font-size:16px;line-height:1.3;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .source .txt .s{font-size:13.5px;color:var(--ink-faint)}
+  .source a.btn{text-decoration:none;background:var(--ink);color:var(--paper);font-size:14.5px;padding:10px 20px;border-radius:8px;transition:background .2s,transform .2s;white-space:nowrap}
+  .source a.btn:hover{background:var(--accent);transform:translateY(-1px)}
+
+  .sec{padding:46px 0 0}
+  .kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:12px}
+  h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(25px,3.4vw,34px);line-height:1.14;letter-spacing:-.01em;margin-bottom:16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .sec p{color:var(--ink-soft);font-weight:300}
+  .sec p strong{color:var(--ink);font-weight:500}
+
+  /* CONTRIBUTION CENTREPIECE */
+  .contrib{margin-top:4px;background:var(--paper-2);border:1px solid var(--glow);border-radius:16px;padding:30px;box-shadow:0 0 0 1px var(--glow-soft),0 0 30px -6px var(--glow-soft)}
+  .contrib .big{font-size:19px;color:var(--ink);font-weight:300;line-height:1.55;margin-bottom:18px}
+  .contrib .big b{font-weight:600;color:var(--accent)}
+  .contrib .mid{font-size:15.5px;color:var(--ink-soft);font-weight:300;line-height:1.55;margin:18px 0 16px}
+  .contrib .cpts{display:grid;gap:12px;margin-bottom:18px}
+  .contrib .cpt{display:grid;grid-template-columns:30px 1fr;gap:13px;align-items:start;font-size:16px;color:var(--ink-soft);font-weight:300;line-height:1.5}
+  .contrib .cpt .cn{font-family:"Fraunces";font-style:italic;font-size:21px;color:var(--accent);line-height:1.15}
+  .contrib .cpt b{color:var(--ink);font-weight:500}
+  .tagm{display:inline-block;margin-left:6px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;border-radius:100px;padding:2px 9px;vertical-align:middle;color:var(--teal);background:rgba(31,107,99,.08);border:1px solid rgba(31,107,99,.25)}
+  .tagm.gold{color:#7a5b14;background:rgba(231,181,60,.16);border:1px solid rgba(231,181,60,.55)}
+  .tagm.soft{color:var(--ink-faint);background:rgba(0,0,0,.02);border:1px solid var(--line-2)}
+  .contrib .honest{font-size:14px;color:var(--ink-faint);font-weight:300;line-height:1.5;border-top:1px solid var(--line);padding-top:15px;margin:0}
+  .contrib .honest a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(122,31,43,.3)}
+  .contrib .honest a:hover{border-color:var(--accent)}
+
+  .analogy{margin:18px 0;display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+  @media(max-width:640px){.analogy{grid-template-columns:1fr;gap:10px}}
+  .anabox{border:1px solid var(--line-2);border-radius:11px;padding:17px;background:var(--wash)}
+  .anabox .lab{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;font-weight:500}
+  .anabox h3{font-family:"Fraunces";font-weight:500;font-size:17px;margin-bottom:7px;line-height:1.2}
+  .anabox p{font-size:14px;color:var(--ink-soft);font-weight:300;line-height:1.45}
+  .anabox.bridge{border-color:rgba(231,181,60,.5)}
+  .arrowcol{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent)}
+  @media(max-width:640px){.arrowcol{transform:rotate(90deg)}}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+  @media(max-width:640px){.two{grid-template-columns:1fr}}
+  .bias{border:1px solid var(--line-2);border-radius:12px;padding:22px;background:var(--paper-2);position:relative}
+  .bias.ours{border-color:rgba(231,181,60,.55)}
+  .bias .lab{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;font-weight:500;display:flex;align-items:center;gap:8px}
+  .bias.known .lab{color:var(--ink-faint)}
+  .bias.ours .lab{color:#7a5b14}
+  .bias.ours .lab .spark{width:6px;height:6px;border-radius:50%;background:var(--glow);animation:dotGlow 2.8s ease-in-out infinite}
+  .bias h3{font-family:"Fraunces";font-weight:500;font-size:20px;margin-bottom:8px}
+  .bias p{font-size:15.5px;color:var(--ink-soft);font-weight:300;line-height:1.5}
+  .bias.ours p{color:var(--ink)}
+  .bias .src{margin-top:12px;font-size:12.5px}
+  .bias .src a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(122,31,43,.3)}
+  .bias .src a:hover{border-color:var(--accent)}
+
+  .ledger{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.ledger{grid-template-columns:1fr}}
+  .led{border:1px solid var(--line-2);border-radius:14px;padding:22px;background:var(--paper-2)}
+  .led.add{border-color:rgba(231,181,60,.55)}
+  .led .lh{font-family:"Fraunces";font-weight:500;font-size:18px;margin-bottom:3px}
+  .led .ls{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:15px;font-weight:500}
+  .led.add .ls{color:#7a5b14}
+  .led ul{list-style:none}
+  .led li{position:relative;padding-left:22px;margin-bottom:11px;font-size:14.5px;color:var(--ink-soft);font-weight:300;line-height:1.5}
+  .led li:last-child{margin-bottom:0}
+  .led li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  .led.add li::before{background:var(--glow);box-shadow:0 0 7px 1px var(--glow-soft)}
+  .led li b{color:var(--ink);font-weight:500}
+
+  .flow{margin-top:24px;display:flex;flex-direction:column;align-items:stretch}
+  .fnode{border:1px solid var(--line-2);border-radius:12px;background:var(--paper-2);padding:16px 20px;display:flex;gap:16px;align-items:flex-start}
+  .fnode .fn{font-family:"Fraunces";font-style:italic;font-size:20px;color:var(--accent);width:24px;flex-shrink:0;text-align:center}
+  .fnode .ft{font-size:15.5px;color:var(--ink);font-weight:300;line-height:1.45}
+  .fnode .ft b{font-weight:500}
+  .fnode .ft .sub{display:block;margin-top:4px;color:var(--ink-faint);font-size:13px}
+  .fnode .ft .prior{display:block;margin-top:9px;padding-left:11px;border-left:2px solid rgba(122,31,43,.25);font-size:12.5px;color:var(--ink-faint);line-height:1.45}
+  .fnode .ft .prior b{color:var(--accent-soft);font-weight:600}
+  .fnode .ft .prior a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(122,31,43,.3);font-weight:500}
+  .fnode .ft .prior a:hover{border-color:var(--accent)}
+  .ftag{display:inline-block;margin-left:8px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--teal);background:rgba(31,107,99,.08);border:1px solid rgba(31,107,99,.25);border-radius:100px;padding:2px 9px;vertical-align:middle}
+  .ftag.gold{color:#7a5b14;background:rgba(231,181,60,.16);border-color:rgba(231,181,60,.55)}
+  .ftag.soft{color:var(--ink-faint);background:rgba(0,0,0,.02);border-color:var(--line-2)}
+  .fnode.io{background:var(--wash);border-style:dashed;justify-content:center;text-align:center}
+  .fnode.io .ft{color:var(--ink-soft);font-size:15px}
+  .fnode.io.out{border-color:rgba(122,31,43,.4);background:rgba(122,31,43,.05)}
+  .fnode.io.out .ft{color:var(--accent)}
+  .fnode.core{border-color:var(--glow);animation:glowPulse 3s ease-in-out infinite}
+  .fconn{position:relative;height:26px;display:flex;align-items:center;justify-content:center}
+  .fconn::before{content:"";width:2px;height:100%;background:linear-gradient(var(--line-2),var(--accent-soft))}
+  .fconn::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--accent-soft)}
+
+  .near{margin-top:24px;display:grid;gap:14px}
+  .nbox{border:1px solid var(--line-2);border-radius:12px;padding:20px 22px;background:var(--paper-2)}
+  .nbox .nh{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+  .nbox .nt{font-family:"Fraunces";font-weight:500;font-size:17px}
+  .nbox .nv{font-size:12px;color:var(--ink-faint);font-style:italic}
+  .nbox .nd{font-size:14.5px;font-weight:300;line-height:1.5;color:var(--ink-soft)}
+  .nbox .nd b{color:var(--ink);font-weight:500}
+  .nbox a.mini{font-size:12.5px;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(122,31,43,.3)}
+  .nbox a.mini:hover{border-color:var(--accent)}
+
+  .limits{margin-top:24px;background:var(--paper-2);border:1px solid var(--line-2);border-radius:14px;padding:24px 26px}
+  .limits .sub{font-size:14.5px;color:var(--ink-soft);font-weight:300;margin-bottom:16px}
+  .limits ul{list-style:none}
+  .limits li{position:relative;padding-left:22px;margin-bottom:12px;font-size:15px;color:var(--ink-soft);font-weight:300;line-height:1.5}
+  .limits li:last-child{margin-bottom:0}
+  .limits li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:1px;background:var(--accent-soft)}
+  .limits li b{color:var(--ink);font-weight:500}
+
+  .claim{margin:44px 0;border-left:3px solid var(--glow);padding:18px 0 18px 26px;position:relative}
+  .claim::before{content:"";position:absolute;left:-3px;top:0;bottom:0;width:3px;background:var(--glow);box-shadow:0 0 12px 1px var(--glow-soft);animation:dotGlow 3s ease-in-out infinite}
+  .claim p{font-family:"Fraunces";font-style:italic;font-size:clamp(20px,2.6vw,25px);line-height:1.42;color:var(--ink)}
+  .claim p b{font-style:normal;font-weight:600;color:var(--accent)}
+
+  .biblio{margin-top:24px;background:var(--paper-2);border:1px solid var(--line-2);border-radius:14px;padding:24px 26px}
+  .biblio h3{font-family:"Fraunces";font-weight:500;font-size:18px;margin-bottom:6px}
+  .biblio .note{font-size:13px;color:var(--ink-faint);font-weight:300;margin-bottom:6px}
+  .biblio .grp{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500;margin:18px 0 10px}
+  .biblio ol{list-style:none;counter-reset:b}
+  .biblio li{counter-increment:b;position:relative;padding-left:30px;margin-bottom:11px;font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.5}
+  .biblio li::before{content:counter(b);position:absolute;left:0;top:0;font-family:"Fraunces";font-style:italic;color:var(--accent);font-size:14px}
+  .biblio li a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(122,31,43,.3);word-break:break-word}
+  .biblio li a:hover{border-color:var(--accent)}
+  .biblio li b{color:var(--ink);font-weight:500}
+
+  .foot{margin:56px 0 56px;border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  .foot .who{font-family:"Fraunces";font-size:18px}
+  .foot .who span{display:block;font-size:13px;color:var(--ink-faint);font-family:"Newsreader";margin-top:7px;line-height:1.7}
+  .foot .lk{font-size:14px;text-align:right}
+  .foot .lk a{color:var(--accent);text-decoration:none;display:block;margin-bottom:6px}
+  .foot .lk a:hover{text-decoration:underline}
+
+  .reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+  .js .reveal{opacity:0;transform:translateY(20px)}
+  .js .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="meta">
+    <div class="tag">Paper idea, for review</div>
+    <div>For Dr Ella Haig</div>
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow">A paper from my MSc dissertation</div>
+    <h1>How much of public sentiment is really the public, and how much is just the <em>platform?</em></h1>
+    <p class="lede">Lots of studies show sentiment differs across Twitter, Reddit, YouTube and Quora, then stop. My contribution is to treat each platform as a <strong>measuring instrument</strong>, so I can separate how much of that difference is the platform itself from how much is real disagreement, and put the platforms on one comparable scale. As far as I can find, that has not been done for machine-labelled sentiment.</p>
+
+    <div class="source glow-ring">
+      <div class="ico">&#128196;</div>
+      <div class="txt">
+        <div class="t">My MSc dissertation (full text) <span class="glow-badge"><span class="spark"></span>the data and findings</span></div>
+        <div class="s">Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies</div>
+      </div>
+      <a class="btn" href="dissertation.pdf" target="_blank">Read the dissertation &#8599;</a>
+    </div>
+  </header>
+
+  <!-- CONTRIBUTION CENTREPIECE -->
+  <section class="sec reveal">
+    <div class="kicker">What is genuinely new</div>
+    <h2>My contribution <span class="glow-badge"><span class="spark"></span>the novelty</span></h2>
+    <div class="contrib">
+      <p class="big">Plenty of studies show sentiment differs across platforms, then stop. I treat each platform as a <b>measuring instrument</b>, the way a survey researcher treats phone, online and face to face as different ways of asking the same question.</p>
+
+      <div class="analogy">
+        <div class="anabox"><div class="lab">Survey research (known)</div><h3>Survey mode</h3><p>Phone, online, face to face. The same person answers differently depending on how you ask.</p></div>
+        <div class="arrowcol">&rarr;</div>
+        <div class="anabox bridge"><div class="lab">My version</div><h3>Social platform</h3><p>Twitter, Reddit, YouTube, Quora. The same opinion comes out differently on each one.</p></div>
+      </div>
+
+      <p class="mid">Here is what I add. As far as I can find, these four things have not been brought together for sentiment that a model has labelled across several platforms:</p>
+      <div class="cpts">
+        <div class="cpt"><div class="cn">1</div><div><b>A new lens.</b> Seeing each platform as the measuring instrument turns "platforms differ" from a finding you just report into a measurement problem you can actually solve. <span class="tagm">the reframe</span></div></div>
+        <div class="cpt"><div class="cn">2</div><div><b>A number.</b> How much of the gap between platforms is the platform itself, and how much is people genuinely disagreeing. Generalizability theory and the multitrait-multimethod approach give a measured split, not a hand-wave. <span class="tagm gold">main result</span></div></div>
+        <div class="cpt"><div class="cn">3</div><div><b>A fairness check.</b> A test of which platform comparisons are sound before you trust them, using measurement invariance and DIF. A check others can reuse, not a one-off. <span class="tagm">reusable</span></div></div>
+        <div class="cpt"><div class="cn">4</div><div><b>A correction.</b> Shared policy events as anchors to put every platform on one comparable scale, so the signals can finally be pooled. <span class="tagm soft">first step</span></div></div>
+      </div>
+      <p class="honest">To be clear about what is mine: the split between how it is measured and who posts is not, survey work and <a href="https://doi.org/10.1093/poq/nfab018" target="_blank">Sen et al.</a> drew that first, and others have treated human annotators as instruments in the same spirit (<a href="https://doi.org/10.1145/3531146.3533216" target="_blank">Sachdeva et al.</a>). The new part is bringing these tools to the platform itself, for machine-labelled sentiment across platforms. I am not claiming to recover a "true" opinion, only a comparable one.</p>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="sec reveal">
+    <div class="kicker">How the contribution is made</div>
+    <h2>The method, step by step</h2>
+    <p>Four steps, from a raw and incomparable mix to one signal you can compare. Each step shows the closest existing work and what it missed, which is the gap that step fills. The names link to the papers.</p>
+    <div class="flow">
+      <div class="fnode io"><div class="ft">Raw sentiment from four platforms, on scales you cannot compare</div></div>
+      <div class="fconn"></div>
+      <div class="fnode core"><div class="fn">1</div><div class="ft"><b>Measure</b> how much of the difference is the platform, not real disagreement <span class="ftag gold">main result</span><span class="sub">generalizability theory</span><span class="prior"><b>Closest:</b> <a href="https://doi.org/10.1609/icwsm.v4i1.14031" target="_blank">O'Connor et al. 2010</a>. Treated sentiment as noisy and assumed it averages out, so the systematic platform part was never measured.</span></div></div>
+      <div class="fconn"></div>
+      <div class="fnode"><div class="fn">2</div><div class="ft"><b>Check</b> which platform comparisons are actually fair <span class="ftag">new</span><span class="sub">measurement invariance, DIF</span><span class="prior"><b>Closest:</b> <a href="https://doi.org/10.1371/journal.pone.0300356" target="_blank">Boyd et al. 2024</a>. Ran this exact check across platforms, but for a survey questionnaire, not text a model had labelled.</span></div></div>
+      <div class="fconn"></div>
+      <div class="fnode"><div class="fn">3</div><div class="ft"><b>Allow</b> for the fact that platforms talk about different topics<span class="sub">multilevel modelling, topic mix held constant</span><span class="prior"><b>Closest:</b> <a href="https://doi.org/10.1177/0894439316631043" target="_blank">Jungherr et al. 2017</a>. Tackled who posts; separating the platform's own effect from the topics it happens to discuss was left open.</span></div></div>
+      <div class="fconn"></div>
+      <div class="fnode"><div class="fn">4</div><div class="ft"><b>Line up</b> the platforms onto one shared scale <span class="ftag soft">first step</span><span class="sub">equating, with shared policy events as anchors</span><span class="prior"><b>Closest:</b> <a href="https://doi.org/10.1177/19389655251327536" target="_blank">Han &amp; Anderson 2026</a>. Corrected platform bias too, but on human star ratings with a survey to check against, not machine-labelled text.</span></div></div>
+      <div class="fconn"></div>
+      <div class="fnode io out"><div class="ft">One signal you can compare across platforms</div></div>
+    </div>
+  </section>
+
+  <!-- TWO BIASES -->
+  <section class="sec reveal">
+    <div class="kicker">Why the platform part is the hard part</div>
+    <h2>Two kinds of bias, not one</h2>
+    <p>There are two reasons social media can mislead you. The first is well studied. The second, the one I work on, is mostly ignored for sentiment pulled from text, and you cannot fix it the same way.</p>
+    <div class="two">
+      <div class="bias known">
+        <div class="lab">Already studied</div>
+        <h3>Who posts</h3>
+        <p>The wrong people post, so the crowd is not representative. You fix it by re-weighting to match the population.</p>
+        <div class="src"><a href="https://doi.org/10.1177/0894439316631043" target="_blank">Jungherr et al. 2017 &#8599;</a></div>
+      </div>
+      <div class="bias ours">
+        <div class="lab"><span class="spark"></span>What I work on</div>
+        <h3>How it is measured</h3>
+        <p>Even when the opinion is the same, each platform records it differently. Re-weighting cannot fix that. You have to measure it, and ideally correct it, before mixing the numbers.</p>
+        <div class="src"><a href="https://doi.org/10.1093/poq/nfab018" target="_blank">framing from Sen et al. 2021 &#8599;</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONE VS ADD -->
+  <section class="sec reveal">
+    <div class="kicker">Built on my dissertation</div>
+    <h2>What is already done, and what I add</h2>
+    <p>The left side is my dissertation, finished. The right side is the new work for the paper, built on top of it.</p>
+    <div class="ledger">
+      <div class="led done">
+        <div class="lh">My dissertation already has</div>
+        <div class="ls">done</div>
+        <ul>
+          <li><b>The data.</b> About 279,000 posts from Twitter, Reddit, YouTube and Quora on UK economic policy, 2010 to 2025.</li>
+          <li><b>A solid classifier.</b> A fine-tuned BERT model at 0.878 macro-F1, tested and calibrated.</li>
+          <li><b>Interpretability.</b> NRC emotion, LIME and integrated gradients.</li>
+          <li><b>Forecasting.</b> A Prophet model of the sentiment trend.</li>
+          <li><b>The main finding.</b> The same policy event looks different on each platform.</li>
+        </ul>
+      </div>
+      <div class="led add">
+        <div class="lh">What I add for the paper</div>
+        <div class="ls">new</div>
+        <ul>
+          <li><b>The idea.</b> Treating each platform as a measuring instrument, not just another data source.</li>
+          <li><b>A number.</b> How much of the difference is the platform, and how much is people actually disagreeing.</li>
+          <li><b>A check.</b> A test of which platform comparisons are fair to make.</li>
+          <li><b>A fix, as a first step.</b> Putting the platforms onto one shared scale.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIMITS -->
+  <section class="sec reveal">
+    <div class="kicker">Honest limits</div>
+    <h2>What this does not do</h2>
+    <div class="limits">
+      <div class="sub">I would rather be upfront about the edges. These are the things a careful reviewer will ask about.</div>
+      <ul>
+        <li><b>Sentiment is not the same as support.</b> I measure the mood in the text, which stands in for opinion. I keep that distinction clear.</li>
+        <li><b>It is observational.</b> I can allow for different topics, but fully separating the platform from who-posts needs the same people on each platform, which is later work.</li>
+        <li><b>It is these four platforms.</b> The findings are about them, not every platform.</li>
+        <li><b>The fix needs a real test.</b> Lining the platforms up is step one. Checking it against a UK survey would come later, but the work does not depend on it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CLAIM -->
+  <section class="reveal">
+    <div class="claim">
+      <p>"Most work stops at 'platforms differ.' Mine measures <b>how much of that is the platform</b> rather than real disagreement, then puts the platforms on one scale, so social media can be read as a single comparable signal."</p>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section class="sec reveal">
+    <div class="kicker">References</div>
+    <h2>What I build on</h2>
+    <div class="biblio">
+      <div class="note">All references checked against the published record. Links go to the DOI or official page.</div>
+
+      <div class="grp">Measurement and survey methods</div>
+      <ol>
+        <li>Campbell, D. T., &amp; Fiske, D. W. (1959). <b>Convergent and discriminant validation by the multitrait-multimethod matrix</b>. <i>Psychological Bulletin</i>, 56(2), 81-105. <a href="https://doi.org/10.1037/h0046016" target="_blank">doi.org/10.1037/h0046016</a></li>
+        <li>Meredith, W. (1993). <b>Measurement invariance, factor analysis and factorial invariance</b>. <i>Psychometrika</i>, 58(4), 525-543. <a href="https://doi.org/10.1007/BF02294825" target="_blank">doi.org/10.1007/BF02294825</a></li>
+        <li>Vandenberg, R. J., &amp; Lance, C. E. (2000). <b>A review and synthesis of the measurement invariance literature</b>. <i>Organizational Research Methods</i>, 3(1), 4-70. <a href="https://doi.org/10.1177/109442810031002" target="_blank">doi.org/10.1177/109442810031002</a></li>
+        <li>Cronbach, L. J., Gleser, G. C., Nanda, H., &amp; Rajaratnam, N. (1972). <b>The Dependability of Behavioral Measurements</b>. New York: Wiley.</li>
+        <li>Brennan, R. L. (2001). <b>Generalizability Theory</b>. New York: Springer. <a href="https://doi.org/10.1007/978-1-4757-3456-0" target="_blank">doi.org/10.1007/978-1-4757-3456-0</a></li>
+        <li>Kolen, M. J., &amp; Brennan, R. L. (2014). <b>Test Equating, Scaling, and Linking</b> (3rd ed.). New York: Springer. <a href="https://doi.org/10.1007/978-1-4939-0317-7" target="_blank">doi.org/10.1007/978-1-4939-0317-7</a></li>
+        <li>Klausch, T., Hox, J. J., &amp; Schouten, B. (2013). <b>Measurement effects of survey mode on the equivalence of attitudinal rating scale questions</b>. <i>Sociological Methods &amp; Research</i>, 42(3), 227-263. <a href="https://doi.org/10.1177/0049124113500480" target="_blank">doi.org/10.1177/0049124113500480</a></li>
+        <li>Groves, R. M., &amp; Lyberg, L. (2010). <b>Total Survey Error: Past, Present, and Future</b>. <i>Public Opinion Quarterly</i>, 74(5), 849-879. <a href="https://doi.org/10.1093/poq/nfq065" target="_blank">doi.org/10.1093/poq/nfq065</a></li>
+      </ol>
+
+      <div class="grp">Social media, sentiment and the closest work</div>
+      <ol start="9">
+        <li>O'Connor, B., Balasubramanyan, R., Routledge, B. R., &amp; Smith, N. A. (2010). <b>From Tweets to Polls: Linking Text Sentiment to Public Opinion Time Series</b>. <i>ICWSM 2010</i>, 122-129. <a href="https://doi.org/10.1609/icwsm.v4i1.14031" target="_blank">doi.org/10.1609/icwsm.v4i1.14031</a></li>
+        <li>Jungherr, A., Schoen, H., Posegga, O., &amp; J&uuml;rgens, P. (2017). <b>Digital Trace Data in the Study of Public Opinion</b>. <i>Social Science Computer Review</i>, 35(3), 336-356. <a href="https://doi.org/10.1177/0894439316631043" target="_blank">doi.org/10.1177/0894439316631043</a></li>
+        <li>Olteanu, A., Castillo, C., Diaz, F., &amp; K&#305;c&#305;man, E. (2019). <b>Social Data: Biases, Methodological Pitfalls, and Ethical Boundaries</b>. <i>Frontiers in Big Data</i>, 2:13. <a href="https://doi.org/10.3389/fdata.2019.00013" target="_blank">doi.org/10.3389/fdata.2019.00013</a></li>
+        <li>Sen, I., Fl&ouml;ck, F., Weller, K., Wei&szlig;, B., &amp; Wagner, C. (2021). <b>A Total Error Framework for Digital Traces of Human Behavior on Online Platforms</b>. <i>Public Opinion Quarterly</i>, 85(S1), 399-422. <a href="https://doi.org/10.1093/poq/nfab018" target="_blank">doi.org/10.1093/poq/nfab018</a></li>
+        <li>Sachdeva, P. S., Barreto, R., von Vacano, C., &amp; Kennedy, C. J. (2022). <b>Assessing Annotator Identity Sensitivity via Item Response Theory</b>. <i>ACM FAccT 2022</i>. <a href="https://doi.org/10.1145/3531146.3533216" target="_blank">doi.org/10.1145/3531146.3533216</a></li>
+        <li>Chen, Y., Li, C., Ouyang, J., &amp; Xu, G. (2023). <b>DIF Statistical Inference Without Knowing Anchoring Items</b>. <i>Psychometrika</i>, 88(4), 1097-1122. <a href="https://doi.org/10.1007/s11336-023-09930-9" target="_blank">doi.org/10.1007/s11336-023-09930-9</a></li>
+        <li>Boyd, A. T., Rocconi, L. M., &amp; Morrow, J. A. (2024). <b>Construct validation and measurement invariance of the PRISM survey</b>. <i>PLOS ONE</i>, 19(3), e0300356. <a href="https://doi.org/10.1371/journal.pone.0300356" target="_blank">doi.org/10.1371/journal.pone.0300356</a></li>
+        <li>Han, S., &amp; Anderson, C. K. (2026). <b>The Platform Matters: Selection and Measurement Bias in Online Reviews</b>. <i>Cornell Hospitality Quarterly</i>. <a href="https://doi.org/10.1177/19389655251327536" target="_blank">doi.org/10.1177/19389655251327536</a></li>
+        <li>Wang, W., Rothschild, D., Goel, S., &amp; Gelman, A. (2015). <b>Forecasting elections with non-representative polls</b>. <i>International Journal of Forecasting</i>, 31(3), 980-991. <a href="https://doi.org/10.1016/j.ijforecast.2014.06.001" target="_blank">doi.org/10.1016/j.ijforecast.2014.06.001</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="who">
+      Asad Ikram
+      <span>
+        Chevening Scholar 2024/25 &middot; MSc Data Analytics (Distinction), Portsmouth<br>
+        Supervisor: Dr Ella Haig &middot; School of Computing
+      </span>
+    </div>
+    <div class="lk">
+      <a href="dissertation.pdf" target="_blank">Dissertation (PDF) &#8599;</a>
+      <a href="https://asad-ikram-mc.github.io/portfolio/">Portfolio &#8599;</a>
+      <a href="mailto:asad.ikram53@gmail.com">asad.ikram53@gmail.com</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  var els = document.querySelectorAll('.reveal');
+  function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function(el){ obs.observe(el); });
+  } else {
+    showAll();
+  }
+  // safety net: if the observer never fires (some embedded viewers), reveal anyway
+  setTimeout(showAll, 1400);
+  window.addEventListener('load', function(){ setTimeout(showAll, 400); });
+</script>
+</body>
+</html>
