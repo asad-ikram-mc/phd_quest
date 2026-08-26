@@ -515,6 +515,7 @@ footer a:hover{color:var(--gold2)}
     <nav class="tab-bar">
       <button class="tab-btn active" onclick="switchTab('overview',this)"><span class="tab-ico">◈</span>Now</button>
       <button class="tab-btn" onclick="switchTab('outreach',this)"><span class="tab-ico">◉</span>Outreach</button>
+      <button class="tab-btn" onclick="switchTab('active',this)"><span class="tab-ico">▣</span>Active<span class="tab-label-long">&nbsp;app</span></button>
       <button class="tab-btn" onclick="switchTab('papers',this)"><span class="tab-ico">◇</span>Papers<span class="tab-label-long">&nbsp;&amp; Docs</span></button>
       <button class="tab-btn" onclick="switchTab('fit',this)"><span class="tab-ico">◆</span>Why me</button>
       <button class="tab-btn" onclick="switchTab('pattern',this)"><span class="tab-ico">✉</span>Emails</button>
@@ -724,6 +725,47 @@ footer a:hover{color:var(--gold2)}
     <button class="filter-btn" id="period-mar" onclick="setPeriod('mar',this)">March</button>
   </div>
   <div class="prof-list" id="prof-list"></div>
+</div>
+
+<!-- TAB: ACTIVE APPLICATION WORKBENCH -->
+<div class="panel" id="panel-active">
+  <div class="sec-head"><span class="sec-tag">Working now</span><h2 class="sec-title">Edinburgh CDT — Responsible &amp; Trustworthy NLP</h2></div>
+  <p style="font-size:14px;color:var(--text2);max-width:640px;line-height:1.7;margin-bottom:18px">The application on the bench right now. When it ships, the next target moves in here. Targeted 26 Aug 2026; both statements drafted the same day.</p>
+
+  <div class="fit-nums">
+    <div class="fn"><b>~7 Jan</b><span>2027 deadline (confirm when the round posts in Oct) — we submit EARLY DEC</span></div>
+    <div class="fn"><b>£20,780</b><span>UKRI stipend + international fees WAIVED (no £10k home-only top-up)</span></div>
+    <div class="fn"><b>10-12</b><span>studentships per cohort · apply via EUCLID, no fee</span></div>
+    <div class="fn"><b>2 / 2</b><span>supervisors already warm: Magdy confirmed, Ross "great fit"</span></div>
+  </div>
+
+  <div class="fit-card">
+    <span class="fc-tag">The supervisors, in their own words</span>
+    <h3>Both have already said yes to the direction</h3>
+    <p><span class="hl">Prof. Walid Magdy</span> (SMASH, 31 Mar): <em>"Yes, please list me as a potential supervisor. But I have to be honest, the competition for scholarships are crazy. Please do your best to get a publication by then."</em> — The publication now exists; the Statement of Intent says so in one line. Alignment hook: multilingual platform equivalence (Arabic + South Asian languages).</p>
+    <p><span class="hl">Dr Bj&ouml;rn Ross</span> (17 Mar): <em>"This sounds like a great fit for my research!"</em> — and he pointed to this CDT himself. Alignment hook: the inauthenticity screen, where his bots-and-misinformation work joins the measurement pipeline.</p>
+  </div>
+
+  <div class="pat-step">Checklist</div>
+  <div class="check-item"><span class="check-n">&#10003;</span><span><b>Statement of Intent drafted</b> (~840 words of the 1,000 cap) — <a href="Edinburgh%20Application/STATEMENT_OF_INTENT_DRAFT.md" target="_blank" style="color:var(--cyan)">open</a></span></div>
+  <div class="check-item"><span class="check-n">&#10003;</span><span><b>Statement of Alignment drafted</b> (~1,260 of 1,500) mapped to the CDT's five skill domains — <a href="Edinburgh%20Application/STATEMENT_OF_ALIGNMENT_DRAFT.md" target="_blank" style="color:var(--cyan)">open</a></span></div>
+  <div class="check-item"><span class="check-n">!</span><span><b>GAP — second ACADEMIC referee.</b> Ella is one; Jareed is industry. Pick a Portsmouth lecturer and ask in September.</span></div>
+  <div class="check-item"><span class="check-n">!</span><span><b>GAP — English certificate.</b> Confirm whether the UK MSc satisfies Edinburgh's requirement or an in-date IELTS is needed (booking takes weeks).</span></div>
+  <div class="check-item"><span class="check-n">&#8987;</span><span><b>arXiv preprint live</b> — gates both statements' central claim. Ella's sign-off is the clock.</span></div>
+  <div class="check-item"><span class="check-n">&#8987;</span><span><b>October:</b> the 2027 page posts on responsiblenlp.org — confirm the deadline and the exact statement prompts, restructure drafts to their headings.</span></div>
+  <div class="check-item"><span class="check-n">&#8987;</span><span><b>November:</b> own-voice rewrite of both statements &#8594; one PDF; referee reminders.</span></div>
+  <div class="check-item"><span class="check-n">&#8987;</span><span><b>Early December:</b> submit via EUCLID. Not the 7 Jan wire — the US cluster eats mid-Dec.</span></div>
+
+  <div class="pat-step">This week</div>
+  <div class="fit-card">
+    <ul>
+      <li>Decide the second academic referee and draft the ask (send with the Ella referee ask so both go together).</li>
+      <li>One email to Portsmouth admissions or check Edinburgh's language policy page: does the UK MSc count as English evidence?</li>
+      <li>The moment the arXiv link exists: the one-fact update email to <b style="color:var(--text)">both Magdy and Ross</b> — link + "applying to the CDT this cycle".</li>
+    </ul>
+  </div>
+
+  <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);letter-spacing:.05em;margin-top:16px">FULL NOTES: <a href="Edinburgh%20Application/NOTES_AND_CHECKLIST.md" target="_blank" style="color:var(--cyan)">Edinburgh Application/NOTES_AND_CHECKLIST.md</a> &middot; QUEUE AFTER THIS: HPI R&ouml;ttger form &middot; TU Wien decision (7 Sep) &middot; NUS (1 Nov) &middot; the 1 Dec cluster</p>
 </div>
 
 <!-- TAB 3: PAPERS & DOCS -->
@@ -1309,8 +1351,8 @@ function switchTab(id,btn){
 }
 
 const PROFS=[
-  {name:"Prof. Walid Magdy",inst:"University of Edinburgh · SMASH",topic:"Arabic NLP, Cross-Platform Social Media Analytics and Multilingual CSS",status:"confirmed",sent:"31 Mar 2026",summary:"Emailed SMASH group. Magdy confirmed willing to supervise after asking about funding preferences. Strongly encouraged publication first.",response:"\"Yes, please list me as a potential supervisor. But I have to be honest, the competition for scholarships are crazy. Please do your best to get a publication by then.\"",timeline:"Apply Oct 2026 · Edinburgh CDT + scholarship",action:"Get ICWSM paper submitted. List Magdy as supervisor."},
-  {name:"Dr Björn Ross",inst:"University of Edinburgh · CDT Responsible NLP",topic:"Social Bot Detection, Misinformation Infrastructure and CSS Data Methods",status:"confirmed",sent:"17 Mar 2026",summary:"Ross replied: great fit. Too late for current cycle — directed to CDT in Designing Responsible NLP.",response:"\"This sounds like a great fit for my research! I'm afraid however that your email is coming too late in the recruitment cycle.\"",timeline:"CDT in Responsible NLP · Sept 2026 · Jan 2027 deadline",action:"Apply Edinburgh CDT. Ross confirmed fit supervisor."},
+  {name:"Prof. Walid Magdy",inst:"University of Edinburgh · SMASH",topic:"Arabic NLP, Cross-Platform Social Media Analytics and Multilingual CSS",status:"confirmed",sent:"31 Mar 2026",summary:"Emailed SMASH group. Magdy confirmed willing to supervise after asking about funding preferences. Strongly encouraged publication first.",response:"\"Yes, please list me as a potential supervisor. But I have to be honest, the competition for scholarships are crazy. Please do your best to get a publication by then.\"",timeline:"CDT 2027 round opens ~Oct · submit early Dec · deadline ~7 Jan 2027",action:"UPDATED 26 Aug: his publication condition is met by the arXiv paper (posts on Ella's sign-off, target this month). Edinburgh CDT statements DRAFTED (Edinburgh Application/): the Alignment carries a Magdy-specific multilingual-equivalence hook. When the arXiv link is live, send him the one-fact update: link + applying this cycle."},
+  {name:"Dr Björn Ross",inst:"University of Edinburgh · CDT Responsible NLP",topic:"Social Bot Detection, Misinformation Infrastructure and CSS Data Methods",status:"confirmed",sent:"17 Mar 2026",summary:"Ross replied: great fit. Too late for current cycle — directed to CDT in Designing Responsible NLP.",response:"\"This sounds like a great fit for my research! I'm afraid however that your email is coming too late in the recruitment cycle.\"",timeline:"CDT 2027 round opens ~Oct · submit early Dec · deadline ~7 Jan 2027",action:"UPDATED 26 Aug: CDT targeted, statements drafted; the Alignment carries a Ross-specific hook (the inauthenticity screen / bots-and-misinformation joint). Send him the same arXiv-link update email when the paper posts."},
   {name:"Prof. Tiziano Piccardi",inst:"Johns Hopkins University",topic:"Social Media Feed Algorithms, Platform-Independent Measurement and Algorithmic Amplification Bias",status:"warm",sent:"2 Apr 2026",summary:"Piccardi's 2025 Science paper on feed algorithm auditing is the key methodological reference in the proposal. Replied 6 Apr. Thread was in Gmail Trash. Confirmed: apply for end-of-year JHU deadline. Too early to know about 2027 intake.",response:"\"It's too early to know whether I will accept students next year, as this year's recruitment is still ongoing. I encourage you to apply for the end-of-the-year deadline.\"",timeline:"Apply end-of-year 2026 · JHU formal cycle",action:"Draft formal JHU application. Follow up Nov 2026."},
   {name:"Prof. Emilio Ferrara",inst:"USC · HUMANS Lab",topic:"LLM-Powered Disinformation, Social Bot Detection and Platform Manipulation",status:"warm",sent:"30 Mar 2026",summary:"Ferrara replied calling the background genuinely exciting. On sabbatical — directed to apply Khoury CS Fall 2026.",response:"\"Your background is genuinely exciting.\" Apply through Khoury College of Computer Sciences PhD program Fall 2026.",timeline:"Apply Fall 2026 · USC Khoury CS",action:"Apply Oct 2026 to Khoury CS. Mention Ferrara."},
   {name:"Prof. Kathleen Carley",inst:"Carnegie Mellon · CASOS / IDeaS",topic:"Social Cybersecurity, Dynamic Network Analysis and Cross-Platform Disinformation",status:"warm",sent:"30 Mar 2026",summary:"Carley replied twice. Confirmed: apply CS School, Societal Computing programme, list her as supervisor. Potential fit depending on funding.",response:"\"There is a potential fit. It will depend on funding. Apply to the school of computer science to the program in Societal Computing.\"",timeline:"Apply Fall 2026 · CMU Societal Computing",action:"Apply October 2026. List Carley as supervisor."},
