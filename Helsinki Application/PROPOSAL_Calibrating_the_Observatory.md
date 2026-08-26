@@ -78,11 +78,27 @@ No paper or group holds more than one of these cells; the observatory is what ma
 
 **Named deliverables with form factors.** (1) A pip-installable **bridging toolkit**: drift tripwire, shadow-anchor management, misclassification-matrix corrections, emitting a standard annotation-provenance log (model, prompt hash, version, seed per label). (2) An **Instrument Change Log**, a one-page reporting standard for annotation pipelines, the model card's equivalent for measurement, published with Paper 2. (3) A gold-set refresh policy template. First public release at the end of Year 2, so adoption has runway inside the doctorate. The protocol is piloted on a Finnish Digital Observatory annotation stream in Years 2-3, subject to the observatory's governance and agreed with the supervisor; the observatory's five years will cross many model updates, and no observatory anywhere yet documents a versioning methodology (Pehlivan et al. 2025). Industry relevance is first-person: the applicant's own production cascade exhibits the agreement pathologies this project would finally explain.
 
-## 8. Ethics and Risk Management
+## 8. Fit: The Call's Tests, the Supervisor's Open Problems, the Applicant's Assets
+
+**What the position tests, answered.** The call evaluates the quality, feasibility and relevance of the research plan and the applicant's academic performance and motivation; the programme's rubric weights plan quality at 50 per cent, feasibility at 30 and competence at 20, with a minimum of three out of five on every criterion, and the degree "should be completed within four years" of full-time work. This proposal is engineered against those tests. Quality: the identification details are written down, not gestured at (the Wu-Estabrook invariance sequence, the shadow-anchor estimator, the multivariate standpoint design). Feasibility: one spine, four papers, a declared drop-order, production-grade collection tooling, a costed funding plan, and a protected final half-year. Relevance: every study answers an operational need of the supervisor's running projects, below. Competence, including the independence and collaboration the evaluators look for: a co-authored foundation paper, a Distinction MSc, a Chevening scholarship, six years of production engineering with team leadership, and an application whose templates arrived pre-drafted, which is its own evidence of independent work.
+
+**The supervisor's open problems, and what answers each.**
+
+| The pain, where it is stated | The study | The asset that de-risks it |
+|---|---|---|
+| The Finnish Digital Observatory (PI, 2025-2030) will cross years of silent model updates; no observatory anywhere documents an instrument-versioning methodology. | Study 2, plus the toolkit and the Instrument Change Log standard. | The applicant already operates the pattern commercially: weekly KL-divergence drift alarms, archived output, self-healing crawler fleets. |
+| Pooling platforms without an equivalence licence, against a group credo that makes validity and reliability the bar and a stated demand that claims start where the literature stops. | Study 1. | The foundation paper's fitted protocol (Study 0), and a ten-platform daily production pipeline that makes spine collection a month-one capability rather than a year-one risk. |
+| "How value biases in models affect analysis": the stated question of the supervisor's LLM ways-of-knowing project, and MarxistLLM's need for quantitative extension. | Study 3, developed jointly. | A production multi-model cascade whose tiers agree on 82.9 per cent of sentiment labels and 0.0 per cent of toxicity labels while self-reporting 96.7 per cent confidence: the value-bias problem, measured in the applicant's own tables. |
+| Transparency losing to accuracy across the field's black-box pipelines, the trade the supervisor's June 2025 essay refuses. | The provenance discipline running through every study: model, prompt hash, version and seed logged per label, published as a reporting standard. | The applicant ships CI quality gates and provenance logging in production today. |
+| Supervision economics: the supervisor's own pages say the candidate drives applications and funding while he comments and provides references. | The application itself. | Every PP26 box pre-drafted inside its character cap; engineering self-sufficient; the first paper written before the first office hour. |
+
+**Why ArtemisAI and the prior work matter scientifically, not only logistically.** The research corpus is public platform content under the ethics regime below; ArtemisAI data is not the study material. Its role is different and rarer: a standing industrial environment where the instruments under study already misbehave in measurable ways, supplying motivating measurements now, an out-of-sample engineering testbed for the bridging toolkit before the observatory pilot, and a commercial adoption path for the reporting standard. The Fluency fleets remove collection risk; the dissertation and the foundation paper mean the psychometric machinery is demonstrated, not promised. The applicant is, in the supervisor's own phrase for himself, a computer scientist who knows how society works, arriving from the industry side with the pipelines already built.
+
+## 9. Ethics and Risk Management
 
 Public content only. Political-opinion texts are special-category data under GDPR Article 9; the legal basis chain is Article 9(2)(j) scientific-research processing under Article 89 safeguards as implemented by the Finnish Data Protection Act (1050/2018) research derogations, with a data protection impact assessment in Year 1, building on the applicant's ethics-approved MSc procedures (Portsmouth TETHIC-2025-111094). Hashed identifiers, aggregate reporting, paraphrased quotations, paid annotators. The re-annotation archive is reconciled with minimisation through a documented retention schedule and deletion-propagation compliance, a control the applicant already operates in production. Risks: (i) scope, capped by the shared spine and declared drop-order; (ii) criterion regress, handled by MTMM treatment of human panels and the survey terminus; (iii) conceptual pushback on standpoint as a facet, answered by the fixed-facet multivariate framing; (iv) scoop risk on Paper 4, answered by early design lock; (v) platform access loss, mitigated by DSA Article 40 for YouTube, named substitution rules, and the archival design that preserves the historical spine if a live feed dies; (vi) inference and annotation costs, controlled by the open-weight-first policy and the funding plan below.
 
-## 9. Timetable, Publication Plan, Funding and Feasibility (Jan 2027 - Dec 2030)
+## 10. Timetable, Publication Plan, Funding and Feasibility (Jan 2027 - Dec 2030)
 
 | Months | Milestones |
 |---|---|
@@ -97,7 +113,7 @@ Public content only. Political-opinion texts are special-category data under GDP
 
 **What makes it feasible in four years.** The collection tooling exists in production form today; the statistical protocol is published as Study 0; Study 3 is a facet extension of Study 1, not new machinery; the drop-order caps worst-case scope; and the final half-year is protected for compilation. Four studies fit four years because almost nothing is built from zero.
 
-## 10. Conclusion
+## 11. Conclusion
 
 The field rebuilt its measurement stack on instruments that change silently, read differently on every platform, and carry a standpoint nobody quantifies, and it did so exactly when multi-platform, multi-year monitoring became the only viable design. Between April and August 2026 the literature converged on this diagnosis; what it still lacks is the discipline that survey methodology built for exactly this situation two generations ago. This project ports that discipline, with its identification details written down rather than gestured at. The applicant brings a published psychometric protocol, six years of production platform-data engineering, and daily operational contact with the problem, from a ten-platform production pipeline to a multi-model cascade whose agreement pathologies this project would finally explain. The Helsinki Social Computing Group is the one place where the measurement machinery, the standpoint theory and the running observatory already sit in the same room.
 
@@ -136,7 +152,7 @@ The field rebuilt its measurement stack on instruments that change silently, rea
 29. Santurkar, S., Durmus, E., Ladhak, F., Lee, C., Liang, P. and Hashimoto, T. (2023) 'Whose opinions do language models reflect?', ICML 2023.
 30. Wu, H. and Estabrook, R. (2016) 'Identification of confirmatory factor analysis models of different levels of invariance for ordered categorical outcomes', Psychometrika, 81, pp. 1014-1045.
 
-**Word count (sections 1-10):** ~2,900 words.
+**Word count (sections 1-11):** ~3,400 words.
 
 ---
 
