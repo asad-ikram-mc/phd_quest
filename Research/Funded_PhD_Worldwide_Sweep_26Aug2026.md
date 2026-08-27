@@ -68,3 +68,9 @@ Four parallel research agents (Europe positions, UK/Ireland routes, Americas + A
 6. **8 Dec**: Gates Cambridge (course app earlier!) · Warwick ~8-11 Dec
 7. **15 Dec**: MIT IDSS, Georgia Tech, Princeton (GRE!), + existing JHU
 8. **Jan 2027**: Edinburgh CDT ~7 Jan · SeNSS/SWDTP/LSE ~14 Jan · CEU + MBZUAI 15 Jan · White Rose 20 Jan · LAHP/Hertie/NTU ~31 Jan
+
+
+## ADDENDUM 26 Aug (evening): ERA and FAS checked on request
+- **Cambridge ERA:AI Fellowship — REAL MATCH (not a PhD, a funded hedge).** 10-week AI safety and governance research programme in Cambridge; Winter 2027 cohort runs 18 Jan - 26 Mar 2027; **deadline 13 Sep 2026, 23:59 AoE**. GBP 10,000 stipend + visa support + travel + desk + mentorship; open to anyone 18+, no degree gate, any nationality. Three tracks; the *technical AI governance* track (auditing, monitoring, verification of AI systems) is squarely the measurement-accountability agenda. Alumni publish at NeurIPS; top performers get 6+ month funded Research Scholar extensions. Timing conflicts with a Helsinki January start, but Helsinki results land end of November, before ERA begins - so it works as the funded Cambridge bridge if Matti's call says no, and it would put Asad IN Cambridge when Gates results come out (~8 Mar). erafellowship.org
+- **Horizon Europe "ERA Fellowships" (EU/REA)**: for experienced researchers, doctoral degree expected - postdoc-level, not eligible until after the PhD. Park.
+- **"FAS" — no matching scheme exists.** The only notable programmes under that acronym are the USDA Foreign Agricultural Service fellowship (agriculture master's feeding the US Foreign Service - wrong field and US-track) and Harvard FAS College Fellows (post-PhD teaching posts). If "FAS" came from a mailer or list, it likely means something else - check the source.
