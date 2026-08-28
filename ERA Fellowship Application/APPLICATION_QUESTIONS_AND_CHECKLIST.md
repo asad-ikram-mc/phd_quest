@@ -1,4 +1,8 @@
 # Cambridge ERA:AI Fellowship — Winter 2027 Application Pack
+# STATUS: PARKED 28 Aug 2026 by Asad's decision. Not applying this round;
+# September is going to the PhD applications instead. Everything below stays
+# accurate for a future cohort (the form and rules were captured 26 Aug 2026).
+
 # Deadline: 13 Sep 2026, 23:59 Anywhere on Earth · ROLLING evaluation (earlier = better)
 # Form: https://airtable.com/appaZQNjlqYOCy4lV/pag0VHHxQWTBRmHHS/form
 # NOTE: the form does NOT send a confirmation email after submission.
