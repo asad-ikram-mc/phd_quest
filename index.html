@@ -503,8 +503,9 @@ footer a:hover{color:var(--gold2)}
 /* ===== Board (kanban) ===== */
 .board-intro{font-size:14px;color:var(--text2);line-height:1.7;max-width:760px;margin-bottom:6px}
 .board-note{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);letter-spacing:.04em;margin-bottom:18px}
-#board-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
-@media(max-width:1100px){#board-cols{grid-template-columns:repeat(2,1fr)}}
+#board-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start}
+@media(max-width:1300px){#board-cols{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){#board-cols{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){#board-cols{grid-template-columns:1fr}}
 .bcol{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 12px 12px;min-height:200px;transition:background .15s,border-color .15s}
 .bcol.over{border-color:var(--cyan);background:var(--cyan-dim)}
@@ -514,6 +515,9 @@ footer a:hover{color:var(--gold2)}
 .bcol-hint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
 .bcol-todo .bcol-title{color:var(--cyan)}
 .bcol-progress .bcol-title{color:var(--amber)}
+.bcol-done .bcol-title{color:var(--green)}
+.bcol-done .bcard{border-color:rgba(61,214,140,0.22)}
+.bcol-done .bcard-name{opacity:.62;text-decoration:line-through}
 .bcol-parked .bcol-title{color:#a78bfa}
 .bcol-dropped .bcol-title{color:var(--text3)}
 .bcol-body{display:flex;flex-direction:column;gap:9px}
@@ -537,6 +541,7 @@ footer a:hover{color:var(--gold2)}
 .st-parked{color:#a78bfa;background:rgba(167,139,250,0.10);border-color:rgba(167,139,250,0.3)}
 .st-dropped{color:var(--text3);background:var(--bg);border-color:var(--border2)}
 .st-todo{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(56,201,201,0.3)}
+.st-done{color:var(--green);background:var(--green-bg);border-color:rgba(61,214,140,0.3)}
 #active-inprogress{margin-bottom:16px}
 .aip-row{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:13.5px;color:var(--text2);line-height:1.55}
 </style>
@@ -586,7 +591,7 @@ footer a:hover{color:var(--gold2)}
     <div class="prio-head">
       <div>
         <div class="prio-title">Priority list — start here</div>
-        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Tick items off as you go; ticks persist in this browser.</div>
+        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Tick an item off and it moves to Done on the Board tab; state persists in this browser.</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
         <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
@@ -754,7 +759,7 @@ footer a:hover{color:var(--gold2)}
 <!-- TAB 2: OUTREACH -->
 <div class="panel" id="panel-board">
   <div class="sec-head"><span class="sec-tag">Status board</span><h2 class="sec-title">Drag a task to change its state everywhere</h2></div>
-  <p class="board-intro">Every task from the priority list lives here. Drag a card between columns, or use the arrows on a touch screen. Moving a card updates the Now list and the Outreach cards that task drives: <b style="color:var(--text)">Not needed</b> hides it from Now, <b style="color:var(--text)">Parked</b> sinks it to the bottom under its own heading, and <b style="color:var(--text)">In progress</b> surfaces it on the Active app tab.</p>
+  <p class="board-intro">Every task from the priority list lives here. Drag a card between columns, or use the arrows on a touch screen. Moving a card updates the Now list and the Outreach cards that task drives: <b style="color:var(--text)">Not needed</b> hides it from Now, <b style="color:var(--text)">Parked</b> sinks it to the bottom under its own heading, and <b style="color:var(--text)">In progress</b> surfaces it on the Active app tab. <b style="color:var(--text)">Done</b> is the same state as the tick on a priority card, so ticking there moves the card here and vice versa.</p>
   <p class="board-note">SAVED IN THIS BROWSER ONLY &middot; IT DOES NOT WRITE BACK TO THE REPO, SO TELL CLAUDE WHEN A MOVE SHOULD BECOME PERMANENT &middot; <span style="cursor:pointer;color:var(--cyan)" onclick="resetBoard()">RESET TO DEFAULTS</span></p>
   <div id="board-cols"></div>
 </div>
@@ -2156,10 +2161,11 @@ const PRIORITIES = [
 const BOARD_COLS=[
   {k:'todo',label:'To do',hint:'Not started'},
   {k:'progress',label:'In progress',hint:'Actively working'},
+  {k:'done',label:'Done',hint:'Finished or sent'},
   {k:'parked',label:'Parked',hint:'Deliberately on hold'},
   {k:'dropped',label:'Not needed',hint:'Dropped, passed or closed'}
 ];
-const ST_LABEL={todo:'to do',progress:'in progress',parked:'parked',dropped:'not needed'};
+const ST_LABEL={todo:'to do',progress:'in progress',done:'done',parked:'parked',dropped:'not needed'};
 /* defaults that differ from the rule "followup = in progress, everything else = to do" */
 const PRIO_DEFAULT_ST={'p-edinburgh':'parked','p-hasselt':'dropped','p-nelimarkka':'progress'};
 /* which Outreach cards each task drives (substring match against the PROFS name) */
@@ -2181,6 +2187,15 @@ const PRIO_PROFS={
   'p-us-block':['Northeastern','Cornell','Northwestern','Michigan','Starbird','Carley','Piccardi']
 };
 function loadStatus(){try{return JSON.parse(localStorage.getItem('prio-status')||'{}');}catch(e){return {};}}
+/* one-time: fold the old tick list (prio-done) into the board as the Done column */
+function migrateLegacyDone(){
+  let legacy=[]; try{legacy=JSON.parse(localStorage.getItem('prio-done')||'[]');}catch(e){}
+  if(!legacy.length){localStorage.removeItem('prio-done');return;}
+  const ov=loadStatus();
+  legacy.forEach(id=>{if(!ov[id])ov[id]='done';});
+  localStorage.setItem('prio-status',JSON.stringify(ov));
+  localStorage.removeItem('prio-done');
+}
 function defaultStatus(p){return PRIO_DEFAULT_ST[p.id]||(p.tier==='followup'?'progress':'todo');}
 function getStatus(id){const p=PRIORITIES.find(x=>x.id===id);if(!p)return 'todo';return loadStatus()[id]||defaultStatus(p);}
 function setStatus(id,st){
@@ -2260,11 +2275,11 @@ function renderInProgress(){
 function renderPriorities(){
   const el=document.getElementById('prio-list'); if(!el) return;
   const now=new Date(); now.setHours(0,0,0,0);
-  const done=new Set(JSON.parse(localStorage.getItem('prio-done')||'[]'));
   el.innerHTML='';
   const visible=PRIORITIES.filter(p=>getStatus(p.id)!=='dropped');
+  const doneItems=visible.filter(p=>getStatus(p.id)==='done');
   const parked=visible.filter(p=>getStatus(p.id)==='parked');
-  const live=visible.filter(p=>getStatus(p.id)!=='parked');
+  const live=visible.filter(p=>{const st=getStatus(p.id);return st!=='parked'&&st!=='done';});
   const actives=live.filter(p=>p.tier!=='followup');
   const fups=live.filter(p=>p.tier==='followup');
   const renderOne=(p,idx)=>{
@@ -2283,8 +2298,9 @@ function renderPriorities(){
       duePill='<span class="prio-pill p-soon">no hard date · do it now</span>';
     }
     const item=document.createElement('div');
-    const startOpen = (p.tier==='now') && !done.has(p.id);
-    item.className='prio-item'+(done.has(p.id)?' done':'')+(startOpen?'':' collapsed');
+    const isDone = getStatus(p.id)==='done';
+    const startOpen = (p.tier==='now') && !isDone;
+    item.className='prio-item'+(isDone?' done':'')+(startOpen?'':' collapsed');
     item.innerHTML=
       '<div class="prio-rank r-'+p.tier+'">'+(idx+1)+'</div>'
       +'<div class="prio-body">'
@@ -2293,7 +2309,7 @@ function renderPriorities(){
       +  '<ul class="prio-req">'+p.req.map(r=>'<li>'+r+'</li>').join('')+'</ul>'
       +  (p.link?'<a class="prio-link" href="'+p.link+'" target="_blank">Open: '+p.link.replace(/^https?:\/\//,'').split('/')[0]+' &#8599;</a>':'')
       +'</div>'
-      +'<div class="prio-check'+(done.has(p.id)?' on':'')+'" title="Mark done" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
+      +'<div class="prio-check'+(isDone?' on':'')+'" title="Mark done \u2014 moves the card to Done on the Board" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
     el.appendChild(item);
   };
   actives.forEach(renderOne);
@@ -2304,6 +2320,10 @@ function renderPriorities(){
   if(parked.length){
     const h2=document.createElement('div');h2.className='prio-sec';h2.textContent='Parked \u2014 on hold by choice, nothing to do yet';el.appendChild(h2);
     parked.forEach((p,i)=>renderOne(p,actives.length+fups.length+i));
+  }
+  if(doneItems.length){
+    const h3=document.createElement('div');h3.className='prio-sec';h3.textContent='Done \u2014 finished, kept for the record';el.appendChild(h3);
+    doneItems.forEach((p,i)=>renderOne(p,actives.length+fups.length+parked.length+i));
   }
 }
 let prioAllOpen=false;
@@ -2328,11 +2348,8 @@ function renderDates(){
   });
 }
 function togglePrio(id,el){
-  const done=new Set(JSON.parse(localStorage.getItem('prio-done')||'[]'));
-  const item=el.closest('.prio-item');
-  if(done.has(id)){done.delete(id);el.classList.remove('on');item.classList.remove('done');}
-  else{done.add(id);el.classList.add('on');item.classList.add('done');}
-  localStorage.setItem('prio-done',JSON.stringify([...done]));
+  const p=PRIORITIES.find(x=>x.id===id); if(!p) return;
+  setStatus(id, getStatus(id)==='done' ? defaultStatus(p) : 'done');
 }
 
 let curActionTab = 'urgent';
@@ -2424,6 +2441,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if(luEl) luEl.textContent = 'Last updated: ' + LAST_REFRESHED;
 
   buildFilterBar();
+  migrateLegacyDone();
   renderProfs();
   renderCalendar();
   buildTodayActions();
