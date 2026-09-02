@@ -77,6 +77,6 @@ https://asad-ikram-mc.github.io/portfolio/
 
 ## BEFORE SENDING
 - [ ] Verify mia.cha@mpi-sp.org on mpi-sp.org/cha
-- [ ] Attach Asad_Ikram_Full_Resume_2026.pdf
+- [ ] Attach **Asad_Ikram_CV_Academic_MPI.pdf** (in this folder), NOT the industry Full Resume. The master pattern's rule 4 says attach the full resume, but that file is the Full Stack Data Engineer version (anti-bot evasion, proxy rotation, DevOps) and it is the wrong artifact for a Max Planck director. The academic CV here leads with the paper, the doctoral proposal and the dissertation, names YouTube to meet her own platform, foregrounds the multilingual and Global South record for her group, and boxes the ArtemisAI 82.9/0.0/96.7 finding as the motivation. Source: cv_source.html in this folder.
 - [ ] If the arXiv paper is live by then, replace "on arXiv shortly" with the actual link. It is a materially stronger email with the link in it, so send it AFTER the paper posts if that is days away rather than weeks.
 - [ ] Read it aloud once for the AI test
