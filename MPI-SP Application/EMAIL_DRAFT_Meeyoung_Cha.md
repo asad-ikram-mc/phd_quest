@@ -22,26 +22,28 @@
 
 ---
 
-## THE EMAIL
+## THE EMAIL (v2, 2 Sep - rebuilt to follow all eight parts of the master pattern)
 
 **To:** mia.cha@mpi-sp.org
-**Subject:** PhD Enquiry, 2027 - Construct Validity, LLM Annotation Drift and Whether a Seven-Year Denial Trend Is Real
+**Subject:** PhD Enquiry, 2027 - Construct Validity, LLM Annotation Drift and Cross-Platform Measurement Validity
 
 Dear Professor Cha,
 
-I am writing to enquire about PhD opportunities in your Data Science for Humanity group at MPI-SP for 2027 entry, through the CS@max planck December deadline.
+I am writing to enquire about PhD opportunities in your Data Science for Humanity group at MPI-SP for 2027 entry, through the CS@max planck December deadline. I wanted to ask whether my background connects to the measurement question you raised in the Million Follower Fallacy. Follower count was the obvious measure of influence, everyone used it, and it turned out not to measure what people assumed it measured. You only find that out by testing the metric against a criterion instead of trusting it. I have spent seven years building systems that produce exactly that kind of untested metric at scale, and I want to work on your 2010 problem in the form it takes now.
 
-Your argument in the Million Follower Fallacy is the one that put me on this path. Follower count was the obvious measure of influence, everyone used it, and it turned out not to measure the thing people thought it measured. You only discover that by testing the metric against criteria instead of trusting it. I have spent seven years building systems that produce exactly that kind of untested metric at scale, and I want to work on the 2010 problem in the form it takes now.
+My Chevening Scholarship was built around a specific professional problem: social media analytics already inform government decisions, but the measurement systems underneath them cannot say whether a number means the same thing from one platform, or one year, to the next. At M+C Saatchi Fluency I built the infrastructure that processes social listening data daily for UK Government departments alongside Amazon, Ford and Nike. At Dubizzle Labs I led the team running over 500 scrapers across fifteen countries in Arabic, Urdu and Hindi, so multilingual collection at scale is routine work for me rather than a project risk. I am also Pakistani and based in Lahore, so the information environments your group studies are not ones I would be visiting.
 
-Your FAccT paper on climate misinformation playbooks in Brazil is where I think that form is clearest. The central result is temporal, a shift from old denial to new denial across 2019 to 2025, and the labels come from GPT-4.1-mini applied across that whole window. The validation is careful, 702 human-annotated videos and a kappa of 0.89, and the paper is honest that old versus new denial is the harder call at 0.77 accuracy. What no protocol currently covers, in your work or anyone else's, is whether a proprietary annotator applied over seven years is measuring the same construct in 2025 as in 2019. A silent model update inside that window and a genuine change in the discourse leave the same trace in the data.
+Your FAccT paper on climate misinformation playbooks in Brazil is where I think that problem is clearest. The central result is temporal, a shift from old denial to new denial across 2019 to 2025, and the labels come from GPT-4.1-mini applied across that whole window. The validation is careful, 702 human-annotated videos and a kappa of 0.89, and the paper is honest that old versus new denial is the harder call at 0.77 accuracy. What no protocol currently covers, in your work or anyone else's, is whether a proprietary annotator applied over seven years measures the same construct in 2025 as it did in 2019. A silent model update inside that window and a genuine change in the discourse leave the same trace in the data.
 
-That gap is what my research addresses. With my MSc supervisor Dr Ella Haig I have written a methods paper, on arXiv shortly, that treats each platform as a survey mode and specifies a psychometric protocol for machine-labelled text: generalizability theory, measurement invariance and DIF testing, and score linking. Its simulation result is that across 500 replications, a pooled index taking platform scores at face value reports the wrong sign of aggregate sentiment on roughly a quarter of days, purely from measurement differences. The doctoral work I want to do extends that to the instrument itself: a shadow-anchored bridging design that keeps a series like your Brazil one comparable when the annotating model changes underneath it.
+That is the problem I have been working on. My MSc dissertation at Portsmouth built a cross-platform NLP framework analysing 279,000 posts across Twitter, Reddit, YouTube and Quora on UK economic policy, using fine-tuned BERT at macro-F1 0.878 against BiLSTM and lexicon baselines. The finding that mattered was not the accuracy. It was that the same policy event produced structurally different sentiment profiles on each platform, YouTube included, which means a cross-platform aggregate rests on an assumption nobody had tested.
 
-I also see this from inside production rather than only from the literature. At ArtemisAI, the company I co-founded, 3.39 million comments have gone through a multi-model annotation cascade I designed. Our two model tiers agree on 82.9 per cent of sentiment labels and 0.0 per cent of toxicity labels, while the toxicity model reports 96.7 per cent average confidence. The dashboard's accuracy number is, when you read the code, inter-model agreement with no criterion behind it. I built that system, and it is why I stopped trusting instruments I had not calibrated.
+That finding is now a methods paper with my MSc supervisor Dr Ella Haig, "Is the Platform Part of the Measurement?", which treats each platform as a survey mode and specifies a six-step psychometric protocol for machine-labelled text: generalizability theory, measurement invariance and DIF testing, and score linking. Across 500 replications of a known-truth simulation, a pooled index that takes platform scores at face value reports the wrong sign of aggregate sentiment on roughly a quarter of days, purely from measurement differences, while a measurement-adjusted index does not. It goes on arXiv shortly; the project page is https://asadfix.github.io/publish_proposal/#paper.
 
-Two things I would bring to a group working on the Global South. At Dubizzle Labs I led the team running over 500 scrapers across fifteen countries in Arabic, Urdu and Hindi, so multilingual collection at scale is routine work for me rather than a project risk. And I am Pakistani and based in Lahore, so the information environments your group studies are not ones I would be visiting.
+I also see this from inside production rather than only from the literature. I am CTO and co-founder of ArtemisAI (https://www.artemisai.co.uk), where 3.39 million comments have gone through a multi-model annotation cascade I designed. Our two model tiers agree on 82.9 per cent of sentiment labels and 0.0 per cent of toxicity labels, while the toxicity model reports 96.7 per cent average confidence. The dashboard's accuracy figure is, when you read the code, inter-model agreement with no criterion behind it. I built that system, and the failure it hides is the same one a labelling pipeline cannot see from the inside.
 
-I am applying through CS@max planck for the 15 December deadline and would like to name your group. Before I do, may I ask whether you expect to take a doctoral student in this direction for 2027, and whether calibration of LLM annotation is something you would want pursued inside Data Science for Humanity? I have attached my CV and would be glad to send the paper or a fuller research proposal.
+The question I want to pursue at doctoral level is whether a denial-detection series can be held comparable across model versions the way survey series are held comparable across instrument changes, and if so, what a shadow-anchored bridging design for LLM annotation would look like in practice.
+
+I am looking for a fully funded position for 2027 entry and would apply through CS@max planck for the 15 December deadline, naming your group. Before I do, may I ask whether you expect to take a doctoral student in this direction, and whether calibration of LLM annotation is something you would want pursued inside Data Science for Humanity? I have attached my CV and would be glad to share the paper, my dissertation or a fuller research proposal.
 
 Best wishes,
 Asad Ikram
@@ -52,6 +54,26 @@ https://linkedin.com/in/asad-ikram98
 https://asad-ikram-mc.github.io/portfolio/
 
 ---
+
+## PATTERN COMPLIANCE (audited 2 Sep, v1 failed four of these)
+| Element | v1 | v2 |
+|---|---|---|
+| Rule 1, no em-dashes | pass | pass |
+| Rule 2, exact opening line | pass | pass |
+| Rule 3, hook on her named paper | pass (Million Follower Fallacy + FAccT 2026) | pass |
+| Rule 6, project page link while arXiv pending | **FAIL, no link** | pass |
+| Part 2, Chevening + government problem | **MISSING** | pass |
+| Part 3, Fluency + Dubizzle + Fix.com | partial (Dubizzle only) | Fluency + Dubizzle (Fix.com dropped on purpose, no relevance to her) |
+| Part 4a, dissertation 279k / 0.878 / four platforms | **MISSING** | pass, with YouTube named to meet her own platform |
+| Part 4b, paper title + 500 / quarter of days | partial, no title | pass |
+| Part 5, ArtemisAI as her problem | pass | pass, with CTO framing and site link |
+| Part 6, explicit bridging question in her vocabulary | weak, folded into the ask | pass, stated separately |
+| Part 7, funding note | **MISSING** | pass |
+| Part 8, the ask | pass | pass |
+| Signature exact | pass | pass |
+| Subject line template | off-template third slot | pass |
+
+**Alternative subject line**, off-pattern but sharper, if you want it: `PhD Enquiry, 2027 - Construct Validity, Annotation Drift and Whether a Seven-Year Denial Trend Is Real`. It is more arresting and it is the actual thesis of the email; the template version above keeps the campaign consistent. Your call.
 
 ## BEFORE SENDING
 - [ ] Verify mia.cha@mpi-sp.org on mpi-sp.org/cha
