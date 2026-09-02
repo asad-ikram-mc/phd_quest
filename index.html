@@ -499,6 +499,46 @@ footer a:hover{color:var(--gold2)}
   .modal-action{font-size:14px;padding:12px 14px}
   .modal-close{top:14px;right:14px}
 }
+
+/* ===== Board (kanban) ===== */
+.board-intro{font-size:14px;color:var(--text2);line-height:1.7;max-width:760px;margin-bottom:6px}
+.board-note{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);letter-spacing:.04em;margin-bottom:18px}
+#board-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+@media(max-width:1100px){#board-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){#board-cols{grid-template-columns:1fr}}
+.bcol{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 12px 12px;min-height:200px;transition:background .15s,border-color .15s}
+.bcol.over{border-color:var(--cyan);background:var(--cyan-dim)}
+.bcol-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:2px}
+.bcol-title{font-size:15px;font-weight:600;color:var(--text)}
+.bcol-count{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);background:var(--bg);border:1px solid var(--border2);border-radius:10px;padding:2px 8px}
+.bcol-hint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.bcol-todo .bcol-title{color:var(--cyan)}
+.bcol-progress .bcol-title{color:var(--amber)}
+.bcol-parked .bcol-title{color:#a78bfa}
+.bcol-dropped .bcol-title{color:var(--text3)}
+.bcol-body{display:flex;flex-direction:column;gap:9px}
+.bempty{font-size:12px;color:var(--text3);border:1px dashed var(--border2);border-radius:10px;padding:16px 10px;text-align:center}
+.bcard{background:var(--bg);border:1px solid var(--border2);border-radius:10px;padding:10px 11px;cursor:grab;transition:border-color .15s,opacity .1s}
+.bcard:hover{border-color:var(--cyan)}
+.bcard.dragging{opacity:.45;cursor:grabbing}
+.bcard-name{font-size:13px;color:var(--text);line-height:1.45;margin-bottom:7px}
+.bcol-dropped .bcard-name{color:var(--text3)}
+.bcard-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.bpill{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 7px;border-radius:9px;border:1px solid var(--border2);color:var(--text3);white-space:nowrap}
+.bpill.p-due{color:var(--red);background:var(--red-bg);border-color:rgba(240,112,112,0.3)}
+.bpill.p-soon{color:var(--amber);background:var(--amber-bg);border-color:rgba(245,200,66,0.3)}
+.bpill.p-ok{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(56,201,201,0.3)}
+.bmove{margin-left:auto;display:flex;gap:3px}
+.bmove button{background:var(--surface);border:1px solid var(--border2);color:var(--text3);border-radius:6px;width:20px;height:20px;font-size:12px;line-height:1;cursor:pointer;padding:0}
+.bmove button:hover{color:var(--cyan);border-color:var(--cyan)}
+.bmove button:disabled{opacity:.25;cursor:default}
+.st-pill{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:9px;white-space:nowrap;border:1px solid}
+.st-progress{color:var(--amber);background:var(--amber-bg);border-color:rgba(245,200,66,0.3)}
+.st-parked{color:#a78bfa;background:rgba(167,139,250,0.10);border-color:rgba(167,139,250,0.3)}
+.st-dropped{color:var(--text3);background:var(--bg);border-color:var(--border2)}
+.st-todo{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(56,201,201,0.3)}
+#active-inprogress{margin-bottom:16px}
+.aip-row{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:13.5px;color:var(--text2);line-height:1.55}
 </style>
 </head>
 <body>
@@ -514,6 +554,7 @@ footer a:hover{color:var(--gold2)}
     </div>
     <nav class="tab-bar">
       <button class="tab-btn active" onclick="switchTab('overview',this)"><span class="tab-ico">◈</span>Now</button>
+      <button class="tab-btn" onclick="switchTab('board',this)"><span class="tab-ico">▤</span>Board</button>
       <button class="tab-btn" onclick="switchTab('outreach',this)"><span class="tab-ico">◉</span>Outreach</button>
       <button class="tab-btn" onclick="switchTab('active',this)"><span class="tab-ico">▣</span>Active<span class="tab-label-long">&nbsp;app</span></button>
       <button class="tab-btn" onclick="switchTab('papers',this)"><span class="tab-ico">◇</span>Papers<span class="tab-label-long">&nbsp;&amp; Docs</span></button>
@@ -711,6 +752,13 @@ footer a:hover{color:var(--gold2)}
 </div>
 
 <!-- TAB 2: OUTREACH -->
+<div class="panel" id="panel-board">
+  <div class="sec-head"><span class="sec-tag">Status board</span><h2 class="sec-title">Drag a task to change its state everywhere</h2></div>
+  <p class="board-intro">Every task from the priority list lives here. Drag a card between columns, or use the arrows on a touch screen. Moving a card updates the Now list and the Outreach cards that task drives: <b style="color:var(--text)">Not needed</b> hides it from Now, <b style="color:var(--text)">Parked</b> sinks it to the bottom under its own heading, and <b style="color:var(--text)">In progress</b> surfaces it on the Active app tab.</p>
+  <p class="board-note">SAVED IN THIS BROWSER ONLY &middot; IT DOES NOT WRITE BACK TO THE REPO, SO TELL CLAUDE WHEN A MOVE SHOULD BECOME PERMANENT &middot; <span style="cursor:pointer;color:var(--cyan)" onclick="resetBoard()">RESET TO DEFAULTS</span></p>
+  <div id="board-cols"></div>
+</div>
+
 <div class="panel" id="panel-outreach">
   <div class="sec-head"><span class="sec-tag">Log</span><h2 class="sec-title">Professor Outreach</h2></div>
   <input type="text" class="search-bar" id="search" placeholder="Search by name, institution, or topic..." oninput="renderProfs()">
@@ -730,6 +778,7 @@ footer a:hover{color:var(--gold2)}
 <!-- TAB: ACTIVE APPLICATION WORKBENCH -->
 <div class="panel" id="panel-active">
   <div class="sec-head"><span class="sec-tag">Working now</span><h2 class="sec-title">Edinburgh CDT — Responsible &amp; Trustworthy NLP</h2></div>
+  <div id="active-inprogress"></div>
   <p style="font-size:14px;color:var(--text2);max-width:640px;line-height:1.7;margin-bottom:14px">The application on the bench right now. When it ships, the next target moves in here. Targeted 26 Aug 2026; both statements drafted the same day.</p>
   <div style="background:var(--red-bg);border:1px solid rgba(240,112,112,0.25);border-left:3px solid var(--red);border-radius:10px;padding:12px 16px;font-size:13.5px;color:var(--text2);line-height:1.65;margin-bottom:18px"><b style="color:var(--text)">28 Aug:</b> Helsinki closed (Nelimarkka is switching institutions), so Edinburgh is now the single strongest supervised route on the board, and both supervisors here are already warm. The Calibrating the Observatory proposal transfers to it unchanged.</div>
 
@@ -1534,12 +1583,14 @@ function renderProfs(){
 
   filtered.forEach(p=>{
     const sl=SL[p.status]||p.status;
+    const drv=(typeof statusForProf==='function')?statusForProf(p.name):null;
+    const drvPill=(drv&&drv.st!=='todo')?'<span class="st-pill st-'+drv.st+'" title="Set on the Board tab">'+ST_LABEL[drv.st]+'</span>':'';
     const card=document.createElement('div');
     card.className='prof-card';
     card.innerHTML='<div class="prof-row" onclick="this.parentElement.classList.toggle(\'open\')">'
       +'<div class="prof-av av-'+p.status+'">'+initials(p.name)+'</div>'
       +'<div class="prof-info"><div class="prof-name">'+p.name+'</div><div class="prof-inst">'+p.inst+'</div></div>'
-      +'<div class="prof-right"><span class="status-pill s-'+p.status+'">'+sl+'</span>'
+      +'<div class="prof-right">'+drvPill+'<span class="status-pill s-'+p.status+'">'+sl+'</span>'
       +'<span class="sent-date">'+p.sent+'</span>'
       +'<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>'
       +'<div class="prof-body"><div class="pbg">'
@@ -2101,13 +2152,121 @@ const PRIORITIES = [
    link:'https://asadfix.github.io/helsinki_proposal/'},
 ];
 
+/* ============ STATUS BOARD ============ */
+const BOARD_COLS=[
+  {k:'todo',label:'To do',hint:'Not started'},
+  {k:'progress',label:'In progress',hint:'Actively working'},
+  {k:'parked',label:'Parked',hint:'Deliberately on hold'},
+  {k:'dropped',label:'Not needed',hint:'Dropped, passed or closed'}
+];
+const ST_LABEL={todo:'to do',progress:'in progress',parked:'parked',dropped:'not needed'};
+/* defaults that differ from the rule "followup = in progress, everything else = to do" */
+const PRIO_DEFAULT_ST={'p-edinburgh':'parked','p-hasselt':'dropped','p-nelimarkka':'progress'};
+/* which Outreach cards each task drives (substring match against the PROFS name) */
+const PRIO_PROFS={
+  'p-edinburgh':['Magdy','Ross'],
+  'p-cha':['Meeyoung Cha','max planck'],
+  'p-agder':['Agder'],
+  'p-casas':['Casas'],
+  'p-polimi':['Pierri'],
+  'p-vu':['VU Amsterdam'],
+  'p-sdu':['SDU Odense'],
+  'p-csh':['Complexity Science Hub'],
+  'p-oii':['Oxford DPhil','Stephany'],
+  'p-aarhus':['Aarhus'],
+  'p-hasselt':['Hasselt'],
+  'p-utrecht':['Utrecht'],
+  'p-nelimarkka':['Nelimarkka','Helsinki'],
+  'p-emails':['Gligori','Hovy','Anderson','Weber','Theocharis'],
+  'p-us-block':['Northeastern','Cornell','Northwestern','Michigan','Starbird','Carley','Piccardi']
+};
+function loadStatus(){try{return JSON.parse(localStorage.getItem('prio-status')||'{}');}catch(e){return {};}}
+function defaultStatus(p){return PRIO_DEFAULT_ST[p.id]||(p.tier==='followup'?'progress':'todo');}
+function getStatus(id){const p=PRIORITIES.find(x=>x.id===id);if(!p)return 'todo';return loadStatus()[id]||defaultStatus(p);}
+function setStatus(id,st){
+  const p=PRIORITIES.find(x=>x.id===id); if(!p) return;
+  const ov=loadStatus();
+  if(defaultStatus(p)===st) delete ov[id]; else ov[id]=st;
+  localStorage.setItem('prio-status',JSON.stringify(ov));
+  refreshEverywhere();
+}
+function resetBoard(){localStorage.removeItem('prio-status');refreshEverywhere();}
+function refreshEverywhere(){renderBoard();renderPriorities();renderProfs();renderInProgress();}
+function statusForProf(name){
+  for(const pid in PRIO_PROFS){
+    if(PRIO_PROFS[pid].some(k=>name.indexOf(k)!==-1)) return {id:pid,st:getStatus(pid)};
+  }
+  return null;
+}
+function duePillFor(p,cls){
+  const now=new Date(); now.setHours(0,0,0,0);
+  if(!p.due) return '<span class="'+cls+'">no hard date</span>';
+  const d=new Date(p.due[0],p.due[1]-1,p.due[2]);
+  const days=Math.round((d-now)/86400000);
+  const label=d.getDate()+' '+MONTHS_SHORT[d.getMonth()]+(d.getFullYear()!==now.getFullYear()?' '+d.getFullYear():'');
+  let k='p-ok',txt=label+' · '+days+'d';
+  if(days<0){k='p-due';txt=label+' · passed';}
+  else if(days===0){k='p-due';txt=label+' · today';}
+  else if(days<=10){k='p-due';}
+  else if(days<=30){k='p-soon';}
+  return '<span class="'+cls+' '+k+'">'+txt+'</span>';
+}
+function shortName(n){
+  let t=n.replace(/^NEW:\s*/,'');
+  t=t.split(/\s+[—–-]\s+/)[0];
+  return t.length>78?t.slice(0,78)+'…':t;
+}
+function renderBoard(){
+  const wrap=document.getElementById('board-cols'); if(!wrap) return;
+  wrap.innerHTML='';
+  BOARD_COLS.forEach((col,ci)=>{
+    const items=PRIORITIES.filter(p=>getStatus(p.id)===col.k);
+    const c=document.createElement('div');
+    c.className='bcol bcol-'+col.k;
+    c.addEventListener('dragover',e=>{e.preventDefault();c.classList.add('over');});
+    c.addEventListener('dragleave',()=>c.classList.remove('over'));
+    c.addEventListener('drop',e=>{
+      e.preventDefault();c.classList.remove('over');
+      const id=e.dataTransfer.getData('text/plain');
+      if(id) setStatus(id,col.k);
+    });
+    let html='<div class="bcol-head"><span class="bcol-title">'+col.label+'</span><span class="bcol-count">'+items.length+'</span></div>'
+      +'<div class="bcol-hint">'+col.hint+'</div><div class="bcol-body">';
+    if(!items.length) html+='<div class="bempty">Drop tasks here</div>';
+    items.forEach(p=>{
+      html+='<div class="bcard" draggable="true" data-id="'+p.id+'">'
+        +'<div class="bcard-name">'+shortName(p.name)+'</div>'
+        +'<div class="bcard-meta">'+duePillFor(p,'bpill')
+        +'<span class="bmove">'
+        +'<button title="Move left" onclick="event.stopPropagation();setStatus(\''+p.id+'\',\''+BOARD_COLS[Math.max(0,ci-1)].k+'\')"'+(ci===0?' disabled':'')+'>&#8249;</button>'
+        +'<button title="Move right" onclick="event.stopPropagation();setStatus(\''+p.id+'\',\''+BOARD_COLS[Math.min(BOARD_COLS.length-1,ci+1)].k+'\')"'+(ci===BOARD_COLS.length-1?' disabled':'')+'>&#8250;</button>'
+        +'</span></div></div>';
+    });
+    html+='</div>';
+    c.innerHTML=html;
+    wrap.appendChild(c);
+  });
+  wrap.querySelectorAll('.bcard').forEach(el=>{
+    el.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',el.dataset.id);e.dataTransfer.effectAllowed='move';el.classList.add('dragging');});
+    el.addEventListener('dragend',()=>el.classList.remove('dragging'));
+  });
+}
+function renderInProgress(){
+  const el=document.getElementById('active-inprogress'); if(!el) return;
+  const items=PRIORITIES.filter(p=>getStatus(p.id)==='progress');
+  if(!items.length){el.innerHTML='';return;}
+  el.innerHTML=items.map(p=>'<div class="aip-row"><span class="st-pill st-progress">in progress</span><span>'+shortName(p.name)+'</span>'+duePillFor(p,'bpill')+'</div>').join('');
+}
 function renderPriorities(){
   const el=document.getElementById('prio-list'); if(!el) return;
   const now=new Date(); now.setHours(0,0,0,0);
   const done=new Set(JSON.parse(localStorage.getItem('prio-done')||'[]'));
   el.innerHTML='';
-  const actives=PRIORITIES.filter(p=>p.tier!=='followup');
-  const fups=PRIORITIES.filter(p=>p.tier==='followup');
+  const visible=PRIORITIES.filter(p=>getStatus(p.id)!=='dropped');
+  const parked=visible.filter(p=>getStatus(p.id)==='parked');
+  const live=visible.filter(p=>getStatus(p.id)!=='parked');
+  const actives=live.filter(p=>p.tier!=='followup');
+  const fups=live.filter(p=>p.tier==='followup');
   const renderOne=(p,idx)=>{
     let duePill='';
     if(p.due){
@@ -2129,7 +2288,7 @@ function renderPriorities(){
     item.innerHTML=
       '<div class="prio-rank r-'+p.tier+'">'+(idx+1)+'</div>'
       +'<div class="prio-body">'
-      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+p.name+'</div><div class="prio-meta">'+duePill+'<span class="prio-pill p-time">'+p.time+'</span></div></div>'
+      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+p.name+'</div><div class="prio-meta">'+(getStatus(p.id)!=='todo'?'<span class="st-pill st-'+getStatus(p.id)+'">'+ST_LABEL[getStatus(p.id)]+'</span>':'')+duePill+'<span class="prio-pill p-time">'+p.time+'</span></div></div>'
       +  '<div class="prio-why">'+p.why+'</div>'
       +  '<ul class="prio-req">'+p.req.map(r=>'<li>'+r+'</li>').join('')+'</ul>'
       +  (p.link?'<a class="prio-link" href="'+p.link+'" target="_blank">Open: '+p.link.replace(/^https?:\/\//,'').split('/')[0]+' &#8599;</a>':'')
@@ -2141,6 +2300,10 @@ function renderPriorities(){
   if(fups.length){
     const h=document.createElement('div');h.className='prio-sec';h.textContent='Done \u2014 sent or submitted \u00b7 needs follow-up';el.appendChild(h);
     fups.forEach((p,i)=>renderOne(p,actives.length+i));
+  }
+  if(parked.length){
+    const h2=document.createElement('div');h2.className='prio-sec';h2.textContent='Parked \u2014 on hold by choice, nothing to do yet';el.appendChild(h2);
+    parked.forEach((p,i)=>renderOne(p,actives.length+fups.length+i));
   }
 }
 let prioAllOpen=false;
@@ -2265,6 +2428,8 @@ document.addEventListener('DOMContentLoaded', function() {
   renderCalendar();
   buildTodayActions();
   renderPriorities();
+  renderBoard();
+  renderInProgress();
   renderDates();
 });
 </script>
