@@ -503,10 +503,11 @@ footer a:hover{color:var(--gold2)}
 /* ===== Board (kanban) ===== */
 .board-intro{font-size:14px;color:var(--text2);line-height:1.7;max-width:760px;margin-bottom:6px}
 .board-note{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);letter-spacing:.04em;margin-bottom:18px}
-#board-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start}
-@media(max-width:1300px){#board-cols{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:900px){#board-cols{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){#board-cols{grid-template-columns:1fr}}
+#board-cols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:start}
+/* below this the five columns stop fitting; scroll sideways like a real board rather than
+   wrapping, because a wrapped column gets pushed under the tallest one */
+@media(max-width:1180px){#board-cols{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:12px;-webkit-overflow-scrolling:touch}
+  #board-cols .bcol{flex:0 0 250px;scroll-snap-align:start}}
 .bcol{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 12px 12px;min-height:200px;transition:background .15s,border-color .15s}
 .bcol.over{border-color:var(--cyan);background:var(--cyan-dim)}
 .bcol-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:2px}
