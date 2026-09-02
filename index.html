@@ -2314,7 +2314,7 @@ function renderPriorities(){
   };
   actives.forEach(renderOne);
   if(fups.length){
-    const h=document.createElement('div');h.className='prio-sec';h.textContent='Done \u2014 sent or submitted \u00b7 needs follow-up';el.appendChild(h);
+    const h=document.createElement('div');h.className='prio-sec';h.textContent='Sent or submitted \u2014 waiting on them';el.appendChild(h);
     fups.forEach((p,i)=>renderOne(p,actives.length+i));
   }
   if(parked.length){
