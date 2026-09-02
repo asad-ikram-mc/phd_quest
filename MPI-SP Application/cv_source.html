@@ -1,0 +1,152 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Asad Ikram — Academic CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:11mm 14mm 9mm}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3','Helvetica Neue',Arial,sans-serif;font-size:8.95pt;line-height:1.375;color:#1d2733;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+a{color:#1d2733;text-decoration:none;border-bottom:.5px solid #9fb0bd}
+h1{font-family:'Source Serif 4',Georgia,serif;font-size:20pt;font-weight:700;letter-spacing:-.2px;line-height:1}
+.sub{font-size:10pt;color:#4a5b6a;margin-top:3mm}
+.contact{font-size:8.6pt;color:#4a5b6a;margin-top:2.4mm}
+.contact span{white-space:nowrap}
+.sep{color:#a8b6c1;margin:0 2mm}
+.rule{height:1.5px;background:#1d2733;margin:3.2mm 0 0}
+h2{font-family:'Source Serif 4',Georgia,serif;font-size:10.4pt;font-weight:700;margin:4.1mm 0 1.7mm;padding-bottom:1mm;border-bottom:.6px solid #c9d4dc;letter-spacing:.2px}
+.item{margin-bottom:2.5mm;break-inside:avoid}
+.ihead{display:flex;justify-content:space-between;align-items:baseline;gap:5mm}
+.ttl{font-weight:700;font-size:9.5pt;color:#0f1926}
+.date{font-size:8.4pt;color:#67788a;font-style:italic;white-space:nowrap}
+.meta{font-size:8.8pt;color:#3f5061;font-style:italic;margin:.3mm 0 1.1mm}
+ul{list-style:none;margin-top:.8mm}
+li{position:relative;padding-left:3.4mm;margin-bottom:.7mm}
+li:before{content:"";position:absolute;left:0;top:1.55mm;width:1.5mm;height:1.5mm;background:#1f6f61;border-radius:50%}
+b{font-weight:700;color:#0f1926}
+.lead{font-size:9.1pt;color:#2b3a48}
+.kv{display:grid;grid-template-columns:30mm 1fr;gap:.9mm 3mm;font-size:8.5pt}
+.kv .k{font-weight:700;color:#1f6f61}
+.hl{background:#eef5f3;border-left:2.2px solid #1f6f61;padding:1.9mm 2.7mm;margin:1.1mm 0 0;font-size:8.7pt}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 7mm}
+.compact li{margin-bottom:.5mm}
+</style></head><body>
+
+<h1>Asad Ikram</h1>
+<div class="sub" style="margin-top:2.4mm">Computational social science &middot; measurement validity of machine-labelled text &middot; large-scale social data collection</div>
+<div class="contact">
+<span>asad.ikram53@gmail.com</span><span class="sep">|</span><span>+44 7482 376417</span><span class="sep">|</span><span>Lahore, Pakistan</span><span class="sep">|</span><span><a href="https://linkedin.com/in/asad-ikram98">linkedin.com/in/asad-ikram98</a></span><span class="sep">|</span><span><a href="https://asad-ikram-mc.github.io/portfolio">asad-ikram-mc.github.io/portfolio</a></span>
+</div>
+<div class="rule"></div>
+
+<h2>Research interests</h2>
+<p class="lead">Whether the instruments computational social science uses to measure public opinion actually measure the same thing across platforms, across model versions, and across the standpoints built into the models. I approach this as a measurement problem, using psychometric tools (generalizability theory, measurement invariance and DIF, score linking) on machine-labelled text, and I bring seven years of building the production annotation pipelines whose failures motivate the question.</p>
+
+<h2>Publications and research output</h2>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">Is the Platform Part of the Measurement? A Protocol and Simulation Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment</span><span class="date">arXiv, cs.SI</span></div>
+  <div class="meta">Asad Ikram and Dr Ella Haig (University of Portsmouth) &middot; 23 pages &middot; ICWSM 2027 submission planned</div>
+  <ul>
+    <li>Treats each social platform as a <b>survey mode</b> and specifies a six-step psychometric protocol for machine-labelled sentiment: generalizability theory variance decomposition, measurement invariance and differential item functioning testing, and score linking with policy events as anchors.</li>
+    <li>Known-truth simulation, <b>500 replications</b>: a pooled cross-platform index that takes platform scores at face value reports the <b>wrong sign of aggregate sentiment on roughly a quarter of days</b>, purely from measurement differences. A measurement-adjusted index does not.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">Calibrating the Observatory: Measurement Equivalence, Instrument Drift and Epistemic Standpoint in LLM-Annotated Public Opinion</span><span class="date">Doctoral proposal, 2026</span></div>
+  <div class="meta">Full proposal and reference list at asadfix.github.io/helsinki_proposal</div>
+  <ul>
+    <li>Four studies on one data spine. <b>Platform equivalence</b> of LLM labels tested with fitted categorical invariance and DIF models with a human criterion inside the measurement model; <b>instrument drift</b> handled by a shadow-anchored bridging design across an executed open-weight version ladder, so a longitudinal series stays comparable when the annotator changes underneath it; <b>epistemic standpoint</b> as a fixed facet in a multivariate generalizability design; and a criterion test against probability-sample surveys.</li>
+    <li>Deliverables are an open toolkit and an <b>Instrument Change Log</b>, a reporting standard for annotation pipelines.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">MSc Dissertation: Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies</span><span class="date">2025</span></div>
+  <div class="meta">University of Portsmouth &middot; Distinction (mark 78) &middot; Supervisor: Dr Ella Haig &middot; ethics approval TETHIC-2025-111094</div>
+  <ul>
+    <li>Collected and integrated <b>279,000 public posts across Twitter/X, Reddit, YouTube and Quora</b> on UK economic policy via official APIs and licensed feeds, under GDPR-compliant procedures.</li>
+    <li>Fine-tuned <b>BERT at macro-F1 0.878</b> against BiLSTM and lexicon baselines; human validation on a balanced gold set (Cohen's kappa ~0.78); temperature-scaling calibration; McNemar and bootstrap significance testing; Prophet forecasting of the daily sentiment index; NRC emotion analysis; interpretability via LIME and integrated gradients.</li>
+    <li>Central finding: the same policy event produced <b>structurally different sentiment and engagement profiles on each platform</b>, which is the divergence the methods paper then formalises.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">web-scraping-guide.com</span><span class="date">Public reference, maintained</span></div>
+  <ul class="compact">
+    <li>A free 24-section engineering reference on web data collection: TLS and JA4+ fingerprinting, anti-bot systems, proxy strategy, the legal landscape (hiQ v. LinkedIn, Van Buren, Meta v. Bright Data), and the silent-failure modes of collected data, with a 130-node knowledge graph published as machine-readable context.</li>
+  </ul>
+</div>
+
+<h2>Research-relevant professional experience</h2>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">Founder and CTO, ArtemisAI Ltd</span><span class="date">Feb 2025 &ndash; present</span></div>
+  <div class="meta">UK company &middot; social media intelligence platform</div>
+  <ul>
+    <li>Designed and operate a multi-model annotation cascade over <b>3.39 million comments</b>: six NLP endpoints (sentiment, emotion, toxicity, topic, language, intent) with a confidence-routed LLM fallback tier, plus CLIP image-text fusion, OCR and speech transcription for video.</li>
+    <li class="hl">The measurement finding that motivates my doctoral work: our two model tiers agree on <b>82.9% of sentiment labels and 0.0% of toxicity labels</b>, while the toxicity model reports <b>96.7% average confidence</b>. The dashboard's "accuracy" figure is, on inspection of the code, inter-model agreement with no criterion behind it. The zero comes from mismatched label taxonomies between tiers, which is an equivalence failure of exactly the kind this research addresses.</li>
+    <li>Built the honesty controls in response: a QA layer that reports "not measured" and "not comparable" rather than a fabricated zero, per-dimension agreement tables, and escalation share as a model-health signal.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">Data Engineer Consultant, M+C Saatchi Fluency</span><span class="date">Dec 2024 &ndash; present</span></div>
+  <div class="meta">UK, remote &middot; social listening infrastructure for UK Government departments, Amazon, Ford, Nike and Reckitt</div>
+  <ul>
+    <li>Operate the multi-platform ingestion pipeline behind campaign and policy intelligence: licensed feeds plus custom crawlers into AWS, with NLP sentiment models; reports are read by senior government communications teams.</li>
+    <li>Built a <b>self-healing crawler fleet (68 crawlers)</b> with an agentic repair system, and the data-quality layer around it: <b>KL-divergence drift alarms</b> on field distributions, per-column coverage alerts, dedup registries, and post-crawl verification of every run. Maintain documented filter rules, permanent removal lists and audit logs on government-facing datasets.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">Senior Data Engineer, Dubizzle Labs</span><span class="date">Feb 2022 &ndash; Aug 2024</span></div>
+  <div class="meta">Pakistan &middot; promoted twice in two years (Associate SWE &rarr; Data Engineer &rarr; Senior)</div>
+  <ul>
+    <li>Led a three-engineer team owning <b>500+ regional web scrapers across fifteen countries</b>, collecting <b>multilingual data in English, Arabic, Urdu and Hindi</b> for market and consumer-behaviour analytics. Multilingual collection at scale in Global South information environments is routine work rather than a project risk for me.</li>
+    <li>Redesigned the layered data warehouse, improving ETL throughput 60%; introduced unit testing and crawler contract validation, cutting production collection incidents 45%.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">Data Engineer Consultant, Fix.com</span><span class="date">May 2023 &ndash; present</span></div>
+  <div class="meta">Canada, remote, concurrent</div>
+  <ul class="compact">
+    <li>Pipelines processing <b>50M+ data points from 200+ sources</b>; built an 86-crawler control plane with streaming data-quality gates, coverage validation against site-reported truth, and evidence-based proxy tier selection.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="ihead"><span class="ttl">Earlier consulting</span><span class="date">2018 &ndash; 2026</span></div>
+  <ul class="compact">
+    <li>VendueTech (Ireland, 2025) &middot; Prefe (Italy, 2024) &middot; CXG (Dubai, 2025&ndash;26) &middot; Senior Freelance Data Engineer, 300+ projects across 400+ websites for 50+ clients (2018&ndash;2026).</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="two">
+  <div class="item">
+    <div class="ttl">MSc Data Analytics &mdash; Distinction</div>
+    <div class="meta">University of Portsmouth, UK &middot; 2024&ndash;2025</div>
+    <ul class="compact"><li>Intelligent Data and Text Analytics; Big Data and ML; Explainable AI; Data Management (80).</li></ul>
+  </div>
+  <div class="item">
+    <div class="ttl">BSc Computer Science</div>
+    <div class="meta">FAST-NUCES, Pakistan &middot; 2017&ndash;2022</div>
+  </div>
+</div>
+
+<h2>Awards</h2>
+<ul class="compact">
+  <li><b>Chevening Scholar 2024/25</b> &mdash; the UK FCDO's flagship international scholarship, awarded to roughly the top 2 to 3% of more than 70,000 applicants across 160 countries.</li>
+</ul>
+
+<h2>Methods and tools</h2>
+<div class="kv">
+  <div class="k">Measurement</div><div>Generalizability theory (incl. multivariate G-studies), multi-group and ordered-categorical CFA, measurement invariance testing and DIF with anchor purification, score linking and equating, MTMM, Monte Carlo simulation with known ground truth.</div>
+  <div class="k">NLP and ML</div><div>Transformer fine-tuning (BERT), BiLSTM, LLM annotation and distillation pipelines, calibration (temperature scaling, isotonic), interpretability (LIME, integrated gradients, SHAP), CLIP embeddings, Whisper, Prophet.</div>
+  <div class="k">Statistics</div><div>McNemar tests, bootstrap confidence intervals, inter-annotator agreement (Cohen's kappa), stratified probability sampling, KL-divergence drift detection.</div>
+  <div class="k">Data collection</div><div>Multilingual collection at scale (English, Arabic, Urdu, Hindi), official platform APIs (Meta Graph, Reddit, YouTube), licensed feeds, Scrapy and Playwright, ethics and GDPR-compliant procedures.</div>
+  <div class="k">Engineering</div><div>Python, PySpark, SQL, AWS (Fargate, Glue, Athena, Redshift, SageMaker), Airflow, Docker, Kubernetes. <b>Languages:</b> English (fluent), Urdu (native).</div>
+</div>
+
+</body></html>
