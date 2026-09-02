@@ -74,3 +74,35 @@ Four parallel research agents (Europe positions, UK/Ireland routes, Americas + A
 - **Cambridge ERA:AI Fellowship — REAL MATCH (not a PhD, a funded hedge).** 10-week AI safety and governance research programme in Cambridge; Winter 2027 cohort runs 18 Jan - 26 Mar 2027; **deadline 13 Sep 2026, 23:59 AoE**. GBP 10,000 stipend + visa support + travel + desk + mentorship; open to anyone 18+, no degree gate, any nationality. Three tracks; the *technical AI governance* track (auditing, monitoring, verification of AI systems) is squarely the measurement-accountability agenda. Alumni publish at NeurIPS; top performers get 6+ month funded Research Scholar extensions. Timing conflicts with a Helsinki January start, but Helsinki results land end of November, before ERA begins - so it works as the funded Cambridge bridge if Matti's call says no, and it would put Asad IN Cambridge when Gates results come out (~8 Mar). erafellowship.org
 - **Horizon Europe "ERA Fellowships" (EU/REA)**: for experienced researchers, doctoral degree expected - postdoc-level, not eligible until after the PhD. Park.
 - **"FAS" — no matching scheme exists.** The only notable programmes under that acronym are the USDA Foreign Agricultural Service fellowship (agriculture master's feeding the US Foreign Service - wrong field and US-track) and Harvard FAS College Fellows (post-PhD teaching posts). If "FAS" came from a mailer or list, it likely means something else - check the source.
+
+
+## ADDENDUM 2 Sep 2026: fresh sweep for NEW openings (job boards read live + official pages verified)
+
+### New, verified, added to the tracker
+| Target | Deadline | Why it fits | Funding | Caveat |
+|---|---|---|---|---|
+| **University of Agder (Norway) - PhD Research Fellow in Information Systems: AI, Digital Platforms and Extremism** (posted 31 Aug) | **1 Oct 2026, 23:59 Oslo** | Applicant writes the project: how platforms circulate radical content, how algorithms amplify or suppress it, how to govern it; collaboration with the national centre against violent extremism (NIVE). The Calibrating machinery (cross-platform equivalence of LLM labels) pointed at radical content. Contact: Prof. Oystein Saebo (Head of Dept). | NOK 550,800/yr, 100%, 3 yrs (4 with 25% duties), start late 2026 / early 2027 | Call names a **120 ECTS master's**; UK MSc = 90 ECTS. Ask HR (anna.c.faravaag@uia.no) whether BSc 4-yr + MSc qualifies BEFORE writing the 5,000-word proposal. Also needs MSc thesis copy, 1-page cover letter, 2 refs. |
+| **CS@max planck doctoral programme - MPI for Security and Privacy (Meeyoung Cha, director)** | **15 Dec 2026** (Fall 2027) | Cha = misinformation + CSS; her institute admits PhDs through CS@max planck; the MPI-SP page invites direct outreach to group leaders. | Full financial support | Bachelor's or Master's in CS or related field; name MPI-SP/Cha in the application. IMPRS privacy track (1 Jun / 1 Dec) is a weaker fit. |
+| **Princeton Politics - Andrew Guess** | **15 Dec 2026** (opens 15 Sep) | Misinformation exposure/effects, computational political communication; 5-year full funding | Full | **GRE REQUIRED** (no score = not considered; admits typically 160+ both sections). Second GRE-only item on the board. |
+| **LISS DTP 2027 (KCL/QMUL/Imperial)** | Guidance autumn 2026; deadline typically late Jan | The ESRC vehicle for a QMUL PhD with Zubiaga (already in pipeline) | ESRC studentship | Intl capped at 30% of awards; fee-gap coverage not guaranteed. |
+| **WGSSS Wales - Digital Economy and Society (Cardiff + Swansea)** | 2027 call expected Oct-Dec 2026 (Dec pattern) | CSS pathway (social media, human-algorithm interaction); Cardiff HateLab | Fees + UKRI stipend, intl on equal terms | Up to 30% intl; needs a Cardiff/Swansea supervisor first. |
+
+### New outreach targets (no open call, added to Outreach)
+- **Fabrizio Gilardi (UZH, Digital Democracy Lab)** - author of the 2023 LLM-annotation paper the proposal cites; only a postdoc is open (30 Sep). Outreach for a 2027 project-funded slot; contact via fabriziogilardi.org/contact.
+- **Sebastian Stier (Mannheim CSS professor + GESIS CSS director)** - agenda = quality and scientific value of digital behavioral data. No vacancy 2 Sep; structural route = Mannheim CDSS (mid-Nov). sebastian.stier@gesis.org.
+
+### Later windows worth a calendar line
+- **Scuola Normale Superiore (Pisa)** - 2027-28 call expected ~10 Feb to 12 Mar 2027 (Data Science; Political and Social Sciences), fully funded, Nov 2027 start.
+- **Bocconi (Hovy)** - 2027-28 window expected ~17 Apr to 18 May 2027 for Sep 2027 start (the 2026 window ran exactly those dates).
+
+### Checked and DEAD (do not re-check)
+- UvA ILLC "Improving social media using LLMs" (Tornberg VIDI) - closed 6 Sep 2025.
+- UvA ASCoR "When Lies Take Root" misinformation PhD - vacancy page removed (404) by 2 Sep 2026.
+- KU Leuven "Generative AI, political communication and democracy" PhD - closed 5 Aug 2026.
+- University of Luxembourg CLARITY (community fact-checking, LLMs) - closed 28 Mar 2026 (already tracked).
+- Sciences Po / ISC-PIF party-position PhD - 2024 posting, expired. Linkoping causality/CSS - Dec 2024, expired. GESIS doctoral researcher (Stier) - 2021 posting. Miami Climate Accountability Lab (Supran) CSS PhD - Jan 2025 deadline.
+- Swansea/WGSSS misinformation-context studentship - 2025-entry, gone; see the 2027 watch above.
+- Indiana OSoMe: Menczer explicitly no longer takes PhD students (Kwak at Luddy remains the Indiana route).
+- **UCSD Political Science (Molly Roberts)** - EXCLUDE: GRE required AND international students pay ~$24k/yr non-resident tuition that TA funding does not waive.
+- Gilardi (UZH): postdoc only. Aalto CSS group: no doctoral openings listed. Sciences Po medialab: postdoc/designer/intern only. Copenhagen CopeNLU false-information PhD closed 31 May 2026.
+- Weak-fit but live, skipped: Turku DPSoc/DPInvest doctoral posts (~9 Sep), BI Norway data-governance PhD (~7 Sep), VUB digital-humanities resistance PhD (21 Sep), Orebro media and communication (Sep).
