@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Asad Ikram — Application Letter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:16mm 18mm 14mm}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3','Helvetica Neue',Arial,sans-serif;font-size:9.75pt;line-height:1.48;color:#1c2733;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.hdr{border-bottom:1.5px solid #1c2733;padding-bottom:3.4mm;margin-bottom:5mm}
+h1{font-family:'Source Serif 4',Georgia,serif;font-size:17pt;font-weight:700;letter-spacing:-.2px;line-height:1}
+.sub{font-size:8.9pt;color:#4a5b6a;margin-top:2mm}
+.meta{display:flex;justify-content:space-between;align-items:baseline;font-size:9.2pt;margin-bottom:5mm}
+.to{color:#2b3a48;line-height:1.42}
+.to b{font-weight:600}
+.date{color:#5b6c7b;white-space:nowrap}
+p{margin-bottom:2.9mm;text-align:justify;hyphens:auto}
+.re{font-weight:600;margin-bottom:4mm;color:#0f1926}
+b{font-weight:600;color:#0f1926}
+.sig{margin-top:4.5mm}
+.sigline{font-size:8.7pt;color:#4a5b6a;line-height:1.5;margin-top:3.4mm;border-top:.6px solid #c9d4dc;padding-top:2.4mm}
+a{color:#1c2733;text-decoration:none;border-bottom:.5px solid #9fb0bd}
+</style></head><body>
+
+<div class="hdr">
+  <h1>Asad Ikram</h1>
+  <div class="sub">asad.ikram53@gmail.com &middot; +44 7482 376417 &middot; Lahore, Pakistan &middot; <a href="https://linkedin.com/in/asad-ikram98">linkedin.com/in/asad-ikram98</a> &middot; <a href="https://asad-ikram-mc.github.io/portfolio">asad-ikram-mc.github.io/portfolio</a></div>
+</div>
+
+<div class="meta">
+  <div class="to"><b>Dr Jon Roozenbeek and Dr Ivar Vermeulen</b><br>Department of Communication Science<br>Faculty of Social Sciences and Humanities<br>Vrije Universiteit Amsterdam</div>
+  <div class="date">3 September 2026</div>
+</div>
+
+<div class="re">Re: PhD Position in Social Data Science, "The economy of digital influence operations"</div>
+
+<p>Dear Dr Roozenbeek and Dr Vermeulen,</p>
+
+<p>I am applying for the PhD position in Social Data Science on the economy of digital influence operations.</p>
+
+<p>The advert names one standing deliverable, the Cambridge Online Trust and Safety Index, and that is what drew me. COTSI is not a dataset, it is an instrument that has to keep running. Your methodology page says the index draws on five of the seventeen vendors you identified, selected because their price and stock data are reachable by API without a login or a paywall, and it flags two of the five as a suspected reseller and a suspected seller of virtual numbers. Your <i>Science</i> paper adds that publishing the index may itself push providers to close those APIs. That leaves two open problems I have spent my career on: keeping a hostile collection alive, and knowing whether the numbers still mean the same thing when it changes.</p>
+
+<p>On the first. I run production collection against sources that actively resist it. At M+C Saatchi Fluency I built and operate a fleet of sixty-eight collectors with an agentic repair layer, so when a source changes its structure the system diagnoses the break, regenerates the extraction logic, tests it against live pages and only then ships; about a third of repairs need no model call at all. At Dubizzle Labs I led a three-engineer team running over five hundred collectors across fifteen countries in English, Arabic, Urdu and Hindi. I also wrote the public engineering reference on this work, web-scraping-guide.com. The failure mode I care about most is the quiet one: a collector that returns a valid-looking response containing nothing, so the series does not break, it just goes thin. On a price index that does not read as an outage. It reads as a cheaper market.</p>
+
+<p>On the second, which is my research. My methods paper with Dr Ella Haig treats each social platform as a survey mode and applies psychometrics to machine-labelled text: generalizability theory, measurement invariance and differential item functioning, and score linking. In a five-hundred-replication simulation with known ground truth, an index that pools platform scores at face value reports the wrong sign of aggregate sentiment on roughly a quarter of days, purely from measurement differences. The paper goes to arXiv shortly. The question transfers directly to COTSI with vendors in place of platforms: does a price from one vendor measure the same good as a price from another, does the index stay the same instrument across vendor churn, and what does that do to an event study on pre-election price movements? The field-level version will be familiar to you both. Rauchfleisch and Kaiser showed that Botometer thresholds are unstable enough that studies miscount humans as bots and back again, and Cresci's account of the detection arms race means that error drifts as adversaries adapt. Any estimate of a market's size inherits its classifier, and inherits the drift too.</p>
+
+<p>That gives me four papers I would want to write. <b>First, vendor equivalence</b>: a formal test of whether COTSI's five sources measure a common good, with a linking design so the series survives a vendor leaving. <b>Second, coverage</b>: the index currently sees the vendors that do not defend themselves, so I would extend collection to the login-walled and paywalled half of the market and quantify how much the picture changes. <b>Third, the election result</b> done with the instrument accounted for, to see whether the pre-election spike survives correction for vendor churn and composition. <b>Fourth, the regulatory question</b> your Vidi frames, working from price and stock signals toward where intervention actually bites, whether that is SIM registration regimes, platform verification design, or payment rails.</p>
+
+<p>I should be straight about what I do not bring. I have not run behavioural experiments. My quantitative work is observational and simulation-based, and the closest I have come to experimental design is the known-truth simulation in the paper, where the parameter is set and the question is whether the method recovers it. I would want to learn that properly, and Dr Vermeulen's work on correction and replication is a large part of why this post rather than another. I have also not conducted qualitative interviews, and I take seriously that interviewing people who operate an illicit market raises access, ethics and researcher-safety questions I would need to be trained into rather than improvise. On tooling, Python has been my daily working language for seven years; my R is functional rather than fluent, and I am working through the invariance and linking models from our paper in lavaan to close that gap rather than describe it away.</p>
+
+<p>Why four years rather than another contract. I have spent seven years building the instruments that produce these numbers, and what changed for me was looking honestly at my own. At ArtemisAI, the company I founded, our two annotation tiers agree on 82.9 per cent of sentiment labels and 0.0 per cent of toxicity labels, while the toxicity model reports 96.7 per cent average confidence. The zero turned out to be mismatched label taxonomies between the tiers rather than a failure of either model, and the dashboard's accuracy figure was inter-model agreement with no criterion behind it. Nobody built that dishonestly. It is what happens when instruments are adopted faster than anyone builds the discipline to check them. I would rather spend four years building that discipline for a market almost nobody measures than another year shipping numbers I cannot defend.</p>
+
+<p>I would be glad to discuss any of it.</p>
+
+<div class="sig">
+<p style="margin-bottom:1.5mm">Yours sincerely,</p>
+<p style="font-weight:600;color:#0f1926;margin-bottom:0">Asad Ikram</p>
+</div>
+
+<div class="sigline">
+Chevening Scholar 2024/25 &middot; MSc Data Analytics (Distinction; dissertation 78), University of Portsmouth &middot; BSc Computer Science, FAST-NUCES
+</div>
+
+</body></html>
