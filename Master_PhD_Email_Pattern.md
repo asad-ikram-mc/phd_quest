@@ -1,6 +1,8 @@
-# MASTER PhD OUTREACH EMAIL PATTERN — v2, 25 Aug 2026
+# MASTER PhD OUTREACH EMAIL PATTERN - v3, 3 Sep 2026
 
 **Gold standard references: Bail (#1) and Törnberg (#2). Both used as reference for every draft, always.**
+
+**What changed in v3:** added THE ADVERTISED-POST EMAIL, because the pattern only had cold-outreach templates and applying its eight parts to an advertised post duplicates the motivation letter and reads as acquisition.
 
 **What changed in v2:** the paper with Dr Ella Haig is finished (23 pages, on arXiv shortly), so every email upgrades from "dissertation finding" to "finished methods paper". Two new checks (novelty survival, one-new-fact follow-ups), the pitch-page escalation, and a lessons log from the live campaign (Nelimarkka, Ella, Theocharis).
 
@@ -200,6 +202,64 @@ is not what everyone does.
 | **Kate Starbird** (UW) | Collective sensemaking and participatory disinformation across platforms |
 | **Kristina Gligorić** (JHU) | NAACL 2025 - when can LLM annotations produce statistically valid CSS estimates. Same measurement validity question, different angle. |
 | **Matti Nelimarkka** (Helsinki) | *Platformed Interactions* (2020) - same actors, same election, structurally different communicative forms per platform; plus Berg & Nelimarkka 2023 (JASIST) - same images, different recognition services, divergent outputs. Your project: his observation, upgraded to a testable measurement model. |
+
+---
+
+## THE ADVERTISED-POST EMAIL (new 3 Sep 2026 - the pattern had no template for this)
+
+Everything above assumes COLD OUTREACH: no advertised position, so the email has to
+carry the whole case. When there IS an advertised post and you are submitting a formal
+application through a portal, the eight-part structure is WRONG and will hurt you:
+
+- Rule 2's opening ("I am writing to enquire about PhD opportunities") is factually
+  false and signals you did not notice the vacancy.
+- Parts 2 to 8 are already in the motivation letter the same person will read.
+  Repeating them is redundant, and where an advert says "acquisition is not
+  appreciated" it reads as pitching around the process.
+
+**What still applies:** all six checks, no em-dashes, the verified address, the exact
+signature, and the mistakes list.
+
+**Structure (target 200-280 words):**
+
+```
+Subject: [Post name / project] - question on [the specific thing]
+
+Dear Dr [Surname],
+
+I am submitting an application through the [X] portal for [the post], so this is
+not an application by email. I have one question I could not resolve from the
+published material.
+
+[HOOK, check 1: name their paper by title and cite the specific published detail
+your question comes from, ideally from a methods or documentation page rather than
+the abstract, which proves you read past the headline.]
+
+[THE QUESTION: something whose answer is genuinely not in the advert or the paper.
+Never something the advert answers, which reads as not having read it.]
+
+[ONE compressed paragraph, checks 2 and 3: why the answer changes what you would
+prepare for, landing your paper and the production finding inside THEIR problem in
+a single clause each. Not four paragraphs. The letter does that job.]
+
+I will submit before the [date] deadline either way. Thank you for your time.
+
+[exact signature]
+```
+
+**Rules specific to this case:**
+1. **Say in the first line that you are applying through the portal.** It defuses the
+   suspicion that you are bypassing the process.
+2. **No attachments.** Documents belong in the portal.
+3. **Do not wait for a reply before submitting.**
+4. **One question only.** Two questions is a conversation you have not earned yet.
+5. **If the advert answers your question, do not send the email.** Check the brackets:
+   VU's "(research) master's degree in (Social) Data Science" made an eligibility
+   question pointless and would have signalled a careless reader.
+6. Silence means nothing. Part-year PIs in September are not fast correspondents.
+
+Worked example: Roozenbeek, VU Amsterdam, 3 Sep 2026
+(VU Amsterdam Application/APPLICATION_PACK.md).
 
 ---
 
