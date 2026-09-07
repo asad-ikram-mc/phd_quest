@@ -1,6 +1,7 @@
 # University of Agder - PhD Research Fellow in Information Systems
 # "AI, Digital Platforms and Extremism" · Jobbnorge 307398 · NOK 550,800
 # CLOSES 1 October 2026 · start late 2026 or early 2027 · Kristiansand
+# Pack v2, 7 Sep 2026: eligibility answered by HR on 4 Sep (conditional yes), HK-dir route verified, proposal unblocked
 # Pack v1, 3 Sep 2026, after an 8-agent research sweep with 3 adversarial verifiers on eligibility
 
 ## 1. ELIGIBILITY: THIS IS A WAIVER REQUEST, NOT A COMFORTABLE FIT
@@ -25,7 +26,42 @@ An early research pass claimed the advert's "120 ECTS" was untraceable and that 
 
 ---
 
-## 2. THE EMAIL (send today, to the named contact, HR copied)
+## 2. THE ELIGIBILITY EMAIL: SENT 3 SEP TO HR, ANSWERED 4 SEP. DO NOT SEND THE SAEBO VERSION.
+
+**What happened.** Asad sent the eligibility question on 3 Sep 2026 to Anna Faeravaag (HR, the advert's contact for application questions), not to Saebo. She replied the next morning:
+
+> "Normally, a 90 ECTS Master would not qualify for admission on its own. With a BA that has more ECTS than normal together with a NOKUT statement clarifying this, you may apply for the position. The committee would still consider the applicant if the project description is strong and relevant to the call." (Anna Faeravaag, 4 Sep 2026 07:02 UTC, Gmail thread 1a068291da40e2d1)
+
+**What it means.** The question is answered and the answer is a conditional yes. The Saebo email drafted below in v1 asked the same question and must not go: the pattern's rule 5 (do not ask what has already been answered) applies, and the named contact for application questions has spoken. The 5,000 words are unblocked. Note the typo in the sent email's signature ("Asa"); it does not matter, but do not repeat it.
+
+**The recognition statement, verified 7 Sep 2026 on hkdir.no.**
+- HK-dir's automatic recognition statement for the United Kingdom (PDF saved beside this file as HKdir_UK_automatic_recognition_statement.pdf, last changed 10.01.2023) says: "Master Degree: Graden likestilles med en norsk akkreditert mastergrad av 1,5 aars omfang", i.e. a one-year UK Master Degree is equated to a Norwegian accredited master's degree of 1.5 years (90 studiepoeng). Instant, free, no application, cannot be appealed. This retracts my 3 Sep claim that HK-dir would read the MSc as 60 on time parity. It is the "NOKUT statement" for the master's side and it matches the transcript's "Credits gained (ECTS): 90".
+- Pakistan is NOT on the automatic-recognition list (Asia: China, Hong Kong, Indonesia, Japan, Malaysia, Singapore, South Korea, Taiwan, Thailand, Vietnam). The bachelor's therefore needs ordinary recognition, which HK-dir currently quotes at 6 to 8 months with a warning of longer. It cannot arrive by 1 Oct. Apply anyway, today: the portal accepts foreign users without a Norwegian ID ("utenlandsk bruker" login), it is free, and the receipt gives a case number to cite. Documents in the original language plus translations; country-specific requirements for Pakistan (HEC attestation) are on the documentation page behind a dropdown, check before uploading.
+
+**The follow-up to HR (one new fact, one question, reply in the same thread):**
+
+Subject: SV: Eligibility question, PhD Research Fellow in Information Systems (AI, Digital Platforms and Extremism)
+
+Dear Ms Faeravaag,
+
+Thank you, that is clear and helpful. I will apply.
+
+One follow-up on the statement, because the timing decides what I can put in the file. HK-dir's automatic recognition for the United Kingdom equates a one-year Master Degree to a Norwegian accredited master's degree of 1.5 years; the statement is on HK-dir's page here: https://hkdir.no/en/foreign-education/education-from-outside-of-norway/recognition-of-foreign-higher-education-bachelor-master-and-phd/automatic-recognition-a-quicker-alternative. Pakistan is not covered by automatic recognition, so the statement on my four-year bachelor's has to come through ordinary recognition, which HK-dir currently quotes at six to eight months. I am filing that application this week.
+
+Would the committee accept the automatic recognition statement for the master's, the HK-dir case number and receipt for the bachelor's, and the FAST-NUCES transcript showing four years and the credit total, with the ordinary decision following after the deadline? If the decision itself has to be in the file by 1 October I would rather know now.
+
+Thank you again for your time.
+
+Best wishes,
+Asad Ikram
+
+Chevening Scholar 2024/25 | MSc Data Analytics (Distinction), University of Portsmouth
+asad.ikram53@gmail.com | +44 7482 376417
+https://asad-ikram-mc.github.io/portfolio/
+
+**The v1 Saebo email is kept below for the record only. Not sent, not to be sent.**
+
+### v1 draft (superseded, do not send)
 
 **To:** oystein.sabo@uia.no
 **Cc:** anna.c.faravaag@uia.no
