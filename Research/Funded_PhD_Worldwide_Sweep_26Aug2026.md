@@ -137,3 +137,25 @@ Four parallel research agents (Europe positions, UK/Ireland routes, Americas + A
 ### Tooling note
 - **LinkedIn job search logged-out is unusable for academic posts**: three EU-located queries returned only remote data-labelling and contractor gigs, and the interface geolocated to Pakistan by default. Do not spend time on it; Academic Positions, university HR portals, ELLIS jobs, employment.ku.dk and varbi/jobbnorge are the productive sources.
 - FindAPhD is Cloudflare-gated to automation; EURAXESS keyword search returned nothing relevant for CSS terms; PhDportal surfaced only online programmes.
+
+---
+
+## Addendum, 7 Sep 2026 (afternoon): LinkedIn / Reddit / PhD-board pass
+
+Asked for: a fresh pass through logged-in LinkedIn, Reddit and the PhD-funded boards. Headline: nothing new outranks the existing board. Every candidate surfaced was verified against the original listing and ruled out.
+
+### Verified and ruled out
+- **University of Oslo, Jobbnorge 302565, closes 30 Sep 2026.** Turned up in a misinformation search but it is a POSTDOC (SKO 1352) on the TIDAL project (Truth, Information, Democracy and Law, Department of Private Law, PI Prof. Lee A. Bygrave, l.a.bygrave@jus.uio.no). Requires a submitted doctoral dissertation. Not eligible. Worth remembering only as a future collaborator: sub-objective 1 of TIDAL is "map the non-legal structural factors causing information disorder, drawing on social and information sciences", which is where a measurement paper would land.
+- **Nord University, Jobbnorge 304114, PhD in Social Science, project SOTRUST, closes 1 Oct 2026, NOK 565,000, Bodø, start 1 Mar 2027.** SOTRUST is "(Mis)trust: The Norwegianization of language, people and land in South Saepmie". Ranking criteria put Saami language and history competence second only to the proposal. Not our field. Skip.
+- **University of Bergen, Jobbnorge 298789, PhD at Information Science and Media Studies (ethical NLP, contact Samia Touileb).** Closed 7 June 2026. Dead. Good profile for a future round: 4 years, NOK 568,700, open sub-topic within bias/fairness/safety of language technologies, and it asks for a code sample.
+
+### Sources checked and what they returned
+- **LinkedIn (logged-in):** not reachable. The Claude in Chrome extension reported "not connected" twice. Logged-out LinkedIn search is unusable for academic posts (recorded 7 Sep morning).
+- **Reddit:** the extension shows "Claude cannot assist with the content on this page" on reddit.com, so it is blocked even when Chrome is connected. Web-indexed Reddit search returned only old postdoc threads (Lazer Lab, Georgia Tech, Northwestern CCPP), nothing from 2026.
+- **FindAPhD:** HTTP 403 to both the fetcher and the in-app browser (Cloudflare). Needs a human browser.
+- **phdfinder.com:** 403.
+- **jobs.ac.uk, PhD-only facet:** "misinformation" returns two lectureships and no PhDs; "natural language processing" returns 17 items, all postdoc/faculty except one Manchester engineering studentship; "digital society" returns 62 items of admin and faculty noise. UK PhD posts continue to route through DTP pages, not the job board.
+- **Jobbnorge (via search):** the three posts above. The other UiO informatics PhDs returned (NLP, information systems, digital innovation, IAM, cybersecurity) all closed 1 Mar 2026.
+
+### Standing conclusion
+The board's ranking is unchanged: PoliMi (17 Sep), VU (14 Sep), Agder (1 Oct, behind the Sæbø email), CS@max planck (15 Dec), Cha follow-up (16 Sep). The next productive sweep sources are the ones that need a human browser: FindAPhD with the keyword "misinformation" and "social media", and LinkedIn Jobs filtered to the past month, both of which Asad can run himself in two minutes.
