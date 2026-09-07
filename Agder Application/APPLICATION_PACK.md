@@ -133,3 +133,31 @@ There is no language requirement, but Norwegian corpora and NIVE-facing work are
 ## 9. DOCUMENTS REQUIRED (from the advert)
 - Certificate with grades · copy of the master's thesis · cover letter (max 1 page, ~500 words) · **research proposal, 5,000 words max** (tentative research questions, theoretical perspectives, methodological approaches, planned progression) · list of academic work · two referees.
 - "The quality of the research proposal will receive a high level of consideration during the application assessment process."
+
+---
+
+## 10. HOW TO APPLY: THE TWO APPLICATIONS, STEP BY STEP (added 7 Sep 2026)
+
+### A. HK-dir recognition of the FAST-NUCES BSc (and the MSc alongside it)
+Purpose: a case number and receipt to cite in the UiA application. The decision itself (6 to 8 months) will land long after 1 October; HR has been asked in the Gmail draft whether a pending case is acceptable.
+
+1. **HEC attestation first, because HK-dir requires it for Pakistan.** HK-dir's country page (verified 7 Sep 2026): "All copies of Pakistani degree certificates and transcripts (Mark Sheets / Result Cards) must be attested by the Higher Education Commission of Pakistan (HEC)." Apply on HEC's e-services portal (eservices.hec.gov.pk) for degree attestation of the BSc degree and the transcript. If you already hold HEC-attested copies from the Chevening or Portsmouth process, scan those. Also required: a copy of your passport or CNIC showing the national ID number, because HK-dir verifies Pakistani documents with HEC using it.
+2. **Gather the UK side.** Portsmouth degree certificate (Asad_Ikram_MSc_Certificate.pdf) and transcript (Asad_Ikram_Portsmouth_Transcript.pdf) are in the repo root. English documents need no translation. Attach HK-dir's own UK automatic recognition statement as well (Agder Application/HKdir_UK_automatic_recognition_statement.pdf) so the case officer sees you know the master's is already covered.
+3. **Apply.** hkdir.no > Foreign education > Recognition of foreign higher education > "Apply for recognition". Log in as "utenlandsk bruker" (foreign user: username and password, no Norwegian ID needed). Use a desktop browser. Upload every page of every document in the original language; the FAST-NUCES documents are in English so no translation is needed. Free of charge.
+4. **Keep the receipt.** Submission is registered automatically and an email receipt with a case number follows. That receipt is uploaded to Jobbnorge under "documentation from previous education".
+5. If HEC attestation cannot be completed before 1 October, still file the HK-dir application with un-attested copies and add the attested ones when they arrive; HK-dir will ask for what is missing by email. The point on 1 October is the case number, not the decision.
+
+### B. The UiA application on Jobbnorge (closes 1 October 2026; submit by 28 September)
+Jobbnorge 307398. Open the advert and press "Apply for this job" (search jobbnorge.no for 307398 if the link has moved). The Jobbnorge form asks for a personal profile, education and work history typed into fields, and then attachments. Everything must be PDF and in English or a Scandinavian language.
+
+Upload, in this order, named as shown:
+1. **Cover letter** (max 1 page, ~500 words): Agder Application/Asad_Ikram_Cover_Letter_Agder.pdf
+2. **Research proposal** (max 5,000 words): Agder Application/Asad_Ikram_Research_Proposal_Agder.pdf. Currently about 4,100 words in the body plus references.
+3. **Certificate with grades:** Asad_Ikram_MSc_Certificate.pdf plus Asad_Ikram_Portsmouth_Transcript.pdf, and degree_bscs_asad.pdf plus the FAST-NUCES transcript (get the transcript from FAST-NUCES if you do not have it; the Edinburgh checklist already lists this as a to-do).
+4. **Copy of the master's thesis:** Asad_Ikram_MSc_Thesis.pdf.
+5. **Academic work and R&D projects, plus a list:** the Haig paper manuscript (label it "Manuscript, 2026, to be posted to arXiv") and a one-page list (paper, dissertation, the web-scraping guide as public work). Use the honesty rule from the CV: nothing is described as published.
+6. **Recognition documents:** HKdir_UK_automatic_recognition_statement.pdf and the HK-dir receipt with the case number. Add a one-line note in the cover-letter field or a separate PDF: "Ordinary recognition of the bachelor's degree is pending with HK-dir, case number X, filed [date]; HR confirmed on 4 September 2026 that I may apply on this basis."
+7. **Two references:** name, role, relationship, email, phone. Dr Ella Haig (MSc supervisor and co-author) and one more; ask both before submitting. A professional referee who can speak to the production systems is fine for the second.
+8. **CV:** Jobbnorge has fields, but also attach CV/Asad_Ikram_CV_Academic_2026.pdf (check it is current).
+
+Before pressing submit: read the proposal once aloud, confirm the two referees have said yes, confirm the HK-dir receipt is attached, and keep the confirmation email. Interviews for short-listed candidates follow; the appointment goes through UiA's Appointments Committee.
