@@ -143,15 +143,46 @@ my dissertation or a research proposal.
 
 ### SIGNATURE (exact)
 
+Updated 7 Sep 2026. The rendered, copy-ready HTML versions are in `Email_Signatures.html`
+in the repo root: open it in Chrome, select inside the white box, copy, paste into Gmail.
+
+**Academic, the default for every professor email:**
+
 ```
 Best wishes,
 Asad Ikram
 
-Chevening Scholar 2024/25 | MSc Data Analytics (Distinction), University of Portsmouth
-asad.ikram53@gmail.com
-https://linkedin.com/in/asad-ikram98
-https://asad-ikram-mc.github.io/portfolio/
+Asad Ikram
+Chevening Scholar 2024/25 · MSc Data Analytics (Distinction), University of Portsmouth
+Data Engineer, M+C Saatchi Fluency
+asad.ikram53@gmail.com · +44 7482 376417
+asad-ikram-mc.github.io/portfolio · linkedin.com/in/asad-ikram98
 ```
+
+**Once the arXiv preprint is live, add one line above the contact details:**
+
+```
+Ikram & Haig, "Is the Platform Part of the Measurement?" · arXiv:XXXX.XXXXX
+```
+
+That citation line is worth more than every other element in the signature combined.
+Do not put it up before the preprint is actually posted.
+
+**Rules for the signature itself:**
+1. **No images, logos, headshots or social icons.** University mail clients block remote
+   images by default, so they arrive as broken boxes, and they push the message toward
+   the promotions bucket. Royal Holloway's external-mail banner explicitly warns
+   recipients about links and images.
+2. **No location line.** "Lahore, Pakistan" announces fee status before the conversation
+   has earned it. RHUL refused on exactly that ground. Raise eligibility deliberately,
+   when it matters, the way it was raised with Agder.
+3. **No quote, mission line or confidentiality disclaimer.** The first paragraph is the pitch.
+4. **Arial only.** Gmail replaces fonts it does not recognise.
+5. **Short signature on replies.** Name plus email plus phone. Repeating the full block
+   in every message of a thread makes a conversation look like a mailshot.
+6. **Watch for doubling.** Drafts in this repo have the signature typed into the body.
+   If a Gmail default signature is switched on, either delete the typed block before
+   sending or set that compose window to "No signature" with the pen icon.
 
 ---
 
