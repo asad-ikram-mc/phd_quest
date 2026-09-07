@@ -106,3 +106,34 @@ Four parallel research agents (Europe positions, UK/Ireland routes, Americas + A
 - **UCSD Political Science (Molly Roberts)** - EXCLUDE: GRE required AND international students pay ~$24k/yr non-resident tuition that TA funding does not waive.
 - Gilardi (UZH): postdoc only. Aalto CSS group: no doctoral openings listed. Sciences Po medialab: postdoc/designer/intern only. Copenhagen CopeNLU false-information PhD closed 31 May 2026.
 - Weak-fit but live, skipped: Turku DPSoc/DPInvest doctoral posts (~9 Sep), BI Norway data-governance PhD (~7 Sep), VUB digital-humanities resistance PhD (21 Sep), Orebro media and communication (Sep).
+
+
+## ADDENDUM 7 Sep 2026: fresh sweep (web search, job boards read live, LinkedIn tested)
+
+**Honest headline: nothing found this week outranks what is already on the board.** The best live targets remain PoliMi/Pierri (18 Sep 02:00, so 17 Sep), Agder (1 Oct, behind the Saebo eligibility email), CSH Vienna (15 Oct), NUS (1 Nov), ETH AI Center (2 Nov), the 1 Dec cluster, and CS@max planck/Cha (15 Dec). Three new live items are edge-to-medium fits and are recorded below so they are not re-searched.
+
+### New, verified, LIVE (added to Outreach + Calendar)
+| Target | Deadline | Fit | Notes |
+|---|---|---|---|
+| **University of Vienna - PhD, Responsible Machine Learning (Martin Pawelczyk, Faculty of CS)** | **18 Sep 2026** (ELLIS listing; univie portal job 1433064033) | Edge-medium | Data-centric AI (unlearning, data attribution and curation, privacy for foundation models) and AI safety (robust alignment in multi-agent LLM systems). Same lane as PoliMi but no social-science substance. Master's, strong programming, ML foundations; publications optional. Apply only if PoliMi is done and there is spare capacity. |
+| **KTH Stockholm - Doctoral student in Feminist AI Addressing Gender-Based Violence (Amir Hossein Payberah, EECS/CLS)** | **24 Sep 2026** midnight CET | Medium | LLM/NLP/ML to detect online gender-based violence *including structural silences*; build large datasets and knowledge graphs; partner with feminist organisations; publish in AI venues. Primarily NLP/ML engineering, no formal feminist-theory background required, but the frame must be engaged with sincerely. Fully funded; 240+ HE credits (his 4-yr BSc qualifies); English B/6. The harmful-content-classifier validity angle transfers directly. |
+| **University of Copenhagen DIKU - PhD, Cultural Reasoning with Language Models (Desmond Elliott, CoAStaL; co-sup Hershcovich, Bjerring-Hansen)** | **8 Nov 2026** 23:59 CET, start 1 Feb 2027 | Edge | LLM evaluation, evidence-grounding, annotation datasets, but on literary/cultural texts with humanities scholars. NOT CopeNLU/Augenstein. Adjacent on method only. |
+
+### Structural watch
+- **DFG SPP 2573 "Rethinking Disinformation (Re:DIS)"**: six-year priority programme; first funding period 2026-2029, projects start summer 2026, each 36 months, spanning communication, psychology, philosophy, computer science (automatic detection), law (platform regulation) and social science. Bamberg's two posts ("Disinformation, Democracy and Epistemic Breakdown", political theory + agent-based modelling, 65% TV-L 13, start 1 Nov 2026) **closed 15 Aug 2026**. More German PhD posts under this programme should appear through autumn 2026. GEPRIS did not render via fetch, so the funded-project list is unretrieved; check gepris.dfg.de manually and search "SPP 2573" monthly.
+
+### Checked and DEAD this sweep (do not re-check)
+- **UvA ASCoR "Political Use of Generative AI" (Starke, Piotrowski, van Erkel)** - closed 22 May 2025.
+- **UvA ASCoR "Are We Too Concerned About Misinformation?" (Bos, Hameleers, van der Meer; EURAXESS 229261)** - closed 20 May 2024. The tracker had been carrying this as "check status"; it is now closed there.
+- **Bamberg Re:DIS posts** - closed 15 Aug 2026 (above).
+- **UCD Generative AI and climate misinformation (Greene, Parnell)** - closed 2 Jun 2026.
+- **Essex climate misinformation studentship (jobs.ac.uk DGV777)** - listing gone.
+- **ETH COSS 10 PhDs with TU Delft (Helbing)** - archived 2015 page.
+- **GESIS doctoral posts**: none open on the personio board on 7 Sep (only a postdoc data-manager role and student assistants). The CSS-117 link is dead. Stier remains an outreach target only.
+- **ITU Copenhagen**: no CSS/NERDS PhD open; en.itu.dk did not resolve.
+- **Vienna Responsible AI May call** (20 May 2026) is superseded by the 18 Sep listing above.
+- Weak fit, skipped: ULB Brussels 3 PhDs on digital media and adolescent mental health (12 Oct); Illinois iSchool PhD (priority 20 Oct, generic); NTNU cyber-range PhD (4 Oct); Turku doctoral programmes (closing 9 Sep).
+
+### Tooling note
+- **LinkedIn job search logged-out is unusable for academic posts**: three EU-located queries returned only remote data-labelling and contractor gigs, and the interface geolocated to Pakistan by default. Do not spend time on it; Academic Positions, university HR portals, ELLIS jobs, employment.ku.dk and varbi/jobbnorge are the productive sources.
+- FindAPhD is Cloudflare-gated to automation; EURAXESS keyword search returned nothing relevant for CSS terms; PhDportal surfaced only online programmes.
