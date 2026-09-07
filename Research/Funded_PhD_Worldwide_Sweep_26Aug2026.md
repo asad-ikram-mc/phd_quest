@@ -159,3 +159,13 @@ Asked for: a fresh pass through logged-in LinkedIn, Reddit and the PhD-funded bo
 
 ### Standing conclusion
 The board's ranking is unchanged: PoliMi (17 Sep), VU (14 Sep), Agder (1 Oct, behind the Sæbø email), CS@max planck (15 Dec), Cha follow-up (16 Sep). The next productive sweep sources are the ones that need a human browser: FindAPhD with the keyword "misinformation" and "social media", and LinkedIn Jobs filtered to the past month, both of which Asad can run himself in two minutes.
+
+### 7 Sep, later: LinkedIn logged-in pass (in-app browser, Asad signed in)
+- **LinkedIn Jobs is unusable even logged in.** Every query geolocates to Germany or Pakistan and ignores the keywords; quoted queries fall back to "jobs you may be interested in". Do not spend time there.
+- **LinkedIn posts search works** (search/results/content with datePosted past-month, then Load more). Nine query sets run. Everything it surfaced:
+  - VU Amsterdam (Roozenbeek), already on the board. His own post confirms 14 Sep 23:59 and interviews 21-30 Sep. Calendar marker added for 21 Sep.
+  - ULB Brussels, GENSCOPE (ERC, Prof. Chelly Maes), 3 PhDs on adolescents and gender narratives across social media, TV and games; closes 12 Oct, start 1 Mar 2027, apply by email to chelly.maes@ulb.be. Ruled out: the post says one researcher from each of Belgium, Italy and Czechia (data collection in those countries), and the topics are body image, sexuality and gender beliefs, not measurement or platforms.
+  - VUB Brussels, Inter-RESIST PhD in the cultural study of resistance (digital humanities), start 1 Nov 2026. Humanities; skip.
+  - Gilardi (Zurich) postdoc, 30 Sep; KCL lecturer in CSS, 15 Sep; Georgia Tech faculty; UvA NLG PhDs closed 27 Aug; IMT Lucca cyber PhDs closed 31 Aug; Groningen neurobiology PhD 15 Sep. None applicable.
+- **Reddit is blocked by the in-app browser's policy** on both reddit.com and old.reddit.com, and by the Chrome extension on its side. Reddit is closed to me on every route.
+- Headline unchanged: nothing new outranks the board.
