@@ -1,3 +1,27 @@
+# ============================================================================
+# STATUS: NOT APPLYING. Closed 7 September 2026 by Asad's decision.
+# Not an eligibility failure: HR (Anna Faeravaag) cleared the way on 4 Sep and
+# the proposal and cover letter were finished. The call was capacity, keeping
+# September on VU Amsterdam, PoliMi and the arXiv paper instead of splitting it
+# three ways for a post whose admission still hung on a recognition decision
+# that could not arrive before 1 October.
+#
+# WHAT TO REUSE, AND DO NOT REWRITE FROM SCRATCH:
+#   Asad_Ikram_Research_Proposal_Agder.pdf / proposal_source.html
+#     "Counting What the Classifier Sees", ~4,100 words. The four studies
+#     (equivalence, amplification with error carried through, governance
+#     logics, validity protocol) transfer to any measurement, online-harms or
+#     platform-governance call. Sections 2, 3 and 6 are the Norway-specific
+#     parts; swap those and the institution, keep the rest.
+#   HKdir_UK_automatic_recognition_statement.pdf
+#     HK-dir equates a one-year UK Master Degree to a Norwegian master of
+#     1.5 years. Valid for any Norwegian application.
+#   Section 10 below documents the HEC attestation requirement for Pakistani
+#   documents, which applies to every Norwegian application Asad ever makes.
+#
+# The unsent Gmail draft to anna.c.faravaag@uia.no should be discarded.
+# ============================================================================
+
 # University of Agder - PhD Research Fellow in Information Systems
 # "AI, Digital Platforms and Extremism" · Jobbnorge 307398 · NOK 550,800
 # CLOSES 1 October 2026 · start late 2026 or early 2027 · Kristiansand
