@@ -121,3 +121,44 @@ email and should be used instead.
 **Unchanged from v2:** no attachments, "Dear Andreu", the hook on "When Conservatives See Red but
 Liberals Feel Blue", the standalone subject line, "as far as I can find" rather than a flat novelty
 claim, and the arXiv caveat. Length is about 390 words, up from 330.
+
+---
+
+## v4, 7 September 2026: SHORT. This is the one in Gmail drafts.
+
+Asad asked for short, effective, and matched to what Casas responds to. v4 is about 165 words
+against v3's 390, and it is the version to send.
+
+**The evidence for going short is in the thread itself.** Every message Casas sent Asad in
+November was two to four sentences: "Thanks Asad. We'll review the material and get back to you
+in a couple of weeks." And: "We started reviewing the applications. Quick question. This
+particular PhD studentship is only for UK citizens. Can you confirm whether you would be
+eligible?" He replied within hours every time, he asks closed questions, and he does not pad.
+A 390-word email is nothing like anything he writes. Matching someone's own register is not a
+trick, it is just the fastest way to be read.
+
+**All three of Asad's requested beats survive, compressed:**
+- Thanks: two sentences, still the opening, still ends on the point that he did not have to ask.
+- The startup: one sentence to name it, then straight to the three numbers. The company earns
+  its place by producing the finding, not by being described.
+- Both sides: one sentence. "I also still build collection pipelines for a living, which is the
+  Observatory's other half." The longer version argued the case; this one states it and trusts
+  him to see it.
+
+**The hook is now a single sentence:** "It is your labeler-characteristics argument with platform
+in place of annotator." That is the whole of the Journal of Politics connection in eleven words,
+and for someone who wrote the paper it is more flattering than a paragraph explaining it back
+to him.
+
+**Subject line shortened** to "One question about 2027, following our November exchange". It sets
+the expectation that this is a quick read and it says what is wanted.
+
+**Sign-off is now "Asad" alone,** matching his "Best, Andreu".
+
+**The signature is proportionally large** against a 165-word email. It stays because it carries
+the credentials the ask depends on and it sits below the sign-off, so it does not slow the read.
+If it looks heavy in the sent mail, swap it for signature 4.
+
+**Still true:** no attachments, no location line, "arXiv shortly" is the weak point and improves
+the moment Ella posts, and the broadened ask still lets him offer engineering work instead of a
+studentship. v2 (studentship only) and v3 (long form) are kept above if either is wanted instead.
