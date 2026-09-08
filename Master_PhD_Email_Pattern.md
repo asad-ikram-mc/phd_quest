@@ -154,7 +154,7 @@ Asad Ikram
 
 Asad Ikram
 Chevening Scholar 2024/25 · MSc Data Analytics (Distinction), University of Portsmouth
-Data Engineer, M+C Saatchi Fluency · Founder & CTO, ArtemisAI (artemisai.co.uk)
+Data Engineer, M+C Saatchi Fluency · Founder & CTO, ArtemisAI
 asad.ikram53@gmail.com · +44 7482 376417
 asad-ikram-mc.github.io/portfolio · linkedin.com/in/asad-ikram98
 ```
@@ -178,6 +178,12 @@ Do not put it up before the preprint is actually posted.
    when it matters, the way it was raised with Agder.
 3. **No quote, mission line or confidentiality disclaimer.** The first paragraph is the pitch.
 4. **Arial only.** Gmail replaces fonts it does not recognise.
+4b. **Four names carry links** in the HTML version: Chevening to chevening.org, the
+   university to port.ac.uk, M+C Saatchi Fluency to fluency-mcsaatchi.com, and ArtemisAI
+   to artemisai.co.uk. All four verified live 7 Sep 2026. Note that mcsaatchifluency.com,
+   which older files used, is a parked domain that no longer serves. Do not reintroduce it.
+4c. **Identity-line links are grey and underlined, not blue.** Only the contact row uses the
+   accent colour. Four blue words in the identity lines reads as advertising.
 5. **Short signature on replies.** Name plus email plus phone. Repeating the full block
    in every message of a thread makes a conversation look like a mailshot.
 6. **Watch for doubling.** Drafts in this repo have the signature typed into the body.
