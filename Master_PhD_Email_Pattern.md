@@ -154,7 +154,7 @@ Asad Ikram
 
 Asad Ikram
 Chevening Scholar 2024/25 · MSc Data Analytics (Distinction), University of Portsmouth
-Data Engineer, M+C Saatchi Fluency
+Data Engineer, M+C Saatchi Fluency · Founder & CTO, ArtemisAI (artemisai.co.uk)
 asad.ikram53@gmail.com · +44 7482 376417
 asad-ikram-mc.github.io/portfolio · linkedin.com/in/asad-ikram98
 ```
