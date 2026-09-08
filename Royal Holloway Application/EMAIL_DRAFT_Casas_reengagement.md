@@ -209,3 +209,26 @@ not changed. No PhD call is open, and TECHNE is AHRC and arts-and-humanities-lea
 weaker route for computational political science than the tracker previously implied. Realistic
 best outcome: a live contact, possibly an engineering contribution, and first place in the queue
 if 2027 money appears. Do not let it displace VU (14 Sep), PoliMi (17 Sep), or chasing Ella.
+
+---
+
+## SENT: 8 September 2026, 12:51 UTC
+
+Sent as a reply inside the original November 2025 thread rather than as a standalone email, so
+Casas sees his own messages underneath, including the one where he offered to ask the university.
+That is better than the standalone version I had prepared.
+
+**Asad's edits to v5 before sending, kept for the record:**
+- Opening softened: "You did not have to, and I have not forgotten it" became "I appreciate that."
+- The artemisai.co.uk link was added inline next to "the company I founded".
+- The silent-failure paragraph was cut. The email went out at roughly 150 words.
+
+**The signature rendered correctly** in Gmail: navy bar, name in navy, all four identity links live.
+
+**What happens now. Nothing.** He answered within hours to every message in November, so a long
+silence is itself the answer and a nudge would only make it awkward. The tracker carries a check
+on 29 September; if nothing has arrived by then the row closes.
+
+**If he replies with an engineering contribution rather than a studentship,** that is a genuine
+foot into a funded observatory and a route to a co-authored paper, but it is not a funded PhD and
+should not be counted as one.
