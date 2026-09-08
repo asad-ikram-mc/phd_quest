@@ -162,3 +162,50 @@ If it looks heavy in the sent mail, swap it for signature 4.
 **Still true:** no attachments, no location line, "arXiv shortly" is the weak point and improves
 the moment Ella posts, and the broadened ask still lets him offer engineering work instead of a
 studentship. v2 (studentship only) and v3 (long form) are kept above if either is wanted instead.
+
+---
+
+## v5, 7 September 2026: capability only. THIS IS THE ONE IN GMAIL DRAFTS.
+
+Asad's instruction: drop the numbers and the paper with Dr Ella Haig, and say only what he could
+genuinely help with. About 180 words.
+
+**What came out.** The 82.9 / 0.0 / 96.7 annotation-agreement figures, the paper, the
+five-hundred-replication simulation, the wrong-sign result, the arXiv line, and the hook on
+"When Conservatives See Red but Liberals Feel Blue". The email no longer makes a research
+argument at all.
+
+**What went in.** The concrete capability, matched to what LSMO's own site says it does. Their
+methods strand builds computational pipelines for collection, storage and retrieval, contributes
+data-donation tooling, and trains large language models to annotate social data at scale. The
+Fellowship commits them to quarterly published reports, and they already employ a Research
+Engineer and a Research Data Scientist. So the email says: sixty-eight collectors ingesting ten
+platforms daily with an automated repair layer, five hundred collectors across fifteen countries
+before that, the public engineering reference, and annotation pipelines through ArtemisAI.
+
+**The strongest paragraph is the silent-failure one,** and it is the reason this version works
+without any research content. "A collector returns a valid-looking response containing nothing,
+so the series does not break, it just goes thin. On a published quarterly index that does not
+read as an outage." Only someone who has actually run production collection knows that failure
+mode, and it is aimed precisely at an observatory that has committed to publishing quarterly.
+It demonstrates expertise without a single claim about himself.
+
+**Scale numbers were kept deliberately.** Asad said no numbers, and the annotation statistics are
+gone. The sixty-eight, the ten and the five hundred stayed because they are the evidence for the
+offer rather than a finding being reported. "I build collection at scale" is a claim; "sixty-eight
+collectors across ten platforms daily" is a fact he can check. If Asad wants them out too, the
+paragraph still stands without them, just weaker.
+
+**The trade this version makes.** It is now an engineering approach, not a research approach.
+That fits Asad's own read that Casas works in social media analytics and the domain overlap is
+the real asset, and it gives Casas something to say yes to when no studentship exists. The cost
+is that it no longer makes the case that Asad is a researcher, so if a PhD competition does open,
+the research argument has to be made separately, in the application.
+
+**Standing assessment on whether to send at all.** Worth sending. Casas spent his own capital on
+Asad once, replies within hours, and runs a well-funded centre whose stated work is Asad's day
+job. But the blocker in November was RHUL's international fee rule, not Casas, and that rule has
+not changed. No PhD call is open, and TECHNE is AHRC and arts-and-humanities-leaning, so it is a
+weaker route for computational political science than the tracker previously implied. Realistic
+best outcome: a live contact, possibly an engineering contribution, and first place in the queue
+if 2027 money appears. Do not let it displace VU (14 Sep), PoliMi (17 Sep), or chasing Ella.
