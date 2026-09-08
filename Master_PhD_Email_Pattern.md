@@ -15,7 +15,13 @@
 3. **Hook on the professor's OWN named theory or paper**, never a generic description of their field.
 4. **Attach** `Asad_Ikram_Full_Resume_2026.pdf` before sending.
 5. **Verify the email address** on the university's official contact page before sending.
-6. **Once the arXiv paper is live, always link it.** Until then: "on arXiv shortly" with the project page asadfix.github.io/publish_proposal/#paper.
+6. **Once the arXiv paper is live, always link it. Until then link NOTHING.** Say "the paper
+   is finished and goes to arXiv shortly" and stop there. **NEVER link
+   [NO LINK - see rule 6] to anyone.** That page is the working proposal brief
+   and it is for Dr Ella Haig only. Asad ruled this on 8 Sep 2026. It is not a public asset,
+   it is unpublished work, and circulating it to prospective supervisors gives away an
+   unprotected research design. If someone asks to see the work before arXiv, offer to send
+   the dissertation, and ask Asad first.
 7. Never send without passing all six checks below.
 
 ---
