@@ -73,3 +73,51 @@ asad-ikram-mc.github.io/portfolio - linkedin.com/in/asad-ikram98]
 - Log the reply in the tracker. If he answers with a route, that route becomes a dated priority immediately.
 - If he does not reply within about three weeks, leave it. He answered every message within hours last time, so silence would be an answer.
 - Re-check the LSMO site around October and November for a 2027 call, in a real browser.
+
+---
+
+## v3, 7 September 2026: reframed as thanks, the startup, and a two-way offer
+
+Asad asked for the email to be framed around thanking Casas, telling him about the startup, and
+making the case that this helps both sides. v3 does that. What changed and why:
+
+**1. The thank you is now its own beat.** It ends on the word "Thank you" instead of folding into
+the next sentence. It is the strongest thing in the email and it should be allowed to land.
+
+**2. ArtemisAI is in, but as the origin of the research problem, not as a business.** This is the
+one place I did not do the obvious thing. "Let me tell you about my startup" in a PhD enquiry
+reads to an academic as either a sales approach or a signal that the sender is on their way out
+of research. So the founder line appears, the 3.39 million comments appear, and then the email
+immediately turns the company into evidence: the two tiers agree on 82.9 per cent of sentiment
+labels and 0.0 per cent of toxicity labels while the model reports 96.7 per cent confidence, the
+dashboard called that accuracy, and it was inter-model agreement with no criterion behind it.
+That is a founder admitting his own instrument was wrong, which is far more persuasive to a
+measurement person than any description of the product.
+
+**3. The two-way case is concrete, not a claim.** "I can add value to your lab" is the single most
+ignorable sentence in academic cold email. Instead the email names what LSMO actually does, from
+their own site: the methods strand builds collection pipelines and trains language models to
+annotate social data at scale, and the Fellowship commits them to quarterly published reports.
+Then it puts Asad's two halves against those two needs in two short sentences: keeping hostile
+collection alive is the day job, testing whether the labels still mean the same thing is the
+research. No adjectives.
+
+**4. It revives an offer Casas never answered.** Asad's last message in November said he would be
+glad to contribute in a data engineering or research capacity. Casas never replied to it. v3 says
+"I said at the time... I am writing to make that concrete", which makes this continuity rather
+than a new pitch, and it is the honest reason for writing.
+
+**5. The question is broadened, deliberately.** v2 asked only about a 2027 PhD route. v3 asks about
+a PhD competition or a contribution in an engineering or research capacity. This widens the net and
+gives him something to say yes to even if there is no studentship.
+
+**THE RISK IN v3, AND IT IS REAL.** Offering engineering help alongside a PhD ask means he may take
+the easy half: no PhD, but would Asad like to help with the pipeline. That is a genuine outcome to
+be ready for. It is not necessarily bad, since an affiliate contribution to a funded observatory is
+a real foot in the door and a route to a co-authored paper, but it is not a funded PhD and should
+not be mistaken for one. If Asad only wants the studentship, v2 in the section above is the tighter
+email and should be used instead.
+
+**Unchanged from v2:** no attachments, "Dear Andreu", the hook on "When Conservatives See Red but
+Liberals Feel Blue", the standalone subject line, "as far as I can find" rather than a flat novelty
+claim, and the arXiv caveat. Length is about 390 words, up from 330.
