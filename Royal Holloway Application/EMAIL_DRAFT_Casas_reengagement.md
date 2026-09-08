@@ -1,6 +1,12 @@
 # Andreu Casas / London Social Media Observatory, Royal Holloway
 # Re-engagement email, v2, 7 September 2026
 # STATUS: in Gmail drafts, ready to send. Not sent.
+# NOTE 7 Sep, later: the first v2 draft was emptied and trashed in Gmail at 15:36, so it was
+# rebuilt from this file at 16:0x as a new draft (id r-4483261579206847835). Same text.
+# The rebuild carries the navy-and-teal signature from Email_Signatures.html (variant 5)
+# inline in the body, so the draft looks right whether or not a Gmail default signature is on.
+# BEFORE SENDING: if a Gmail default signature IS switched on, click the pen icon at the
+# bottom of the compose window and choose 'No signature', or the block will appear twice.
 # To: Andreu.Casas@rhul.ac.uk (verified: his own signature and the RHUL directory)
 # Subject: PhD Enquiry, 2027 - Platform Measurement Equivalence (following our November exchange)
 
@@ -50,9 +56,10 @@ My question is only one, and a single line is more than enough. Is there any 202
 Best wishes,
 Asad Ikram
 
-Chevening Scholar 2024/25 | MSc Data Analytics (Distinction), University of Portsmouth
-asad.ikram53@gmail.com | +44 7482 376417
-linkedin.com/in/asad-ikram98 | asad-ikram-mc.github.io/portfolio
+[signature 1, navy and teal variant, from Email_Signatures.html:
+Asad Ikram / Chevening Scholar 2024/25 - MSc Data Analytics (Distinction), University of Portsmouth /
+Data Engineer, M+C Saatchi Fluency - Founder & CTO, ArtemisAI / asad.ikram53@gmail.com - +44 7482 376417 /
+asad-ikram-mc.github.io/portfolio - linkedin.com/in/asad-ikram98]
 
 ## DELIBERATE CHOICES
 - **No attachments.** He already holds the full November application pack, and the ask is one question. Adding a CV would restart a process he has not offered.
