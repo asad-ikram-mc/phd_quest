@@ -169,3 +169,33 @@ The board's ranking is unchanged: PoliMi (17 Sep), VU (14 Sep), Agder (1 Oct, be
   - Gilardi (Zurich) postdoc, 30 Sep; KCL lecturer in CSS, 15 Sep; Georgia Tech faculty; UvA NLG PhDs closed 27 Aug; IMT Lucca cyber PhDs closed 31 Aug; Groningen neurobiology PhD 15 Sep. None applicable.
 - **Reddit is blocked by the in-app browser's policy** on both reddit.com and old.reddit.com, and by the Chrome extension on its side. Reddit is closed to me on every route.
 - Headline unchanged: nothing new outranks the board.
+
+---
+
+## Addendum, 8 Sep 2026: LinkedIn posts sweep, signed in
+
+Run from Asad's signed-in LinkedIn in the in-app browser, posts search with the past-week filter and Load more clicked three times per query. Jobs search remains useless; posts search remains the productive path.
+
+### The one that matters: the fee gap, and the instrument that closes it
+A pattern is now visible across three separate rejections and near-misses, and it is not about Asad's record.
+
+- **Royal Holloway, Nov 2025.** Casas asked the university whether an international candidate could be taken on if he funded the difference himself. The answer was no.
+- **Cambridge, NR50923, found today.** "In the event of an unsuccessful funding application, Dr Seaborn may have the ability to award the successful candidate with a Home Fee Studentship. However, a successful international student would need to self-fund the difference between the home and international fees." Identical position.
+- Every UK studentship that is home-fee-funded reproduces this.
+
+**Commonwealth PhD Scholarships close that gap completely.** Verified on cscuk.fcdo.gov.uk on 8 Sep 2026: Pakistan is one of the 17 eligible countries, the award covers full tuition at an approved UK university plus GBP 1,712 a month (GBP 2,000 in London) plus return airfare, applications for 2027/28 opened 8 Sep 2026 and close at 16:00 BST on 20 Oct 2026.
+
+**Three obstacles, and the first is a decision, not a fact.**
+1. The CSC does not accept direct applications. You must be nominated, and Pakistan's national nominating agency is HEC, which Asad ruled out on 20 Aug 2026. Nothing has been added to the priority list because of that standing decision. The CSC does also list selected NGOs and charities as nominating bodies, which is the route to investigate if the HEC decision stands.
+2. HEC's own reported criteria require a HAT score of at least 60 out of 100.
+3. A UK place with a named supervisor is expected before the scholarship is decided.
+
+The honest summary: the no-HEC rule is Asad's to keep, but its cost is now concrete and specific rather than abstract. It is the difference between UK studentships being closed and being open.
+
+### Also found, verified
+- **Cambridge, PhD in HCI and Critical Computing (Dr Seaborn, Aspirational Computing Lab), reference NR50923, closes 2 Dec 2026.** Advertised topics explicitly include misinformation and information deception, deceptive interface design and overtrust in conversational agents, and the call asks the applicant to bring their own research question. Genuinely good topical fit. Home-fee funding only, so it needs external money behind it.
+- **Rochester Institute of Technology, two PhD places for Spring or Fall 2027, Assistant Professor Fengran Mo.** Retrieval-augmented generative AI and correcting misinformation through an open-box account of LLM components. Apply by email to frmvcs@rit.edu with resume, transcripts and a short statement. A US assistantship sidesteps the UK fee problem entirely. Low friction and worth doing.
+- **MBZUAI, UAE.** Fully funded PhD scholarships in AI, machine learning, computer vision and NLP. Not verified in detail; note only.
+
+### Ruled out on sight
+Essex Sustainable Transitions (14 Sep, wrong field), Dublin City University biotechnology scholarship, Commonwealth-adjacent aggregator posts, and the usual scholarship-consultant content with no primary source.
