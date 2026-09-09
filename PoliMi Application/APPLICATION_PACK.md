@@ -91,17 +91,28 @@ Art. 2 requires a Laurea Magistrale with at least 95/110 or 86/100, and for fore
 Countries not included in this list, the evaluation will be carried out directly by the Selection
 Committee."
 
-**Attachment 1 is referenced but is not published alongside this call PDF.** It was not on the 2nd-call
-page on 8 Sep. Two possibilities: the UK is in the table with a stated threshold, or it is not, in
-which case the commission judges directly.
+**CORRECTED 9 Sep 2026. Attachment 1 is NOT missing. It is page 8 of both call PDFs in this folder.**
+This pack previously said it was unpublished and sent Asad chasing it. The table lists 15 countries:
+BANGLADESH 3,3/4 - CHINA 70/100 - COLOMBIA 3,5/5 - European Countries (ECTS) C+ - EGYPT 65/100 -
+ETHIOPIA 3/4 - GHANA 65/100 - INDIA 70/100 - INDONESIA 2,8/4 - IRAN 14,5/20 - NIGERIA 3/5 -
+**PAKISTAN 3,3/4,0** - SERBIA 7,5/10 - TURKEY 3/4 - VIETNAM 7/10. Unlisted countries: "the Judging
+Panel will assess the qualifications submitted by the applicant."
+
+**The United Kingdom is not listed**, so the MSc is judged directly by the panel. **But Asad's
+FAST-NUCES CGPA of 2.75/4.00 sits below the printed Pakistan minimum of 3,3/4,0**, and Art. 3
+requires documents for every degree, so that number will be in front of the committee with the
+threshold eight pages later in the same document.
 
 Asad's MSc is a Distinction with a masters project at 78. The module spread is 78, 80, 70, 70, 67,
-62, 56, averaging roughly 69, which is a UK Distinction. Whether that maps above an 86/100-equivalent
-line is exactly what Attachment 1 would say.
+62, 56: unweighted mean roughly 69, credit-weighted 70.5. Prefer 70.5, which is both the standard
+calculation and the more favourable one. The MSc was awarded 8 December 2025, before this call
+closed, so he is not a conditional candidate.
 
-**Action: email PhD-INF@polimi.it and ask for Attachment 1, or ask directly what the minimum average
-is for a UK master's degree.** Fabio Conti is named in Art. 10 as the responsible officer. This is a
-factual question to an administrator, the Agder pattern, and it is worth one email before spending
+**Action: email PhD-INF@polimi.it and ask (a) whether the Attachment 1 minimum binds only the
+qualification enabling admission or every prior degree, and (b) whether an unlisted UK master's is
+assessed under the ECTS C+ row or directly by the Committee.** Fabio Conti is named in Art. 10 as
+the responsible officer. This is a
+
 days on the proposal.
 
 ---

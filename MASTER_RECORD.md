@@ -49,9 +49,9 @@ application come from here.
 | Nationality | Pakistani | — |
 | Location | Lahore, Punjab, Pakistan | — |
 | Email / phone | asad.ikram53@gmail.com · +44 7482 376417 | — |
-| MSc | Data Analytics, **Distinction**, University of Portsmouth, 2024–25 | certificate + transcript |
+| MSc | Data Analytics, **Distinction**, University of Portsmouth, **awarded 8 December 2025** | certificate + transcript |
 | MSc project mark | **78** | transcript |
-| MSc module spread | 78, 80, 70, 70, 67, 62, 56 → mean ≈ **69** | transcript |
+| MSc module spread | 78, 80, 70, 70, 67, 62, 56 → unweighted ≈ 69, **credit-weighted 70.5** (prefer 70.5) | transcript |
 | MSc supervisor | Dr Ella Haig (ella.haig@port.ac.uk — verified, not e.haig@) | — |
 | MSc ethics ref | Portsmouth **TETHIC-2025-111094** | Helsinki proposal |
 | BSc | Computer Science, FAST-NUCES, 2017–2022 | degree + transcript |
@@ -62,11 +62,14 @@ application come from here.
 | Chevening | Scholar **2024/25**, from 70,000+ applicants across 160 countries | — |
 
 **The CGPA is the exposed flank.** 2.75/4.00 is below RIT's recommended 3.0 and is exactly why the
-PoliMi Attachment 1 question matters. PoliMi's stated bar is on the **master's** (95/110 or 86/100
-equivalent), and the MSc is a Distinction, so the master's should clear. Whether the committee also
-looks at the bachelor's is the open question. **This is still unanswered and still needs the email
-to PhD-INF@polimi.it.** Attachment 1 was not published with the 2nd call and is not findable on
-polimi.it as of today.
+PoliMi Attachment 1 question matters. **CORRECTED 9 Sep 2026: Attachment 1 was never missing.** It
+is page 8 of both call PDFs. It lists **PAKISTAN at 3,3/4,0**, above Asad's 2.75/4.00, and does not
+list the United Kingdom, so the MSc is assessed directly by the Committee. Note also that the
+95/110 and 86/100 figures belong to the *Italian* Laurea Magistrale bullet of Art. 2; foreign
+qualifications are governed by the separate Attachment 1 bullet, and there is no published PoliMi
+conversion from a UK Distinction. What still needs the email to PhD-INF@polimi.it is narrower:
+whether the minimum binds only the qualification enabling admission, and how an unlisted UK
+master's is treated. See `PoliMi Application/REQUIREMENTS.md` Part 0.1.
 
 ### 1.2 Research record
 - **MSc dissertation**: *Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies*.
@@ -267,7 +270,7 @@ publications, no multi-turn systems, no user studies. The Agder Section 9 patter
 |---|---|---|
 | 1 | **Portsmouth English-medium letter** | **NOT REQUESTED.** Gate 1. Registry turnaround is days and is not guaranteed. Send the IELTS alongside it. |
 | 2 | **FAST-NUCES official transcript** | **HAVE IT** (`Asad bscs transcript.pdf`, issued 1 Apr 2022). Previously listed as missing. Resolved. |
-| 3 | **Attachment 1 minimum grade** | **UNANSWERED.** Not published with the call, not findable on polimi.it. Email PhD-INF@polimi.it: what is the minimum average for a UK master's, and does it apply to the master's only or to all degrees? |
+| 3 | **Attachment 1 minimum grade** | **TABLE FOUND**, page 8 of both call PDFs; the earlier note that it was unpublished was false. Pakistan **3,3/4,0** vs Asad's **2.75/4.00**; UK unlisted so the MSc is judged directly. Still ask PhD-INF@polimi.it whether the minimum binds all degrees. |
 | 4 | **Research proposal, 4,000–8,000 characters** | Asad writes. Not started. |
 | 5 | **Motivations, max 2,000 characters** | Asad writes. Not started. |
 | 6 | **Thesis summary, max 1,000 characters** | Asad writes. Placeholder in the CV. |
