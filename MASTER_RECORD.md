@@ -10,15 +10,29 @@
 He sat IELTS Academic on **28 March 2024**: Listening 7.0, Reading 6.5, Writing 6.0, Speaking 7.0,
 **Overall 6.5**, CEFR B2, TRF number 23PK507881IKRA011A. That clears PoliMi's threshold of ≥6.
 
-**But it probably does not save him,** because Art. 2 of the call says twice, in the same paragraph:
-> "must be **valid upon enrolment**"
+**Whether it survives is genuinely unresolved, and I overstated this on 9 Sep.** Art. 2 of this call
+says the certification "must be **valid upon enrolment**", and enrolment closes **31 October 2026**.
+IELTS itself prints a recommendation that ability be re-assessed after two years, which from
+28 March 2024 ran out in March 2026. That is IELTS's wording, not PoliMi's: **the call sets no shelf
+life of its own.**
 
-Enrolment closes **31 October 2026**. IELTS is conventionally treated as valid for two years, which
-would have run out on 28 March 2026. So the certificate is real, it meets the score, and it is
-very likely out of date for the only date that matters.
+Against that, **PoliMi's own FAQ v1.9 and its application Quickstart both state that "The English
+language certifications are valid regardless of the date when they were awarded"**, and the 41st
+cycle said so in the call itself ("a prescindere dalla data di conseguimento"). The 42nd cycle
+changed the wording to "in corso di validità" without explaining what that means for a fixed-date
+test. So the sources contradict each other and only PhD-INF@polimi.it can settle it.
 
-**Therefore the Portsmouth English-medium letter is still the route, and it is still urgent.**
-It is the same letter already sitting unresolved on the Edinburgh checklist. Art. 2 exemption:
+**Pursue both routes in parallel and rely on neither alone.**
+
+**The Portsmouth English-medium letter is the safe route, and it is now due EARLIER than we thought.**
+The Italian call says candidates using this exemption "devono allegare alla domanda documenti
+ufficiali" — must attach official documents **to the application**, i.e. by **18 September**, not at
+enrolment. It is the same letter already sitting unresolved on the Edinburgh checklist. Two wording
+traps: the English call calls it a "certification", but the Italian and the PoliMi website both say
+a **declaration** from the institution stating the language of delivery, so asking for the wrong
+artefact wastes days we do not have; and the Italian scopes it more narrowly than the English, as
+"tutti gli insegnamenti... per la maggior parte del percorso", so ask Portsmouth to confirm the
+programme was **taught and assessed entirely in English**. Art. 2 exemption:
 > "applicants who have been awarded ... academic qualifications by an institute in which all teaching
 > activities have been carried out in English are not required to certify their knowledge of English.
 > In this latter case, candidates are required to submit an official language certification from the
