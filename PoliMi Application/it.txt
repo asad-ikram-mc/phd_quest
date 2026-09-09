@@ -1,0 +1,455 @@
+La Rettrice
+
+
+                                  SCADENZA: 18/09/2026 14:00 (ora italiana C.E.T)
+
+
+
+
+Vista la L. 9.5.1989, n. 168;
+
+Visto il D.P.C.M. 30.4.1997 e successive modificazioni;
+
+Vista la L. 30.12.2010 n. 240;
+
+Visto il D.M. 14.12.2021, n. 226 "Regolamento recante modalità di accreditamento delle sedi e
+dei corsi di dottorato e criteri per la istituzione dei corsi di dottorato da parte degli enti
+accreditati";
+
+Visto il Regolamento del Politecnico di Milano in materia di Dottorato di Ricerca, emanato con
+D.R. n. 4577 del 27/02/2026;
+
+Vista la deliberazione del Consiglio della Scuola di Dottorato di Ricerca del 7 ottobre 2013;
+
+Vista la deliberazione del Senato Accademico del 15 dicembre 2025;
+
+Vista la deliberazione del Consiglio di Amministrazione del 22 dicembre 2025;
+
+
+
+                                                       DECRETA
+
+
+                                                          Art. 1
+                                                      (Istituzione)
+
+E' indetto presso il Politecnico di Milano il concorso 42° ciclo ingr. 01/11/2026: BANDO DOTTORATO corso di
+INGEGNERIA DELL'INFORMAZIONE / INFORMATION TECHNOLOGY - AUDITING AND MITIGATING
+EPISTEMIC FAILURES IN WEB-CONNECTED AI AGENTS per l'ammissione a n. 1 posto con borsa di studio
+vincolata all'esecuzione del tema di ricerca, (come descritto nella scheda descrittiva del tema di ricerca allegata).
+
+Il bando è aperto a cittadini italiani e stranieri. L'apolide è equiparato al cittadino straniero.
+
+L'ammissione al corso di Dottorato con relativa borsa a tema sarà decisa sulla base della valutazione del
+curriculum di studi e dei titoli di studio e di un elaborato illustrativo dello sviluppo di una possibile ricerca di
+dottorato, che i candidati invieranno contestualmente alla loro iscrizione al concorso, secondo quanto specificato al
+successivo art. 3, e dell'idoneità per il tema di ricerca.
+
+Ai sensi del Decreto MUR n. 226 del 14/12/2021, i corsi di dottorato potranno essere attivati solo previo
+accreditamento concesso dal Ministero, su conforme parere dell'ANVUR.
+
+Possono essere previste posizioni in sovrannumero per alto apprendistato, sulla base di specifiche convenzioni
+stipulate con le aziende interessate, per dipendenti pubblici in aspettativa con assegni e per candidati con borse
+erogate da enti italiani ed esteri senza accordo preventivo.
+
+Il corso di dottorato prevede un impegno di tre anni.
+
+
+
+
+                                                                                                                 Pag. 1
+                                                      Art. 2
+                                   (Requisiti per l'ammissione al concorso)
+
+Possono presentare domanda di partecipazione al concorso i cittadini italiani e stranieri che siano in possesso di
+diploma di laurea conseguito negli ordinamenti previgenti il D.M. 3.11.1999 n. 509, o di laurea specialistica
+conseguita ai sensi del D.M. 3.11.1999 n. 509, o di laurea magistrale conseguita ai sensi del D.M. 22.10.2004 n.
+270, o di analogo titolo accademico conseguito all'estero, equiparabile per durata e contenuto al titolo italiano e
+preventivamente riconosciuto dalle commissioni giudicatrici.
+
+In caso di titolo straniero, i candidati devono presentare tutti i documenti utili al fine di consentire alle commissioni
+giudicatrici competenti di deliberare sull'idoneità del titolo conseguito all'estero. Saranno ammessi al concorso
+solamente i candidati che:
+
+- hanno conseguito la Laurea Magistrale in Italia (o titolo equivalente valido per l'ammissione al dottorato) con
+votazione minima 95/110 oppure di 86/100;
+
+- hanno, per il titolo conseguito in paesi esteri, la media minima degli esami indicata in appendice nel bando di
+concorso; (Allegato 1). Per i Paesi non compresi in tale tabella la valutazione sarà rimessa direttamente alla
+commissione di ammissione.
+
+Gli ex-dottorandi del Politecnico di Milano non possono partecipare al bando di ammissione per lo stesso dottorato
+se negli ultimi 5 anni è stato emesso nei loro confronti un provvedimento di esclusione dal corso.
+
+Possono presentare domanda di partecipazione al concorso di ammissione anche coloro che non sono in
+possesso del titolo richiesto al momento della scadenza del bando. In seguito alla valutazione delle commissioni
+giudicatrici, l'eventuale ammissione ai corsi di dottorato dei candidati di cui sopra, avverrà "con riserva".
+Il titolo di studio dovrà comunque essere conseguito prima dell'immatricolazione, con le votazioni minime
+sopraindicate, pena la perdita del diritto all'ammissione al dottorato.
+
+A tutti i candidati è richiesta la conoscenza della lingua inglese, tramite uno dei certificati sotto indicati che
+dovranno essere conseguiti, se non già presentati alla scadenza del bando.
+
+L'assenza di uno dei certificati entro la scadenza sopraindicata comporta irrevocabilmente la perdita del diritto di
+immatricolazione.
+
+Si riportano le certificazioni accettate dal Politecnico di Milano e i relativi livelli:
+
+TEST                                                                          LIVELLO MINIMO RICHIESTO
+CAMBRIDGE                                                                     >=B2 FIRST – GRADE B
+CAMBRIDGE IELTS (International English Language Testing                       >= 6
+System)
+PEARSON - PTE Academic (Pearson Test of English Academic)                     Overall Score >=59
+PEARSON - PEIC English International Certificate                              Overall Score >=59
+LanguageCert ESOL (English for Speaker of Other Languages)                    >=B2- Communicator (4skills)
+4Skills
+ETS - TOEFL (Test of English as a Foreign Language) IBT internet              >=4.5/6 oppure >=86/120
+based (total score)
+ETS - TOEIC (Test of English for International Communication)                 >= 785 TOEIC Listening & Reading + >=310
+Listening & Reading, Speaking & Writing                                       TOEIC Speaking & Writing (entrambi i test
+                                                                              sono necessari)
+TRINITY COLLEGE LONDON                                                        >=ISE II
+
+La suddetta certificazione ad eccezione di quella già validata dal Politecnico di Milano, dovrà essere in corso di
+validità al momento dell’immatricolazione.
+
+Sono esentati dal dover certificare la conoscenza della lingua inglese i candidati cittadini di Paesi in cui una delle
+lingue ufficiali è l'inglese, oppure i candidati che hanno conseguito o conseguiranno un diploma di laurea o master
+in un'istituzione in cui tutti gli insegnamenti sono impartiti interamente in lingua inglese per la maggior parte del
+percorso.
+Tali candidati devono allegare alla domanda documenti ufficiali, utili per dimostrare quanto sopra indicato: in
+particolare, nel caso in cui tutti gli insegnamenti siano impartiti in lingua inglese, occorre una dichiarazione in tal
+senso da parte della relativa istituzione accademica.
+
+
+
+
+                                                                                                                     Pag. 2
+                                                Art. 3
+                                  (Domande di ammissione al concorso)
+
+Per poter presentare correttamente la domanda di ammissione al concorso è necessario prima effettuare la
+registrazione per accedere ai servizi online del Politecnico di Milano seguendo questo link:
+Servizi Online
+Dopo la registrazione potrete utilizzare il vostro codice persona e password per accedere alla richiesta di
+ammissione. La domanda di ammissione al concorso e relativa documentazione allegata, deve essere redatta e
+inserita esclusivamente in forma elettronica entro il 18/09/2026 14:00 (tutte le ore indicate nel presente bando
+sono da intendersi ore italiane C.E.T.), attraverso il link disponibile nella propria pagina dei servizi online:
+
+servizi online --> richiesta di ammissione --> partecipazione bandi per il dottorato di ricerca
+
+Il termine indicato è perentorio il sistema non accetterà domande chiuse dopo la scadenza.
+
+La domanda, fino a quando non è confermata, può essere salvata e modificata dal candidato un numero indefinito
+di volte. Dopo la conferma non può più essere modificata, potrà essere cancellata ed eventualmente, potrà essere
+inserita una nuova domanda, se entro i termini. È responsabilità del candidato verificare la corretta conclusione
+della procedura e non saranno accettati reclami per eventuali malfunzionamenti del sistema informatico/bancario.
+
+Per ogni domanda presentata è dovuto un contributo di Euro 25,82 non rimborsabile e da pagare entro e non oltre
+il 18/09/2026 14:00. Il pagamento del contributo deve essere effettuato mediante il sistema PAGO PA seguendo le
+indicazioni nella procedura online di presentazione della domanda.
+Nella domanda di ammissione il candidato dichiara sotto la propria responsabilità:
+
+  generalità, data e luogo di nascita, residenza e recapito scelto agli effetti del concorso (specificando codice di
+avviamento postale, numero telefonico e indirizzo di posta elettronica). Il candidato si impegna inoltre a comunicare
+tempestivamente ogni eventuale cambiamento della propria residenza e/o recapiti dove inviare le comunicazioni;
+
+ cittadinanza;
+
+ titolo di studio posseduto e necessario per l'ammissione al corso di dottorato, specificando: data di conseguimento
+del titolo, Università presso la quale è stata conseguita la laurea, durata ufficiale del corso di studi, voto di Laurea e
+relativa scala di votazione (se prevista);
+
+ovvero
+
+titolo accademico posseduto e necessario per l'ammissione al corso di dottorato, conseguito presso un'Università
+straniera specificando: data di conseguimento del titolo, Università presso la quale è stato conseguito, durata
+ufficiale del corso di studi, voto finale associato al titolo conseguito e relativa scala di votazione, nonché tutti i
+documenti utili al riconoscimento e alla valutazione dell'idoneità del titolo, ai soli fini dell'ammissione al corso di
+dottorato;
+
+ovvero
+
+ che prevede di conseguire la Laurea o titolo equipollente entro la data di inizio prevista per il corso di Dottorato nel
+presente bando, specificando l'Università presso la quale sarà conseguita e la durata ufficiale del corso di studi;
+
+ certificazione attestante la conoscenza della lingua inglese come specificato all'art. 2 del presente bando;
+ovvero,
+ che farà pervenire inderogabilmente entro la scadenza prevista per l'inizio del corso la certificazione attestante la
+conoscenza della lingua inglese come specificato all'art. 2 del presente bando;
+
+ titolo della borsa di studio a tema per la quale il candidato intende concorrere;
+
+ eventuali nominativi di (massimo 2) referenti, completi delle informazioni relative all'indirizzo di posta elettronica e
+numero di telefono;
+
+ di impegnarsi a frequentare il dottorato secondo quanto previsto dal presente bando, dal
+Regolamento del Politecnico di Milano in materia di dottorato di ricerca e dalle modalità fissate dal Collegio dei
+Docenti;
+
+ di essere consapevole che l'originalità delle sue pubblicazioni e dei suoi elaborati, prodotti al fine della presente
+ammissione o durante la sua carriera di dottorato presso il Politecnico di Milano potrà essere controllata da
+software antiplagio.
+
+
+
+
+                                                                                                                    Pag. 3
+Alla domanda si allega, pena l'esclusione (i documenti devono essere allegati in pdf):
+
+ in pdf, un curriculum vitae secondo lo schema predisposto e disponibile in RTF. Si precisa che il candidato deve
+fornire le informazioni richieste nello schema del CV. In particolare, il CV deve contenere una foto recente del
+candidato e l'elenco delle sue pubblicazioni. Può inoltre contenere un numero massimo di due documenti allegati
+(ad esempio, due pubblicazioni, oppure un portfolio e una pubblicazione) da scegliersi tra quelli ritenuti più
+significativi a illustrare le potenzialità del candidato. Il curriculum e gli allegati devono essere contenuti in un singolo
+file pdf della dimensione massima di 10 MB.
+
+ in pdf, un elaborato illustrativo dello sviluppo di una possibile ricerca pertinente al corso di dottorato scelto (minimo
+4.000, massimo 8.000 caratteri, escluse bibliografie e figure), redatto secondo il formato RTF. Si precisa che la
+ricerca illustrata nell'elaborato inviato all'atto dell'iscrizione al concorso di ammissione non rappresenta
+necessariamente quella da svilupparsi nel corso del dottorato. In caso di ammissione, il progetto della ricerca di
+dottorato che si andrà effettivamente a svolgere verrà successivamente definito ed approvato dal Collegio dei
+Docenti del dottorato di afferenza, dopo l'avvio delle attività di dottorato. L'elaborato, completo di bibliografie e
+figure dovrà essere contenuto in un singolo file pdf della dimensione massima di 3 MB; includendo anche le
+motivazioni che portano a voler effettuare la ricerca presso il Politecnico di Milano
+
+ La documentazione relativa a tutti i titoli di studio universitari (conseguiti o ancora da conseguire), con il diploma,
+se conseguito, in lingua originale, l'elenco degli esami, le relative votazioni e la media finale conseguita (CGPA) e
+le relative traduzioni in italiano o in inglese;
+
+
+ Certificato attestante la conoscenza della lingua inglese (conseguito o ancora da conseguire) come
+specificato all'art. 2 del presente bando;
+
+ fotocopia debitamente firmata del documento d'identità; per i cittadini extra-UE è obbligatorio allegare la fotocopia
+del passaporto o altro documento di identità con traduzione in italiano o in inglese;
+
+
+Tutti i documenti presentati potranno essere in lingua italiana o inglese. Se redatti in altra lingua, dovranno essere
+tradotti in lingua italiana o inglese dall'università di provenienza o da un ente autorizzato.
+
+
+L'uso di strumenti di scrittura basati sull'intelligenza artificiale (es. ChatGPT) deve essere sempre esplicitamente
+dichiarato e deve essere limitato alla correzione di testi scritti integralmente dal/la candidato/a. L'uso di tali
+strumenti per generare completamente o in parte testi originali non è consentito. La commissione di valutazione si
+riserva il diritto di utilizzare tutti gli strumenti a disposizione per verificare che gli elaborati consegnati dal/la
+candidato/a non siano stati generati in tutto o in parte dall'intelligenza artificiale.
+
+L'Amministrazione, in qualunque momento del procedimento e anche successivamente all'avvio del corso
+di dottorato, può effettuare controlli sulla veridicità delle dichiarazioni prodotte e richiedere l'esibizione
+degli originali dei documenti.
+Quindi può disporre in ogni momento, con provvedimento motivato, l'esclusione dei candidati dalla
+selezione per difetto dei requisiti previsti dal presente bando.
+
+
+                                                    Art. 4
+                                           (Commissioni giudicatrici)
+
+Le Commissioni giudicatrici dei concorsi di ammissione ai dottorati di ricerca, di cui al presente Bando, sono
+composte a norma del regolamento in materia di dottorato di questo Ateneo.
+
+
+                                                        Art. 5
+                                              (Criteri di valutazione)
+
+I candidati regolarmente iscritti al concorso sono ammessi al corso di dottorato previa valutazione di idoneità da
+parte della Commissione giudicatrice e nel limite dei posti disponibili.
+
+La valutazione di idoneità per l'ammissione al corso di dottorato scelto verrà effettuata esaminando la qualità del
+candidato, la sua predisposizione alla ricerca negli ambiti scientifici delle aree di ricerca del corso di dottorato per le
+quali il candidato ha indicato di voler concorrere e le motivazioni espresse. Tale valutazione sarà effettuata in base
+al curriculum di studi e agli elaborati illustrativi dello sviluppo di possibili ricerche pertinenti alle aree del corso di
+dottorato per le quali si concorre, inviati contestualmente all’atto della presentazione della domanda. Si ribadisce
+che la ricerca illustrata negli elaborati inviati all’atto della presentazione della domanda non rappresenta
+necessariamente quella da svilupparsi nel corso del dottorato; in caso di ammissione, il progetto della ricerca di
+dottorato che si andrà effettivamente a svolgere verrà successivamente definito ed approvato dal Collegio dei
+Docenti del dottorato di afferenza, dopo l’avvio delle attività di dottorato come previsto dal Regolamento del
+Politecnico di Milano in materia di dottorato di ricerca.
+
+
+
+                                                                                                                     Pag. 4
+ La Commissione giudicatrice ha a disposizione 100 punti per valutare ogni domanda.
+
+Il punteggio è ripartito nel seguente modo:
+- curriculum: massimo 45 punti;
+- elaborato illustrativo dello sviluppo di una possibile ricerca di dottorato, nell'ambito del tema di ricerca per il quale
+si concorre: massimo 55 punti.
+
+Il candidato è ritenuto idoneo se sussistono entrambe le condizioni:
+ ottiene complessivamente un punteggio non inferiore a 60 punti su 100
+ il tema di ricerca è valutato idoneo dalla Commissione
+
+ La Commissione può contattare i candidati per un colloquio conoscitivo di approfondimento sul materiale inviato
+(tale colloquio non comporta punteggio aggiuntivo).
+
+
+                                                   Art. 6
+                                       (Formulazione delle graduatorie)
+
+Al termine dei lavori di valutazione, viene stilata, dalla Commissione giudicatrice e secondo i criteri indicati nel
+precedente articolo, una graduatoria.
+
+A parità di punteggio si tiene conto dell'equilibrio di genere, ossia prevale il genere che tra i candidati collocati in
+una posizione superiore nella medesima graduatoria è minoritario. In caso di ulteriore parità prevale il candidato di
+minore anzianità anagrafica.
+
+Le graduatorie saranno pubblicate a partire dal 15/10/2026 sul sito:
+http://www.dottorato.polimi.it/
+
+
+                                              Art. 7
+                   (Adempimenti successivi alla pubblicazione delle graduatorie)
+
+A seguito della pubblicazione della graduatoria, il candidato ammesso è tenuto a immatricolarsi o a rinunciare alla
+borsa entro il 31/10/2026 .
+Potrà procedere all'immatricolazione tramite la procedura Servizi on-line - partecipazione Bandi per il dottorato di
+ricerca, rientrando nella propria domanda alla voce graduatoria. Si rimanda all'art. 9 per i requisiti necessari
+all'immatricolazione. Trascorso il suddetto termine, se il candidato non si è immatricolato, il Dipartimento
+provvederà a inserire la rinuncia d'ufficio, al fine di rendere disponibili le posizioni per altri candidati secondo le
+modalità di subentro indicate al successivo art. 8.
+
+
+La rinuncia alla borsa di dottorato è irrevocabile.
+
+Il mancato rispetto degli adempimenti e delle scadenze previste comporta la perdita irrevocabile della
+borsa e del posto.
+
+
+                                                         Art. 8
+                                                       (Subentri)
+
+In caso di non accettazione da parte dei candidati, il Dipartimento offrirà la posizione al successivo in graduatoria
+fino ad esaurimento della stessa. Tali candidati in ogni caso devono avere conseguito il titolo di studio e la
+conoscenza della lingua inglese.
+
+
+
+
+                                                                                                                     Pag. 5
+                                                      Art. 9
+                                         (Requisiti di immatricolazione)
+
+Il candidato potrà immatricolarsi purché abbia conseguito il titolo di studio con i punteggi richiesti e il livello
+dell'inglese indicati nell'art. 2.
+
+In caso di titolo di studio conseguito presso un'istituzione estera, entro l'inizio dei corsi sarà necessario presentare
+(solo per il titolo di studio necessario per l'ammissione al corso di dottorato), secondo le modalità che verranno
+fornite dalla segreteria della Scuola di dottorato, la seguente documentazione in originale:
+
+Titolo di studio finale (diploma) in lingua originale e relativa traduzione ufficiale in Italiano o in Inglese
+Certificato finale con gli esami sostenuti e relativa traduzione in Italiano o in Inglese
+Dichiarazione di valore rilasciata dalla rappresentanza diplomatica del paese a cui fa riferimento l'ordinamento del
+titolo conseguito
+           oppure
+attestazione rilasciata da centri ENIC-NARIC (attestato di verifica)
+              oppure
+Diploma Supplement in inglese
+
+Il pagamento della prima rata della borsa di studio verrà corrisposto nel mese successivo all'inizio delle attività,
+contestualmente alla seconda rata. I successivi pagamenti verranno effettuati orientativamente alla fine di ogni
+mese.
+
+Ai dottorandi borsisti saranno trattenuti ogni anno sulla prima mensilità la tassa regionale, i bolli e i costi di
+assicurazione per un importo la cui determinazione è annualmente deliberata. Per il corrente anno accademico tale
+trattenuta è pari a Euro 217,04, salvo adeguamenti da parte della normativa nazionale e regionale.
+
+Le modalità di rilascio di conseguimento del titolo di Dottore di Ricerca sono indicate nel Regolamento del
+Politecnico di Milano in materia di dottorato di ricerca.
+
+
+                                                      Art. 10
+                                                  (Norme di rinvio)
+
+Per quanto non esplicitamente riportato nel presente bando, si fa riferimento alle norme contenute nella L. n. 398
+del 30.11.1989, nella L. n. 240 del 30.12.2010, nel Decreto del MUR "Regolamento recante modalità di
+accreditamento delle sedi e dei corsi di dottorato e criteri per la istituzione dei corsi di dottorato da parte degli enti
+accreditati" n. 226 del 14/12/2021; nel Regolamento del Politecnico di Milano in materia di dottorato di ricerca, nel
+Regolamento sulla proprietà industriale di Ateneo, nonché alle altre disposizioni impartite in materia alla normativa
+vigente.
+
+Ai sensi di quanto disposto dall'art. 5 della legge n. 241 del 07/08/1990, e successive modificazioni e integrazioni, il
+Responsabile del procedimento di cui al presente bando è CONTI FABIO .
+Per ulteriori informazioni, gli interessati potranno rivolgersi alla Segreteria del Dottorato di Ricerca ( mail PhD-
+INF@polimi.it)
+
+Il presente bando sarà pubblicato sul sito del Politecnico di Milano e su Euraxess.
+Sarà inoltre consultabile alla pagina web http://www.dottorato.polimi.it/
+
+Eventuali variazioni o integrazioni del bando saranno rese note nella medesima pagina web.
+
+
+
+
+                                                                                                                      Pag. 6
+                                                     Art. 11
+                                         (Protezione dei dati personali)
+
+Ai sensi del Regolamento UE n. 679/2016, si informano i candidati che il trattamento dei dati personali da essi
+forniti al Politecnico di Milano è finalizzato unicamente all'espletamento delle attività di selezione e assegnazione
+dei posti e/o delle borse di studio indicate dal bando e, per i soli vincitori di borsa, il trattamento dei dati sarà
+finalizzato anche all'erogazione delle borse stesse e per le finalità connesse alla loro gestione. Il trattamento
+avverrà a cura delle persone preposte al procedimento, anche da parte della Commissione Giudicatrice presso il
+Politecnico di Milano, con l'utilizzo di procedure anche informatizzate, nei modi e nei limiti necessari per perseguire
+le predette finalità, anche in caso di eventuale comunicazione a terzi.
+Il conferimento di tali dati è necessario per verificare i requisiti di partecipazione e il possesso di titoli e la loro
+mancata indicazione può precludere tale verifica. Ulteriori dati potranno essere richiesti per la sola finalità di
+assegnazione della borsa e/o del posto. I dati verranno conservati, in conformità a quanto previsto dalla vigente
+normativa in materia, per un periodo di tempo non superiore a quello necessario al conseguimento delle finalità per
+le quali essi sono trattati.
+Ai candidati sono riconosciuti i diritti di cui al capo terzo del Regolamento UE n. 679/2016, in particolare, il diritto di
+accedere ai propri dati personali, di chiederne la rettifica, l'aggiornamento e la cancellazione, se incompleti, erronei
+o raccolti in violazione della legge, nonché di opporsi al loro trattamento per motivi legittimi.
+Ulteriori informazioni sono disponibili sul sito di ateneo www.polimi.it/privacy
+Può essere presentato reclamo rivolgendo apposita richiesta al Responsabile per la protezione dei dati personali,
+punto di contatto: privacy@polimi.it.
+Titolare del trattamento del Politecnico di Milano è il Direttore Generale su delega del Rettore pro-tempore -
+contatto: dirgen@polimi.it .
+
+
+
+                                                                                                          La Rettrice
+                                                                                             Prof. Donatella Sciuto
+                                                                                     Firmato digitalmente ai sensi del Codice
+                                                                                                dell'Amministrazione Digitale
+
+
+
+
+                                                                                                                      Pag. 7
+Allegati:
+
+1- media minima degli esami per titoli esteri
+2- scheda descrittiva del tema di ricerca
+3- schema dell'elaborato illustrativo di un progetto di ricerca
+4- schema del curriculum vitae
+
+                 ALLEGATO 1- MEDIA MINIMA DEGLI ESAMI PER TITOLI ESTERI
+
+                                PAESE                                 MEDIA ESAMI MINIMA (GPA)
+            BANGLADESH                                        3,3/4
+            CINA                                              70/100
+            COLOMBIA                                          3,5/5
+            Peasi Europei (sistema votazione ECTS)            C+
+            EGITTO                                            65/100
+            ETIOPIA                                           3/4
+            GHANA                                             65/100
+            INDIA                                             70/100
+            INDONESIA                                         2,8/4
+            IRAN                                              14,5/20
+            NIGERIA                                           3/5
+            PAKISTAN                                          3,3/4,0
+            SERBIA                                            7,5/10
+            TURCHIA                                           3/4
+            VIETNAM                                           7/10
+
+I valori indicati sono quelli minimi accettati a meno che non sia specificato altrimenti in tabella.
+
+Altri Paesi non riportati in tabella o sistemi di votazione diversi da quelli riportati in tabella: la Commissione valuterà
+i titoli presentati dal candidato.
+
+
+
+
+                                                                                                                     Pag. 8
+
