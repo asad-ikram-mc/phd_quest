@@ -1,0 +1,65 @@
+POLITECNICO DI MILANO - RESEARCH PROJECT REPORT
+Call 5722-5460, PhD in Information Technology, 42nd cycle
+
+WRITE INTO THIS FILE. Everything above the first ===MARKER=== is ignored by the counter,
+so these notes cost you nothing and get stripped when the file is typeset.
+
+Check your character counts at any time with:
+    python3 count_chars.py proposal.txt
+
+-------------------------------------------------------------------------------
+HEADER FIELDS (these go on the RTF form, not into the character count)
+
+  Competition for admission PhD in:  INFORMATION TECHNOLOGY
+                                     (Ingegneria dell'Informazione)
+  Area:                              Research Area n. 1 - Computer Science and Engineering
+  NAME:                              Asad
+  SURNAME:                           Ikram
+  Project title:                     [yours]
+
+-------------------------------------------------------------------------------
+THE RULE, Art. 3 of the call:
+
+  "The use of writing tools based on artificial intelligence (e.g. ChatGPT) must always be
+   explicitly declared and must be limited to the correction of texts written entirely by
+   the candidate. The use of such tools to generate original texts in whole or in part is
+   not permitted. The Selection Committee reserves the right to use all the tools available
+   to verify that the documents submitted by the candidate have not been generated in whole
+   or in part by artificial intelligence."
+
+  You write every word below. Claude may correct text you have already written in full,
+  and that use must be declared. Nothing in THE_ANGLE.md or RESEARCH_BRIEF_Pierri_Brambilla.md
+  is text to paste; they are research, like reading papers.
+
+-------------------------------------------------------------------------------
+WHAT EACH SECTION IS FOR, in the template's own words:
+
+  Summary        - "problem statement, main expected results, originality"
+  Description    - "detailed description of the research project, emphasizing original and
+                    innovative aspects and scientific relevance"
+  Motivations    - "reasons that led to wanting to carry out research at the Polytechnic of Milan"
+
+  Worth 55 of the 100 points. The CV is worth 45. This document matters more than
+  everything you have ever built.
+-------------------------------------------------------------------------------
+
+
+===SUMMARY===
+
+
+
+
+===DESCRIPTION===
+
+
+
+
+===MOTIVATIONS===
+
+
+
+
+===BIBLIOGRAPHY===
+
+(References go here. The call excludes the bibliography from the character count, and the
+counter below this marker ignores everything you put here.)
