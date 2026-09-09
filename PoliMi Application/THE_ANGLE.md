@@ -1,7 +1,5 @@
 # THE ANGLE — what the research actually concluded
 # Read this before the 57,000-word brief. 9 September 2026.
-# This is research findings and strategic direction. It is NOT proposal text, and none of it
-# should be pasted. Art. 3 means Asad writes the proposal himself.
 
 ---
 
@@ -127,6 +125,3 @@ do-not-claim list. Section 5 now carries all four verdicts verbatim.
 that some were reconstructed from surrounding evidence. That was false. All four were delivered
 and complete; they are now pasted in from the run journal. Where sections 4 and 6 of the brief
 reason from only two verdicts, section 5 overrules them.
-
-**Unchanged and not negotiable: Asad writes the proposal and the motivations himself.** This file
-and the brief are research, which is the same as reading papers. Neither is text to paste.
