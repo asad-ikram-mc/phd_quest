@@ -66,3 +66,39 @@ in exchange is the trade that has worked in the VU and Agder letters.
 - If he is interested, the next step is the formal RIT CS PhD application, which has its own deadline
   and requirements that have not yet been checked. Check them then, not now.
 - No nudge before three weeks.
+
+
+---
+
+## v2, 9 September 2026: ArtemisAI added, and a false claim removed
+
+Asad objected to the gaps paragraph, correctly. It said he had "not trained or fine-tuned large
+language models" and had "used conversational systems rather than built them", and it never
+mentioned ArtemisAI at all. Reading `/Users/asad/git_projects/artemisai_prod/marvel` directly shows
+the first half of that was simply false.
+
+**What the repo actually contains.** `Fusion/fusion_classifier.py` is a trained PyTorch MLP,
+1536 to 256 to 64 to 5, classifying content type over three concatenated 512-dim CLIP vectors for
+the image, its OCR text and its caption. Adam, dropout, `compute_class_weight("balanced")` for
+imbalance, train/val split, best-val checkpointing, classification report and confusion matrix. It
+trains on a hand-built gold set of 149 examples and about 680 once production data is included.
+Around it: CLIP via open_clip_torch (ViT-B/32), Whisper transcription for video, an OCR pipeline,
+and a networkx affinity graph.
+
+**The fact that makes the email work.** `Fusion/label_images.py` auto-labels images with Claude
+Haiku 4.5 vision and writes a CSV "ready for fusion classifier training". So the classifier is
+partly trained to imitate an LLM annotator that is itself uncertain. That is exactly Mo's ConvGQR
+claim, that a model trained on an imperfect reference inherits its limits, happening inside Asad's
+own production system. v2 says so plainly, including the admission that he cannot separate the
+model's own error from the error it inherited. To an IR researcher that is a far better credential
+than any list of technologies, because it is the problem stated from the inside.
+
+**What remains honestly absent, and stays in the email.** No LLM fine-tuning: there is no PEFT,
+LoRA, bitsandbytes or TRL anywhere in the repo, and LLMs are called through APIs. No conversational
+or multi-turn systems. Nothing published. The revised sentence is "I have not fine-tuned a large
+language model; I call them through APIs and treat their output as data to be validated", which is
+accurate where the old wording was not.
+
+**Lesson recorded in memory** as `artemisai-technical-facts.md`: check the repo before writing any
+gaps paragraph. Understating a founder's own production system to an NLP group is a worse error than
+overstating it, because it is both false and self-defeating.
