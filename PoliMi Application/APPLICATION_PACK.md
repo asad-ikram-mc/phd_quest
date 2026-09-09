@@ -62,8 +62,14 @@ Art. 2 requires certified English from **all** candidates: Cambridge B2 First gr
 TOEFL iBT ≥86/120, PTE ≥59, or equivalent. Failure to supply it **"irrevocably entails the loss of
 the right to enrol"**.
 
-**Asad has no IELTS** (confirmed when the Edinburgh checklist was written). But there is an exemption,
-quoted verbatim:
+**CORRECTED 9 Sep 2026. Asad DOES have an IELTS, and this pack previously said he did not.**
+IELTS Academic, 28 March 2024: L7.0 R6.5 W6.0 S7.0, **Overall 6.5**, CEFR B2, TRF 23PK507881IKRA011A.
+That clears the >=6 threshold.
+
+**It probably does not save him.** Art. 2 says twice, in the same paragraph, that the certification
+"must be **valid upon enrolment**". Enrolment closes 31 October 2026, and IELTS is conventionally
+treated as valid for two years, which ran out on 28 March 2026. So submit the IELTS, because it
+costs nothing and may be accepted, but do not rely on it. There is an exemption, quoted verbatim:
 
 > "applicants who have been awarded or will be awarded academic qualifications by an institute in
 > which all teaching activities have been carried out in English are not required to certify their
@@ -72,7 +78,10 @@ quoted verbatim:
 
 **So Asad needs a letter from the University of Portsmouth stating that his MSc was taught and
 assessed entirely in English.** This is the same "Portsmouth English letter" already sitting on the
-Edinburgh checklist. **Request it today.** Registry turnaround is usually a few days but is not
+Edinburgh checklist. **Request it today.** A third argument sits in reserve and should not be led
+with: English is an official language of Pakistan under Article 251 of its Constitution, and the
+call exempts "citizens of Countries in which English is an official language". That is an argument,
+not a document. Registry turnaround is usually a few days but is not
 guaranteed inside nine days, and without it the application cannot proceed to enrolment even if the
 academic assessment succeeds.
 
@@ -120,8 +129,11 @@ days on the proposal.
 3. **All university qualifications**: diploma in the original language, the list of exams taken with
    scores, and the **final average (CGPA)**, plus translations into Italian or English.
    - Portsmouth transcript and certificate are already in the repo root and are in English.
-   - FAST-NUCES degree is in the repo (`degree_bscs_asad.pdf`); the **FAST-NUCES transcript is still
-     missing** and is also an open item on the Edinburgh checklist. Request it today.
+   - FAST-NUCES degree (`degree_bscs_asad.pdf`) **and the official transcript** (`Asad bscs
+     transcript.pdf`, issued 1 Apr 2022) are both in the repo root, both in English. **Resolved
+     9 Sep 2026; this pack previously listed the transcript as missing.** Note what it shows:
+     CGPA **2.75/4.00**, 130/130 credits, two F grades (CL 103, CS 201), Fall 2018 GPA 1.23. That
+     is what makes the Attachment 1 question below urgent.
 
 4. **English certificate**, or the Portsmouth declaration under the exemption (Gate 1).
 
@@ -135,8 +147,18 @@ days on the proposal.
 7. **Application fee of EUR 25.82**, non-refundable, paid via **PagoPA** by 18/09/2026 14:00.
    Paying late is the same as not applying.
 
-8. **Up to 2 referees**: names, email addresses and telephone numbers, entered in the form. No
-   letters are required at this stage. Dr Ella Haig plus one other; ask both before naming them.
+8. **Up to 2 referees**: names, email addresses, **telephone numbers and any Skype contact**,
+   entered in the form. No letters are required at this stage. Dr Ella Haig plus one other; ask
+   both before naming them.
+
+9. **THREE THINGS SEEN ON THE LIVE PORTAL FORM (9 Sep 2026) THAT THE CALL PDF DOES NOT SPELL OUT:**
+   - A **compulsory tickbox** confirming awareness "that the originality of their publications and
+     dissertations provided for this application or during their doctoral career at the Politecnico
+     di Milano can be verified by anti-plagiarism software". This is Art. 3's AI rule with teeth.
+   - A **compulsory tickbox** undertaking to attend the PhD per the call and the Regulations.
+   - A **Questionnaire is REQUIRED in order to close the application**, and the **PagoPA payment
+     link is generated only after the application is closed**. So the fee cannot be paid early, and
+     closing the application is a prerequisite for paying. Do not leave either to 18 September.
 
 ---
 
