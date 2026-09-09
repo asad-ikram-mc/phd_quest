@@ -102,3 +102,31 @@ accurate where the old wording was not.
 **Lesson recorded in memory** as `artemisai-technical-facts.md`: check the repo before writing any
 gaps paragraph. Understating a founder's own production system to an NLP group is a worse error than
 overstating it, because it is both false and self-defeating.
+
+
+---
+
+## v3, 9 September 2026: the live tracker, and a correction to my own correction
+
+Asad pointed me at the ArtemisAI plan tracker, then at the live admin panel. Reading the local repo
+alone had produced a false conclusion twice over.
+
+**What was wrong.** The local `nlp_accuracy_tracker.html` has `ENTRIES = []`, so I concluded the
+DeepSeek distillation loop was a roadmap. It is not. The deployed page at artemisai.co.uk loads 18
+entries from DynamoDB and describes a system that is running: six transformer classifiers fine-tuned
+with a weighted loss, six SageMaker endpoints, a weekly Monday loop with three-tier confidence
+routing, quarterly retrains, versions v0 to v5, average accuracy 64.7 rising to 85.8.
+
+So the line "I have not fine-tuned a large language model" was wrong in the other direction and has
+been replaced with something precise: he fine-tunes encoder classifiers (XLM-R, DistilBERT, DeBERTa)
+and has not fine-tuned a generative model.
+
+**What v3 gains, and it is the best thing in the email.** v1 to v3 of his models were scored against
+a 97-post human holdout: 64.7, 66.4, 71.6. From v4 the reference became Claude's labels: 81.8, 85.8.
+The benchmark moved at the same moment the models did. The email now says so, and says plainly that
+he cannot separate the real improvement from the reference shift. That is Mo's ConvGQR argument
+occurring in Asad's own production numbers, admitted against his own interest. For a researcher who
+works on exactly this, it is worth more than any list of technologies.
+
+**Lesson, recorded in memory:** check the live admin panel before describing what ArtemisAI does. A
+local file can be a shell that fetches its data at runtime.
