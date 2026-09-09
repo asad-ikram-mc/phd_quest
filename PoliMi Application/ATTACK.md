@@ -280,3 +280,93 @@ The hostile supervisor lens respected these. Protect them in revision.
 | 10 | Add the manuscript; add one ethics clause | small |
 
 **The Summary must be rewritten last and re-counted.** It is at 499 of 500.
+
+---
+---
+
+# FINAL REVIEW OF v2 — 9 September 2026
+
+All ten findings above are fixed. Every citation re-verified against the primary source.
+Five things left, one of them is new and lands in the paragraph aimed at Pierri.
+
+## MUST FIX
+
+### 1. The Liu citation is wrong on three counts, and it is Pierri's own paper
+
+You cite: *"Liu, G., Mu, J., Feng, Z., Zhu, Y. and Pierri, F. (2026). Misinformation Exposure in the
+Chinese Web: A Cross-System Evaluation of Search Engines, LLMs, and AI Overviews."*
+
+**The current version (v2, 28 May 2026) is:**
+> **"Evaluating Reliability Asymmetries in Chinese Factual Search and AI Answers"**
+> Geng Liu, Li Feng, Mengxiao Zhu, Francesco Pierri
+
+- **The title was changed.** Yours is the superseded v1 title.
+- **The author list is wrong.** Four authors, not five. There is no "Mu, J." The initials for Feng
+  and Zhu are wrong: Li Feng, not Z. Feng; Mengxiao Zhu, not Y. Zhu.
+- **"Circular noise" is not in v2.** The surviving limitation reads: *"benchmark construction and
+  output annotation rely partly on LLM-assisted labeling. We validate samples from each stage with
+  human annotators, but errors may remain for ambiguous, time-sensitive, or domain-specific
+  queries."* That is a weaker and more careful statement than "may introduce circular noise", which
+  was the v1 wording.
+
+This is the single citation carrying your Motivations paragraph, it is Pierri's own paper, and his
+co-authors' names are wrong in it. Either cite v1 explicitly by version, or reword to what v2
+actually says. Do not leave it as it stands.
+
+### 2. You are 531 characters over the strict cap
+
+| | v1 | v2 |
+|---|---|---|
+| Summary | 499 | 499 |
+| Description | 5,560 | 6,465 |
+| Motivations | 1,863 | 1,567 |
+| **Total** | 7,922 | **8,531** |
+
+Fine if 4,000–8,000 governs the Project description alone. **Over by 531 if it governs the report.**
+Art. 3 and the portal note both attach the range to "the report"; only the template attaches it to
+the field. The stricter reading has the better textual support, and this is a compulsory document.
+
+**Either get the answer from PhD-INF@polimi.it, or cut 531 characters.** One cheap place: the
+day-job point is made twice, in "which is my day job" and again in "This environment is what I build
+now."
+
+### 3. The Area field does not match the form
+
+Your header says *"Research area: Auditing and Mitigating Epistemic Failures in Web-Connected AI
+Agents"*. That is the **thematic research field**, not the area.
+
+`Topic_description.pdf` distinguishes them: **"Research Area n. 1 - Computer Science and
+Engineering"** is the area; the epistemic-failures title is the "THEMATIC Research Field". The
+template says the Area *"must coincide with the PhD area selected in the application form."*
+Put the area in the Area line and label the thematic field separately.
+
+### 4. Project title is not its own field
+
+The template order is: Project title, then Summary of project, then Project description, then
+Motivations. Your title currently sits as a heading inside section 2, after the Summary. Move it up
+as its own labelled field.
+
+### 5. The AI declaration is absent
+
+Art. 3: AI use *"must always be explicitly declared"*. There is no declaration anywhere in the
+document, and the portal has no field for one. You wrote every word yourself and I only attacked
+what you wrote, but you did use an AI assistant in preparing this application. **Decide deliberately
+whether to declare it, and where.** Silence is a choice, and it is the one choice you cannot revise
+after submission. This is also question 5 for PhD-INF@polimi.it.
+
+## WORTH FIXING
+
+- **Summary is at 499 of 500.** One character. You cannot correct a typo in it without breaching.
+- **"two trained annotators, about 150 hours"** — 150 hours each, or 150 total? At 1,500 pairs
+  double-annotated that is 3,000 annotations; 150 total means 90 seconds each, which a methods
+  reviewer will question. One word fixes it.
+
+## VERIFIED AND CORRECT — stop checking these
+
+- Allaham and Diakopoulos 16%: right. Four engines (ChatGPT, Copilot, Gemini, Perplexity), 712 queries.
+- DeepTRACE title: now the published one.
+- Shah and Ozgur, and Yu, Kim and Kim: both described accurately.
+- Pierri's OSoMe affiliation at Indiana: confirmed.
+- ArtemisAI 71.6 to 85.8 across two versions: correct.
+- **No hidden text in the PDF.** The check comes back clean.
+- Renders cleanly across all three pages.
