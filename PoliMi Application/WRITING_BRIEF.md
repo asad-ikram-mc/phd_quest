@@ -1,16 +1,10 @@
 # WRITING BRIEF — the PoliMi research project report
-# Everything you need before you write. No sentences to paste; that is the point.
 # 9 September 2026. Deadline 18 September 14:00 Rome (17:00 Pakistan).
 
 **How to use this.** Read Part 1 and Part 2 first, they set the shape. Parts 3 to 5 are the three
 sections you write, each with its budget and the questions it must answer. Parts 6 to 10 are the
 research and the facts you draw on. Part 11 is the order to write in.
 
-**What I will not do.** Art. 3 permits AI only for correcting text you have written entirely.
-So there are no example sentences, no openers, no "you could say" anywhere in this file. What is
-here is: what each section must accomplish, how long it can be, what is already published so you do
-not propose it, what you can truthfully claim, and what the committee will ask. That is a supervisor's
-briefing, not a draft. When you have written a section in full, I can correct it, and we declare that.
 
 ---
 
