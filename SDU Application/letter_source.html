@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><title>Motivated application — Asad Ikram</title>
 <style>
-  @page { size: A4; margin: 16mm 17mm 13mm 17mm; }
-  body { font-family: "Times New Roman", Times, serif; font-size: 9.7pt; line-height: 1.36;
+  @page { size: A4; margin: 16mm 17mm 14mm 17mm; }
+  body { font-family: "Times New Roman", Times, serif; font-size: 9.8pt; line-height: 1.38;
          color: #000; margin: 0; text-align: justify; }
   .hdr { text-align: left; font-size: 8.6pt; color: #333; margin-bottom: 9pt; }
   .hdr b { font-size: 11.5pt; color: #000; display: block; margin-bottom: 1pt; }
   .to { text-align: left; margin-bottom: 7pt; }
-  .re { font-weight: bold; margin-bottom: 7pt; text-align: left; }
-  p { margin: 0 0 5pt; }
-  .sig { margin-top: 8pt; text-align: left; }
+  .re { font-weight: bold; margin-bottom: 8pt; text-align: left; }
+  p { margin: 0 0 5.5pt; }
+  .sig { margin-top: 9pt; text-align: left; }
   .sig .n { font-weight: bold; }
-  .foot { font-size: 8.2pt; color: #333; margin-top: 3pt; text-align: left; }
+  .foot { font-size: 8.2pt; color: #333; margin-top: 4pt; text-align: left; }
 </style></head><body>
 
 <div class="hdr"><b>Asad Ikram</b>
@@ -25,93 +25,132 @@
 
 <p>Dear Associate Professor Andersen,</p>
 
-<p>One sentence in the advert is why I am writing: that a crucial task for the PhD student will be to manage the
-  infrastructure of the data donation hubs where individuals donate their social media data in public spaces.
-  Building and keeping alive collection systems that run against changing platforms is what I have done for seven
-  years, and it is the part of SP1 that is hardest to hire for. But infrastructure alone is not a doctorate, and
-  the reason I want this particular post is the question sitting underneath it, which my proposal sets out: SP1
-  asks how negativity differs across outlets, platforms and individual feeds, and that comparison presumes one
-  instrument reads all three the same way. The field's own evidence says instruments do not travel between genres
-  and languages. Establishing whether this one does, and putting the three scores on a common scale, is the
-  precondition of the project's own question, and it is the thing I am best placed to contribute.</p>
+<p>I found the question behind this application by accident, about eight years ago, while doing work nobody
+  would call research. I was building collectors, and the more sources I collected the more often they disagreed
+  with each other about the same thing.</p>
 
-<p>The capability first, since it is the concrete part. At M+C Saatchi Fluency I run a fleet of 68 collectors
-  ingesting ten platforms daily into a governed master table, with an automated repair layer that runs as a named
-  CI workflow: when a source changes shape, the system diagnoses the break, regenerates the extraction logic and
-  tests it against live pages before shipping. Before that I led a three-engineer team at Dubizzle Labs running
-  more than 500 collectors across fifteen countries in four languages. What that work teaches is not scale but
-  failure modes, and two of them decide whether SP1 produces data at all. The first is schema drift: download
-  packages change structure without notice, and their folder and key names change with the account's language
-  setting, which is decisive in Denmark where donors' phones will split between Danish and English. Golden fixtures
-  per platform and per locale, versioned parsers stamped onto every record, and canary donations from
-  project-owned accounts are the standing defence, and the field's published response to this problem is still
-  manual repair. The second is that donated entries are identifiers and links rather than text, so a negativity
-  classifier cannot read them until every item is resolved back to its content at population scale; Hase and
-  colleagues name this as the blocker that makes content analysis of donated feeds unfeasible. That is an
-  engineering problem with a measurement consequence, because resolution fails for deleted and restricted items
-  and biases the recovered feed toward what is still live.</p>
+<p>At Dubizzle Labs I led a three-engineer team running more than five hundred collectors across fifteen countries,
+  in English, Arabic, Urdu and Hindi, feeding a layered warehouse I redesigned into raw, operational and analytical
+  layers. The interesting part was never the scale. It was that the same event looked different depending on where
+  people were talking about it. On a forum, people argued at length and qualified themselves. On social platforms
+  the same sentiment arrived compressed, sarcastic and stripped of context. When we ran language models over both
+  and put the numbers side by side, the comparison looked authoritative and I could not defend it. We could collect
+  almost anything. We could not say what our data measured. I was twenty-four and I assumed this was a gap in my
+  knowledge rather than a gap in the field.</p>
 
-<p>The research side is the same question in a different register, and it is why I stopped being satisfied with
-  building these systems. My MSc dissertation at Portsmouth analysed roughly 279,000 posts on UK economic policy
-  across four platforms, with a fine-tuned classifier at macro-F1 0.878 and human validation at Cohen's kappa
-  around 0.78, a figure I note is close to the tone reliability reported in your department's own comparative
-  coding work. The finding that mattered was not the accuracy. It was that the same policy event produced
-  structurally different sentiment and emotion profiles on different platforms, which meant the cross-platform
-  aggregate rested on an assumption nobody had tested. With my supervisor Dr Ella Haig I wrote that up as a
-  methods manuscript treating each platform as a survey mode and applying generalizability theory, measurement
-  invariance and score linking to machine-labelled text; in a simulation with known ground truth, an index pooling
-  platform scores at face value reports the wrong sign of the aggregate on roughly a quarter of days. I should be
-  precise about its status: it is complete but unpublished and unsubmitted, it is on English-language material,
+<p>That question is what I applied to Chevening with. My proposal was that governments should have a centralised
+  social analytics capability so that public decisions could be informed by what people actually say rather than by
+  what a communications team believes they say. I was selected from over seventy thousand applicants across a
+  hundred and sixty countries, and I went to Portsmouth to find out whether the idea survived contact with
+  method.</p>
+
+<p>It survived, but not in the shape I expected. My MSc dissertation, supervised by Dr Ella Haig, analysed roughly
+  279,000 posts on UK economic policy across Twitter, Reddit, YouTube and Quora, with a fine-tuned classifier at
+  macro-F1 0.878 and human validation at Cohen's kappa around 0.78, a figure I note sits close to the tone
+  reliability your department reported in its own comparative coding work. The accuracy was not the finding. The
+  finding was that the same policy event produced structurally different sentiment and emotion profiles on
+  different platforms, which meant the cross-platform aggregate I had built, and the ones my industry ships every
+  day, rested on an assumption nobody had tested: that the classifier measures the same thing everywhere it reads.
+  Dr Haig and I wrote that up as a methods manuscript treating each platform as a survey mode and applying
+  generalizability theory, measurement invariance and score linking to machine-labelled text. In a simulation with
+  known ground truth, an index pooling platform scores at face value reports the wrong sign of the aggregate on
+  roughly a quarter of days. It is complete but unpublished and unsubmitted, it is on English-language material,
   and it has not been reproduced on Danish data. I attach it with a statement of my contribution so it can be
-  assessed as documented work rather than taken on my word. The same problem shows up in my own company, where
-  two annotation tiers agree on 82.9 per cent of sentiment labels and 74.4 per cent of emotion labels while the
-  dashboard reported an accuracy figure that was inter-model agreement with no criterion behind it. I fine-tune
-  six encoder classifiers there, including sentiment and emotion; I have not fine-tuned a generative model, and I
-  would treat an LLM as a first-pass labeller to be validated against a Danish human gold standard, not trusted,
-  which is also what your colleagues' Danish benchmarking work suggests.</p>
+  assessed as documented work rather than taken on my word.</p>
+
+<p>Meanwhile the industry side kept teaching me the same lesson at larger scale. At M+C Saatchi Fluency I design
+  and operate the multi-platform social listening pipeline behind campaign intelligence for UK Government
+  departments and for Amazon, Ford, Nike and Reckitt. It is not a scraping job. Sprinklr and Brandwatch feeds and
+  custom collectors land in a governed warehouse on AWS, sixty-eight collectors across ten platforms daily into a
+  156-column master table, and the analytical work sits on top of it: sentiment scoring, topic and entity tagging,
+  benchmarking brands and narratives against each other, tracking misinformation dynamics and narrative shifts
+  across millions of conversations. Those reports are read by senior government communications teams. What that
+  taught me is how a measurement becomes a decision. A tag on a post becomes a share-of-voice number, becomes a
+  slide, becomes a communications strategy, and by the time it is a strategy nobody remembers that the first step
+  was a model with an error rate.</p>
+
+<p>ArtemisAI is where I stopped consuming that layer and started building it. As founder and CTO I designed the
+  architecture: six fine-tuned encoder classifiers for sentiment, emotion, toxicity, topic, language and intent,
+  served from SageMaker endpoints, trained on a labelling pipeline where a strong model labels a seed set with its
+  reasoning, decision rules are mined from that reasoning into a prompt for a cheaper model, and low-confidence
+  cases route back for review. On top of the classifiers sit the things clients actually asked for: predicting
+  which posts will underperform before they are published, identifying posting windows, drafting posts, and
+  raising crisis alerts when sentiment moves sharply. For the collaboration feature I built an affinity graph and
+  applied network theory to it, which came directly out of reading the literature and asking whether it would hold
+  in production. That is the habit I want to keep: taking something from a paper and finding out whether it
+  survives contact with real data.</p>
+
+<p>And ArtemisAI is where the question I started with came back and found me. Our two annotation tiers agree on
+  82.9 per cent of sentiment labels and 74.4 per cent of emotion labels, while the toxicity model reports 96.7 per
+  cent average confidence and the dashboard's accuracy figure turned out, when I read our own code, to be
+  inter-model agreement with no criterion behind it. Nobody built that dishonestly. It is what happens when
+  powerful instruments are adopted faster than the discipline to check them. I had built the exact thing I had
+  been suspicious of at twenty-four, and I could not fix it from inside, because in industry there is no budget
+  for stopping to ask what the number means.</p>
+
+<p>That is why I am applying to do this academically, and why to this project specifically. SP1 asks how the
+  amount and character of negativity differ across news outlets, social media platforms and individual news
+  diets. That is my question with a construct I care about attached to it, and with stakes that are not
+  commercial: the project ends in public advice about news diets, and a recommendation about how much negative
+  news is healthy is only as good as the measurement underneath it. Your review with Toff and Ytre-Arne names the
+  blind spot that we know little about the role of the news media and intermediaries in avoidance, and measuring
+  negativity at outlet, platform and feed level is a measurement of exactly that contribution. Your finding with
+  Shehata of a preference for positive news is a reminder that the negativity bias is open rather than premised.
+  And Professor Hopmann's comparative coding work is the reason my proposal codes tone at actor-in-story level and
+  reports Krippendorff's alpha per construct before it reports an F1. My proposal sets out the measurement
+  argument in full; what I want to say here is that it is not an idea I arrived with, it is the thing eight years
+  of building these systems kept forcing on me.</p>
+
+<p>The hub work is the part I can do on day one. Managing donation infrastructure in public spaces is a collection
+  problem with a research consequence, and it fails in two ways I have been paid to prevent for seven years.
+  Download packages change structure without notice, and their folder and key names change with the account's
+  language setting, which is decisive in Denmark where donors' phones will split between Danish and English; the
+  standing defence is golden fixtures per platform and locale, versioned parsers stamped onto every record, and
+  canary donations from project-owned accounts. And donated entries are identifiers and links rather than text, so
+  a negativity classifier cannot read them until every item is resolved back to its content at scale, which Hase
+  and colleagues name as the blocker that makes content analysis of donated feeds unfeasible. I have built the
+  automated repair layer for the first problem and the resolution infrastructure for the second, at Fluency, at
+  Dubizzle, at Fix.com, VendueTech, Prefe and CXG, and across more than three hundred freelance engagements.</p>
 
 <p>On qualifications, I would rather be direct than let a document raise the question. My master's is a UK
   one-year taught MSc of 180 UK credits, conventionally mapped to 90 ECTS, awarded with Distinction in December
-  2025 with a dissertation mark of 78 and a credit-weighted average of 70.5. It sits on a four-year, 130-credit-hour
-  bachelor's in computer science, so the total study load exceeds a three-plus-two structure even though the
-  master's alone does not reach 120 ECTS. I read the advert's "or equivalent documented qualifications
-  corresponding to" as the provision this is for, and the transcripts for both degrees are attached so the
-  judgement can be made on documents rather than inference. I would welcome being told early if this is a barrier.</p>
+  2025 with a dissertation mark of 78 and a credit-weighted average of 70.5. It sits on a four-year,
+  130-credit-hour bachelor's in computer science, so the total study load exceeds a three-plus-two structure even
+  though the master's alone does not reach 120 ECTS. I read the advert's provision for equivalent documented
+  qualifications as the one this is for, and both transcripts are attached so the judgement rests on documents. I
+  would welcome being told early if it is a barrier.</p>
 
-<p>On teaching, I have none in a university setting and I am not going to dress up what I have. What I do have is
-  adjacent and I think relevant: I led three-engineer teams at Dubizzle Labs and VendueTech, mentored two junior
-  engineers at Prefe, and I write and maintain a free public engineering reference on web data collection that
-  practitioners use. Writing that taught me the thing I would carry into a classroom, which is that the hard part
-  is not explaining what a method does but making visible the judgement behind choosing it, and that students
-  reproduce the confidence of their instruments unless they are shown where those instruments fail. If I taught
-  within this centre I would want to teach exactly that: how to read an automated measure sceptically. I expect to
-  need training in university pedagogy and would take it.</p>
+<p>On teaching, I have none in a university setting and I will not dress up what I have. I led three-engineer
+  teams at Dubizzle Labs and VendueTech, mentored two junior engineers at Prefe, and I write and maintain a free
+  public engineering reference on web data collection that practitioners use. Writing that taught me the thing I
+  would carry into a classroom: the hard part is not explaining what a method does, it is making visible the
+  judgement behind choosing it, because students inherit the confidence of their instruments unless someone shows
+  them where those instruments fail. That is what I would want to teach here. I expect to need training in
+  university pedagogy and would take it.</p>
 
-<p>On dissemination and practical translation, this project ends in advice to the public about news diets, and
-  that is a large part of its appeal. A recommendation about how much negative news is healthy is only as good as
-  the measurement underneath it, and a number that is not comparable across the sources composing a person's diet
-  cannot support public advice, however carefully it is phrased. I would want the work to reach three audiences:
-  the research community through the methods papers described in the proposal, Danish newsrooms through the
+<p>On dissemination, this project ends in advice to the public, and that is a large part of its appeal. I would
+  want the work to reach the research community through the methods papers, Danish newsrooms through the
   outlet-level findings, which are directly actionable for editors, and the public through the same plain writing
-  I already do in a technical field. I would also expect to release the codebook, the parsing and resolution
-  tooling and the reporting standard openly, because a hub protocol nobody else can run is not a method.</p>
+  I already do in a technical field. I would release the codebook, the parsing and resolution tooling and the
+  reporting standard openly, because a hub protocol nobody else can run is not a method.</p>
 
-<p>On the working environment: I understand that regular physical presence in Odense is expected and I want that
-  rather than tolerate it, having spent seven years working remotely across six countries. I do not speak Danish.
-  In the proposal I treat that as a design parameter rather than an inconvenience, with annotation, codebook work
-  and the qualitative reading of Danish text done by native speakers while I build the instrument and the
-  infrastructure, and I would start Danish tuition on arrival. What I have not done, plainly: I have no
-  publications, I have never run a human-subjects study or held ethics approval, I have not conducted interviews,
-  and I have not worked with panel survey data. The proposal is sized to that, the qualitative and survey work
-  sits with colleagues who own it, and the parts I would need to learn I would rather learn here, in a team that
-  does them properly, than claim I already know.</p>
+<p>On the working environment, I understand regular physical presence in Odense is expected and I want it rather
+  than tolerate it, having spent seven years working remotely across six countries. I do not speak Danish. My
+  proposal treats that as a design parameter rather than an inconvenience, with annotation, codebook work and the
+  qualitative reading of Danish text done by native speakers while I build the instrument and the infrastructure,
+  and I would begin Danish tuition on arrival. What I have not done, plainly: I have no publications, I have never
+  run a human-subjects study or held ethics approval, I have not conducted interviews, and I have not worked with
+  panel survey data. The proposal is sized to that, the qualitative and survey work sits with colleagues who own
+  it, and the parts I would need to learn I would rather learn here, in a team that does them properly, than
+  claim I already know.</p>
 
-<p>Thank you for reading. I would welcome the chance to discuss the measurement argument, or the hub, in more
-  detail.</p>
+<p>I have spent eight years making numbers out of what people say online, and the last two years becoming
+  uncomfortable with how easily those numbers travel. I would like to spend the next three finding out what they
+  are actually worth, on a question where the answer reaches people rather than dashboards.</p>
 
 <div class="sig">Yours sincerely,<br><br>
   <span class="n">Asad Ikram</span></div>
 <div class="foot">Enclosed: research proposal &middot; curriculum vitae &middot; master's degree certificate and transcript &middot;
-  bachelor's transcript &middot; Ikram &amp; Haig manuscript with co-authorship statement</div>
+  bachelor's transcript &middot; Ikram and Haig manuscript with co-authorship statement</div>
 
 </body></html>
