@@ -2276,6 +2276,10 @@ function migrateLegacyDone(){
   localStorage.removeItem('prio-done');
 }
 function defaultStatus(p){return PRIO_DEFAULT_ST[p.id]||(p.tier==='followup'?'progress':'todo');}
+function dueKey(p){ return p.due ? new Date(p.due[0],p.due[1]-1,p.due[2]).getTime() : 8640000000000000; }
+const TIER_RANK={now:0,week:1,month:2,followup:3,later:4};
+function byDeadline(a,b){ const d=dueKey(a)-dueKey(b); if(d) return d;
+  return (TIER_RANK[a.tier]??9)-(TIER_RANK[b.tier]??9); }
 function getStatus(id){const p=PRIORITIES.find(x=>x.id===id);if(!p)return 'todo';return loadStatus()[id]||defaultStatus(p);}
 function setStatus(id,st){
   const p=PRIORITIES.find(x=>x.id===id); if(!p) return;
@@ -2314,7 +2318,7 @@ function renderBoard(){
   const wrap=document.getElementById('board-cols'); if(!wrap) return;
   wrap.innerHTML='';
   BOARD_COLS.forEach((col,ci)=>{
-    const items=PRIORITIES.filter(p=>getStatus(p.id)===col.k);
+    const items=PRIORITIES.filter(p=>getStatus(p.id)===col.k).sort(byDeadline);
     const c=document.createElement('div');
     c.className='bcol bcol-'+col.k;
     c.addEventListener('dragover',e=>{e.preventDefault();c.classList.add('over');});
@@ -2347,7 +2351,7 @@ function renderBoard(){
 }
 function renderInProgress(){
   const el=document.getElementById('active-inprogress'); if(!el) return;
-  const items=PRIORITIES.filter(p=>getStatus(p.id)==='progress');
+  const items=PRIORITIES.filter(p=>getStatus(p.id)==='progress').sort(byDeadline);
   if(!items.length){el.innerHTML='';return;}
   el.innerHTML=items.map(p=>'<div class="aip-row"><span class="st-pill st-progress">in progress</span><span>'+shortName(p.name)+'</span>'+duePillFor(p,'bpill')+'</div>').join('');
 }
@@ -2356,11 +2360,11 @@ function renderPriorities(){
   const now=new Date(); now.setHours(0,0,0,0);
   el.innerHTML='';
   const visible=PRIORITIES.filter(p=>getStatus(p.id)!=='dropped');
-  const doneItems=visible.filter(p=>getStatus(p.id)==='done');
-  const parked=visible.filter(p=>getStatus(p.id)==='parked');
+  const doneItems=visible.filter(p=>getStatus(p.id)==='done').sort(byDeadline);
+  const parked=visible.filter(p=>getStatus(p.id)==='parked').sort(byDeadline);
   const live=visible.filter(p=>{const st=getStatus(p.id);return st!=='parked'&&st!=='done';});
-  const actives=live.filter(p=>p.tier!=='followup');
-  const fups=live.filter(p=>p.tier==='followup');
+  const actives=live.filter(p=>p.tier!=='followup').sort(byDeadline);
+  const fups=live.filter(p=>p.tier==='followup').sort(byDeadline);
   const renderOne=(p,idx)=>{
     let duePill='';
     if(p.due){
