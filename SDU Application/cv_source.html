@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Asad Ikram, CV</title>
+<style>
+  @page { size: A4; margin: 13mm 14mm 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.6pt;
+         line-height: 1.33; color: #16181d; margin: 0; }
+  h1 { font-size: 17pt; font-weight: 700; margin: 0 0 1pt; letter-spacing: -0.2pt; }
+  .sub { font-size: 8.4pt; color: #444; margin-bottom: 2pt; }
+  .contact { font-size: 8pt; color: #333; margin-bottom: 9pt; }
+  .contact a { color: #16425B; text-decoration: none; }
+  h2 { font-size: 8.6pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7pt;
+       color: #16425B; border-bottom: 0.8pt solid #16425B; padding-bottom: 1.5pt;
+       margin: 9pt 0 4pt; }
+  .row { display: flex; gap: 9pt; margin-bottom: 4.5pt; }
+  .when { flex: 0 0 74pt; font-size: 7.9pt; color: #555; padding-top: 0.5pt; }
+  .what { flex: 1 1 auto; }
+  .ttl { font-weight: 700; }
+  .org { color: #333; }
+  ul { margin: 1.5pt 0 0; padding-left: 11pt; }
+  li { margin-bottom: 1.2pt; }
+  .tight li { margin-bottom: 0.8pt; }
+  p { margin: 0 0 3pt; }
+  .kv { display: flex; gap: 9pt; margin-bottom: 2pt; }
+  .k { flex: 0 0 74pt; color: #555; font-size: 7.9pt; }
+  .v { flex: 1 1 auto; }
+  .note { color: #444; font-style: italic; }
+</style></head><body>
+
+<h1>Asad Ikram</h1>
+<div class="sub">MSc Data Analytics (Distinction) &middot; Chevening Scholar 2024/25 &middot; Data engineer, social-media collection and measurement</div>
+<div class="contact">Lahore, Pakistan &middot; +44 7482 376417 &middot; asad.ikram53@gmail.com &middot;
+  linkedin.com/in/asad-ikram98 &middot; asad-ikram-mc.github.io/portfolio &middot; web-scraping-guide.com</div>
+
+<h2>Education</h2>
+<div class="row"><div class="when">2024 – 2025<br>awarded Dec 2025</div><div class="what">
+  <div><span class="ttl">MSc Data Analytics, Distinction.</span> <span class="org">University of Portsmouth, United Kingdom.</span></div>
+  <div>Credit-weighted average 70.5/100 (Distinction threshold 70). Masters project 78/100. Supervisor: Dr Ella Haig.
+     Modules included Intelligent Data and Text Analytics, Big Data and Machine Learning, Explainable AI, Data Management (80).</div>
+</div></div>
+<div class="row"><div class="when">2017 – 2021<br>awarded Apr 2022</div><div class="what">
+  <div><span class="ttl">BSc Computer Science.</span> <span class="org">National University of Computer and Emerging Sciences (FAST-NUCES), Pakistan.</span></div>
+  <div>Four years full time, 130 credit hours completed. CGPA 2.75 on a 0.00–4.00 scale.</div>
+</div></div>
+
+<h2>Master's thesis</h2>
+<p><span class="ttl">Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies.</span>
+  Collected ~279,000 public posts on UK economic policy from X/Twitter, Reddit, YouTube and Quora via official APIs
+  and licensed feeds, under ethics approval (Portsmouth TETHIC-2025-111094) and GDPR-compliant procedures.
+  Fine-tuned a BERT classifier to macro-F1 0.878 against BiLSTM and lexicon baselines; human validation at
+  Cohen's &kappa; ≈ 0.78; temperature-scaling calibration; McNemar and bootstrap significance testing;
+  NRC emotion analysis linking anger and fear to negative policy reactions; LIME for interpretability;
+  Prophet forecasting of the daily sentiment index (MAE ≈ 0.02).
+  <span class="note">The finding that shaped my research interest: the same policy event produced structurally
+  different sentiment and emotion profiles on different platforms, which meant the cross-platform aggregate
+  rested on an untested assumption, that the classifier measures the same construct everywhere it reads.</span></p>
+
+<h2>Research output</h2>
+<p><span class="ttl">Ikram, A. and Haig, E.</span> “Is the Platform Part of the Measurement? A Protocol and Simulation Study
+  for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment.” <b>Manuscript, complete; not published and not
+  submitted.</b> Treats each social platform as a survey mode and applies generalizability theory, measurement
+  invariance and differential item functioning, and score linking to machine-labelled text. In a 500-replication
+  simulation with known ground truth, an index that pools platform-level scores at face value reports the wrong sign
+  of the aggregate on roughly a quarter of days, purely from measurement differences between platforms.</p>
+<p class="note">No peer-reviewed publications to date.</p>
+
+<h2>Professional experience</h2>
+
+<div class="row"><div class="when">Dec 2024 – present</div><div class="what">
+  <div><span class="ttl">Data Engineer, consultant</span>, <span class="org">M+C Saatchi Fluency, United Kingdom (remote)</span></div>
+  <ul class="tight">
+    <li>Design and operate the multi-platform social listening pipeline behind campaign intelligence for UK Government
+        departments and for Amazon, Ford, Nike and Reckitt: Sprinklr and Brandwatch feeds plus custom collectors into
+        AWS (ECS Fargate, Step Functions, Glue, Athena), with SageMaker NLP sentiment models.</li>
+    <li>Run a fleet of 68 collectors ingesting ten platforms daily into a governed 156-column master table, with an
+        automated repair agent operating as a named CI workflow: when a source changes shape the system diagnoses the
+        break, regenerates the extraction logic and tests it against live pages before shipping. 6.7 million items
+        collected in a six-week window; 99%+ pipeline uptime.</li>
+    <li>Anti-bot handling, proxy rotation and TLS fingerprint management. Weekly KL-divergence drift alarms on
+        pipeline output distributions.</li>
+    <li>Data governance on government-facing datasets: documented filter rules, permanent removal lists,
+        pre-delete backups and weekly refresh cycles.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">Feb 2025 – present</div><div class="what">
+  <div><span class="ttl">Founder and Chief Technology Officer</span>, <span class="org">ArtemisAI Ltd (trading as ViralData), United Kingdom (remote)</span></div>
+  <ul class="tight">
+    <li>Built the platform end to end: Meta Graph API ingestion of 30+ public pages daily into a layered lakehouse
+        and Redshift warehouse; 111,000+ posts and 3.39 million comments processed.</li>
+    <li>Fine-tuned six encoder classifiers (sentiment, emotion, toxicity, topic, language and intent) from XLM-R,
+        DistilBERT, DeBERTa-v3 and Detoxify bases on a ~20,000-item weighted dataset, with a per-sample loss weighted
+        by label confidence, class balance and label source. Served from six SageMaker endpoints.</li>
+    <li>Built the labelling pipeline these models learn from: an LLM labels a stratified seed set with its reasoning,
+        decision rules are mined from that reasoning into a prompt for a second, cheaper model, and low-confidence
+        cases route back for review. Weekly retraining loop with three-tier confidence routing.</li>
+    <li>Multimodal analysis in production: CLIP image-text embeddings feeding a trained fusion classifier
+        (macro-F1 0.93 on a hand-built gold set), a hybrid OCR pipeline (token-F1 0.928), and speech transcription.</li>
+    <li><span class="note">Instrumented the measurement layer itself. The two annotation tiers agree on 82.9% of
+        sentiment labels and 74.4% of emotion labels while the toxicity model reports 96.7% average confidence, and
+        the dashboard's “accuracy” figure was inter-model agreement with no criterion behind it. That is what moved
+        my interest from building these instruments to asking what their outputs mean.</span></li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">Feb 2022 – Aug 2024</div><div class="what">
+  <div><span class="ttl">Senior Data Engineer</span>, <span class="org">Dubizzle Labs (Dubizzle, Bayut, Zameen, OLX), Pakistan</span></div>
+  <ul class="tight">
+    <li>Led a three-engineer team owning 500+ regional collectors across 15 MENA countries on Kubernetes/EKS,
+        gathering multilingual platform data in English, Arabic, Urdu and Hindi.</li>
+    <li>Redesigned the layered data warehouse (RDL, ODL, ADL), improving ETL/ELT throughput by 60%.
+        Promoted twice in two years.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">2018 – present</div><div class="what">
+  <div><span class="ttl">Earlier and concurrent engagements</span></div>
+  <ul class="tight">
+    <li><b>Fix.com</b>, Canada, consultant, May 2023 – present (part time): Scrapy/Scrapyd pipelines processing 50M+
+        data points from 200+ sources; Great Expectations validation with automated schema-drift detection,
+        reducing bad production data by 70%.</li>
+    <li><b>VendueTech</b>, Ireland, Lead Data Engineer, Jun–Jul 2025: led three engineers building real-time auction
+        ingestion; migrated Azure to AWS. <b>Prefe</b>, Italy, consultant, Sep–Dec 2024: rebuilt legacy collectors,
+        cutting failure rate 60%. <b>CXG</b>, Dubai, Dec 2025 – Jan 2026: production collectors for luxury retail at
+        99%+ completeness against advanced anti-bot protections.</li>
+    <li><b>Freelance data engineer</b> (Level 2 seller), Dec 2018 – Feb 2026: 300+ five-star projects across
+        400+ websites for 50+ international clients.</li>
+  </ul>
+</div></div>
+
+<h2>Methods and tools</h2>
+<div class="kv"><div class="k">Measurement</div><div class="v">Generalizability theory, measurement invariance and differential item functioning, score linking, calibration; inter-coder reliability (Cohen's &kappa;); McNemar and bootstrap testing; chi-square; Prophet forecasting.</div></div>
+<div class="kv"><div class="k">NLP and ML</div><div class="v">Transformer fine-tuning (BERT, XLM-R, DistilBERT, DeBERTa-v3); CLIP multimodal embeddings; Whisper transcription; OCR pipelines; BiLSTM; NRC and VADER lexicons; LIME and attribution.</div></div>
+<div class="kv"><div class="k">Collection</div><div class="v">Scrapy, Playwright, Selenium; official platform APIs (Meta Graph, Reddit, YouTube); licensed feeds; proxy and anti-blocking management; TLS fingerprinting; detection anatomy; agentic browsers.</div></div>
+<div class="kv"><div class="k">Engineering</div><div class="v">Python, PySpark, SQL; AWS (Fargate, Glue, Athena, Redshift, SageMaker, Step Functions, Lambda, DynamoDB); Airflow; Docker and Kubernetes; PostgreSQL; CI/CD with automated quality gates. R functional rather than fluent.</div></div>
+
+<h2>Awards, public work and languages</h2>
+<div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25, the UK Foreign, Commonwealth and Development Office's flagship global scholarship, awarded to fund the MSc at Portsmouth.</div></div>
+<div class="kv"><div class="k">Public work</div><div class="v">Author and maintainer of <b>web-scraping-guide.com</b>, a free public engineering reference on web data collection covering libraries and tooling, anti-bot systems, detection anatomy, agentic browsers, legal and ethical constraints, production architectures and data quality.</div></div>
+<div class="kv"><div class="k">Languages</div><div class="v">Urdu (native), English (IELTS Academic 6.5 overall, March 2024; MSc taught and assessed in English). No Danish; I would begin learning on arrival.</div></div>
+<div class="kv"><div class="k">Teaching</div><div class="v">No formal university teaching. Mentored two junior engineers at Prefe and led three-engineer teams at Dubizzle Labs and VendueTech; wrote and maintain a public technical reference used by practitioners.</div></div>
+
+</body></html>

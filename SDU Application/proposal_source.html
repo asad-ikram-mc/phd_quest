@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Research proposal — Asad Ikram</title>
+<style>
+  @page { size: A4; margin: 15mm 16mm 13mm 16mm; }
+  body { font-family: "Times New Roman", Times, serif; font-size: 9.2pt; line-height: 1.29;
+         color: #000; margin: 0; text-align: justify; }
+  h1 { font-size: 11.5pt; margin: 0 0 1pt; line-height: 1.2; }
+  .q { font-size: 9.3pt; font-style: italic; margin: 0 0 5pt; text-align: left; }
+  .who { font-size: 8.4pt; color: #333; margin: 0 0 6pt; text-align: left; }
+  h2 { font-size: 9.2pt; margin: 6pt 0 2pt; text-transform: uppercase; letter-spacing: 0.4pt; }
+  p { margin: 0 0 3.5pt; }
+  .wp { margin: 0 0 3pt; }
+  .wp b { font-variant: small-caps; }
+  .refs { font-size: 7.3pt; line-height: 1.19; text-align: left; margin-top: 4pt; }
+  .refs p { margin: 0 0 1pt; text-indent: -9pt; padding-left: 9pt; }
+</style></head><body>
+
+<h1>Putting outlet, platform and feed negativity on one scale: a measurement design for SP1</h1>
+<p class="q">Governing question: how much negativity, and what kind, do Danish news outlets publish, do platforms
+  carry, and do individual feeds contain, and what has to be true of the instrument before those three quantities
+  can be compared?</p>
+<p class="who">Research proposal for the PhD position in SP1, Navigating Negativity: What is a Healthy News Diet?
+  &middot; Centre for Journalism, University of Southern Denmark &middot; Asad Ikram &middot; September 2026</p>
+
+<h2>Starting point</h2>
+<p>SP1 asks how the amount and character of negativity differ across news outlets, social media platforms and
+  individual news diets. Comparing one measure across three text types that differ in length, register and
+  composition is the hard part of that question, and this field knows it well: automated tone and sentiment
+  measures lose accuracy when moved between domains and genres (van Atteveldt, van der Velden and Boukes 2021;
+  Boukes et al. 2020), and Chan et al. (2021) found the dominant latent factor across dictionary scores on news
+  tracks article length almost perfectly, which is exactly what separates an article from a post from a caption.
+  Any validation SP1 undertakes will meet this. My proposal is to make that validation systematic and to carry its
+  results forward, so a reported difference between an outlet and a feed can be attributed to the sources rather
+  than to the ruler. This is not only SP1's concern. SP3's exposure variable is built from SP1's numbers, and
+  Scharkow and Bachl (2016) showed that content-analysis error of this kind attenuates linkage estimates and can
+  manufacture minimal effects. Getting the measure right is what makes the downstream findings defensible.</p>
+
+<h2>Construct and unit</h2>
+<p>Negativity is not one quantity. Lengauer, Esser and Berganza (2012), whose phrase "amount and character" the
+  project uses, separate negativity from confrontation, frame-related from actor-related negativity, and
+  non-directional from directional tone; the DOCA conventions distinguish negative tone toward actors, overall
+  tonality, pessimistic outlook, conflict-centredness and attributions of incapability. Soroka, Young and Balmas
+  (2015) show valence and the discrete emotions of fear and anger are empirically distinct, so amount and
+  character are separate estimands and one scalar cannot carry both. The primary coding unit is the document,
+  because a feed contains many items with no identifiable actor, and actor-level coding in the tradition of
+  Hopmann, de Vreese and Alb&aelig;k (2011) is nested inside it where the text supports it. The share of items
+  eligible for actor-level coding is reported per source, since it will differ systematically between an article
+  and a caption, and that difference is a finding rather than a nuisance. The aggregation rule from document to
+  the person-day quantity the project needs is fixed in advance with its denominator stated. I treat the
+  negativity bias as an open question rather than a premise, following Andersen and Shehata's (2025) preregistered
+  finding of a preference for positive news.</p>
+
+<h2>What the donated data can and cannot say</h2>
+<p>A download package is not a record of what a platform showed someone. Some packages carry viewed-content logs,
+  Instagram's viewed posts and videos among them, while others record only what the account posted, liked, shared
+  or followed. The distinction decides what the feed layer can measure, because engaged negativity and encountered
+  negativity differ by exactly the selective attention this programme studies, and an exposure variable built from
+  engagement would carry the phenomenon inside the predictor. WP2 therefore establishes, platform by platform,
+  which fields correspond to encounter, which to engagement and which to neither, what retention window each
+  covers, and what share resolves to analysable text. What the feed layer supports is declared before it is used,
+  and the person-day measure handed to SP3 is labelled for what it actually is.</p>
+
+<h2>Work packages</h2>
+<p class="wp"><b>WP1, Paper 1. A Danish negativity instrument, validated per source.</b> A codebook from Lengauer's
+  axes and the DOCA variables; a gold standard double-coded by Danish-native coders with an iterated coding list;
+  Krippendorff's alpha reported per construct and per source. A multilingual encoder is fine-tuned and benchmarked
+  against AFINN, SENTIDA, the DaNLP tone model and an LLM pass, since on Danish data the lexical tools fall away
+  across the formal-to-informal transition this project depends on (AFINN 0.68 on Europarl to 0.48 on Twitter)
+  while transformer tone models hold better. Automated tone measurement on Danish news is established here
+  already, in van Dalen, de Vreese and Alb&aelig;k's (2017) time series on economic coverage. What I have not
+  found is a Danish tone measure validated on news and social text within one study, which is what a cross-source
+  comparison requires. <i>Limitation:</i> the gold standard three years permits will bound the ceiling on rare
+  constructs such as attributions of misconduct.</p>
+<p class="wp"><b>WP2, Paper 2. The donation hub as a measuring instrument.</b> A schema-drift detection and repair
+  layer over download packages, with golden fixtures per platform and per locale, versioned parsers stamped onto
+  every record, and canary donations from project-owned accounts, because package structure changes with the
+  account's language setting and Danish donors' phones will split between Danish and English. A content-resolution
+  layer, because donated entries are identifiers and links rather than text and no classifier can read them until
+  they are resolved at scale, which Hase et al. (2024) name as the blocker for content analysis of donated feeds.
+  Selective redaction with a public-entity allowlist, since blanket handle-redaction would erase the outlet
+  identity the comparison depends on. On-device extraction with two-stage consent. Every funnel step is logged, so
+  the hub yields an evaluation of assisted physical donation as a method. <i>Limitation:</i> resolution fails for
+  deleted and restricted items, biasing the recovered feed toward what is still live; resolution rate is reported
+  by platform, item age and outlet rather than assumed away.</p>
+<p class="wp"><b>WP3, Paper 3. Equivalence and correction.</b> The design is multitrait-multimethod: every sampled
+  unit carries scores from mechanically different methods, the fine-tuned encoder, two dictionaries, an LLM pass
+  and a double-coded human label, which is the indicator set an equivalence analysis needs. A generalizability
+  study decomposes score variance over source, instrument, coder and format as crossed facets. Differential
+  functioning is tested by conditioning on the human codes as an external criterion rather than on a latent
+  estimate. Where sources are not equivalent, a per-source misclassification model is estimated against that
+  criterion and propagated into every aggregate SP2 and SP3 consume, following Egami et al. (2023). Length enters
+  as a modelled facet. <i>Limitation:</i> genuine content differences between sources and instrument non-transfer
+  are confounded on naturally occurring text, so identification rests on the human criterion holding constant
+  across sources; a transplantation check presenting matched content in each format tests exactly that.</p>
+<p class="wp"><b>WP4, Paper 4. The comparison, corrected.</b> The descriptive SP1 comparison is delivered twice.
+  First in year one on outlet and platform text with the instrument as built, which gives the project an early
+  answer rather than a promise. Then again once WP3's correction exists, which shows what the correction changes
+  and by how much. The second pass adds the feed layer and hands SP3 a person-day measure with a stated error
+  model, shaped for joining as Hopmann, Vliegenthart, de Vreese and Alb&aelig;k (2010) shaped daily content data
+  for rolling cross-section survey data. <i>Limitation:</i> donated feeds are a self-selected sample of a
+  self-selected platform population, benchmarked against SP3's panel on observable characteristics.</p>
+
+<h2>Sampling, ethics and language</h2>
+<p>The outlet frame is the Danish national and regional press through a media archive with random-day sampling,
+  extended to alternative outlets. Donated feeds are a non-probability sample; expected yield is planned from
+  published donation studies rather than assumed, and the donor journey is costed in wall-clock time with package
+  delivery latency inside it, because absorbing that latency is what a staffed hub is for. Reliability is reported
+  before performance, alpha per construct per source alongside macro-F1, and an LLM pass is validated against the
+  Danish gold standard rather than trusted. Ethics is designed in: a data protection impact assessment before any
+  donation, two-stage consent with the donor inspecting the extracted preview before releasing it, on-device
+  extraction so the raw package never leaves the phone, selective redaction validated against a re-identification
+  assessment, explicit handling of third parties and of donors who were minors when the account was used, and
+  storage under SDU governance. Language is a third axis of non-transfer alongside domain and genre and enters the
+  model as a facet. I do not speak Danish: the codebook and the reliability targets are mine to develop with the
+  team, native-speaker coders produce the gold standard and I work inside their disagreements, which is where a
+  codebook is actually written, and I would begin Danish tuition on arrival.</p>
+
+<h2>Three years, and what it produces</h2>
+<p>Year 1: codebook, gold standard, WP1 instrument, parser and resolution layer against public fixtures, and the
+  first descriptive comparison on outlet and platform text. Year 2: hub fielded; WP3. Year 3: the corrected
+  comparison, the SP3 handover, thesis. The hub is scheduled from year one and not made contingent, because it is
+  the part of SP1 that cannot be bought in; if donor yield falls short, the feed layer narrows to a smaller
+  validated sample and the hub evaluation stands on the funnel data regardless. <i>To research:</i> a Danish
+  negativity instrument validated separately per source; an equivalence and correction treatment of an automated
+  content-analysis measure; and an evaluation of assisted physical data donation, which I have not found
+  published. <i>To practice:</i> an open codebook, parsing and resolution tooling and a reporting standard another
+  centre can run; outlet-level findings Danish editors can act on; and a negativity estimate whose error is
+  stated, which is the difference between advice on news diets that can be defended and advice that merely sounds
+  careful.</p>
+
+<div class="refs">
+<p>Andersen, K., &amp; Shehata, A. (2025). Preference for positive news. <i>International Journal of Press/Politics</i>.</p>
+<p>Andersen, K., Toff, B., &amp; Ytre-Arne, B. (2024). Reconsidering news avoidance. <i>Journalism Studies</i>, 25(12), 1367&ndash;1384.</p>
+<p>Boukes, M., van de Velde, B., Araujo, T., &amp; Vliegenthart, R. (2020). What's the tone? <i>Communication Methods and Measures</i>, 14(2), 83&ndash;104.</p>
+<p>Chan, C., et al. (2021). Four best practices for measuring news sentiment. <i>Computational Communication Research</i>, 3(1), 1&ndash;27.</p>
+<p>Egami, N., Hinck, M., Stewart, B., &amp; Wei, H. (2023). Using imperfect surrogates for downstream inference. <i>NeurIPS 36</i>.</p>
+<p>Hase, V., Ausloos, J., Boeschoten, L., et al. (2024). Fifteen challenges of data donation. <i>Internet Policy Review</i>, 13(3).</p>
+<p>Hopmann, D. N., de Vreese, C., &amp; Alb&aelig;k, E. (2011). Incumbency bonus in election news coverage. <i>Journal of Communication</i>, 61(2), 264&ndash;282.</p>
+<p>Hopmann, D. N., Vliegenthart, R., de Vreese, C., &amp; Alb&aelig;k, E. (2010). Effects of election news coverage. <i>Political Communication</i>, 27(4), 389&ndash;405.</p>
+<p>Lengauer, G., Esser, F., &amp; Berganza, R. (2012). Negativity in political news. <i>Journalism</i>, 13(2), 179&ndash;202.</p>
+<p>Scharkow, M., &amp; Bachl, M. (2016). How measurement error in content analysis affects linkage analysis. <i>Political Communication</i>, 34(3).</p>
+<p>Skovsgaard, M., &amp; Andersen, K. (2020). Conceptualizing news avoidance. <i>Journalism Studies</i>, 21(4), 459&ndash;476.</p>
+<p>Soroka, S., Young, L., &amp; Balmas, M. (2015). Bad news or mad news? <i>Annals of the AAPSS</i>, 659(1), 108&ndash;121.</p>
+<p>van Atteveldt, W., van der Velden, M., &amp; Boukes, M. (2021). The validity of sentiment analysis. <i>Communication Methods and Measures</i>, 15(2), 121&ndash;140.</p>
+<p>van Dalen, A., de Vreese, C., &amp; Alb&aelig;k, E. (2017). Economic news through the magnifying glass. <i>Journalism Studies</i>, 18(7), 890&ndash;909.</p>
+<p>Widmann, T., &amp; Wich, M. (2023). Creating and comparing dictionary, word embedding and transformer-based models. <i>Political Analysis</i>, 31(4), 626&ndash;641.</p>
+</div>
+
+</body></html>

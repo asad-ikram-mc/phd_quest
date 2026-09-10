@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Motivated application — Asad Ikram</title>
+<style>
+  @page { size: A4; margin: 16mm 17mm 14mm 17mm; }
+  body { font-family: "Times New Roman", Times, serif; font-size: 9.8pt; line-height: 1.38;
+         color: #000; margin: 0; text-align: justify; }
+  .hdr { text-align: left; font-size: 8.6pt; color: #333; margin-bottom: 9pt; }
+  .hdr b { font-size: 11.5pt; color: #000; display: block; margin-bottom: 1pt; }
+  .to { text-align: left; margin-bottom: 7pt; }
+  .re { font-weight: bold; margin-bottom: 8pt; text-align: left; }
+  p { margin: 0 0 5.5pt; }
+  .sig { margin-top: 9pt; text-align: left; }
+  .sig .n { font-weight: bold; }
+  .foot { font-size: 8.2pt; color: #333; margin-top: 4pt; text-align: left; }
+</style></head><body>
+
+<div class="hdr"><b>Asad Ikram</b>
+  Lahore, Pakistan &middot; +44 7482 376417 &middot; asad.ikram53@gmail.com &middot; linkedin.com/in/asad-ikram98</div>
+
+<div class="to">Associate Professor Kim Andersen<br>
+  Centre for Journalism, Department of Political Science and Public Management<br>
+  University of Southern Denmark, Odense</div>
+
+<div class="re">Re: PhD student with a strong computational profile, Navigating Negativity: What is a Healthy News Diet? (SP1)</div>
+
+<p>Dear Associate Professor Andersen,</p>
+
+<p>News avoidance in Denmark has risen faster than in almost any comparable country, and this project asks
+  whether the amount of negativity people meet is why. Answering it means putting three numbers side by side: how
+  negative a news outlet is, how negative a platform is, and how negative one person's feed actually is. I have
+  spent seven years building the systems that produce numbers like those, for governments and for brands, and the
+  single most useful thing I have learned is that three such numbers are almost never on the same scale. That is
+  the problem I would like to spend three years solving, and it is the precondition of SP1's own question.</p>
+
+<p>I hold an MSc in Data Analytics with Distinction from the University of Portsmouth, awarded in December 2025,
+  and a BSc in Computer Science. I am available to relocate to Odense, to start on 1 November 2026, and to hold
+  the position as a full-time commitment with the physical presence at the department that the advert expects.</p>
+
+<p>What draws me to SP1 is a puzzle in the negativity literature that I think measurement is currently hiding.
+  The negativity bias in news is one of the better-established findings in political communication, and yet your
+  preregistered work with Shehata finds a preference for positive news, and Denmark now reports one of the
+  sharpest rises in news avoidance in Europe while remaining a high-trust, high-consumption media system. Those
+  three things do not sit comfortably together. One possible reconciliation is behavioural: people say and choose
+  differently, and avoidance is intentional in some cases and incidental in others, which is the distinction
+  Skovsgaard and you drew. But another possibility is that the quantities being compared are not the same
+  quantity. Negativity is not one thing, and Lengauer, Esser and Berganza separate it into axes that a single
+  score collapses. If an outlet's negativity, a platform's negativity and a person's feed negativity are measured
+  by one instrument that reads those three text types differently, then part of what looks like a difference in
+  the world is a difference in the ruler. What I would want to know at the end of three years is concrete: how
+  much more negative, if at all, is a Danish person's actual feed than the outlets that feed it, and is the answer
+  the same for the tabloid reader and the broadsheet reader. Nobody can currently say, because the measurement
+  needed to say it has not been built.</p>
+
+<p>I did not arrive at this question academically, and one thing runs through all of it: social media data,
+  and the stubborn problem of what a number made from it actually means. I started as a freelance data engineer
+  in 2018 and have delivered more than three hundred projects across four hundred sites for over fifty clients
+  worldwide, nearly all of them variations on the same request, find out what people are saying about something
+  and tell me whether it matters. From 2022 at Dubizzle Labs I led a three-engineer team running over five
+  hundred collectors across fifteen countries in English, Arabic, Urdu and Hindi and redesigned the layered
+  warehouse they fed, while continuing to consult for Fix.com and my own clients. That is where the discomfort
+  started. The same event looked different depending on where it was discussed, forums arguing at length and
+  qualifying themselves while social platforms compressed the same sentiment into something shorter and sharper,
+  and when we put model scores from both side by side the comparison looked authoritative and I could not defend
+  it. I applied to Chevening on the strength of that: the argument that public decisions deserve better evidence
+  about what people think than a communications team's intuition, and that the hard part is not gathering the
+  text but knowing what a number made from it is worth. I was selected from over seventy thousand applicants
+  across a hundred and sixty countries. At Portsmouth I found that the field had names, tools and a literature
+  for the thing I had been circling, and I ran the MSc alongside the work rather than instead of it, consulting
+  for Prefe, then M+C Saatchi Fluency from December 2024, then VendueTech and CXG, and founding ArtemisAI in
+  2025.</p>
+
+<p>That is a measurement problem, and it is the one my own research is about. My MSc dissertation, supervised by
+  Dr Ella Haig, analysed roughly 279,000 posts on UK economic policy across Twitter, Reddit, YouTube and Quora,
+  with a fine-tuned classifier at macro-F1 0.878 and human validation at Cohen's kappa around 0.78, collected
+  under Portsmouth ethics approval TETHIC-2025-111094 and GDPR-compliant procedures. The accuracy was not the
+  finding. The finding was that the same policy event produced structurally different sentiment and emotion
+  profiles on different platforms. Dr Haig and I developed that into a methods manuscript that treats each
+  platform as a survey mode and adapts the psychometric equivalence toolkit, generalizability theory, measurement
+  invariance and differential item functioning, and score linking, to machine-labelled text. In a simulation with
+  known ground truth, an index pooling platform scores at face value reports the wrong sign of the aggregate on
+  roughly a quarter of days. I want to be careful about what is new there: that automated measures lose validity
+  out of domain is well established in this field, and what we add is the survey-mode framing and the linking
+  machinery, with a quantified cost of assuming equivalence. The manuscript is complete but unpublished and not
+  submitted, it is on English-language material, and it has not been reproduced on Danish data. I attach it with a
+  statement of my contribution so it can be assessed as documented work.</p>
+
+<p>The second reason I am applying is that the hub is a collection problem I have solved versions of for seven
+  years. At M+C Saatchi Fluency I run sixty-eight collectors ingesting ten platforms daily into a governed
+  156-column warehouse, with an automated repair layer that diagnoses a broken source, regenerates the extraction
+  logic and tests it against live pages before shipping. Two failure modes decide whether SP1 gets data at all.
+  Download packages change structure without notice, and their folder and key names change with the account's
+  language setting, which is decisive in Denmark where donors' phones will split between Danish and English; the
+  standing defence is golden fixtures per platform and locale, versioned parsers stamped onto every record, and
+  canary donations from project-owned accounts. And donated entries are identifiers and links rather than text, so
+  a negativity classifier cannot read them until every item is resolved back to its content at scale, which Hase
+  and colleagues name as the blocker that makes content analysis of donated feeds unfeasible. Both are engineering
+  problems with measurement consequences: resolution fails for deleted and restricted items, which biases the
+  recovered feed toward what is still live, and that is a survivorship bias correlated with the outcome.</p>
+
+<p>ArtemisAI is where I learned to distrust my own numbers. I founded it and designed its architecture: six
+  fine-tuned encoder classifiers for sentiment, emotion, toxicity, topic, language and intent, trained on a
+  labelling pipeline where a strong model labels a seed set with its reasoning, decision rules are mined from that
+  reasoning for a cheaper model, and low-confidence cases route back for review. On top sit the products clients
+  wanted: predicting underperforming posts, posting windows, drafting, crisis alerts, and an affinity graph where
+  I applied network theory from the literature to see whether it held in production. Then I read our own code and
+  found that the dashboard's accuracy figure was inter-model agreement with no criterion behind it: our two
+  annotation tiers agree on 82.9 per cent of sentiment labels and 74.4 per cent of emotion labels, while the
+  toxicity model reports 96.7 per cent average confidence. I was the person who could have caught that and did
+  not, for two years, because it never occurred to me to ask what the number was against. I have since put a human
+  reference set behind the reporting. But it taught me the thing I would bring here: a tag on a post becomes a
+  share-of-voice number, becomes a slide, becomes a communications strategy, and by the time it is a strategy
+  nobody remembers the first step was a model with an error rate. In this project that chain ends in public advice
+  about how much negative news is healthy, which is a considerably better reason to get the first step right.</p>
+
+<p>On qualifications, my master's is a UK one-year taught MSc of 180 UK credits, conventionally mapped to 90 ECTS,
+  with Distinction, a dissertation mark of 78 and a credit-weighted average of 70.5. It follows a four-year,
+  130-credit-hour BSc in Computer Science, so the combined study load exceeds a three-plus-two structure. I have
+  written to the PhD coordinator for a view on equivalence and will forward the reply; both transcripts are
+  attached so the assessment can rest on documents.</p>
+
+<p>On Danish, I do not speak it and I am not proposing to hand the construct to other people. The codebook is
+  mine to develop with the team, the reliability targets and the adjudication rules are mine to set, and I would
+  work with Danish material from month one through a bilingual protocol: native-speaker coders produce the gold
+  standard, and I sit inside the disagreements with them, because the cases two trained coders split on are where
+  a codebook is actually written. Error analysis, which is most of the instrument work, does not require fluency;
+  it requires being able to see which cases the model loses and asking a native speaker why. I would begin Danish
+  tuition on arrival, and I would expect to be able to read the material unaided well before the coding for WP3
+  begins.</p>
+
+<p>On teaching, I have none in a university setting. I led three-engineer teams at Dubizzle Labs and VendueTech,
+  mentored two junior engineers at Prefe, and I write and maintain web-scraping-guide.com, a free public reference
+  on web data collection. Writing that taught me what I would carry into a classroom: the hard part is not
+  explaining what a method does, it is making visible the judgement behind choosing it, because students inherit
+  the confidence of their instruments unless someone shows them where those instruments fail. I would want to
+  teach exactly that, and I expect to need training in university pedagogy.</p>
+
+<p>On dissemination, this project ends in advice to the public and that is much of its appeal. I would want the
+  work to reach the research community through the four papers set out in my proposal, Danish newsrooms through
+  the outlet-level findings, which are directly actionable for editors, and the public through the same plain
+  writing I already do in a technical field. I would release the codebook, the parsing and resolution tooling and
+  the reporting standard openly, because a hub protocol nobody else can run is not a method.</p>
+
+<p>On what I have not done: I have no publications. I have never run an interventional or interview-based study,
+  never recruited participants face to face, and never been the controller for a consent-capture operation, which
+  is the part of the hub I would be learning rather than importing. I have not worked with panel survey data. My
+  proposal is sized to that, the interview and survey work sits with colleagues who own it, and I would rather
+  learn those parts here, from people who do them properly, than claim I already know them.</p>
+
+<p>I have spent seven years turning what people say online into numbers, and the last two becoming uncomfortable
+  with how easily those numbers travel. I would like to spend the next three finding out what they are worth, on
+  a question where the answer reaches people rather than dashboards.</p>
+
+<div class="sig">Yours sincerely,<br><br>
+  <span class="n">Asad Ikram</span></div>
+<div class="foot">Enclosed: research proposal &middot; curriculum vitae &middot; master's degree certificate and transcript &middot;
+  bachelor's transcript &middot; Ikram and Haig manuscript with co-authorship statement</div>
+
+</body></html>
