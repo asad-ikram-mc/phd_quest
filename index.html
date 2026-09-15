@@ -2487,7 +2487,8 @@ function renderPriorities(){
       else if(days<=30){cls='p-soon';}
       duePill='<span class="prio-pill '+cls+'">'+txt+'</span>';
     } else {
-      duePill='<span class="prio-pill p-soon">no hard date · do it now</span>';
+      const idle = p.tier==='followup' || ['parked','done'].includes(getStatus(p.id));
+      duePill = idle ? '<span class="prio-pill">no hard date</span>' : '<span class="prio-pill p-soon">no hard date · do it now</span>';
     }
     const item=document.createElement('div');
     const isDone = getStatus(p.id)==='done';
