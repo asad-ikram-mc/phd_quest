@@ -250,7 +250,7 @@ details.fold>summary:hover{background:var(--surface2)}
 details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)}
 /* Priority: collapsible rows */
 .prio-top{cursor:pointer}
-.prio-item.collapsed .prio-why,.prio-item.collapsed .prio-req,.prio-item.collapsed .prio-link{display:none}
+.prio-item.collapsed .prio-why,.prio-item.collapsed .prio-req,.prio-item.collapsed .prio-link,.prio-item.collapsed .prio-detail,.prio-item.collapsed .pc-flag{display:none}
 .prio-item.collapsed .prio-body{padding:12px 16px}
 .prio-toggle{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(56,201,201,0.25);padding:6px 12px;border-radius:12px;cursor:pointer}
 .prio-hint{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);margin-top:8px}
@@ -276,21 +276,44 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 .prio-body{flex:1;padding:14px 16px;min-width:0}
 .prio-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .prio-name{font-size:16px;font-weight:500;color:var(--text);line-height:1.4}
-.prio-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex-shrink:0}
+.prio-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex-shrink:1;min-width:0;max-width:100%}
 .prio-pill{font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 10px;border-radius:12px;border:1px solid var(--border2);color:var(--text3);white-space:nowrap}
 .prio-pill.p-due{color:var(--red);background:var(--red-bg);border-color:rgba(240,112,112,0.3)}
 .prio-pill.p-soon{color:var(--amber);background:var(--amber-bg);border-color:rgba(245,200,66,0.3)}
 .prio-pill.p-ok{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(56,201,201,0.3)}
-.prio-pill.p-time{color:var(--text2)}
+.prio-pill.p-time{color:var(--text2);white-space:normal;max-width:100%}
 .prank{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;padding:3px 9px;border-radius:12px;border:1px solid;white-space:nowrap}
 .prank.pr1{color:var(--red);background:var(--red-bg);border-color:rgba(240,112,112,0.35)}
 .prank.pr2{color:var(--amber);background:var(--amber-bg);border-color:rgba(245,200,66,0.35)}
 .prank.pr3{color:var(--text3);border-color:var(--border2)}
 .bpill.prank{font-size:10px;padding:2px 7px}
 .prio-why{font-size:14px;color:var(--text2);line-height:1.6;margin-top:6px}
-.prio-req{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 14px}
-.prio-req li{font-size:13px;color:var(--text2);line-height:1.55;padding-left:16px;position:relative}
-.prio-req li::before{content:'\25A1';position:absolute;left:0;top:0;color:var(--text3);font-size:12px}
+.prio-detail{margin-top:2px}
+.pc-sec{margin-top:13px}
+.pc-sec-h{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:var(--text3);display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.pc-sec-h::after{content:'';flex:1;height:1px;background:var(--border)}
+.pc-flag{display:flex;gap:8px;align-items:flex-start;background:var(--amber-bg);border:1px solid rgba(245,200,66,0.22);border-radius:9px;padding:7px 10px;margin-top:9px;font-size:12.5px;color:var(--amber);line-height:1.45}
+.pc-sum{font-size:14px;color:var(--text2);line-height:1.62;overflow-wrap:anywhere}
+.pc-more{margin-top:7px;background:none;border:none;padding:0;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.05em;color:var(--cyan);text-transform:uppercase}
+.pc-more:hover{color:var(--cyan2)}
+.pc-full{display:none;overflow-wrap:anywhere;font-size:13.5px;color:var(--text2);line-height:1.62;margin-top:7px;padding-left:11px;border-left:2px solid var(--border2)}
+.pc-sec.open .pc-full{display:block}
+.pc-prog{font-size:10px;color:var(--text3);letter-spacing:0.04em;flex-shrink:0}
+.pc-bar{height:3px;border-radius:2px;background:var(--surface3);overflow:hidden;margin-bottom:9px}
+.pc-bar i{display:block;height:100%;width:0;background:var(--green);border-radius:2px;transition:width 0.2s}
+.pc-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
+.pc-i{display:flex;gap:10px;align-items:flex-start;min-width:0;padding:8px 10px;border-radius:9px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;transition:border-color 0.14s,background 0.14s}
+.pc-i:hover{border-color:var(--border2);background:var(--surface3)}
+.pc-box{flex-shrink:0;width:16px;height:16px;margin-top:1px;border-radius:5px;border:1.5px solid var(--text3);display:flex;align-items:center;justify-content:center;font-size:10px;line-height:1;color:transparent;transition:all 0.14s}
+.pc-i:hover .pc-box{border-color:var(--green)}
+.pc-i.on .pc-box{background:var(--green);border-color:var(--green);color:#05080f}
+.pc-i.on .pc-txt{opacity:0.45}
+.pc-i.on .pc-lead{text-decoration:line-through}
+.pc-txt{min-width:0;overflow-wrap:anywhere}
+.pc-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.06em;color:var(--gold2);background:var(--gold-dim);border:1px solid rgba(212,168,83,0.2);border-radius:5px;padding:2px 6px;margin-bottom:4px}
+.pc-lead{display:block;font-size:13px;font-weight:500;color:var(--text);line-height:1.45}
+.pc-rest{display:block;font-size:12.5px;color:var(--text2);line-height:1.5;margin-top:3px}
+.prio-pill.pc-count{font-variant-numeric:tabular-nums}
 .prio-link{display:inline-block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);word-break:break-all}
 .prio-check{width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text3);font-size:18px;border-left:1px solid var(--border);transition:all 0.15s}
 .prio-check:hover{color:var(--green);background:var(--green-bg)}
@@ -597,7 +620,7 @@ footer a:hover{color:var(--gold2)}
     <div class="prio-head">
       <div>
         <div class="prio-title">Priority list — start here</div>
-        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Tick an item off and it moves to Done on the Board tab; state persists in this browser.</div>
+        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Each card opens with what it is, then a checklist of what is needed: tick the steps as you do them and the card keeps your progress. The big tick on the right marks the whole item Done and moves it to the Board tab. All of it persists in this browser.</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
         <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
@@ -2271,8 +2294,8 @@ const PRIORITIES = [
    why:'VERIFIED LIVE 16 SEP on the Leibniz Institute for Knowledge Media careers page, reference 1014-2026. This is the strongest new result in the sweep. The project explicitly joins social media with communicative AI and invites a self-generated doctoral question about AI-generated content, credibility judgements, incidental learning and informational benefits. A 75 per cent E13 TV-L contract runs for three years, starting November 2026 or later. The direct bridge is the ArtemisAI measurement problem: when AI-generated or AI-labelled social content becomes evidence, how stable are credibility and knowledge judgements across platforms and model versions?',
    req:['PREFERRED DEADLINE 30 SEP 2026. The wording says preference will be given to applications received by this date, so treat it as the deadline.','Submit one PDF containing cover letter, CV and certificates, quoting reference 1014-2026, to career@iwm-tuebingen.de. Academic contact is Prof. Sonja Utz. Draft only here; Asad sends all email himself.','Lead with the Portsmouth Distinction, seven years of social-platform data engineering, the six-classifier ArtemisAI pipeline and the switch from human holdout labels to Claude labels as a concrete measurement problem.','Be exact about the gap: the advert prefers psychology, communication or a related field and experience with quantitative empirical studies. Asad has adjacent computational-social-science and production evidence, but no psychology degree, human-subject experiment record or publications.','German is only an asset. Very good English is required with no numeric test threshold stated.'],
    link:'https://iwm-tuebingen.de/en/career/jobs/1014-2026'},
-  {id:'p-ellis-fi', tier:'now', due:[2026,9,21], time:'\u26a0 5 DAYS \u00b7 the next live deadline',
-   name:'\u26a0 CLOSES IN 5 DAYS, AND WITH VIENNA ALREADY IN IT IS THE NEXT LIVE APPLICATION: ELLIS Institute Finland doctoral positions, autumn 2026 call. Deadline 21 Sep 2026 23:59 EEST.',
+  {id:'p-ellis-fi', tier:'now', due:[2026,9,21], time:'\u26a0 CLOSES TODAY 23:59 EEST \u00b7 submission not confirmed here',
+   name:'\u26a0 CLOSES TODAY, 21 SEP: ELLIS Institute Finland doctoral positions, autumn 2026 call. Deadline 21 Sep 2026 23:59 EEST.',
    why:'VERIFIED LIVE 10 Sep, and corroborated in the Aalto Workday requisition R47606. ELLIS Institute Finland launched in 2025 as the second institute in the ELLIS network. Verbatim: "All positions are fully funded and the salaries are based on the Finnish universities\u0027 pay scale." THE TWO FILTERS THAT USUALLY KILL HIM BOTH PASS. The call asks only for "Excellent command of written and spoken English" with no test and no threshold, so the IELTS 6.5 with Writing 6.0 never comes up. And Finnish salaried employment means no fee status. ELLIS is also the network Pierri belongs to, so it is the same world as the PoliMi application.',
    req:['HOW TO APPLY, READ IN FULL 15 SEP: one Workday form at Aalto (requisition R47606, the DOCTORAL link, not the postdoc one R47586). Asad creates the Workday account himself. Closes 21 Sep 2026 23:59 EEST (20:59 UTC, 01:59 Pakistan time on 22 Sep).','DOCUMENTS, all English PDF: (1) cover letter of 1 to 2 pages; (2) CV; (3) MSc AND BSc transcripts; (4) degree certificate of the latest degree; (5) list of publications only if applicable. Plus 2 to 3 senior academic referees typed into the form; at least one must be lecturer level or above, and referees are contacted only if shortlisted.','ALREADY READY: Application Assets/Asad_Ikram_Certificates_and_Transcripts.pdf (MSc certificate, Portsmouth transcript, BSc degree, BSc transcript, IELTS). Referees Dr Haig (Associate Professor) and Dr Ahmad (Senior Lecturer) both qualify. CV: adapt the SDU two-page CV to lead with ML (six fine-tuned classifiers, labelling pipeline, BERT macro-F1 0.878).','TO WRITE: the cover letter (FAQ Q7): research interests at the Institute and how background aligns, WHICH SUPERVISORS, and future research direction. This is the only new document.','SUPERVISORS, one application can name several (FAQ Q11) and matching is done in review. BEST FITS: ERIC MALMI (Aalto adjunct professor, Google DeepMind Gemini post-training lead; LLMs and computational social science, interdisciplinary applications in social sciences). FILIP GINTER (Turku, NLP, large web corpora and web-text register classification). CORINNA COUPETTE (Aalto, networks, responsible and data-centric AI, measuring complex systems). Worth a line: SHAOXIONG JI (multilingual LLMs), INDRE ZLIOBAITE (concept drift, which is the instrument-drift argument).','ASSESSMENT (FAQ Q12): academic merits AND other relevant experience, explicitly including industry work and software development. That favours him. Eligibility review end of September, supervisor review and interviews end September to end October, finalised November. Dozens of positions. Four-year contracts, start date negotiable, so no 1 Nov clash with PoliMi or SDU.','RISK: requirements say a master in computer science, statistics, electrical engineering, mathematics or related field and strong performance in relevant studies. MSc Distinction is fine; BSc CGPA 2.75 is the weak point, so the letter should lead with the MSc and production ML.','NO ENGLISH TEST THRESHOLD. Excellent written and spoken English only. No Finnish required.'],
    link:'https://www.ellisinstitute.fi/postdoc-and-phd-recruit-autumn-2026'},
@@ -2530,6 +2553,78 @@ function renderInProgress(){
   if(!items.length){el.innerHTML='';return;}
   el.innerHTML=items.map(p=>'<div class="aip-row"><span class="st-pill st-progress">in progress</span><span>'+shortName(p.name)+'</span>'+prioPill(p,'bpill')+duePillFor(p,'bpill')+'</div>').join('');
 }
+/* ---- card presentation: short title, summary, tickable requirements ---- */
+function escHtml(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function loadReqs(){try{return JSON.parse(localStorage.getItem('prio-reqs')||'{}');}catch(e){return {};}}
+function saveReqs(m){try{localStorage.setItem('prio-reqs',JSON.stringify(m));}catch(e){}}
+function reqHash(t){var h=0;for(var i=0;i<t.length;i++){h=(h*31+t.charCodeAt(i))|0;}return (h>>>0).toString(36);}
+/* SENT: a period that really ends a sentence, not an abbreviation like A.I. */
+var SENT_END=/(?:[^A-Z\s]|[A-Z]{2})\.(?=\s|$)/;
+function sentCut(t){var m=SENT_END.exec(t);return m?m.index+m[0].length:-1;}
+/* split one requirement into an optional label chip, a short lead and the rest */
+function splitLead(t){
+  t=String(t).trim();
+  var label='';
+  var lm=t.match(/^([A-Z0-9✅⚠][A-Z0-9 ,\/()'&+.✅⚠-]{2,32}?)[:.](?=\s)\s*/);
+  if(lm&&/[A-Z]{3}/.test(lm[1])){label=lm[1].replace(/[.,\s]+$/,'');t=t.slice(lm[0].length).trim();}
+  if(!t) return ['',label,''];
+  var c=sentCut(t);
+  if(c>12&&c<=150) return [label,t.slice(0,c).trim(),t.slice(c).trim()];
+  if(t.length<=140) return [label,t,''];
+  var col=t.indexOf(': ');
+  if(col>=15&&col<=70) return [label,t.slice(0,col).trim(),t.slice(col+1).trim()];
+  var cut=-1;
+  var cm=Math.max(t.lastIndexOf(', ',170),t.lastIndexOf('; ',170));
+  if(cm>=60) cut=cm+1; else {var sp=t.lastIndexOf(' ',170); if(sp>=60) cut=sp;}
+  if(cut<0||t.length-cut<25) return [label,t,''];
+  return [label,t.slice(0,cut).replace(/[,;:\s]+$/,''),t.slice(cut).trim()];
+}
+/* first n sentences of the background, rest returned separately */
+function firstSentences(t,n){
+  var rest=String(t).trim(),out=[];
+  for(var i=0;i<n;i++){
+    var c=sentCut(rest);
+    if(c<0){if(rest)out.push(rest);rest='';break;}
+    out.push(rest.slice(0,c).trim()); rest=rest.slice(c).trim();
+    if(out.join(' ').length>150) break;
+  }
+  return [out.join(' '),rest];
+}
+/* strip shouty banners off the title and keep them as a flag line */
+function cardParts(p){
+  var t=String(p.name).trim(),flag='';
+  var lead=/^[\s⭐⚠✅•]+/;
+  t=t.replace(lead,'');
+  var nm=t.match(/^(NEW|NEWLY DISCOVERED|UPDATED)\b[^:]{0,40}:\s*/i);
+  if(nm) t=t.slice(nm[0].length).replace(lead,'');
+  for(var i=0;i<2;i++){
+    var c=t.indexOf(': ');
+    if(c<8||c>110) break;
+    var head=t.slice(0,c),letters=head.replace(/[^A-Za-z]/g,''),caps=head.replace(/[^A-Z]/g,'');
+    if(letters.length>3&&caps.length/letters.length>0.7){flag=flag?flag+' '+head:head;t=t.slice(c+2).replace(lead,'');}
+    else break;
+  }
+  var cut=-1;
+  var dm=t.search(/\s[—–-]\s/); if(dm>18) cut=dm;
+  var dt=sentCut(t); if(dt>18&&(cut<0||dt<cut)) cut=dt-1;
+  if(cut>0) t=t.slice(0,cut);
+  t=t.replace(/[,:;.\s]+$/,'');
+  if(t.length>105) t=t.slice(0,105).replace(/\s\S*$/,'')+'…';
+  return [t,flag];
+}
+function reqDone(p){var set=loadReqs()[p.id]||{},n=0;p.req.forEach(function(r){if(set[reqHash(r)])n++;});return n;}
+function toggleReq(id,hash,el){
+  var m=loadReqs(); if(!m[id]) m[id]={};
+  if(m[id][hash]) delete m[id][hash]; else m[id][hash]=1;
+  if(!Object.keys(m[id]).length) delete m[id];
+  saveReqs(m);
+  el.classList.toggle('on');
+  var body=el.closest('.prio-body');
+  var total=body.querySelectorAll('.pc-i').length,done=body.querySelectorAll('.pc-i.on').length;
+  var bar=body.querySelector('.pc-bar i'); if(bar) bar.style.width=(total?Math.round(done/total*100):0)+'%';
+  var prog=body.querySelector('.pc-prog'); if(prog) prog.textContent=done+' of '+total+' done';
+  var pill=body.querySelector('.pc-count'); if(pill) pill.textContent=done+'/'+total;
+}
 function renderPriorities(){
   const el=document.getElementById('prio-list'); if(!el) return;
   const now=new Date(); now.setHours(0,0,0,0);
@@ -2560,15 +2655,34 @@ function renderPriorities(){
     const isDone = getStatus(p.id)==='done';
     const startOpen = (p.tier==='now') && !isDone;
     item.className='prio-item'+(isDone?' done':'')+(startOpen?'':' collapsed');
+    const parts=cardParts(p), ttl=parts[0], flag=parts[1];
+    const sum=firstSentences(p.why,2);
+    const reqSet=loadReqs()[p.id]||{};
+    const nReq=p.req.length, nDone=reqDone(p);
+    const reqHtml=p.req.map(r=>{
+      const h=reqHash(r), sp=splitLead(r);
+      return '<li class="pc-i'+(reqSet[h]?' on':'')+'" onclick="toggleReq(\''+p.id+'\',\''+h+'\',this)">'
+        +'<span class="pc-box">&#10003;</span><span class="pc-txt">'
+        +(sp[0]?'<span class="pc-tag">'+escHtml(sp[0])+'</span>':'')
+        +'<span class="pc-lead">'+escHtml(sp[1])+'</span>'
+        +(sp[2]?'<span class="pc-rest">'+escHtml(sp[2])+'</span>':'')+'</span></li>';
+    }).join('');
     item.innerHTML=
       '<div class="prio-rank r-'+p.tier+'">'+(idx+1)+'</div>'
       +'<div class="prio-body">'
-      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+p.name+'</div><div class="prio-meta">'+(getStatus(p.id)!=='todo'?'<span class="st-pill st-'+getStatus(p.id)+'">'+ST_LABEL[getStatus(p.id)]+'</span>':'')+prioPill(p,'prio-pill')+duePill+'<span class="prio-pill p-time">'+p.time+'</span></div></div>'
-      +  '<div class="prio-why">'+p.why+'</div>'
-      +  '<ul class="prio-req">'+p.req.map(r=>'<li>'+r+'</li>').join('')+'</ul>'
-      +  (p.link?'<a class="prio-link" href="'+p.link+'" target="_blank">Open: '+p.link.replace(/^https?:\/\//,'').split('/')[0]+' &#8599;</a>':'')
+      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+escHtml(ttl)+'</div><div class="prio-meta">'+(getStatus(p.id)!=='todo'?'<span class="st-pill st-'+getStatus(p.id)+'">'+ST_LABEL[getStatus(p.id)]+'</span>':'')+prioPill(p,'prio-pill')+duePill+'<span class="prio-pill p-time">'+escHtml(p.time)+'</span>'+(nReq?'<span class="prio-pill pc-count" title="Steps ticked off">'+nDone+'/'+nReq+'</span>':'')+'</div></div>'
+      +  (flag?'<div class="pc-flag"><span>&#9888;</span><span>'+escHtml(flag)+'</span></div>':'')
+      +  '<div class="prio-detail">'
+      +    '<div class="pc-sec"><div class="pc-sec-h">What this is</div><div class="pc-sum">'+escHtml(sum[0])+'</div>'
+      +      (sum[1]?'<button class="pc-more" onclick="this.closest(\'.pc-sec\').classList.toggle(\'open\')">Full background</button><div class="pc-full">'+escHtml(sum[1])+'</div>':'')
+      +    '</div>'
+      +    (nReq?'<div class="pc-sec"><div class="pc-sec-h">What is needed <span class="pc-prog">'+nDone+' of '+nReq+' done</span></div>'
+      +      '<div class="pc-bar"><i style="width:'+Math.round(nDone/nReq*100)+'%"></i></div>'
+      +      '<ul class="pc-list">'+reqHtml+'</ul></div>':'')
+      +    (p.link?'<a class="prio-link" href="'+escHtml(p.link)+'" target="_blank">Open: '+escHtml(p.link.replace(/^https?:\/\//,'').split('/')[0])+' &#8599;</a>':'')
+      +  '</div>'
       +'</div>'
-      +'<div class="prio-check'+(isDone?' on':'')+'" title="Mark done \u2014 moves the card to Done on the Board" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
+      +'<div class="prio-check'+(isDone?' on':'')+'" title="Mark done, moves the card to Done on the Board" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
     el.appendChild(item);
   };
   actives.forEach(renderOne);
