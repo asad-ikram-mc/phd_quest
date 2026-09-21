@@ -250,7 +250,7 @@ details.fold>summary:hover{background:var(--surface2)}
 details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)}
 /* Priority: collapsible rows */
 .prio-top{cursor:pointer}
-.prio-item.collapsed .prio-why,.prio-item.collapsed .prio-req,.prio-item.collapsed .prio-link,.prio-item.collapsed .prio-detail,.prio-item.collapsed .pc-flag{display:none}
+.prio-item.collapsed .prio-why,.prio-item.collapsed .prio-req,.prio-item.collapsed .prio-link,.prio-item.collapsed .prio-detail{display:none}
 .prio-item.collapsed .prio-body{padding:12px 16px}
 .prio-toggle{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(56,201,201,0.25);padding:6px 12px;border-radius:12px;cursor:pointer}
 .prio-hint{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);margin-top:8px}
@@ -309,10 +309,23 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 .pc-i.on .pc-box{background:var(--green);border-color:var(--green);color:#05080f}
 .pc-i.on .pc-txt{opacity:0.45}
 .pc-i.on .pc-lead{text-decoration:line-through}
-.pc-txt{min-width:0;overflow-wrap:anywhere}
+.pc-txt{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.pc-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-top:11px}
+.pc-fact{background:var(--surface2);padding:8px 11px;min-width:0}
+.pc-fact i{display:block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;color:var(--text3);text-transform:uppercase;margin-bottom:3px;font-style:normal}
+.pc-fact b{display:block;font-size:12.5px;font-weight:500;color:var(--text);line-height:1.35;overflow-wrap:anywhere}
+.pc-fact.f-due b{color:var(--red)}
+.pc-fact.f-soon b{color:var(--amber)}
+.pc-fact.f-ok b{color:var(--cyan)}
+.pc-note{font-size:11.5px;color:var(--text3);line-height:1.5;margin-top:8px;overflow-wrap:anywhere}
+.pc-exp{flex-shrink:0;width:22px;height:22px;margin-top:-1px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text3);cursor:pointer;font-size:9px;line-height:1;display:flex;align-items:center;justify-content:center;transition:all 0.14s}
+.pc-exp:hover{color:var(--text);border-color:var(--border2);background:var(--surface3)}
+.pc-i.open .pc-exp{transform:rotate(180deg);color:var(--text2)}
+.pc-i .pc-rest{display:none}
+.pc-i.open .pc-rest{display:block}
 .pc-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.06em;color:var(--gold2);background:var(--gold-dim);border:1px solid rgba(212,168,83,0.2);border-radius:5px;padding:2px 6px;margin-bottom:4px}
 .pc-lead{display:block;font-size:13px;font-weight:500;color:var(--text);line-height:1.45}
-.pc-rest{display:block;font-size:12.5px;color:var(--text2);line-height:1.5;margin-top:3px}
+.pc-rest{font-size:12.5px;color:var(--text2);line-height:1.55;margin-top:6px;padding-top:6px;border-top:1px dashed var(--border)}
 .prio-pill.pc-count{font-variant-numeric:tabular-nums}
 .prio-link{display:inline-block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);word-break:break-all}
 .prio-check{width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text3);font-size:18px;border-left:1px solid var(--border);transition:all 0.15s}
@@ -620,7 +633,7 @@ footer a:hover{color:var(--gold2)}
     <div class="prio-head">
       <div>
         <div class="prio-title">Priority list — start here</div>
-        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Each card opens with what it is, then a checklist of what is needed: tick the steps as you do them and the card keeps your progress. The big tick on the right marks the whole item Done and moves it to the Board tab. All of it persists in this browser.</div>
+        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Each card leads with a facts strip, then what it is, then a checklist: tick a step as you do it and the card keeps your progress. Use the small arrow on a step to read its detail, and the big tick on the right to mark the whole item Done. All of it persists in this browser.</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
         <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
@@ -2327,7 +2340,7 @@ const PRIORITIES = [
   {id:'p-surrey-cdt', tier:'later', due:null, time:'opens Dec 2026 · NEW 21 Sep · UK, fees covered, IELTS fits exactly',
    name:'NEW 21 Sep: Surrey UKRI Centre for Doctoral Training (offers from Surrey or Royal Holloway), next recruitment round opens December 2026. Dates still TBC. P2.',
    why:'VERIFIED LIVE 21 SEP on the Surrey CDT page: the next round opens December 2026 and every date is TBC. International applicants get the UKRI stipend (GBP 21,000 in 2026/27) plus a GBP 4,000 enhancement, and all fees are covered. Entry accepts a 2:1 or a 2:2 plus a strong master\u0027s with distinction, which is the Portsmouth profile. English is IELTS 6.5 overall with 6.0 in each category, and his 7.0 / 6.5 / 6.0 / 7.0 passes exactly. This is the best eligibility match found in the UK sweep. The centre topic label (AI for digital media inclusion) came from a search snippet, so confirm the theme on the page.',
-   req:['Nothing to submit yet. Re-check the page in early December for the opening date and deadline.','Application is four stages: online forms with a 2-page CV and an 800-word research proposal; a recruitment workshop with group tasks and a panel interview (online option); CDT pre-selection; then formal offers.','Start thinking about the 800-word proposal in October: measurement validity of ML annotators for social and digital media.','English margin is zero on Writing (6.0). WATCH: the IELTS certificate is dated 28 Mar 2024, and most UK and US programmes only accept scores under two years old, so it has probably lapsed. Ask each programme whether the English-medium MSc waives the test or whether a retake is needed.'],
+   req:['Nothing to submit yet. Re-check the page in early December for the opening date and deadline.','Application is four stages: online forms with a 2-page CV and an 800-word research proposal; a recruitment workshop with group tasks and a panel interview (online option); CDT pre-selection; then formal offers.','Start thinking about the 800-word proposal in October: measurement validity of ML annotators for social and digital media.','ENGLISH: the stated rule is 6.5 with 6.0 in each band, which his scores meet exactly. Ask whether the English-taught Portsmouth MSc waives the test altogether before booking anything.'],
    link:'https://www.surrey.ac.uk/artificial-intelligence/cdt'},
   {id:'p-umd-info', tier:'month', due:[2026,12,1], time:'about 1 day · NEW 21 Sep · US, funding guaranteed',
    name:'NEW 21 Sep: University of Maryland College of Information, PhD in Information Studies, Fall 2027. Deadline 1 Dec 2026. P2.',
@@ -2344,11 +2357,11 @@ const PRIORITIES = [
    why:'VERIFIED LIVE 21 SEP on the SDIS admissions page: deadline 17 Nov 2026; TOEFL, IELTS or Duolingo required from international applicants (minimums sit on the Graduate School site); fee waivers exist for ten applicant groups; review late Nov to Dec, interviews early January, decisions late Jan to early Feb. No GRE requirement is stated for the PhD. Funding is NOT stated on the page, which is the reason this stays P3 until confirmed.',
    req:['DEADLINE 17 NOV 2026.','Confirm funding for admitted PhD students and the minimum English scores on the Graduate School page before writing.','Check whether Asad falls in any of the ten fee-waiver groups.'],
    link:'https://sdis.unc.edu/academics/graduate-admissions/'},
-  {id:'p-ielts', tier:'now', due:null, time:'book it this week · NEW 21 Sep · this gates almost everything',
-   name:'Retake the IELTS certificate. The 28 Mar 2024 certificate is past the two-year validity that most universities apply, so it has probably expired and it gates almost every application here. P1.',
-   why:'FLAGGED 21 SEP by the second sweep and checked against the dates. IELTS Academic results are normally accepted for two years, and his certificate is dated 28 March 2024, so it lapsed around March 2026. Every application on this board that asks for English evidence is affected, and a lapsed certificate is the kind of thing that gets an application rejected on admin grounds rather than merit. A retake is also the single cheapest upgrade available: Writing 6.0 is what blocks Oxford (Higher level), Cornell, Berkeley, Michigan, Northeastern and Georgia Tech, and pushing Writing to 7.0 reopens that whole tier.',
-   req:['CHECK FIRST, BEFORE BOOKING: confirm with two or three target universities whether they accept a degree taught in English instead of a test. Aalto, Bristol, UMD and Surrey all need asking; IMPRS-IS already says prior study in English counts.','BOOK THE TEST if any target needs a live certificate. Aim for Writing 7.0 and overall 7.0 to clear the Oxford / Cornell / Berkeley tier, not just the 6.5 minimum.','WHERE IT DOES NOT MATTER: ELLIS Finland sets no English test requirement, MPI-SWS and CISPA publish no threshold, and IMPRS-IS accepts the UK MSc as evidence.','WHERE THE CURRENT SCORES ALREADY PASS, if the certificate is still valid or retaken at the same level: Surrey CDT (6.5 with 6.0 each band) and UBC (6.5 with 6.0 each component).','Do not let this sit: test dates book out, and results take about 13 days.'],
-   link:'https://ielts.org'},
+  {id:'p-ielts', tier:'later', due:null, time:'one check per application \u00b7 CORRECTED 21 Sep \u00b7 the MSc waives it in most places',
+   name:'English evidence: the Portsmouth MSc waives the test in most places. Check per programme instead of assuming a certificate is needed. P3.',
+   why:'CORRECTED 21 SEP after Asad pointed out that his MSc was taught in English, which is right and changes this row. The earlier version called a lapsed IELTS a prerequisite that gated almost every application. It is not. His MSc is a UK degree taught and assessed in English and awarded 8 Dec 2025, which is recent, and most universities accept a degree taught in English as the evidence and waive the test outright. So the Mar 2024 certificate being past its two-year validity only matters at the minority of places that insist on a live test regardless. THE REAL ISSUE IS NARROWER AND WORTH KEEPING: where a test IS demanded, his Writing 6.0 is below the 7.0 band that the highest-bar programmes set. So a retake is a targeted decision tied to specific targets, not a blanket prerequisite.',
+   req:['DEFAULT ASSUMPTION IS NOW THE OPPOSITE OF THE OLD ONE: assume the English-taught MSc is acceptable evidence, and only chase a test when a specific programme says otherwise in writing.','ALREADY CONFIRMED, NO TEST NEEDED: IMPRS-IS accepts other evidence of English proficiency such as having studied in an English-speaking environment or written a thesis in English. ELLIS Institute Finland sets no English test requirement at all. MPI-SWS, CISPA and KTH publish no numeric threshold, and KTH asks only for English equivalent to B2.','WHERE A LIVE TEST IS EXPLICITLY DEMANDED: BI Norwegian Business School states TOEFL or IELTS is required. Treat that as the exception rather than the rule and check it per application.','THE ONE REASON TO RETAKE, and it is about the score not the expiry: Oxford asks for its Higher level and Cornell, Berkeley, Michigan, Northeastern and Georgia Tech sit at or above 7.0. His Writing 6.0 fails those even with a valid certificate. Retake ONLY if he decides to pursue that tier, and then aim for Writing 7.0.','WHEN ASKING, ASK PRECISELY: not "do you accept IELTS" but "my master was taught and assessed in English at a UK university and awarded in December 2025, does that satisfy your English requirement". Put it in writing to the admissions office. Draft only here; Asad sends it himself.','Oxford was already being approached on this basis: the board records him relying on the MSc waiver there, decided at offer stage.'],
+   link:'https://www.gov.uk/english-language'},
   {id:'p-uva-doubt', tier:'month', due:[2026,10,16], time:'read the profile first · NEW 21 Sep, found on LinkedIn · degree rule is the problem',
    name:'NEW 21 Sep: UvA ASCoR, two PhD posts, "Agents of Doubt: synthetic content and adolescents\u0027 knowledge formation" (Peter + van der Meer). Closes 16 Oct 2026. P3 on eligibility.',
    why:'VERIFIED LIVE 21 SEP on werkenbij.uva.nl, vacancy 15503, after the LinkedIn ad turned up. Four-year salaried Dutch PhD, NWO Open Competition L grant, two positions, preferred start 1 January 2027, interviews end of October or early November. The topic is genuinely close to his interests: how AI-generated content drives epistemic uncertainty, distrust in academia and media, and a collapse of shared norms of knowledge. BUT THE PERSON SPEC IS THE PROBLEM. It asks for a research master\u0027s in Communication Science or another social science (Political Science, Sociology, Social Psychology), and for experience with panel surveys, lab experiments, focus groups and longitudinal analysis. His MSc is Data Analytics and he has no experiment or focus-group record. This is the same mismatch that produced the Utrecht rejection, and it is why this is P3 rather than P1.',
@@ -2362,7 +2375,7 @@ const PRIORITIES = [
   {id:'p-ubc-cs', tier:'month', due:[2026,12,15], time:'about 1 day · NEW 21 Sep · the English rule fits him exactly',
    name:'NEW 21 Sep: University of British Columbia, PhD in Computer Science, September 2027 start. Deadline 15 Dec 2026. P2.',
    why:'VERIFIED LIVE 21 SEP. UBC Graduate Studies sets the English minimum as "a minimum overall band score of 6.5 is required with a minimum score of 6.0 in each component", which his 7.0 / 6.5 / 6.0 / 7.0 profile clears exactly, and it is the only place in either sweep where that is true rather than borderline. UBC CS research-track PhDs are fully funded with guaranteed support and substantial tuition awards, and the portal opened 15 Sep. The real risk is the admit pool: UBC CS screens hard on research output, and he has no publications yet.',
-   req:['DEADLINE 15 DEC 2026 for September 2027 start.','CONFIRM the CS department does not set a higher English bar than the university minimum of 6.5 overall with 6.0 in each component. Departments are allowed to.','The IELTS certificate still has to be valid, so this depends on the retake. See the IELTS row.','Publications are the gap. If the Ikram and Haig manuscript is on arXiv by December it changes this application more than any other on the board.','Canada is worth the slot: funding is guaranteed rather than competitive, and there is no fee gap of the kind that killed Royal Holloway.'],
+   req:['DEADLINE 15 DEC 2026 for September 2027 start.','CONFIRM the CS department does not set a higher English bar than the university minimum of 6.5 overall with 6.0 in each component. Departments are allowed to.','ENGLISH: UBC sets 6.5 overall with 6.0 per component, which his scores meet, but ask first whether the English-taught Portsmouth MSc waives the test entirely. See the English evidence row.','Publications are the gap. If the Ikram and Haig manuscript is on arXiv by December it changes this application more than any other on the board.','Canada is worth the slot: funding is guaranteed rather than competitive, and there is no fee gap of the kind that killed Royal Holloway.'],
    link:'https://www.cs.ubc.ca/students/grad/admissions'},
   {id:'p-mpi-sws', tier:'month', due:[2026,12,31], time:'about 1 day · NEW 21 Sep · rolling, and the closest group on the board',
    name:'NEW 21 Sep: MPI-SWS Doctoral Program (Saarbruecken and Kaiserslautern), rolling. Next decision round 31 Dec 2026. P2, arguably the best topical fit found.',
@@ -2537,7 +2550,7 @@ const TIER_RANK={now:0,week:1,month:2,followup:3,later:4};
 const PRIO_RANK={
   'p-ellis-fi':1,'p-iwm-everyday-media':1,'p-uva-aifeels':1,'p-csh':1,'p-commonwealth':1,'p-mbzuai':1,'p-edinburgh':1,'p-cha':1,'p-paper':1,
   'p-vu':1,'p-sdu':1,'p-polimi':1,'p-ella':1,
-  'p-ielts':1,'p-kth-feminist':1,'p-ects':3,'p-ku-cultural':2,'p-inria-claims':2,'p-lmu-ai':2,'p-leads-eu2':3,'p-ntnu-search':2,'p-aau-secure-llm':2,'p-mpi-sws':2,'p-imprs-is':2,'p-ubc-cs':2,'p-sedarc':2,'p-uva-doubt':3,'p-bristol-cdt':2,'p-surrey-cdt':2,'p-umd-info':2,'p-cmu-lti':3,'p-unc-ils':3,'p-sweep-21sep':3,'p-epfl-edic':2,'p-oii':2,'p-vienna-rai':2,'p-rit':2,'p-casas':2,'p-saarland':2,
+  'p-ielts':3,'p-kth-feminist':1,'p-ects':3,'p-ku-cultural':2,'p-inria-claims':2,'p-lmu-ai':2,'p-leads-eu2':3,'p-ntnu-search':2,'p-aau-secure-llm':2,'p-mpi-sws':2,'p-imprs-is':2,'p-ubc-cs':2,'p-sedarc':2,'p-uva-doubt':3,'p-bristol-cdt':2,'p-surrey-cdt':2,'p-umd-info':2,'p-cmu-lti':3,'p-unc-ils':3,'p-sweep-21sep':3,'p-epfl-edic':2,'p-oii':2,'p-vienna-rai':2,'p-rit':2,'p-casas':2,'p-saarland':2,
   'p-stockholm-socrisp':3,'p-sweep-oct-dec':3,'p-us-block':3,'p-audit':3,'p-emails':3,'p-manual-sweep':3,'p-rejected-log':3,
   'p-outbox':3,'p-aarhus':3,'p-agder':3,'p-hasselt':3,'p-utrecht':3,'p-nelimarkka':3
 };
@@ -2691,6 +2704,7 @@ function cardParts(p){
   return [t,flag];
 }
 function reqDone(p){var set=loadReqs()[p.id]||{},n=0;p.req.forEach(function(r){if(set[reqHash(r)])n++;});return n;}
+function toggleReqDetail(e,el){e.stopPropagation();el.closest('.pc-i').classList.toggle('open');}
 function toggleReq(id,hash,el){
   var m=loadReqs(); if(!m[id]) m[id]={};
   if(m[id][hash]) delete m[id][hash]; else m[id][hash]=1;
@@ -2743,13 +2757,33 @@ function renderPriorities(){
         +'<span class="pc-box">&#10003;</span><span class="pc-txt">'
         +(sp[0]?'<span class="pc-tag">'+escHtml(sp[0])+'</span>':'')
         +'<span class="pc-lead">'+escHtml(sp[1])+'</span>'
-        +(sp[2]?'<span class="pc-rest">'+escHtml(sp[2])+'</span>':'')+'</span></li>';
+        +(sp[2]?'<span class="pc-rest">'+escHtml(sp[2])+'</span>':'')+'</span>'
+        +(sp[2]?'<button class="pc-exp" title="Show the detail" onclick="toggleReqDetail(event,this)">&#9660;</button>':'')
+        +'</li>';
     }).join('');
+    const tsegs=String(p.time||'').split('\u00b7').map(x=>x.trim()).filter(Boolean);
+    const effort=tsegs.shift()||'', tnote=tsegs.join(' \u00b7 ');
+    let dueTxt='No fixed date', dueCls='';
+    if(p.due){
+      const dd=new Date(p.due[0],p.due[1]-1,p.due[2]);
+      const dys=Math.round((dd-now)/86400000);
+      dueTxt=dd.getDate()+' '+MONTHS_SHORT[dd.getMonth()]+(dd.getFullYear()!==now.getFullYear()?' '+dd.getFullYear():'');
+      if(dys<0){dueTxt+=' \u00b7 passed';dueCls='f-due';}
+      else if(dys===0){dueTxt+=' \u00b7 today';dueCls='f-due';}
+      else if(dys<=10){dueTxt+=' \u00b7 '+dys+'d left';dueCls='f-due';}
+      else {dueTxt+=' \u00b7 '+dys+'d';dueCls=dys<=30?'f-soon':'f-ok';}
+    }
+    const facts=[['Deadline',dueTxt,dueCls]];
+    if(effort) facts.push(['Effort',effort,'']);
+    if(getStatus(p.id)!=='todo') facts.push(['Status',ST_LABEL[getStatus(p.id)],'']);
+    if(nReq) facts.push(['Steps done',nDone+' of '+nReq,'']);
     item.innerHTML=
       '<div class="prio-rank r-'+p.tier+'">'+(idx+1)+'</div>'
       +'<div class="prio-body">'
-      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+escHtml(ttl)+'</div><div class="prio-meta">'+(getStatus(p.id)!=='todo'?'<span class="st-pill st-'+getStatus(p.id)+'">'+ST_LABEL[getStatus(p.id)]+'</span>':'')+prioPill(p,'prio-pill')+duePill+'<span class="prio-pill p-time">'+escHtml(p.time)+'</span>'+(nReq?'<span class="prio-pill pc-count" title="Steps ticked off">'+nDone+'/'+nReq+'</span>':'')+'</div></div>'
+      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+escHtml(ttl)+'</div><div class="prio-meta">'+(getStatus(p.id)!=='todo'?'<span class="st-pill st-'+getStatus(p.id)+'">'+ST_LABEL[getStatus(p.id)]+'</span>':'')+prioPill(p,'prio-pill')+duePill+(nReq?'<span class="prio-pill pc-count" title="Steps ticked off">'+nDone+'/'+nReq+'</span>':'')+'</div></div>'
       +  (flag?'<div class="pc-flag"><span>&#9888;</span><span>'+escHtml(flag)+'</span></div>':'')
+      +  '<div class="pc-facts">'+facts.map(f=>'<div class="pc-fact '+f[2]+'"><i>'+f[0]+'</i><b>'+escHtml(f[1])+'</b></div>').join('')+'</div>'
+      +  (tnote?'<div class="pc-note">'+escHtml(tnote)+'</div>':'')
       +  '<div class="prio-detail">'
       +    '<div class="pc-sec"><div class="pc-sec-h">What this is</div><div class="pc-sum">'+escHtml(sum[0])+'</div>'
       +      (sum[1]?'<button class="pc-more" onclick="this.closest(\'.pc-sec\').classList.toggle(\'open\')">Full background</button><div class="pc-full">'+escHtml(sum[1])+'</div>':'')
