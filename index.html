@@ -272,6 +272,19 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 .prio-item.done .prio-name{text-decoration:line-through}
 .prio-rank{width:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--gold);border-right:1px solid var(--border)}
 .prio-rank.r-now{background:var(--red-bg);color:var(--red)} .prio-rank.r-week{background:var(--amber-bg);color:var(--amber)} .prio-rank.r-month{background:var(--cyan-dim);color:var(--cyan)} .prio-rank.r-later{background:var(--purple-bg);color:var(--purple)} .prio-rank.r-followup{background:var(--green-bg);color:var(--green)}
+.prio-empty{font-size:14px;color:var(--text3);padding:26px;text-align:center;border:1px dashed var(--border2);border-radius:12px}
+.prio-filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
+.pf-btn{font-family:'JetBrains Mono',monospace;font-size:12px;padding:7px 14px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:7px}
+.pf-btn:hover{color:var(--text);border-color:rgba(120,150,220,0.45)}
+.pf-btn.on{background:var(--surface2);color:var(--text);border-color:rgba(56,201,201,0.4)}
+.pf-btn .pf-n{background:rgba(120,150,220,0.12);color:var(--text3);border-radius:9px;padding:1px 7px;font-size:11px}
+.pf-btn.on .pf-n{background:rgba(56,201,201,0.16);color:var(--cyan)}
+.pf-btn.on.pf-todo{border-color:rgba(245,200,66,0.45)}
+.pf-btn.on.pf-progress{border-color:rgba(91,168,255,0.45)}
+.pf-btn.on.pf-done{border-color:rgba(61,214,140,0.45)}
+.pf-reset{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);background:none;border:none;cursor:pointer;letter-spacing:.04em}
+.pf-reset:hover{color:var(--red)}
+@media(max-width:640px){.pf-reset{margin-left:0}}
 .prio-sec{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(61,214,140,0.25)}
 .prio-body{flex:1;padding:14px 16px;min-width:0}
 .prio-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
@@ -601,7 +614,6 @@ footer a:hover{color:var(--gold2)}
     </div>
     <nav class="tab-bar">
       <button class="tab-btn active" onclick="switchTab('overview',this)"><span class="tab-ico">◈</span>Now</button>
-      <button class="tab-btn" onclick="switchTab('board',this)"><span class="tab-ico">▤</span>Board</button>
       <button class="tab-btn" onclick="switchTab('outreach',this)"><span class="tab-ico">◉</span>Outreach</button>
       <button class="tab-btn" onclick="switchTab('active',this)"><span class="tab-ico">▣</span>Active<span class="tab-label-long">&nbsp;app</span></button>
       <button class="tab-btn" onclick="switchTab('papers',this)"><span class="tab-ico">◇</span>Papers<span class="tab-label-long">&nbsp;&amp; Docs</span></button>
@@ -633,13 +645,14 @@ footer a:hover{color:var(--gold2)}
     <div class="prio-head">
       <div>
         <div class="prio-title">Priority list — start here</div>
-        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Each card leads with a facts strip, then what it is, then a checklist: tick a step as you do it and the card keeps your progress. Use the small arrow on a step to read its detail, and the big tick on the right to mark the whole item Done. All of it persists in this browser.</div>
+        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Each card leads with a facts strip, then what it is, then a checklist: tick a step as you do it and the card keeps your progress. Use the small arrow on a step to read its detail, and the big tick on the right to mark the whole item Done. Use the tabs below to see only what is to do, in progress or done. All of it persists in this browser.</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
         <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
         <button class="prio-toggle" id="prio-toggle" onclick="togglePrioAll()">Expand all</button>
       </div>
     </div>
+    <div class="prio-filters" id="prio-filters"></div>
     <div class="prio-list" id="prio-list"></div>
     <div class="prio-hint">Tap a row to open it. "Do now" rows start open; the rest stay folded until you need them.</div>
     <div class="prio-kit">
@@ -799,13 +812,6 @@ footer a:hover{color:var(--gold2)}
 </div>
 
 <!-- TAB 2: OUTREACH -->
-<div class="panel" id="panel-board">
-  <div class="sec-head"><span class="sec-tag">Status board</span><h2 class="sec-title">Drag a task to change its state everywhere</h2></div>
-  <p class="board-intro">Every task from the priority list lives here. Drag a card between columns, or use the arrows on a touch screen. Moving a card updates the Now list and the Outreach cards that task drives: <b style="color:var(--text)">Not needed</b> hides it from Now, <b style="color:var(--text)">Parked</b> sinks it to the bottom under its own heading, and <b style="color:var(--text)">In progress</b> surfaces it on the Active app tab. <b style="color:var(--text)">Done</b> is the same state as the tick on a priority card, so ticking there moves the card here and vice versa.</p>
-  <p class="board-note">SAVED IN THIS BROWSER ONLY &middot; IT DOES NOT WRITE BACK TO THE REPO, SO TELL CLAUDE WHEN A MOVE SHOULD BECOME PERMANENT &middot; <span style="cursor:pointer;color:var(--cyan)" onclick="resetBoard()">RESET TO DEFAULTS</span></p>
-  <div id="board-cols"></div>
-</div>
-
 <div class="panel" id="panel-outreach">
   <div class="sec-head"><span class="sec-tag">Log</span><h2 class="sec-title">Professor Outreach</h2></div>
   <input type="text" class="search-bar" id="search" placeholder="Search by name, institution, or topic..." oninput="renderProfs()">
@@ -1642,7 +1648,7 @@ function renderProfs(){
   filtered.forEach(p=>{
     const sl=SL[p.status]||p.status;
     const drv=(typeof statusForProf==='function')?statusForProf(p.name):null;
-    const drvPill=(drv&&drv.st!=='todo')?'<span class="st-pill st-'+drv.st+'" title="Set on the Board tab">'+ST_LABEL[drv.st]+'</span>':'';
+    const drvPill=(drv&&drv.st!=='todo')?'<span class="st-pill st-'+drv.st+'" title="Status from the priority list">'+ST_LABEL[drv.st]+'</span>':'';
     const card=document.createElement('div');
     card.className='prof-card';
     card.innerHTML='<div class="prof-row" onclick="this.parentElement.classList.toggle(\'open\')">'
@@ -2718,17 +2724,47 @@ function toggleReq(id,hash,el){
   var prog=body.querySelector('.pc-prog'); if(prog) prog.textContent=done+' of '+total+' done';
   var pill=body.querySelector('.pc-count'); if(pill) pill.textContent=done+'/'+total;
 }
+var prioFilter='all';
+var PRIO_FILTERS=[
+  {k:'all',      label:'All'},
+  {k:'todo',     label:'To do'},
+  {k:'progress', label:'In progress'},
+  {k:'done',     label:'Done'},
+  {k:'parked',   label:'Parked'},
+  {k:'dropped',  label:'Not needed'}
+];
+function setPrioFilter(k){prioFilter=k;renderPriorities();}
+function renderPrioFilters(){
+  var el=document.getElementById('prio-filters'); if(!el) return;
+  var counts={};
+  PRIORITIES.forEach(function(p){var st=getStatus(p.id);counts[st]=(counts[st]||0)+1;});
+  counts.all=PRIORITIES.filter(function(p){return getStatus(p.id)!=='dropped';}).length;
+  el.innerHTML=PRIO_FILTERS.map(function(f){
+    var n=counts[f.k]||0;
+    return '<button class="pf-btn pf-'+f.k+(prioFilter===f.k?' on':'')+'" onclick="setPrioFilter(\''+f.k+'\')">'+f.label+'<span class="pf-n">'+n+'</span></button>';
+  }).join('')+'<button class="pf-reset" title="Clear every tick and status saved in this browser" onclick="resetBoard()">RESET SAVED STATE</button>';
+}
 function renderPriorities(){
   const el=document.getElementById('prio-list'); if(!el) return;
   const now=new Date(); now.setHours(0,0,0,0);
   el.innerHTML='';
+  renderPrioFilters();
+  if(prioFilter!=='all'){
+    const only=PRIORITIES.filter(p=>getStatus(p.id)===prioFilter).sort(byDeadline);
+    if(!only.length){
+      el.innerHTML='<div class="prio-empty">Nothing is '+(PRIO_FILTERS.find(f=>f.k===prioFilter)||{label:prioFilter}).label.toLowerCase()+' right now.</div>';
+      return;
+    }
+    only.forEach((p,i)=>renderOne(p,i));
+    return;
+  }
   const visible=PRIORITIES.filter(p=>getStatus(p.id)!=='dropped');
   const doneItems=visible.filter(p=>getStatus(p.id)==='done').sort(byDeadline);
   const parked=visible.filter(p=>getStatus(p.id)==='parked').sort(byDeadline);
   const live=visible.filter(p=>{const st=getStatus(p.id);return st!=='parked'&&st!=='done';});
   const actives=live.filter(p=>p.tier!=='followup').sort(byDeadline);
   const fups=live.filter(p=>p.tier==='followup').sort(byDeadline);
-  const renderOne=(p,idx)=>{
+  function renderOne(p,idx){
     let duePill='';
     if(p.due){
       const d=new Date(p.due[0],p.due[1]-1,p.due[2]);
@@ -2795,9 +2831,9 @@ function renderPriorities(){
       +    (p.link?'<a class="prio-link" href="'+escHtml(p.link)+'" target="_blank">Open: '+escHtml(p.link.replace(/^https?:\/\//,'').split('/')[0])+' &#8599;</a>':'')
       +  '</div>'
       +'</div>'
-      +'<div class="prio-check'+(isDone?' on':'')+'" title="Mark done, moves the card to Done on the Board" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
+      +'<div class="prio-check'+(isDone?' on':'')+'" title="Mark the whole item done" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
     el.appendChild(item);
-  };
+  }
   actives.forEach(renderOne);
   if(fups.length){
     const h=document.createElement('div');h.className='prio-sec';h.textContent='Sent or submitted \u2014 waiting on them';el.appendChild(h);
