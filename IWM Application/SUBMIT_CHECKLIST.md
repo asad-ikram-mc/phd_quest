@@ -13,7 +13,7 @@ Contact for questions (not for sending the application): Prof. Dr. Sonja Utz, s.
 
 **To:** career@iwm-tuebingen.de
 **Subject:** Application: Researcher / PhD Position, Everyday Media Lab, reference 1014-2026
-**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (version 5, 9 pages, 3.60 MB)
+**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (version 6, 9 pages, 3.60 MB)
 
 Dear Sir or Madam,
 
@@ -29,7 +29,19 @@ asad-ikram-mc.github.io/portfolio
 
 ---
 
-## Version 5 (24 Sep, night): FINAL, this is the one to send
+## Version 6 (24 Sep, late night): FINAL, this is the one to send
+
+Asad asked for: an opening that is more of a hook and does not discuss model accuracies; the CV to say 5+ companies and 300+ freelance clients; Dubizzle shown as analysis (competitor-analysis dashboards from e-commerce and real estate stores and online discussions, predicting revenue and showing what customers say, built on the data warehouse and web scraping); Fluency framed as "we analyse online data".
+
+**New first line (judged against two others by three judges; won with Utz reader 8.5 and pattern/facts 8.5 for the first line):** "I want to study why people believe what AI systems tell them, because I believed what mine told me." Then STAR with no model metrics: seven years, more than five companies and over 300 freelance clients, a growing share of it ending in AI-generated figures readers cannot easily check (Situation); checking them is part of his work (Task); yet his own system's precise figures persuaded him until he audited what they were scored against (Action, Result); Anderl et al. (2024) framed as a comparable effect of another cue; who he is; the aim (numeric precision as a cue). Rejected: "The reader my dashboards persuaded most easily was the person who built them" (hook editor's favourite, but "most easily" is an unsupported comparison) and a generic small-business-owner scene (scored 6/10 on the cold read).
+
+**Moved:** the accuracy audit (64.7 to 85.8, 97 human-labelled posts, then Claude's labels) now opens the ArtemisAI labels paragraph ("The figure that persuaded me was..."). The "seven years ... measured against" closing line was cut from the value paragraph because the opening now carries it; "would decide" became "would inform".
+
+**CV:** profile opens "Over seven years I have worked for 5+ companies and 300+ freelance clients, mostly collecting and analysing online data"; freelance line "300+ clients"; Dubizzle split into Competitor analysis and Collection bullets; Fluency role line "Analysing online data (social posts, forums, reviews, search) for brands, and supporting UK Government social listening pipelines" (UK Government kept to pipelines); ArtemisAI "for small businesses".
+
+**Check before sending:** MASTER_RECORD's freelance row said "300+ five-star projects, 400+ websites, 50+ clients"; the documents now say 300+ clients as Asad instructed. Make sure that matches the freelance profile.
+
+## Version 5 (24 Sep, night): superseded by version 6
 
 Asad asked for a catchier STAR opening that intrigues the professor, and added two facts: at ArtemisAI the team hand-labelled about 500 posts and comments and checked Claude and DeepSeek against them before the tiered labelling, and the team drew on research papers, books and X's open-source ranking code to improve the platform. A 9-agent workflow drafted four openings (confidence paradox, rising accuracy, her finding first, free choice), judged them as Prof. Utz and against the pattern, synthesised the winner and verified it; a second 2-agent check read the whole letter and CV.
 
