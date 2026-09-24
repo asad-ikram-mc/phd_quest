@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Covering letter, Asad Ikram, UvA 15455</title>
+<style>
+  @page { size: A4; margin: 15mm 17mm 14mm 17mm; }
+  body { font-family: "Times New Roman", Times, serif; font-size: 10pt; line-height: 1.36;
+         color: #000; margin: 0; text-align: justify; }
+  .hdr { text-align: left; font-size: 8.6pt; color: #333; margin-bottom: 8pt; }
+  .hdr b { font-size: 11.5pt; color: #000; display: block; margin-bottom: 1pt; }
+  .to { text-align: left; margin-bottom: 6pt; }
+  .date { text-align: left; margin-bottom: 6pt; }
+  .re { font-weight: bold; margin-bottom: 7pt; text-align: left; }
+  p { margin: 0 0 5pt; }
+  .sig { margin-top: 7pt; text-align: left; }
+  .sig .n { font-weight: bold; }
+  .sig .d { font-size: 9pt; color: #222; line-height: 1.4; }
+</style></head><body>
+
+<div class="hdr"><b>Asad Ikram</b>
+  +44 7482 376417 &middot; asad.ikram53@gmail.com &middot; linkedin.com/in/asad-ikram98 &middot; asad-ikram-mc.github.io/portfolio</div>
+
+<div class="to">Dr Rosa Sanchez Salgado, Dr Carolin Ischen and Prof. Gijs Schumacher<br>
+  A.I. Feels project, Faculty of Social and Behavioural Sciences<br>
+  University of Amsterdam</div>
+<div class="date">September 2026</div>
+<div class="re">Application: PhD position on emotion-sensitive A.I. in politics and policymaking (A.I. Feels, SP1), vacancy 15455</div>
+
+<p>Dear Dr Sanchez Salgado, Dr Ischen and Professor Schumacher,</p>
+
+<p>I have taught machines to read emotion in what people write, and now I want to study the emotion machines write for policymakers. For seven years, across more than five companies and over 300 freelance clients, I have mostly collected and analysed online data. Before ArtemisAI&rsquo;s classifiers learned from Claude and DeepSeek, we labelled about 500 posts and comments by hand and checked both models against them and against each other. The two disagreed about emotion more often than about sentiment, so I learned to treat a model&rsquo;s reading of emotion as an interpretation to be tested. SP1 asks the mirror question, and Dr Sanchez Salgado&rsquo;s work on feeling rules suggests where to look. I hold an MSc in Data Analytics (Distinction) from the University of Portsmouth and a BSc in Computer Science from FAST-NUCES, and am a Data Engineer at M+C Saatchi Fluency and founder and CTO of ArtemisAI. I am applying for the A.I. Feels PhD position in sub-project 1.</p>
+
+<p>At Dubizzle Labs (Senior Data Engineer, 2022 to 2024, promoted twice) I led three engineers running more than 500 collectors in four languages across 15 countries, and analysed e-commerce and real estate stores and online discussions to build competitor-analysis dashboards that predicted revenue and showed what customers said. People wrote differently on forums and on social platforms, so anything measured from their words depended on where it was collected. My Chevening Scholarship (2024/25) rested on one argument: public decisions deserve better evidence about what people think. When that evidence reaches civil servants through chatbots, its wording becomes evidence too.</p>
+
+<p>At Portsmouth my dissertation studied about 279,000 posts on UK economic policy from four platforms, with a fine-tuned BERT classifier (macro-F1 0.878), a 200-post human-coded validation set (Cohen&rsquo;s kappa about 0.78) and NRC counts of eight emotions. With Dr Ella Haig, my supervisor, I turned its finding that the same policy event looked structurally different on each platform into a methods manuscript that treats each platform as a survey mode and adapts measurement invariance to machine-labelled sentiment. In its 500-replication simulation, a naively pooled index gives the wrong sign on nearly a quarter of days. Writing it up, I found that my own 0.878 had been scored against lexicon-seeded labels rather than the human coders, and the manuscript says so.</p>
+
+<p>At Fluency, where I have worked since December 2024, we analyse online data. I have supported social listening pipelines for UK Government departments and Nike and built others for Amazon and Ford. Where I can share methods but not findings, I built a codebook for a US women&rsquo;s soccer project from BERTopic topics I merged by hand and checked an LLM-tagging pilot by hand, and, for Abbott, screened about 170,000 multilingual posts and reviews in LLM-assisted stages and coded the relevant ones against a 24-emotion taxonomy. When a client questioned a CFMOTO launch report, we compared two tagging runs and reported as directional anything the checks did not support.</p>
+
+<p>ArtemisAI is running in production ahead of our December launch, turning model outputs into advice a small business owner would act on without being able to check it, such as flop warnings and crisis alerts. Its six fine-tuned encoder classifiers, including a DistilBERT emotion model, code over three million comments. After our hand labels, the classifiers learned from Claude (about 6,000 posts) and DeepSeek (about 12,000 more). The two agreed on 82.9 per cent of sentiment labels but 74.4 per cent of emotion labels, and on no toxicity labels because their taxonomies were incompatible. From the fourth version on, the classifiers were scored against Claude&rsquo;s labels, so the emotion model&rsquo;s accuracy of 84 per cent partly measures agreement with another model, not with people.</p>
+
+<p>Dr Sanchez Salgado&rsquo;s analysis of feeling rules in European policymaking (JCMS, 2023) shows emotions treated as inappropriate in health, energy and environment policy but acceptable in foreign and home affairs, and her study of 25 European Parliament debates (2021) found MEPs using emotions according to their power position. A chatbot drafting for a minister has no position or domain unless the prompt supplies one. My question is whether its output follows those feeling rules or flattens them into one courteous register. As I read the vacancy, emotional cues are the chatbot displaying feeling towards its user: an empathetic GPT-4 agent raised perceived benevolence but not competence (Pralat, Ischen and Voorveld, 2025), and emotional capacity is part of how human-like a chatbot is perceived to be (Ischen, Wang and Smit, 2026). Emotional appeals invite feeling about the policy issue, which Brader (2005) gives reason to code as discrete emotions, since enthusiasm and fear cues moved voters differently.</p>
+
+<p>Study 1, in year one, would build the corpus from the tasks politicians and civil servants give chatbots, such as a briefing note, a reply to a citizen or a crisis statement, collected with the team and the project&rsquo;s expert meetings and grounded in texts such as parliamentary questions. Prompts would vary by policy domain along the feeling-rule contrast, crisis or routine framing, the prompter&rsquo;s role and ideological framing, since models lean politically and can be steered (Rozado, 2024). Each prompt would go to several models and versions in English and a second EU language, with repeated runs and version and date logged, because in my own system the reference moved with the models. Indicatively, 200 prompts, five models and ten runs in two languages give about 20,000 outputs. I would read a purposive subsample closely and draft the codebook from that reading, piloted by two trained coders, since the cases two coders split on are where a codebook gets written.</p>
+
+<p>Study 2, in year two, would measure emotion with several instruments, since two lexicons can reach opposite conclusions on the same text (Czarnek and Stillwell, 2022). I would start from the eight emotions and validation approach of Widmann and Wich (2023) rather than port their German models, train transformers for both languages on human-coded outputs, and keep NRC as a second lexicon. An LLM annotator would add scale, since zero-shot GPT-4 tracked human-coded sentiment in political speeches better than the JST and rJST topic-sentiment models that Pipal, Schoonvelde, Schumacher and Boiten (2024) tested and packaged for R. A model judging model text is circular, so, as Ziems and colleagues (2024) recommend, it would work inside a human team: trained coders would code about 1,500 outputs, with Krippendorff&rsquo;s alpha reported, sized by adapting the manuscript&rsquo;s simulation. With the manuscript&rsquo;s invariance and differential item functioning methods I would test whether each instrument measures the same thing across models and prompt types and, following the preregistered multiverse design of Pipal, Bakker, Schumacher and van der Velden (2024), report which differences survive every reasonable choice.</p>
+
+<p>Study 3, in year three, would be interpretive, a study in its own right rather than a pilot for the counting. Using Emotion Discourse Analysis as in Sanchez Salgado and Bos (2024), and Koschut&rsquo;s (2018) argument that emotion words can reinforce or change hierarchies, I would ask whom an output casts as victim, threat or authority and which policy options its emotional language makes legitimate, next to European Parliament speeches on the same issues. Cases where instruments and coders disagree would return to this reading as findings. I have not been trained in these methods, so I would learn them under Dr Sanchez Salgado rather than claim them. Each study would become an article, some co-authored with the team, with year four for the dissertation. I would reshape all of this with you.</p>
+
+<p>The PhD would give my work a theory of what emotion does in political text and methods to read it, not only count it; I would bring pipelines that code multilingual text at scale and, having been misled by my own figures, the habit of checking a number before it reaches a policymaker.</p>
+
+<p>My master&rsquo;s is in data analytics rather than one of the listed social sciences; computational social science is the nearest match. I have not run behavioural experiments or controlled prompt experiments on LLMs: my quantitative work is observational and simulation-based. I have no formal training in political psychology or the political sociology of emotions, and my dissertation&rsquo;s human-coded validation covered sentiment, not emotion. I have no publications; the manuscript with Dr Haig is complete but not yet submitted. I have not taught at university level, and I do not speak Dutch yet but would begin learning it on arrival.</p>
+
+<p>I would relocate to within commuting distance of Amsterdam, can start on 1 January 2027, and would take on the teaching and project work and join the Hot Politics Lab seminars. My writing sample, the methodology chapter of my sole-authored MSc dissertation, follows in this file. Thank you for considering my application. I would welcome the chance to discuss SP1 with you.</p>
+
+<div class="sig">Yours sincerely,<br><br>
+  <span class="n">Asad Ikram</span><br>
+  <span class="d">Chevening Scholar 2024/25 &middot; MSc Data Analytics (Distinction), University of Portsmouth<br>
+  Data Engineer, M+C Saatchi Fluency &middot; Founder &amp; CTO, ArtemisAI<br>
+  asad.ikram53@gmail.com &middot; +44 7482 376417<br>
+  asad-ikram-mc.github.io/portfolio &middot; linkedin.com/in/asad-ikram98</span></div>
+
+</body></html>
