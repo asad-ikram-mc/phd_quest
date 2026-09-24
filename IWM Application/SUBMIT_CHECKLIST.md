@@ -13,7 +13,7 @@ Contact for questions (not for sending the application): Prof. Dr. Sonja Utz, s.
 
 **To:** career@iwm-tuebingen.de
 **Subject:** Application: Researcher / PhD Position, Everyday Media Lab, reference 1014-2026
-**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (version 4, 9 pages, 3.59 MB)
+**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (version 5, 9 pages, 3.60 MB)
 
 Dear Sir or Madam,
 
@@ -29,7 +29,19 @@ asad-ikram-mc.github.io/portfolio
 
 ---
 
-## Version 4 (24 Sep, late): FINAL, this is the one to send
+## Version 5 (24 Sep, night): FINAL, this is the one to send
+
+Asad asked for a catchier STAR opening that intrigues the professor, and added two facts: at ArtemisAI the team hand-labelled about 500 posts and comments and checked Claude and DeepSeek against them before the tiered labelling, and the team drew on research papers, books and X's open-source ranking code to improve the platform. A 9-agent workflow drafted four openings (confidence paradox, rising accuracy, her finding first, free choice), judged them as Prof. Utz and against the pattern, synthesised the winner and verified it; a second 2-agent check read the whole letter and CV.
+
+**New first line:** "The AI system I built reported 85.8 per cent average accuracy, up from 64.7, and I believed it until I checked what it was scored against." Then Task (owners would act on it, so the number had to mean what it said), Action (the audit), Result (last two versions scored against Claude's labels; a precise, climbing number had persuaded him), the Anderl et al. (2024) bridge framed as an anecdote, who he is, and the aim: test whether numeric precision is such a cue.
+
+**ArtemisAI is now two paragraphs:** what it does and how (three features, models and pipelines, the research used: Text as Data, published popularity-prediction studies, X's open-source ranking code), then the labels (about 500 hand labels, two tiers, the headline figure still ended up scored against Claude's labels, the toxicity taxonomy mismatch against 96.7 per cent confidence). Study 1 now names its outcomes (perceived credibility and error detection).
+
+**Fixes from the checks:** "would act on" (pre-launch, no users implied); Text as Data described as rules "we are now applying" (the review is recent, and the flop labels and the headline figure do not yet follow it); flop detection "draws on" published studies rather than claiming a like-for-like benchmark; the Fluency pilot no longer says "500" so the letter's three 500s are not confused; CV "judgements", "Features reviewed against the literature", and no claim that low-confidence cases return to Claude (that tier has not fired in production).
+
+**Be ready at interview:** if the 500 hand labels were checked against both tiers, why did the toxicity taxonomy mismatch not show up then? And why did a human-holdout release gate not catch the switch to Claude-scored accuracy?
+
+## Version 4 (24 Sep, late): superseded by version 5
 
 Asad asked for the story to run as one chronological problem arc (Dubizzle, Chevening, Portsmouth, Fluency, ArtemisAI), for a one-line type of work for Nike, Amazon, UK Government and Ford, for ArtemisAI's capabilities (collaboration feature via network theory, crisis detection, flop detection, NLP and OCR pipelines, models and techniques), for what the PhD would change and what he brings, and for the same sense in the CV. A workflow drafted and judged arc-led versions against Shahmeer's letter and the pattern; the winner was finished by hand.
 

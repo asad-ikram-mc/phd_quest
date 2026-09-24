@@ -3,7 +3,7 @@
 <style>
   @page { size: A4; margin: 12mm 14mm 11mm 14mm; }
   * { box-sizing: border-box; }
-  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.6pt;
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.5pt;
          line-height: 1.31; color: #16181d; margin: 0; }
   p, li, .v, .what > div { text-wrap: pretty; orphans: 2; widows: 2; }
   h1 { font-size: 17pt; font-weight: 700; margin: 0 0 1pt; letter-spacing: -0.2pt; }
@@ -45,7 +45,7 @@
   human coders is how I would build stimuli of known accuracy and manipulation checks. McNemar tests, bootstrap intervals
   and simulation with known ground truth carry over to experimental data, and my Python pipelines could build a
   simulated professional feed for studying incidental learning.</div></div>
-<div class="kv"><div class="k">Research interests</div><div class="v">Credibility judgments of AI-generated information,
+<div class="kv"><div class="k">Research interests</div><div class="v">Credibility judgements of AI-generated information,
   especially when a precise confidence figure has no relation to correctness; incidental learning and informational
   benefits from social media and communicative AI at work; validity of automated text coding across platforms, models and time.</div></div>
 
@@ -125,14 +125,17 @@
         moving rather than the model improving.</li>
     <li><b>Products.</b> Flop detection (warns when a page risks an underperforming post), crisis detection from
         toxicity scores, best posting times, post drafting, and a collaboration feature built on network theory (a networkx affinity graph of pages).</li>
-    <li><b>Models.</b> Six fine-tuned encoder classifiers on SageMaker code 111,000+ posts and 3.39 million
+    <li><b>Models.</b> Six fine-tuned encoder classifiers code 111,000+ posts and 3.39 million
         comments from 30+ public pages (Meta Graph API): XLM-R (sentiment), DistilBERT (emotion), DeBERTa-v3 (topic,
-        intent), Detoxify (toxicity) and a language classifier. They learn from a labelling chain run through APIs: Claude labels about 6,000 posts with its reasoning, rules mined from it prompt DeepSeek to label about 12,000 more, and cases below 0.80 confidence return to Claude.</li>
+        intent), Detoxify (toxicity) and a language classifier. They learn from a tiered labelling chain via APIs: we hand-labelled about 500 posts and comments and matched Claude and DeepSeek against them; Claude then labels about 6,000 posts, and rules mined from its reasoning prompt DeepSeek to label about 12,000 more.</li>
     <li><b>Images and video.</b> A PyTorch fusion classifier over CLIP embeddings of image, OCR text and caption
         (macro-F1 0.93 on a 149-item gold set; production labels from Claude Haiku 4.5 vision); a hybrid OCR pipeline
         (token-F1 0.928); Whisper transcription.</li>
     <li><b>Evaluation design.</b> Release gate of macro-F1 above 0.85 on both a 97-post human holdout and a
         4,000-item stratified test set, then a human check of 200 random posts; weekly KL-divergence drift alarms.</li>
+    <li><b>Research base.</b> Features reviewed against the literature: Grimmer, Roberts and Stewart's <i>Text as Data</i>
+        (hold back future data for testing, never present a prediction as a cause, check labels against human judges),
+        published popularity-prediction benchmarks for flop detection, and the ranking code X released as open source.</li>
   </ul>
 </div></div>
 
@@ -166,9 +169,8 @@
 <div class="row keep"><div class="when">2018 - present</div><div class="what">
   <div><span class="ttl">Earlier and concurrent engagements</span></div>
   <ul>
-    <li><b>Fix.com</b>, Canada, part-time consultant since May 2023: 50M+ data points from 200+ sources. <b>VendueTech</b>, Ireland, Lead Data Engineer, Jun to Jul 2025: led
-        three engineers. <b>Prefe</b>, Italy, Sep to Dec 2024. <b>CXG</b>, Dubai, Dec 2025 to Jan 2026.
-        <b>Freelance data engineer</b>, Dec 2018 to Feb 2026: 400+ websites, 50+ clients.</li>
+    <li><b>Fix.com</b>, Canada, part-time consultant since May 2023 (50M+ data points, 200+ sources); <b>VendueTech</b>, Ireland,
+        Lead Data Engineer, 2025; <b>Prefe</b>, Italy, 2024; <b>CXG</b>, Dubai, 2025 to 2026; <b>freelance</b>, 2018 to 2026, 50+ clients.</li>
   </ul>
 </div></div>
 
