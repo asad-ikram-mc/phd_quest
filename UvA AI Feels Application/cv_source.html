@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>CV, Asad Ikram, UvA 15455</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm 11mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 9pt;
+         line-height: 1.31; color: #16181d; margin: 0; }
+  p, li, .v, .what > div { text-wrap: pretty; orphans: 2; widows: 2; }
+  h1 { font-size: 17pt; font-weight: 700; margin: 0 0 1pt; letter-spacing: -0.2pt; }
+  .sub { font-size: 8.5pt; color: #444; margin-bottom: 2pt; }
+  .contact { font-size: 8pt; color: #333; margin-bottom: 8pt; }
+  .contact a { color: #16425B; text-decoration: none; }
+  h2 { font-size: 8.7pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7pt;
+       color: #16425B; border-bottom: 0.8pt solid #16425B; padding-bottom: 1.5pt;
+       margin: 8pt 0 3.5pt; break-after: avoid; }
+  .row { display: flex; gap: 9pt; margin-bottom: 5pt; }
+  .row.keep { break-inside: avoid; }
+  .when { flex: 0 0 82pt; font-size: 7.9pt; color: #555; padding-top: 0.6pt; }
+  .what { flex: 1 1 auto; min-width: 0; }
+  .ttl { font-weight: 700; }
+  .org { color: #333; }
+  ul { margin: 1.5pt 0 0; padding-left: 11pt; }
+  li { margin-bottom: 1.4pt; break-inside: avoid; }
+  p { margin: 0 0 3pt; }
+  .kv { display: flex; gap: 9pt; margin-bottom: 2.4pt; break-inside: avoid; }
+  .k { flex: 0 0 82pt; color: #555; font-size: 7.9pt; padding-top: 0.6pt; }
+  .v { flex: 1 1 auto; min-width: 0; }
+  .infra { color: #555; }
+  .plain { margin-top: 2pt; color: #333; }
+  .what > div:first-child { break-after: avoid; }
+</style></head><body>
+
+<h1>Asad Ikram</h1>
+<div class="sub">MSc Data Analytics (Distinction) · Chevening Scholar 2024/25 · Emotion and sentiment measurement in online text about policy and brands</div>
+<div class="contact">+44 7482 376417 · <a href="mailto:asad.ikram53@gmail.com">asad.ikram53@gmail.com</a> ·
+  <a href="https://linkedin.com/in/asad-ikram98">linkedin.com/in/asad-ikram98</a> ·
+  Portfolio: <a href="https://asad-ikram-mc.github.io/portfolio">asad-ikram-mc.github.io/portfolio</a></div>
+
+<h2>Profile</h2>
+<p>Over seven years I have worked for 5+ companies and 300+ freelance clients, mostly collecting and analysing online data.
+  At Dubizzle Labs, leading a team that collected text in four languages across 15 countries, I saw that people
+  write differently on forums and on social platforms, yet their text was treated as comparable. As a Chevening Scholar
+  I took that problem to the University of Portsmouth, into an MSc dissertation on public reaction to UK economic policy
+  and a methods manuscript with Dr Ella Haig, then into sentiment and emotion coding for brands at M+C Saatchi Fluency and
+  into ArtemisAI, the company I founded, where I found my own system's accuracy figure rising partly because its reference
+  had moved. I now want to study the emotional appeals and cues in chatbot output written for politicians and civil
+  servants, with measures that are tested against human coders before they are believed.</p>
+<div class="kv"><div class="k">Fit with A.I. Feels (SP1)</div><div class="v">SP1 asks how emotions are expressed in
+  chatbot output for policymakers. I already detect emotion in text at scale, with the NRC lexicon, a fine-tuned DistilBERT
+  emotion classifier and LLM coding on a 24-emotion taxonomy, and I have seen two LLM annotators agree less often on emotion labels than on sentiment. My
+  manuscript counts a result only if it holds under two measurement families and treats the human coder as the criterion;
+  the same rules would govern emotion coding of LLM output. My Python pipelines could collect responses to a structured set
+  of policy prompts across models and versions, and I would draft the codebook from a close reading of a purposive subsample, piloted by two trained coders.</div></div>
+<div class="kv"><div class="k">Research interests</div><div class="v">Emotional appeals and cues in AI-generated text on
+  political and policy issues, and whether chatbot output reproduces or flattens the emotional registers of political
+  communication; what emotion-sensitive AI means for policymaking and democracy; validity of automated emotion measurement
+  across models, prompts, platforms and time; combining large-scale computational coding with close reading of what
+  emotion words do in a text.</div></div>
+
+<h2>Analysis methods</h2>
+<div class="kv"><div class="k">Emotion measurement</div><div class="v">NRC emotion lexicon (eight basic emotions and two
+  sentiment categories; proportional scores aggregated over time and set against predicted sentiment); binary emotion
+  presence indicators for invariance and differential item functioning tests; a 24-emotion multi-label taxonomy
+  (9 positive or approach, 10 negative or avoidance, 5 transitional) coded per text by LLM; a fine-tuned DistilBERT
+  emotion classifier in production; comparing measures, since a single
+  lexicon can mislead. Human validation to date covers sentiment (Cohen's κ ≈ 0.78); emotion is lexicon- or LLM-coded so far.</div></div>
+<div class="kv"><div class="k">Content analysis</div><div class="v">Automated content analysis validated against human coding;
+  codebook design, piloting and revision; sentiment, emotion, need-state,
+  toxicity, topic and intent coding; topic modelling (BERTopic) to find candidate themes; LLM-assisted annotation checked
+  by hand; multilingual text translated before coding. Fine-tuned encoder classifiers (BERT, XLM-R, DistilBERT, DeBERTa-v3).</div></div>
+<div class="kv"><div class="k">Statistics</div><div class="v">Inter-coder reliability (Cohen's κ); agreement between
+  labelling tiers versus
+  criterion validity; McNemar tests, bootstrap confidence intervals, chi-square tests; probability calibration; simulation
+  with known ground truth; checks of coverage, denominators and whether groups can be pooled; cross-market comparison
+  and indexing; minimum-base and small-cell rules; sensitivity analyses.</div></div>
+<div class="kv"><div class="k">Measurement</div><div class="v">Generalizability theory, measurement invariance, differential
+  item functioning and score linking, specified in a protocol and tested by simulation; not yet fitted to collected data.</div></div>
+<div class="kv"><div class="k">Research practice</div><div class="v">Ethics approval and GDPR-compliant handling of public text;
+  analysis anchors fixed in advance, before any counts were computed; documented, reproducible analysis pipelines.</div></div>
+<div class="kv"><div class="k">Software</div><div class="v">Python, PyTorch, SQL, PySpark; R (working knowledge). Data access
+  through official APIs and licensed feeds (Meta Graph, Reddit, YouTube, Brandwatch, Sprinklr); AWS, Airflow, Docker.</div></div>
+
+<h2>Education</h2>
+<div class="row keep"><div class="when">2024 - 2025<br>awarded Dec 2025</div><div class="what">
+  <div><span class="ttl">MSc Data Analytics, Distinction.</span> <span class="org">University of Portsmouth, United Kingdom.</span></div>
+  <div>Credit-weighted average 70.5/100 (Distinction threshold 70). Master's project 78/100, supervised by Dr Ella Haig.
+     Modules included Intelligent Data and Text Analytics, Big Data and Machine Learning, and Explainable AI.
+     180 UK credits (conventionally 90 ECTS), taught and assessed in English.</div>
+</div></div>
+<div class="row keep"><div class="when">2017 - 2021<br>awarded Jan 2022</div><div class="what">
+  <div><span class="ttl">BSc Computer Science.</span> <span class="org">National University of Computer and Emerging Sciences (FAST-NUCES), Pakistan.</span></div>
+  <div>Four years full time, 130 credit hours completed. CGPA 2.75 on a 0.00 to 4.00 scale.</div>
+</div></div>
+
+<h2>Research</h2>
+<div class="row"><div class="when">2025<br>Master's project</div><div class="what">
+  <div><span class="ttl">Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies.</span></div>
+  <ul>
+    <li><b>Finding.</b> The same policy event produced different sentiment and emotion
+        profiles on different platforms, so a pooled index assumed, without testing, that the classifier measures the same
+        construct everywhere.</li>
+    <li><b>Study design.</b> Ethics-approved quantitative study (Portsmouth TETHIC-2025-111094) of about 279,000 public
+        posts and comments on UK economic policy from X/Twitter, Reddit, YouTube and Quora, collected through official APIs and licensed
+        feeds under GDPR-compliant procedures. Human-annotated validation set of 200 posts balanced across platforms
+        (reported inter-annotator agreement Cohen's κ ≈ 0.78).</li>
+    <li><b>Classification and testing.</b> Fine-tuned BERT classifier compared with BiLSTM by McNemar test (p < 0.001) and bootstrap
+        intervals, alongside logistic regression and VADER baselines, with probability calibration.
+        Chi-square tests of sentiment by policy topic (taxation and fiscal policy, cost of living, welfare, energy). A stated
+        design goal: policymakers must understand the basis of sentiment ratings.</li>
+    <li><b>Emotion.</b> NRC lexicon counts of eight emotions and two sentiment categories for each post, aggregated
+        over time as proportional scores and compared with predicted sentiment: anger and fear co-occurred with negative
+        sentiment, joy and anticipation with positive, trust with neutral.</li>
+    <li><b>Correction.</b> Re-auditing for the manuscript, I found the headline macro-F1 of 0.878 was agreement with
+        the lexicon-seeded training labels, not with the human set. The manuscript says so and specifies a larger
+        stratified human criterion with a second annotator.</li>
+  </ul>
+</div></div>
+<div class="row"><div class="when">2026<br>manuscript</div><div class="what">
+  <div><span class="ttl">Ikram, A. and Haig, E.</span> "Is the Platform Part of the Measurement? A Protocol and Simulation
+    Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." Complete; not published and not submitted.</div>
+  <ul>
+    <li>Treats each social platform as a survey mode and asks whether a classifier measures the same construct on each:
+        a generalizability study against a human criterion, invariance and differential item functioning with platform
+        as the grouping facet, and score linking.</li>
+    <li>500-replication simulation with known ground truth: an index that pools platform scores at face value misstates
+        a known event shift by roughly an eighth and reports the wrong sign of aggregate sentiment on nearly a quarter of
+        days; the measurement-adjusted index gets the sign wrong on about one day in sixty. The paper frames this as the
+        error an analyst would pass on to a policymaker.</li>
+    <li>Emotion enters as eight binary NRC presence indicators in invariance and differential item functioning models
+        grouped by platform. NRC results are labelled lexicon-conditional, and non-invariance counts only if it appears
+        under both classifier families (after Czarnek and Stillwell, 2022). Models specified, not yet fitted to data.</li>
+  </ul>
+  <div class="plain">No peer-reviewed publications to date.</div>
+</div></div>
+
+<h2>Experience</h2>
+
+<div class="row"><div class="when">Feb 2025 - present</div><div class="what">
+  <div><span class="ttl">Founder and Chief Technology Officer</span>, <span class="org">ArtemisAI Ltd (trading as ViralData),
+    United Kingdom (remote). Social media analytics for small businesses, running in production ahead of a December 2026 launch.</span></div>
+  <ul>
+    <li><b>Agreement is not validity.</b> The two labelling tiers agree on 82.9% of sentiment, 74.4% of emotion and
+        0.0% of toxicity labels (a taxonomy mismatch), while the toxicity model reports 96.7% average confidence: a
+        precise, confident number with no criterion behind it.</li>
+    <li><b>A moving reference.</b> Reported average accuracy rose from 64.7 (v1) to 85.8 (v5), but v1 to v3 were
+        scored against the human holdout and v4 onward against Claude's labels, so part of the gain is the reference
+        moving rather than the model improving. The emotion classifier's v5 score of 84 is also against Claude's labels.</li>
+    <li><b>Products.</b> Flop detection (warns when a page risks an underperforming post), crisis detection from
+        toxicity scores, best posting times, post drafting, and a collaboration feature built on network theory (a networkx affinity graph of pages).</li>
+    <li><b>Models.</b> Six fine-tuned encoder classifiers code 111,000+ posts and 3.39 million
+        comments from 30+ public pages (Meta Graph API): XLM-R (sentiment), DistilBERT (emotion), DeBERTa-v3 (topic,
+        intent), Detoxify (toxicity) and a language classifier. They learn from a tiered labelling chain via APIs: we hand-labelled about 500 posts and comments and matched Claude and DeepSeek against them; Claude then labels about 6,000 posts, and rules mined from its reasoning prompt DeepSeek to label about 12,000 more.</li>
+    <li><b>Images and video.</b> A PyTorch fusion classifier over CLIP embeddings of image, OCR text and caption
+        (macro-F1 0.93 on a 149-item gold set; production labels from Claude Haiku 4.5 vision); a hybrid OCR pipeline
+        (token-F1 0.928); Whisper transcription.</li>
+    <li><b>Evaluation design.</b> Release gate of macro-F1 above 0.85 on both a 97-post human holdout and a
+        4,000-item stratified test set, then a human check of 200 random posts; weekly KL-divergence drift alarms.</li>
+    <li><b>Research base.</b> Features reviewed against the literature: Grimmer, Roberts and Stewart's <i>Text as Data</i>
+        (hold back future data for testing, never present a prediction as a cause, check labels against human judges),
+        published popularity-prediction benchmarks for flop detection, and the ranking code X released as open source.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">Dec 2024 - present</div><div class="what">
+  <div><span class="ttl">Data Engineer, consultant</span>, <span class="org">M+C Saatchi Fluency, United Kingdom (remote). Analysing
+    online data (social posts, forums, reviews, search) for brands, and supporting UK Government social listening pipelines.</span></div>
+  <ul>
+    <li><b>Method under challenge.</b> CFMOTO 2027 launch report (eight brands): eight-theme sentiment codebook,
+        composite metrics with written formulas and an emotional profile of each brand against the competitor average. With the team, I answered client challenges with source-mix audits, a
+        consumer-base minimum for all brands, re-tagging agreement checks and consumer-only and non-US sensitivity runs;
+        anything the checks did not support was reported as directional.</li>
+    <li><b>Social discourse analysis.</b> US women's soccer: over 100,000 consumer posts filtered in Python from a year of Twitter, forum and Reddit data; accounts classified by speaker; BERTopic topics merged by hand
+        into a codebook; every post LLM-coded for sentiment and themes, hand-checked on a 500-post pilot.</li>
+    <li><b>Emotion and need-state analysis.</b> Abbott: about 170,000 multilingual posts and reviews on infant formula from
+        12 platforms in Asia, Latin America and the Middle East, coded in LLM-assisted stages (language detection and translation, relevance, need
+        states, a 24-emotion multi-label taxonomy with one flag per emotion, 18 themes) and compared across sources and
+        markets with small-cell suppression, since the mix of sources shapes an emotion profile. Reckitt: over 33,000 US
+        reviews and about 19,000 search keywords LLM-coded on one 16-need framework; a survey deep dive from
+        respondent-level SPSS data on the filters and bases of a validated earlier deck.</li>
+    <li><b>Social listening pipelines</b> on AWS for UK Government
+        departments, Amazon, Ford and Nike. UK Government: contributed to a reporting pipeline (ingest, AI tagging, comment processing, data-quality monitoring). Amazon: Sprinklr ETL (cleaning, deduplication, translation, tagging into Postgres and Tableau). Ford: 68 collectors on owner forums and other sources across ten platforms, with a self-healing repair agent.</li>
+  </ul>
+</div></div>
+
+<div class="row keep"><div class="when">Feb 2022 - Aug 2024</div><div class="what">
+  <div><span class="ttl">Senior Data Engineer</span>, <span class="org">Dubizzle Labs (Dubizzle, Bayut, Zameen, OLX), Pakistan. Promoted twice in two years.</span></div>
+  <ul>
+    <li><b>Competitor analysis.</b> Analysed e-commerce and real estate stores and online discussions via web scraping and
+        the data warehouse I redesigned, for dashboards predicting revenue and showing what customers say.</li>
+    <li><b>Collection.</b> Led three engineers and 500+ collectors gathering text in English, Arabic, Urdu and Hindi from
+        15 MENA countries, where I first saw forum and social text treated as comparable.</li>
+  </ul>
+</div></div>
+
+<div class="row keep"><div class="when">2018 - present</div><div class="what">
+  <div><span class="ttl">Earlier and concurrent engagements</span></div>
+  <ul>
+    <li><b>Fix.com</b>, Canada, part-time since May 2023 (50M+ data points, 200+ sources); <b>VendueTech</b>, Ireland,
+        Lead Data Engineer, 2025; <b>Prefe</b>, Italy, 2024; <b>CXG</b>, Dubai, 2025 to 2026; <b>freelance</b>, 2018 to 2026, 300+ clients.</li>
+  </ul>
+</div></div>
+
+<h2>Awards, public work and languages</h2>
+<div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25 (UK FCDO), selected from 70,000+
+  applicants in 160 countries; funded the MSc.</div></div>
+<div class="kv"><div class="k">Public work</div><div class="v">Author of web-scraping-guide.com, a free public reference on
+  web data collection, its ethics and data quality.</div></div>
+<div class="kv"><div class="k">Languages</div><div class="v">Urdu (native). English: MSc in English; IELTS Academic 6.5. No Dutch yet; I would begin learning it on arrival.</div></div>
+<div class="kv"><div class="k">Availability</div><div class="v">Can start on 1 January 2027 and relocate to within commuting
+  distance of Amsterdam; would take on the teaching (about 10%) and project work.</div></div>
+
+<p class="plain" style="margin-top:8pt">References available on request.</p>
+
+</body></html>
