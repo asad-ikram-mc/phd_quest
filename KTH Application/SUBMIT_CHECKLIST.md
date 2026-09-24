@@ -35,3 +35,13 @@ The ad says **"two to three academic references"**. So this is different from EL
 ## How the letter was checked
 
 An independent fact check against `MASTER_RECORD.md` and `HANDOFF_FOR_GPT.md` found two real errors, both fixed: "two annotators" read as if humans had labelled the data, when it was Claude and DeepSeek; and "I run 68 collectors" overstated it, since 62 of the 68 are active. Every other number checked out. Zero em-dashes, no publication claimed, no generative fine-tuning claimed, and ArtemisAI described as running in production ahead of launch.
+
+## Varbi screening questions (optional, 500 characters each; both answers are 468)
+
+**1. Why are you interested in this particular position and project?**
+Your project asks AI to see not only explicit abuse but the silences around it. I hit that problem in my own production pipeline: two LLM annotation tiers agreed on 0.0% of toxicity labels because they used different taxonomies, while the model reported 96.7% confidence. An abuse detector sees only what its definition allows. I want to spend four years on evaluation methods that reveal what such systems miss, especially in languages that English-only tools ignore.
+
+**2. What can you contribute to the project and the research group?**
+Seven years of large-scale data collection: 68 collectors (62 active) across ten platforms at M+C Saatchi Fluency, and a team running 500+ collectors in English, Arabic, Urdu and Hindi at Dubizzle. Production NLP: six fine-tuned encoder classifiers, one for toxicity, trained through an LLM labelling pipeline I built. A measurement focus from my MSc (Distinction) and a manuscript on whether a classifier measures the same thing across platforms. Native Urdu speaker.
+
+Account: use the personal address asad.ikram53@gmail.com, not a work address (the form warns against work email).
