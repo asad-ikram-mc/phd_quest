@@ -117,6 +117,13 @@ local file — the local `nlp_accuracy_tracker.html` has an empty ENTRIES array 
 - **Distillation chain**: Claude labels 6,000 posts with reasoning (~$10) → rules mined into a
   DeepSeek prompt → DeepSeek labels 12,000 more (~$2.50) → confidence <0.80 routed back to Claude →
   18K real + ~2K synthetic = 20K weighted dataset, stratified 80/20.
+- **Human labels first (Asad, 24 Sep 2026, his own statement; not yet cross-checked in the repo):** the team
+  hand-labelled **about 500 posts and comments**, matched Claude's and DeepSeek's labels against them, then
+  used the tiered approach. No agreement figure for the 500 is recorded, and how they relate to the 97-post
+  holdout is not recorded either, so claim neither.
+- **Caution (artemisai-planning summary, 2026 Sep):** the <0.80 route back to Claude is the design, but the
+  Claude fallback tier has not fired in production (cl_* columns 0 of 28,105 populated). Do not claim that
+  low-confidence cases return to Claude.
 - Custom weighted loss: `per_sample_loss × conf × class_wt × source_wt`.
 - Gate: macro-F1 > 0.85 on **both** a 97-post human holdout and a 4K stratified test, then a human
   validates 200 random posts before deploy. Weekly Monday loop, three-tier confidence routing
