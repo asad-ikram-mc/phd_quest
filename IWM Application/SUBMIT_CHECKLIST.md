@@ -13,7 +13,7 @@ Contact for questions (not for sending the application): Prof. Dr. Sonja Utz, s.
 
 **To:** career@iwm-tuebingen.de
 **Subject:** Application: Researcher / PhD Position, Everyday Media Lab, reference 1014-2026
-**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (version 3, 9 pages, 3.59 MB)
+**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (version 4, 9 pages, 3.59 MB)
 
 Dear Sir or Madam,
 
@@ -29,7 +29,17 @@ asad-ikram-mc.github.io/portfolio
 
 ---
 
-## Version 3 (24 Sep, evening): FINAL, this is the one to send
+## Version 4 (24 Sep, late): FINAL, this is the one to send
+
+Asad asked for the story to run as one chronological problem arc (Dubizzle, Chevening, Portsmouth, Fluency, ArtemisAI), for a one-line type of work for Nike, Amazon, UK Government and Ford, for ArtemisAI's capabilities (collaboration feature via network theory, crisis detection, flop detection, NLP and OCR pipelines, models and techniques), for what the PhD would change and what he brings, and for the same sense in the CV. A workflow drafted and judged arc-led versions against Shahmeer's letter and the pattern; the winner was finished by hand.
+
+**Letter (1,494 body words, 2 pages):** opening hook on Anderl et al. (2024) plus who he is (MSc, BSc, both roles) 152; Dubizzle, Chevening and Portsmouth 117; dissertation and manuscript 150; Fluency (clients by type of work, then Abbott, Reckitt, CFMOTO and soccer analysis) 217; ArtemisAI (features, models, the audit) 242; her work and the question 117; the two studies 159; what the PhD changes and the value he brings 197; gaps 81; close with thanks 59.
+
+**CV (2 pages):** profile now tells the same arc and says how the PhD would shape ArtemisAI; new "Fit with the Everyday Media Lab" row; ArtemisAI split into Products, Models, Images and video, Evaluation design; Fluency client line by type of work; engineering percentages removed; "Lahore, Pakistan" removed; BSc CGPA 2.75 kept.
+
+**Final-check fixes applied:** removed a sentence about ArtemisAI's CEO and team (no stepping-down statements, per the standing rule); the Dubizzle sentence no longer claims numbers reached readers as single figures (his role there was collection); UK Government wording kept to pipeline work (ingest, AI content tagging, comment processing, data-quality monitoring); Reckitt survey wording made exact; German line matches the letter; Ford's 6.7 million figure and the anchor-date sentence cut to fit two pages.
+
+## Version 3 (24 Sep, evening): superseded by version 4
 
 Asad confirmed the soccer analysis is his and shared seven client deliverables (USWNT discourse deck, Abbott emotion workbook, Abbott country psychographic profiles, Reckitt China category deck, Reckitt Research Analysis Platform, Durex benefit-pillar explorer, CFMOTO 2027 launch report plus client-feedback responses), and said he had also analysed for UK Government, Nike, Amazon and Reckitt. An 18-agent workflow read each deliverable for methods and scope (never findings), then the letter was rebalanced by hand against `Master_PhD_Email_Pattern.md` and re-verified.
 
