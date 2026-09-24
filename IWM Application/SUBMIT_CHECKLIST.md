@@ -13,7 +13,7 @@ Contact for questions (not for sending the application): Prof. Dr. Sonja Utz, s.
 
 **To:** career@iwm-tuebingen.de
 **Subject:** Application: Researcher / PhD Position, Everyday Media Lab, reference 1014-2026
-**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (9 pages, 3.58 MB)
+**Attach:** `Asad_Ikram_IWM_1014-2026.pdf` (version 3, 9 pages, 3.59 MB)
 
 Dear Sir or Madam,
 
@@ -28,6 +28,26 @@ asad.ikram53@gmail.com
 asad-ikram-mc.github.io/portfolio
 
 ---
+
+## Version 3 (24 Sep, evening): FINAL, this is the one to send
+
+Asad confirmed the soccer analysis is his and shared seven client deliverables (USWNT discourse deck, Abbott emotion workbook, Abbott country psychographic profiles, Reckitt China category deck, Reckitt Research Analysis Platform, Durex benefit-pillar explorer, CFMOTO 2027 launch report plus client-feedback responses), and said he had also analysed for UK Government, Nike, Amazon and Reckitt. An 18-agent workflow read each deliverable for methods and scope (never findings), then the letter was rebalanced by hand against `Master_PhD_Email_Pattern.md` and re-verified.
+
+**Balance (body words):** opening 108, Chevening and MSc 72, ArtemisAI 154, dissertation and paper 182, Fluency analysis 275 (two paragraphs), her work and the question 119, studies 159, gaps 73, close 86. Client work (275) and her work plus the proposal (278) now carry equal weight.
+
+**Pattern coverage:** hook on her own paper in the opening (Anderl et al. 2024); Chevening framed as the evidence-for-public-decisions problem; Dubizzle and Fluency proof, now analysis rather than collectors; the fixed dissertation numbers (279,000, four platforms, 0.878) and fixed paper numbers (500 replications, an eighth, nearly a quarter), never mixed; ArtemisAI tied to her gap with the reference switch and the toxicity taxonomy mismatch; the question in her vocabulary (credibility judgements, cue route, AI heuristic, incidental learning, informational benefits); the Nelimarkka test passed by starting where Steyvers et al. (2025) and Kim et al. (2024) stop, at precision as a cue rather than confidence in general; exact signature, no location line.
+
+**Citations (six, all confirmed on publisher or PubMed pages):** Anderl et al. (2024) Scientific Reports; Utz, Goyanes and Gil de Zuniga (2026) Behaviour and Information Technology; Anderl, Gaiser and Utz (2026) Cyberpsychology (paraphrased from its abstract: benefits at the same time point, no lagged effects, predominantly short-term); Jerez-Fernandez, Angulo and Oppenheimer (2014) Psychological Science; Steyvers et al. (2025) Nature Machine Intelligence 7:221-231; Kim et al. (2024) FAccT.
+
+**Final-check fixes applied:** opening no longer implies his dashboard was a conversational-agent case (it was a different cue with the same effect); UK Government listed under pipelines, not analysis (no evidence of analysis for it); "coded, in LLM-assisted stages" for Abbott so a psychologist does not read it as human coding; a CFMOTO sentence that disclosed an internal check result replaced by a neutral description; the research question moved past the existing LLM-uncertainty literature; minor AI-sounding phrases removed.
+
+**Still worth knowing:**
+- CFMOTO: the report's document byline credits a colleague, so the letter says "we" and the CV says "with the team". Change to "I" only if that is accurate.
+- The soccer client is not named (the deck names the federation); it reads "a US women's soccer project". Name it only if Fluency is comfortable.
+- The Durex benefit-pillar explorer and the Abbott country-profile document are not mentioned by name, because the files show his role there least clearly.
+- The manuscript still contains two "[TODO: ...]" lines. Clear them before sending it to anyone who asks for it.
+
+## Earlier notes (version 2)
 
 ## What is in the single PDF (version 2, rebuilt 24 Sep)
 

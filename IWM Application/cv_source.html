@@ -47,12 +47,14 @@
 
 <h2>Analysis methods</h2>
 <div class="kv"><div class="k">Content analysis</div><div class="v">Automated content analysis validated against human coding;
-  codebook design, piloting and revision; sentiment, emotion (including the NRC lexicon), toxicity, topic and intent coding;
-  topic modelling to find candidate themes; LLM-assisted annotation checked by hand. Classifiers are fine-tuned encoder
+  codebook design, piloting and revision; sentiment, emotion (NRC lexicon; a 24-emotion multi-label taxonomy), need-state,
+  toxicity, topic and intent coding; topic modelling (BERTopic) to find candidate themes; LLM-assisted annotation checked
+  by hand; multilingual text translated before coding. Classifiers are fine-tuned encoder
   models (BERT, XLM-R, DistilBERT, DeBERTa-v3).</div></div>
 <div class="kv"><div class="k">Statistics</div><div class="v">Inter-coder reliability (Cohen's κ); agreement versus
   criterion validity; McNemar tests, bootstrap confidence intervals, chi-square tests; probability calibration; simulation
-  with known ground truth; checks of coverage, denominators and whether groups can be pooled.</div></div>
+  with known ground truth; checks of coverage, denominators and whether groups can be pooled; cross-market comparison
+  and indexing; minimum-base and small-cell rules; sensitivity analyses; cross-tabulation of respondent-level survey data.</div></div>
 <div class="kv"><div class="k">Measurement</div><div class="v">Generalizability theory, measurement invariance, differential
   item functioning and score linking, specified in a protocol and tested by simulation; not yet fitted to collected data.</div></div>
 <div class="kv"><div class="k">Research practice</div><div class="v">Ethics approval and GDPR-compliant handling of public text;
@@ -80,7 +82,7 @@
         posts and comments on UK economic policy from X/Twitter, Reddit, YouTube and Quora, collected through official APIs and licensed
         feeds under GDPR-compliant procedures. Human-annotated validation set of 200 posts balanced across platforms
         (reported inter-annotator agreement Cohen's κ ≈ 0.78).</li>
-    <li><b>Classification and testing.</b> Fine-tuned BERT classifier compared with BiLSTM by McNemar test (p &lt; 0.001) and bootstrap
+    <li><b>Classification and testing.</b> Fine-tuned BERT classifier compared with BiLSTM by McNemar test (p < 0.001) and bootstrap
         intervals, alongside logistic regression and VADER baselines, with probability calibration.
         Chi-square tests of sentiment by policy topic; NRC emotion analysis linking anger and fear to negative sentiment
         in policy discussion.</li>
@@ -92,7 +94,7 @@
         stratified human criterion with a second annotator.</li>
   </ul>
 </div></div>
-<div class="row keep"><div class="when">2026<br>manuscript</div><div class="what">
+<div class="row"><div class="when">2026<br>manuscript</div><div class="what">
   <div><span class="ttl">Ikram, A. and Haig, E.</span> "Is the Platform Part of the Measurement? A Protocol and Simulation
     Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." Complete; not published and not submitted.</div>
   <ul>
@@ -132,12 +134,20 @@
 <div class="row"><div class="when">Dec 2024 - present</div><div class="what">
   <div><span class="ttl">Data Engineer, consultant</span>, <span class="org">M+C Saatchi Fluency, United Kingdom (remote)</span></div>
   <ul>
-    <li>Social data for campaign intelligence for UK Government departments, Amazon, Ford, Nike and Reckitt.</li>
-    <li><b>Discourse analysis.</b> Analysed consumer social conversation for client teams: topic modelling for
-        candidate themes, an LLM-applied codebook checked by hand on a pilot sample, and audience segments reported
-        separately where pooling would mislead.</li>
-    <li><b>Checking what is counted.</b> Coverage audits of incoming data before any comparison, re-derivation of
-        reported figures from source, and consistent denominators across reported metrics.</li>
+    <li>Clients: UK Government departments, Abbott, Amazon, CFMOTO, Ford, Nike, Reckitt, a US soccer project.</li>
+    <li><b>Social discourse analysis.</b> US women's soccer: a Python pipeline filtering 12 months of Twitter, forum and
+        Reddit posts to over 100,000 consumer posts; accounts classified by who is speaking; BERTopic topics merged by hand
+        into a codebook; every post LLM-coded for sentiment, themes and national-team versus club scope, checked by hand
+        on a 500-post pilot; general public and fan communities reported apart.</li>
+    <li><b>Emotion and need-state analysis.</b> Abbott: about 170,000 multilingual posts and reviews on infant formula from
+        12 platforms in Asia, Latin America and the Middle East, coded in LLM-assisted stages (translation, relevance, need
+        states, 24 emotions, themes) and compared across markets, platforms and segments with small-cell suppression.
+        Reckitt: over 33,000 US reviews LLM-coded on 16 functional needs, plus about 19,000 search keywords on the same
+        framework, in an explorer tracing each figure to verbatims.</li>
+    <li><b>Method under challenge.</b> CFMOTO 2027 launch report (eight brands): eight-theme sentiment codebook, composite
+        metrics with written formulas; with the team, I answered client challenges with source-mix audits, a consumer-base
+        minimum for all brands, re-tagging agreement checks, consumer-only and non‑US sensitivity runs. Reckitt: a deep
+        dive from respondent-level SPSS survey data, same filters and bases as a validated earlier deck; unsupported analyses dropped.</li>
     <li class="infra">Infrastructure: 68 collectors (62 active) ingesting ten platforms daily, 6.7 million items in six
         weeks; one governed master table with documented filter rules and pre-delete backups.</li>
   </ul>
@@ -159,8 +169,7 @@
     <li><b>VendueTech</b>, Ireland, Lead Data Engineer, Jun to Jul 2025: led three engineers, latency cut by 40%.
         <b>Prefe</b>, Italy, Sep to Dec 2024: failure rate cut by 60%, mentored two juniors. <b>CXG</b>, Dubai, Dec 2025
         to Jan 2026.</li>
-    <li><b>Freelance data engineer</b>, Dec 2018 to Feb 2026: 300+ five-star projects across 400+ websites for 50+
-        international clients.</li>
+    <li><b>Freelance data engineer</b>, Dec 2018 to Feb 2026: 300+ five-star projects, 400+ websites, 50+ international clients.</li>
   </ul>
 </div></div>
 
