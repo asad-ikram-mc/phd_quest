@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Asad Ikram, CV</title>
+<style>
+  @page { size: A4; margin: 13mm 14mm 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.6pt;
+         line-height: 1.33; color: #16181d; margin: 0; }
+  p, li, .v, .what > div { text-wrap: pretty; orphans: 2; widows: 2; }
+  h1 { font-size: 17pt; font-weight: 700; margin: 0 0 1pt; letter-spacing: -0.2pt; }
+  .sub { font-size: 8.5pt; color: #444; margin-bottom: 2pt; }
+  .contact { font-size: 8pt; color: #333; margin-bottom: 8pt; }
+  .contact a { color: #16425B; text-decoration: none; }
+  h2 { font-size: 8.7pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7pt;
+       color: #16425B; border-bottom: 0.8pt solid #16425B; padding-bottom: 1.5pt;
+       margin: 9pt 0 4pt; break-after: avoid; }
+  .row { display: flex; gap: 9pt; margin-bottom: 5pt; }
+  .row.keep { break-inside: avoid; }
+  .when { flex: 0 0 82pt; font-size: 7.9pt; color: #555; padding-top: 0.6pt; }
+  .what { flex: 1 1 auto; min-width: 0; }
+  .ttl { font-weight: 700; }
+  .org { color: #333; }
+  ul { margin: 1.5pt 0 0; padding-left: 11pt; }
+  li { margin-bottom: 1.4pt; break-inside: avoid; }
+  p { margin: 0 0 3pt; }
+  .kv { display: flex; gap: 9pt; margin-bottom: 2.4pt; break-inside: avoid; }
+  .k { flex: 0 0 82pt; color: #555; font-size: 7.9pt; padding-top: 0.6pt; }
+  .v { flex: 1 1 auto; min-width: 0; }
+  .infra { color: #555; }
+  .plain { margin-top: 2pt; color: #333; }
+</style></head><body>
+
+<h1>Asad Ikram</h1>
+<div class="sub">MSc Data Analytics (Distinction) · Chevening Scholar 2024/25 · Validated text analysis of social media data</div>
+<div class="contact">Lahore, Pakistan · +44 7482 376417 · <a href="mailto:asad.ikram53@gmail.com">asad.ikram53@gmail.com</a> ·
+  <a href="https://linkedin.com/in/asad-ikram98">linkedin.com/in/asad-ikram98</a> ·
+  Portfolio: <a href="https://asad-ikram-mc.github.io/portfolio">asad-ikram-mc.github.io/portfolio</a></div>
+
+<h2>Profile</h2>
+<p>I turn what people write on social media into numbers, and I test whether those numbers mean what they claim.
+  For seven years I built the systems that collect and code public posts; for the last two I have been checking what
+  they produce: validating automated coding against human coders, separating agreement between models from validity,
+  and asking whether a score means the same thing on every platform. My Master's project was a designed,
+  ethics-approved quantitative study of public text.</p>
+<div class="kv"><div class="k">Research interests</div><div class="v">Credibility judgments of AI-generated information,
+  especially when a precise confidence figure has no relation to correctness; incidental learning and informational
+  benefits from social media and communicative AI at work; validity of automated text coding across platforms, models and time.</div></div>
+
+<h2>Analysis methods</h2>
+<div class="kv"><div class="k">Content analysis</div><div class="v">Automated content analysis validated against human coding;
+  codebook design, piloting and revision; sentiment, emotion (including the NRC lexicon), toxicity, topic and intent coding;
+  topic modelling to find candidate themes; LLM-assisted annotation checked by hand. Classifiers are fine-tuned encoder
+  models (BERT, XLM-R, DistilBERT, DeBERTa-v3).</div></div>
+<div class="kv"><div class="k">Statistics</div><div class="v">Inter-coder reliability (Cohen's κ); agreement versus
+  criterion validity; McNemar tests, bootstrap confidence intervals, chi-square tests; probability calibration; simulation
+  with known ground truth; checks of coverage, denominators and whether groups can be pooled.</div></div>
+<div class="kv"><div class="k">Measurement</div><div class="v">Generalizability theory, measurement invariance, differential
+  item functioning and score linking, specified in a protocol and tested by simulation; not yet fitted to collected data.</div></div>
+<div class="kv"><div class="k">Research practice</div><div class="v">Ethics approval and GDPR-compliant handling of public text;
+  analysis anchors fixed in advance, before any counts were computed; documented, reproducible analysis pipelines.</div></div>
+<div class="kv"><div class="k">Software</div><div class="v">Python, PyTorch, SQL, PySpark; R (working knowledge). Data access
+  through official APIs and licensed feeds (Meta Graph, Reddit, YouTube, Brandwatch, Sprinklr); AWS, Airflow, Docker.</div></div>
+
+<h2>Education</h2>
+<div class="row keep"><div class="when">2024 - 2025<br>awarded Dec 2025</div><div class="what">
+  <div><span class="ttl">MSc Data Analytics, Distinction.</span> <span class="org">University of Portsmouth, United Kingdom.</span></div>
+  <div>Credit-weighted average 70.5/100 (Distinction threshold 70). Master's project 78/100, supervised by Dr Ella Haig.
+     Modules included Intelligent Data and Text Analytics, Big Data and Machine Learning, and Explainable AI.
+     180 UK credits (conventionally 90 ECTS), taught and assessed in English.</div>
+</div></div>
+<div class="row keep"><div class="when">2017 - 2021<br>awarded Jan 2022</div><div class="what">
+  <div><span class="ttl">BSc Computer Science.</span> <span class="org">National University of Computer and Emerging Sciences (FAST-NUCES), Pakistan.</span></div>
+  <div>Four years full time, 130 credit hours completed. CGPA 2.75 on a 0.00 to 4.00 scale.</div>
+</div></div>
+
+<h2>Research</h2>
+<div class="row"><div class="when">2025<br>Master's project</div><div class="what">
+  <div><span class="ttl">Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies.</span></div>
+  <ul>
+    <li><b>Study design.</b> Ethics-approved quantitative study (Portsmouth TETHIC-2025-111094) of about 279,000 public
+        posts and comments on UK economic policy from X/Twitter, Reddit, YouTube and Quora, collected through official APIs and licensed
+        feeds under GDPR-compliant procedures. Human-annotated validation set of 200 posts balanced across platforms
+        (reported inter-annotator agreement Cohen's κ ≈ 0.78).</li>
+    <li><b>Classification and testing.</b> Fine-tuned BERT classifier compared with BiLSTM by McNemar test (p &lt; 0.001) and bootstrap
+        intervals, alongside logistic regression and VADER baselines, with probability calibration.
+        Chi-square tests of sentiment by policy topic; NRC emotion analysis linking anger and fear to negative sentiment
+        in policy discussion.</li>
+    <li><b>Finding.</b> The same policy event produced different sentiment and emotion
+        profiles on different platforms, so a pooled index assumed, without testing, that the classifier measures the same
+        construct everywhere.</li>
+    <li><b>Correction.</b> Re-auditing for the manuscript, I found the headline macro-F1 of 0.878 was agreement with
+        the lexicon-seeded training labels, not with the human set. The manuscript says so and specifies a larger
+        stratified human criterion with a second annotator.</li>
+  </ul>
+</div></div>
+<div class="row keep"><div class="when">2026<br>manuscript</div><div class="what">
+  <div><span class="ttl">Ikram, A. and Haig, E.</span> "Is the Platform Part of the Measurement? A Protocol and Simulation
+    Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." Complete; not published and not submitted.</div>
+  <ul>
+    <li>Treats each social platform as a survey mode and asks whether a classifier measures the same construct on each:
+        a generalizability study against a human criterion, invariance and differential item functioning with platform
+        as the grouping facet, and score linking. Fifteen anchor events fixed on 21 August 2026, before any window count
+        was computed.</li>
+    <li>500-replication simulation with known ground truth: an index that pools platform scores at face value misstates
+        a known event shift by roughly an eighth and reports the wrong sign of aggregate sentiment on nearly a quarter of
+        days; the measurement-adjusted index gets the sign right on all but about one day in sixty.</li>
+  </ul>
+  <div class="plain">No peer-reviewed publications to date.</div>
+</div></div>
+
+<h2>Experience</h2>
+
+<div class="row"><div class="when">Feb 2025 - present</div><div class="what">
+  <div><span class="ttl">Founder and Chief Technology Officer</span>, <span class="org">ArtemisAI Ltd (trading as ViralData),
+    United Kingdom (remote). Social media analytics, running in production ahead of launch on 8 December 2026.</span></div>
+  <ul>
+    <li><b>Text classification.</b> The pipeline processes 111,000+ posts and 3.39 million comments from 30+ public
+        pages. Six fine-tuned encoder classifiers code sentiment, emotion, toxicity, topic, language and intent.</li>
+    <li><b>Annotation design.</b> Claude labels about 6,000 posts with its reasoning; rules mined from that
+        reasoning prompt DeepSeek, which labels about 12,000 more; cases below 0.80 confidence return to Claude.</li>
+    <li><b>Evaluation design.</b> Release gate specified as macro-F1 above 0.85 on both a 97-post human holdout and a
+        4,000-item stratified test set, followed by a human check of 200 random posts; weekly monitoring of shifts in
+        output distributions.</li>
+    <li><b>Agreement is not validity.</b> The two labelling tiers agree on 82.9% of sentiment, 74.4% of emotion and
+        0.0% of toxicity labels (a taxonomy mismatch), while the toxicity model reports 96.7% average confidence: a
+        precise, confident number with no criterion behind it.</li>
+    <li><b>A moving reference.</b> Reported average accuracy rose from 64.7 (v1) to 85.8 (v5), but v1 to v3 were
+        scored against the human holdout and v4 onward against Claude's labels, so part of the gain is the reference
+        moving rather than the model improving.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">Dec 2024 - present</div><div class="what">
+  <div><span class="ttl">Data Engineer, consultant</span>, <span class="org">M+C Saatchi Fluency, United Kingdom (remote)</span></div>
+  <ul>
+    <li>Social data for campaign intelligence for UK Government departments, Amazon, Ford, Nike and Reckitt.</li>
+    <li><b>Discourse analysis.</b> Analysed consumer social conversation for client teams: topic modelling for
+        candidate themes, an LLM-applied codebook checked by hand on a pilot sample, and audience segments reported
+        separately where pooling would mislead.</li>
+    <li><b>Checking what is counted.</b> Coverage audits of incoming data before any comparison, re-derivation of
+        reported figures from source, and consistent denominators across reported metrics.</li>
+    <li class="infra">Infrastructure: 68 collectors (62 active) ingesting ten platforms daily, 6.7 million items in six
+        weeks; one governed master table with documented filter rules and pre-delete backups.</li>
+  </ul>
+</div></div>
+
+<div class="row keep"><div class="when">Feb 2022 - Aug 2024</div><div class="what">
+  <div><span class="ttl">Senior Data Engineer</span>, <span class="org">Dubizzle Labs (Dubizzle, Bayut, Zameen, OLX), Pakistan</span></div>
+  <ul>
+    <li>Multilingual platform data in English, Arabic, Urdu and Hindi from 15 MENA countries. Led three engineers and
+        500+ collectors; redesigned the warehouse, ETL throughput up 60%. Promoted twice in two years.</li>
+  </ul>
+</div></div>
+
+<div class="row keep"><div class="when">2018 - present</div><div class="what">
+  <div><span class="ttl">Earlier and concurrent engagements</span></div>
+  <ul>
+    <li><b>Fix.com</b>, Canada, consultant, part time, May 2023 to present: 50M+ data points from 200+ sources;
+        validation with schema-drift detection cut bad production data by 70%.</li>
+    <li><b>VendueTech</b>, Ireland, Lead Data Engineer, Jun to Jul 2025: led three engineers, latency cut by 40%.
+        <b>Prefe</b>, Italy, Sep to Dec 2024: failure rate cut by 60%, mentored two juniors. <b>CXG</b>, Dubai, Dec 2025
+        to Jan 2026.</li>
+    <li><b>Freelance data engineer</b>, Dec 2018 to Feb 2026: 300+ five-star projects across 400+ websites for 50+
+        international clients.</li>
+  </ul>
+</div></div>
+
+<h2>Awards, public work and languages</h2>
+<div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25 (UK FCDO), selected from 70,000+
+  applicants in 160 countries; funded the MSc.</div></div>
+<div class="kv"><div class="k">Public work</div><div class="v">Author of web-scraping-guide.com, a free public reference on
+  web data collection, its ethics and data quality.</div></div>
+<div class="kv"><div class="k">Languages</div><div class="v">Urdu (native). English: MSc taught and assessed in English; IELTS Academic
+  6.5 (March 2024). No German yet; I would begin learning on arrival.</div></div>
+<div class="kv"><div class="k">Availability</div><div class="v">Can start in November 2026 and relocate to Tübingen.</div></div>
+
+</body></html>
