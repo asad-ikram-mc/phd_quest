@@ -169,6 +169,11 @@ local file — the local `nlp_accuracy_tracker.html` has an empty ENTRIES array 
 | **CXG**, Freelance | Dec 2025–Jan 2026 | Luxury fashion crawlers, **99%+ completeness** against advanced anti-bot. |
 | **Freelance** (Level 2 seller) | Dec 2018–Feb 2026 | **300+ five-star projects, 400+ websites, 50+ clients.** |
 
+**Asad's own statements, 24 Sep 2026 (use these in applications):**
+- **"5+ companies and 300+ freelance clients."** He asked for the CV to say this. Note it differs from the table's "50+ clients" (the table's 300+ was five-star projects); his wording wins, so use "300+ freelance clients" and "5+ companies" (Dubizzle, Fluency, ArtemisAI, Fix.com, VendueTech, Prefe, CXG are seven).
+- **Dubizzle was analysis, not only collection:** he analysed e-commerce and real estate stores and online discussions to build competitor-analysis dashboards that predicted revenue and gave insight into what customers say, using the data warehouse and web scraping.
+- **Fluency, the gist:** "we analyse online data" (the pipelines serve analysis of what people say online).
+
 - **web-scraping-guide.com** — free public engineering reference. **24 sections, 60+ libraries and
   tools, six anti-bot systems**, legal and ethical constraints, production architecture, data quality.
 - Live sites: artemisai.co.uk · fluency-mcsaatchi.com (**NOT** mcsaatchifluency.com, that is a parked
