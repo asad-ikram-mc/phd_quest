@@ -9,7 +9,7 @@ Supervisors: Dr Rosa Sanchez Salgado (PI, interpretivist, emotions in EU policym
 | Field | Upload | Size |
 |---|---|---|
 | Upload CV | `Asad_Ikram_CV_UvA.pdf` (3 pages, the maximum) | 0.1 MB |
-| Upload Motivation Letter (+ additional documentation) | `Asad_Ikram_Motivation_Letter_and_Writing_Sample_UvA.pdf`: letter (2 pages) + writing-sample cover note + dissertation title page and Chapter 6, Methodology (pp. 26 to 34, code-screenshot page 31 omitted) | 2.6 MB |
+| Upload Motivation Letter (+ additional documentation) | `Asad_Ikram_Motivation_Letter_and_Writing_Sample_UvA.pdf`: letter (2 pages) + writing-sample cover note + pages 1 to 15 of the Ikram and Haig manuscript (18 pages total) | 2.0 MB |
 
 Use asad.ikram53@gmail.com. Tick the privacy statement. Submitting is Asad's step.
 
@@ -22,3 +22,7 @@ Checked by a 14-agent workflow (three drafts judged as Ischen/Schumacher, as San
 - Degree is data analytics, not a listed social science (stated in the letter; the advert encourages applying).
 - The IWM application goes to the same day. VU Amsterdam (Roozenbeek) was also applied to; keep stories consistent.
 - Referees not yet told about ELLIS, KTH, IWM or UvA.
+
+## Writing sample, changed 25 Sep
+The first version used dissertation Chapter 6. On rereading it was not fit to send: about a dozen informal "Basically, ..." asides, "This means your annotators agreed", and a two-sentence emotion section. The dissertation is a submitted work and cannot be edited, so the sample is now pages 1 to 15 of the manuscript (abstract to Limitations; the two TODO lines are on pages 16 and 21, outside the excerpt).
+**BEFORE SENDING: the cover note has a capitalised instruction where Asad must state which sections he drafted and what Dr Haig contributed (the advert requires this for co-authored work). Also consider telling Dr Haig the manuscript went to UvA.**
