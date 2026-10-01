@@ -6,6 +6,8 @@
 
 **What changed in v2:** the paper with Dr Ella Haig is finished (23 pages, on arXiv shortly), so every email upgrades from "dissertation finding" to "finished methods paper". Two new checks (novelty survival, one-new-fact follow-ups), the pitch-page escalation, and a lessons log from the live campaign (Nelimarkka, Ella, Theocharis).
 
+**What changed on 1 Oct 2026 (after the Utrecht and VU rejections): READ `LESSONS_FROM_REJECTIONS.md` FIRST.** Four rules now override anything below that conflicts with them. (1) Map every criterion in the advert's profile to a sentence of evidence in the advert's own words. (2) Lead with research and analysis; collection infrastructure gets one line at most (Section 3 below is amended). (3) Open on their phenomenon and papers, never "my question transfers directly to your project". (4) Never promise an arXiv date; say "complete, not yet submitted" until it is live.
+
 ---
 
 ## THE RULES
@@ -62,7 +64,9 @@ decision-making, but the underlying measurement systems cannot [the specific
 failure that THIS professor's work identifies].
 ```
 
-### 3. FLUENCY + DUBIZZLE + FIX.COM PROOF
+### 3. FLUENCY + DUBIZZLE + FIX.COM PROOF (AMENDED 1 Oct 2026: analysis first)
+
+Lead with what he ANALYSED (the economic-policy dissertation, Dubizzle competitor-analysis and revenue-prediction dashboards, Fluency client analysis for Abbott, Reckitt, CFMOTO and the soccer project, ArtemisAI's emotion and toxicity classifiers), plus multilingual work (Urdu native; Arabic and Hindi text). Pipelines and collector counts get at most one clause. The block below is the OLD collector-first version, kept for reference only. It is the version that went into the rejected Utrecht and VU letters.
 
 ```
 I have spent six years building those pipelines. At M+C Saatchi Fluency I
