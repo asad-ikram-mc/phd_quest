@@ -1,5 +1,7 @@
 # UvA Amsterdam, PhD on emotion-sensitive A.I. in politics and policymaking (A.I. Feels, SP1), vacancy 15455
 
+**SUBMITTED 30 Sep 2026 through the portal (confirmed by Asad).**
+
 **Closes 30 September 2026.** Apply online only: https://werkenbij.uva.nl/en/vacancies/phd-position-on-the-effects-of-incorporation-of-emotion-sensitive-a-i-on-politics-and-policymaking-netherlands-15455 (red Apply button).
 
 Supervisors: Dr Rosa Sanchez Salgado (PI, interpretivist, emotions in EU policymaking), Dr Carolin Ischen (ASCoR, human-machine communication), Prof. Gijs Schumacher (Political Psychology, Hot Politics Lab). Start 1 Jan 2027, 38 h, 4 years, about 10% teaching, must live within commuting distance of Amsterdam. Interviews end Oct / early Nov.
