@@ -324,3 +324,9 @@ Photo: **done**, embedded 9 Sep. Address: **removed** at Asad's instruction.
 - **The 1 Nov 2026 PoliMi start collides with the 8 Dec 2026 ArtemisAI launch**, which is 14% built
   and behind pace, with Asad personally owning the stack decision, API contract and data model.
   Unresolved.
+
+
+## Update 2 Oct 2026: Dr Ella Haig's reply (Outlook, 30 Sep 2026)
+- **Referee: confirmed.** "I would be happy to provide references."
+- **arXiv: approved.** "Regarding posting the paper on arXiv, that is absolutely fine." She had only a brief look ("of a good standard") and has no time to review it in depth; they may revisit it when preparing a submission to a peer-reviewed venue.
+- Until the preprint is live, keep writing "complete, not yet submitted". Once live, cite the arXiv ID. The two TODO lines (annotator sentence; repository URL) must be cleared before posting.
