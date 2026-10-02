@@ -28,7 +28,8 @@
 </style></head><body>
 
 <h1>Asad Ikram</h1>
-<div class="sub">MSc Data Analytics (Distinction) &middot; Chevening Scholar 2024/25 &middot; Applied machine learning and NLP, in production and in research</div>
+<div class="sub">MSc Data Analytics (Distinction) &middot; Chevening Scholar 2024/25 &middot; Efficient data processing and machine-annotated text, in production and in research</div>
+<div class="sub" style="margin-top:2pt"><b>Research interest for this post:</b> indexing and query processing for machine-annotated text: indexes that answer keyword, label and score-range queries efficiently and stay correct when a new model version relabels the corpus (project outline attached). Over seven years: 5+ companies and 300+ freelance clients.</div>
 <div class="contact">Lahore, Pakistan &middot; +44 7482 376417 &middot; asad.ikram53@gmail.com &middot;
   linkedin.com/in/asad-ikram98 &middot; asad-ikram-mc.github.io/portfolio &middot; web-scraping-guide.com</div>
 
@@ -41,44 +42,36 @@
 </div></div>
 <div class="row"><div class="when">2017 - 2021<br>awarded Jan 2022</div><div class="what">
   <div><span class="ttl">BSc Computer Science.</span> <span class="org">National University of Computer and Emerging Sciences (FAST-NUCES), Pakistan.</span></div>
-  <div>Four years full time, 130 credit hours completed. CGPA 2.75 on a 0.00 to 4.00 scale.</div>
+  <div>Four years full time, 130 credit hours completed. CGPA 2.75 on a 0.00 to 4.00 scale. Courses included Database Systems (B+), Data Structures, Design and Analysis of Algorithms, Operating Systems, Compiler Construction, Theory of Automata and Data Mining.</div>
 </div></div>
 
 <h2>Machine learning in production</h2>
 <div class="row"><div class="when">Feb 2025 - present</div><div class="what">
-  <div><span class="ttl">Founder and Chief Technology Officer</span>, <span class="org">ArtemisAI Ltd (trading as ViralData), United Kingdom (remote). Running in production ahead of launch on 8 December 2026.</span></div>
+  <div><span class="ttl">Founder and Chief Technology Officer</span>, <span class="org">ArtemisAI Ltd (trading as ViralData), United Kingdom (remote). Running in production ahead of a December 2026 launch.</span></div>
   <ul class="tight">
     <li><b>Six fine-tuned encoder classifiers</b> for sentiment, emotion, toxicity, topic, language and intent, built from
         XLM-R, DistilBERT, DeBERTa-v3 and Detoxify bases and served from six SageMaker endpoints, called in parallel under
         100ms. Custom per-sample loss weighted by label confidence, class balance and label source.</li>
     <li><b>LLM labelling and distillation chain</b> that produces the training data: Claude labels a stratified seed of about
         6,000 posts together with its reasoning, the decision rules in that reasoning are mined into a prompt for DeepSeek,
-        DeepSeek labels about 12,000 more, and any case below 0.80 confidence routes back to Claude. Result is about 18,000 machine-labelled items, which with synthetic cases makes a roughly
+        DeepSeek labels about 12,000 more; both tiers were first checked against about 500 hand-labelled posts and comments. Result is about 18,000 machine-labelled items, which with synthetic cases makes a roughly
         20,000-item confidence-weighted dataset, stratified 80/20. The models I fine-tune are encoder classifiers; I use
         Claude and DeepSeek through APIs and have not fine-tuned a generative model.</li>
     <li><b>Deploy gate and retraining loop.</b> A release ships only at macro-F1 above 0.85 on both a 97-post human holdout
         and a 4,000-item stratified test set, followed by a human check of 200 random posts. Weekly routing loop with
         three-tier confidence routing: roughly 75% auto-committed above 0.85, 18% sent to review between 0.60 and 0.85,
         7% held below 0.60. Weekly KL-divergence drift alarms on output distributions and CI quality gates on every release.</li>
-    <li><b>Multimodal fusion classifier in production:</b> a PyTorch network (1536 to 256 to 64 to 5, Adam, dropout 0.3,
-        balanced class weights, best-validation checkpointing) over three concatenated 512-dimension CLIP embeddings of
-        image, OCR text and caption, at macro-F1 0.93 on a hand-built gold set. Hybrid OCR pipeline at token-F1 0.928,
-        Whisper speech transcription, and a networkx affinity graph applying network theory to a collaboration feature.</li>
+    <li><b>Images and video:</b> PyTorch fusion classifier over CLIP embeddings of image, OCR text and caption (macro-F1 0.93 on a gold set); hybrid OCR pipeline (token-F1 0.928); Whisper transcription; a networkx affinity graph for a collaboration feature.</li>
     <li>Data platform underneath the models: Meta Graph API ingestion of 30+ public pages daily into a layered lakehouse and
         Redshift warehouse, 111,000+ posts and 3.39 million comments processed. Products built on top: underperforming-post
         prediction, posting-time recommendation, drafting and crisis alerts.</li>
-    <li><span class="note">I also instrumented the measurement layer itself. The two annotation
-        tiers agree on 82.9% of sentiment labels and 74.4% of emotion labels while the toxicity model reports 96.7% average
-        confidence, and the dashboard's "accuracy" figure turned out to be inter-model agreement with no criterion behind it.
-        Versions v1 to v3 were scored against the human holdout and v4 onward against Claude's labels, so part of the reported
-        gain is the reference moving rather than the model improving. That moved my interest from building these instruments
-        to asking what their outputs mean.</span></li>
+    <li><b>Versioned labels.</b> Reported accuracy moved with the reference (v1 to v3 scored against a 97-post human holdout, v4 onward against Claude&rsquo;s labels), and the two annotation tiers agree on 82.9% of sentiment but 74.4% of emotion labels: an index over such labels must know which model version produced them.</li>
   </ul>
 </div></div>
 
 <h2>Machine learning in research</h2>
 <p><span class="ttl">Master's thesis: Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies.</span>
-  Fine-tuned a BERT classifier to <b>macro-F1 0.878</b> against BiLSTM and lexicon baselines, with human validation at
+  Fine-tuned a BERT classifier to <b>macro-F1 0.878</b> (later found to be scored against the lexicon-seeded labels, not the human set; the manuscript says so) against BiLSTM and lexicon baselines, with human validation at
   Cohen's &kappa; &asymp; 0.78, temperature-scaling calibration of the predicted probabilities, McNemar and bootstrap
   significance testing of model differences, chi-square topic tests, LIME and integrated gradients for interpretability,
   NRC emotion analysis linking anger and fear to negative policy reactions, and Prophet forecasting of the daily sentiment
@@ -92,7 +85,7 @@
 <h2>Research output</h2>
 <p><span class="ttl">Ikram, A. and Haig, E.</span> "Is the Platform Part of the Measurement? A Protocol and Simulation Study
   for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." <b>Manuscript, complete; not published and not
-  submitted.</b> Target venue ICWSM 2027, Round 3 (15 January 2027). Treats each social platform as a survey mode and applies
+  submitted.</b> Treats each social platform as a survey mode and applies
   generalizability theory, measurement invariance and differential item functioning, and score linking to machine-labelled
   text. In a 500-replication simulation with known ground truth, an index that pools platform-level scores at face value
   reports the wrong sign of the aggregate on roughly a quarter of days, purely from measurement differences between platforms.</p>
@@ -104,9 +97,7 @@
 <div class="row"><div class="when">Dec 2024 - present</div><div class="what">
   <div><span class="ttl">Data Engineer, consultant</span>, <span class="org">M+C Saatchi Fluency, United Kingdom (remote)</span></div>
   <ul class="tight">
-    <li>Operate the multi-platform social listening pipeline behind campaign intelligence for UK Government departments and
-        for Amazon, Ford, Nike and Reckitt: Sprinklr and Brandwatch feeds plus custom collectors into AWS (ECS Fargate,
-        Step Functions, Glue, Athena), with SageMaker NLP sentiment models on the output.</li>
+    <li>Analysing online data for brands and supporting UK Government social listening pipelines. Built the Amazon Sprinklr ETL (cleaning, deduplication, translation, tagging into Postgres and Tableau), with a composite key so that a 770,000-row weekly pipeline re-translates only unseen records. Clients include Amazon, Ford, Nike, Reckitt, Abbott and CFMOTO; AWS (ECS Fargate, Step Functions, Glue, Athena).</li>
     <li>68 collectors ingesting ten platforms daily into a governed 156-column master table; 6.7 million items in a six-week
         window at 99%+ uptime. Automated repair agent as a named CI workflow: when a source changes shape the system
         diagnoses the break, regenerates the extraction logic and tests it against live pages before shipping.</li>
@@ -120,7 +111,7 @@
   <ul class="tight">
     <li>Led a three-engineer team owning 500+ regional collectors across 15 MENA countries on Kubernetes/EKS, gathering
         multilingual platform data in English, Arabic, Urdu and Hindi. Redesigned the layered warehouse (RDL, ODL, ADL),
-        improving ETL/ELT throughput by 60%. Promoted twice in two years.</li>
+        improving ETL/ELT throughput by 60%. Built competitor-analysis dashboards from e-commerce and real estate listings and online discussions that predicted revenue and showed what customers said. Promoted twice in two years.</li>
   </ul>
 </div></div>
 
@@ -134,7 +125,7 @@
     <li><b>Prefe</b>, Italy, consultant, Sep to Dec 2024: rebuilt legacy collectors, cutting failure rate 60%.
         <b>CXG</b>, Dubai, Dec 2025 to Jan 2026: production collectors for luxury retail at 99%+ completeness against
         advanced anti-bot protections. <b>Freelance data engineer</b> (Level 2 seller), Dec 2018 to Feb 2026: 300+
-        five-star projects across 400+ websites for 50+ international clients.</li>
+        five-star projects across 400+ websites for 300+ international clients.</li>
   </ul>
 </div></div>
 
@@ -143,7 +134,7 @@
 <div class="kv"><div class="k">Evaluation</div><div class="v">Macro-F1 against human holdouts and stratified test sets; inter-coder reliability (Cohen's &kappa;); temperature-scaling calibration; McNemar and bootstrap testing; chi-square; KL-divergence drift detection; LIME and integrated gradients; Prophet forecasting.</div></div>
 <div class="kv"><div class="k">Measurement</div><div class="v">Generalizability theory, measurement invariance and differential item functioning, score linking; treating annotators and platforms as measurement instruments rather than as ground truth.</div></div>
 <div class="kv"><div class="k">Data collection</div><div class="v">Scrapy, Playwright, Selenium; official platform APIs (Meta Graph, Reddit, YouTube); licensed feeds; proxy and anti-blocking management; TLS fingerprinting; detection anatomy; agentic browsers.</div></div>
-<div class="kv"><div class="k">Engineering</div><div class="v">Python, PySpark, SQL; AWS (SageMaker, Fargate, Glue, Athena, Redshift, Step Functions, Lambda, DynamoDB); Airflow; Docker and Kubernetes; PostgreSQL; CI/CD with automated quality gates. R functional rather than fluent.</div></div>
+<div class="kv"><div class="k">Engineering</div><div class="v">Python, PySpark, SQL; AWS (SageMaker, Fargate, Glue, Athena, Redshift, Step Functions, Lambda, DynamoDB); Airflow; Docker and Kubernetes; PostgreSQL; CI/CD with automated quality gates. R functional rather than fluent. Production code is Python; building C++ systems skills (on the PISA engine) is the first step of my PhD plan.</div></div>
 
 <h2>Awards, public work and languages</h2>
 <div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25, the UK Foreign, Commonwealth and Development Office's flagship global scholarship, selected from over 70,000 applicants across 160 countries and awarded to fund the MSc at Portsmouth.</div></div>
