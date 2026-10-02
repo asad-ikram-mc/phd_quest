@@ -1,5 +1,7 @@
 Dear Dr Gupta,
 
+**SUBMITTED 2 Oct 2026, 15:26 on Jobbnorge (confirmed by Asad screenshot).**
+
 For seven years I have built systems that store and query what people write online, and the hard part has rarely been the model. It has been finding the right posts fast once millions of them carry machine annotations. I am applying for the PhD position in efficient search engines in the Databases and Search group because your work on GYANI and on range search over temporal and numerical expressions addresses exactly that problem from the indexing side.
 
 Education. I hold an MSc in Data Analytics with Distinction from the University of Portsmouth (credit-weighted average 70.5, Distinction threshold 70; independent master's project of 60 UK credits, about 30 ECTS, mark 78) and a BSc in Computer Science from FAST-NUCES. My research thesis is a data-mining study of about 279,000 social media posts on UK economic policy: a fine-tuned BERT classifier, BiLSTM and lexicon baselines, and a human-coded validation set. It became a methods manuscript with my supervisor, Dr Ella Haig, which is complete but not yet submitted.
