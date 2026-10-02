@@ -1,0 +1,16 @@
+Dear Dr Gupta,
+
+For seven years I have built systems that store and query what people write online, and the hard part has rarely been the model. It has been finding the right posts fast once millions of them carry machine annotations. I am applying for the PhD position in efficient search engines in the Databases and Search group because your work on GYANI and on range search over temporal and numerical expressions addresses exactly that problem from the indexing side.
+
+Education. I hold an MSc in Data Analytics with Distinction from the University of Portsmouth (credit-weighted average 70.5, Distinction threshold 70; independent master's project of 60 UK credits, about 30 ECTS, mark 78) and a BSc in Computer Science from FAST-NUCES. My research thesis is a data-mining study of about 279,000 social media posts on UK economic policy: a fine-tuned BERT classifier, BiLSTM and lexicon baselines, and a human-coded validation set. It became a methods manuscript with my supervisor, Dr Ella Haig, which is complete but not yet submitted.
+
+Efficient data processing. At Dubizzle Labs I led three engineers running 500+ collectors in four languages across 15 countries and redesigned the data warehouse, raising ETL throughput by 60 per cent. At Fix.com I process 50 million+ data points from 200+ sources. At ArtemisAI, where I am founder and CTO, six fine-tuned classifiers annotate more than three million comments, and the questions users ask filter on those labels and confidence scores, which change whenever a model is retrained.
+
+Programming. I program daily in Python, SQL and PySpark at production scale. My BSc covered programming, data structures, algorithms, database systems, operating systems and compiler construction. My production work since then has been in Python, so I would strengthen C++ for low-level systems work, and I say so plainly.
+
+My research interest is indexing and query processing for machine-annotated text: indexes that answer queries over labels and numeric scores efficiently, and stay correct when a new model version relabels the corpus. The attached project outline describes this.
+
+I would relocate to Trondheim, can start in early 2027, and am glad to assist with teaching in databases, data mining and information retrieval. Thank you for considering my application.
+
+Yours sincerely,
+Asad Ikram
