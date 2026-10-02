@@ -89,7 +89,7 @@ master's is treated. See `PoliMi Application/REQUIREMENTS.md` Part 0.1.
 - **MSc dissertation**: *Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies*.
   ~**279,000** posts, four platforms (Twitter/X, Reddit, YouTube, Quora), official APIs and licensed
   feeds, ethics-approved and GDPR-compliant. Fine-tuned **BERT macro-F1 0.878** against BiLSTM and
-  lexicon baselines. Human validation **Cohen's κ ≈ 0.78**. Temperature-scaling calibration. McNemar
+  lexicon baselines. Human validation: 200 posts hand-labelled by Asad alone (reviewing VADER's labels); the dissertation's **κ ≈ 0.78 is agreement with VADER, not inter-annotator** (see 2 Oct 2026 note). Temperature-scaling calibration. McNemar
   and bootstrap tests. Chi-square topic tests. Prophet forecasting, **MAE ≈ 0.02**. NRC emotion
   analysis; LIME and integrated gradients.
 - **Paper with Dr Ella Haig**: *"Is the Platform Part of the Measurement?"* Treats each platform as a
@@ -332,3 +332,5 @@ Photo: **done**, embedded 9 Sep. Address: **removed** at Asad's instruction.
 - Until the preprint is live, keep writing "complete, not yet submitted". Once live, cite the arXiv ID. The two TODO lines (annotator sentence; repository URL) must be cleared before posting.
 - Thread context (Outlook, "Exploring Funded PhD Opportunities in AI and Social Media Analytics"): on 8 Sep Asad sent Ella the finished arXiv draft (23 pages, 12 figures; Overleaf connected to a GitHub repository; protocol and simulation paper, revised after Eni's ICWSM-style review) with seven positioning questions on the passphrase-protected project page. On 21 Sep he reminded her that referee requests would arrive from portals (the first closing 30 Oct) and asked about arXiv. Her 30 Sep reply approves arXiv but does not answer the seven questions, so those decisions are Asad's. The ICWSM venue strategy is still to be discussed with her later. (The page passphrase is deliberately not recorded here.)
 - **Dr Fahad Ahmad confirmed as referee** (LinkedIn message, reported by Asad 2 Oct 2026). Both academic referees (Haig, Ahmad) are now confirmed.
+- **Kappa wording (decided 2 Oct 2026).** Asad labelled all 200 validation posts himself. Dissertation p.28 calls κ ≈ 0.78 'inter-annotator agreement', but its own plain-language gloss says it measures how often VADER's tags and the hand check agreed (p.25: 'manual review of VADER-labelled data'). From now on write '200 posts hand-labelled by me' and, if κ is mentioned, 'κ ≈ 0.78 against VADER'. Never 'inter-annotator' or 'human-coded validation set (κ 0.78)'. Letters already sent (IWM, UvA, NTNU and earlier) used the old wording.
+- **Paper v1 built (2 Oct 2026):** all 32 review edits, kappa wording as above, competing-interests note (ArtemisAI). Code repo public: https://github.com/asadfix/platform-measurement. Email Ella Mon 5 Oct; submit to arXiv Mon 12 Oct.
