@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project Description, Asad Ikram</title>
+<style>
+  @page { size: A4; margin: 16mm; }
+  :root { --ink: #111; --muted: #444; --rule: #999; }
+  html, body { background: #fff; color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: "Times New Roman", Times, "Liberation Serif", serif;
+    font-size: 11pt;
+    line-height: 1.17;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  @media screen { body { max-width: 176mm; margin: 12mm auto; padding: 0 16px; } }
+  h1 { font-size: 14pt; line-height: 1.15; margin: 0 0 1.2mm 0; text-align: left; }
+  .byline { font-size: 9.5pt; color: var(--muted); margin: 0 0 2mm 0; padding-bottom: 1.6mm; border-bottom: 0.6pt solid var(--rule); text-align: left; }
+  h2 { font-size: 11.5pt; margin: 2mm 0 0.6mm 0; }
+  p { margin: 0 0 1.2mm 0; }
+  .rq { margin: 0 0 1.2mm 0; }
+  .rq b { font-weight: bold; }
+  .refs { font-size: 8.2pt; line-height: 1.12; columns: 2; column-gap: 5mm; margin-top: 0.6mm; text-align: left; }
+  .refs p { margin: 0 0 0.5mm 0; padding-left: 5mm; text-indent: -5mm; break-inside: avoid; }
+  .sup { font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Privately validating, fine-tuning and serving shared language-model annotators</h1>
+<div class="byline">Project description &middot; Asad Ikram, applicant, ref. 2026/987 &middot; PhD in Secure and Privacy-Preserving Collaborative Language Models, Department of Electronic Systems, Aalborg University Copenhagen</div>
+
+<h2>1. Motivation</h2>
+<p>At Artemis AI, a UK start-up where I am co-founder and CTO, I designed a labelling chain for our text classifiers: Claude labelled about 6,000 posts and explained each label, we mined decision rules from those explanations into a prompt for DeepSeek, DeepSeek labelled 12,000 more, and our encoder models were trained on it. Three lessons lead to this project. First, the chain moved a large model's labelling behaviour into small models we control. We did it legitimately, through paid access, but step for step it is a model-extraction pipeline, and the large model's written explanations made it cheap. Second, validating the chain was harder than building it. The two tiers agreed on 82.9% of sentiment labels and 74.4% of emotion labels but on no toxicity labels, because their taxonomies did not match. The same held at M+C Saatchi Fluency and in my manuscript with Dr Ella Haig: each validity check rested on a small human-labelled sample its owner could not share. When organisations share one language model, that sample is what they would pool, and the model is what an outsider would try to copy. Third, I now build agents: a self-repairing crawler agent at Fluency that reads untrusted pages and writes production code, and Art-E, an advisor over each client's own data that I am leading at Artemis AI for December pilots. Both rest on engineering rules (prompt fencing, approval gates, tenant isolation); this project aims at measurable guarantees.</p>
+
+<h2>2. Topic overview</h2>
+<p>Organisations use large language models (LLMs) to code text at scale: customer feedback, threat reports and, in healthcare analytics, clinical notes. Many would gain from sharing one annotator, an LLM service or a small model trained on its labels, yet each holds a small, sensitive human-labelled sample, often under its own scheme, that it cannot release. The project treats the shared annotator as the unit of collaboration, to be validated (RQ1) and fine-tuned (RQ2) jointly and served without outsiders copying the model or its reasoning (RQ3). At each stage it asks what leaks, to whom, and what it costs to stop, in Dr Li's information-theoretic terms [8, 9].</p>
+
+<h2>3. State of the art</h2>
+<p>Federated averaging trains a shared model from updates instead of records [1], secure aggregation reveals only the sum of those updates [2], and differentially private fine-tuning gives language models formal guarantees at a modest cost in accuracy [3]. These protections are weaker than they look: shared gradients can be inverted [4], Li et al. recast input reconstruction as a hidden subset sum problem that allows exact recovery [5], SOMP recovers training text from aggregated LLM gradients [6], and in decentralised federated learning colluding nodes can exploit sparse topologies to reconstruct honest participants' updates from secure-aggregation outputs [7]. Mutual-information metrics let secure multiparty computation, differential privacy and perturbation be compared in one framework [8], and decentralised learning via distributed optimisation provably leaks no more than centralised federated learning [9]. Cryptographic (MPC and homomorphic) inference for transformers is feasible but costly [10]. Evaluation is less studied: valid estimates from LLM labels need a small human-labelled sample for correction, through design-based supervised learning [11] or prediction-powered inference (PPI) [12]. Federated PPI [13] keeps gold data in silos through federated learning, so it inherits the leakage risks above; to my knowledge, what its shared quantities reveal about each party's gold data has not been analysed. Deployment adds extraction: prediction APIs are enough to copy models [14] and to recover part of a production LLM [15], and hidden chain-of-thought can be drawn out of frontier models by registering a custom tool through a standard API feature [16]. PRADA detects extraction from the distribution of a single client's queries [17]; how such detectors fare when an extractor spreads queries across many accounts and imitates ordinary users is unclear. Integrity matters too: a dishonest participant can hijack routing in federated retrieval-augmented generation [18].</p>
+
+<h2>4. Research questions and techniques</h2>
+<p class="rq"><b>RQ1. Can several organisations validate a shared LLM annotator, and correct their downstream estimates, without revealing their human-labelled samples?</b> Each party runs the annotator in-house (open weights or the RQ2 model), so gold texts never leave it; it maps its labels to a shared taxonomy (the step whose absence produced the zero agreement above) and computes locally the statistics that PPI and design-based supervised learning need [11, 12]: per-class confusion counts and residual means. Against passive, possibly colluding, parties and eavesdroppers [8], counts are combined by secure aggregation [2], each party adding its share of differential-privacy noise first [19], or without a server by PDMM-based private average consensus [21]. Because pooling is valid only if the annotator errs alike across parties, the protocol first tests this under additive secret sharing, revealing only the result: my manuscript's invariance checks, moved into secure computation. I then attack it: differencing across releases as gold samples grow and, in the decentralised variant, lattice reconstruction of a party's counts from the different neighbourhood aggregates that colluders see, as in [7]. Measures: interval coverage and width against privacy budget and number of parties, leakage under [8], and how far one party reporting false counts, which secure aggregation hides, can shift the pooled estimate.</p>
+<p class="rq"><b>RQ2. Can organisations jointly fine-tune a small annotator under differential privacy, and what is the measured trade-off between annotator quality and leakage?</b> I start with the encoder classifiers I fine-tune in production, then a small open-weight generative model. Federated averaging [1] and differentially private, parameter-efficient fine-tuning [3] are the baselines; decentralised training over organisation graphs, varying sparsity and where colluding nodes sit, tests how topology changes leakage [7, 9], the question of the WHISPERS project. Leakage is measured with gradient-inversion attacks on text [4, 6], as an empirical lower bound beside the formal guarantee, and, following the cue-controlled design of [20], recovered text is scored against what the model's prior alone would guess, so leakage is not overstated. Quality is macro-F1 on each party's held-out human labels.</p>
+<p class="rq"><b>RQ3. Can a shared LLM annotation service detect query-based extraction of its model or its hidden reasoning when the extractor spreads queries across many accounts and imitates ordinary users?</b> An extraction-traffic simulator, run against self-hosted open-weight models only, covers label-based model extraction [14, 15] and tool-induced chain-of-thought externalisation [16]. Detection works at two levels: per request, flagging tool definitions and prompts that make a model write out its reasoning [16]; and per campaign, linking accounts whose queries, taken together, cover the inputs an extractor needs. PRADA [17] tests one client's query distances and was designed for synthetic image queries, so I extend it across accounts with the signals commercial bot-detection systems use: timing, request structure, repetition and coordination. Years of building large-scale web data collection taught me which of these signals expose automated collection; RQ3 turns that into a defence. Legitimate agents also issue many structured tool calls, so the key measure is the false-positive cost to genuine users and agents. For collaborative threat detection, providers could pool detection signals through the RQ1 protocol, not raw logs.</p>
+
+<h2>5. Work plan (36 months)</h2>
+<p>Year 1 closes my gaps first: cryptography, secure multiparty computation, homomorphic encryption, differential privacy, federated learning and fine-tuning a generative model. <b>Year 1:</b> courses and reading; reproduce federated, differentially private and secure-aggregation baselines on public annotated corpora split into simulated organisations; RQ1 protocol and first paper. <b>Year 2:</b> RQ1 attack study; RQ2 federated and decentralised fine-tuning; second paper; research stay at another institution. <b>Year 3:</b> RQ3 simulator, detector and benchmark; third paper; thesis. Experiments use public data and self-hosted models; code is released openly, as for my manuscript.</p>
+
+<h2>6. Expected outcomes</h2>
+<p>(1) An open-source Python protocol for private joint validation of LLM annotators, with its trade-off between privacy budget and interval coverage. (2) A leakage analysis of shared validation statistics, with settings that close the attacks found. (3) Quality and leakage curves for federated and decentralised fine-tuning. (4) An open benchmark of distributed extraction traffic and a detector with a stated false-positive cost. (5) Three papers for the group's venues (ACL/EMNLP, IEEE TIFS, ICASSP) and the thesis. Together these would let organisations in healthcare analytics, security or social research share an annotator and its validation without sharing records.</p>
+
+<h2>References</h2>
+<div class="refs">
+<p>[1] McMahan HB, Moore E, Ramage D, et al. Communication-efficient learning of deep networks from decentralized data. AISTATS 2017.</p>
+<p>[2] Bonawitz K, Ivanov V, Kreuter B, et al. Practical secure aggregation for privacy-preserving machine learning. ACM CCS 2017.</p>
+<p>[3] Yu D, Naik S, Backurs A, et al. Differentially private fine-tuning of language models. ICLR 2022.</p>
+<p>[4] Zhu L, Liu Z, Han S. Deep leakage from gradients. NeurIPS 2019.</p>
+<p>[5] <span class="sup">Li Q</span>, Luo L, Gini A, et al. Beyond gradient inversion: hidden subset sum problem-based input reconstruction for federated learning. IEEE TPAMI 2026 (early access).</p>
+<p>[6] Li Y, <span class="sup">Li Q</span>. SOMP: scalable gradient inversion for large language models via subspace-guided orthogonal matching pursuit. arXiv:2603.16761, 2026 (preprint).</p>
+<p>[7] Yu W, Ji C, Bjerva J, <span class="sup">Li Q</span>. When topology betrays privacy: lattice-based reconstruction attacks on secure aggregation in decentralized federated learning. arXiv:2609.08476, 2026 (preprint).</p>
+<p>[8] <span class="sup">Li Q</span>, Gundersen JS, Heusdens R, Christensen MG. Privacy-preserving distributed processing: metrics, bounds and algorithms. IEEE TIFS 16, 2021.</p>
+<p>[9] Yu W, <span class="sup">Li Q</span>, Lopuha&auml;-Zwakenberg M, et al. Provable privacy advantages of decentralized federated learning via distributed optimization. IEEE TIFS 20, 2025.</p>
+<p>[10] Pang Q, Zhu J, M&ouml;llering H, et al. BOLT: privacy-preserving, accurate and efficient inference for transformers. IEEE S&amp;P 2024.</p>
+<p>[11] Egami N, Hinck M, Stewart BM, et al. Using imperfect surrogates for downstream inference: design-based supervised learning for social science applications of large language models. NeurIPS 2023.</p>
+<p>[12] Angelopoulos AN, Bates S, Fannjiang C, et al. Prediction-powered inference. Science 382, 2023.</p>
+<p>[13] Luo P, Deng X, Wen Z, et al. Federated prediction-powered inference from decentralized data. arXiv:2409.01730, 2024 (preprint).</p>
+<p>[14] Tram&egrave;r F, Zhang F, Juels A, et al. Stealing machine learning models via prediction APIs. USENIX Security 2016.</p>
+<p>[15] Carlini N, Paleka D, Dvijotham K, et al. Stealing part of a production language model. ICML 2024.</p>
+<p>[16] Luo X, Ren T, Yu W, Li X, <span class="sup">Li Q</span>, Bjerva J. Capable yet parsimonious: extracting and characterizing hidden chain-of-thought in frontier models. arXiv:2609.26637, 2026 (preprint).</p>
+<p>[17] Juuti M, Szyller S, Marchal S, et al. PRADA: protecting against DNN model stealing attacks. IEEE EuroS&amp;P 2019.</p>
+<p>[18] Mu J, <span class="sup">Li Q</span>. A wolf in sheep's clothing: targeted routing hijacking in federated RAG. EMNLP 2026 (accepted); arXiv:2605.28112.</p>
+<p>[19] Boyd K, Lantz E, Page D. Differential privacy for classifier evaluation. ACM AISec 2015.</p>
+<p>[20] Luo X, Chen Y, <span class="sup">Li Q</span>, Bjerva J. Do LLMs really memorize personally identifiable information? Revisiting PII leakage with a cue-controlled memorization framework. ACL 2026.</p>
+<p>[21] <span class="sup">Li Q</span>, Heusdens R, Christensen MG. Convex optimisation-based privacy-preserving distributed average consensus in wireless sensor networks. ICASSP 2020.</p>
+</div>
+
+</body>
+</html>

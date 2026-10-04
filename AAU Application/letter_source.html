@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Application letter, Asad Ikram, AAU 2026/987</title>
+<style>
+  @page { size: A4; margin: 15mm 17mm 14mm 17mm; }
+  body { font-family: "Times New Roman", Times, serif; font-size: 10.5pt; line-height: 1.33;
+         color: #000; margin: 0; text-align: justify; hyphens: manual; }
+  .hdr { text-align: left; font-size: 9pt; color: #333; margin-bottom: 9pt; }
+  .hdr b { font-size: 12pt; color: #000; display: block; margin-bottom: 1pt; }
+  .to { text-align: left; margin-bottom: 6pt; }
+  .date { text-align: left; margin-bottom: 6pt; }
+  .re { font-weight: bold; margin-bottom: 7pt; text-align: left; }
+  p { margin: 0 0 5.5pt; }
+  .sig { margin-top: 8pt; text-align: left; }
+  .sig .n { font-weight: bold; }
+  i { font-style: italic; }
+</style></head><body>
+
+<div class="hdr"><b>Asad Ikram</b>
+  Lahore, Pakistan &middot; asad.ikram53@gmail.com &middot; +44 7482 376417 &middot;
+  linkedin.com/in/asad-ikram98 &middot; github.com/asadfix</div>
+
+<div class="to">Dr Qiongxiu Li and the assessment committee<br>
+  Department of Electronic Systems, Technical Faculty of IT and Design<br>
+  Aalborg University Copenhagen, Denmark</div>
+
+<div class="date">4 October 2026</div>
+
+<div class="re">Re: PhD in Secure and Privacy-Preserving Collaborative Language Models (ref. 2026/987)</div>
+
+<p>Dear Dr Li,</p>
+
+<p>I once used a large language model's own explanations to teach cheaper models to label the way it does, for
+  about $12.50 in API calls. At Artemis AI, the UK start-up where I am co-founder and CTO, we needed training data
+  for six text classifiers. I designed a chain in which Claude labelled about 6,000 public posts and, because we
+  asked it to, explained each label in its response; we mined the decision rules out of those written explanations
+  into a prompt for DeepSeek, which labelled 12,000 more at a fraction of the cost, and our small encoder models
+  were trained on the result. It worked, and it was done through paid access for our own classifiers. But step for
+  step it is the pipeline of a model-extraction attack: query, collect the outputs and the explanations, imitate.
+  The explanations were the part that made it cheap. Your project asks how several parties can build on language models together while keeping their
+  data confidential and the models intact. That is the question I want to work on for the next three years.</p>
+
+<p><b>Why this PhD, and why your group.</b> Because of that experience, the posting's line on defences against
+  model extraction and chain-of-thought attacks led me straight to your preprint with Luo, Ren, Yu, Li and Bjerva,
+  <i>Capable yet Parsimonious</i> (arXiv:2609.26637). You induce frontier models to externalise their hidden
+  reasoning by registering a simple custom tool through a standard API feature, and because such traces might be
+  post-hoc rationalisation, you first test them against native chain-of-thought on open models and find that they
+  match its performance. I never tested the faithfulness of Claude's explanations before mining rules from them.
+  Your mitigations appendix suggests restricting forced tool selection or inspecting tool arguments, but notes that
+  legitimate planning tools produce similar content, so a provider also has to tell legitimate tool use apart from
+  systematic extraction. That is a detection problem I know from the collection side, as I explain below. Your EMNLP
+  2026 paper with Junjie Mu on routing hijacking in federated RAG (arXiv:2605.28112) shaped the collaborative part
+  of my plan. A
+  malicious client forges its profile to attract target queries, and the defence has to work without trusting what
+  participants say about themselves. I see the same structure in the problem my own work points to: organisations that
+  each check an LLM annotator against their own small hand-labelled samples would gain a great deal by pooling
+  that evidence, but they cannot share the samples and cannot assume every party is honest. The enclosed project
+  description proposes to study private joint validation of shared LLM annotators, what the shared statistics
+  leak, and how to detect extraction, including chain-of-thought extraction, spread across many accounts. The
+  posting's title echoes your DFF project WHISPERS on privacy-preserving collaborative language models via
+  topological federated learning; in my plan that is RQ2, fine-tuning over graphs of organisations where topology
+  decides what colluding nodes can see, and I would weight it more heavily if the group needs that.</p>
+
+<p><b>Python and distributed systems at scale.</b> Python is my working language in production. At M+C Saatchi
+  Fluency, where I have been a part-time Data Engineer since December 2024, I designed and operate a fleet of 64
+  Scrapy forum crawlers for a global automotive brand behind a CI gate and alerting, and I operate and repair a weekly AWS pipeline (Lambda, Fargate, Postgres) whose master table
+  holds 2.2 million rows by 184 columns for a global e-commerce client, including memory fixes and an 89-check
+  data-quality sweep before each release. At Fix.com, a contract role since May 2023, I have designed and run its
+  crawler platform for parts catalogues on my own since June 2026 (about 10 million rows across 82 datasets by
+  October). At Dubizzle Labs, Lahore (February 2022 to August 2024, Associate Software Engineer to Senior Data
+  Engineer), I led a three-engineer team running more than 500 scrapers across 15 markets on Kubernetes/EKS. None
+  of this is distributed training, but it is what collaborative learning runs on: many independent workers,
+  unreliable inputs, and failures caught before they reach the data.</p>
+
+<p><b>LLM pipelines and their validation.</b> At Artemis AI, where I lead the technology in a team of eight ahead
+  of pilots in December 2026, our classifiers learn from two LLM labelling tiers, first checked against about 500
+  posts and comments the team labelled by hand. When I compared the tiers, they agreed on 82.9% of sentiment and
+  74.4% of emotion labels but on no toxicity labels at all, because they used incompatible taxonomies, while the
+  toxicity model reported high confidence. A model-quality audit I ran in September found that our reported
+  accuracies measured agreement with the labelling model rather than with people, so we are rebuilding evaluation
+  around a human-labelled golden set before launch. At Fluency, on a study of twelve months of social discourse,
+  every LLM tag records a hash of the prompt version that produced it, and three pilot runs on the same 500 rows
+  were compared before the full run; I also contribute to LLM-assisted coding of about 170,000 multilingual posts
+  and reviews for a global infant-nutrition brand.</p>
+
+<p><b>Securing agents that read the open web.</b> The posting's strand on secure agentic AI describes systems I
+  already run. For the crawler fleet I designed a self-repairing agent: when a source changes shape it diagnoses the
+  break, escalates between Claude models by cause, regenerates the spider and tests it against live pages. It reads
+  untrusted third-party text and writes code that runs in production, so I treat it as an attack surface: page
+  content enters the prompt fenced as untrusted data, secrets and cookies are refused and caught by a scanner,
+  generated code is checked against forbidden patterns, every merge needs a single-use approval code tied to the
+  test sample and expiring in ten minutes, and the build service colleagues' agents call sits behind OAuth with
+  PKCE. At Artemis AI I am now leading the build of Art-E, an advisor that answers each client's questions from that client's own data, for pilots in December. The approaches I am applying are engineering ones: tenants isolated at the database, retrieval scoped to one client's records, prompt injection red-teamed before release, and an output check that rejects any answer naming a number absent from that client's data. They are rules, not guarantees. What this PhD would give that work is the part I cannot yet supply: proofs of what shared statistics and model updates reveal, ways for clients to pool evidence without pooling data, and detection of extraction through an agent's own tools.</p>
+
+<p><b>Research, and what I know about extraction.</b> My research so far is about measurement validity: whether a
+  machine label means what it claims. I took my MSc in Data Analytics at the University of Portsmouth as a Chevening Scholar (2024/25, Distinction). My dissertation analysed about 279,000
+  public posts on UK economic policy from four platforms under university ethics approval, and I hand-labelled 200
+  posts myself to check the lexicon labels (kappa about 0.78 against VADER). With my supervisor Dr Ella Haig I
+  developed it into a methods manuscript, <i>Is the Platform Part of the Measurement?</i>, which brings
+  psychometric tools to machine-labelled text and shows in a 500-replication simulation that pooling platform scores
+  at face value gives the wrong sign of aggregate sentiment on roughly a quarter of days. It is complete and not yet
+  submitted; the code is public (github.com/asadfix/platform-measurement, DOI 10.5281/zenodo.23105129). This is
+  why your ACL 2026 paper with Luo, Chen and Bjerva on cue-controlled PII memorisation struck me: it shows that much
+  reported leakage is explained by cues in the prompt, which is a validity argument about a privacy metric. The
+  other thing I bring is practical knowledge of query-based extraction. Since 2018 I have built automated web-data collection professionally (300+ completed Fiverr orders, then production crawlers for sites behind commercial bot-management systems). That work taught me how defenders recognise automated
+  collection: request rate and timing, the structure and repetition of requests, client and browser fingerprints,
+  and challenge pages. Extracting a model or its reasoning through an API is the same problem in a new place, and
+  I want to work on the defender's side of it.</p>
+
+<p><b>What I do not bring yet.</b> I have no background in cryptography, secure multiparty computation or
+  homomorphic encryption, and I have not implemented federated learning or differential privacy. The models I
+  fine-tune are encoder classifiers; I use Claude and DeepSeek through APIs and have not fine-tuned a generative
+  model. I have no peer-reviewed publications yet. I would plan the first year around these gaps: the doctoral
+  school's courses, reproducing a standard federated fine-tuning baseline with differential privacy before
+  extending it, and working through secure aggregation and secret sharing with your group, starting from its own
+  work on privacy-preserving distributed processing and on attacks against secure aggregation. My BSc in Computer
+  Science (FAST-NUCES, August 2017 to January 2022) included probability and statistics, linear algebra and
+  numerical methods, and the mathematics I have used most since is statistical: the bootstrap and McNemar tests of
+  my dissertation and the psychometric protocol and 500-replication simulation of my manuscript. I would add
+  optimisation and information theory in the first year, since your group's privacy analysis rests on them.</p>
+
+<p>I can start on 1 November 2026 or soon after and would relocate to Copenhagen. Enclosed are my CV, my BSc and MSc
+  diplomas with grades, and a two-page project description. Dr Ella Haig and Dr Fahad Ahmad (both University of Portsmouth) have agreed to act as referees. Thank
+  you for considering my application.</p>
+
+<div class="sig">Yours sincerely,<br><br>
+  <span class="n">Asad Ikram</span></div>
+
+</body></html>
