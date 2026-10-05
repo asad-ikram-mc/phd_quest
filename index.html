@@ -262,6 +262,7 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 .prio-head>div:last-child{flex-shrink:0}
 .prio-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--text);line-height:1.1}
 .prio-sub{font-size:14px;color:var(--text2);margin-top:6px;max-width:560px;line-height:1.6}
+.prio-gloss{margin-top:10px;font-size:13px;color:var(--text2);display:grid;gap:5px;line-height:1.5}.prio-gloss .prank{font-family:'JetBrains Mono',monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-right:6px}.gl-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 4px 0 2px;vertical-align:middle}.gl-red{background:var(--red)}.gl-amber{background:var(--amber)}
 .prio-legend{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);display:flex;gap:14px;flex-wrap:wrap}
 .prio-legend span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
 .prio-legend .lg-now::before{background:var(--red)} .prio-legend .lg-week::before{background:var(--amber)} .prio-legend .lg-month::before{background:var(--cyan)} .prio-legend .lg-later::before{background:var(--purple)}
@@ -616,13 +617,9 @@ footer a:hover{color:var(--gold2)}
     </div>
     <nav class="tab-bar">
       <button class="tab-btn active" onclick="switchTab('overview',this)"><span class="tab-ico">◈</span>Now</button>
-      <button class="tab-btn" onclick="switchTab('outreach',this)"><span class="tab-ico">◉</span>Outreach</button>
-      <button class="tab-btn" onclick="switchTab('active',this)"><span class="tab-ico">▣</span>Active<span class="tab-label-long">&nbsp;app</span></button>
-      <button class="tab-btn" onclick="switchTab('papers',this)"><span class="tab-ico">◇</span>Papers<span class="tab-label-long">&nbsp;&amp; Docs</span></button>
-      <button class="tab-btn" onclick="switchTab('fit',this)"><span class="tab-ico">◆</span>Why me</button>
-      <button class="tab-btn" onclick="switchTab('pattern',this)"><span class="tab-ico">✉</span>Emails</button>
-      <button class="tab-btn" onclick="switchTab('calendar',this)"><span class="tab-ico">○</span>Calendar</button>
-      <button class="tab-btn" onclick="switchTab('claude',this)"><span class="tab-ico">✦</span>Plan</button>
+      <button class="tab-btn" onclick="switchTab('outreach,pattern',this)"><span class="tab-ico">◉</span>People<span class="tab-label-long">&nbsp;&amp; emails</span></button>
+      <button class="tab-btn" onclick="switchTab('active,papers,fit',this)"><span class="tab-ico">◇</span>Docs</button>
+      <button class="tab-btn" onclick="switchTab('calendar,claude',this)"><span class="tab-ico">○</span>Calendar<span class="tab-label-long">&nbsp;&amp; plan</span></button>
     </nav>
   </div>
 </header>
@@ -647,10 +644,10 @@ footer a:hover{color:var(--gold2)}
     <div class="prio-head">
       <div>
         <div class="prio-title">Priority list — start here</div>
-        <div class="prio-sub">Numbered by your chances: warm humans and live processes first, cold long-shots last. The colours still show when to act, and the days-left counters update from today's date. Each card leads with a facts strip, then what it is, then a checklist: tick a step as you do it and the card keeps your progress. Use the small arrow on a step to read its detail, and the big tick on the right to mark the whole item Done. Use the tabs below to see only what is to do, in progress or done. All of it persists in this browser.</div>
+        <div class="prio-sub">Things still to do come first, nearest deadline at the top. Anything you have already sent moves down to "Sent · waiting". Tick steps as you do them; the big tick on the right marks the whole item done. Your ticks are saved in this browser.</div><div class="prio-gloss"><div><span class="prank pr1">P1 top</span> best fit and best chance: do these first, full effort.</div><div><span class="prank pr2">P2 strong</span> good fit: worth a full application if time allows.</div><div><span class="prank pr3">P3 optional</span> long shot or weak fit: only if there is spare time.</div><div><span class="gl-dot gl-red"></span>red date: passed or 10 days or less left · <span class="gl-dot gl-amber"></span>amber: within 30 days · grey: later</div><div>The number on the left is just the order in the list. "Sent · waiting" means applied or emailed, now waiting on them.</div></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
-        <div class="prio-legend"><span class="lg-now">do now</span><span class="lg-week">this week</span><span class="lg-month">by mid-Sep</span><span class="lg-later">Oct onward</span></div>
+        
         <button class="prio-toggle" id="prio-toggle" onclick="togglePrioAll()">Expand all</button>
       </div>
     </div>
@@ -1470,7 +1467,7 @@ Nelimarkka (Helsinki) Platformed Interactions 2020 + Berg &amp; Nelimarkka 2023
 function switchTab(id,btn){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('panel-'+id).classList.add('active');
+  id.split(',').forEach(function(x){var el=document.getElementById('panel-'+x); if(el) el.classList.add('active');});
   btn.classList.add('active');
 }
 
@@ -2841,19 +2838,19 @@ var prioFilter='all';
 var PRIO_FILTERS=[
   {k:'all',      label:'All'},
   {k:'todo',     label:'To do'},
-  {k:'progress', label:'In progress'},
   {k:'applied',  label:'Sent \u00b7 waiting'},
-  {k:'done',     label:'Done (all finished + sent)'},
-  {k:'parked',   label:'Parked'},
-  {k:'dropped',  label:'Not needed'}
+  {k:'done',     label:'Done'},
+  {k:'closed',   label:'Parked or not needed'}
 ];
+var PRIO_GROUP={todo:['todo','progress'],applied:['applied'],done:['done'],closed:['parked','dropped']};
 function setPrioFilter(k){prioFilter=k;renderPriorities();}
 function renderPrioFilters(){
   var el=document.getElementById('prio-filters'); if(!el) return;
   var counts={};
   PRIORITIES.forEach(function(p){var st=getStatus(p.id);counts[st]=(counts[st]||0)+1;});
   counts.all=PRIORITIES.filter(function(p){return getStatus(p.id)!=='dropped';}).length;
-  counts.done=(counts.done||0)+(counts.applied||0);
+  counts.todo=(counts.todo||0)+(counts.progress||0);
+  counts.closed=(counts.parked||0)+(counts.dropped||0);
   el.innerHTML=PRIO_FILTERS.map(function(f){
     var n=counts[f.k]||0;
     return '<button class="pf-btn pf-'+f.k+(prioFilter===f.k?' on':'')+'" onclick="setPrioFilter(\''+f.k+'\')">'+f.label+'<span class="pf-n">'+n+'</span></button>';
@@ -2865,7 +2862,7 @@ function renderPriorities(){
   el.innerHTML='';
   renderPrioFilters();
   if(prioFilter!=='all'){
-    const only=PRIORITIES.filter(p=>{const st=getStatus(p.id);return st===prioFilter||(prioFilter==='done'&&st==='applied');}).sort(byDeadline);
+    const only=PRIORITIES.filter(p=>(PRIO_GROUP[prioFilter]||[prioFilter]).includes(getStatus(p.id))).sort(byDeadline);
     if(!only.length){
       el.innerHTML='<div class="prio-empty">Nothing is '+(PRIO_FILTERS.find(f=>f.k===prioFilter)||{label:prioFilter}).label.toLowerCase()+' right now.</div>';
       return;
@@ -2877,8 +2874,9 @@ function renderPriorities(){
   const doneItems=visible.filter(p=>getStatus(p.id)==='done').sort(byDeadline);
   const parked=visible.filter(p=>getStatus(p.id)==='parked').sort(byDeadline);
   const live=visible.filter(p=>{const st=getStatus(p.id);return st!=='parked'&&st!=='done';});
-  const actives=live.filter(p=>p.tier!=='followup').sort(byDeadline);
-  const fups=live.filter(p=>p.tier==='followup').sort(byDeadline);
+  const isWaiting=p=>p.tier==='followup'||getStatus(p.id)==='applied';
+  const actives=live.filter(p=>!isWaiting(p)).sort(byDeadline);
+  const fups=live.filter(isWaiting).sort(byDeadline);
   function renderOne(p,idx){
     let duePill='';
     if(p.due){
