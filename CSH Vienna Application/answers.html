@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Answers, Asad Ikram, CSH Graduate Program 2027</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm 13mm 16mm; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt; line-height: 1.25;
+         color: #111; margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+  .hdr { text-align: left; border-bottom: 0.7pt solid #1d3f63; padding-bottom: 3pt; margin-bottom: 6pt; }
+  .hdr b { font-size: 13pt; }
+  .hdr span { font-size: 10pt; color: #333; }
+  h2 { font-size: 10.8pt; color: #1d3f63; margin: 7pt 0 2.5pt; text-align: left; }
+  p { margin: 0 0 4pt; }
+  i { font-style: italic; }
+  .refs { font-size: 8.8pt; line-height: 1.18; margin-top: 6pt; border-top: 0.5pt solid #999; padding-top: 3pt; text-align: left; }
+  .refs p { margin: 0 0 1.2pt; padding-left: 10pt; text-indent: -10pt; }
+</style></head><body>
+
+<div class="hdr"><b>Asad Ikram</b><br>
+  <span>CSH Graduate Program 2027, answers to the three questions &middot; asad.ikram53@gmail.com</span></div>
+
+<h2>1. A research project, my contribution, and what did not go as expected</h2>
+
+<p>My MSc dissertation at the University of Portsmouth (2025, supervised by Dr Ella Haig) asked how public reaction to UK
+  economic policy differed across social platforms. The project was mine from question to write-up. I obtained ethics approval,
+  collected about 279,000 public posts from X/Twitter, Reddit, YouTube and Quora through official APIs and licensed feeds, and built
+  the analysis in Python: VADER and BiLSTM baselines, a fine-tuned BERT classifier, temperature-scaling calibration, McNemar and
+  bootstrap tests, chi-square tests across topics, Prophet forecasts, NRC emotion scores, and LIME and integrated gradients to see what
+  the model relied on. I also hand-labelled 200 posts myself as a check.</p>
+
+<p>The part that did not go as expected was the validation. BERT reached a macro-F1 of 0.878, but its labels had been seeded by the
+  VADER lexicon, the score was largely in-sample, and my 200-post check was a review of VADER's labels, so the Cohen's &kappa; of about
+  0.78 measured agreement with VADER rather than between independent annotators. Every number pointed back at
+  the same lexicon, so the validation was circular: it showed that BERT had learned to imitate VADER, not that either measured sentiment.
+  Underneath sat a second assumption I had not tested: that a "negative" label means the same thing on Reddit as on YouTube, where
+  people write for different audiences, at different lengths and under different norms.</p>
+
+<p>I learned two things. A high agreement score describes the reference as much as the model, so the first design question is where
+  the criterion comes from and whether it is independent of the thing being tested. And a comparison between groups needs evidence that
+  the instrument behaves alike in each group, a routine test in survey research that computational text analysis rarely runs. With
+  Dr Haig I turned this into a methods manuscript, <i>Is the Platform Part of the Measurement?</i>, which treats each platform as a
+  survey mode and sets out a protocol built on generalizability theory, measurement invariance and differential item functioning (DIF),
+  and score linking. I built its simulation, which is public: pooling platform scores at face value gives the wrong sign of daily
+  aggregate sentiment on roughly a quarter of days, from measurement differences alone. For the application stage I fixed fifteen policy anchor events in advance and recorded them before computing any counts. The manuscript is complete and not yet published. I met the same problem again in industry: at Artemis AI, where I am
+  co-founder and CTO, the accuracy our dashboard reported turned out to be agreement with the labelling model, not with people.</p>
+
+<h2>2. A discovery from a CSH research group</h2>
+
+<p>I chose Chen, Kmetty, I&ntilde;iguez and Omodei (2025). <b>In one sentence:</b> by linking a survey of Hungarian internet users to
+  the YouTube histories they donated, the authors show that people who comment on political videos are more polarized and more selective
+  than people who only watch, so studies built on visible traces such as comments overstate how divided political audiences are.</p>
+
+<p><b>The question it left me with:</b> is the gap between commenters and watchers stable enough, across platforms, topics and time,
+  that a small donated panel could be used to correct polarization estimates built from public comments at scale?</p>
+
+<p><b>Why it interests me:</b> it has exactly the structure of the problem I work on. Public comments are a large, cheap and selected
+  instrument; donated data is a small, expensive and closer criterion. If the relation between the two holds steady, a few hundred
+  donors could calibrate millions of public comments, much as a small hand-labelled sample anchors a machine-labelled corpus in score
+  linking. If it does not hold, each platform and period needs its own panel, and knowing where it breaks is itself a finding about where
+  polarization measurement fails. It also matters for narratives: what spreads in comments may not be what spreads in viewing.</p>
+
+<h2>3. A problem I want to explore</h2>
+
+<p><b>Statement.</b> When is a construct labelled by a machine (sentiment, stance or a narrative frame) comparable across platforms,
+  annotator models and time, and how should the differences be corrected before we track how narratives spread between platforms?</p>
+
+<p><b>Why it matters.</b> Work on narratives at scale and on polarization increasingly pools platforms and uses LLMs as annotators.
+  Any difference in how often a frame appears on Reddit and on X, or this year and last, mixes real change with a platform that elicits
+  expression differently and an annotator that reads it differently, and that annotator changes version under our feet. Recent work
+  approaches this from several sides. Gaynor, Miler, Goel, Hoyle and Resnik (2026) find that legislators' ideal points differ across
+  votes, floor speeches and tweets, with Republicans more conservative on Twitter; reading that as a change in expression rather than an
+  artefact requires the scale to mean the same thing in each venue. Fan et al. (2025) remove a document's medium from its embedding by
+  linear concept erasure, Licht et al. (2025) study how LLMs can measure scalar constructs, and Hoyle et al. (2021) showed that an
+  automated metric can drift away from the human judgment it stands for. I want to work on the step before a cross-platform comparison:
+  a test of whether the comparison is licensed, and a correction when it is not. The idea sits between two springboard
+  projects, <i>Understanding narratives at scale</i> and <i>Polarization and minority representation on online platforms</i>, and close
+  to Alexander Hoyle's work on measurement and validation with NLP in social science.</p>
+
+<p><b>Why it is tractable.</b> (1) My simulation is public, has a known ground truth and runs in seconds; extending it so that annotator
+  models and time are facets alongside platforms would show how many hand labels, and which anchors, are needed to detect a difference
+  large enough to reverse a conclusion. That paper needs no new data. (2) I can build the corpus: posts around a set of policy events
+  fixed in advance on several platforms, collected through official APIs, frames coded by several LLMs, and a stratified hand-labelled
+  sample per platform, larger than my 200 and with a second coder. A G-study would then split variance into platform, model, prompt and
+  time, with DIF tests for each frame. (3) Concept erasure gives a direct test of whether removing the platform signal also removes real
+  differences. (4) The corrected and uncorrected measures can then be put into a narrative-spread analysis with network methods, to report
+  when conclusions change. The psychometric tools are mature; what is new is using platforms and models as the groups. I run LLM labelling
+  chains in production and know where they fail. What I would need to learn is the network science of diffusion, which is one reason I am applying to CSH.</p>
+
+<p><b>For whom.</b> For researchers who pool platforms or switch annotator models mid-study and need to know whether their comparisons
+  hold. For public bodies, NGOs and journalists who read social-listening dashboards: I build pipelines behind such dashboards, and their
+  numbers are rarely checked against people. And for anyone asking whether a narrative really moved from one platform to another, or only
+  looks as if it did because each platform is measured differently.</p>
+
+<div class="refs">
+<p>Chen, Y., Kmetty, Z., I&ntilde;iguez, G. and Omodei, E. (2025). The public that engages invisibly: what visible engagement fails to capture in online political communication. <i>Communication Methods and Measures</i> 19(4): 294-312. doi:10.1080/19312458.2025.2542725</p>
+<p>Fan et al., incl. Hoyle, A. (2025). The medium is not the message: deconfounding document embeddings via linear concept erasure. EMNLP 2025.</p>
+<p>Gaynor, S., Miler, K., Goel, P., Hoyle, A. and Resnik, P. (2026). Express yourself (ideologically): legislators' ideal points across audiences. <i>Journal of Politics</i> 88(4). doi:10.1086/736360</p>
+<p>Hoyle, A. et al. (2021). Is automated topic model evaluation broken? The incoherence of coherence. NeurIPS 2021.</p>
+<p>Licht et al., incl. Hoyle, A. (2025). Measuring scalar constructs in social science with LLMs. EMNLP 2025.</p>
+<p>Ikram, A. and Haig, E. Is the platform part of the measurement? A protocol and simulation study for cross-platform equivalence of machine-labelled policy sentiment. Manuscript, complete, not yet published. Code: github.com/asadfix/platform-measurement, doi:10.5281/zenodo.23105129</p>
+</div>
+
+</body></html>

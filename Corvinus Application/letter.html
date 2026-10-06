@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Motivation letter, Asad Ikram, Geography of Code, Corvinus University of Budapest</title>
+<style>
+  @page { size: A4; margin: 15mm 17mm 14mm 17mm; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 11pt; line-height: 1.3;
+         color: #000; margin: 0; text-align: justify; hyphens: manual; }
+  a { color: #000; text-decoration: none; }
+  .hdr { text-align: left; font-size: 9pt; color: #333; margin-bottom: 9pt; }
+  .hdr b { font-size: 12pt; color: #000; display: block; margin-bottom: 1pt; }
+  .to { text-align: left; margin-bottom: 6pt; }
+  .date { text-align: left; margin-bottom: 6pt; }
+  .re { font-weight: bold; margin-bottom: 7pt; text-align: left; }
+  p { margin: 0 0 5.5pt; }
+  .lead { font-weight: bold; }
+  .sig { margin-top: 8pt; text-align: left; }
+  .sig .n { font-weight: bold; }
+  i { font-style: italic; }
+</style></head><body>
+
+<div class="hdr"><b>Asad Ikram</b>
+  Lahore, Pakistan &middot; asad.ikram53@gmail.com &middot; +44 7482 376417 &middot;
+  linkedin.com/in/asad-ikram98 &middot; github.com/asadfix</div>
+
+<div class="to">Dr Johannes Wachs<br>
+  Center for Collective Learning, Corvinus Institute of Advanced Study<br>
+  Corvinus University of Budapest, Hungary</div>
+
+<div class="date">6 October 2026</div>
+
+<div class="re">Re: Research Assistant / PhD Student positions, Geography of Code group</div>
+
+<p>Dear Dr Wachs,</p>
+
+<p>I have written software remotely for companies in six countries, and in 2026 most of the code I ship is written by
+  AI agents I direct. It started in December 2018 with small data jobs on Fiverr while I was studying computer science in
+  Pakistan, more than 300 completed orders, and grew into contract work for companies in Canada, Italy, Ireland, the United
+  Arab Emirates, the United States and the United Kingdom. This year the work itself changed. At M+C Saatchi Fluency I keep a
+  fleet of forum crawlers running for a global automotive brand. When a forum changes its pages, an LLM agent I designed
+  diagnoses the break, rewrites the crawler and tests it on live pages, and I decide whether the change merges. Most of the
+  rest of that code, including the pipeline that builds new crawlers, is written by coding agents to my specification and
+  checked by me. My job has moved from writing code to deciding what code should exist and whether it is right. Your group
+  studies how platforms and AI change where and how skilled software work is done, and I would like to spend the next years
+  measuring that change rather than only living it.</p>
+
+<p><span class="lead">Your work.</span> The paper I keep returning to is <i>Who is using AI to code?</i> with Daniotti, Feng
+  and Neffke (<i>Science</i>, 2026). A classifier for AI-written Python, applied to more than 30 million GitHub commits, estimates
+  that AI wrote about 29% of US Python functions by the end of 2024 and raised output by about 3.6%, with the gains going to
+  experienced developers while early-career developers, the keenest users, showed no significant benefit. That fits what I see:
+  an agent saves me time only because years of writing such code by hand let me judge its output quickly. The paper is open
+  about its limits, open-source Python on GitHub in six countries, and asks for countries at different income levels. Your
+  map of Claude Code on GitHub shows a related limit. It counts commits carrying Claude Code's default co-author trailer. My
+  public commits carry it, but my profile gives no location and most of the agent-written code I ship goes into private client
+  repositories, so a developer like me is largely invisible to it. With del Rio-Chanona and Laurentsyeva (<i>PNAS Nexus</i>,
+  2024) you showed that Stack Overflow activity fell by about 25% within six months of ChatGPT, relative to sites where it was
+  less available or less capable: the public traces we study are themselves changed by the technology under study. And
+  <i>The Geography of Open Source Software</i> (2022) and <i>Digital Traces of Brain Drain</i> (2023) show how far GitHub
+  locations can go in tracking where developers are and where they move.</p>
+
+<p><span class="lead">A question I could contribute to.</span> How do AI coding agents change the division of labour in
+  software work, and for whom? Agents now leave signatures in public traces: co-author trailers, bot accounts that open pull
+  requests, and the code patterns your classifier detects. Following developers' commits and collaboration networks before and
+  after they start working with agents, one could ask whether agent use changes who leads a project and the uneven workloads
+  that your paper with Betti, Gallo and Battiston (<i>Nature Communications</i>, 2025) links to success, whether review work
+  shifts towards senior developers, and whether developers in lower-income countries, including the many who, like me, enter
+  global software production through freelance platforms and remote contracts, see the gains your <i>Science</i> paper finds.
+  I would bring one habit from my own research: asking how much of a measured change comes from the platform's visibility rules
+  rather than from behaviour. A trailer that is on by default for one tool and absent for another, a blank profile location, or
+  work moving into private repositories can each look like a change in adoption. I would build that into the design, for
+  example by checking trace-based measures against repositories where the true agent use is known, starting with my own.</p>
+
+<p><span class="lead">Coding, modelling and data wrangling.</span> Python and SQL are my working languages, with PySpark and
+  AWS when data are large and PostgreSQL, Redshift and Athena as the databases I use most. At Dubizzle Labs in Lahore (February
+  2022 to August 2024, promoted twice to Senior Data Engineer) I led three engineers running more than 500 scrapers across 15
+  markets in English, Arabic, Urdu and Hindi, redesigned the layered warehouse, and built competitor dashboards from listings and
+  online discussion that predicted revenue. At Fluency, where I have been a part-time Data Engineer since December 2024, I
+  designed the fleet of 64 crawlers and operate a weekly pipeline for a global e-commerce client whose master table holds 2.2
+  million rows by 184 columns, with an 89-check quality sweep before each release. At Fix.com, a Canadian retailer I have
+  contracted for since May 2023, I designed and built its crawler platform on my own this year, about 10 million rows across 82
+  datasets. Joining, deduplicating and checking messy data at scale before anyone models it is the part of empirical work I am
+  most practised in.</p>
+
+<p><span class="lead">Research so far.</span> I hold an MSc in Data Analytics with Distinction from the University of
+  Portsmouth, where I was a Chevening Scholar in 2024/25. My dissertation analysed public reaction to UK economic policies in
+  about 279,000 posts from four platforms, with a fine-tuned BERT classifier against baselines, McNemar and bootstrap tests and
+  Prophet forecasting. Its weakness taught me most: the model was validated against labels seeded by a lexicon, so the check
+  was partly circular. That led to a manuscript with my supervisor, Dr Ella Haig, <i>Is the Platform Part of the
+  Measurement?</i>, complete and not yet published, which treats each platform as a survey mode. In a 500-replication simulation
+  I built, pooling platform scores at face value gives the wrong sign of daily aggregate sentiment on roughly a quarter of days.
+  The code is public (github.com/asadfix/platform-measurement, DOI 10.5281/zenodo.23105129). At Artemis AI, a pre-launch
+  analytics start-up where I am co-founder and CTO in a team of eight, I found that our reported classifier accuracies measured
+  agreement with the LLM that produced the training labels rather than with people, and we are rebuilding evaluation around a
+  human-labelled set. What a number actually measures is the question I would bring to GitHub data.</p>
+
+<p><span class="lead">What I do not yet bring.</span> I have no peer-reviewed publications. My statistics are applied: I have
+  used hypothesis tests, the bootstrap and forecasting, but I have not been trained in panel econometrics or in the
+  difference-in-differences and event-study designs your papers use, and I have used network tools in practice without formal
+  training in network science. These are what I would want the doctoral programme in Economics or Business Informatics, and
+  your group, to teach me, and I would start on them as a research assistant well before Fall 2027.</p>
+
+<p><span class="lead">Practicalities.</span> I could start on 1 December 2026 or later, and I would relocate to Budapest. I
+  currently hold part-time roles, at Fluency, at Fix.com and as co-founder of Artemis AI, and I would like to discuss openly
+  with you how the full-time position fits with them. My referees are Dr Ella Haig, my MSc supervisor and co-author, and Dr
+  Fahad Ahmad, who taught and assessed me on the MSc, both at the University of Portsmouth; their contact details are in my
+  email and CV. Thank you for considering my application.</p>
+
+<div class="sig">Yours sincerely,<br><span class="n">Asad Ikram</span></div>
+
+</body></html>
