@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>CV, Asad Ikram, Geography of Code, Corvinus University of Budapest</title>
+<style>
+  @page { size: A4; margin: 13mm 15mm 12mm 15mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt;
+         line-height: 1.25; color: #111; margin: 0; }
+  a { color: #1d3f63; text-decoration: none; }
+  h1 { font-size: 17pt; margin: 0 0 1pt; }
+  .sub { font-size: 10pt; color: #333; margin-bottom: 1pt; }
+  .contact { font-size: 9.6pt; color: #333; margin-bottom: 5pt; }
+  h2 { font-size: 10.5pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.6pt;
+       color: #1d3f63; border-bottom: 0.7pt solid #1d3f63; padding-bottom: 1pt;
+       margin: 7pt 0 3pt; break-after: avoid; page-break-after: avoid; }
+  .row { display: flex; gap: 8pt; margin-bottom: 4pt; break-inside: avoid; }
+  .when { flex: 0 0 82pt; font-size: 9.4pt; color: #444; padding-top: 0.6pt; }
+  .what { flex: 1 1 auto; }
+  .ttl { font-weight: bold; }
+  .org { color: #222; }
+  ul { margin: 1pt 0 0; padding-left: 12pt; }
+  li { margin-bottom: 1pt; }
+  p { margin: 0 0 3pt; }
+  .kv { display: flex; gap: 8pt; margin-bottom: 2pt; break-inside: avoid; }
+  .k { flex: 0 0 82pt; color: #444; font-size: 9.4pt; padding-top: 0.6pt; }
+  .v { flex: 1 1 auto; }
+  .note { font-style: italic; color: #333; }
+  .refs { display: flex; gap: 14pt; }
+  .refs > div { flex: 1 1 0; }
+</style></head><body>
+
+<h1>Asad Ikram</h1>
+<div class="sub">MSc Data Analytics (Distinction), University of Portsmouth &middot; Chevening Scholar 2024/25</div>
+<div class="sub">Applicant, Research Assistant / PhD Student, Geography of Code group, Corvinus University of Budapest</div>
+<div class="contact">Lahore, Pakistan &middot; +44 7482 376417 &middot; <a href="mailto:asad.ikram53@gmail.com">asad.ikram53@gmail.com</a> &middot;
+  <a href="https://linkedin.com/in/asad-ikram98">linkedin.com/in/asad-ikram98</a> &middot; GitHub: <a href="https://github.com/asadfix">github.com/asadfix</a></div>
+
+<h2>Profile</h2>
+<p>Data engineer and researcher. Since December 2018 I have done remote software and data work for clients worldwide through Fiverr
+  and on contracts for companies in Canada, Italy, Ireland, the United Arab Emirates, the United States and the United Kingdom. I write
+  Python and SQL every day, build and repair large data collection and cleaning pipelines, and in 2026 direct AI coding agents that write
+  most of the code I design, review and ship. My MSc research asks whether measurements built from online platform data mean the same
+  thing across platforms; I want to study how AI and platforms change software work, using GitHub and other trace data.</p>
+
+<h2>Education</h2>
+<div class="row"><div class="when">Sep 2024 - Sep 2025<br>awarded 8 Dec 2025</div><div class="what">
+  <div><span class="ttl">MSc Data Analytics, Distinction.</span> <span class="org">University of Portsmouth, United Kingdom. Chevening Scholar.</span></div>
+  <div>Credit-weighted average 70.5/100; master's project 78/100. Supervisor: Dr Ella Haig. Modules included Big Data and Machine Learning,
+     Intelligent Data and Text Analytics, Explainable AI and Data Management (80). Taught and assessed in English.</div>
+  <div style="margin-top:1pt"><span class="ttl">Dissertation:</span> <i>Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies.</i>
+     About 279,000 public posts from X/Twitter, Reddit, YouTube and Quora, collected through official APIs and licensed feeds under
+     university ethics approval (TETHIC-2025-111094). Fine-tuned BERT against BiLSTM and lexicon baselines (macro-F1 0.878, scored against
+     lexicon-seeded labels); 200 posts hand-labelled by me, &kappa; &asymp; 0.78 against VADER; McNemar and bootstrap tests,
+     chi-square tests across topics, Prophet forecasting.</div>
+</div></div>
+<div class="row"><div class="when">Aug 2017 - Jan 2022</div><div class="what">
+  <div><span class="ttl">BS Computer Science.</span> <span class="org">National University of Computer and Emerging Sciences (FAST-NUCES), Pakistan.</span></div>
+  <div>130 credit hours, CGPA 2.75/4.00. Courses included Probability and Statistics, Linear Algebra, Calculus I and II, Numerical Methods,
+     Design and Analysis of Algorithms, Database Systems and Applied Machine Learning.</div>
+</div></div>
+
+<h2>Research</h2>
+<p><span class="ttl">Ikram, A. and Haig, E.</span> "Is the Platform Part of the Measurement? A Protocol and Simulation Study
+  for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." <b>Manuscript, complete; not yet published.</b>
+  Treats each platform as a survey mode and applies generalizability theory, measurement invariance and differential item functioning,
+  and score linking to machine-labelled text. I built the simulation: in 500 replications with known ground truth, pooling platform scores
+  at face value gives the wrong sign of daily aggregate sentiment on roughly a quarter of days, from measurement differences alone.
+  Code: <a href="https://github.com/asadfix/platform-measurement">github.com/asadfix/platform-measurement</a>, Zenodo DOI
+  <a href="https://doi.org/10.5281/zenodo.23105129">10.5281/zenodo.23105129</a>.
+  <span class="note">No peer-reviewed publications to date.</span></p>
+
+<h2>Experience</h2>
+
+<div class="row"><div class="when">Dec 2024 - present<br>part-time, remote</div><div class="what">
+  <div><span class="ttl">Data Engineer</span>, <span class="org">M+C Saatchi Fluency, London. Consultancy analysing online conversation for brands and government.</span></div>
+  <ul>
+    <li>Designed and operate 64 Scrapy crawlers collecting car-owner forum discussion for a global automotive brand on AWS, with a
+        self-repairing LLM agent that diagnoses a broken source, regenerates the crawler and tests it on live pages behind a CI gate; I approve each merge.</li>
+    <li>Most of the fleet's new code, including a pipeline that builds new crawlers, is written by AI coding agents to my specifications and
+        tests and reviewed by me before it merges.</li>
+    <li>Operate a weekly social-analytics pipeline for a global e-commerce client (2.2 million rows by 184 columns; Lambda, Fargate,
+        PostgreSQL) with an 89-check data-quality sweep before each release.</li>
+    <li>Analyst on a study of twelve months of social discourse (100,845 Brandwatch and 170,542 Reddit mentions): BERTopic-derived
+        codebook, LLM tagging with a prompt-version hash on every tag, three pilot runs on the same 500 rows compared before the full run.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">May 2023 - present<br>contract, part-time</div><div class="what">
+  <div><span class="ttl">Data Engineer (contract)</span>, <span class="org">Fix.com, Canada (remote). Online replacement-parts retailer.</span>
+    Since June 2026 designed and built, alone, the company's crawler platform (about 10 million rows across 82 datasets by October 2026).
+    Earlier: Scrapy pipelines over 200+ sources; Great Expectations validation that cut bad production data by 70%.</div>
+</div></div>
+
+<div class="row"><div class="when">2025 - present<br>part-time</div><div class="what">
+  <div><span class="ttl">Co-Founder and Chief Technology Officer</span>, <span class="org">Artemis AI (formerly ViralData), United Kingdom (remote).
+    Pre-launch social-media analytics start-up; I lead the technology in a team of eight; pilots from December 2026.</span></div>
+  <ul>
+    <li>Designed an LLM labelling chain: Claude labels about 6,000 posts with an explanation of each; rules mined from the explanations
+        become a prompt for DeepSeek, which labels about 12,000 more to train encoder classifiers (XLM-R, DistilBERT, DeBERTa-v3, Detoxify).
+        The team first hand-labelled about 500 posts and comments to check both models.</li>
+    <li>Audited the labels: a September 2026 audit found that reported accuracies measured agreement with the labelling model, not with
+        people; evaluation is being rebuilt around a human-labelled golden set. In progress: leading the build of Art-E, a retrieval-based
+        advisor that answers each client's questions from that client's own data.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">Sep 2024 - present<br>part-time, remote</div><div class="what">
+  <div><span class="ttl">Shorter remote engagements.</span> <b>A US travel-data start-up</b>, technical advisor, 2026: reviewed a travel-price
+    data collection engine and measured its proxy network and traffic telemetry. <b>CXG</b>, Dubai, freelance data engineer, three
+    engagements since Nov 2025: production crawlers and a pytest QA framework. <b>VendueTech</b>, Ireland, Lead Data Engineer,
+    Jun - Jul 2025: led three engineers on real-time auction-data ingestion and an Azure-to-AWS migration (PySpark on EMR Serverless).
+    <b>Prefe</b>, Milan, Data Engineer, Sep - Dec 2024: moved legacy collectors to Scrapy, cutting the failure rate by 60%; mentored two junior engineers.</div>
+</div></div>
+
+<div class="row"><div class="when">Feb 2022 - Aug 2024<br>full-time</div><div class="what">
+  <div><span class="ttl">Associate Software Engineer, then Data Engineer, then Senior Data Engineer</span>, <span class="org">Dubizzle Labs
+    (Dubizzle, Bayut, Zameen, OLX), Lahore. Promoted twice in about two years.</span></div>
+  <ul>
+    <li>Led a three-engineer team running 500+ scrapers across 15 markets on Kubernetes/EKS, collecting text in English, Arabic,
+        Urdu and Hindi; redesigned the layered data warehouse, raising ETL throughput by 60%.</li>
+    <li>Built competitor-analysis dashboards from e-commerce and real-estate listings and online discussions that predicted revenue
+        and showed what customers said.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">Dec 2018 - Feb 2026<br>part-time, remote</div><div class="what">
+  <div><span class="ttl">Freelance data engineer</span>, <span class="org">Fiverr.</span>
+    300+ completed orders in web scraping, automation, ETL and data analysis; Level Two seller (first reached August 2021).
+    Started during my BS and ran alongside later employment.</div>
+</div></div>
+
+<h2>Skills</h2>
+<div class="kv"><div class="k">Coding</div><div class="v">Python (pandas, Scrapy, PyTorch, FastAPI, pytest), SQL, PySpark; R (functional); Git, GitHub
+  and CI. Daily work with AI coding agents (Claude Code, OpenAI Codex): I write the specification and tests, review the diff and decide what merges.</div></div>
+<div class="kv"><div class="k">Data wrangling and databases</div><div class="v">Collection from APIs and the open web at scale; cleaning, deduplication,
+  joins and validation (Great Expectations, custom quality sweeps); PostgreSQL, Redshift, Athena, DynamoDB; layered warehouses;
+  AWS (Glue, Step Functions, Fargate, Lambda, SageMaker), Docker, Kubernetes.</div></div>
+<div class="kv"><div class="k">Modelling and statistics</div><div class="v">Hypothesis tests (McNemar, chi-square), bootstrap, calibration, Prophet
+  forecasting; simulation with known ground truth; generalizability theory, measurement invariance and DIF, score linking;
+  validating machine and LLM labels against hand-labelled sets. Not yet trained in panel econometrics or formal network science.</div></div>
+<div class="kv"><div class="k">NLP and ML</div><div class="v">Fine-tuning encoder classifiers (BERT, XLM-R, DistilBERT, DeBERTa-v3); LLM-assisted
+  labelling through the Claude and DeepSeek APIs; BERTopic; LIME and integrated gradients. I have not fine-tuned a generative model.</div></div>
+
+<h2>Awards, public work and languages</h2>
+<div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25, the UK Government's global scholarship, which funded the MSc.</div></div>
+<div class="kv"><div class="k">Public work</div><div class="v">Public code for the measurement manuscript on GitHub and Zenodo (above). Invited by Zyte's
+  developer-relations team to review a pre-release of its open-source agentic scraping toolkit (August 2026).</div></div>
+<div class="kv"><div class="k">Languages</div><div class="v">Urdu (native); English (working language; MSc taught and assessed in English, IELTS 6.5).</div></div>
+
+<h2>Referees</h2>
+<div class="refs">
+  <div><span class="ttl">Dr Ella Haig</span>, Associate Professor in Artificial Intelligence, School of Computing, University of Portsmouth.
+    <a href="mailto:Ella.Haig@port.ac.uk">Ella.Haig@port.ac.uk</a>. MSc dissertation supervisor and co-author.</div>
+  <div><span class="ttl">Dr Fahad Ahmad</span>, Senior Lecturer, Centre for Cybercrime and Economic Crime, University of Portsmouth.
+    <a href="mailto:Fahad.Ahmad@port.ac.uk">Fahad.Ahmad@port.ac.uk</a>. Taught and assessed me on the MSc.</div>
+</div>
+
+</body></html>

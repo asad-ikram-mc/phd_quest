@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>CV and Portfolio, Asad Ikram, CSH Graduate Program 2027</title>
+<style>
+  @page { size: A4; margin: 13mm 15mm 12mm 15mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt;
+         line-height: 1.24; color: #111; margin: 0; }
+  a { color: #1d3f63; text-decoration: none; }
+  h1 { font-size: 17pt; margin: 0 0 1pt; }
+  .sub { font-size: 10pt; color: #333; margin-bottom: 1pt; }
+  .contact { font-size: 9.6pt; color: #333; margin-bottom: 5pt; }
+  h2 { font-size: 10.5pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.6pt;
+       color: #1d3f63; border-bottom: 0.7pt solid #1d3f63; padding-bottom: 1pt;
+       margin: 6pt 0 3pt; break-after: avoid; page-break-after: avoid; }
+  .row { display: flex; gap: 8pt; margin-bottom: 3.5pt; break-inside: avoid; }
+  .when { flex: 0 0 80pt; font-size: 9.4pt; color: #444; padding-top: 0.6pt; }
+  .what { flex: 1 1 auto; }
+  .ttl { font-weight: bold; }
+  .org { color: #222; }
+  ul { margin: 1pt 0 0; padding-left: 12pt; }
+  li { margin-bottom: 0.8pt; }
+  p { margin: 0 0 3pt; }
+  .kv { display: flex; gap: 8pt; margin-bottom: 1.8pt; }
+  .k { flex: 0 0 80pt; color: #444; font-size: 9.4pt; padding-top: 0.6pt; }
+  .v { flex: 1 1 auto; }
+  .note { font-style: italic; color: #333; }
+  .refs { display: flex; gap: 14pt; }
+  .refs > div { flex: 1 1 0; }
+
+  /* Portfolio page */
+  .portfolio { break-before: page; page-break-before: always; }
+  .portfolio h1 { font-size: 14pt; margin: 0 0 1pt; }
+  .portfolio .intro { font-size: 10pt; color: #333; margin: 0 0 9pt; padding-bottom: 3pt; border-bottom: 0.7pt solid #1d3f63; }
+  .item { margin: 0 0 10pt; break-inside: avoid; }
+  .item .t { font-weight: bold; }
+  .item .why { margin-top: 0.8pt; }
+  .item .why b { font-weight: bold; color: #1d3f63; }
+  .item .lnk { font-size: 9.6pt; color: #333; margin-top: 0.8pt; }
+</style></head><body>
+
+<h1>Asad Ikram</h1>
+<div class="sub">MSc Data Analytics (Distinction), University of Portsmouth &middot; Chevening Scholar 2024/25</div>
+<div class="sub">Applicant, Graduate Program in Complexity Science, CSH Digital Innovation School (PhD 2027)</div>
+<div class="contact">Lahore, Pakistan &middot; +44 7482 376417 &middot; <a href="mailto:asad.ikram53@gmail.com">asad.ikram53@gmail.com</a> &middot;
+  <a href="https://linkedin.com/in/asad-ikram98">linkedin.com/in/asad-ikram98</a> &middot; <a href="https://github.com/asadfix">github.com/asadfix</a></div>
+
+<h2>Profile</h2>
+<p>I study whether machine labels of online text mean the same thing across platforms, models and time. My MSc dissertation
+  analysed public reaction to UK economic policy on four platforms, and a methods manuscript with Dr Ella Haig brings
+  psychometric tools to machine-labelled sentiment. Since 2018 I have built the data collection and LLM labelling pipelines
+  that analysis of online conversation depends on, and I check machine labels against human ones before anything is built on them.</p>
+
+<h2>Education</h2>
+<div class="row"><div class="when">Sep 2024 - Sep 2025<br>awarded 8 Dec 2025</div><div class="what">
+  <div><span class="ttl">MSc Data Analytics, Distinction.</span> <span class="org">University of Portsmouth, United Kingdom. Chevening Scholar.</span></div>
+  <div>Credit-weighted average 70.5/100; master's project 78/100. Supervisor: Dr Ella Haig. Modules included Intelligent Data
+     and Text Analytics, Big Data and Machine Learning, Explainable AI, Data Management (80). Taught and assessed in English.</div>
+  <div style="margin-top:1pt"><span class="ttl">Dissertation:</span> <i>Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies.</i>
+     About 279,000 public posts from X/Twitter, Reddit, YouTube and Quora, collected through official APIs and licensed feeds
+     under university ethics approval (TETHIC-2025-111094). Fine-tuned BERT against BiLSTM and lexicon baselines (macro-F1 0.878,
+     scored against lexicon-seeded labels); 200 posts hand-labelled by me, &kappa; &asymp; 0.78 against VADER; calibration,
+     McNemar and bootstrap tests, Prophet forecasting, LIME and integrated gradients.</div>
+</div></div>
+<div class="row"><div class="when">Aug 2017 - Jan 2022</div><div class="what">
+  <div><span class="ttl">BS Computer Science.</span> <span class="org">National University of Computer and Emerging Sciences (FAST-NUCES),
+    Pakistan; Karachi campus, then Chiniot-Faisalabad campus.</span></div>
+  <div>130 credit hours, CGPA 2.75/4.00. Courses included Probability and Statistics, Linear Algebra, Calculus I and II,
+     Numerical Methods, Design and Analysis of Algorithms and Applied Machine Learning.</div>
+</div></div>
+
+<h2>Research</h2>
+<p><span class="ttl">Ikram, A. and Haig, E.</span> "Is the Platform Part of the Measurement? A Protocol and Simulation Study
+  for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." <b>Manuscript, complete; not yet published.</b>
+  Code: <a href="https://github.com/asadfix/platform-measurement">github.com/asadfix/platform-measurement</a>, Zenodo DOI
+  <a href="https://doi.org/10.5281/zenodo.23105129">10.5281/zenodo.23105129</a>. Treats each platform as a survey mode and
+  applies generalizability theory, measurement invariance and differential item functioning, and score linking to machine-labelled
+  text. In a 500-replication simulation with known ground truth, pooling platform scores at face value gives the wrong sign of
+  daily aggregate sentiment on roughly a quarter of days, from measurement differences alone.
+  <span class="note">No peer-reviewed publications to date.</span></p>
+
+<h2>Experience</h2>
+
+<div class="row"><div class="when">Dec 2024 - present<br>part-time</div><div class="what">
+  <div><span class="ttl">Data Engineer</span>, <span class="org">M+C Saatchi Fluency, London (remote). Data consultancy analysing online conversation.</span></div>
+  <ul>
+    <li>Analyst on a study of twelve months of social discourse (100,845 Brandwatch and 170,542 Reddit mentions): BERTopic-derived
+        codebook, LLM tagging with a prompt-version hash on every tag, three pilot runs on the same 500 rows compared before the
+        full run. Contributor to LLM-assisted coding of about 170,000 multilingual posts and reviews.</li>
+    <li>Designed and operate 64 Scrapy crawlers collecting car-owner forum discussion for a global automotive brand (AWS), with a
+        self-repairing LLM agent that diagnoses a broken source, regenerates the spider and tests it on live pages behind a CI gate.</li>
+    <li>Operate a weekly social-analytics pipeline for a global e-commerce client (2.2 million rows by 184 columns) with an
+        89-check data-quality sweep before each release.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">2025 - present<br>part-time</div><div class="what">
+  <div><span class="ttl">Co-Founder and Chief Technology Officer</span>, <span class="org">Artemis AI (formerly ViralData), United Kingdom (remote).
+    Pre-launch social-media analytics start-up; I lead the technology in a team of eight; pilots from December 2026.</span></div>
+  <ul>
+    <li>Designed an LLM labelling chain: Claude labels about 6,000 posts with an explanation of each, rules mined from the
+        explanations become a prompt for DeepSeek, which labels about 12,000 more to train encoder classifiers (XLM-R,
+        DistilBERT, DeBERTa-v3, Detoxify). The team first hand-labelled about 500 posts and comments to check both models.</li>
+    <li>Audited the labels: the two tiers agreed on 82.9% of sentiment, 74.4% of emotion and 0.0% of toxicity labels (mismatched
+        taxonomies) while the toxicity model reported 96.7% average confidence. A September 2026 audit found reported accuracies
+        measured agreement with the labelling model, not with people; evaluation is being rebuilt around a human-labelled golden set.</li>
+    <li>In progress: leading the build of Art-E, a retrieval-based advisor that answers each client's questions from that client's own data.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">May 2023 - present<br>contract, part-time</div><div class="what">
+  <div><span class="ttl">Data Engineer (contract)</span>, <span class="org">Fix.com, Canada (remote). Online replacement-parts retailer.</span>
+    Since June 2026 designed and built, alone, the company's crawler platform (about 10 million rows across 82 datasets by October 2026).
+    Earlier: Scrapy pipelines over 200+ sources; Great Expectations validation that cut bad production data by 70%.</div>
+</div></div>
+
+<div class="row"><div class="when">Sep 2024 - present<br>part-time, remote</div><div class="what">
+  <div><span class="ttl">Shorter engagements.</span> <b>CXG</b>, Dubai, freelance data engineer, three engagements since Nov 2025: production
+    crawlers and a pytest QA framework. <b>VendueTech</b>, Ireland, Lead Data Engineer, Jun - Jul 2025: led three engineers on real-time
+    auction-data ingestion and an Azure-to-AWS migration. <b>Prefe</b>, Milan, Data Engineer, Sep - Dec 2024: moved legacy collectors
+    to Scrapy, cutting the failure rate by 60%; mentored two junior engineers.</div>
+</div></div>
+
+<div class="row"><div class="when">Feb 2022 - Aug 2024<br>full-time</div><div class="what">
+  <div><span class="ttl">Associate Software Engineer, then Data Engineer, then Senior Data Engineer</span>, <span class="org">Dubizzle Labs
+    (Dubizzle, Bayut, Zameen, OLX), Lahore. Promoted twice in about two years.</span></div>
+  <ul>
+    <li>Built competitor-analysis dashboards from e-commerce and real-estate listings and online discussions that predicted revenue
+        and showed what customers said.</li>
+    <li>Led a three-engineer team running 500+ scrapers across 15 markets on Kubernetes/EKS, collecting text in English, Arabic,
+        Urdu and Hindi; redesigned the layered warehouse, raising ETL throughput by 60%.</li>
+  </ul>
+</div></div>
+
+<div class="row"><div class="when">Dec 2018 - Feb 2026<br>part-time</div><div class="what">
+  <div><span class="ttl">Freelance data engineer</span>, <span class="org">Fiverr.</span>
+    300+ completed orders in web scraping, automation, ETL and data analysis; Level Two seller (first reached August 2021).</div>
+</div></div>
+
+<h2>Skills</h2>
+<div class="kv"><div class="k">Methods</div><div class="v">Validating machine and LLM labels against hand-labelled sets; macro-F1, Cohen's &kappa;,
+  calibration; McNemar and bootstrap tests; generalizability theory, measurement invariance and DIF, score linking; simulation with known ground truth.</div></div>
+<div class="kv"><div class="k">NLP and ML</div><div class="v">Fine-tuning encoder classifiers (BERT, XLM-R, DistilBERT, DeBERTa-v3); LLM-assisted
+  labelling through the Claude and DeepSeek APIs; BERTopic; LIME and integrated gradients. I have not fine-tuned a generative model.</div></div>
+<div class="kv"><div class="k">Programming and data</div><div class="v">Python (Scrapy, PyTorch, pandas, FastAPI), SQL, PySpark; R (functional); Git and CI;
+  AWS (SageMaker, Fargate, Lambda, Athena, Redshift), Docker, Kubernetes; official platform APIs (Meta Graph, Reddit, YouTube).</div></div>
+
+<h2>Awards, public work and languages</h2>
+<div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25, the UK Government's global scholarship, which funded the MSc.</div></div>
+<div class="kv"><div class="k">Public work</div><div class="v">Invited by Zyte's developer-relations
+  team to review a pre-release of its open-source agentic scraping toolkit (August 2026).</div></div>
+<div class="kv"><div class="k">Languages</div><div class="v">Urdu (native); English (working language; MSc taught and assessed in English, IELTS 6.5).</div></div>
+
+<h2>Referees</h2>
+<div class="refs">
+  <div><span class="ttl">Dr Ella Haig</span>, Associate Professor in Artificial Intelligence, School of Computing, University of Portsmouth.
+    <a href="mailto:ella.haig@port.ac.uk">ella.haig@port.ac.uk</a>. MSc supervisor and co-author.</div>
+  <div><span class="ttl">Dr Fahad Ahmad</span>, Senior Lecturer, Centre for Cybercrime and Economic Crime, University of Portsmouth.
+    <a href="mailto:Fahad.Ahmad@port.ac.uk">Fahad.Ahmad@port.ac.uk</a>. Taught and assessed me on the MSc.</div>
+</div>
+
+<!-- ================= PORTFOLIO (exactly one page) ================= -->
+<div class="portfolio">
+<h1>Portfolio of work</h1>
+<div class="intro">Asad Ikram &middot; A selection of the work I care most about, with why each piece is here. Client work has no public link and is described without client data.</div>
+
+<div class="item">
+  <div class="t">1. "Is the Platform Part of the Measurement?" Methods manuscript with Dr Ella Haig, and its simulation code</div>
+  <div class="why"><b>What:</b> a six-step protocol (generalizability theory, invariance and DIF, score linking) for comparing machine-labelled
+    sentiment across platforms, with a 500-replication simulation that reproduces in seconds and needs no collected data.
+    <b>Why included:</b> it is the clearest statement of the question I want to pursue, and the code lets anyone check the result.
+    The manuscript is complete and not yet published.</div>
+  <div class="lnk"><a href="https://github.com/asadfix/platform-measurement">github.com/asadfix/platform-measurement</a> &middot; DOI <a href="https://doi.org/10.5281/zenodo.23105129">10.5281/zenodo.23105129</a></div>
+</div>
+
+<div class="item">
+  <div class="t">2. MSc dissertation: Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies (Portsmouth, 2025)</div>
+  <div class="why"><b>What:</b> about 279,000 posts from four platforms under ethics approval, BERT against BiLSTM and lexicon baselines,
+    calibration and significance tests. <b>Why included:</b> my first research project end to end, and the one I learned most from,
+    because its validation turned out to be circular (see answer 1). The manuscript above grew out of that mistake.</div>
+  <div class="lnk">Available on request.</div>
+</div>
+
+<div class="item">
+  <div class="t">3. Auditing an LLM labelling chain at Artemis AI</div>
+  <div class="why"><b>What:</b> comparing two LLM annotation tiers, I found 0.0% agreement on toxicity, caused by mismatched label taxonomies,
+    while the model reported 96.7% confidence; a later audit showed our "accuracy" was agreement with the labelling model.
+    <b>Why included:</b> it is my research question happening inside a product, and it is changing how the team evaluates models before launch.</div>
+  <div class="lnk">Internal work; product at <a href="https://artemisai.co.uk">artemisai.co.uk</a> (pre-launch).</div>
+</div>
+
+<div class="item">
+  <div class="t">4. Twelve months of social discourse, coded with LLMs and checked by hand (M+C Saatchi Fluency)</div>
+  <div class="why"><b>What:</b> about 271,000 Brandwatch and Reddit mentions; a codebook derived from BERTopic, LLM tags each carrying a
+    hash of the prompt version, and three pilot runs on the same 500 rows before the full run. <b>Why included:</b> it is the closest I have
+    come to studying narratives at scale, and it taught me to treat a prompt as an instrument whose version must be recorded.</div>
+  <div class="lnk">Client work; no public link.</div>
+</div>
+
+<div class="item">
+  <div class="t">5. A self-repairing crawler agent for a global automotive brand (M+C Saatchi Fluency)</div>
+  <div class="why"><b>What:</b> 64 crawlers of car-owner forums; when a source changes, an LLM agent diagnoses the break, regenerates the
+    spider and tests it on live pages, and a person approves each merge. <b>Why included:</b> my favourite piece of engineering. A
+    collector that breaks silently does not stop a time series, it thins it, and that is a measurement problem as much as an engineering one.</div>
+  <div class="lnk">Client work; no public link.</div>
+</div>
+
+<div class="item">
+  <div class="t">6. Multilingual competitor dashboards at Dubizzle Labs (2022 - 2024)</div>
+  <div class="why"><b>What:</b> dashboards built from listings and online discussion in English, Arabic, Urdu and Hindi across 15 markets that
+    predicted revenue and showed what customers said. <b>Why included:</b> my first experience of turning large volumes of public, multilingual text into
+    claims about markets that decision-makers acted on.</div>
+  <div class="lnk">Internal work; no public link. Profile: <a href="https://linkedin.com/in/asad-ikram98">linkedin.com/in/asad-ikram98</a></div>
+</div>
+</div>
+
+</body></html>
