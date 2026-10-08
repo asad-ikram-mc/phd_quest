@@ -84,12 +84,7 @@
   DeepSeek, then Claude when confidence is low), image and video understanding, and 48 models in all. The core collection and
   labelling runs weekly today; an advisor on Amazon Bedrock, crisis alerts and 15 further models are being built for our beta
   on 15 December 2026. I went hands-on with the models because accuracy is the hard problem, and read widely to do it, from
-  Grimmer, Roberts and Stewart's <i>Text as Data</i> to work on popularity prediction and on validating LLM annotation. That
-  reading paid off. Two of our LLM labelling tiers agreed on 82.9% of sentiment labels but on none of the toxicity labels,
-  because their taxonomies did not match, while the model reported high confidence. A September 2026 audit then showed that our
-  reported accuracies measured agreement with the labelling model rather than with people, so we are rebuilding evaluation
-  around a human-labelled set before launch. Finding that our own numbers measured the wrong thing is the most useful research
-  lesson I have had.</p>
+  Grimmer, Roberts and Stewart's <i>Text as Data</i> to work on popularity prediction and on validating LLM annotation. That reading shapes how we build: we are designing evaluation around human-labelled data, so that every model is checked against people rather than against its own confidence or another model before it reaches users.</p>
 
 <p><span class="lead">A question I could contribute to.</span> How do AI coding agents change the division of labour in
   software work, and for whom? Agents now leave signatures in public traces: co-author trailers in commits, bot accounts that
