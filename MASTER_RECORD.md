@@ -314,8 +314,8 @@ Photo: **done**, embedded 9 Sep. Address: **removed** at Asad's instruction.
 
 ## 6. STANDING DECISIONS AND RULES
 
-- **No HEC, no DAAD.** Opted out 20 Aug 2026. Never re-add either. The Commonwealth CSC nomination
-  is a separate route and is **not** blocked by this.
+- **No HEC, no DAAD.** Opted out 20 Aug 2026. Never re-add either. **Commonwealth PhD Scholarship dropped
+  8 Oct 2026**: Pakistan applies only through an HEC nomination ranked on HAT score, so it falls under this rule.
 - **Drafts only.** Never send an email. Build the draft, show it, stop.
 - **The proposal brief is private.** publish_proposal is passphrase-locked, for Dr Ella Haig only.
 - **No em-dashes** in anything written for Asad. Plain first-person prose.
