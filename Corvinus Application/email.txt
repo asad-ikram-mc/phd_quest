@@ -4,12 +4,14 @@ Attachments: Asad_Ikram_CV_Corvinus.pdf, Asad_Ikram_Motivation_Letter_Corvinus.p
 
 Dear Dr Wachs,
 
-I am applying for one of the two Research Assistant / PhD Student positions in your Geography of Code group. I have done remote data and software work for companies in six countries since 2018, and in 2026 most of the code I ship is written by AI agents I direct, so the change your group studies is the one my own work is going through. I hold an MSc in Data Analytics (Distinction) from the University of Portsmouth, where I was a Chevening Scholar, and I work daily in Python and SQL on large, messy data.
+I am applying for one of the two Research Assistant / PhD Student positions in your Geography of Code group. A platform started my software career in 2018, when I began taking web-scraping jobs on Fiverr as a computer science student in Pakistan, and AI agents are reshaping it now: I direct coding agents that write much of the code I design, review and ship. In between I became a Senior Data Engineer at Dubizzle Labs, working on online data across 15 markets in four languages, and did remote work for employers and clients in six countries. I hold an MSc in Data Analytics (Distinction) from the University of Portsmouth, where I was a Chevening Scholar, and I work daily in Python and SQL on large, messy web and social media data.
+
+Your Science paper with Daniotti, Feng and Neffke calls for widening the analysis to countries at different income levels, and my letter sets out how I would like to contribute to that, with attention to what GitHub and LinkedIn traces can and cannot see.
 
 My CV and motivation letter are attached, and my two referees are below. I could start from 1 December 2026 or later and would relocate to Budapest.
 
 Referees
-1. Dr Ella Haig, Associate Professor in Artificial Intelligence, School of Computing, University of Portsmouth. Ella.Haig@port.ac.uk. My MSc dissertation supervisor and co-author.
+1. Dr Ella Haig, Associate Professor in AI, School of Computing, University of Portsmouth. Ella.Haig@port.ac.uk. My MSc dissertation supervisor and co-author.
 2. Dr Fahad Ahmad, Senior Lecturer, Centre for Cybercrime and Economic Crime, University of Portsmouth. Fahad.Ahmad@port.ac.uk. Taught and assessed me on the MSc.
 
 Thank you for your time.
