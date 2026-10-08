@@ -4,19 +4,16 @@ Attachments: Asad_Ikram_CV_Corvinus.pdf, Asad_Ikram_Motivation_Letter_Corvinus.p
 
 Dear Dr Wachs,
 
-I am applying for one of the two Research Assistant / PhD Student positions in your Geography of Code group. Your advertisement asks for computational methods applied to social questions, experience in coding, modelling and data wrangling, and an interest in agentic AI. I bring these from social media research and industry: an MSc dissertation in Data Analytics at the University of Portsmouth (Distinction, Chevening Scholar) that became a methods paper with Dr Ella Haig on measuring opinion across platforms; social media data work at M+C Saatchi Fluency in London; and AI agents I build into that work, a self-healing crawler agent and a crawler-builder agent.
+I am applying for one of the two Research Assistant / PhD Student positions in your Geography of Code group.
 
-Your Science paper with Daniotti, Feng and Neffke calls for widening the analysis to countries at different income levels, and my letter sets out how I would like to contribute to that, with attention to what GitHub and LinkedIn traces can and cannot see.
+Your Science paper finds that AI's gains in coding went to experienced developers, and calls for evidence from countries at other income levels. I would like to help provide it. I bring what your advertisement asks for: computational social science on social media data, through an MSc dissertation at Portsmouth (Distinction, Chevening Scholar) that became a methods paper with Dr Ella Haig; eight years of coding, modelling and data wrangling on large multilingual web data; and AI agents that I build into my work at M+C Saatchi Fluency. I am also part of the story your group studies: a developer from Pakistan who entered global software work through a freelance platform.
 
-My CV and motivation letter are attached, and my two referees are below. I am available full time from 1 December 2026 and would relocate to Budapest.
+My CV and two-page letter are attached. I am available full time from 1 December 2026 and would relocate to Budapest.
 
-Referees
-1. Dr Ella Haig, Associate Professor in AI, School of Computing, University of Portsmouth. Ella.Haig@port.ac.uk. My MSc dissertation supervisor and co-author.
-2. Dr Fahad Ahmad, Senior Lecturer, Centre for Cybercrime and Economic Crime, University of Portsmouth. Fahad.Ahmad@port.ac.uk. Taught and assessed me on the MSc.
-
-Thank you for your time.
+Referees:
+1. Dr Ella Haig, Associate Professor in AI, University of Portsmouth (Ella.Haig@port.ac.uk), my dissertation supervisor and co-author.
+2. Dr Fahad Ahmad, Senior Lecturer, University of Portsmouth (Fahad.Ahmad@port.ac.uk), who taught and assessed me on the MSc.
 
 Kind regards,
 Asad Ikram
-asad.ikram53@gmail.com | +44 7482 376417
-linkedin.com/in/asad-ikram98 | github.com/asadfix
+asad.ikram53@gmail.com | +44 7482 376417 | linkedin.com/in/asad-ikram98
