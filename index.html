@@ -1697,6 +1697,7 @@ const EVENTS=[
   {d:3,m:10,y:2026,cat:"ec-red",dc:"dc-red",title:"KTH PhD (LLM detection of online gender-based violence): not selected",detail:"Amir Payberah via Varbi, 3 Oct: \"You have a strong CV\", but the recruitment continues with other candidates. Lesson 10: ask once for brief feedback."},
   {d:4,m:10,y:2026,cat:"ec-green",dc:"dc-green",title:"SUBMITTED: Aalborg PhD, Secure and Privacy-Preserving Collaborative Language Models (2026/987)",detail:"Sent on Varbi on the deadline day. Letter, CV, 2-page project description (private validation of shared LLM annotators, DP federated fine-tuning, detecting distributed model and chain-of-thought extraction), BSc and MSc diplomas, referees, IELTS. Supervisor Dr Qiongxiu (Jane) Li."},
   {d:2,m:10,y:2026,cat:"ec-green",dc:"dc-green",title:"SUBMITTED: NTNU PhD, Developing Efficient Search Engines (Jobbnorge 307690)",detail:"Sent 15:26 on the deadline day. Outline: version-aware indexes for machine-annotated text, built on Dhruv Gupta's GYANI, NASH and KNITTIR."},
+  {d:30,m:10,y:2026,cat:"ec-gold",dc:"dc-gold",title:"St.Gallen MSCA REGULAIRE DC01 closes (AI governance, LLM text analysis)",detail:"Motivation letter, CV, transcripts, two reference LETTERS, short research proposal. HSG portal."},
   {d:31,m:10,y:2026,cat:"ec-red",dc:"dc-red",title:"ELLIS PhD Program 2027 central call closes (23:59 AoE)",detail:"apply.ellis.eu: two-page motivational letter, CV, transcripts, optional thesis or paper. References by 25 Nov. Advisors: Augenstein (warm), Pierri. Interviews Jan to Feb 2027."},
   {d:25,m:11,y:2026,cat:"ec-gold",dc:"dc-gold",title:"ELLIS PhD Program: referee letters due",detail:"2 to 3 referees, at least two lecturer level or above (Ella Haig, Fahad Ahmad)."},
   {d:15,m:12,y:2026,cat:"ec-cyan",dc:"dc-cyan",title:"CS@max planck doctoral programme closes (Cha route at MPI-SP)",detail:"Applications open since 1 Sep."},
@@ -2537,6 +2538,16 @@ const PRIORITIES = [
    why:'Interpretable, computationally efficient data-mining or ML methods for detecting cyberattacks on power systems, validated in digital simulation. Wants a master\u0027s in cybersecurity, computer engineering, power systems or a related field. The ML and data-mining side fits; the power-systems domain does not, and there is no social-science angle. A sister post (post-quantum security) fits even less.',
    req:['ONLY IF time allows before 15 Oct: email tara.ghasempouri@taltech.ee, subject "PhD Position \u2013 Cyberattack detection methods in Power Systems", with CV, passport page, English proof, BSc and MSc diplomas and transcripts.'],
    link:'https://euraxess.ec.europa.eu/jobs/469131'},
+  {id:'p-hsg-regulaire', tier:'month', due:[2026,10,30], time:'NEW 8 Oct (LinkedIn post) \u00b7 closes 30 Oct \u00b7 MSCA doctoral network, 3 years from 1 Jan 2027',
+   name:'University of St.Gallen (HSG), MSCA REGULAIRE DC01: PhD in AI Governance and Regulatory Foresight, with LLM-assisted analysis of EU and national regulation. Verified 8 Oct on jobs.unisg.ch',
+   why:'A 100% salaried Swiss PhD (1 Jan 2027 to 31 Dec 2029) in the Chair for Law and Technology. Supervisors: Prof. Aurelia Tamò-Larrieux (HSG) and Prof. Sebastian Schwemer (BI Norwegian Business School), with network secondments. The tasks include building datasets and an LLM-assisted methodology for analysing EU and national regulation, plus regulatory early-warning (problem sensing). Open to data science and related social sciences; asks for an interest in comparative policy analysis and computational text analysis; excellent English. The MSCA mobility rule (no more than 12 months in Switzerland in the last 36) is fine. Gap: no law or policy background, so lead with LLM text-analysis validity and the economic-policy dissertation.',
+   req:['APPLY on the HSG portal by 30 Oct 2026: motivation letter, CV, transcripts, AT LEAST TWO reference LETTERS (not just contacts), and a short research proposal engaging with DC01.','ASK Dr Haig and Dr Ahmad early: these are actual letters, due with the application.','ANGLE: validity of LLM-coded regulatory text (borrowed from the cross-platform measurement manuscript), plus the UK economic-policy dissertation as policy-text experience.'],
+   link:'https://jobs.unisg.ch/offene-stellen/phd-position-ai-governance-regulatory-foresight-m-w-d/135c18aa-8e44-45ce-bd38-3f5f2c0a12b1'},
+  {id:'p-uva-regulaire', tier:'later', due:[2026,11,2], time:'NEW 8 Oct \u00b7 closes 2 Nov \u00b7 legal and qualitative, weak degree fit',
+   name:'University of Amsterdam (IViR), MSCA REGULAIRE DC04: PhD on researchers\u0027 access and accountability in AI governance (DSA and AI Act), with Prof. Natali Helberger',
+   why:'Four years, EUR 3,204 to 4,051 a month, start 1 Jan 2027. The topic is the legal position of researchers under the DSA (including data access) and the AI Act, using legal analysis, interviews and participatory design. Asad knows researcher data access from the practitioner side, but the post wants a master\u0027s in law, political science or media studies and qualitative skills, so the degree fit is weak.',
+   req:['ONE PDF by 2 Nov: motivation letter (max 1 page), CV (max 2 pages), writing sample (max 20 pages), two referee contacts.','Only if there is time after the October cluster.'],
+   link:'https://werkenbij.uva.nl/en/vacancies/phd-candidate-in-access-actors-and-accountability-the-role-of-researchers-in-ai-governance-netherlands-15529'},
   {id:'p-ellis-phd-2027', tier:'month', due:[2026,10,31], time:'NEW 2 Oct \u00b7 one portal, 50-100 institutions \u00b7 references due 25 Nov',
    name:'ELLIS PhD Program 2027 central call is OPEN: apply by 31 Oct 2026, 23:59 AoE (verified 2 Oct on ellis.eu)',
    why:'One central application to the ELLIS network, with co-supervision across European countries. Natural Language Processing and Social Sciences and Humanities are listed research areas, and the advisor list is on the portal. This is the route for Isabelle Augenstein (CopeNLU, already warm) and Francesco Pierri (PoliMi). It is a different call from the ELLIS Institute Finland application already submitted on 21 Sep. Selective: fewer than 5 per cent of registered applicants advance, so lesson 7 applies; name warm advisors.',
@@ -2685,7 +2696,7 @@ function defaultStatus(p){return PRIO_DEFAULT_ST[p.id]||(p.tier==='followup'?'pr
 function dueKey(p){ return p.due ? new Date(p.due[0],p.due[1]-1,p.due[2]).getTime() : 8640000000000000; }
 const TIER_RANK={now:0,week:1,month:2,followup:3,later:4};
 /* priority: 1 = must do / best fit, 2 = strong, 3 = optional or reference. Set 22 Sep 2026. */
-const PRIO_RANK={'p-nthu-mq':2,'p-taltech':3,'p-dfki-combo':2,'p-unil-humbert':2,'p-ddsa-2027':2,'p-senss-esrc':2,'p-lmu-wuttke':1,'p-ellis-phd-2027':1,'p-followups-oct':1,
+const PRIO_RANK={'p-hsg-regulaire':2,'p-uva-regulaire':3,'p-nthu-mq':2,'p-taltech':3,'p-dfki-combo':2,'p-unil-humbert':2,'p-ddsa-2027':2,'p-senss-esrc':2,'p-lmu-wuttke':1,'p-ellis-phd-2027':1,'p-followups-oct':1,
   'p-ellis-fi':1,'p-iwm-everyday-media':1,'p-uva-aifeels':1,'p-csh':1,'p-commonwealth':1,'p-mbzuai':1,'p-edinburgh':1,'p-cha':1,'p-paper':1,
   'p-vu':1,'p-sdu':1,'p-polimi':1,'p-ella':1,
   'p-ielts':3,'p-kth-feminist':1,'p-hpi-rottger':1,'p-corvinus-wachs':2,'p-ubel-dtp':2,'p-cu-boulder':3,'p-ects':3,'p-ku-cultural':2,'p-inria-claims':2,'p-lmu-ai':2,'p-leads-eu2':3,'p-ntnu-search':2,'p-aau-secure-llm':2,'p-mpi-sws':2,'p-imprs-is':2,'p-ubc-cs':2,'p-sedarc':2,'p-uva-doubt':3,'p-bristol-cdt':2,'p-surrey-cdt':2,'p-umd-info':2,'p-cmu-lti':3,'p-unc-ils':3,'p-sweep-21sep':3,'p-epfl-edic':2,'p-oii':2,'p-vienna-rai':2,'p-rit':2,'p-casas':2,'p-saarland':2,
@@ -3118,7 +3129,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '7 Oct 2026';
+  const LAST_REFRESHED = '8 Oct 2026';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
   const luEl = document.getElementById('last-updated-text');
   if(luEl) luEl.textContent = 'Last updated: ' + LAST_REFRESHED;
