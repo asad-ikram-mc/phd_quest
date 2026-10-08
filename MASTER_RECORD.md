@@ -347,5 +347,8 @@ Recorded verbatim in substance; items that differ from documented records are ma
 - M+C Saatchi Fluency (Dec 2024 to present): clients he named: Nike, Ford, Reckitt, US women's soccer, Amazon (CORE and Alexa), Abbott, UK Government [CHECK: UK Gov MAPP is Prabhat's project with Asad as backup; Alexa+ was design only; client naming may be confidential]. Collection, labelling, tagging, text and sentiment analysis, forum sourcing, architecture.
 - Research: paper with Dr Ella Haig going to arXiv; ICWSM submission planned with her.
 - Artemis AI (co-founder and CTO): he says he leads a team of 5 across models, AI and ML, deployment, app development, design, marketing and pitching [CHECK: the team is 8 including CEO Alex and COO Jill]. Went hands-on on models for accuracy; wide reading of research papers. Beta mid-December 2026.
-- Web-scraping architecture for SlickTrip (USA; NDA) and businesses in the Netherlands, Lithuania, Germany.
-- web-scraping-guide.com: open guide for the industry.
+- Web-scraping architecture for a US client (NDA: never name it) and businesses in the Netherlands, Lithuania, Germany.
+- web-scraping-guide.com (since May 2026): open guide for the industry. Use it in the CV Public work line (replaced the Zyte mention in Corvinus, 8 Oct).
+- AI framing (8 Oct): he BUILDS agents (self-healing crawler agent, builder agent) and decides what ships; AI coding assistants help him. Never write that AI writes his code.
+- PhD motivation (8 Oct): apply MSc, Fluency and Artemis learning; learn methods that make his start-up more accurate; take research back into practice.
+- Artemis label-validity/audit findings are his learning, not an achievement: keep them out of CVs and letters (8 Oct). Paper code/DOI links removed from Corvinus at his request (8 Oct).
