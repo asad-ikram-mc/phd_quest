@@ -7,7 +7,7 @@ I hope you are well. I was on the MSc Data Analytics that you coordinated (2024/
 
 As a first-time submitter I need an endorsement for the cs.LG category, and arXiv lists you as able to endorse there. Endorsing only confirms that the paper is a genuine contribution suited to the category; it is not a review. The paper studies how far machine-learning labels of social media text can be compared across platforms, with a simulation of classifier error, and it is cross-listed to cs.CY, cs.CL and stat.ME.
 
-If you are happy to endorse, you can open https://arxiv.org/auth/endorse?x=[NEW CODE] or enter the code [NEW CODE] at https://arxiv.org/auth/endorse. The paper is attached, and I would be glad to answer any questions.
+If you are happy to endorse, you can open https://arxiv.org/auth/endorse?x=PMQNBD or enter the code PMQNBD at https://arxiv.org/auth/endorse. The paper is attached, and I would be glad to answer any questions.
 
 Thank you for considering it.
 
