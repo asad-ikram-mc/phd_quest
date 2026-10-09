@@ -1,0 +1,10 @@
+To: Dr Ella Haig (reply in the same Outlook thread as the 5 October email)
+
+Subject: Re: Our paper: final version and planned arXiv posting on Monday 12 October
+
+Hi Dr Ella,
+
+A quick update on the endorsement, so you do not need to contact Dr Akgün. Dr Rahim Taheri in our School of Computing can endorse for cs.LG, so I would like to make cs.LG the primary category and keep cs.CY, cs.CL and stat.ME as cross-lists. I will ask him directly. If you would rather keep cs.CY as the primary category, please let me know and I will wait.
+
+Best wishes,
+Asad
