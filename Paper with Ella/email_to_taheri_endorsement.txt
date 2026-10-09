@@ -3,7 +3,7 @@ Subject: arXiv endorsement request (cs.LG): paper with Dr Ella Haig
 
 Dear Dr Taheri,
 
-I am a recent MSc Data Analytics graduate of the School of Computing (2024/25, Chevening Scholar). Dr Ella Haig supervised my dissertation, and Dr Fahad Ahmad taught me on the MSc. Dr Haig and I have turned the dissertation into a paper, "Is the Platform Part of the Measurement? A Protocol and Simulation Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment", and we would like to post it on arXiv.
+I hope you are well. I was on the MSc Data Analytics that you coordinated (2024/25, as a Chevening Scholar), and I graduated with a Distinction. Dr Ella Haig supervised my dissertation, and she and I have turned the dissertation into a paper, "Is the Platform Part of the Measurement? A Protocol and Simulation Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment", and we would like to post it on arXiv.
 
 As a first-time submitter I need an endorsement for the cs.LG category, and arXiv lists you as able to endorse there. Endorsing only confirms that the paper is a genuine contribution suited to the category; it is not a review. The paper studies how far machine-learning labels of social media text can be compared across platforms, with a simulation of classifier error, and it is cross-listed to cs.CY, cs.CL and stat.ME.
 

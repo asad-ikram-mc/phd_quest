@@ -335,6 +335,8 @@ Photo: **done**, embedded 9 Sep. Address: **removed** at Asad's instruction.
 - **Kappa wording (decided 2 Oct 2026).** Asad labelled all 200 validation posts himself. Dissertation p.28 calls κ ≈ 0.78 'inter-annotator agreement', but its own plain-language gloss says it measures how often VADER's tags and the hand check agreed (p.25: 'manual review of VADER-labelled data'). From now on write '200 posts hand-labelled by me' and, if κ is mentioned, 'κ ≈ 0.78 against VADER'. Never 'inter-annotator' or 'human-coded validation set (κ 0.78)'. Letters already sent (IWM, UvA, NTNU and earlier) used the old wording.
 - **Paper v1 built (2 Oct 2026):** all 32 review edits, kappa wording as above, competing-interests note (ArtemisAI). Code repo public: https://github.com/asadfix/platform-measurement (Zenodo DOI 10.5281/zenodo.23105129, v1.0.0). Email Ella Mon 5 Oct; submit to arXiv Mon 12 Oct.
 
+- **Dr Rahim Taheri** (Senior Lecturer, School of Computing, UoP) was Asad's MSc Data Analytics programme coordinator (Asad, 9 Oct 2026). arXiv confirms he can endorse cs.CR and cs.LG.
+
 ## Asad's own career story (stated 8 Oct 2026, for applications)
 Recorded verbatim in substance; items that differ from documented records are marked [CHECK].
 - 2018: started freelancing at university (data engineering, analytics, web scraping). Fiverr: 300+ completed orders (he said "300+ freelance clients" [CHECK: LinkedIn and dashboard say orders]). Helped university students start freelance careers.
