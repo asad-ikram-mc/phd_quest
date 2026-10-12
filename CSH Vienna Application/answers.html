@@ -21,7 +21,7 @@
 
 <p>My MSc dissertation at the University of Portsmouth (2025, supervised by Dr Ella Haig) asked how public reaction to UK
   economic policy differed across social platforms. The project was mine from question to write-up. I obtained ethics approval,
-  collected about 279,000 public posts from X/Twitter, Reddit, YouTube and Quora through official APIs and licensed feeds, and built
+  collected 255,446 public comments from X/Twitter, Reddit, YouTube and Quora through official APIs and licensed feeds, and built
   the analysis in Python: VADER and BiLSTM baselines, a fine-tuned BERT classifier, temperature-scaling calibration, McNemar and
   bootstrap tests, chi-square tests across topics, Prophet forecasts, NRC emotion scores, and LIME and integrated gradients to see what
   the model relied on. I also hand-labelled 200 posts myself as a check.</p>
@@ -36,11 +36,11 @@
 <p>I learned two things. A high agreement score describes the reference as much as the model, so the first design question is where
   the criterion comes from and whether it is independent of the thing being tested. And a comparison between groups needs evidence that
   the instrument behaves alike in each group, a routine test in survey research that computational text analysis rarely runs. With
-  Dr Haig I turned this into a methods manuscript, <i>Is the Platform Part of the Measurement?</i>, which treats each platform as a
+  Dr Haig I turned this into a methods paper, <i>Is the Platform Part of the Measurement?</i>, which treats each platform as a
   survey mode and sets out a protocol built on generalizability theory, measurement invariance and differential item functioning (DIF),
-  and score linking. I built its simulation, which is public: pooling platform scores at face value gives the wrong sign of daily
-  aggregate sentiment on roughly a quarter of days, from measurement differences alone. For the application stage I fixed fifteen policy anchor events in advance and recorded them before computing any counts. The manuscript is complete and not yet published. I met the same problem again in industry: at Artemis AI, where I am
-  co-founder and CTO, the accuracy our dashboard reported turned out to be agreement with the labelling model, not with people.</p>
+  and score linking. I built its simulation: pooling platform scores at face value gives the wrong sign of daily
+  aggregate sentiment on roughly a quarter of days, from measurement differences alone. For the application stage I fixed fifteen policy anchor events in advance and recorded them before computing any counts. The paper was submitted to arXiv in October 2026. I now apply the same lesson in industry: at Artemis AI, where I am
+  co-founder and CTO, we are designing model evaluation around human-labelled data rather than agreement between models.</p>
 
 <h2>2. A discovery from a CSH research group</h2>
 
@@ -95,7 +95,7 @@
 <p>Gaynor, S., Miler, K., Goel, P., Hoyle, A. and Resnik, P. (2026). Express yourself (ideologically): legislators' ideal points across audiences. <i>Journal of Politics</i> 88(4). doi:10.1086/736360</p>
 <p>Hoyle, A. et al. (2021). Is automated topic model evaluation broken? The incoherence of coherence. NeurIPS 2021.</p>
 <p>Licht et al., incl. Hoyle, A. (2025). Measuring scalar constructs in social science with LLMs. EMNLP 2025.</p>
-<p>Ikram, A. and Haig, E. Is the platform part of the measurement? A protocol and simulation study for cross-platform equivalence of machine-labelled policy sentiment. Manuscript, complete, not yet published. Code: github.com/asadfix/platform-measurement, doi:10.5281/zenodo.23105129</p>
+<p>Ikram, A. and Haig, E. Is the platform part of the measurement? A protocol and simulation study for cross-platform equivalence of machine-labelled policy sentiment. Submitted to arXiv, October 2026.</p>
 </div>
 
 </body></html>

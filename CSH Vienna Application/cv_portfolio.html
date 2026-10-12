@@ -46,7 +46,7 @@
 
 <h2>Profile</h2>
 <p>I study whether machine labels of online text mean the same thing across platforms, models and time. My MSc dissertation
-  analysed public reaction to UK economic policy on four platforms, and a methods manuscript with Dr Ella Haig brings
+  analysed public reaction to UK economic policy on four platforms, and a methods paper with Dr Ella Haig, submitted to arXiv in October 2026, brings
   psychometric tools to machine-labelled sentiment. Since 2018 I have built the data collection and LLM labelling pipelines
   that analysis of online conversation depends on, and I check machine labels against human ones before anything is built on them.</p>
 
@@ -56,7 +56,7 @@
   <div>Credit-weighted average 70.5/100; master's project 78/100. Supervisor: Dr Ella Haig. Modules included Intelligent Data
      and Text Analytics, Big Data and Machine Learning, Explainable AI, Data Management (80). Taught and assessed in English.</div>
   <div style="margin-top:1pt"><span class="ttl">Dissertation:</span> <i>Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies.</i>
-     About 279,000 public posts from X/Twitter, Reddit, YouTube and Quora, collected through official APIs and licensed feeds
+     255,446 public comments from X/Twitter, Reddit, YouTube and Quora, collected through official APIs and licensed feeds
      under university ethics approval (TETHIC-2025-111094). Fine-tuned BERT against BiLSTM and lexicon baselines (macro-F1 0.878,
      scored against lexicon-seeded labels); 200 posts hand-labelled by me, &kappa; &asymp; 0.78 against VADER; calibration,
      McNemar and bootstrap tests, Prophet forecasting, LIME and integrated gradients.</div>
@@ -70,9 +70,7 @@
 
 <h2>Research</h2>
 <p><span class="ttl">Ikram, A. and Haig, E.</span> "Is the Platform Part of the Measurement? A Protocol and Simulation Study
-  for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." <b>Manuscript, complete; not yet published.</b>
-  Code: <a href="https://github.com/asadfix/platform-measurement">github.com/asadfix/platform-measurement</a>, Zenodo DOI
-  <a href="https://doi.org/10.5281/zenodo.23105129">10.5281/zenodo.23105129</a>. Treats each platform as a survey mode and
+  for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment." <b>Submitted to arXiv, October 2026 (cs.LG).</b> Treats each platform as a survey mode and
   applies generalizability theory, measurement invariance and differential item functioning, and score linking to machine-labelled
   text. In a 500-replication simulation with known ground truth, pooling platform scores at face value gives the wrong sign of
   daily aggregate sentiment on roughly a quarter of days, from measurement differences alone.
@@ -100,9 +98,7 @@
     <li>Designed an LLM labelling chain: Claude labels about 6,000 posts with an explanation of each, rules mined from the
         explanations become a prompt for DeepSeek, which labels about 12,000 more to train encoder classifiers (XLM-R,
         DistilBERT, DeBERTa-v3, Detoxify). The team first hand-labelled about 500 posts and comments to check both models.</li>
-    <li>Audited the labels: the two tiers agreed on 82.9% of sentiment, 74.4% of emotion and 0.0% of toxicity labels (mismatched
-        taxonomies) while the toxicity model reported 96.7% average confidence. A September 2026 audit found reported accuracies
-        measured agreement with the labelling model, not with people; evaluation is being rebuilt around a human-labelled golden set.</li>
+    <li>Designing model evaluation around a human-labelled golden set, so every model is checked against people before it reaches users.</li>
     <li>In progress: leading the build of Art-E, a retrieval-based advisor that answers each client's questions from that client's own data.</li>
   </ul>
 </div></div>
@@ -146,8 +142,8 @@
 
 <h2>Awards, public work and languages</h2>
 <div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25, the UK Government's global scholarship, which funded the MSc.</div></div>
-<div class="kv"><div class="k">Public work</div><div class="v">Invited by Zyte's developer-relations
-  team to review a pre-release of its open-source agentic scraping toolkit (August 2026).</div></div>
+<div class="kv"><div class="k">Public work</div><div class="v">Author and maintainer of <a href="https://web-scraping-guide.com">web-scraping-guide.com</a> (since May 2026),
+  a free public guide to web data collection, including the legal and ethical limits of collection.</div></div>
 <div class="kv"><div class="k">Languages</div><div class="v">Urdu (native); English (working language; MSc taught and assessed in English, IELTS 6.5).</div></div>
 
 <h2>Referees</h2>
@@ -164,27 +160,26 @@
 <div class="intro">Asad Ikram &middot; A selection of the work I care most about, with why each piece is here. Client work has no public link and is described without client data.</div>
 
 <div class="item">
-  <div class="t">1. "Is the Platform Part of the Measurement?" Methods manuscript with Dr Ella Haig, and its simulation code</div>
+  <div class="t">1. "Is the Platform Part of the Measurement?" Methods paper with Dr Ella Haig</div>
   <div class="why"><b>What:</b> a six-step protocol (generalizability theory, invariance and DIF, score linking) for comparing machine-labelled
     sentiment across platforms, with a 500-replication simulation that reproduces in seconds and needs no collected data.
-    <b>Why included:</b> it is the clearest statement of the question I want to pursue, and the code lets anyone check the result.
-    The manuscript is complete and not yet published.</div>
-  <div class="lnk"><a href="https://github.com/asadfix/platform-measurement">github.com/asadfix/platform-measurement</a> &middot; DOI <a href="https://doi.org/10.5281/zenodo.23105129">10.5281/zenodo.23105129</a></div>
+    <b>Why included:</b> it is the clearest statement of the question I want to pursue, and I built the simulation behind its main result.</div>
+  <div class="lnk">Submitted to arXiv, October 2026 (cs.LG; cross-listed to cs.CY, cs.CL, cs.SI). PDF available on request.</div>
 </div>
 
 <div class="item">
   <div class="t">2. MSc dissertation: Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies (Portsmouth, 2025)</div>
-  <div class="why"><b>What:</b> about 279,000 posts from four platforms under ethics approval, BERT against BiLSTM and lexicon baselines,
+  <div class="why"><b>What:</b> 255,446 comments from four platforms under ethics approval, BERT against BiLSTM and lexicon baselines,
     calibration and significance tests. <b>Why included:</b> my first research project end to end, and the one I learned most from,
-    because its validation turned out to be circular (see answer 1). The manuscript above grew out of that mistake.</div>
+    because its validation turned out to be circular (see answer 1). The paper above grew out of that mistake.</div>
   <div class="lnk">Available on request.</div>
 </div>
 
 <div class="item">
-  <div class="t">3. Auditing an LLM labelling chain at Artemis AI</div>
-  <div class="why"><b>What:</b> comparing two LLM annotation tiers, I found 0.0% agreement on toxicity, caused by mismatched label taxonomies,
-    while the model reported 96.7% confidence; a later audit showed our "accuracy" was agreement with the labelling model.
-    <b>Why included:</b> it is my research question happening inside a product, and it is changing how the team evaluates models before launch.</div>
+  <div class="t">3. An LLM labelling chain for a social-media analytics product (Artemis AI)</div>
+  <div class="why"><b>What:</b> Claude labels about 6,000 posts with an explanation of each; rules mined from those explanations become a
+    prompt for DeepSeek, which labels about 12,000 more to train encoder classifiers, with about 500 hand-labelled posts as the check on both.
+    <b>Why included:</b> it is my research question inside a product: labels have to be checked against people before anything is built on them.</div>
   <div class="lnk">Internal work; product at <a href="https://artemisai.co.uk">artemisai.co.uk</a> (pre-launch).</div>
 </div>
 
