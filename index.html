@@ -284,6 +284,8 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 .pf-btn.on.pf-progress{border-color:rgba(91,168,255,0.45)}
 .pf-btn.on.pf-done{border-color:rgba(61,214,140,0.45)}
 .pf-btn.on.pf-applied{border-color:rgba(56,201,201,0.55)}
+.pf-btn.on.pf-ready{border-color:rgba(224,176,74,0.55)}
+.pf-btn.on.pf-rejected{border-color:rgba(248,113,113,0.5)}
 .pf-reset{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);background:none;border:none;cursor:pointer;letter-spacing:.04em}
 .pf-reset:hover{color:var(--red)}
 @media(max-width:640px){.pf-reset{margin-left:0}}
@@ -598,6 +600,8 @@ footer a:hover{color:var(--gold2)}
 .st-parked{color:#a78bfa;background:rgba(167,139,250,0.10);border-color:rgba(167,139,250,0.3)}
 .st-dropped{color:var(--text3);background:var(--bg);border-color:var(--border2)}
 .st-todo{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(56,201,201,0.3)}
+.st-ready{color:var(--gold,#e0b04a);background:rgba(224,176,74,0.10);border-color:rgba(224,176,74,0.45)}
+.st-rejected{color:#f87171;background:rgba(248,113,113,0.10);border-color:rgba(248,113,113,0.4)}
 .st-done{color:var(--green);background:var(--green-bg);border-color:rgba(61,214,140,0.3)}
 .st-applied{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(56,201,201,0.45)}
 #active-inprogress{margin-bottom:16px}
@@ -2790,16 +2794,18 @@ const PRIORITIES = [
 const BOARD_COLS=[
   {k:'todo',label:'To do',hint:'Not started'},
   {k:'progress',label:'In progress',hint:'Actively working'},
+  {k:'ready',label:'Ready to apply',hint:'Application or email ready, just submit or send it'},
   {k:'applied',label:'Sent, waiting',hint:'Application or email sent, waiting on them'},
+  {k:'rejected',label:'Rejected',hint:'Not selected or declined'},
   {k:'done',label:'Done',hint:'Finished, or closed with an outcome'},
   {k:'parked',label:'Parked',hint:'Deliberately on hold'},
   {k:'dropped',label:'Not needed',hint:'Dropped, passed or closed'}
 ];
-const ST_LABEL={todo:'to do',progress:'in progress',applied:'sent \u00b7 waiting',done:'done',parked:'parked',dropped:'not needed'};
+const ST_LABEL={todo:'to do',progress:'in progress',ready:'ready to apply',applied:'sent \u00b7 waiting',rejected:'rejected',done:'done',parked:'parked',dropped:'not needed'};
 /* defaults that differ from the rule "followup = in progress, everything else = to do" */
-const PRIO_DEFAULT_ST={'p-paper':'done','p-sweep-12oct':'parked','p-sweep-9oct':'parked','p-taltech':'parked','p-uva-regulaire':'parked','p-hsg-regulaire':'parked','p-stockholm-socrisp':'parked','p-uva-doubt':'parked','p-dfki-combo':'parked','p-inria-claims':'parked','p-ku-cultural':'parked','p-imprs-is':'parked','p-bristol-cdt':'parked','p-followups-oct':'parked','p-sweep-28sep':'parked','p-sweep-oct-dec':'parked','p-sweep-30sep':'parked','p-sweep-21sep':'parked','p-leads-eu2':'parked','p-corvinus-wachs':'applied','p-aau-secure-llm':'done','p-ntnu-search':'applied','p-iwm-everyday-media':'applied','p-uva-aifeels':'applied','p-kth-feminist':'done','p-ellis-fi':'applied','p-sdu':'applied','p-polimi':'applied','p-vienna-rai':'applied','p-cha':'applied','p-casas':'applied','p-rit':'applied','p-emails':'applied','p-saarland':'applied','p-vu':'done','p-utrecht':'done','p-lmu-wuttke':'progress','p-edinburgh':'progress','p-commonwealth':'progress','p-commonwealth':'dropped','p-hasselt':'dropped','p-nelimarkka':'dropped','p-agder':'dropped','p-aarhus':'dropped','p-outbox':'done','p-rejected-log':'parked','p-manual-sweep':'parked'};
+const PRIO_DEFAULT_ST={'p-csh':'ready','p-lund-back':'ready','p-swiss-sges':'ready','p-paper':'done','p-sweep-12oct':'parked','p-sweep-9oct':'parked','p-taltech':'parked','p-uva-regulaire':'parked','p-hsg-regulaire':'parked','p-stockholm-socrisp':'parked','p-uva-doubt':'parked','p-dfki-combo':'parked','p-inria-claims':'parked','p-ku-cultural':'parked','p-imprs-is':'parked','p-bristol-cdt':'parked','p-followups-oct':'parked','p-sweep-28sep':'parked','p-sweep-oct-dec':'parked','p-sweep-30sep':'parked','p-sweep-21sep':'parked','p-leads-eu2':'parked','p-corvinus-wachs':'applied','p-aau-secure-llm':'rejected','p-ntnu-search':'applied','p-iwm-everyday-media':'applied','p-uva-aifeels':'applied','p-kth-feminist':'rejected','p-ellis-fi':'applied','p-sdu':'applied','p-polimi':'applied','p-vienna-rai':'applied','p-cha':'applied','p-casas':'applied','p-rit':'applied','p-emails':'applied','p-saarland':'applied','p-vu':'rejected','p-utrecht':'rejected','p-lmu-wuttke':'progress','p-edinburgh':'progress','p-commonwealth':'progress','p-commonwealth':'dropped','p-hasselt':'dropped','p-nelimarkka':'dropped','p-agder':'dropped','p-aarhus':'dropped','p-outbox':'done','p-rejected-log':'parked','p-manual-sweep':'parked'};
 /* 1 Oct 2026: one-time move of saved statuses so sent applications and emails land in 'Sent, waiting' and outcomes in Done */
-function migrateAppliedOct1(){try{if(localStorage.getItem('prio-mig-applied-10'))return;const ov=loadStatus();['p-taltech','p-uva-regulaire','p-hsg-regulaire','p-stockholm-socrisp','p-uva-doubt','p-dfki-combo','p-inria-claims','p-ku-cultural','p-imprs-is','p-bristol-cdt','p-followups-oct','p-sweep-28sep','p-sweep-oct-dec','p-sweep-30sep','p-sweep-21sep','p-leads-eu2','p-kth-feminist','p-aau-secure-llm','p-iwm-everyday-media','p-uva-aifeels','p-kth-feminist','p-ellis-fi','p-sdu','p-polimi','p-vienna-rai','p-cha','p-casas','p-rit','p-emails','p-saarland','p-vu','p-utrecht','p-lmu-wuttke','p-edinburgh','p-commonwealth','p-corvinus-wachs','p-commonwealth','p-paper'].forEach(function(id){delete ov[id];});localStorage.setItem('prio-status',JSON.stringify(ov));localStorage.setItem('prio-mig-applied-10','1');}catch(e){}}
+function migrateAppliedOct1(){try{if(localStorage.getItem('prio-mig-applied-11'))return;const ov=loadStatus();['p-taltech','p-uva-regulaire','p-hsg-regulaire','p-stockholm-socrisp','p-uva-doubt','p-dfki-combo','p-inria-claims','p-ku-cultural','p-imprs-is','p-bristol-cdt','p-followups-oct','p-sweep-28sep','p-sweep-oct-dec','p-sweep-30sep','p-sweep-21sep','p-leads-eu2','p-kth-feminist','p-aau-secure-llm','p-iwm-everyday-media','p-uva-aifeels','p-kth-feminist','p-ellis-fi','p-sdu','p-polimi','p-vienna-rai','p-cha','p-casas','p-rit','p-emails','p-saarland','p-vu','p-utrecht','p-lmu-wuttke','p-edinburgh','p-commonwealth','p-corvinus-wachs','p-commonwealth','p-paper','p-csh','p-lund-back','p-swiss-sges','p-vu','p-utrecht','p-kth-feminist','p-aau-secure-llm'].forEach(function(id){delete ov[id];});localStorage.setItem('prio-status',JSON.stringify(ov));localStorage.setItem('prio-mig-applied-11','1');}catch(e){}}
 /* which Outreach cards each task drives (substring match against the PROFS name) */
 const PRIO_PROFS={
   'p-edinburgh':['Magdy','Ross'],
@@ -3015,11 +3021,12 @@ var prioFilter='all';
 var PRIO_FILTERS=[
   {k:'all',      label:'All'},
   {k:'todo',     label:'To do'},
-  {k:'applied',  label:'Sent \u00b7 waiting'},
-  {k:'done',     label:'Done'},
+  {k:'applied',  label:'Sent (waiting)'},
+  {k:'rejected', label:'Rejected'},
+  {k:'ready',    label:'Ready to apply'},
   {k:'closed',   label:'Parked or not needed'}
 ];
-var PRIO_GROUP={todo:['todo','progress'],applied:['applied'],done:['done'],closed:['parked','dropped']};
+var PRIO_GROUP={todo:['todo','progress'],ready:['ready'],applied:['applied'],rejected:['rejected'],closed:['parked','dropped','done']};
 function setPrioFilter(k){prioFilter=k;renderPriorities();}
 function renderPrioFilters(){
   var el=document.getElementById('prio-filters'); if(!el) return;
@@ -3027,7 +3034,7 @@ function renderPrioFilters(){
   PRIORITIES.forEach(function(p){var st=getStatus(p.id);counts[st]=(counts[st]||0)+1;});
   counts.all=PRIORITIES.filter(function(p){return getStatus(p.id)!=='dropped';}).length;
   counts.todo=(counts.todo||0)+(counts.progress||0);
-  counts.closed=(counts.parked||0)+(counts.dropped||0);
+  counts.closed=(counts.parked||0)+(counts.dropped||0)+(counts.done||0);
   el.innerHTML=PRIO_FILTERS.map(function(f){
     var n=counts[f.k]||0;
     return '<button class="pf-btn pf-'+f.k+(prioFilter===f.k?' on':'')+'" onclick="setPrioFilter(\''+f.k+'\')">'+f.label+'<span class="pf-n">'+n+'</span></button>';
@@ -3050,7 +3057,9 @@ function renderPriorities(){
   const visible=PRIORITIES.filter(p=>getStatus(p.id)!=='dropped');
   const doneItems=visible.filter(p=>getStatus(p.id)==='done').sort(byDeadline);
   const parked=visible.filter(p=>getStatus(p.id)==='parked').sort(byDeadline);
-  const live=visible.filter(p=>{const st=getStatus(p.id);return st!=='parked'&&st!=='done';});
+  const readyItems=visible.filter(p=>getStatus(p.id)==='ready').sort(byDeadline);
+  const rejectedItems=visible.filter(p=>getStatus(p.id)==='rejected').sort(byDeadline);
+  const live=visible.filter(p=>{const st=getStatus(p.id);return !['parked','done','ready','rejected'].includes(st);});
   const isWaiting=p=>p.tier==='followup'||getStatus(p.id)==='applied';
   const actives=live.filter(p=>!isWaiting(p)).sort(byDeadline);
   const fups=live.filter(isWaiting).sort(byDeadline);
@@ -3124,18 +3133,28 @@ function renderPriorities(){
       +'<div class="prio-check'+(isDone?' on':'')+'" title="Mark the whole item done" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
     el.appendChild(item);
   }
-  actives.forEach(renderOne);
+  let n0=0;
+  if(readyItems.length){
+    const h0=document.createElement('div');h0.className='prio-sec';h0.textContent='Ready to apply \u2014 documents or email ready, just submit or send';el.appendChild(h0);
+    readyItems.forEach((p,i)=>renderOne(p,i)); n0=readyItems.length;
+    const h1=document.createElement('div');h1.className='prio-sec';h1.textContent='To do';el.appendChild(h1);
+  }
+  actives.forEach((p,i)=>renderOne(p,n0+i));
   if(fups.length){
     const h=document.createElement('div');h.className='prio-sec';h.textContent='Sent or submitted \u2014 waiting on them';el.appendChild(h);
-    fups.forEach((p,i)=>renderOne(p,actives.length+i));
+    fups.forEach((p,i)=>renderOne(p,n0+actives.length+i));
+  }
+  if(rejectedItems.length){
+    const hr=document.createElement('div');hr.className='prio-sec';hr.textContent='Rejected \u2014 closed with a no, kept for the record';el.appendChild(hr);
+    rejectedItems.forEach((p,i)=>renderOne(p,n0+actives.length+fups.length+i));
   }
   if(parked.length){
     const h2=document.createElement('div');h2.className='prio-sec';h2.textContent='Parked \u2014 on hold by choice, nothing to do yet';el.appendChild(h2);
-    parked.forEach((p,i)=>renderOne(p,actives.length+fups.length+i));
+    parked.forEach((p,i)=>renderOne(p,n0+actives.length+fups.length+rejectedItems.length+i));
   }
   if(doneItems.length){
     const h3=document.createElement('div');h3.className='prio-sec';h3.textContent='Done \u2014 finished, kept for the record';el.appendChild(h3);
-    doneItems.forEach((p,i)=>renderOne(p,actives.length+fups.length+parked.length+i));
+    doneItems.forEach((p,i)=>renderOne(p,n0+actives.length+fups.length+rejectedItems.length+parked.length+i));
   }
 }
 let prioAllOpen=false;
