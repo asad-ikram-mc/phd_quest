@@ -1,0 +1,19 @@
+To: Prof. Fabrizio Gilardi (via fabriziogilardi.org/contact or his UZH email)
+Subject: Host request for a Swiss Government Excellence Scholarship (PhD, 2027): LLM labelling across platforms
+
+Dear Professor Gilardi,
+
+I am applying for a Swiss Government Excellence Scholarship (three-year PhD track, Pakistan call, deadline 31 October), and I am writing to ask whether you would consider hosting me in the Digital Democracy Lab. The scholarship requires a letter of support from a host professor at a Swiss university.
+
+Your PNAS paper with Alizadeh and Kubli showed that ChatGPT can outperform crowd workers on text annotation, and it helped start the move to LLM labelling in political science. My research asks the next question: do those labels mean the same thing on every platform? With my MSc supervisor, Dr Ella Haig (University of Portsmouth), I have written a methods paper, "Is the Platform Part of the Measurement?", which treats each platform as a survey mode and adapts measurement invariance and score linking to machine-labelled political sentiment. In a simulation, pooling platforms at face value gives the wrong sign of daily sentiment on nearly a quarter of days. The paper is now with arXiv, and I attach the PDF.
+
+For the PhD I would apply this protocol to LLM-labelled political communication on several platforms, testing when annotations from one platform, or one model, can be compared with another. I bring the data side: eight years of large-scale web and social media collection, social media analysis at M+C Saatchi Fluency in London, and an MSc in Data Analytics with Distinction as a Chevening Scholar.
+
+If the project fits the lab, could we speak briefly, and would you be willing to provide a host letter by about 26 October? I can send a two-page research plan first.
+
+Kind regards,
+Asad Ikram
+MSc Data Analytics (Distinction), University of Portsmouth · Chevening Scholar 2024/25
+asad.ikram53@gmail.com · +44 7482 376417 · linkedin.com/in/asad-ikram98
+
+Attachments: Ikram_Haig_Platform_Measurement_v1.1_Oct2026.pdf, CV
