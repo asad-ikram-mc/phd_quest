@@ -1744,6 +1744,10 @@ function renderProfs(){
 }
 
 const EVENTS=[
+  {d:30,m:11,y:2026,cat:"ec-gold",dc:"dc-gold",title:"Luxembourg YADIAS doctoral fellowship closes 14:00 CET",detail:"Self-proposed PhD; supervisor matching first."},
+  {d:1,m:12,y:2026,cat:"ec-gold",dc:"dc-gold",title:"Northeastern Network Science and Michigan UMSI PhD deadlines",detail:"Northeastern: 5-year assistantship. UMSI: 11:59 pm EST."},
+  {d:15,m:12,y:2026,cat:"ec-gold",dc:"dc-gold",title:"Indiana University Luddy (OSoMe, Menczer) PhD deadline",detail:"Social media manipulation and misinformation; funded appointments."},
+  {d:15,m:1,y:2027,cat:"ec-gold",dc:"dc-gold",title:"Reading International PhD Studentships deadline",detail:"Apply for a Reading PhD first; school nominates one candidate."},
   {d:12,m:10,y:2026,cat:"ec-red",dc:"dc-red",title:"Aalborg Copenhagen PhD (secure collaborative LLMs): not selected",detail:"Not shortlisted for assessment; no reasons given. Off-topic for the social media focus anyway."},
   {d:1,m:12,y:2026,cat:"ec-gold",dc:"dc-gold",title:"CUHK PhD in Communication (Computational Social Science) main round",detail:"Non-HKPFS route; same day as HKPFS. International students pay HK$49,500 tuition from the studentship."},
   {d:1,m:1,y:2027,cat:"ec-gold",dc:"dc-gold",title:"UConn CSE PhD deadline (RIET Lab, Dori-Hacohen, misinformation)",detail:"Fully funded per the lab. Apply by about 1 Dec for funding; email the PIs first."},
@@ -2378,6 +2382,41 @@ const TODAY_ACTIONS = [
 // ── PRIORITY LIST ─────────────────────────────────────────────────────────────
 // Ordered by cost of missing. due = [y, m(1-12), d] or null. tier: now | week | month | later
 const PRIORITIES = [
+  {id:'p-qmul-castro', tier:'month', due:[2026,10,31], time:'NEW 13 Oct · email Castro now with CV and a 4-6 page proposal · funding via QMUL studentship competition (date UNVERIFIED)',
+   name:'Queen Mary University of London (EECS): 3 PhD positions, early 2027, with Ignacio Castro on internet measurement and online-platform governance (fediverse and Bluesky, content moderation, online harms).',
+   why:'Checked 13 Oct on his hiring page. Measurement, NLP and network methods on platform data: scraping, measurement and platform data map directly onto his work. Fit 5/5. Funding UNVERIFIED: his page points to EECS funded studentships and the QMUL funding guide; international-fee places are capped.',
+   req:['EMAIL Castro this month with the CV, the arXiv paper and a 4-6 page proposal (cross-platform measurement applied to decentralised platforms is a natural pitch). The 31 Oct date here is a self-set target, not his deadline.','FUNDING: ask him which studentship route covers international fees for 2027 and its deadline (last cycle late January).'],
+   link:'https://ignacio-castro.uk/hiring/phd-positions-2027.html'},
+  {id:'p-iu-osome', tier:'later', due:[2026,12,15], time:'NEW 13 Oct · deadline 15 Dec 2026 · funded appointments reviewed on admission',
+   name:'Indiana University Luddy School: PhD in Informatics (Complex Networks and Systems), with the Observatory on Social Media (Filippo Menczer): social media manipulation, misinformation, bots.',
+   why:'Checked 13 Oct on the Luddy admissions page. Admitted PhD students are reviewed for appointments with stipend, fee remission and health insurance. International applicants welcome, same deadline. Fit 5/5: OSoMe is the leading group on large-scale social media data and misinformation.',
+   req:['EMAIL Menczer or an OSoMe faculty member with the arXiv paper in November.','APPLY by 15 Dec 2026. Funding is assigned per offer, not guaranteed in writing.'],
+   link:'https://luddy.iu.edu/admissions/graduate/index.html'},
+  {id:'p-neu-netsi', tier:'later', due:[2026,12,1], time:'NEW 13 Oct · deadline 1 Dec 2026 · 5-year assistantship, about $43k stipend',
+   name:'Northeastern University, Network Science Institute: PhD in Network Science (computational social science, platforms, online behaviour; e.g. David Lazer, Christo Wilson for web measurement).',
+   why:'Checked 13 Oct. Graduate assistantship for five years in good standing: stipend $43,050 (2025-26), tuition remission, health insurance. International applicants eligible. Fit 4/5.',
+   req:['CATCH: GRE optional but strongly recommended (competitive about 311 V+Q); heavy quantitative screening.','APPLY by 1 Dec 2026; name Lazer and Wilson as fits.'],
+   link:'https://www.networkscienceinstitute.org/academics/phd'},
+  {id:'p-umsi', tier:'later', due:[2026,12,1], time:'NEW 13 Oct · deadline 1 Dec 2026, 11:59 pm EST',
+   name:'University of Michigan School of Information: PhD in Information (computational social science, misinformation, platforms).',
+   why:'Deadline checked 13 Oct. UMSI normally funds all its PhD students (not re-verified). International applicants eligible ($90 fee). Fit 4/5 but very selective.',
+   req:['Pick two social-media faculty to name; apply by 1 Dec 2026.'],
+   link:'https://www.si.umich.edu/admissions-aid/apply/how-do-i-apply-phd-information'},
+  {id:'p-yadias', tier:'later', due:[2026,11,30], time:'NEW 13 Oct · 30 Nov 2026, 2 pm CET · three-step: declaration, supervisor posts project, full application',
+   name:'University of Luxembourg, YADIAS Doctoral Fellowships (MSCA COFUND, 15 fellowships): self-proposed interdisciplinary PhD, 48-month salaried contract.',
+   why:'Checked 13 Oct on the call page. Open topic with a main supervisor and a co-supervisor from another discipline; cross-platform measurement or web data fits. Non-EU eligible (mobility rule: under 12 months in Luxembourg in the last 3 years). Pitches 5-9 Apr 2027, start Jun-Sep 2027. Fit 3/5.',
+   req:['START NOW: find a Luxembourg supervisor (C2DH web history and web archives, or UL NLP or social science) and co-supervisor; requires a secondment.','Submit by 30 Nov 2026, 2 pm CET.'],
+   link:'https://yadias.uni.lu/call-information/'},
+  {id:'p-reading-intl', tier:'later', due:[2027,1,15], time:'NEW 13 Oct · 15 Jan 2027 · school nominates one candidate',
+   name:'University of Reading: International PhD Studentships 2027 (international fees, £21,805 stipend, up to 4 years).',
+   why:'Checked 13 Oct. Designed for international students. Possible project: Dr S. Cacace, LLMs and attitudes towards migrants in the UK (psychology-led). Fit 3/5.',
+   req:['Apply for a Reading PhD first, then the studentship with a 700-word proposal by 15 Jan 2027.'],
+   link:'https://www.reading.ac.uk/doctoral-researcher-college/funding/phd-studentships/international-phd-studentships'},
+  {id:'p-sweep-13oct', tier:'later', due:[2026,11,4], time:'13 Oct sweep · one genuinely new ad (QMUL Castro); five standing programmes added',
+   name:'13 Oct sweep: very few new in-scope ads (EURAXESS 10-13 Oct, AcademicPositions, AcademicTransfer, jobs.ac.uk, FindAPhD). Rows added: QMUL Castro, IU OSoMe, Northeastern NetSI, UMSI, YADIAS, Reading.',
+   why:'Jobbnorge, Gothenburg, Linköping and UZH boards could not be checked directly this run.',
+   req:['UMEÅ statistics PhD, latent variable models for social data science (Wallin), 4 Nov: needs a statistics major plus 30 ECTS mathematics, likely ineligible. Fit 2/5.','REJECTED: Twente and Luxembourg deepfake vision posts, Leeds climate LLM, Karlstad, QUT, Monash, VU Social Data Science, RePIM and DEMINE (closed), Research Ireland GOIPG (discontinued), Polito (off-topic), Leiden European Muslims (Arabic), Sydney and UNSW general rounds (no in-scope project), FindAPhD UK misinformation projects (self-funded).'],
+   link:''},
   {id:'p-uconn-riet', tier:'later', due:[2027,1,1], time:'NEW 12 Oct · department deadline 1 Jan 2027 (aim for 1 Dec for funding) · email the PIs too',
    name:'University of Connecticut, Computer Science and Engineering: PhD in the RIET Lab (misinformation, social media, weaponised controversy) with Shiri Dori-Hacohen, Fall 2027.',
    why:'Checked 12 Oct on the lab and department pages. The lab says PhD students are fully funded throughout their studies (amount not stated); no nationality limit stated. Fit 4/5: disinformation and social media measurement with information retrieval and knowledge graphs, close to his social-listening and data-collection work and the cross-platform paper.',
@@ -2803,7 +2842,7 @@ const BOARD_COLS=[
 ];
 const ST_LABEL={todo:'to do',progress:'in progress',ready:'ready to apply',applied:'sent \u00b7 waiting',rejected:'rejected',done:'done',parked:'parked',dropped:'not needed'};
 /* defaults that differ from the rule "followup = in progress, everything else = to do" */
-const PRIO_DEFAULT_ST={'p-csh':'ready','p-lund-back':'ready','p-swiss-sges':'ready','p-paper':'done','p-sweep-12oct':'parked','p-sweep-9oct':'parked','p-taltech':'parked','p-uva-regulaire':'parked','p-hsg-regulaire':'parked','p-stockholm-socrisp':'parked','p-uva-doubt':'parked','p-dfki-combo':'parked','p-inria-claims':'parked','p-ku-cultural':'parked','p-imprs-is':'parked','p-bristol-cdt':'parked','p-followups-oct':'parked','p-sweep-28sep':'parked','p-sweep-oct-dec':'parked','p-sweep-30sep':'parked','p-sweep-21sep':'parked','p-leads-eu2':'parked','p-corvinus-wachs':'applied','p-aau-secure-llm':'rejected','p-ntnu-search':'applied','p-iwm-everyday-media':'applied','p-uva-aifeels':'applied','p-kth-feminist':'rejected','p-ellis-fi':'applied','p-sdu':'applied','p-polimi':'applied','p-vienna-rai':'applied','p-cha':'applied','p-casas':'applied','p-rit':'applied','p-emails':'applied','p-saarland':'applied','p-vu':'rejected','p-utrecht':'rejected','p-lmu-wuttke':'progress','p-edinburgh':'progress','p-commonwealth':'progress','p-commonwealth':'dropped','p-hasselt':'dropped','p-nelimarkka':'dropped','p-agder':'dropped','p-aarhus':'dropped','p-outbox':'done','p-rejected-log':'parked','p-manual-sweep':'parked'};
+const PRIO_DEFAULT_ST={'p-sweep-13oct':'parked','p-csh':'ready','p-lund-back':'ready','p-swiss-sges':'ready','p-paper':'done','p-sweep-12oct':'parked','p-sweep-9oct':'parked','p-taltech':'parked','p-uva-regulaire':'parked','p-hsg-regulaire':'parked','p-stockholm-socrisp':'parked','p-uva-doubt':'parked','p-dfki-combo':'parked','p-inria-claims':'parked','p-ku-cultural':'parked','p-imprs-is':'parked','p-bristol-cdt':'parked','p-followups-oct':'parked','p-sweep-28sep':'parked','p-sweep-oct-dec':'parked','p-sweep-30sep':'parked','p-sweep-21sep':'parked','p-leads-eu2':'parked','p-corvinus-wachs':'applied','p-aau-secure-llm':'rejected','p-ntnu-search':'applied','p-iwm-everyday-media':'applied','p-uva-aifeels':'applied','p-kth-feminist':'rejected','p-ellis-fi':'applied','p-sdu':'applied','p-polimi':'applied','p-vienna-rai':'applied','p-cha':'applied','p-casas':'applied','p-rit':'applied','p-emails':'applied','p-saarland':'applied','p-vu':'rejected','p-utrecht':'rejected','p-lmu-wuttke':'progress','p-edinburgh':'progress','p-commonwealth':'progress','p-commonwealth':'dropped','p-hasselt':'dropped','p-nelimarkka':'dropped','p-agder':'dropped','p-aarhus':'dropped','p-outbox':'done','p-rejected-log':'parked','p-manual-sweep':'parked'};
 /* 1 Oct 2026: one-time move of saved statuses so sent applications and emails land in 'Sent, waiting' and outcomes in Done */
 function migrateAppliedOct1(){try{if(localStorage.getItem('prio-mig-applied-11'))return;const ov=loadStatus();['p-taltech','p-uva-regulaire','p-hsg-regulaire','p-stockholm-socrisp','p-uva-doubt','p-dfki-combo','p-inria-claims','p-ku-cultural','p-imprs-is','p-bristol-cdt','p-followups-oct','p-sweep-28sep','p-sweep-oct-dec','p-sweep-30sep','p-sweep-21sep','p-leads-eu2','p-kth-feminist','p-aau-secure-llm','p-iwm-everyday-media','p-uva-aifeels','p-kth-feminist','p-ellis-fi','p-sdu','p-polimi','p-vienna-rai','p-cha','p-casas','p-rit','p-emails','p-saarland','p-vu','p-utrecht','p-lmu-wuttke','p-edinburgh','p-commonwealth','p-corvinus-wachs','p-commonwealth','p-paper','p-csh','p-lund-back','p-swiss-sges','p-vu','p-utrecht','p-kth-feminist','p-aau-secure-llm'].forEach(function(id){delete ov[id];});localStorage.setItem('prio-status',JSON.stringify(ov));localStorage.setItem('prio-mig-applied-11','1');}catch(e){}}
 /* which Outreach cards each task drives (substring match against the PROFS name) */
@@ -2838,7 +2877,7 @@ function defaultStatus(p){return PRIO_DEFAULT_ST[p.id]||(p.tier==='followup'?'pr
 function dueKey(p){ return p.due ? new Date(p.due[0],p.due[1]-1,p.due[2]).getTime() : 8640000000000000; }
 const TIER_RANK={now:0,week:1,month:2,followup:3,later:4};
 /* priority: 1 = must do / best fit, 2 = strong, 3 = optional or reference. Set 22 Sep 2026. */
-const PRIO_RANK={'p-lund-back':1,'p-ella':2,'p-unil-humbert':3,'p-uconn-riet':2,'p-cuhk-css':3,'p-sweep-12oct':3,'p-swiss-sges':1,'p-jena-humprecht':1,'p-aarhus-pay4play':3,'p-ntu-wkwsci':2,'p-hkpfs':2,'p-syracuse':2,'p-uk-intl-funding':1,'p-world-funded':2,'p-sweep-9oct':3,'p-hsg-regulaire':2,'p-uva-regulaire':3,'p-nthu-mq':2,'p-taltech':3,'p-dfki-combo':2,'p-ddsa-2027':2,'p-senss-esrc':2,'p-lmu-wuttke':1,'p-ellis-phd-2027':1,'p-followups-oct':1,
+const PRIO_RANK={'p-qmul-castro':1,'p-iu-osome':2,'p-neu-netsi':2,'p-umsi':3,'p-yadias':3,'p-reading-intl':3,'p-sweep-13oct':3,'p-lund-back':1,'p-ella':2,'p-unil-humbert':3,'p-uconn-riet':2,'p-cuhk-css':3,'p-sweep-12oct':3,'p-swiss-sges':1,'p-jena-humprecht':1,'p-aarhus-pay4play':3,'p-ntu-wkwsci':2,'p-hkpfs':2,'p-syracuse':2,'p-uk-intl-funding':1,'p-world-funded':2,'p-sweep-9oct':3,'p-hsg-regulaire':2,'p-uva-regulaire':3,'p-nthu-mq':2,'p-taltech':3,'p-dfki-combo':2,'p-ddsa-2027':2,'p-senss-esrc':2,'p-lmu-wuttke':1,'p-ellis-phd-2027':1,'p-followups-oct':1,
   'p-ellis-fi':1,'p-iwm-everyday-media':1,'p-uva-aifeels':1,'p-csh':1,'p-commonwealth':1,'p-mbzuai':1,'p-edinburgh':1,'p-cha':1,'p-paper':1,
   'p-vu':1,'p-sdu':1,'p-polimi':1,
   'p-ielts':3,'p-kth-feminist':1,'p-hpi-rottger':1,'p-corvinus-wachs':2,'p-ubel-dtp':2,'p-cu-boulder':3,'p-ects':3,'p-ku-cultural':2,'p-inria-claims':2,'p-lmu-ai':2,'p-leads-eu2':3,'p-ntnu-search':2,'p-aau-secure-llm':2,'p-mpi-sws':2,'p-imprs-is':2,'p-ubc-cs':2,'p-sedarc':2,'p-uva-doubt':3,'p-bristol-cdt':2,'p-surrey-cdt':2,'p-umd-info':2,'p-cmu-lti':3,'p-unc-ils':3,'p-sweep-21sep':3,'p-epfl-edic':2,'p-oii':2,'p-vienna-rai':2,'p-rit':2,'p-casas':2,'p-saarland':2,
@@ -3284,7 +3323,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '12 Oct 2026';
+  const LAST_REFRESHED = '13 Oct 2026';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
   const luEl = document.getElementById('last-updated-text');
   if(luEl) luEl.textContent = 'Last updated: ' + LAST_REFRESHED;
