@@ -56,7 +56,9 @@
   instrument; donated data is a small, expensive and closer criterion. If the relation between the two holds steady, a few hundred
   donors could calibrate millions of public comments, much as a small hand-labelled sample anchors a machine-labelled corpus in score
   linking. If it does not hold, each platform and period needs its own panel, and knowing where it breaks is itself a finding about where
-  polarization measurement fails. It also matters for narratives: what spreads in comments may not be what spreads in viewing.</p>
+  polarization measurement fails. It also matters for narratives: what spreads in comments may not be what spreads in viewing. I meet this gap
+  at work: at Fluency and Artemis AI, brands and creators judge their pages from comments and engagement, although most of their
+  audience never comments.</p>
 
 <h2>3. A problem I want to explore</h2>
 
@@ -77,7 +79,7 @@
 
 <p><b>Why it is tractable.</b> (1) My simulation has a known ground truth and runs in seconds; extending it so that annotator
   models and time are facets alongside platforms would show how many hand labels, and which anchors, are needed to detect a difference
-  large enough to reverse a conclusion. That paper needs no new data. (2) I can build the corpus: posts around a set of policy events
+  large enough to reverse a conclusion. That paper needs no new data. (2) I can build the corpus, because collection at scale has been my job for eight years, from multilingual scrapers across 15 markets at Dubizzle Labs to ten platforms collected daily at Fluency: posts around a set of policy events
   fixed in advance on several platforms, collected through official APIs, frames coded by several LLMs, and a stratified hand-labelled
   sample per platform, larger than my 200 and with a second coder. A G-study would then split variance into platform, model, prompt and
   time, with DIF tests for each frame. (3) Concept erasure gives a direct test of whether removing the platform signal also removes real
