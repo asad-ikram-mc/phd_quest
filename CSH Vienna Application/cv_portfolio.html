@@ -83,9 +83,10 @@
   <ul>
     <li>Analyst on a study of twelve months of social discourse (100,845 Brandwatch and 170,542 Reddit mentions): BERTopic-derived
         codebook, LLM tagging with a prompt-version hash on every tag, three pilot runs on the same 500 rows compared before the
-        full run. Contributor to LLM-assisted coding of about 170,000 multilingual posts and reviews.</li>
-    <li>Designed and operate 64 Scrapy crawlers collecting car-owner forum discussion for a global automotive brand (AWS), with a
-        self-repairing LLM agent that diagnoses a broken source, regenerates the spider and tests it on live pages behind a CI gate.</li>
+        full run. </li>
+    <li>Designed and operate a fleet of over 60 crawlers collecting owner-forum and social discussion from ten platforms daily into a
+        governed 156-column table (6.7 million items in six weeks). Built a self-healing LLM agent that diagnoses a broken source,
+        regenerates the spider and tests it on live pages behind a CI gate, and a builder agent that creates new crawlers; I approve each merge.</li>
     <li>Operate a weekly social-analytics pipeline for a global e-commerce client (2.2 million rows by 184 columns) with an
         89-check data-quality sweep before each release.</li>
   </ul>
@@ -93,26 +94,27 @@
 
 <div class="row"><div class="when">2025 - present<br>part-time</div><div class="what">
   <div><span class="ttl">Co-Founder and Chief Technology Officer</span>, <span class="org">Artemis AI (formerly ViralData), United Kingdom (remote).
-    Pre-launch social-media analytics start-up; I lead the technology in a team of eight; pilots from December 2026.</span></div>
+    Social-media intelligence platform for creators and businesses; I lead the technology in a team of eight; beta on 15 December 2026.</span></div>
   <ul>
+    <li>Built the data platform on AWS: Meta Graph API collectors, a layered warehouse queried with Athena, and weekly labelling runs;
+        111,000+ posts and 3.2 million comments processed so far, with image and video understanding (OCR, CLIP, Whisper).</li>
     <li>Designed an LLM labelling chain: Claude labels about 6,000 posts with an explanation of each, rules mined from the
         explanations become a prompt for DeepSeek, which labels about 12,000 more to train encoder classifiers (XLM-R,
         DistilBERT, DeBERTa-v3, Detoxify). The team first hand-labelled about 500 posts and comments to check both models.</li>
     <li>Designing model evaluation around a human-labelled golden set, so every model is checked against people before it reaches users.</li>
-    <li>In progress: leading the build of Art-E, a retrieval-based advisor that answers each client's questions from that client's own data.</li>
+    <li>Leading the build for the beta, 48 models in the agreed architecture: Art-E, an advisor on Amazon Bedrock that gives cited answers
+        from each client's own data behind guardrails; crisis alerts with storm detection and spam, bot and banter filters; Instagram
+        ingestion; and models for best posting times, engagement outlook, comment intent and audience communities.</li>
   </ul>
 </div></div>
 
 <div class="row"><div class="when">May 2023 - present<br>contract, part-time</div><div class="what">
   <div><span class="ttl">Data Engineer (contract)</span>, <span class="org">Fix.com, Canada (remote). Online replacement-parts retailer.</span>
-    Since June 2026 designed and built, alone, the company's crawler platform (about 10 million rows across 82 datasets by October 2026).
-    Earlier: Scrapy pipelines over 200+ sources; Great Expectations validation that cut bad production data by 70%.</div>
+    Since June 2026 designed and built, alone, the company's crawler platform (about 10 million rows across 82 datasets by October 2026).</div>
 </div></div>
 
 <div class="row"><div class="when">Sep 2024 - present<br>part-time, remote</div><div class="what">
-  <div><span class="ttl">Shorter engagements.</span> <b>CXG</b>, Dubai, freelance data engineer, three engagements since Nov 2025: production
-    crawlers and a pytest QA framework. <b>VendueTech</b>, Ireland, Lead Data Engineer, Jun - Jul 2025: led three engineers on real-time
-    auction-data ingestion and an Azure-to-AWS migration. <b>Prefe</b>, Milan, Data Engineer, Sep - Dec 2024: moved legacy collectors
+  <div><span class="ttl">Shorter engagements.</span> <b>CXG</b>, Dubai: production crawlers and a pytest QA framework. <b>VendueTech</b>, Ireland, Lead Data Engineer, Jun - Jul 2025: led three engineers on an Azure-to-AWS migration. <b>Prefe</b>, Milan, Data Engineer, Sep - Dec 2024: moved legacy collectors
     to Scrapy, cutting the failure rate by 60%; mentored two junior engineers.</div>
 </div></div>
 
@@ -141,7 +143,7 @@
   AWS (SageMaker, Fargate, Lambda, Athena, Redshift), Docker, Kubernetes; official platform APIs (Meta Graph, Reddit, YouTube).</div></div>
 
 <h2>Awards, public work and languages</h2>
-<div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25, the UK Government's global scholarship, which funded the MSc.</div></div>
+<div class="kv"><div class="k">Chevening</div><div class="v">Chevening Scholar 2024/25, the UK Government's global scholarship, which funded the MSc; awarded for helping students into remote careers and for a cross-platform social media analytics proposal.</div></div>
 <div class="kv"><div class="k">Public work</div><div class="v">Author and maintainer of <a href="https://web-scraping-guide.com">web-scraping-guide.com</a> (since May 2026),
   a free public guide to web data collection, including the legal and ethical limits of collection.</div></div>
 <div class="kv"><div class="k">Languages</div><div class="v">Urdu (native); English (working language; MSc taught and assessed in English, IELTS 6.5).</div></div>
@@ -176,10 +178,10 @@
 </div>
 
 <div class="item">
-  <div class="t">3. An LLM labelling chain for a social-media analytics product (Artemis AI)</div>
+  <div class="t">3. The LLM labelling chain behind a social-media intelligence platform (Artemis AI)</div>
   <div class="why"><b>What:</b> Claude labels about 6,000 posts with an explanation of each; rules mined from those explanations become a
     prompt for DeepSeek, which labels about 12,000 more to train encoder classifiers, with about 500 hand-labelled posts as the check on both.
-    <b>Why included:</b> it is my research question inside a product: labels have to be checked against people before anything is built on them.</div>
+    <b>Why included:</b> it is my research question inside a product heading to beta in December: every one of its 48 models rests on these labels, so they have to be checked against people first.</div>
   <div class="lnk">Internal work; product at <a href="https://artemisai.co.uk">artemisai.co.uk</a> (pre-launch).</div>
 </div>
 
@@ -192,9 +194,9 @@
 </div>
 
 <div class="item">
-  <div class="t">5. A self-repairing crawler agent for a global automotive brand (M+C Saatchi Fluency)</div>
-  <div class="why"><b>What:</b> 64 crawlers of car-owner forums; when a source changes, an LLM agent diagnoses the break, regenerates the
-    spider and tests it on live pages, and a person approves each merge. <b>Why included:</b> my favourite piece of engineering. A
+  <div class="t">5. Self-healing and builder agents for a crawler fleet (M+C Saatchi Fluency)</div>
+  <div class="why"><b>What:</b> over 60 crawlers of owner forums and social platforms; when a source changes, an LLM agent diagnoses the break,
+    regenerates the spider and tests it on live pages, a second agent builds new crawlers, and a person approves each merge. <b>Why included:</b> my favourite piece of engineering. A
     collector that breaks silently does not stop a time series, it thins it, and that is a measurement problem as much as an engineering one.</div>
   <div class="lnk">Client work; no public link.</div>
 </div>
