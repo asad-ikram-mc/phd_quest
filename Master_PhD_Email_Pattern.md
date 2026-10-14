@@ -4,7 +4,7 @@
 
 **What changed in v3:** added THE ADVERTISED-POST EMAIL, because the pattern only had cold-outreach templates and applying its eight parts to an advertised post duplicates the motivation letter and reads as acquisition.
 
-**What changed in v2:** the paper with Dr Ella Haig is finished (23 pages, on arXiv shortly), so every email upgrades from "dissertation finding" to "finished methods paper". Two new checks (novelty survival, one-new-fact follow-ups), the pitch-page escalation, and a lessons log from the live campaign (Nelimarkka, Ella, Theocharis).
+**What changed in v2:** the paper with Dr Ella Haig is finished (25 pages, on arXiv shortly), so every email upgrades from "dissertation finding" to "finished methods paper". Two new checks (novelty survival, one-new-fact follow-ups), the pitch-page escalation, and a lessons log from the live campaign (Nelimarkka, Ella, Theocharis).
 
 **What changed on 1 Oct 2026 (after the Utrecht and VU rejections): READ `LESSONS_FROM_REJECTIONS.md` FIRST.** Four rules now override anything below that conflicts with them. (1) Map every criterion in the advert's profile to a sentence of evidence in the advert's own words. (2) Lead with research and analysis; collection infrastructure gets one line at most (Section 3 below is amended). (3) Open on their phenomenon and papers, never "my question transfers directly to your project". (4) Never promise an arXiv date; say "complete, not yet submitted" until it is live.
 
@@ -17,7 +17,7 @@
 3. **Hook on the professor's OWN named theory or paper**, never a generic description of their field.
 4. **Attach** `Asad_Ikram_Full_Resume_2026.pdf` before sending.
 5. **Verify the email address** on the university's official contact page before sending.
-6. **Once the arXiv paper is live, always link it. Until then link NOTHING.** Say "the paper
+6. **The paper is LIVE (arXiv:2610.16757, 14 Oct 2026): always link it.** (Older rule kept for history: before it was live, link nothing.) Say "the paper
    is finished and goes to arXiv shortly" and stop there. **NEVER link
    [NO LINK - see rule 6] to anyone.** That page is the working proposal brief
    and it is for Dr Ella Haig only. Asad ruled this on 8 Sep 2026. It is not a public asset,
@@ -102,11 +102,11 @@ machine-labelled sentiment. Its simulation result: across 500 replications, a
 pooled cross-platform index that takes platform scores at face value reports
 the wrong sign of aggregate sentiment on roughly a quarter of days, purely
 from measurement differences; a measurement-adjusted index does not.
-[On arXiv shortly / arXiv:XXXX.XXXXX once live.] Then one line landing the
+arXiv:2610.16757 (arxiv.org/abs/2610.16757). Then one line landing the
 protocol inside the professor's framework.
 ```
 
-**The paper numbers are always the same: 500 replications, wrong sign on about a quarter of days, misstates a known event shift by about an eighth, 23 pages.**
+**The paper numbers are always the same: 500 replications, wrong sign on about a quarter of days, misstates a known event shift by about an eighth, 25 pages.**
 **Never mix the two sets: 279k/0.878 belong to the dissertation, 500/quarter/eighth to the paper.**
 
 ### 5. ARTEMISAI TIED TO THE PROFESSOR'S GAP
@@ -172,7 +172,7 @@ asad-ikram-mc.github.io/portfolio · linkedin.com/in/asad-ikram98
 **Once the arXiv preprint is live, add one line above the contact details:**
 
 ```
-Ikram & Haig, "Is the Platform Part of the Measurement?" · arXiv:XXXX.XXXXX
+Ikram & Haig, "Is the Platform Part of the Measurement?" · arXiv:2610.16757
 ```
 
 That citation line is worth more than every other element in the signature combined.
@@ -341,7 +341,7 @@ the framing.
 
 I will keep a close eye on [their website / the call] for [the specific window
 they mentioned]. By that point the methods paper from my dissertation, written
-with my MSc supervisor, will be on arXiv [link once live], which I hope will
+with my MSc supervisor, is on arXiv (arxiv.org/abs/2610.16757), which I hope will
 strengthen the application considerably.
 
 I look forward to getting in touch again when the call opens.

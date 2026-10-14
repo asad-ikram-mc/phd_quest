@@ -96,7 +96,7 @@ master's is treated. See `PoliMi Application/REQUIREMENTS.md` Part 0.1.
   survey mode; six-step psychometric protocol (generalizability theory, invariance and DIF, score
   linking) for machine-labelled sentiment. **500-replication simulation**: a pooled cross-platform
   index reports the **wrong sign** of aggregate sentiment on roughly **a quarter of days**.
-  23 pages. **Not yet on arXiv.** Status has been "imminent" since August.
+  **LIVE on arXiv 14 Oct 2026: arXiv:2610.16757** (v1.1, 25 pages; primary cs.LG, cross-lists cs.CL, cs.CY, cs.SI). Describe as a preprint; no peer-reviewed publications yet.
 - **Reviewer feedback on the paper (Eni, ICWSM-experienced)** — record this honestly, it is the
   known weakness: the hand-labelled validation sample (~200 posts against 279k) is too small; 279k
   across four platforms is small by modern ICWSM standards; the anchor events were not pre-identified,
@@ -347,7 +347,7 @@ Recorded verbatim in substance; items that differ from documented records are ma
 - Prefe (Italy, 2024): grocery e-commerce; scraping processes and ML architecture.
 - VendueTech (Ireland, 2025): lead for the Azure-to-AWS migration; architecture for bidding prediction and data collection; led a team of 3 with the AWS team.
 - M+C Saatchi Fluency (Dec 2024 to present): clients he named: Nike, Ford, Reckitt, US women's soccer, Amazon (CORE and Alexa), Abbott, UK Government [CHECK: UK Gov MAPP is Prabhat's project with Asad as backup; Alexa+ was design only; client naming may be confidential]. Collection, labelling, tagging, text and sentiment analysis, forum sourcing, architecture.
-- Research: paper with Dr Ella Haig going to arXiv; ICWSM submission planned with her.
+- Research: paper with Dr Ella Haig, live on arXiv as 2610.16757 (14 Oct 2026); ICWSM submission planned with her.
 - Artemis AI (co-founder and CTO): he says he leads a team of 5 across models, AI and ML, deployment, app development, design, marketing and pitching [CHECK: the team is 8 including CEO Alex and COO Jill]. Went hands-on on models for accuracy; wide reading of research papers. Beta mid-December 2026.
 - Web-scraping architecture for a US client (NDA: never name it) and businesses in the Netherlands, Lithuania, Germany.
 - web-scraping-guide.com (since May 2026): open guide for the industry. Use it in the CV Public work line (replaced the Zyte mention in Corvinus, 8 Oct).
