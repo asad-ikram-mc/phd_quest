@@ -35,7 +35,7 @@ Verified 2 Sep 2026 on the CDT FAQ. The programme explicitly welcomes non-academ
 - [ ] English evidence: **Portsmouth letter confirming taught and assessed in English** (no IELTS)
 - [ ] Degree transcripts: MSc certified transcript + certificate (already prepared for Utrecht) AND the BSc FAST-NUCES transcript
 - [ ] TWO references, submitted directly by the referees: Ella Haig (academic) + Jareed Eve (employer)
-- [ ] arXiv preprint LIVE by mid-December at the latest — both statements cite it and the Magdy hook depends on it. THIS IS THE ONLY REAL BLOCKER LEFT.
+- [x] arXiv preprint LIVE: arXiv:2610.16757 (14 Oct 2026) — both statements cite it and the Magdy hook depends on it. THIS IS THE ONLY REAL BLOCKER LEFT.
 - [ ] Apply via EUCLID (no fee); programme name: "Centre for Doctoral Training in Designing Responsible Natural Language Processing"
 
 ## Supervisor state
