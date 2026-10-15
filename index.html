@@ -648,7 +648,7 @@ footer a:hover{color:var(--gold2)}
     <div class="prio-head">
       <div>
         <div class="prio-title">Priority list — start here</div>
-        <div class="prio-sub"><b>Focus (set 8 Oct):</b> PhDs on social media research (computational social science, misinformation, LLM labelling and measurement of online text) plus web-scraping and data-collection roles. Off-topic posts are parked, not deleted. Ordered by urgency, then importance: first anything overdue or due within 7 days, then within 3 weeks, then within 2 months, then later. Inside each window P1 comes before P2 and P3. Anything you have already sent moves down to "Sent · waiting". Tick steps as you do them; the big tick on the right marks the whole item done. Your ticks are saved in this browser.</div><div class="prio-gloss"><div><span class="prank pr1">P1 top</span> best fit and best chance: do these first, full effort.</div><div><span class="prank pr2">P2 strong</span> good fit: worth a full application if time allows.</div><div><span class="prank pr3">P3 optional</span> long shot or weak fit: only if there is spare time.</div><div><span class="gl-dot gl-red"></span>red date: passed or 10 days or less left · <span class="gl-dot gl-amber"></span>amber: within 30 days · grey: later</div><div>The number on the left is just the order in the list. "Sent · waiting" means applied or emailed, now waiting on them.</div></div>
+        <div class="prio-sub"><b>Focus (set 8 Oct):</b> PhDs on social media research (computational social science, misinformation, LLM labelling and measurement of online text) plus web-scraping and data-collection roles. Off-topic posts are parked, not deleted. Ordered by importance and deadline: everything due in the next three weeks comes first, with P1 and P2 above P3, then the next two months, then later. Inside each window P1 comes before P2 and P3, and nearer dates first. Inside each window P1 comes before P2 and P3. Anything you have already sent moves down to "Sent · waiting". Tick steps as you do them; the big tick on the right marks the whole item done. Your ticks are saved in this browser.</div><div class="prio-gloss"><div><span class="prank pr1">P1 top</span> best fit and best chance: do these first, full effort.</div><div><span class="prank pr2">P2 strong</span> good fit: worth a full application if time allows.</div><div><span class="prank pr3">P3 optional</span> long shot or weak fit: only if there is spare time.</div><div><span class="gl-dot gl-red"></span>red date: passed or 10 days or less left · <span class="gl-dot gl-amber"></span>amber: within 30 days · grey: later</div><div>The number on the left is just the order in the list. "Sent · waiting" means applied or emailed, now waiting on them.</div></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
         
@@ -2933,10 +2933,13 @@ function prioPill(p,cls){ const r=prioOf(p); return '<span class="'+cls+' prank 
 /* Order: urgency window first (overdue or within 7 days; 8 to 21 days; 22 to 60 days; later;
    no date), then priority (P1, P2, P3), then the date itself. A P1 with no date counts as 8-21 days. */
 function urgencyBand(p){
-  if(!p.due) return prioOf(p)===1 ? 1 : 4;
+  /* 15 Oct: importance first inside the next three weeks, so a P3 closing in 6 days
+     no longer sits above a P1 closing in 16. P3 items in the window go after P1/P2. */
+  if(!p.due) return prioOf(p)===1 ? 0 : 4;
   const t=new Date(); t.setHours(0,0,0,0);
   const days=Math.round((new Date(p.due[0],p.due[1]-1,p.due[2])-t)/86400000);
-  return days<=7?0:days<=21?1:days<=60?2:3;
+  if(days<=21) return prioOf(p)===3 ? 1 : 0;
+  return days<=60?2:3;
 }
 function byDeadline(a,b){ const u=urgencyBand(a)-urgencyBand(b); if(u) return u;
   const r=prioOf(a)-prioOf(b); if(r) return r;
