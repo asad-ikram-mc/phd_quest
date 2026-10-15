@@ -350,6 +350,7 @@ Recorded verbatim in substance; items that differ from documented records are ma
 - Research: paper with Dr Ella Haig, live on arXiv as 2610.16757 (14 Oct 2026); ICWSM submission planned with her.
 - Artemis AI (co-founder and CTO): he says he leads a team of 5 across models, AI and ML, deployment, app development, design, marketing and pitching [CHECK: the team is 8 including CEO Alex and COO Jill]. Went hands-on on models for accuracy; wide reading of research papers. Beta mid-December 2026.
 - Web-scraping architecture for a US client (NDA: never name it) and businesses in the Netherlands, Lithuania, Germany.
+- Contract countries he lists (15 Oct 2026): UK, US (NDA client), Canada (Fix.com), Ireland (VendueTech), Italy (Prefe), Germany (Metoda), UAE (CXG), India (Arthan internship and others), Japan (Propre, at university). Use "companies in the UK, the US, Canada, Ireland, Italy, Germany, the UAE, India and Japan"; never name the US client.
 - web-scraping-guide.com (since May 2026): open guide for the industry. Use it in the CV Public work line (replaced the Zyte mention in Corvinus, 8 Oct).
 - AI framing (8 Oct): he BUILDS agents (self-healing crawler agent, builder agent) and decides what ships; AI coding assistants help him. Never write that AI writes his code.
 - PhD motivation (8 Oct): apply MSc, Fluency and Artemis learning; learn methods that make his start-up more accurate; take research back into practice.
