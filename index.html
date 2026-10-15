@@ -1744,6 +1744,8 @@ function renderProfs(){
 }
 
 const EVENTS=[
+  {d:13,m:11,y:2026,cat:"ec-gold",dc:"dc-gold",title:"Inria SHARD PhD (Villata, disinformation and LLMs) closes",detail:"Check the restricted-zone (ZRR) clearance question first."},
+  {d:30,m:11,y:2026,cat:"ec-gold",dc:"dc-gold",title:"Edinburgh Informatics IGS studentship round 1 (Thompson, web science)",detail:"Same day as the Edinburgh CDT Stage 1. EUCLID, 23:59."},
   {d:14,m:10,y:2026,cat:"ec-green",dc:"dc-green",title:"Emails sent: Bäck (Lund eligibility) and Gilardi (Swiss host letter)",detail:"Both with the arXiv link, paper and CV."},
   {d:18,m:10,y:2026,cat:"ec-gold",dc:"dc-gold",title:"Check Gilardi reply; if none, email a backup Swiss host",detail:"Swiss Government Excellence Scholarship closes 31 Oct; the host letter is required."},
   {d:14,m:10,y:2026,cat:"ec-green",dc:"dc-green",title:"Paper announced on LinkedIn (carousel post)",detail:"First research paper post; Ella and Rahim tagged."},
@@ -2389,6 +2391,26 @@ const TODAY_ACTIONS = [
 // ── PRIORITY LIST ─────────────────────────────────────────────────────────────
 // Ordered by cost of missing. due = [y, m(1-12), d] or null. tier: now | week | month | later
 const PRIORITIES = [
+  {id:'p-ed-igs-thompson', tier:'later', due:[2026,11,30], time:'NEW 15 Oct · IGS studentship round 1, 30 Nov 2026 23:59 (EUCLID) · same date as the Edinburgh CDT',
+   name:'University of Edinburgh, Informatics (ILCC): PhD with Henry S. Thompson on web science (spread of LLM-written text on the web via Common Crawl; temporal analytics of web usage), funded by an Informatics Graduate School studentship.',
+   why:'Checked 15 Oct on the ILCC topics page and the Informatics funding page. Studentship pays fees at the Home or Overseas rate for 3 years plus a UKRI stipend (£21,805) for 3.5 years; considered regardless of fee status. Fit 4/5: large-scale web data collection plus measuring LLM text on the web. A second Edinburgh route alongside the NLP CDT (Magdy, Ross).',
+   req:['EMAIL Thompson first with the arXiv paper: confirm he is taking students for 2027 (he is very senior).','CATCH: only 6 to 8 studentships across the school; visa and health surcharge not covered.','APPLY via EUCLID by 30 Nov 2026, complete, for a September 2027 start.'],
+   link:'https://informatics.ed.ac.uk/ilcc/study-with-us/possible-phd-topics-in-ilcc/computational-social-science-and-web-science'},
+  {id:'p-hkust-tyson', tier:'later', due:[2026,12,1], time:'NEW 15 Oct · outreach first · HKUST regular Fall 2027 deadline TBC',
+   name:'HKUST: PhD with Gareth Tyson on internet measurement and decentralised social media (Mastodon, Bluesky, Nostr). UNVERIFIED that he is recruiting.',
+   why:'Found 15 Oct; his page could not be opened. Regular HKUST PhD studentship about HK$229,620 a year. Fit 5/5 if he is recruiting: web and platform measurement is exactly the profile. Separate from HKPFS (which can be combined with an HKUST application).',
+   req:['EMAIL Tyson with the arXiv paper and ask if he takes a student for Fall 2027 and through which programme.','If yes, pair the HKUST application with HKPFS by 1 Dec 2026.'],
+   link:''},
+  {id:'p-inria-shard', tier:'later', due:[2026,11,13], time:'NEW 15 Oct · closes 13 Nov 2026 · 4-year contract, €2,300 gross a month',
+   name:'Inria / Université Côte d’Azur: PhD on resistance to disinformation in hybrid human-AI collectives (SHARD), with Serena Villata (ref 2026-10599).',
+   why:'Checked 15 Oct on jobs.inria.fr. How LLMs produce, spread and detect disinformation when interacting with each other and with people: multi-LLM detection, counter-narratives, factuality metrics. Fit 3/5: LLMs and disinformation, but no social media data and mostly NLP and multi-agent work.',
+   req:['RISK: the post may sit in a restricted research zone (ZRR) needing ministerial clearance, a real hurdle on a Pakistani passport. Ask before investing time.','French and English are working languages.'],
+   link:'https://jobs.inria.fr/public/classic/en/offres/2026-10599'},
+  {id:'p-sweep-15oct', tier:'later', due:[2026,12,15], time:'15 Oct sweep · little new · CISPA call expected late 2026',
+   name:'15 Oct sweep: three rows added (Edinburgh IGS Thompson, HKUST Tyson, Inria SHARD). Watch list and rejects below.',
+   why:'Academicpositions, FindAPhD and Jobbnorge blocked access; AcademicTransfer, jobs.ac.uk, Varbi, KU, UvA, UU, Inria, DGPuK, CISPA and HKUST checked directly.',
+   req:['WATCH: CISPA central PhD call expected late 2026 (E13, any nationality; web measurement with the Stock or Pellegrino groups; rolling applications possible).','REJECTED: EUR health hacks (Dutch C1), UZH Friemel (German), Leicester/Loughborough Collaboratory (community projects, unclear international eligibility), Birmingham MINARET and Leiden VVI (law), Warwick POSEIDON and TCD (off-topic), Cambridge CST (same channel as Gates), Luxembourg CLARITY (old); QUT, Monash, UCD, DCU, Trento, Vienna, Bergen, ITU, Konstanz closed.'],
+   link:''},
   {id:'p-qmul-castro', tier:'month', due:[2026,10,31], time:'NEW 13 Oct · email Castro now with CV and a 4-6 page proposal · funding via QMUL studentship competition (date UNVERIFIED)',
    name:'Queen Mary University of London (EECS): 3 PhD positions, early 2027, with Ignacio Castro on internet measurement and online-platform governance (fediverse and Bluesky, content moderation, online harms).',
    why:'Checked 13 Oct on his hiring page. Measurement, NLP and network methods on platform data: scraping, measurement and platform data map directly onto his work. Fit 5/5. Funding UNVERIFIED: his page points to EECS funded studentships and the QMUL funding guide; international-fee places are capped.',
@@ -2849,7 +2871,7 @@ const BOARD_COLS=[
 ];
 const ST_LABEL={todo:'to do',progress:'in progress',ready:'ready to apply',applied:'sent \u00b7 waiting',rejected:'rejected',done:'done',parked:'parked',dropped:'not needed'};
 /* defaults that differ from the rule "followup = in progress, everything else = to do" */
-const PRIO_DEFAULT_ST={'p-reading-intl':'parked','p-sweep-13oct':'parked','p-csh':'applied','p-lund-back':'applied','p-swiss-sges':'applied','p-paper':'done','p-sweep-12oct':'parked','p-sweep-9oct':'parked','p-taltech':'parked','p-uva-regulaire':'parked','p-hsg-regulaire':'parked','p-stockholm-socrisp':'parked','p-uva-doubt':'parked','p-dfki-combo':'parked','p-inria-claims':'parked','p-ku-cultural':'parked','p-imprs-is':'parked','p-bristol-cdt':'parked','p-followups-oct':'parked','p-sweep-28sep':'parked','p-sweep-oct-dec':'parked','p-sweep-30sep':'parked','p-sweep-21sep':'parked','p-leads-eu2':'parked','p-corvinus-wachs':'applied','p-aau-secure-llm':'rejected','p-ntnu-search':'applied','p-iwm-everyday-media':'applied','p-uva-aifeels':'applied','p-kth-feminist':'rejected','p-ellis-fi':'applied','p-sdu':'applied','p-polimi':'applied','p-vienna-rai':'applied','p-cha':'applied','p-casas':'applied','p-rit':'applied','p-emails':'applied','p-saarland':'applied','p-vu':'rejected','p-utrecht':'rejected','p-lmu-wuttke':'progress','p-edinburgh':'progress','p-commonwealth':'progress','p-commonwealth':'dropped','p-hasselt':'dropped','p-nelimarkka':'dropped','p-agder':'dropped','p-aarhus':'dropped','p-outbox':'done','p-rejected-log':'parked','p-manual-sweep':'parked'};
+const PRIO_DEFAULT_ST={'p-sweep-15oct':'parked','p-reading-intl':'parked','p-sweep-13oct':'parked','p-csh':'applied','p-lund-back':'applied','p-swiss-sges':'applied','p-paper':'done','p-sweep-12oct':'parked','p-sweep-9oct':'parked','p-taltech':'parked','p-uva-regulaire':'parked','p-hsg-regulaire':'parked','p-stockholm-socrisp':'parked','p-uva-doubt':'parked','p-dfki-combo':'parked','p-inria-claims':'parked','p-ku-cultural':'parked','p-imprs-is':'parked','p-bristol-cdt':'parked','p-followups-oct':'parked','p-sweep-28sep':'parked','p-sweep-oct-dec':'parked','p-sweep-30sep':'parked','p-sweep-21sep':'parked','p-leads-eu2':'parked','p-corvinus-wachs':'applied','p-aau-secure-llm':'rejected','p-ntnu-search':'applied','p-iwm-everyday-media':'applied','p-uva-aifeels':'applied','p-kth-feminist':'rejected','p-ellis-fi':'applied','p-sdu':'applied','p-polimi':'applied','p-vienna-rai':'applied','p-cha':'applied','p-casas':'applied','p-rit':'applied','p-emails':'applied','p-saarland':'applied','p-vu':'rejected','p-utrecht':'rejected','p-lmu-wuttke':'progress','p-edinburgh':'progress','p-commonwealth':'progress','p-commonwealth':'dropped','p-hasselt':'dropped','p-nelimarkka':'dropped','p-agder':'dropped','p-aarhus':'dropped','p-outbox':'done','p-rejected-log':'parked','p-manual-sweep':'parked'};
 /* 1 Oct 2026: one-time move of saved statuses so sent applications and emails land in 'Sent, waiting' and outcomes in Done */
 function migrateAppliedOct1(){try{if(localStorage.getItem('prio-mig-applied-14'))return;const ov=loadStatus();['p-taltech','p-uva-regulaire','p-hsg-regulaire','p-stockholm-socrisp','p-uva-doubt','p-dfki-combo','p-inria-claims','p-ku-cultural','p-imprs-is','p-bristol-cdt','p-followups-oct','p-sweep-28sep','p-sweep-oct-dec','p-sweep-30sep','p-sweep-21sep','p-leads-eu2','p-kth-feminist','p-aau-secure-llm','p-iwm-everyday-media','p-uva-aifeels','p-kth-feminist','p-ellis-fi','p-sdu','p-polimi','p-vienna-rai','p-cha','p-casas','p-rit','p-emails','p-saarland','p-vu','p-utrecht','p-lmu-wuttke','p-edinburgh','p-commonwealth','p-corvinus-wachs','p-commonwealth','p-paper','p-csh','p-lund-back','p-swiss-sges','p-vu','p-utrecht','p-kth-feminist','p-aau-secure-llm','p-reading-intl','p-iu-osome','p-lund-back','p-swiss-sges'].forEach(function(id){delete ov[id];});localStorage.setItem('prio-status',JSON.stringify(ov));localStorage.setItem('prio-mig-applied-14','1');}catch(e){}}
 /* which Outreach cards each task drives (substring match against the PROFS name) */
@@ -2884,7 +2906,7 @@ function defaultStatus(p){return PRIO_DEFAULT_ST[p.id]||(p.tier==='followup'?'pr
 function dueKey(p){ return p.due ? new Date(p.due[0],p.due[1]-1,p.due[2]).getTime() : 8640000000000000; }
 const TIER_RANK={now:0,week:1,month:2,followup:3,later:4};
 /* priority: 1 = must do / best fit, 2 = strong, 3 = optional or reference. Set 22 Sep 2026. */
-const PRIO_RANK={'p-qmul-castro':1,'p-iu-osome':1,'p-neu-netsi':2,'p-umsi':3,'p-yadias':3,'p-reading-intl':3,'p-sweep-13oct':3,'p-lund-back':1,'p-ella':2,'p-unil-humbert':3,'p-uconn-riet':2,'p-cuhk-css':3,'p-sweep-12oct':3,'p-swiss-sges':1,'p-jena-humprecht':1,'p-aarhus-pay4play':3,'p-ntu-wkwsci':2,'p-hkpfs':2,'p-syracuse':2,'p-uk-intl-funding':1,'p-world-funded':2,'p-sweep-9oct':3,'p-hsg-regulaire':2,'p-uva-regulaire':3,'p-nthu-mq':2,'p-taltech':3,'p-dfki-combo':2,'p-ddsa-2027':2,'p-senss-esrc':2,'p-lmu-wuttke':1,'p-ellis-phd-2027':1,'p-followups-oct':1,
+const PRIO_RANK={'p-ed-igs-thompson':2,'p-hkust-tyson':2,'p-inria-shard':3,'p-sweep-15oct':3,'p-qmul-castro':1,'p-iu-osome':1,'p-neu-netsi':2,'p-umsi':3,'p-yadias':3,'p-reading-intl':3,'p-sweep-13oct':3,'p-lund-back':1,'p-ella':2,'p-unil-humbert':3,'p-uconn-riet':2,'p-cuhk-css':3,'p-sweep-12oct':3,'p-swiss-sges':1,'p-jena-humprecht':1,'p-aarhus-pay4play':3,'p-ntu-wkwsci':2,'p-hkpfs':2,'p-syracuse':2,'p-uk-intl-funding':1,'p-world-funded':2,'p-sweep-9oct':3,'p-hsg-regulaire':2,'p-uva-regulaire':3,'p-nthu-mq':2,'p-taltech':3,'p-dfki-combo':2,'p-ddsa-2027':2,'p-senss-esrc':2,'p-lmu-wuttke':1,'p-ellis-phd-2027':1,'p-followups-oct':1,
   'p-ellis-fi':1,'p-iwm-everyday-media':1,'p-uva-aifeels':1,'p-csh':1,'p-commonwealth':1,'p-mbzuai':1,'p-edinburgh':1,'p-cha':1,'p-paper':1,
   'p-vu':1,'p-sdu':1,'p-polimi':1,
   'p-ielts':3,'p-kth-feminist':1,'p-hpi-rottger':1,'p-corvinus-wachs':2,'p-ubel-dtp':2,'p-cu-boulder':3,'p-ects':3,'p-ku-cultural':2,'p-inria-claims':2,'p-lmu-ai':2,'p-leads-eu2':3,'p-ntnu-search':2,'p-aau-secure-llm':2,'p-mpi-sws':2,'p-imprs-is':2,'p-ubc-cs':2,'p-sedarc':2,'p-uva-doubt':3,'p-bristol-cdt':2,'p-surrey-cdt':2,'p-umd-info':2,'p-cmu-lti':3,'p-unc-ils':3,'p-sweep-21sep':3,'p-epfl-edic':2,'p-oii':2,'p-vienna-rai':2,'p-rit':2,'p-casas':2,'p-saarland':2,
@@ -3330,7 +3352,7 @@ function toggleDone(id, el){
 
 document.addEventListener('DOMContentLoaded', function() {
   // Last refreshed — updated manually on each "Refresh all my phd" run
-  const LAST_REFRESHED = '14 Oct 2026';
+  const LAST_REFRESHED = '15 Oct 2026';
   document.getElementById('last-refreshed').textContent = '↻ ' + LAST_REFRESHED;
   const luEl = document.getElementById('last-updated-text');
   if(luEl) luEl.textContent = 'Last updated: ' + LAST_REFRESHED;
