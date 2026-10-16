@@ -1,15 +1,16 @@
 To: A.Wuttke@lmu.de
 Subject: Application: PhD Researcher in Computational Social Science (Asad Ikram)
-Attachments: Asad_Ikram_Cover_Letter_LMU.pdf, Asad_Ikram_CV_LMU.pdf, Asad_Ikram_Writing_Sample_arXiv_2610.16757.pdf, Asad_Ikram_Writing_Sample_MSc_Dissertation.pdf, MSc transcript and degree certificate, BS transcript and degree
+Attachments: Asad_Ikram_Cover_Letter_LMU.pdf, Asad_Ikram_CV_LMU.pdf, Asad_Ikram_Writing_Sample_arXiv_2610.16757.pdf, Asad_Ikram_Writing_Sample_MSc_Dissertation.pdf, MSc and BS transcripts and degree certificates
 
 Dear Professor Wuttke,
 
-I am applying for the PhD Researcher position in Computational Social Science in your Emmy Noether group.
+Your AI Conversational Interviewing paper found that voice and chat draw different answers out of the same people. I have spent the last two years on the same problem in social media, where every platform changes how an opinion gets written, and I would love to bring that to your Emmy Noether group as the PhD Researcher in Computational Social Science.
 
-Your AI Conversational Interviewing paper finds that voice and chat draw different text out of the same people. My own work asks the same question of social media: in a paper with Dr Ella Haig (arXiv:2610.16757), we treat each platform as a survey mode and test whether machine-labelled opinion can be compared across them. I would like to bring that, together with the LLM agents and labelling pipelines I build and run in Python at M+C Saatchi Fluency and Artemis AI, to mapping democratic belief systems across modes, languages and countries.
+In a paper with Dr Ella Haig (arXiv:2610.16757), we treat each platform as a survey mode; in our simulation, pooling platforms at face value gets the direction of public sentiment wrong on nearly a quarter of days. In industry I build the LLM side: at M+C Saatchi Fluency, self-healing agents that run to strict ground rules and approval gates, and at Artemis AI, the social media start-up I co-founded, a labelling chain in which Claude explains its labels and those explanations teach cheaper models, all checked against people before anything reaches users.
 
-Attached are my cover letter, CV, two writing samples (the paper and my MSc dissertation, which I wrote alone) and my degree documents. I can start on 1 January 2027 and would relocate to Munich.
+The question I would most like to work on with you: before democratic belief systems are compared across interview modes and your thirteen countries, do the topic and frame labels behind them mean the same thing in each?
+
+Attached are my cover letter, CV, two writing samples (the arXiv paper and my MSc dissertation, which I wrote alone) and my degree documents. I can start on 1 January 2027 and would relocate to Munich.
 
 Kind regards,
 Asad Ikram
-asad.ikram53@gmail.com | +44 7482 376417 | linkedin.com/in/asad-ikram98
