@@ -1,6 +1,6 @@
 To: A.Wuttke@lmu.de
 Subject: Application: PhD Researcher in Computational Social Science (Asad Ikram)
-Attachments: Asad_Ikram_Cover_Letter_LMU.pdf, Asad_Ikram_CV_LMU.pdf, Asad_Ikram_Writing_Sample_arXiv_2610.16757.pdf, MSc transcript and degree certificate, BS transcript and degree
+Attachments: Asad_Ikram_Cover_Letter_LMU.pdf, Asad_Ikram_CV_LMU.pdf, Asad_Ikram_Writing_Sample_arXiv_2610.16757.pdf, Asad_Ikram_Writing_Sample_MSc_Dissertation.pdf, MSc transcript and degree certificate, BS transcript and degree
 
 Dear Professor Wuttke,
 
@@ -8,7 +8,7 @@ I am applying for the PhD Researcher position in Computational Social Science in
 
 Your AI Conversational Interviewing paper finds that voice and chat draw different text out of the same people. My own work asks the same question of social media: in a paper with Dr Ella Haig (arXiv:2610.16757), we treat each platform as a survey mode and test whether machine-labelled opinion can be compared across them. I would like to bring that, together with the LLM agents and labelling pipelines I build and run in Python at M+C Saatchi Fluency and Artemis AI, to mapping democratic belief systems across modes, languages and countries.
 
-Attached are my cover letter, CV, the paper as a writing sample, and my degree documents. I can start on 1 January 2027 and would relocate to Munich.
+Attached are my cover letter, CV, two writing samples (the paper and my MSc dissertation, which I wrote alone) and my degree documents. I can start on 1 January 2027 and would relocate to Munich.
 
 Kind regards,
 Asad Ikram
