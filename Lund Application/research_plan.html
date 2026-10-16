@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Research plan, Asad Ikram, Lund</title><style>
+  @page { size: A4; margin: 15mm 18mm 14mm 18mm; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.8pt; line-height: 1.3; color:#000; margin:0; text-align: justify; }
+  a { color:#000; text-decoration:none; }
+  h1 { font-size: 13pt; margin: 0 0 3pt; text-align:left; }
+  .meta { font-size: 9.5pt; color:#333; margin-bottom: 8pt; text-align:left; }
+  h2 { font-size: 11pt; margin: 9pt 0 3pt; }
+  p { margin: 0 0 5pt; }
+  ul { margin: 0 0 5pt; padding-left: 15pt; } li { margin-bottom: 2pt; }
+  .refs p { font-size: 9.6pt; margin: 0 0 2.5pt; padding-left: 14pt; text-indent: -14pt; text-align:left; }
+</style></head><body><h1>Who sets the temperature? Polarising rhetoric, voter engagement and the feedback loop between parliament and social media in Sweden and Finland</h1>
+<div class="meta">Research plan · Asad Ikram · PhD in Political Science (PA2026/2879), project &ldquo;A Divisive Spiral?&rdquo;</div>
+
+<h2>1. Aim and research questions</h2>
+<p>The project asks whether affective polarisation grows from a spiral in which politicians use polarising rhetoric, voters
+reward it with engagement, platforms amplify what is engaging, and politicians learn from the signal. My dissertation would
+study the elite side of that loop: whether politicians are rewarded for polarising communication on social media, and whether
+the reward changes how they speak afterwards, online and in parliament. Because this comparison crosses arenas, languages and
+modes, it rests on a measurement question that has to be answered first.</p>
+<ul>
+<li><b>RQ1 (measurement).</b> Can large language models measure polarising communication (out-party hostility, moralised
+language and emotional appeals) equivalently in parliamentary speech and in social media posts, in Swedish and Finnish, and in
+text and transcribed audio?</li>
+<li><b>RQ2 (reward).</b> Do politicians&rsquo; more polarising posts receive more engagement, and does the reward differ by
+party, platform and electoral period?</li>
+<li><b>RQ3 (feedback).</b> When a politician is rewarded for polarising posts, does their later rhetoric become more polarising,
+on social media and in parliament?</li>
+</ul>
+
+<h2>2. Background and contribution</h2>
+<p>Affective polarisation, dislike and distrust of political opponents, has risen in many democracies (Iyengar et al. 2019).
+Elites are a plausible driver: Bäck et al. (2023) show in a survey experiment with about 1,300 Swedish voters that a factual
+message carrying an in- or out-party source cue raises affective polarisation, especially among strong partisans. Social media
+can strengthen that channel. Posts about the political out-group draw more engagement than other posts (Rathje et al. 2021),
+users who are rewarded for expressing outrage express more of it later (Brady et al. 2021), and ranking algorithms can amplify
+some political content more than others (Husz&aacute;r et al. 2022). Together these describe the spiral, but they are rarely
+tested on the same politicians across arenas, and almost never outside the United States and English. Sweden and Finland
+add a further test: in multiparty systems voters can dislike several parties to different degrees (Wagner 2021), so polarising
+rhetoric has to be measured together with its target, not only its tone.</p>
+<p>A cross-arena test also needs a measure that means the same thing in each arena. Gaynor et al. (2026) find that
+legislators&rsquo; ideological positions differ between votes, floor speeches and tweets; whether that is strategy or an
+artefact of measuring different kinds of text with one instrument cannot be settled without testing the instrument. Sen et
+al. (2021) call this platform-affordance error. In a methods paper with Dr Ella Haig (Ikram and Haig 2026), I treat each
+platform as a survey mode and show in a simulation that pooling machine-labelled sentiment across platforms at face value
+gives the wrong sign of the aggregate on nearly a quarter of days. LLMs now label political text at scale and in many
+languages (Gilardi et al. 2023; Rathje et al. 2024), but their validity varies across languages and genres. A parliamentary
+speech and a Facebook post differ in length, register and audience. If a model reads hostility more readily in one, then a
+finding that politicians are &ldquo;more hostile on social media than in parliament&rdquo; may describe the model rather than
+the politicians.</p>
+<p>The dissertation would contribute (a) a validated, multilingual and cross-arena measure of polarising elite communication
+that the project&rsquo;s other studies can use, (b) evidence on whether engagement rewards polarising rhetoric in two
+multiparty systems, and (c) a test of whether that reward feeds back into later rhetoric, including in parliament.</p>
+
+<p><b>Expectations.</b> H1: a politician&rsquo;s posts expressing out-party hostility receive more engagement than their
+comparable non-hostile posts, and more than posts that are only emotional. H2: the reward is larger during election campaigns
+and on platforms whose ranking weights engagement most heavily. H3: rewarded hostility predicts more hostility in a
+politician&rsquo;s later posts, with a weaker spillover into parliament, where the norms of debate restrain it. H0 for RQ1:
+LLM labels of hostility are not invariant across arenas without correction, so uncorrected cross-arena comparisons overstate
+the online&ndash;parliament gap.</p>
+
+<h2>3. Data</h2>
+<p>Parliamentary speech comes from the open data of the Riksdag and the Eduskunta: plenary transcripts and, where available,
+audio, covering at least the Swedish elections of 2018, 2022 and 2026 and the Finnish elections of 2019 and 2023. Social media
+posts by members of both parliaments and their parties (Facebook, Instagram, X and, where accounts exist, TikTok) would be
+collected with engagement counts through official research access, such as the Meta Content Library and data access for vetted
+researchers under Article 40 of the EU Digital Services Act. Audio is transcribed with a multilingual speech model and checked
+on a sample. Only public communication by public office holders is collected, under the project&rsquo;s ethics approval, with
+data minimisation and no processing of private users&rsquo; identities. Collecting and maintaining such corpora reliably has
+been my professional work for eight years.</p>
+
+<h2>4. Measurement (RQ1)</h2>
+<p>Starting from the project&rsquo;s concepts and existing work on emotion in parliamentary debate (Rheault et al. 2016), I
+would build a codebook for out-party hostility, moralised language and emotional appeals, with examples in Swedish and Finnish, coding the target party of each hostile statement as well as its intensity.
+Two LLMs label every unit directly in the original language, and their agreement serves as a convergence check. Native-speaker
+coders label a stratified gold sample for each cell of arena by language by mode. I would then apply the protocol from my
+paper: a generalizability study to show how much score variance comes from arena, language, model and prompt; tests of
+measurement invariance and differential item functioning to find where a label behaves differently, for example whether a
+heated but procedural exchange in the chamber is over-coded as hostile; and score linking where the scales differ. The output
+is a statement of which comparisons are licensed, and a corrected measure where they are not. This is the first paper.</p>
+
+<h2>5. Analysis (RQ2 and RQ3)</h2>
+<p><b>Reward.</b> At the post level I would model engagement as a function of measured rhetoric, with politician fixed effects
+and controls for topic, format, timing and audience size, comparing platforms and campaign with non-campaign periods.
+Engagement is not exposure, so I would use reach measures where platforms provide them and treat them as an outcome of
+algorithmic amplification; the causal role of algorithms is tested in the project&rsquo;s experiments. <b>Feedback.</b> Using
+a politician-by-week panel, I would test whether unusually high engagement on a politician&rsquo;s polarising posts predicts
+more polarising rhetoric in the following weeks, comparing each politician with themselves (following the design of Brady et
+al. 2021), and whether it spills over into their parliamentary speeches. Party leadership changes and election campaigns
+provide natural comparison points. Real examples of polarising and non-polarising messages from the corpus can also serve as
+realistic stimuli for the project&rsquo;s voter experiments.</p>
+
+<h2>6. Feasibility and timeline</h2>
+<p><b>Year 1:</b> doctoral courses (political behaviour, causal inference), codebook, data collection, and Swedish language
+courses. <b>Year 2:</b> gold-standard coding and the invariance study (paper 1). <b>Year 3:</b> reward and feedback analysis
+(paper 2), and a contribution to the project&rsquo;s experiments. <b>Year 4:</b> spillover into parliament (paper 3) and the
+compilation thesis. The main risks are platform data access and the reliability of Finnish labels. Parliamentary data are open
+and form a core that does not depend on platform access, and the native-speaker gold samples are built so that weak cells
+show up early.</p>
+
+<h2>References</h2>
+<div class="refs">
+<p>Bäck, H., Carroll, R., Renström, E. and Ryan, A. (2023). Elite communication and affective polarization among voters. <i>Electoral Studies</i> 84: 102639.</p>
+<p>Brady, W. J., McLoughlin, K., Doan, T. N. and Crockett, M. J. (2021). How social learning amplifies moral outrage expression in online social networks. <i>Science Advances</i> 7(33).</p>
+<p>Gaynor, S., Miler, K., Goel, P., Hoyle, A. and Resnik, P. (2026). Express yourself (ideologically): legislators&rsquo; ideal points across audiences. <i>Journal of Politics</i> 88(4).</p>
+<p>Gilardi, F., Alizadeh, M. and Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. <i>PNAS</i> 120(30).</p>
+<p>Husz&aacute;r, F. et al. (2022). Algorithmic amplification of politics on Twitter. <i>PNAS</i> 119(1).</p>
+<p>Ikram, A. and Haig, E. (2026). Is the platform part of the measurement? A protocol and simulation study for cross-platform equivalence of machine-labelled policy sentiment. arXiv:2610.16757.</p>
+<p>Iyengar, S., Lelkes, Y., Levendusky, M., Malhotra, N. and Westwood, S. J. (2019). The origins and consequences of affective polarization in the United States. <i>Annual Review of Political Science</i> 22: 129&ndash;146.</p>
+<p>Rathje, S., Van Bavel, J. J. and van der Linden, S. (2021). Out-group animosity drives engagement on social media. <i>PNAS</i> 118(26).</p>
+<p>Rathje, S. et al. (2024). GPT is an effective tool for multilingual psychological text analysis. <i>PNAS</i> 121(34).</p>
+<p>Rheault, L., Beelen, K., Cochrane, C. and Hirst, G. (2016). Measuring emotion in parliamentary debates with automated textual analysis. <i>PLoS ONE</i> 11(12).</p>
+<p>Sen, I., Flöck, F., Weller, K., Weiß, B. and Wagner, C. (2021). A total error framework for digital traces of human behavior on the web. <i>Public Opinion Quarterly</i> 85(S1): 399&ndash;422.</p>
+<p>Wagner, M. (2021). Affective polarization in multiparty systems. <i>Electoral Studies</i> 69: 102199.</p>
+</div></body></html>
