@@ -82,7 +82,7 @@
   <div><span class="ttl">Data Engineer</span>, <span class="org">M+C Saatchi Fluency, London. Social media analysis for global brands including
     Amazon, Ford, Nike and Reckitt, and for UK government.</span></div>
   <ul>
-    <li>Analyst on a twelve-month discourse study (100,845 Brandwatch and 170,542 Reddit mentions): BERTopic codebook, versioned LLM tagging.</li>
+    <li>Analyst on a twelve-month discourse study (100,845 Brandwatch and 170,542 Reddit mentions): BERTopic-derived codebook, LLM tagging with a prompt-version hash on every tag, three pilot runs on the same 500 rows before the full run.</li>
     <li>Social data collection, labelling and tagging, text and sentiment analysis with AI/ML, forum sourcing and pipeline architecture;
         a weekly pipeline of 2.2 million rows.</li>
     <li>Built a self-healing agent that diagnoses a broken forum crawler, regenerates it and tests it on live pages, and a builder agent that
@@ -99,6 +99,7 @@
         human-labelled sets; a storm detector for bursts of hostile comments; spam, bot, language and banter filters so dialect is not read
         as toxicity; community detection and match scoring on the network of pages; best-time, engagement-outlook and post-health models;
         image and video understanding (OCR, CLIP, Whisper); and Art-E, a retrieval-based advisor on Amazon Bedrock.</li>
+    <li>Designed the LLM labelling chain: Claude labels about 6,000 posts with an explanation each, rules mined from the explanations prompt DeepSeek, and its labels train our own encoder classifiers; evaluation built around a human-labelled golden set.</li>
     <li>Lead a team of five across models, AI/ML, deployment, app development and design; take part in pitching.</li>
   </ul>
 </div></div>

@@ -33,81 +33,80 @@
 
 <p>Your migration interviews show that people at the same point on a scale can hold very different mental models, and that
   voice and chat draw different text out of the same people. Much of my last two years has gone into the second half of that
-  problem in social media: when the medium changes how an opinion is written, can a model&rsquo;s labels still be compared? The
-  position asks for Python and experience orchestrating LLM agents, text-as-data and NLP methods, and an interest in belief
-  systems and democratic attitudes. I bring a methods paper on measuring opinion across platforms, LLM agents and labelling
-  pipelines that I build and run in production, and eight years of collecting and analysing large multilingual text. I would
-  like to use them to help your group map democratic belief systems that can be trusted across modes, languages and countries.</p>
+  problem in social media: when the medium changes how an opinion is written, can a model&rsquo;s labels still be compared?
+  The position asks for Python and experience orchestrating LLM agents, text-as-data and NLP methods, and an interest in
+  belief systems and democratic attitudes. I bring a methods paper on measuring opinion across platforms, LLM agents and
+  labelling systems that I designed and run in production at M+C Saatchi Fluency and at Artemis AI, the social media start-up
+  I co-founded, and eight years of collecting and analysing large multilingual text. I want to put all of it into mapping how
+  people think about democracy, in a way that holds across modes, languages and countries.</p>
 
 <p><span class="lead">Your work.</span> <i>AI Conversational Interviewing</i> (Wuttke, Lang, Klamm, W&uuml;rschinger and
   Kreuter, 2026) shows what a battery from the German Longitudinal Election Study cannot: not only where partisans stand on
   migration, but what comes to mind first, with FDP supporters opening on the labour market and Die Linke supporters on
-  humanitarian concerns. The paper is
-  also candid about two things I recognise. Voice interviews produce longer, more conversational answers and text interviews
-  shorter, denser ones, with chat replies shrinking after about the tenth turn, so the mode comparisons describe systems as
-  deployed rather than a pure modality effect. And about a quarter of survey and interview records could not be linked
+  humanitarian concerns. The paper is candid about two things I recognise. Voice answers are longer and more conversational,
+  text answers shorter and denser, with chat replies shrinking after about the tenth turn, so mode comparisons describe systems
+  as deployed rather than a pure modality effect. And about a quarter of survey and interview records could not be linked
   because respondents typed their IDs by hand. The first is a measurement problem and the second a pipeline problem, and I
-  have worked on both.</p>
+  have spent my working life between the two.</p>
 
-<p><span class="lead">Python skills and experience working with LLMs.</span> At M+C Saatchi Fluency in London, where I build
-  social media data systems for brands and UK Government communications teams, I designed a self-healing agent: Claude works
-  through a set of tools on a server I built, diagnoses a broken forum crawler, rewrites it and tests the fix on the live site
-  before anything ships. A second agent builds new crawlers. Both run to an agenda and explicit ground rules, with prompt
-  fencing and approval gates, and I decide what merges, which is the same discipline an AI interviewer needs to stay neutral
-  and on protocol. As co-founder and CTO of Artemis AI, a social media intelligence start-up, I lead a team of five; our
-  labelling escalates from our own models to DeepSeek and then Claude when confidence is low. I work in Python every day.</p>
+<p><span class="lead">Python and experience working with LLMs.</span> I build LLM systems that act on their own and keep them
+  honest. At Fluency, which analyses social media for global brands and UK government, I designed a self-healing agent: when a
+  forum crawler breaks, Claude works through tools on a server I built, diagnoses the failure, rewrites the code and tests it on
+  the live site before anything ships, while a second agent builds new crawlers; both follow explicit ground rules, with
+  prompt fencing and approval gates, and I decide what merges. At Artemis AI I designed a labelling chain in which Claude labels
+  about 6,000 posts and explains each label, rules mined from those explanations become the prompt for DeepSeek, and its
+  labels train our own classifiers. For our December beta I lead the build of Art-E, an advisor on Amazon Bedrock that answers
+  only from a client&rsquo;s own data, with citations and guardrails. An AI interviewer needs the same things: an agenda, rules
+  it cannot drift from, and a record of every turn.</p>
 
 <p><span class="lead">Text-as-data methods and natural language processing.</span> My MSc dissertation in Data Analytics at
   the University of Portsmouth (Distinction, Chevening Scholar), supervised by Dr Ella Haig, analysed public reaction to UK
-  economic policy in more than 250,000 posts from X, Reddit, YouTube and Quora, comparing a fine-tuned BERT model with BiLSTM
-  and lexicon baselines against 200 hand-labelled posts. At Fluency I was an analyst on a twelve-month discourse study of
-  100,845 Brandwatch and 170,542 Reddit mentions, using a BERTopic codebook and versioned LLM tagging that people then checked:
-  the same LLM-first, human-validated procedure your team used to code topics and frames. At Artemis AI I fine-tune encoder
-  classifiers (XLM-R, DistilBERT, DeBERTa) for toxicity, intent and topic, tested against human-labelled sets.</p>
+  economic policy in 255,446 comments from X, Reddit, YouTube and Quora, with a fine-tuned BERT model against BiLSTM and lexicon
+  baselines, calibration, significance tests, and LIME and integrated gradients to see what the model relied on. At Fluency I
+  was an analyst on a twelve-month discourse study of 100,845 Brandwatch and 170,542 Reddit mentions: a BERTopic-derived
+  codebook, LLM tagging with a prompt-version hash on every tag, and three pilot runs on the same 500 rows before the full run,
+  the same LLM-first, human-validated logic your team used to code topics and frames. At Artemis AI I fine-tune XLM-R,
+  DistilBERT and DeBERTa classifiers for toxicity, intent and topic, and we are building evaluation around a human-labelled
+  golden set, so that no model reaches users without being checked against people.</p>
 
 <p><span class="lead">Interest in belief systems and democratic attitudes.</span> My research began with a political
-  question: what does the public think of the policies made in its name, and can online text tell us? The dissertation became
-  a paper with Dr Haig, <i>Is the Platform Part of the Measurement?</i> (arXiv, 2026), which treats each platform as a survey
-  mode and applies generalizability theory, measurement invariance and score linking to machine-labelled opinion. In a
-  simulation I built, pooling platform scores at face value gives the wrong sign of aggregate sentiment on nearly a quarter of
-  days. My Chevening application proposed a cross-platform system to give government better evidence of public opinion. What
-  draws me to your group is the step beyond sentiment: not whether people approve of something, but how their reasons hang
-  together, and which of them hold up when they are asked a follow-up.</p>
+  question: what does the public think of the policies made in its name, and can online text tell us? The dissertation&rsquo;s
+  weakness taught me most. Its labels were seeded by a lexicon, so its checks were partly circular, and it assumed that a
+  &ldquo;negative&rdquo; post means the same on Reddit as on YouTube. With Dr Haig I turned that into <i>Is the Platform Part
+  of the Measurement?</i> (arXiv, 2026), which treats each platform as a survey mode and applies generalizability theory,
+  measurement invariance and score linking to machine-labelled opinion. In the simulation I built, pooling platforms at face
+  value gives the wrong sign of aggregate sentiment on nearly a quarter of days. My Chevening application proposed a
+  cross-platform system to give government evidence of public opinion. What draws me to your group is the step beyond
+  sentiment: not whether people approve, but how their reasons hang together, and which of them survive a follow-up question.</p>
 
-<p><span class="lead">Why social media, and my connection.</span> Social media is the work I care most about,
-  because it is where I learned what online numbers can and cannot say about people. I started as a computer science student
-  in Pakistan collecting web and social data for clients on Fiverr, more than 300 projects. At Dubizzle Labs I built the data
-  behind dashboards on what people discussed across 15 markets in four languages. At Fluency I turn conversation from ten
-  platforms into reports read by government communications teams, and at Artemis AI we are building tools that help creators
-  and businesses understand more than three million comments on their pages. Every one of those jobs hit the same wall: the
-  platform shapes what people write, and researchers can only listen to what happens to be posted. AI interviewing lets the
-  researcher ask the question and still hear people in their own words, which is why I want to do this work in your group.</p>
+<p><span class="lead">Why social media, and why this matters to me.</span> Social media is the work I care most about,
+  because it is where I learned what online numbers can and cannot say about people. I started as a computer science student in
+  Pakistan collecting web and social data for clients on Fiverr, more than 300 projects; at Dubizzle Labs I built the data behind
+  dashboards on what people discussed across 15 markets in English, Arabic, Urdu and Hindi; at Fluency I turn conversation from
+  ten platforms into reports read by government communications teams; and at Artemis AI, where I lead a team of five, we help
+  creators and businesses understand more than three million comments, with a storm detector for bursts of hostility and
+  filters that stop dialect and banter being read as toxicity. Every one of those jobs hit the same wall: researchers can only
+  hear what people happen to post, in the form each platform encourages. AI interviewing lets the researcher ask the question
+  and still hear people in their own words. That is why I want to do a PhD now, and why in your group.</p>
 
-<p><span class="lead">A question I could contribute to.</span> Before belief systems are compared across modes and across
-  your thirteen countries, are the topic and frame labels behind them invariant? If voice produces looser, longer reasoning
-  and chat shorter, denser claims, a frame such as &ldquo;causal reasoning&rdquo; may be coded more often in one mode for the
-  same underlying view, and a democratic attitude may look well-founded or superficial partly because of the interviewer
-  system. I would treat mode, language and country as facets, test the coding scheme for invariance and differential item
-  functioning against human-coded subsamples, and only then compare. On the engineering side I would make linkage and
-  turn-level logging automatic, so that no interview is lost to a typed ID. I have built text pipelines in English, Arabic,
-  Urdu and Hindi, and I know how differently the same stance can read across languages.</p>
+<p><span class="lead">A question I could contribute to.</span> Before belief systems are compared across modes and your
+  thirteen countries, are the topic and frame labels behind them invariant? If voice yields looser reasoning and chat denser
+  claims, a frame such as causal reasoning may be coded more often in one mode for the same view, and an attitude may look
+  well-founded or superficial partly because of the interviewer system. I would treat mode, language and country as facets,
+  test the coding scheme for invariance and differential item functioning against human-coded subsamples, and only then compare,
+  while making linkage and turn-level logging automatic so that no interview is lost to a typed ID.</p>
 
-<p><span class="lead">Why a PhD, and why now.</span> Industry taught me to collect and label opinion at scale, not to show
-  what it says about people. I want that training, and I would carry the results back into how AI tools for public opinion are built.</p>
+<p><span class="lead">What I do not yet bring.</span> I have no degree in political science or psychology, and my political
+  psychology comes from reading, not training. I have not designed a survey or run an experiment with human participants, my
+  agents work through tools rather than talk to people, so I have not yet built a multi-turn interviewer, and I have no
+  peer-reviewed publication. I would close these gaps through the institute&rsquo;s courses and the group&rsquo;s studies from
+  the first month, and start learning German on arrival.</p>
 
-<p><span class="lead">What I do not yet bring.</span> I do not have a degree in political science or psychology, and my
-  knowledge of political psychology comes from reading, not training. I have not designed a survey or run an experiment with
-  human participants. My agents work through tools rather than talk to people, so I have not yet built a multi-turn
-  conversational interviewer, and I have no peer-reviewed publication. I would close these gaps through the institute&rsquo;s
-  courses and by working on the group&rsquo;s interview studies from the first month. I do not yet speak German and would
-  start learning it on arrival.</p>
-
-<p><span class="lead">Practicalities.</span> I can start on 1 January 2027 and would relocate to Munich to work on site. As writing
-  samples I attach the arXiv paper, for which I built the simulation and the dissertation case study, and my MSc dissertation,
-  which I wrote alone. My
-  referees are Dr Ella Haig, Associate Professor in AI, University of Portsmouth, my supervisor and co-author
-  (Ella.Haig@port.ac.uk), and Dr Fahad Ahmad, Senior Lecturer, University of Portsmouth, who taught and assessed me on the MSc
-  (Fahad.Ahmad@port.ac.uk). Thank you for considering my application.</p>
+<p><span class="lead">Practicalities.</span> I can start on 1 January 2027 and would relocate to Munich to work on site. As
+  writing samples I attach the arXiv paper, for which I built the simulation and the dissertation case study, and my MSc
+  dissertation, which I wrote alone. My referees are Dr Ella Haig, Associate Professor in AI, University of Portsmouth, my
+  supervisor and co-author (Ella.Haig@port.ac.uk), and Dr Fahad Ahmad, Senior Lecturer, University of Portsmouth, who taught
+  and assessed me on the MSc (Fahad.Ahmad@port.ac.uk). Thank you for considering my application.</p>
 
 <div class="sig">Yours sincerely,<br><span class="n">Asad Ikram</span></div>
 
