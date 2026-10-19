@@ -161,19 +161,79 @@ table{width:100%;border-collapse:collapse;font-size:10pt}td,th{border:.6pt solid
 <table>
 <tr><th style="width:28%">Question</th><th>Main points</th></tr>
 <tr><td>Tell us about yourself</td><td>The 60-second story on page 1.</td></tr>
-<tr><td>A research project, and what went wrong</td><td>MSc dissertation &rarr; the circular check &rarr; you found it yourself &rarr; it became the paper.</td></tr>
-<tr><td>What have you built in industry?</td><td>Fluency: prompt-recorded AI labels, repair agents. Artemis AI: &ldquo;agreement can lie&rdquo;. Then the one line in section 6.</td></tr>
+<tr><td>A research project, and what went wrong</td><td>STAR Story 1 (the circular check).</td></tr>
+<tr><td>What have you built in industry?</td><td>STAR Story 4 (Fluency) or Story 5 (Artemis AI), then the one line in section 6.</td></tr>
 <tr><td>Why a PhD, why now?</td><td>Every job showed a new way measurements fail; industry let you find problems but not study them; CSH gives network science and causal inference.</td></tr>
 <tr><td>Why CSH?</td><td>Opinion online is a system of people, platforms and algorithms. Chen et al. and Hoyle&rsquo;s work match your question. You want to learn network science.</td></tr>
 <tr><td>What would you study?</td><td>Answer 3 in three steps: simulation, new data checked by people, effect on how narratives spread.</td></tr>
 <tr><td>Strengths and gaps</td><td>Strengths: data at scale, Python, AI labelling, careful checking. Gaps: network science, causal inference, with a plan.</td></tr>
-<tr><td>Teamwork</td><td>Led three engineers at Dubizzle and at VendueTech; lead the tech team of eight at Artemis AI.</td></tr>
-<tr><td>A setback</td><td>The circular check: found it, admitted it, turned it into a paper.</td></tr>
+<tr><td>Teamwork</td><td>STAR Story 3 (Dubizzle); add: lead the tech team of eight at Artemis AI.</td></tr>
+<tr><td>A setback</td><td>STAR Story 1, focusing on the Action and Result.</td></tr>
 <tr><td>Five years from now</td><td>Researching how online opinion is measured, so decisions rest on numbers checked against people.</td></tr>
+<tr><td>How do you judge if data or a model is right?</td><td>STAR Story 5 or 6.</td></tr>
+<tr><td>What drives you? / Why this topic?</td><td>STAR Story 2 (Chevening).</td></tr>
 <tr><td>Questions for us?</td><td>&ldquo;How are students matched with supervisors in the first year?&rdquo;</td></tr>
 </table>
 
-<h2 class="pb">11. Glossary: hard words, made simple</h2>
+<h2 class="pb">11. STAR answer bank</h2>
+<p class="small">STAR = <b>S</b>ituation (where you were), <b>T</b>ask (what had to be done), <b>A</b>ction (what <i>you</i> did), <b>R</b>esult (what happened, with a number). Say each in about 60 seconds, then add one line on what it means for the PhD.</p>
+<style>.star td:first-child{width:12%;font-weight:bold;color:#3C3489}.star{margin-bottom:4pt}</style>
+
+<h3>Story 1: the circular check (research project, setback, honesty)</h3>
+<table class="star">
+<tr><td>S</td><td>MSc dissertation at Portsmouth: public reaction to UK economic policy on X, Reddit, YouTube and Quora.</td></tr>
+<tr><td>T</td><td>Build a reliable way to measure the public mood across platforms, and test it.</td></tr>
+<tr><td>A</td><td>Collected 255,446 comments under ethics approval, trained BERT against baselines, ran statistical tests. Then I re-examined my own validation and found the model had been checked against labels from the same word list it learned from.</td></tr>
+<tr><td>R</td><td>I reported the problem openly and turned it into my first paper with Dr Haig, which shows that ignoring platform differences gets the mood wrong on nearly a quarter of days.</td></tr>
+</table>
+<p><span class="phd">For the PhD:</span> I find flaws in my own work and turn them into research questions; that is the project I want to continue.</p>
+
+<h3>Story 2: Chevening (motivation, long-term commitment)</h3>
+<table class="star">
+<tr><td>S</td><td>Working with online data in Pakistan, I saw that public bodies have little reliable evidence of what citizens think.</td></tr>
+<tr><td>T</td><td>Win a fully funded UK master&rsquo;s to build that skill.</td></tr>
+<tr><td>A</td><td>Proposed a cross-platform social media analytics system to give government evidence of public opinion, alongside my work helping students and junior colleagues into remote careers.</td></tr>
+<tr><td>R</td><td>Selected as a Chevening Scholar from 70,000+ applicants; the proposal became my dissertation and then my paper.</td></tr>
+</table>
+<p><span class="phd">For the PhD:</span> the question is years old and useful to the public, not a new fashion.</p>
+
+<h3>Story 3: Dubizzle (leadership, multilingual data)</h3>
+<table class="star">
+<tr><td>S</td><td>Dubizzle Labs had no system for collecting market and customer data across its regions.</td></tr>
+<tr><td>T</td><td>Design the company&rsquo;s first one, covering 15 markets in English, Arabic, Urdu and Hindi.</td></tr>
+<tr><td>A</td><td>Designed the architecture, led three engineers, added testing, and built dashboards on what customers said and how markets moved.</td></tr>
+<tr><td>R</td><td>Dashboards used by decision-makers; production incidents down 45%; promoted twice in about two years.</td></tr>
+</table>
+<p><span class="phd">For the PhD:</span> I can lead a data effort and I know how the same view reads differently across languages, central to work on migration and minority discourse.</p>
+
+<h3>Story 4: Fluency (reproducible AI research at scale)</h3>
+<table class="star">
+<tr><td>S</td><td>At M+C Saatchi Fluency, a twelve-month study of public discourse for a client: about 271,000 Brandwatch and Reddit mentions.</td></tr>
+<tr><td>T</td><td>Code all of it reliably with AI, in a way that could be checked and repeated.</td></tr>
+<tr><td>A</td><td>Worked on a topic codebook from BERTopic, LLM tagging where every label records the exact prompt version, and three pilot runs on the same 500 rows before the full run. Separately, built AI agents that repair broken data collectors, with a person approving each fix.</td></tr>
+<tr><td>R</td><td>A traceable, repeatable dataset for the client, and collectors that no longer fail silently.</td></tr>
+</table>
+<p><span class="phd">For the PhD:</span> I can build reproducible corpora for &ldquo;Understanding narratives at scale&rdquo; from day one.</p>
+
+<h3>Story 5: Artemis AI, the agreement trap (judgement, validation)</h3>
+<table class="star">
+<tr><td>S</td><td>At my start-up, we label millions of comments with AI models to train our own classifiers.</td></tr>
+<tr><td>T</td><td>Check whether our labelling models were still reliable over time.</td></tr>
+<tr><td>A</td><td>Compared the two models and noticed agreement had <i>risen</i> on three of five tasks while both were collapsing onto the most common answer. We moved our checks to fixed, human-checked labels and added monitoring for drift.</td></tr>
+<tr><td>R</td><td>We caught a silent failure, and when one measure fell from 77% to 37% agreement, the monitoring made it visible. We are moving every model to checks against people before it reaches users.</td></tr>
+</table>
+<p><span class="phd">For the PhD:</span> validating AI labels against people is exactly Alexander Hoyle&rsquo;s area at CSH.</p>
+
+<h3>Story 6: Artemis AI, what is &ldquo;normal&rdquo;? (thinking like a researcher)</h3>
+<table class="star">
+<tr><td>S</td><td>Clients wanted alerts for &ldquo;comment storms&rdquo;: sudden waves of hostile comments.</td></tr>
+<tr><td>T</td><td>Define a storm that is real, not a false alarm.</td></tr>
+<tr><td>A</td><td>Had the team screen 207,192 comments on 369 unusually busy posts from February to July, and added filters so banter and dialect are not read as abuse.</td></tr>
+<tr><td>R</td><td>Almost none were real storms aimed at the page: the hard part is each page&rsquo;s baseline, not the alarm itself.</td></tr>
+</table>
+<p><span class="phd">For the PhD:</span> polarisation and hostility need a baseline per community and platform, the same logic as commenters versus watchers in Chen et al.</p>
+
+<h2 class="pb">12. Glossary: hard words, made simple</h2>
 <table>
 <tr><th style="width:28%">Term</th><th>Meaning</th></tr>
 <tr><td>Sentiment analysis</td><td>Using a computer to judge if a text is positive, neutral or negative.</td></tr>
@@ -195,7 +255,7 @@ table{width:100%;border-collapse:collapse;font-size:10pt}td,th{border:.6pt solid
 <tr><td>Preprint / arXiv</td><td>A public research paper shared before peer review.</td></tr>
 </table>
 
-<h2>12. On the day, and what comes next</h2>
+<h2>13. On the day, and what comes next</h2>
 <ul>
 <li>Join at <b>8:35 pm</b>. Test camera and microphone. Quiet room, light in front of you, look at the camera.</li>
 <li>Keep this guide open but don&rsquo;t read from it. A short pause before answering is fine.</li>
