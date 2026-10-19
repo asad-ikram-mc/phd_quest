@@ -1,0 +1,19 @@
+SEND ONLY IF GILARDI HAS NOT REPLIED BY WED 21 OCT.
+To: donnay@ipz.uzh.ch
+Subject: Host request for a Swiss Government Excellence Scholarship (PhD, 2027): political behaviour and machine-labelled social media
+Attachments: Ikram_Haig_Platform_Measurement_v1.1_Oct2026.pdf, CV/Asad_Ikram_CV_2026.pdf
+
+Dear Professor Donnay,
+
+I am applying for a Swiss Government Excellence Scholarship (three-year PhD track, Pakistan call, deadline 31 October), and I am writing to ask whether you would consider hosting me in your group on Political Behavior and Digital Media. The scholarship requires a letter of support from a host professor at a Swiss university.
+
+My research asks whether what we measure about political behaviour on social media means the same thing on every platform. With my MSc supervisor, Dr Ella Haig (University of Portsmouth), I have written a methods paper, "Is the Platform Part of the Measurement?" (arxiv.org/abs/2610.16757), which treats each platform as a survey mode and adapts measurement invariance and score linking to machine-labelled political sentiment. In a simulation, pooling platforms at face value gives the wrong sign of daily sentiment on nearly a quarter of days. I attach the paper and my CV.
+
+For the PhD I would apply this to political communication and citizens' reactions across several platforms, testing when LLM-labelled measures of hostility and opinion can be compared across platforms, languages and models. I bring the data side: eight years of large-scale web and social media collection, social media analysis at M+C Saatchi Fluency in London, and an MSc in Data Analytics with Distinction as a Chevening Scholar.
+
+I realise the deadline is close. If the project could fit your group, would you be willing to speak briefly and, if so, provide a host letter by about 28 October? I can send a two-page research plan straight away.
+
+Kind regards,
+Asad Ikram
+MSc Data Analytics (Distinction), University of Portsmouth · Chevening Scholar 2024/25
+asad.ikram53@gmail.com · +44 7482 376417 · linkedin.com/in/asad-ikram98
