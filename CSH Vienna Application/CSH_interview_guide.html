@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSH Interview Guide</title>
+<style>
+:root{
+  --bg:#f6f7fb;--card:#ffffff;--ink:#1c2230;--mut:#5d6578;--line:#e3e6ee;
+  --navy:#1d3f63;--teal:#0f7b6c;--teal-bg:#e3f5ef;--purple:#534ab7;--purple-bg:#eeedfe;
+  --coral:#b2482a;--coral-bg:#fbede7;--amber:#8a5a10;--amber-bg:#fbf0dc;--gold:#f2b632;
+  --shadow:0 1px 2px rgba(20,30,50,.06),0 6px 20px rgba(20,30,50,.06);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--card:#1b1f29;--ink:#e8ebf2;--mut:#a3abbd;--line:#2c3240;
+  --navy:#8fb4e0;--teal:#5fd0b6;--teal-bg:#173a33;--purple:#aaa3f5;--purple-bg:#26234a;
+  --coral:#f2a083;--coral-bg:#3d2219;--amber:#f2c06b;--amber-bg:#3b2e14;--shadow:none}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif}
+a{color:var(--teal)}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .in{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mut);font-size:14px;padding:6px 12px;border-radius:999px;transition:.2s}
+nav a.on,nav a:hover{background:var(--purple-bg);color:var(--purple)}
+main{max-width:1080px;margin:0 auto;padding:0 16px 80px}
+header.hero{padding:42px 0 18px}
+.hero h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 8px;color:var(--navy)}
+.hero p{color:var(--mut);margin:0 0 18px;max-width:720px}
+.when{display:flex;flex-wrap:wrap;gap:10px}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;box-shadow:var(--shadow)}
+.pill b{color:var(--navy)}
+#countdown{background:var(--navy);color:#fff;border-color:transparent}
+section{padding:34px 0 8px;scroll-margin-top:64px}
+h2{font-size:26px;margin:0 0 6px;color:var(--navy)}
+h2 small{display:block;font-size:15px;color:var(--mut);font-weight:400;margin-top:4px}
+h3{font-size:18px;margin:20px 0 8px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.card h4{margin:0 0 6px;font-size:16px}
+.say{border-left:4px solid var(--teal);background:var(--teal-bg);border-radius:0 12px 12px 0;padding:14px 18px;margin:12px 0;font-size:16.5px}
+.say .lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.phd{display:inline-block;margin-top:8px;font-size:14px;color:var(--teal);font-weight:600}
+.phd:before{content:"For this PhD → ";color:var(--mut);font-weight:500}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;margin-right:6px}
+.t-ind{background:var(--teal-bg);color:var(--teal)}.t-aca{background:var(--purple-bg);color:var(--purple)}
+.nums{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.nums span{background:var(--purple-bg);color:var(--purple);border-radius:8px;padding:4px 10px;font-weight:600;font-size:14px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* timeline */
+.tl{position:relative;margin:18px 0 0 8px;padding-left:28px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:3px;border-radius:2px;background:var(--line)}
+.tl .bar{position:absolute;left:8px;top:6px;width:3px;border-radius:2px;background:linear-gradient(var(--teal),var(--purple));height:0;transition:height 1.6s ease}
+.tl.in .bar{height:calc(100% - 12px)}
+.step{position:relative;margin:0 0 16px}
+.step:before{content:"";position:absolute;left:-27px;top:20px;width:15px;height:15px;border-radius:50%;background:var(--card);border:3px solid var(--teal)}
+.step.aca:before{border-color:var(--purple)}
+.step .card{padding:14px 18px}
+.step .yr{font-size:13px;color:var(--mut);font-weight:600}
+.step .cl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.step .cl div{font-size:14px;border-radius:10px;padding:8px 10px}
+.ch{background:var(--coral-bg);color:var(--coral)}.le{background:var(--teal-bg);color:var(--teal)}
+@media(max-width:620px){.step .cl{grid-template-columns:1fr}}
+
+/* svg */
+svg text{font-family:inherit}
+.box rect{stroke-width:1.2}
+.flow path,.flow line{stroke:var(--mut);stroke-width:1.6;fill:none;stroke-dasharray:6 6;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-24}}
+@media (prefers-reduced-motion: reduce){.flow path,.flow line{animation:none}}
+.n-gray rect{fill:var(--card);stroke:var(--line)}.n-gray text{fill:var(--ink)}
+.n-pur rect{fill:var(--purple-bg);stroke:var(--purple)}.n-pur text{fill:var(--purple)}
+.n-teal rect{fill:var(--teal-bg);stroke:var(--teal)}.n-teal text{fill:var(--teal)}
+.n-coral rect{fill:var(--coral-bg);stroke:var(--coral)}.n-coral text{fill:var(--coral)}
+.sub{font-size:12px;opacity:.85}
+
+/* stepper */
+.stepper .dots{display:flex;gap:8px;margin:12px 0}
+.stepper .dots button{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);background:var(--card);color:var(--mut);font-weight:700;cursor:pointer;transition:.2s}
+.stepper .dots button.on{border-color:var(--purple);background:var(--purple);color:#fff}
+.stepper .panel{min-height:120px}
+.stepper .panel h4{font-size:18px;margin:0 0 6px;color:var(--purple)}
+.stepper .ctrl{display:flex;gap:8px;margin-top:10px}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:14px}
+.btn.pri{background:var(--purple);color:#fff;border-color:var(--purple)}
+.fade{animation:fadeIn .45s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* bars */
+.bars{display:grid;gap:14px;margin-top:8px}
+.brow{display:grid;grid-template-columns:150px 1fr 70px;align-items:center;gap:10px;font-size:14px}
+.track{height:26px;background:var(--line);border-radius:8px;overflow:hidden}
+.fill{height:100%;width:0;border-radius:8px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.fill.bad{background:var(--coral)}.fill.good{background:var(--teal)}
+
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--mut);border-radius:999px;padding:7px 14px;font-weight:600;cursor:pointer;font-size:14px}
+.tabs button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.star{display:grid;gap:8px}
+.star .row{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:start;opacity:0;transform:translateX(-8px);transition:.4s}
+.star .row.in{opacity:1;transform:none}
+.star .L{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:18px;background:var(--purple-bg);color:var(--purple)}
+.star .row:nth-child(4) .L{background:var(--teal-bg);color:var(--teal)}
+
+/* accordion */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:8px 0;box-shadow:var(--shadow)}
+summary{cursor:pointer;padding:13px 16px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--purple);font-size:20px;line-height:1;transition:.2s}
+details[open] summary:after{transform:rotate(45deg)}
+details .body{padding:0 16px 14px;color:var(--ink)}
+details[open] .body{animation:fadeIn .35s ease}
+
+/* skills */
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.sk div{border-radius:12px;padding:12px 14px;font-size:14px;border:1px solid}
+.sk .ok{background:var(--teal-bg);border-color:var(--teal);color:var(--teal)}
+.sk .gap{background:var(--amber-bg);border-color:var(--amber);color:var(--amber)}
+.sk b{display:block;font-size:15px;color:inherit}
+
+/* glossary + practice */
+input[type=search]{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:15px}
+.gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:10px}
+.gl div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.gl b{display:block;color:var(--purple)}
+.practice{text-align:center}
+.practice .q{font-size:22px;font-weight:700;margin:14px 0;min-height:64px;color:var(--navy)}
+.timer{font-size:44px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--teal)}
+.timer.warn{color:var(--coral)}
+.hint{color:var(--mut);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+td,th{border-bottom:1px solid var(--line);padding:9px 8px;text-align:left;vertical-align:top}
+th{color:var(--mut);font-weight:600}
+.check li{margin:6px 0}
+footer{color:var(--mut);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<nav><div class="in" id="nav">
+<a href="#cheat">Cheat sheet</a><a href="#story">Your story</a><a href="#paper">Your paper</a><a href="#diss">Dissertation</a><a href="#work">Fluency &amp; Artemis</a><a href="#app">What you told CSH</a><a href="#fit">PhD fit</a><a href="#star">STAR stories</a><a href="#qa">Questions</a><a href="#practice">Practice</a><a href="#gloss">Glossary</a><a href="#day">On the day</a>
+</div></nav>
+<main>
+
+<header class="hero reveal">
+<h1>CSH interview: your study guide</h1>
+<p>Graduate Program in Complexity Science, Digital Innovation School. A short recorded interview about your experience and future interests. The recording is read with your application, so say the same things you wrote.</p>
+<div class="when">
+<span class="pill"><b>Tue 20 Oct</b> · 8:40 pm Lahore · 4:40 pm UK</span>
+<span class="pill">Zoom <b>843 5332 6447</b></span>
+<span class="pill">About <b>10 minutes</b> · recorded · English</span>
+<span class="pill" id="countdown">…</span>
+</div>
+</header>
+
+<!-- CHEAT SHEET -->
+<section id="cheat" class="reveal">
+<h2>1. Cheat sheet<small>If you read only one thing, read this.</small></h2>
+<div class="grid g3">
+<div class="card"><h4>Your question</h4>When AI reads social media posts, do its labels mean the same thing on every platform? If not, how do we fix the comparison?</div>
+<div class="card"><h4>Your proof</h4>Your first paper with Dr Ella Haig, on arXiv since 14 October (2610.16757).</div>
+<div class="card"><h4>Your strength</h4>Eight years working with social media data, so data is never your bottleneck.</div>
+</div>
+<div class="say"><span class="lbl">60-second story · learn this</span>“My work has always been about social media data, and it grew step by step. At Dubizzle I first saw online text drive real business decisions, in four languages. That led to my Chevening idea: one system that compares platforms to show government what the public thinks. I built a small version in my MSc, and found my own check was circular. At Fluency I work with social media at scale for brands and UK government, and at my start-up, Artemis AI, I learned that AI labels can look fine exactly when they are wrong. My first paper turns these lessons into a method. A PhD at CSH is the next step: doing this properly, with network science.”</div>
+<div class="say"><span class="lbl">One line that ties it to the PhD</span>“Every job showed me a new way social media measurements fail. The PhD is where I learn to test and fix them, and see how the fix changes what we conclude about narratives and polarisation.”</div>
+<h3>Numbers to keep the same as your application</h3>
+<div class="nums"><span>255,446 comments (MSc)</span><span>Team of eight at Artemis AI</span><span>3M+ comments</span><span>arXiv 2610.16757</span><span>MSc Distinction · Chevening 2024/25</span></div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+<h2 class="reveal">2. Your story, step by step<small>Every step was about social media data. Each challenge led to the next step.</small></h2>
+<div class="tl" id="tl"><div class="bar"></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2018–2026 · Fiverr</span><h4>Learning the craft</h4>300+ web data projects for clients worldwide, started during your BS; helped other students start freelancing.<div class="cl"><div class="ch">Challenge: messy, changing public web data</div><div class="le">Lesson: how online data really behaves</div></div></div></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2022–2024 · Dubizzle Labs</span><h4>Online text drives decisions</h4>The company's first web data system: 15 markets, English, Arabic, Urdu, Hindi; led three engineers; dashboards on what customers said; promoted twice.<div class="cl"><div class="ch">Challenge: same complaint, four languages</div><div class="le">Lesson: public text drives real decisions</div></div><span class="phd">you know how the same view reads differently across languages</span></div></div>
+<div class="step aca reveal"><div class="card"><span class="tag t-aca">Idea</span><span class="yr">2024 · Chevening</span><h4>The idea</h4>Selected from 70,000+ applicants, for mentoring students into remote careers and for a proposal: one cross-platform system giving government evidence of public opinion.<div class="cl"><div class="ch">Challenge: government lacks evidence of opinion</div><div class="le">Response: a cross-platform system</div></div><span class="phd">the question is years old and useful to the public</span></div></div>
+<div class="step aca reveal"><div class="card"><span class="tag t-aca">Academic</span><span class="yr">2025 · MSc dissertation</span><h4>The idea, built small</h4>255,446 comments from X, Reddit, YouTube and Quora about UK economic policy; BERT, tests, forecasting.<div class="cl"><div class="ch">Challenge: your check was circular</div><div class="le">Lesson: where does the yardstick come from?</div></div><span class="phd">you find flaws in your own work and turn them into research</span></div></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2024–now · M+C Saatchi Fluency</span><h4>Social media at professional scale</h4>Ten platforms daily for Amazon, Ford, Nike, Reckitt and UK government; a twelve-month study of ~271,000 mentions.<div class="cl"><div class="ch">Challenge: collectors break silently; prompts drift</div><div class="le">Action: versioned prompts, repair agents</div></div><span class="phd">reproducible corpora for “Understanding narratives at scale”</span></div></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2025–now · Artemis AI (CTO)</span><h4>Your own social media product</h4>3M+ comments, a labelling chain checked by people, 48 models for the beta, team of eight.<div class="cl"><div class="ch">Challenge: agreement looked fine as quality fell</div><div class="le">Lesson: check against people, not models</div></div><span class="phd">validating AI labels is Alexander Hoyle's area at CSH</span></div></div>
+<div class="step aca reveal"><div class="card"><span class="tag t-aca">Research</span><span class="yr">Oct 2026 · First paper</span><h4>Lessons made into a method</h4>Treat each platform like a survey mode; test and correct before comparing.<div class="cl"><div class="ch">Finding: platforms measure differently</div><div class="le">Method: test and correct before comparing</div></div><span class="phd">chapter one of the PhD is already done</span></div></div>
+</div>
+</section>
+
+<!-- PAPER -->
+<section id="paper">
+<h2 class="reveal">3. Your paper, explained simply<small>“Is the Platform Part of the Measurement?” · Ikram &amp; Haig · arXiv 2610.16757 · preprint, not yet peer reviewed</small></h2>
+<div class="card reveal">
+<h4>The problem, as a picture</h4>
+<svg viewBox="0 0 680 360" width="100%" role="img" aria-label="Same opinion, written differently on three platforms, read by one AI model, gives a combined mood that can point the wrong way">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
+<g class="n-gray box"><rect x="220" y="14" width="240" height="52" rx="10"/><text x="340" y="36" text-anchor="middle" font-weight="700" font-size="14">Same public opinion</text><text x="340" y="54" text-anchor="middle" class="sub">e.g. about a new tax</text></g>
+<g class="flow" style="color:var(--mut)"><path d="M300 66 L150 108" marker-end="url(#ah)"/><path d="M340 66 L340 108" marker-end="url(#ah)"/><path d="M380 66 L530 108" marker-end="url(#ah)"/></g>
+<g class="n-pur box"><rect x="60" y="112" width="180" height="52" rx="10"/><text x="150" y="134" text-anchor="middle" font-weight="700" font-size="14">Reddit</text><text x="150" y="152" text-anchor="middle" class="sub">Long, heated threads</text></g>
+<g class="n-pur box"><rect x="250" y="112" width="180" height="52" rx="10"/><text x="340" y="134" text-anchor="middle" font-weight="700" font-size="14">X / Twitter</text><text x="340" y="152" text-anchor="middle" class="sub">Short and punchy</text></g>
+<g class="n-pur box"><rect x="440" y="112" width="180" height="52" rx="10"/><text x="530" y="134" text-anchor="middle" font-weight="700" font-size="14">YouTube</text><text x="530" y="152" text-anchor="middle" class="sub">Replies to videos</text></g>
+<g class="flow" style="color:var(--mut)"><path d="M150 164 L280 204" marker-end="url(#ah)"/><path d="M340 164 L340 204" marker-end="url(#ah)"/><path d="M530 164 L400 204" marker-end="url(#ah)"/></g>
+<g class="n-gray box"><rect x="200" y="208" width="280" height="52" rx="10"/><text x="340" y="230" text-anchor="middle" font-weight="700" font-size="14">One AI sentiment model</text><text x="340" y="248" text-anchor="middle" class="sub">reads each site differently</text></g>
+<g class="flow" style="color:var(--mut)"><path d="M340 260 L340 296" marker-end="url(#ah)"/></g>
+<g class="n-coral box"><rect x="160" y="300" width="360" height="52" rx="10"/><text x="340" y="322" text-anchor="middle" font-weight="700" font-size="14">Added-up daily mood</text><text x="340" y="340" text-anchor="middle" class="sub">can point the wrong way</text></g>
+</svg>
+</div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card reveal"><h4>The idea in one line</h4>Survey researchers know people answer differently by phone and on paper, and test for it before comparing. Your paper says platforms are “modes” too, so test them the same way.</div>
+<div class="card reveal"><h4>Where it came from</h4>Your dissertation: 255,446 comments on 6,650 posts about six UK economic topics. The paper openly reports your model was checked against labels from the same word list, and that some dissertation numbers don't match the records. Openness is a strength.</div>
+</div>
+
+<h3 class="reveal">The six steps, one at a time</h3>
+<div class="card stepper reveal" id="stepper">
+<div class="dots"></div><div class="panel"></div>
+<div class="ctrl"><button class="btn" data-d="-1">Back</button><button class="btn pri" data-d="1">Next</button></div>
+</div>
+
+<h3 class="reveal">The headline result (simulation, 500 repeats, 60 days each)</h3>
+<div class="card reveal" id="bars">
+<div class="bars">
+<div class="brow"><span>Just add platforms</span><div class="track"><div class="fill bad" data-w="23"></div></div><b>~14 days</b></div>
+<div class="brow"><span>Correct each first</span><div class="track"><div class="fill good" data-w="1.5"></div></div><b>&lt; 1 day</b></div>
+</div>
+<p class="hint" style="margin:10px 0 0">Days when the overall mood pointed the wrong way, out of 60. That is nearly a quarter of days, versus almost none.</p>
+</div>
+
+<div class="grid g2" style="margin-top:14px">
+<div class="card reveal"><h4>Honest limits (know these)</h4><ul style="margin:0;padding-left:18px">
+<li>People choose platforms, so “who posts” mixes with “how the platform shapes posts”.</li>
+<li>Four platforms, UK, English only.</li>
+<li>Measures expressed feeling, not support for a policy.</li>
+<li>Method plus simulation; real-data study next (1,000–1,500 comments labelled by people, a second annotator).</li></ul></div>
+<div class="card reveal"><h4>If they ask</h4><ul style="margin:0;padding-left:18px">
+<li><b>Your part?</b> I built the simulation and the dissertation case study; wrote it with Dr Haig.</li>
+<li><b>Published?</b> A preprint on arXiv; peer review next.</li>
+<li><b>What's new?</b> Others treated annotators or prompts as error sources; not the platform itself.</li>
+<li><b>Next?</b> Run it on fresh data, then add AI models, time and narrative spread.</li></ul></div>
+</div>
+<div class="say reveal"><span class="lbl">Your paper in 20 seconds</span>“People write differently on Reddit than on YouTube, so AI reads their opinions differently. Adding platforms together can flip the answer: in my simulation the overall mood pointed the wrong way on nearly a quarter of days. My paper gives a checklist to test whether a comparison is fair, and a way to fix it.”</div>
+</section>
+
+<!-- DISSERTATION -->
+<section id="diss">
+<h2 class="reveal">4. Your dissertation, explained simply<small>“Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies” · MSc Data Analytics, Portsmouth, 2025 · supervisor Dr Ella Haig · Distinction (project 78/100) · ethics approved</small></h2>
+<div class="card reveal">
+<svg viewBox="0 0 680 120" width="100%" role="img" aria-label="Dissertation pipeline from collection to forecasting">
+<defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
+<g class="n-pur box"><rect x="6" y="30" width="118" height="60" rx="10"/><text x="65" y="56" text-anchor="middle" font-weight="700" font-size="13">Collect</text><text x="65" y="74" text-anchor="middle" class="sub">4 platforms</text></g>
+<g class="n-pur box"><rect x="142" y="30" width="118" height="60" rx="10"/><text x="201" y="56" text-anchor="middle" font-weight="700" font-size="13">First labels</text><text x="201" y="74" text-anchor="middle" class="sub">VADER word list</text></g>
+<g class="n-pur box"><rect x="278" y="30" width="118" height="60" rx="10"/><text x="337" y="56" text-anchor="middle" font-weight="700" font-size="13">Train models</text><text x="337" y="74" text-anchor="middle" class="sub">BERT, BiLSTM</text></g>
+<g class="n-pur box"><rect x="414" y="30" width="118" height="60" rx="10"/><text x="473" y="56" text-anchor="middle" font-weight="700" font-size="13">Check</text><text x="473" y="74" text-anchor="middle" class="sub">tests, emotions</text></g>
+<g class="n-pur box"><rect x="550" y="30" width="124" height="60" rx="10"/><text x="612" y="56" text-anchor="middle" font-weight="700" font-size="13">Forecast</text><text x="612" y="74" text-anchor="middle" class="sub">daily mood</text></g>
+<g class="flow" style="color:var(--mut)"><line x1="124" y1="60" x2="140" y2="60" marker-end="url(#ah2)"/><line x1="260" y1="60" x2="276" y2="60" marker-end="url(#ah2)"/><line x1="396" y1="60" x2="412" y2="60" marker-end="url(#ah2)"/><line x1="532" y1="60" x2="548" y2="60" marker-end="url(#ah2)"/></g>
+</svg>
+</div>
+<div class="grid g3" style="margin-top:14px">
+<div class="card reveal"><h4>Four questions</h4><ul style="margin:0;padding-left:18px"><li>Can AI read public mood on policy?</li><li>How accurate are BERT and BiLSTM?</li><li>Can past mood forecast reactions?</li><li>How does mood vary by topic and time?</li></ul></div>
+<div class="card reveal"><h4>What it reported</h4><ul style="margin:0;padding-left:18px"><li>BERT matched labels 88% (BiLSTM 82%); “neutral” hardest.</li><li>Sharp dip around the Sept 2022 mini-budget.</li><li>YouTube more positive, X spikier, Quora sparse; X dominated.</li><li>Anger and fear went with negative posts.</li></ul></div>
+<div class="card reveal"><h4>Use these facts</h4><ul style="margin:0;padding-left:18px"><li>Say <b>255,446</b> comments (the records).</li><li>Don't defend exact topic percentages.</li><li>Labels need checking against people first.</li></ul></div>
+</div>
+<div class="say reveal"><span class="lbl">The honest part</span>“The 88% was agreement with labels from the same word list, so it proved less than it seemed. When I rechecked my records for the paper, a few numbers in the text also didn't match. I report all of that openly in the paper, and it is exactly why the paper exists.”</div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+<h2 class="reveal">5. What you did at Fluency and Artemis AI<small>Two places, one research thread.</small></h2>
+<div class="grid g2">
+<div class="card reveal" style="border-top:4px solid var(--teal)"><h4>M+C Saatchi Fluency · London · 2024–now</h4><ul style="margin:0;padding-left:18px">
+<li><b>Social listening:</b> ten platforms collected daily for Amazon, Ford, Nike, Reckitt and UK government.</li>
+<li><b>Discourse study:</b> 100,845 Brandwatch + 170,542 Reddit mentions; topic codebook from BERTopic.</li>
+<li><b>LLM tagging:</b> every label records its prompt version; three pilot runs on the same 500 rows.</li>
+<li><b>AI agents:</b> repair broken collectors and build new ones; a person approves every change.</li></ul></div>
+<div class="card reveal" style="border-top:4px solid var(--purple)"><h4>Artemis AI · co-founder &amp; CTO · 2025–now</h4><ul style="margin:0;padding-left:18px">
+<li><b>Data:</b> 3M+ Facebook and Instagram comments on 111,000+ posts, plus images and video.</li>
+<li><b>Labelling chain:</b> Claude labels and explains; a cheaper model learns the rules; our classifiers train on it; checked against hand-labelled posts.</li>
+<li><b>Hostility:</b> storm detection; banter and dialect filters.</li>
+<li><b>Scale:</b> 48 models for the December beta; team of eight; admin panel with an accuracy tracker and QA dashboard.</li></ul></div>
+</div>
+<div class="card reveal" style="text-align:center;margin-top:14px;background:var(--coral-bg);border-color:var(--coral);color:var(--coral)"><b style="font-size:18px">One thread: are the labels right?</b></div>
+<div class="say reveal"><span class="lbl">Say it in one sentence</span>“Brands and governments act on AI-labelled numbers that are rarely checked against people. My PhD would build the methods to check them, and show what changes when we do.”</div>
+</section>
+
+<!-- APP -->
+<section id="app">
+<h2 class="reveal">6. What you told CSH in your application<small>The recording is read with these answers. Stay consistent.</small></h2>
+<details class="reveal" open><summary>Answer 1 · your project, and what went wrong</summary><div class="body">MSc dissertation on UK economic policy across four platforms. The AI looked very accurate, but it was trained and checked on labels from the same word list (VADER), so the check proved little; and you had assumed “negative” means the same on every site. <b>Lesson:</b> always ask where the yardstick comes from; test that a measure works the same in each group before comparing. It became the paper.</div></details>
+<details class="reveal"><summary>Answer 2 · a CSH paper you liked</summary><div class="body"><b>Chen, Kmetty, Iñiguez &amp; Omodei (2025)</b>, “The public that engages invisibly”, <i>Communication Methods and Measures</i>. People who <i>comment</i> on political YouTube videos are more polarised than people who only <i>watch</i>, so comment-based studies make society look more divided. <b>Your idea:</b> could a small group who donate their data correct millions of public comments? Same shape as your problem: a big, cheap, biased signal and a small, accurate one.</div></details>
+<details class="reveal"><summary>Answer 3 · what you want to study</summary><div class="body">When can AI-labelled opinions be compared across platforms, AI models and time, and how do we fix them when they can't? <b>Four steps:</b> (1) extend your simulation; (2) collect new posts around fixed events, labelled by several AIs and checked by people; (3) test whether removing the “platform signal” removes real differences; (4) see how the fix changes how narratives seem to spread. <b>Gap you'd fill at CSH:</b> network science of diffusion.</div></details>
+<details class="reveal"><summary>People and projects you named (all verified)</summary><div class="body"><ul style="margin:0;padding-left:18px"><li><b>Alexander Hoyle</b>, CSH faculty: NLP in social science, measurement and validation. Closest to you.</li><li><b>Elisa Omodei</b>, CSH faculty: co-author of the paper in Answer 2.</li><li><b>Fariba Karimi</b>, CSH faculty: biases in networks and algorithms.</li><li>Springboard projects: <b>Understanding narratives at scale</b>; <b>Polarization and minority representation on online platforms</b>.</li></ul></div></details>
+</section>
+
+<!-- FIT -->
+<section id="fit">
+<h2 class="reveal">7. What this PhD needs, and what you bring<small>Green: you have it. Amber: CSH teaches it, which is why CSH.</small></h2>
+<div class="sk reveal">
+<div class="ok"><b>A clear research question</b>Platform comparability; the paper</div>
+<div class="ok"><b>Data collection</b>8 years, 15 markets, 10 platforms</div>
+<div class="ok"><b>Programming</b>Python and SQL every day</div>
+<div class="ok"><b>NLP and LLMs</b>BERT, XLM-R, LLM labelling chains</div>
+<div class="ok"><b>Measurement and statistics</b>Invariance, linking, tests, simulation</div>
+<div class="ok"><b>Communication and teamwork</b>Led teams; reports for government</div>
+<div class="gap"><b>Network science (gap)</b>Plan: CSH courses and an early group project</div>
+<div class="gap"><b>Causal inference (gap)</b>Plan: coursework and an early project</div>
+</div>
+<table class="reveal" style="margin-top:16px">
+<tr><th>From</th><th>You bring</th><th>Where it lands at CSH</th></tr>
+<tr><td>Dubizzle</td><td>Multilingual data at scale</td><td>Polarization and minority representation</td></tr>
+<tr><td>Chevening</td><td>A long-held, policy-facing question</td><td>Evidence for public bodies</td></tr>
+<tr><td>MSc</td><td>Full research cycle; self-critique</td><td>“Independent and rigorous scholarship”</td></tr>
+<tr><td>Fluency</td><td>Reproducible LLM coding at scale</td><td>Understanding narratives at scale</td></tr>
+<tr><td>Artemis AI</td><td>Validating AI labels; baselines; drift</td><td>Alexander Hoyle; Elisa Omodei</td></tr>
+<tr><td>First paper</td><td>Protocol and simulation ready</td><td>Your project, extended with diffusion</td></tr>
+</table>
+</section>
+
+<!-- STAR -->
+<section id="star">
+<h2 class="reveal">8. STAR stories<small>Situation · Task · Action · Result. About 60 seconds each, then one line on the PhD.</small></h2>
+<div class="card reveal">
+<div class="tabs" id="starTabs"></div>
+<div class="star" id="starBody"></div>
+<span class="phd" id="starPhd"></span>
+</div>
+</section>
+
+<!-- QA -->
+<section id="qa">
+<h2 class="reveal">9. Likely questions<small>Main point first, one example, then stop. 45–75 seconds.</small></h2>
+<div id="qaList"></div>
+</section>
+
+<!-- PRACTICE -->
+<section id="practice">
+<h2 class="reveal">10. Practice mode<small>Press “New question”, answer out loud, beat the timer.</small></h2>
+<div class="card practice reveal">
+<div class="q" id="pq">Ready when you are.</div>
+<div class="timer" id="pt">1:00</div>
+<div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap">
+<button class="btn pri" id="pNew">New question</button><button class="btn" id="pStart">Start 60s</button><button class="btn" id="pHint">Show hint</button>
+</div>
+<p class="hint" id="pHintText" style="margin-top:12px"></p>
+</div>
+</section>
+
+<!-- GLOSSARY -->
+<section id="gloss">
+<h2 class="reveal">11. Glossary<small>Hard words, made simple. Type to search.</small></h2>
+<input type="search" id="gs" placeholder="Search a term, e.g. invariance" class="reveal">
+<div class="gl" id="gl"></div>
+</section>
+
+<!-- DAY -->
+<section id="day">
+<h2 class="reveal">12. On the day, and what comes next</h2>
+<div class="grid g2">
+<div class="card reveal"><h4>Checklist</h4><ul class="check" style="margin:0;padding-left:18px">
+<li>Join at <b>8:35 pm</b> Lahore; test camera and microphone.</li>
+<li>Quiet room, light in front of you, look at the camera.</li>
+<li>Keep this open, but don't read from it.</li>
+<li>A short pause before answering is fine.</li>
+<li>Recording is normal; just go ahead.</li></ul></div>
+<div class="card reveal"><h4>If you pass</h4>
+<ul style="margin:0;padding-left:18px">
+<li><b>7–14 Jan:</b> present a paper CSH chooses. Past picks: Watts &amp; Strogatz 1998; Albert, Jeong &amp; Barabási 2000; Clauset, Moore &amp; Newman 2008; Couzin et al. 2011.</li>
+<li><b>15–16 Feb:</b> finalists present research ideas at CSH.</li>
+<li><b>Mid-March:</b> offers.</li>
+<li><b>By 1 Nov:</b> referee letters must arrive.</li></ul></div>
+</div>
+<footer>Sources: CSH FAQ, faculty list and springboard projects (csh.ac.at); CSH invitation email; your CSH answers, CV and portfolio; your paper and dissertation; Artemis AI notes and admin panel.</footer>
+</section>
+</main>
+
+<script>
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.id==='bars')e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');}}),{threshold:.15});
+document.querySelectorAll('.reveal,#tl').forEach(el=>io.observe(el));
+const tlio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.05});tlio.observe(document.getElementById('tl'));
+const bio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%')}),{threshold:.3});bio.observe(document.getElementById('bars'));
+
+// nav highlight
+const links=[...document.querySelectorAll('#nav a')];
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>sio.observe(s));
+
+// countdown
+(function(){const t=Date.UTC(2026,9,20,15,40);const el=document.getElementById('countdown');
+function tick(){const d=t-Date.now();if(d<=0){el.textContent='Interview time: good luck!';return;}
+const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4);el.innerHTML='Starts in <b style="color:#fff">'+(h>=24?Math.floor(h/24)+'d '+(h%24)+'h':h+'h '+m+'m')+'</b>';}
+tick();setInterval(tick,30000);})();
+
+// stepper
+const steps=[
+['Same-event check','Compare platforms on the same news moment, so it is like with like. You fixed 15 UK budget and economic events in advance, centred on the September 2022 mini-budget, before looking at any counts, so you could not pick events that suit the answer.'],
+['Reliability check','How much of a score comes from the platform, the AI model or the event? Measured against posts labelled by people.'],
+['“Same meaning” test','Does “negative” behave the same on Reddit, X, YouTube and Quora? Technical names: measurement invariance and DIF.'],
+['Adjust for crowd and timing','Different people post on each site at different times; adjust for that before comparing.'],
+['One common scale','Convert every platform onto one yardstick, like converting currencies before adding them up.'],
+['Simulation','A computer experiment where you set the true mood, to show what goes wrong if you skip steps 1 to 5: wrong direction on nearly a quarter of days.']];
+(function(){const box=document.getElementById('stepper'),dots=box.querySelector('.dots'),panel=box.querySelector('.panel');let i=0;
+steps.forEach((s,k)=>{const b=document.createElement('button');b.textContent=k+1;b.setAttribute('aria-label','Step '+(k+1));b.onclick=()=>show(k);dots.appendChild(b);});
+function show(k){i=(k+steps.length)%steps.length;[...dots.children].forEach((b,j)=>b.classList.toggle('on',j===i));panel.innerHTML='<div class="fade"><h4>Step '+(i+1)+': '+steps[i][0]+'</h4>'+steps[i][1]+'</div>';}
+box.querySelectorAll('.ctrl button').forEach(b=>b.onclick=()=>show(i+ +b.dataset.d));show(0);})();
+
+// STAR
+const stars=[
+{t:'1 · The circular check',use:'research project, setback, honesty',S:'MSc dissertation at Portsmouth: public reaction to UK economic policy on X, Reddit, YouTube and Quora.',T:'Build a reliable way to measure the public mood across platforms, and test it.',A:'Collected 255,446 comments under ethics approval, trained BERT against baselines, ran statistical tests. Then I re-examined my own validation and found the model had been checked against labels from the same word list it learned from.',R:'I reported it openly and turned it into my first paper with Dr Haig, which shows ignoring platform differences gets the mood wrong on nearly a quarter of days.',P:'I find flaws in my own work and turn them into research questions; that is the project I want to continue.'},
+{t:'2 · Chevening',use:'motivation, why this topic',S:'Working with online data in Pakistan, I saw public bodies have little reliable evidence of what citizens think.',T:'Win a fully funded UK master’s to build that skill.',A:'Proposed a cross-platform social media analytics system to give government evidence of public opinion, alongside helping students and junior colleagues into remote careers.',R:'Selected as a Chevening Scholar from 70,000+ applicants; the proposal became my dissertation and then my paper.',P:'the question is years old and useful to the public, not a fashion.'},
+{t:'3 · Dubizzle',use:'leadership, teamwork',S:'Dubizzle Labs had no system for collecting market and customer data across its regions.',T:'Design the company’s first one: 15 markets, English, Arabic, Urdu and Hindi.',A:'Designed the architecture, led three engineers, added testing, built dashboards on what customers said and how markets moved.',R:'Used by decision-makers; production incidents down 45%; promoted twice in about two years.',P:'I can lead a data effort and know how views read differently across languages, central to minority and migration discourse work.'},
+{t:'4 · Fluency',use:'industry work, reproducibility',S:'At M+C Saatchi Fluency, a twelve-month discourse study: about 271,000 Brandwatch and Reddit mentions.',T:'Code all of it reliably with AI, in a way that could be checked and repeated.',A:'Worked on a BERTopic codebook, LLM tagging where every label records its prompt version, and three pilot runs on the same 500 rows; separately built agents that repair broken collectors, with a person approving each fix.',R:'A traceable, repeatable dataset, and collectors that no longer fail silently.',P:'I can build reproducible corpora for “Understanding narratives at scale” from day one.'},
+{t:'5 · The agreement trap',use:'judging whether a model is right',S:'At Artemis AI we label millions of comments with AI models to train our own classifiers.',T:'Check whether our labelling models were still reliable over time.',A:'Noticed agreement between two models had risen on three of five tasks while both were collapsing onto the most common answer. We moved our checks to fixed, human-checked labels and added drift monitoring.',R:'Caught a silent failure; when one measure fell from 77% to 37% agreement, monitoring made it visible. We are moving every model to checks against people.',P:'validating AI labels against people is exactly Alexander Hoyle’s area at CSH.'},
+{t:'6 · What is “normal”?',use:'thinking like a researcher',S:'Clients wanted alerts for “comment storms”: sudden waves of hostile comments.',T:'Define a storm that is real, not a false alarm.',A:'Had the team screen 207,192 comments on 369 unusually busy posts (Feb–Jul), and added filters so banter and dialect aren’t read as abuse.',R:'Almost none were real storms aimed at the page: the hard part is each page’s baseline, not the alarm.',P:'polarisation and hostility need a baseline per community and platform, like commenters vs watchers in Chen et al.'}];
+(function(){const tabs=document.getElementById('starTabs'),body=document.getElementById('starBody'),phd=document.getElementById('starPhd');
+stars.forEach((s,k)=>{const b=document.createElement('button');b.textContent=s.t;b.onclick=()=>show(k);tabs.appendChild(b);});
+function show(k){[...tabs.children].forEach((b,j)=>b.classList.toggle('on',j===k));const s=stars[k];
+body.innerHTML='<p class="hint" style="margin:0 0 4px">Use for: '+s.use+'</p>'+['S','T','A','R'].map(L=>'<div class="row"><div class="L">'+L+'</div><div>'+s[L]+'</div></div>').join('');
+[...body.querySelectorAll('.row')].forEach((r,j)=>setTimeout(()=>r.classList.add('in'),120*j+60));phd.textContent=s.P;}
+show(0);})();
+
+// QA
+const qa=[
+['Tell us about yourself','The 60-second story in the cheat sheet: Dubizzle → Chevening → MSc → Fluency → Artemis AI → paper → CSH.'],
+['Describe a research project and what went wrong','STAR 1, the circular check. Finish on the lesson: always ask where the yardstick comes from.'],
+['What have you built in industry?','STAR 4 (Fluency) or STAR 5 (Artemis AI), then: “Brands and governments act on AI-labelled numbers rarely checked against people.”'],
+['Why a PhD, and why now?','Every job showed a new way measurements fail: languages at Dubizzle, my own check in the MSc, silent drift at Fluency, labels that look right while failing at Artemis AI. Industry let me find problems, not study them. CSH gives network science and causal inference.'],
+['Why CSH, why complexity science?','Opinion online is a system of people, platforms and algorithms; what we see is a selected slice. Chen et al. and Hoyle’s work match my question; I want to learn network science.'],
+['What would you study?','Answer 3: simulation → new data checked by people → effect on how narratives spread.'],
+['Strengths and gaps?','Strengths: data at scale, Python, AI labelling, careful checking. Gaps: network science, causal inference, with a plan to close them here.'],
+['Teamwork or leadership?','STAR 3 (Dubizzle); add: I lead the tech team of eight at Artemis AI.'],
+['How do you judge if a model is right?','STAR 5 or 6.'],
+['What drives you?','STAR 2 (Chevening).'],
+['Where in five years?','Researching how online opinion is measured, so decisions rest on numbers checked against people.'],
+['Questions for us?','“How are students matched with supervisors in the first year, and is co-supervision across groups common?”']];
+document.getElementById('qaList').innerHTML=qa.map(q=>'<details class="reveal in"><summary>'+q[0]+'</summary><div class="body">'+q[1]+'</div></details>').join('');
+
+// practice
+(function(){let cur=-1,left=60,tm=null;const pq=document.getElementById('pq'),pt=document.getElementById('pt'),ht=document.getElementById('pHintText');
+function render(){pt.textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');pt.classList.toggle('warn',left<=15);}
+document.getElementById('pNew').onclick=()=>{let n;do{n=Math.floor(Math.random()*qa.length)}while(n===cur&&qa.length>1);cur=n;pq.textContent=qa[n][0];pq.classList.remove('fade');void pq.offsetWidth;pq.classList.add('fade');ht.textContent='';clearInterval(tm);left=60;render();};
+document.getElementById('pStart').onclick=()=>{clearInterval(tm);left=60;render();tm=setInterval(()=>{left--;render();if(left<=0){clearInterval(tm);pt.textContent='Stop';}},1000);};
+document.getElementById('pHint').onclick=()=>{ht.textContent=cur>=0?qa[cur][1]:'Pick a question first.';};render();})();
+
+// glossary
+const gl=[['Sentiment analysis','Using a computer to judge if a text is positive, neutral or negative.'],['VADER','A simple tool that scores sentiment by looking words up in a list.'],['BERT, BiLSTM','AI models that learn to read text; BERT is newer and usually better.'],['LLM','Large language models (Claude, DeepSeek), used here to label posts instead of people.'],['Accuracy, F1','How often labels match a reference. Only meaningful if the reference is trustworthy.'],['Circular validation','Checking a model against labels from the same source it learned from. It proves little.'],['Measurement invariance','Does a measure mean the same thing in different groups (here, platforms)?'],['DIF','“Differential item functioning”: one label, like “negative”, behaving differently in one group.'],['Generalizability study','Splits a score’s variation into its sources: platform, model, event, people.'],['Score linking','Putting different scales onto one yardstick, like converting currencies.'],['Simulation with ground truth','A computer experiment where you set the true answer, to see how a method goes wrong.'],['Anchor events','Fixed news moments used to compare platforms on the same thing at the same time.'],['Data donation','People voluntarily share their own platform data (e.g. YouTube history) with researchers.'],['Polarisation','Groups moving apart; affective polarisation means disliking the other side.'],['Network diffusion','How ideas or narratives spread through connections between people or platforms.'],['Concept erasure','Removing one piece of information (such as which platform) from a model’s view of a text.'],['Preprint / arXiv','A public research paper shared before peer review.'],['Complexity science','Studying systems of many interacting parts (people, platforms, algorithms) whose overall behaviour emerges from those interactions.']];
+(function(){const box=document.getElementById('gl'),s=document.getElementById('gs');function draw(q){q=(q||'').toLowerCase();box.innerHTML=gl.filter(g=>(g[0]+g[1]).toLowerCase().includes(q)).map(g=>'<div class="fade"><b>'+g[0]+'</b>'+g[1]+'</div>').join('')||'<div>No match.</div>';}s.oninput=()=>draw(s.value);draw();})();
+</script>
+</body>
+</html>
