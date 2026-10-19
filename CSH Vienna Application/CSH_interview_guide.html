@@ -139,17 +139,33 @@ td,th{border-bottom:1px solid var(--line);padding:9px 8px;text-align:left;vertic
 th{color:var(--mut);font-weight:600}
 .check li{margin:6px 0}
 footer{color:var(--mut);font-size:13px;margin-top:30px}
+
+.gfd{display:grid;gap:8px}
+.gfd .row{display:grid;grid-template-columns:1fr 1.4fr 1.4fr;gap:8px}
+.gfd .row>div{border-radius:10px;padding:10px 12px;font-size:14px}
+.gfd .row:first-child>div{font-weight:700;padding:4px 12px;background:none}
+.gfd .g{background:var(--purple-bg);color:var(--purple);font-weight:700}
+.gfd .f{background:var(--coral-bg);color:var(--coral)}
+.gfd .d{background:var(--teal-bg);color:var(--teal)}
+.gfd .row:first-child .g{color:var(--purple)}.gfd .row:first-child .f{color:var(--coral)}.gfd .row:first-child .d{color:var(--teal)}
+@media(max-width:620px){.gfd .row{grid-template-columns:1fr}.gfd .row:first-child{display:none}}
+.mods{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.mods>div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px;background:var(--bg)}
+.mods b{display:block;margin:4px 0 2px}
+.chip{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:2px 8px;border-radius:999px}
+.c-live{background:var(--teal-bg);color:var(--teal)}.c-build{background:var(--purple-bg);color:var(--purple)}
+.c-pilot,.c-shadow,.c-prototype{background:var(--amber-bg);color:var(--amber)}.c-planned,.c-parked{background:var(--line);color:var(--mut)}
 </style>
 </head>
 <body>
 <nav><div class="in" id="nav">
-<a href="#cheat">Cheat sheet</a><a href="#story">Your story</a><a href="#paper">Your paper</a><a href="#diss">Dissertation</a><a href="#work">Fluency &amp; Artemis</a><a href="#app">What you told CSH</a><a href="#fit">PhD fit</a><a href="#star">STAR stories</a><a href="#qa">Questions</a><a href="#practice">Practice</a><a href="#gloss">Glossary</a><a href="#day">On the day</a>
+<a href="#cheat">Cheat sheet</a><a href="#story">Story</a><a href="#chev">Chevening</a><a href="#diss">Dissertation</a><a href="#paper">Paper</a><a href="#fluency">Fluency</a><a href="#artemis">Artemis AI</a><a href="#app">What you told CSH</a><a href="#fit">PhD fit</a><a href="#star">STAR</a><a href="#qa">Questions</a><a href="#practice">Practice</a><a href="#gloss">Glossary</a><a href="#day">On the day</a>
 </div></nav>
 <main>
 
 <header class="hero reveal">
-<h1>CSH interview: your study guide</h1>
-<p>Graduate Program in Complexity Science, Digital Innovation School. A short recorded interview about your experience and future interests. The recording is read with your application, so say the same things you wrote.</p>
+<h1>CSH interview: your complete study guide</h1>
+<p>Graduate Program in Complexity Science, Digital Innovation School. A short recorded interview about your experience and future interests. The recording is read with your application, so say the same things you wrote. Every section ends with how it helps this PhD.</p>
 <div class="when">
 <span class="pill"><b>Tue 20 Oct</b> · 8:40 pm Lahore · 4:40 pm UK</span>
 <span class="pill">Zoom <b>843 5332 6447</b></span>
@@ -158,40 +174,104 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </div>
 </header>
 
-<!-- CHEAT SHEET -->
+<!-- 1 CHEAT -->
 <section id="cheat" class="reveal">
 <h2>1. Cheat sheet<small>If you read only one thing, read this.</small></h2>
 <div class="grid g3">
-<div class="card"><h4>Your question</h4>When AI reads social media posts, do its labels mean the same thing on every platform? If not, how do we fix the comparison?</div>
-<div class="card"><h4>Your proof</h4>Your first paper with Dr Ella Haig, on arXiv since 14 October (2610.16757).</div>
-<div class="card"><h4>Your strength</h4>Eight years working with social media data, so data is never your bottleneck.</div>
+<div class="card"><h4>Your question</h4>When AI reads social media posts, do its labels mean the same thing on every platform, every AI model and over time? If not, how do we fix the comparison?</div>
+<div class="card"><h4>Your proof</h4>Your first paper with Dr Ella Haig, live on arXiv since 14 October 2026 (2610.16757).</div>
+<div class="card"><h4>Your strength</h4>Eight years building and checking social media data in industry, so data is never your bottleneck.</div>
 </div>
-<div class="say"><span class="lbl">60-second story · learn this</span>“My work has always been about social media data, and it grew step by step. At Dubizzle I first saw online text drive real business decisions, in four languages. That led to my Chevening idea: one system that compares platforms to show government what the public thinks. I built a small version in my MSc, and found my own check was circular. At Fluency I work with social media at scale for brands and UK government, and at my start-up, Artemis AI, I learned that AI labels can look fine exactly when they are wrong. My first paper turns these lessons into a method. A PhD at CSH is the next step: doing this properly, with network science.”</div>
+<div class="say"><span class="lbl">60-second story · learn this</span>“My work has always been about social media data, and it grew step by step. At Dubizzle I first saw online text drive real business decisions, in four languages. That led to my Chevening idea: one system that compares platforms to show government what the public thinks. I built a small version in my MSc, and found my own check was circular. At Fluency I work with social media at scale for global brands, and at my start-up, Artemis AI, I learned that AI labels can look fine exactly when they are wrong. My first paper turns these lessons into a method. A PhD at CSH is the next step: doing this properly, with network science.”</div>
 <div class="say"><span class="lbl">One line that ties it to the PhD</span>“Every job showed me a new way social media measurements fail. The PhD is where I learn to test and fix them, and see how the fix changes what we conclude about narratives and polarisation.”</div>
 <h3>Numbers to keep the same as your application</h3>
-<div class="nums"><span>255,446 comments (MSc)</span><span>Team of eight at Artemis AI</span><span>3M+ comments</span><span>arXiv 2610.16757</span><span>MSc Distinction · Chevening 2024/25</span></div>
+<div class="nums"><span>255,446 comments (MSc)</span><span>Team of eight at Artemis AI</span><span>111,000+ posts · 3M+ comments</span><span>100,845 Brandwatch + 170,542 Reddit (never added together)</span><span>arXiv 2610.16757</span><span>MSc Distinction · Chevening 2024/25</span></div>
 </section>
 
-<!-- STORY -->
+<!-- 2 STORY -->
 <section id="story">
-<h2 class="reveal">2. Your story, step by step<small>Every step was about social media data. Each challenge led to the next step.</small></h2>
+<h2 class="reveal">2. Your story, step by step<small>Every step was about social media data. Each challenge led to the next.</small></h2>
 <div class="tl" id="tl"><div class="bar"></div>
-<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2018–2026 · Fiverr</span><h4>Learning the craft</h4>300+ web data projects for clients worldwide, started during your BS; helped other students start freelancing.<div class="cl"><div class="ch">Challenge: messy, changing public web data</div><div class="le">Lesson: how online data really behaves</div></div></div></div>
-<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2022–2024 · Dubizzle Labs</span><h4>Online text drives decisions</h4>The company's first web data system: 15 markets, English, Arabic, Urdu, Hindi; led three engineers; dashboards on what customers said; promoted twice.<div class="cl"><div class="ch">Challenge: same complaint, four languages</div><div class="le">Lesson: public text drives real decisions</div></div><span class="phd">you know how the same view reads differently across languages</span></div></div>
-<div class="step aca reveal"><div class="card"><span class="tag t-aca">Idea</span><span class="yr">2024 · Chevening</span><h4>The idea</h4>Selected from 70,000+ applicants, for mentoring students into remote careers and for a proposal: one cross-platform system giving government evidence of public opinion.<div class="cl"><div class="ch">Challenge: government lacks evidence of opinion</div><div class="le">Response: a cross-platform system</div></div><span class="phd">the question is years old and useful to the public</span></div></div>
-<div class="step aca reveal"><div class="card"><span class="tag t-aca">Academic</span><span class="yr">2025 · MSc dissertation</span><h4>The idea, built small</h4>255,446 comments from X, Reddit, YouTube and Quora about UK economic policy; BERT, tests, forecasting.<div class="cl"><div class="ch">Challenge: your check was circular</div><div class="le">Lesson: where does the yardstick come from?</div></div><span class="phd">you find flaws in your own work and turn them into research</span></div></div>
-<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2024–now · M+C Saatchi Fluency</span><h4>Social media at professional scale</h4>Ten platforms daily for Amazon, Ford, Nike, Reckitt and UK government; a twelve-month study of ~271,000 mentions.<div class="cl"><div class="ch">Challenge: collectors break silently; prompts drift</div><div class="le">Action: versioned prompts, repair agents</div></div><span class="phd">reproducible corpora for “Understanding narratives at scale”</span></div></div>
-<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2025–now · Artemis AI (CTO)</span><h4>Your own social media product</h4>3M+ comments, a labelling chain checked by people, 48 models for the beta, team of eight.<div class="cl"><div class="ch">Challenge: agreement looked fine as quality fell</div><div class="le">Lesson: check against people, not models</div></div><span class="phd">validating AI labels is Alexander Hoyle's area at CSH</span></div></div>
-<div class="step aca reveal"><div class="card"><span class="tag t-aca">Research</span><span class="yr">Oct 2026 · First paper</span><h4>Lessons made into a method</h4>Treat each platform like a survey mode; test and correct before comparing.<div class="cl"><div class="ch">Finding: platforms measure differently</div><div class="le">Method: test and correct before comparing</div></div><span class="phd">chapter one of the PhD is already done</span></div></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">Dec 2018 → · Fiverr</span><h4>Learning the craft</h4>Started freelancing in your fourth semester at a small university; 300+ web data projects. Taught data skills to peers; six of them now work remotely.<div class="cl"><div class="ch">Challenge: messy, changing public web data</div><div class="le">Lesson: how online data really behaves</div></div></div></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2022–2024 · Dubizzle Labs</span><h4>Online text drives decisions</h4>Designed the company's first scraping architecture (60+ sites in a year, 15 markets, four languages), led three engineers, led hiring, set standards; promoted twice.<div class="cl"><div class="ch">Challenge: same complaint, four languages</div><div class="le">Lesson: public text drives real decisions</div></div><span class="phd">you know how one view reads differently across languages</span></div></div>
+<div class="step aca reveal"><div class="card"><span class="tag t-aca">Idea</span><span class="yr">2024 · Chevening</span><h4>The idea</h4>A central system collecting from major platforms to give government evidence of public sentiment.<div class="cl"><div class="ch">Gap: no reliable evidence of public mood</div><div class="le">Idea: a cross-platform system</div></div><span class="phd">the question is years old and useful to the public</span></div></div>
+<div class="step aca reveal"><div class="card"><span class="tag t-aca">Academic</span><span class="yr">2024–25 · MSc dissertation</span><h4>The idea, built small</h4>255,446 comments on X, Reddit, YouTube and Quora about UK economic policy.<div class="cl"><div class="ch">Found: your own check was circular</div><div class="le">Lesson: where does the yardstick come from?</div></div><span class="phd">you turn flaws in your work into research</span></div></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">Dec 2024 → · M+C Saatchi Fluency</span><h4>Social media at professional scale</h4>A twelve-month discourse study, a 60+ crawler fleet with AI repair agents, a 2M+ row weekly pipeline.<div class="cl"><div class="ch">Found: collectors break silently; prompts drift</div><div class="le">Done: versioned prompts, repair agents, “two publics”</div></div><span class="phd">reproducible corpora for narratives at scale</span></div></div>
+<div class="step reveal"><div class="card"><span class="tag t-ind">Industry</span><span class="yr">2025 → · Artemis AI (CTO)</span><h4>Your own product</h4>20-page network, 3M+ comments, 48 models planned, a page graph for collaborations.<div class="cl"><div class="ch">Found: agreement rose while quality fell</div><div class="le">Lesson: check against people, not models</div></div><span class="phd">Alexander Hoyle's area; network science you'd deepen</span></div></div>
+<div class="step aca reveal"><div class="card"><span class="tag t-aca">Research</span><span class="yr">14 Oct 2026 · First paper</span><h4>Lessons made into a method</h4>Treat each platform like a survey mode; test and correct before comparing.<div class="cl"><div class="ch">Gap: platform never tested as a source of error</div><div class="le">Method: six-step protocol + simulation</div></div><span class="phd">chapter one of the PhD is already done</span></div></div>
 </div>
 </section>
 
-<!-- PAPER -->
+<!-- 3 CHEVENING -->
+<section id="chev">
+<h2 class="reveal">3. Chevening: what, why, how, when<small>Chevening Scholar 2024/25 · UK Government scholarship · conditional selection 19 June 2024 · MSc Data Analytics at Portsmouth</small></h2>
+<div class="grid g2">
+<div class="card reveal"><h4>What you proposed</h4>A <b>central system that collects data from major social media platforms</b> (Twitter, Facebook, TikTok, Instagram), analyses keywords, topics and sentiment, and gives government and NGOs evidence for decisions and campaigns.</div>
+<div class="card reveal"><h4>Why: your real example</h4><b>Karachi, September 2023:</b> trade bodies shut businesses after fuel and electricity price rises came close together. You argued that sentiment data would have helped government judge the right timing. About 30% of Pakistanis use social media, so the signal exists.</div>
+<div class="card reveal"><h4>How you knew it could work</h4>At Dubizzle you built a competitor-analysis pipeline from 60+ sites in a year, and saw data-driven decisions change the business.</div>
+<div class="card reveal"><h4>Leadership and community</h4>From a small university, you started freelancing in your fourth semester (Dec 2018), taught data skills to peers, and helped six of them into remote jobs. Long-term goal: university workshops so under-privileged students learn freelancing skills.</div>
+</div>
+<div class="say reveal"><span class="lbl">How it connects</span>“My Chevening proposal was a cross-platform system to show government what citizens think. My dissertation built a small UK version, and building it taught me the hard part: whether platforms can be compared at all. That is my paper, and my PhD question.”</div>
+<p class="hint reveal">Note: don't quote an applicant number for Chevening; say “a competitive UK Government scholarship”.</p>
+</section>
+
+<!-- 4 DISSERTATION -->
+<section id="diss">
+<h2 class="reveal">4. Your dissertation in depth<small>“Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies” · MSc Data Analytics, Portsmouth · September 2025 · supervisor Dr Ella Haig · project 78/100, Distinction · ethics TETHIC-2025-111094 (low risk)</small></h2>
+<div class="card reveal">
+<svg viewBox="0 0 680 120" width="100%" role="img" aria-label="Dissertation pipeline">
+<defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
+<g class="n-pur box"><rect x="6" y="30" width="118" height="60" rx="10"/><text x="65" y="56" text-anchor="middle" font-weight="700" font-size="13">Collect</text><text x="65" y="74" text-anchor="middle" class="sub">4 platforms</text></g>
+<g class="n-pur box"><rect x="142" y="30" width="118" height="60" rx="10"/><text x="201" y="56" text-anchor="middle" font-weight="700" font-size="13">First labels</text><text x="201" y="74" text-anchor="middle" class="sub">VADER word list</text></g>
+<g class="n-pur box"><rect x="278" y="30" width="118" height="60" rx="10"/><text x="337" y="56" text-anchor="middle" font-weight="700" font-size="13">Train models</text><text x="337" y="74" text-anchor="middle" class="sub">BERT, BiLSTM</text></g>
+<g class="n-pur box"><rect x="414" y="30" width="118" height="60" rx="10"/><text x="473" y="56" text-anchor="middle" font-weight="700" font-size="13">Check</text><text x="473" y="74" text-anchor="middle" class="sub">tests, emotions</text></g>
+<g class="n-pur box"><rect x="550" y="30" width="124" height="60" rx="10"/><text x="612" y="56" text-anchor="middle" font-weight="700" font-size="13">Forecast</text><text x="612" y="74" text-anchor="middle" class="sub">Prophet</text></g>
+<g class="flow" style="color:var(--mut)"><line x1="124" y1="60" x2="140" y2="60" marker-end="url(#ah2)"/><line x1="260" y1="60" x2="276" y2="60" marker-end="url(#ah2)"/><line x1="396" y1="60" x2="412" y2="60" marker-end="url(#ah2)"/><line x1="532" y1="60" x2="548" y2="60" marker-end="url(#ah2)"/></g>
+</svg></div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card reveal"><h4>Why and what</h4><b>Why:</b> public reaction to economic policy now appears first on social media, but it is spread across platforms, so warning signs are missed. <b>Aim:</b> a research-grade workflow to measure, and forecast, UK public sentiment on economic policy across platforms.<br><br><b>RQ1</b> How well do modern NLP methods capture it? <b>RQ2</b> How accurate are BERT and BiLSTM? <b>RQ3</b> Can past mood forecast short-term reactions? <b>RQ4</b> How does mood vary by topic and time?</div>
+<div class="card reveal"><h4>Data</h4><ul style="margin:0;padding-left:18px">
+<li>X/Twitter (licensed archive, 2018–2025), Reddit (official API, UK subreddits), YouTube (Data API v3, BBC, Sky, Channel 4 and government channels), Quora (licensed partner).</li>
+<li><b>255,446 comments on 6,650 posts</b> (the pipeline records; use this number).</li>
+<li>Six seed topics: tax, cost of living, welfare, energy, housing, jobs.</li></ul></div>
+</div>
+<h3 class="reveal">Methods, each in one line</h3>
+<div class="gl reveal">
+<div><b>VADER</b>Rule-based word list that gave every post its starting label.</div>
+<div><b>BERT</b>A pre-trained language model, fine-tuned on those labels.</div>
+<div><b>BiLSTM</b>An older neural network reading text forwards and backwards.</div>
+<div><b>Logistic regression</b>A simple word-count baseline.</div>
+<div><b>Temperature scaling</b>Adjusts confidence so “90% sure” means right about 90% of the time.</div>
+<div><b>McNemar test</b>Do two models' errors on the same posts really differ?</div>
+<div><b>Bootstrap</b>Resample the data many times to get confidence intervals.</div>
+<div><b>Chi-square</b>Does the sentiment mix differ by topic?</div>
+<div><b>Prophet</b>Forecasts trends and weekly or yearly cycles.</div>
+<div><b>NRC lexicon</b>Dictionary linking words to eight emotions.</div>
+<div><b>LIME, integrated gradients</b>Show which words pushed a model's decision.</div>
+</div>
+<h3 class="reveal">What it reported</h3>
+<div class="card reveal">
+<table><tr><th>Model</th><th>Accuracy</th><th>Macro-F1</th></tr>
+<tr><td>BERT</td><td>88.1%</td><td>0.878</td></tr><tr><td>BiLSTM</td><td>81.5%</td><td>0.811</td></tr><tr><td>Logistic regression</td><td>71.4%</td><td>0.71</td></tr><tr><td>VADER</td><td>65.2%</td><td>0.65</td></tr></table>
+<ul style="margin:10px 0 0;padding-left:18px"><li>“Neutral” was the hardest class; McNemar p &lt; 0.001.</li><li>A clear mood dip around the September 2022 mini-budget; forecasts beat simple baselines.</li><li>YouTube looked more positive (explainer videos); X had sharper negative spikes; Quora was sparse.</li><li>Anger and fear went with negative posts.</li></ul></div>
+<h3 class="reveal">The gaps you found later, and how you fixed them</h3>
+<div class="gfd reveal">
+<div class="row"><div class="g">Gap</div><div class="f">Found</div><div class="d">Done</div></div>
+<div class="row"><div class="g">Circular validation</div><div class="f">The 88% measured agreement with VADER-seeded labels, not with people.</div><div class="d">Paper discloses it; next study uses a blind human gold sample.</div></div>
+<div class="row"><div class="g">One labeller</div><div class="f">The 0.78 “agreement” was your 200 hand labels against VADER, not two people.</div><div class="d">Next study: second annotator on a quarter to a third of the sample.</div></div>
+<div class="row"><div class="g">Inconsistent figures</div><div class="f">Corpus size 279k in text vs 255,446 in records; a few other numbers didn't match the code.</div><div class="d">Paper lists every one openly; new study logs everything from the first request.</div></div>
+<div class="row"><div class="g">Implausible results</div><div class="f">Re-run figures showed every topic mostly positive during a cost-of-living crisis.</div><div class="d">Treated as a likely artefact of word-list labels, to be tested against people.</div></div>
+<div class="row"><div class="g">Platforms assumed equal</div><div class="f">You assumed “negative” means the same everywhere.</div><div class="d">The whole paper tests exactly this.</div></div>
+</div>
+<div class="say reveal"><span class="lbl">If asked about your results</span>“The 88% was agreement with labels from the same word list, so it proved less than it seemed, and when I rechecked my records a few numbers didn't match. I report all of that openly in my paper. It is exactly why the paper exists.”</div>
+</section>
+
+<!-- 5 PAPER -->
 <section id="paper">
-<h2 class="reveal">3. Your paper, explained simply<small>“Is the Platform Part of the Measurement?” · Ikram &amp; Haig · arXiv 2610.16757 · preprint, not yet peer reviewed</small></h2>
+<h2 class="reveal">5. Your paper in depth<small>“Is the Platform Part of the Measurement? A Protocol and Simulation Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment” · Ikram &amp; Haig · arXiv 2610.16757 · cs.LG, cross-listed cs.CL, cs.CY, cs.SI · code: github.com/asadfix/platform-measurement</small></h2>
 <div class="card reveal">
 <h4>The problem, as a picture</h4>
-<svg viewBox="0 0 680 360" width="100%" role="img" aria-label="Same opinion, written differently on three platforms, read by one AI model, gives a combined mood that can point the wrong way">
+<svg viewBox="0 0 680 360" width="100%" role="img" aria-label="Same opinion, three platforms, one AI, wrong combined mood">
 <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
 <g class="n-gray box"><rect x="220" y="14" width="240" height="52" rx="10"/><text x="340" y="36" text-anchor="middle" font-weight="700" font-size="14">Same public opinion</text><text x="340" y="54" text-anchor="middle" class="sub">e.g. about a new tax</text></g>
 <g class="flow" style="color:var(--mut)"><path d="M300 66 L150 108" marker-end="url(#ah)"/><path d="M340 66 L340 108" marker-end="url(#ah)"/><path d="M380 66 L530 108" marker-end="url(#ah)"/></g>
@@ -202,245 +282,250 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <g class="n-gray box"><rect x="200" y="208" width="280" height="52" rx="10"/><text x="340" y="230" text-anchor="middle" font-weight="700" font-size="14">One AI sentiment model</text><text x="340" y="248" text-anchor="middle" class="sub">reads each site differently</text></g>
 <g class="flow" style="color:var(--mut)"><path d="M340 260 L340 296" marker-end="url(#ah)"/></g>
 <g class="n-coral box"><rect x="160" y="300" width="360" height="52" rx="10"/><text x="340" y="322" text-anchor="middle" font-weight="700" font-size="14">Added-up daily mood</text><text x="340" y="340" text-anchor="middle" class="sub">can point the wrong way</text></g>
-</svg>
-</div>
+</svg></div>
 <div class="grid g2" style="margin-top:14px">
-<div class="card reveal"><h4>The idea in one line</h4>Survey researchers know people answer differently by phone and on paper, and test for it before comparing. Your paper says platforms are “modes” too, so test them the same way.</div>
-<div class="card reveal"><h4>Where it came from</h4>Your dissertation: 255,446 comments on 6,650 posts about six UK economic topics. The paper openly reports your model was checked against labels from the same word list, and that some dissertation numbers don't match the records. Openness is a strength.</div>
+<div class="card reveal"><h4>Why: the gap</h4>Studies compare AI scores across platforms as if a score means the same everywhere. Sen et al. (2021) named this <b>platform-affordance error</b> (a platform's features, like character limits or threading, change how opinion is written and scored) but gave no test. Survey research solved the same problem for “mode effects” (phone vs paper). <b>Core claim: a platform is a mode.</b></div>
+<div class="card reveal"><h4>When: the timeline</h4><ul style="margin:0;padding-left:18px">
+<li>2025: MSc dissertation (the motivating case).</li><li>21 Aug 2026: 15 anchor events fixed in advance.</li><li>Sep 2026: draft with Dr Haig, reviewed.</li><li>30 Sep: Dr Haig approves posting.</li><li>10 Oct: endorsed for arXiv by Dr Rahim Taheri.</li><li>12 Oct: v1.1 after an 8-angle review.</li><li><b>14 Oct 2026: live on arXiv.</b></li></ul></div>
 </div>
-
-<h3 class="reveal">The six steps, one at a time</h3>
-<div class="card stepper reveal" id="stepper">
-<div class="dots"></div><div class="panel"></div>
-<div class="ctrl"><button class="btn" data-d="-1">Back</button><button class="btn pri" data-d="1">Next</button></div>
-</div>
-
-<h3 class="reveal">The headline result (simulation, 500 repeats, 60 days each)</h3>
-<div class="card reveal" id="bars">
-<div class="bars">
-<div class="brow"><span>Just add platforms</span><div class="track"><div class="fill bad" data-w="23"></div></div><b>~14 days</b></div>
-<div class="brow"><span>Correct each first</span><div class="track"><div class="fill good" data-w="1.5"></div></div><b>&lt; 1 day</b></div>
-</div>
-<p class="hint" style="margin:10px 0 0">Days when the overall mood pointed the wrong way, out of 60. That is nearly a quarter of days, versus almost none.</p>
-</div>
-
+<h3 class="reveal">How: the six steps (click through)</h3>
+<div class="card stepper reveal" id="stepper"><div class="dots"></div><div class="panel"></div>
+<div class="ctrl"><button class="btn" data-d="-1">Back</button><button class="btn pri" data-d="1">Next</button></div></div>
+<h3 class="reveal">The simulation result (500 repeats, 60 days each)</h3>
+<div class="card reveal" id="bars"><div class="bars">
+<div class="brow"><span>Just add platforms</span><div class="track"><div class="fill bad" data-w="23"></div></div><b>13.8 days</b></div>
+<div class="brow"><span>Correct each first</span><div class="track"><div class="fill good" data-w="1.4"></div></div><b>0.8 days</b></div></div>
+<p class="hint" style="margin:10px 0 0">Days when the overall mood pointed the wrong way, out of 60. <b>How it was built:</b> a known true mood with a shock at an event; each platform sees it through its own bias, noise and thresholds. <b>Sensitivity:</b> the bigger the difference between platforms, the worse it gets (0.8 → 1.8 → 4.5 → 13.8 → 42.9 wrong days). <b>Honest caveat:</b> the corrected index used the true platform settings; real estimates will be noisier.</p></div>
 <div class="grid g2" style="margin-top:14px">
-<div class="card reveal"><h4>Honest limits (know these)</h4><ul style="margin:0;padding-left:18px">
-<li>People choose platforms, so “who posts” mixes with “how the platform shapes posts”.</li>
-<li>Four platforms, UK, English only.</li>
-<li>Measures expressed feeling, not support for a policy.</li>
-<li>Method plus simulation; real-data study next (1,000–1,500 comments labelled by people, a second annotator).</li></ul></div>
-<div class="card reveal"><h4>If they ask</h4><ul style="margin:0;padding-left:18px">
-<li><b>Your part?</b> I built the simulation and the dissertation case study; wrote it with Dr Haig.</li>
-<li><b>Published?</b> A preprint on arXiv; peer review next.</li>
-<li><b>What's new?</b> Others treated annotators or prompts as error sources; not the platform itself.</li>
-<li><b>Next?</b> Run it on fresh data, then add AI models, time and narrative spread.</li></ul></div>
+<div class="card reveal"><h4>Safeguard: two-classifier check</h4>Every test is repeated with a second, non-word-list AI model. A platform difference only counts if both models show it, so it isn't one tool's quirk.</div>
+<div class="card reveal"><h4>What's new vs earlier work</h4>Earlier studies treated <i>annotators</i> (Kennedy 2020; Sachdeva 2022), <i>prompts and models</i> (Camuffo 2026), <i>survey answers</i> (Boyd 2024) or <i>survey vs traces</i> (Cernat 2025) as the source of difference. <b>Yours treats the platform itself</b> as the source, for AI-labelled text.</div>
+<div class="card reveal"><h4>Five honest limits</h4><ol style="margin:0;padding-left:18px"><li>Who posts mixes with how the platform shapes posts.</li><li>Four platforms; maybe fewer after the data check.</li><li>Measures expressed feeling, not policy support.</li><li>UK and English only.</li><li>Some dissertation figures are inconsistent (disclosed).</li></ol></div>
+<div class="card reveal"><h4>What comes next</h4>Fresh data collection; 1,000–1,500 comments labelled by people, blind to the AI, sampled by platform, event and class; a second annotator on a quarter to a third; then all six steps on real data. In the PhD: add AI models, time and how narratives spread.</div>
 </div>
 <div class="say reveal"><span class="lbl">Your paper in 20 seconds</span>“People write differently on Reddit than on YouTube, so AI reads their opinions differently. Adding platforms together can flip the answer: in my simulation the overall mood pointed the wrong way on nearly a quarter of days. My paper gives a checklist to test whether a comparison is fair, and a way to fix it.”</div>
 </section>
 
-<!-- DISSERTATION -->
-<section id="diss">
-<h2 class="reveal">4. Your dissertation, explained simply<small>“Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies” · MSc Data Analytics, Portsmouth, 2025 · supervisor Dr Ella Haig · Distinction (project 78/100) · ethics approved</small></h2>
-<div class="card reveal">
-<svg viewBox="0 0 680 120" width="100%" role="img" aria-label="Dissertation pipeline from collection to forecasting">
-<defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
-<g class="n-pur box"><rect x="6" y="30" width="118" height="60" rx="10"/><text x="65" y="56" text-anchor="middle" font-weight="700" font-size="13">Collect</text><text x="65" y="74" text-anchor="middle" class="sub">4 platforms</text></g>
-<g class="n-pur box"><rect x="142" y="30" width="118" height="60" rx="10"/><text x="201" y="56" text-anchor="middle" font-weight="700" font-size="13">First labels</text><text x="201" y="74" text-anchor="middle" class="sub">VADER word list</text></g>
-<g class="n-pur box"><rect x="278" y="30" width="118" height="60" rx="10"/><text x="337" y="56" text-anchor="middle" font-weight="700" font-size="13">Train models</text><text x="337" y="74" text-anchor="middle" class="sub">BERT, BiLSTM</text></g>
-<g class="n-pur box"><rect x="414" y="30" width="118" height="60" rx="10"/><text x="473" y="56" text-anchor="middle" font-weight="700" font-size="13">Check</text><text x="473" y="74" text-anchor="middle" class="sub">tests, emotions</text></g>
-<g class="n-pur box"><rect x="550" y="30" width="124" height="60" rx="10"/><text x="612" y="56" text-anchor="middle" font-weight="700" font-size="13">Forecast</text><text x="612" y="74" text-anchor="middle" class="sub">daily mood</text></g>
-<g class="flow" style="color:var(--mut)"><line x1="124" y1="60" x2="140" y2="60" marker-end="url(#ah2)"/><line x1="260" y1="60" x2="276" y2="60" marker-end="url(#ah2)"/><line x1="396" y1="60" x2="412" y2="60" marker-end="url(#ah2)"/><line x1="532" y1="60" x2="548" y2="60" marker-end="url(#ah2)"/></g>
-</svg>
-</div>
-<div class="grid g3" style="margin-top:14px">
-<div class="card reveal"><h4>Four questions</h4><ul style="margin:0;padding-left:18px"><li>Can AI read public mood on policy?</li><li>How accurate are BERT and BiLSTM?</li><li>Can past mood forecast reactions?</li><li>How does mood vary by topic and time?</li></ul></div>
-<div class="card reveal"><h4>What it reported</h4><ul style="margin:0;padding-left:18px"><li>BERT matched labels 88% (BiLSTM 82%); “neutral” hardest.</li><li>Sharp dip around the Sept 2022 mini-budget.</li><li>YouTube more positive, X spikier, Quora sparse; X dominated.</li><li>Anger and fear went with negative posts.</li></ul></div>
-<div class="card reveal"><h4>Use these facts</h4><ul style="margin:0;padding-left:18px"><li>Say <b>255,446</b> comments (the records).</li><li>Don't defend exact topic percentages.</li><li>Labels need checking against people first.</li></ul></div>
-</div>
-<div class="say reveal"><span class="lbl">The honest part</span>“The 88% was agreement with labels from the same word list, so it proved less than it seemed. When I rechecked my records for the paper, a few numbers in the text also didn't match. I report all of that openly in the paper, and it is exactly why the paper exists.”</div>
-</section>
-
-<!-- WORK -->
-<section id="work">
-<h2 class="reveal">5. What you did at Fluency and Artemis AI<small>Two places, one research thread.</small></h2>
+<!-- 6 FLUENCY -->
+<section id="fluency">
+<h2 class="reveal">6. Fluency: every project<small>M+C Saatchi Fluency, London · Data Engineer Consultant · Dec 2024 → · part-time remote. Use client names only if asked; “a global brand” is safest.</small></h2>
+<div class="card reveal"><div class="tabs" id="fluTabs"></div><div id="fluBody"></div></div>
+<h3 class="reveal">Habits that run through all of it</h3>
 <div class="grid g2">
-<div class="card reveal" style="border-top:4px solid var(--teal)"><h4>M+C Saatchi Fluency · London · 2024–now</h4><ul style="margin:0;padding-left:18px">
-<li><b>Social listening:</b> ten platforms collected daily for Amazon, Ford, Nike, Reckitt and UK government.</li>
-<li><b>Discourse study:</b> 100,845 Brandwatch + 170,542 Reddit mentions; topic codebook from BERTopic.</li>
-<li><b>LLM tagging:</b> every label records its prompt version; three pilot runs on the same 500 rows.</li>
-<li><b>AI agents:</b> repair broken collectors and build new ones; a person approves every change.</li></ul></div>
-<div class="card reveal" style="border-top:4px solid var(--purple)"><h4>Artemis AI · co-founder &amp; CTO · 2025–now</h4><ul style="margin:0;padding-left:18px">
-<li><b>Data:</b> 3M+ Facebook and Instagram comments on 111,000+ posts, plus images and video.</li>
-<li><b>Labelling chain:</b> Claude labels and explains; a cheaper model learns the rules; our classifiers train on it; checked against hand-labelled posts.</li>
-<li><b>Hostility:</b> storm detection; banter and dialect filters.</li>
-<li><b>Scale:</b> 48 models for the December beta; team of eight; admin panel with an accuracy tracker and QA dashboard.</li></ul></div>
+<div class="card reveal"><h4>A prompt is an instrument</h4>Version hashes, pilots on the same rows, hand checks before the full run.</div>
+<div class="card reveal"><h4>Silent failure is a measurement problem</h4>A collector that breaks quietly thins the time series, so you monitor and repair it.</div>
+<div class="card reveal"><h4>Estimates are labelled</h4>Model-estimated numbers go in separate “estimated” columns, never mixed with real ones.</div>
+<div class="card reveal"><h4>Never blend publics</h4>Twitter and Reddit reported as “two publics”, not pooled: your paper's idea, used in industry.</div>
 </div>
-<div class="card reveal" style="text-align:center;margin-top:14px;background:var(--coral-bg);border-color:var(--coral);color:var(--coral)"><b style="font-size:18px">One thread: are the labels right?</b></div>
-<div class="say reveal"><span class="lbl">Say it in one sentence</span>“Brands and governments act on AI-labelled numbers that are rarely checked against people. My PhD would build the methods to check them, and show what changes when we do.”</div>
+<div class="say reveal"><span class="lbl">Say it</span>“In a twelve-month discourse study I built a codebook from BERTopic, tagged with an LLM that stamps every label with its prompt version, piloted three times on the same 500 rows, and reported Twitter and Reddit as two publics, never pooled. That is my paper's idea applied in industry.”</div>
+<div class="card reveal" style="border-color:var(--coral)"><h4 style="color:var(--coral)">Don't say in the interview</h4>Client incidents or confidential findings; security issues; anti-bot or proxy techniques (say “official APIs where available, polite rate limits, terms-of-service review”); and don't claim the UK government or Alexa+ work as built by you.</div>
 </section>
 
-<!-- APP -->
+<!-- 7 ARTEMIS -->
+<section id="artemis">
+<h2 class="reveal">7. Artemis AI in depth<small>Co-founder &amp; CTO · social media intelligence for creators and businesses · team of eight · beta 15 Dec 2026 · pilots 1 Dec</small></h2>
+<div class="card reveal">
+<h4>The system, end to end</h4>
+<svg viewBox="0 0 680 300" width="100%" role="img" aria-label="Artemis AI architecture from Meta to the app">
+<defs><marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
+<g class="n-gray box"><rect x="10" y="20" width="150" height="56" rx="10"/><text x="85" y="42" text-anchor="middle" font-weight="700" font-size="13">Meta Graph API</text><text x="85" y="60" text-anchor="middle" class="sub">20 consenting pages</text></g>
+<g class="n-teal box"><rect x="190" y="20" width="150" height="56" rx="10"/><text x="265" y="42" text-anchor="middle" font-weight="700" font-size="13">Collectors</text><text x="265" y="60" text-anchor="middle" class="sub">posts, comments, growth</text></g>
+<g class="n-teal box"><rect x="370" y="20" width="150" height="56" rx="10"/><text x="445" y="42" text-anchor="middle" font-weight="700" font-size="13">Data lake</text><text x="445" y="60" text-anchor="middle" class="sub">S3 + Iceberg + Athena</text></g>
+<g class="n-pur box"><rect x="550" y="20" width="120" height="56" rx="10"/><text x="610" y="42" text-anchor="middle" font-weight="700" font-size="13">Weekly labels</text><text x="610" y="60" text-anchor="middle" class="sub">text, image, video</text></g>
+<g class="flow" style="color:var(--mut)"><line x1="160" y1="48" x2="186" y2="48" marker-end="url(#ah3)"/><line x1="340" y1="48" x2="366" y2="48" marker-end="url(#ah3)"/><line x1="520" y1="48" x2="546" y2="48" marker-end="url(#ah3)"/><path d="M610 76 L610 120 L520 120 L520 140" marker-end="url(#ah3)"/></g>
+<g class="n-pur box"><rect x="370" y="144" width="150" height="56" rx="10"/><text x="445" y="166" text-anchor="middle" font-weight="700" font-size="13">Nightly scoring</text><text x="445" y="184" text-anchor="middle" class="sub">normal, outlook, graph</text></g>
+<g class="n-pur box"><rect x="190" y="144" width="150" height="56" rx="10"/><text x="265" y="166" text-anchor="middle" font-weight="700" font-size="13">Live service</text><text x="265" y="184" text-anchor="middle" class="sub">storms, health, filters</text></g>
+<g class="n-coral box"><rect x="10" y="144" width="150" height="56" rx="10"/><text x="85" y="166" text-anchor="middle" font-weight="700" font-size="13">App + Art-E</text><text x="85" y="184" text-anchor="middle" class="sub">briefing, alerts, advice</text></g>
+<g class="flow" style="color:var(--mut)"><line x1="370" y1="172" x2="344" y2="172" marker-end="url(#ah3)"/><line x1="190" y1="172" x2="164" y2="172" marker-end="url(#ah3)"/></g>
+<g class="n-gray box"><rect x="190" y="230" width="330" height="52" rx="10"/><text x="355" y="251" text-anchor="middle" font-weight="700" font-size="13">Admin panel: 1,438 tickets · accuracy tracker</text><text x="355" y="269" text-anchor="middle" class="sub">QA dashboard · alerts for checks that stopped running</text></g>
+</svg></div>
+<h3 class="reveal">The 48 models, by group (tap a group)</h3>
+<div class="card reveal"><div class="tabs" id="modTabs"></div><div id="modBody"></div>
+<p class="hint" style="margin:10px 0 0">Status today: 2 of 35 product models finished, 11 in progress; the rest planned. Say “48 models in the agreed architecture, being built for the beta”.</p></div>
+<h3 class="reveal">The labelling chain</h3>
+<div class="card reveal">
+<svg viewBox="0 0 680 130" width="100%" role="img" aria-label="Labelling chain">
+<defs><marker id="ah4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
+<g class="n-pur box"><rect x="4" y="30" width="122" height="64" rx="10"/><text x="65" y="54" text-anchor="middle" font-weight="700" font-size="13">Claude</text><text x="65" y="72" text-anchor="middle" class="sub">6,000 labels + reasons</text></g>
+<g class="n-pur box"><rect x="140" y="30" width="122" height="64" rx="10"/><text x="201" y="54" text-anchor="middle" font-weight="700" font-size="13">Mine rules</text><text x="201" y="72" text-anchor="middle" class="sub">IF signal THEN label</text></g>
+<g class="n-pur box"><rect x="276" y="30" width="122" height="64" rx="10"/><text x="337" y="54" text-anchor="middle" font-weight="700" font-size="13">DeepSeek</text><text x="337" y="72" text-anchor="middle" class="sub">12,000 more, cheaper</text></g>
+<g class="n-teal box"><rect x="412" y="30" width="122" height="64" rx="10"/><text x="473" y="54" text-anchor="middle" font-weight="700" font-size="13">Our models</text><text x="473" y="72" text-anchor="middle" class="sub">XLM-R, DeBERTa…</text></g>
+<g class="n-coral box"><rect x="548" y="30" width="128" height="64" rx="10"/><text x="612" y="54" text-anchor="middle" font-weight="700" font-size="13">Check vs people</text><text x="612" y="72" text-anchor="middle" class="sub">~500 hand labels</text></g>
+<g class="flow" style="color:var(--mut)"><line x1="126" y1="62" x2="138" y2="62" marker-end="url(#ah4)"/><line x1="262" y1="62" x2="274" y2="62" marker-end="url(#ah4)"/><line x1="398" y1="62" x2="410" y2="62" marker-end="url(#ah4)"/><line x1="534" y1="62" x2="546" y2="62" marker-end="url(#ah4)"/></g>
+</svg>
+<p class="hint" style="margin:6px 0 0">Five tasks on every post: sentiment, emotion, topic, intent, toxicity. Claude labels cost about $10 for 6,000; DeepSeek about $2.50 for 12,000. Next: a blind, stratified human gold set with a second labeller.</p></div>
+<h3 class="reveal">Network theory: built, planned and vision</h3>
+<div class="grid g3">
+<div class="card reveal" style="border-top:4px solid var(--teal)"><h4>Built (early)</h4>A first <b>page network</b> from warehouse data only (topics, content types, image fingerprints, formats, posting times), for consenting pilot pages, with no personal data. A <b>page-to-page affinity graph</b> links pages whose audiences comment alike; a prototype runs <b>Louvain community detection</b> (finds clusters in a graph) and a 0–100 match score.</div>
+<div class="card reveal" style="border-top:4px solid var(--purple)"><h4>Planned</h4><b>Audience communities</b> in the page graph; a <b>collaboration match score</b> rated on 100 page pairs; <b>“new-group reach”</b> (which partner opens a new audience); a <b>collab outcome estimator</b> (did a collab lift both pages over 30 days?); opt-in weekly <b>Discovery</b>; a rising-topics tool tested against a seasonal baseline, with groups under 5 pages hidden.</div>
+<div class="card reveal" style="border-top:4px solid var(--coral)"><h4>Vision (strategy, not built)</h4>Your CEO's ideas: <b>identity gravity</b> (creators whose content mix drifts together may suit a collab), a <b>signal economy</b> (different weights for likes, comments, shares, collabs) and <b>diffusion paths</b> (ideas spreading cluster → bridge → cluster), always as probabilities.</div>
+</div>
+<div class="say reveal"><span class="lbl">Two research catches you can mention</span>“Our Discovery plan assumed Meta gives commenter identity; it doesn't, so we rebuilt it on page-level signals only. And we had to define a good match before scoring one: similarity favours lookalike pages, but the goal is reaching a new audience. Both are exactly the measurement and network questions I want to study at CSH.”</div>
+<h3 class="reveal">Challenges: gap, what you found, what you did</h3>
+<div class="gfd reveal">
+<div class="row"><div class="g">Gap</div><div class="f">Found</div><div class="d">Done</div></div>
+<div class="row"><div class="g">The agreement trap</div><div class="f">Agreement between two models rose on 3 of 5 tasks while both collapsed onto the most common answer.</div><div class="d">Regression checks use fixed human-checked labels, never another model.</div></div>
+<div class="row"><div class="g">Silent drift</div><div class="f">Post-sentiment agreement fell from 77% to 37% after mid-September; emoji-heavy posts flipped positive labels.</div><div class="d">Drift monitoring, a text-drift alarm, a shared vocabulary for toxicity.</div></div>
+<div class="row"><div class="g">What is a storm?</div><div class="f">207,192 comments on 369 busy posts (Feb–Jul): no real storms, one comment aimed at the page.</div><div class="d">Busy-but-normal hours became a false-alarm test set; storms need several signals to agree, against each page's normal.</div></div>
+<div class="row"><div class="g">What is normal?</div><div class="f">Engagement across all 20 pages fell ~97% in late July: a platform change, not content.</div><div class="d">An era detector and a metric registry recording when Meta changed definitions.</div></div>
+<div class="row"><div class="g">Banter and dialect</div><div class="f">Labellers missed hostility people saw (2% vs 15% negative), and read banter as abuse.</div><div class="d">Banter/dialect filter and a language check that lets the model abstain.</div></div>
+<div class="row"><div class="g">Reposts</div><div class="f">A second poster of the same caption got ~31% less, but pages repost winners and matching was text-only.</div><div class="d">Image-hash repost check; show “your 3 most similar past posts did…” instead of predicting.</div></div>
+<div class="row"><div class="g">Predicting flops</div><div class="f">The flop model was barely above chance (55% pairwise), below published work.</div><div class="d">Compare each post only with the same page's earlier posts; keep a page-condition warning, drop single-draft scores.</div></div>
+<div class="row"><div class="g">Platform dependence</div><div class="f">Meta controls access through app review; commenter identity isn't available.</div><div class="d">Ask for permissions step by step; design around page-level data.</div></div>
+</div>
+<div class="say reveal"><span class="lbl">The honest bottom line</span>“None of our client-facing models yet has a held-out, human-checked accuracy figure. We're building a blind human gold set now. That gap, measuring whether AI labels are right, is exactly what I want to study properly.”</div>
+<div class="card reveal"><h4>Team of eight, and your role</h4>CEO (vision, strategy) · COO (operations, investors) · <b>you, CTO</b>: own the stack, API and data model; build the app server, Art-E integration and briefing · ML lead (models and evaluation) · ML backend engineer (data platform, collectors, page graph) · product and design · legal · a founding data partner.</div>
+</section>
+
+<!-- 8 APP -->
 <section id="app">
-<h2 class="reveal">6. What you told CSH in your application<small>The recording is read with these answers. Stay consistent.</small></h2>
-<details class="reveal" open><summary>Answer 1 · your project, and what went wrong</summary><div class="body">MSc dissertation on UK economic policy across four platforms. The AI looked very accurate, but it was trained and checked on labels from the same word list (VADER), so the check proved little; and you had assumed “negative” means the same on every site. <b>Lesson:</b> always ask where the yardstick comes from; test that a measure works the same in each group before comparing. It became the paper.</div></details>
-<details class="reveal"><summary>Answer 2 · a CSH paper you liked</summary><div class="body"><b>Chen, Kmetty, Iñiguez &amp; Omodei (2025)</b>, “The public that engages invisibly”, <i>Communication Methods and Measures</i>. People who <i>comment</i> on political YouTube videos are more polarised than people who only <i>watch</i>, so comment-based studies make society look more divided. <b>Your idea:</b> could a small group who donate their data correct millions of public comments? Same shape as your problem: a big, cheap, biased signal and a small, accurate one.</div></details>
-<details class="reveal"><summary>Answer 3 · what you want to study</summary><div class="body">When can AI-labelled opinions be compared across platforms, AI models and time, and how do we fix them when they can't? <b>Four steps:</b> (1) extend your simulation; (2) collect new posts around fixed events, labelled by several AIs and checked by people; (3) test whether removing the “platform signal” removes real differences; (4) see how the fix changes how narratives seem to spread. <b>Gap you'd fill at CSH:</b> network science of diffusion.</div></details>
-<details class="reveal"><summary>People and projects you named (all verified)</summary><div class="body"><ul style="margin:0;padding-left:18px"><li><b>Alexander Hoyle</b>, CSH faculty: NLP in social science, measurement and validation. Closest to you.</li><li><b>Elisa Omodei</b>, CSH faculty: co-author of the paper in Answer 2.</li><li><b>Fariba Karimi</b>, CSH faculty: biases in networks and algorithms.</li><li>Springboard projects: <b>Understanding narratives at scale</b>; <b>Polarization and minority representation on online platforms</b>.</li></ul></div></details>
+<h2 class="reveal">8. What you told CSH in your application<small>The recording is read with these answers. Stay consistent.</small></h2>
+<details class="reveal" open><summary>Answer 1 · your project, and what went wrong</summary><div class="body">MSc dissertation on UK economic policy across four platforms. The AI looked very accurate, but it was trained and checked on labels from the same word list (VADER), so the check proved little; and you had assumed “negative” means the same on every site. <b>Lessons:</b> where does the yardstick come from; test that a measure works the same in each group before comparing. For the paper you fixed 15 policy events in advance.</div></details>
+<details class="reveal"><summary>Answer 2 · a CSH paper you liked</summary><div class="body"><b>Chen, Kmetty, Iñiguez &amp; Omodei (2025)</b>, “The public that engages invisibly”, <i>Communication Methods and Measures</i> 19(4). Linking a Hungarian survey to donated YouTube histories, they show commenters are more polarised than people who only watch. <b>Your idea:</b> could a small group who donate their data correct millions of public comments? A big, cheap, biased signal plus a small, accurate one: the same shape as your problem.</div></details>
+<details class="reveal"><summary>Answer 3 · what you want to study</summary><div class="body">When can AI-labelled opinions (sentiment, stance, frames) be compared across platforms, AI models and time, and how do we correct them before tracking how narratives spread? <b>Four steps:</b> extend the simulation; event-anchored corpus labelled by several AIs with human checks and a second coder; concept erasure to remove the platform signal; diffusion analysis with corrected and uncorrected measures. You cited Gaynor et al. 2026, Fan et al. 2025, Licht et al. 2025, Hoyle et al. 2021. <b>Gap you'd fill at CSH:</b> network science of diffusion.</div></details>
+<details class="reveal"><summary>People and projects you named (all verified)</summary><div class="body"><ul style="margin:0;padding-left:18px"><li><b>Alexander Hoyle</b>, CSH faculty: NLP in social science, measurement and validation. Closest to you.</li><li><b>Elisa Omodei</b>, CSH faculty: co-author of the paper in Answer 2.</li><li><b>Fariba Karimi</b>, CSH faculty: biases in networks and algorithms.</li><li>Springboard projects: <b>Understanding narratives at scale</b>; <b>Polarization and minority representation on online platforms</b>; also <b>Designing link recommendation to reduce polarization</b>.</li></ul></div></details>
 </section>
 
-<!-- FIT -->
+<!-- 9 FIT -->
 <section id="fit">
-<h2 class="reveal">7. What this PhD needs, and what you bring<small>Green: you have it. Amber: CSH teaches it, which is why CSH.</small></h2>
+<h2 class="reveal">9. What this PhD needs, and what you bring<small>Green: you have it. Amber: CSH teaches it, which is why CSH.</small></h2>
 <div class="sk reveal">
 <div class="ok"><b>A clear research question</b>Platform comparability; the paper</div>
-<div class="ok"><b>Data collection</b>8 years, 15 markets, 10 platforms</div>
+<div class="ok"><b>Data collection</b>8 years; 60+ crawler fleet; official APIs</div>
 <div class="ok"><b>Programming</b>Python and SQL every day</div>
-<div class="ok"><b>NLP and LLMs</b>BERT, XLM-R, LLM labelling chains</div>
+<div class="ok"><b>NLP and LLMs</b>BERT, XLM-R, DeBERTa, LLM labelling chains</div>
 <div class="ok"><b>Measurement and statistics</b>Invariance, linking, tests, simulation</div>
-<div class="ok"><b>Communication and teamwork</b>Led teams; reports for government</div>
-<div class="gap"><b>Network science (gap)</b>Plan: CSH courses and an early group project</div>
-<div class="gap"><b>Causal inference (gap)</b>Plan: coursework and an early project</div>
+<div class="ok"><b>Early network work</b>Page affinity graph, community detection prototype</div>
+<div class="gap"><b>Network science (gap)</b>Formal diffusion and network methods: CSH courses</div>
+<div class="gap"><b>Causal inference (gap)</b>Coursework and an early project</div>
 </div>
 <table class="reveal" style="margin-top:16px">
 <tr><th>From</th><th>You bring</th><th>Where it lands at CSH</th></tr>
 <tr><td>Dubizzle</td><td>Multilingual data at scale</td><td>Polarization and minority representation</td></tr>
 <tr><td>Chevening</td><td>A long-held, policy-facing question</td><td>Evidence for public bodies</td></tr>
 <tr><td>MSc</td><td>Full research cycle; self-critique</td><td>“Independent and rigorous scholarship”</td></tr>
-<tr><td>Fluency</td><td>Reproducible LLM coding at scale</td><td>Understanding narratives at scale</td></tr>
-<tr><td>Artemis AI</td><td>Validating AI labels; baselines; drift</td><td>Alexander Hoyle; Elisa Omodei</td></tr>
+<tr><td>Fluency</td><td>Reproducible LLM coding; “two publics”</td><td>Understanding narratives at scale</td></tr>
+<tr><td>Artemis AI</td><td>Validating labels; baselines; page graph</td><td>Hoyle (validation); Omodei, Karimi (networks)</td></tr>
 <tr><td>First paper</td><td>Protocol and simulation ready</td><td>Your project, extended with diffusion</td></tr>
 </table>
 </section>
 
-<!-- STAR -->
+<!-- 10 STAR -->
 <section id="star">
-<h2 class="reveal">8. STAR stories<small>Situation · Task · Action · Result. About 60 seconds each, then one line on the PhD.</small></h2>
-<div class="card reveal">
-<div class="tabs" id="starTabs"></div>
-<div class="star" id="starBody"></div>
-<span class="phd" id="starPhd"></span>
-</div>
+<h2 class="reveal">10. STAR stories<small>Situation · Task · Action · Result. About 60 seconds each, then one line on the PhD.</small></h2>
+<div class="card reveal"><div class="tabs" id="starTabs"></div><div class="star" id="starBody"></div><span class="phd" id="starPhd"></span></div>
 </section>
 
-<!-- QA -->
 <section id="qa">
-<h2 class="reveal">9. Likely questions<small>Main point first, one example, then stop. 45–75 seconds.</small></h2>
+<h2 class="reveal">11. Likely questions<small>Main point first, one example, then stop. 45–75 seconds.</small></h2>
 <div id="qaList"></div>
 </section>
 
-<!-- PRACTICE -->
 <section id="practice">
-<h2 class="reveal">10. Practice mode<small>Press “New question”, answer out loud, beat the timer.</small></h2>
+<h2 class="reveal">12. Practice mode<small>Press “New question”, answer out loud, beat the timer.</small></h2>
 <div class="card practice reveal">
-<div class="q" id="pq">Ready when you are.</div>
-<div class="timer" id="pt">1:00</div>
-<div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap">
-<button class="btn pri" id="pNew">New question</button><button class="btn" id="pStart">Start 60s</button><button class="btn" id="pHint">Show hint</button>
-</div>
-<p class="hint" id="pHintText" style="margin-top:12px"></p>
-</div>
+<div class="q" id="pq">Ready when you are.</div><div class="timer" id="pt">1:00</div>
+<div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap"><button class="btn pri" id="pNew">New question</button><button class="btn" id="pStart">Start 60s</button><button class="btn" id="pHint">Show hint</button></div>
+<p class="hint" id="pHintText" style="margin-top:12px"></p></div>
 </section>
 
-<!-- GLOSSARY -->
 <section id="gloss">
-<h2 class="reveal">11. Glossary<small>Hard words, made simple. Type to search.</small></h2>
+<h2 class="reveal">13. Glossary<small>Hard words, made simple. Type to search.</small></h2>
 <input type="search" id="gs" placeholder="Search a term, e.g. invariance" class="reveal">
 <div class="gl" id="gl"></div>
 </section>
 
-<!-- DAY -->
 <section id="day">
-<h2 class="reveal">12. On the day, and what comes next</h2>
+<h2 class="reveal">14. On the day, and what comes next</h2>
 <div class="grid g2">
-<div class="card reveal"><h4>Checklist</h4><ul class="check" style="margin:0;padding-left:18px">
-<li>Join at <b>8:35 pm</b> Lahore; test camera and microphone.</li>
-<li>Quiet room, light in front of you, look at the camera.</li>
-<li>Keep this open, but don't read from it.</li>
-<li>A short pause before answering is fine.</li>
-<li>Recording is normal; just go ahead.</li></ul></div>
-<div class="card reveal"><h4>If you pass</h4>
-<ul style="margin:0;padding-left:18px">
-<li><b>7–14 Jan:</b> present a paper CSH chooses. Past picks: Watts &amp; Strogatz 1998; Albert, Jeong &amp; Barabási 2000; Clauset, Moore &amp; Newman 2008; Couzin et al. 2011.</li>
-<li><b>15–16 Feb:</b> finalists present research ideas at CSH.</li>
-<li><b>Mid-March:</b> offers.</li>
-<li><b>By 1 Nov:</b> referee letters must arrive.</li></ul></div>
+<div class="card reveal"><h4>Checklist</h4><ul class="check" style="margin:0;padding-left:18px"><li>Join at <b>8:35 pm</b> Lahore; test camera and microphone.</li><li>Quiet room, light in front of you, look at the camera.</li><li>Keep this open, but don't read from it.</li><li>A short pause before answering is fine.</li><li>Recording is normal; just go ahead.</li></ul></div>
+<div class="card reveal"><h4>If you pass</h4><ul style="margin:0;padding-left:18px"><li><b>7–14 Jan:</b> present a paper CSH chooses. Past picks: Watts &amp; Strogatz 1998; Albert, Jeong &amp; Barabási 2000; Clauset, Moore &amp; Newman 2008; Couzin et al. 2011.</li><li><b>15–16 Feb:</b> finalists present research ideas at CSH.</li><li><b>Mid-March:</b> offers.</li><li><b>By 1 Nov:</b> referee letters must arrive.</li></ul></div>
 </div>
-<footer>Sources: CSH FAQ, faculty list and springboard projects (csh.ac.at); CSH invitation email; your CSH answers, CV and portfolio; your paper and dissertation; Artemis AI notes and admin panel.</footer>
+<footer>Sources: CSH FAQ, faculty list and springboard projects (csh.ac.at); CSH invitation email; your CSH answers, CV and portfolio; your Chevening application; your dissertation and paper; Fluency and Artemis AI project notes and admin panel.</footer>
 </section>
 </main>
 
 <script>
-// reveal on scroll
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.id==='bars')e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');}}),{threshold:.15});
-document.querySelectorAll('.reveal,#tl').forEach(el=>io.observe(el));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const tlio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.05});tlio.observe(document.getElementById('tl'));
 const bio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%')}),{threshold:.3});bio.observe(document.getElementById('bars'));
-
-// nav highlight
 const links=[...document.querySelectorAll('#nav a')];
-const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-45% 0px -50% 0px'});
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>{const on=l.getAttribute('href')==='#'+e.target.id;l.classList.toggle('on',on);if(on)l.scrollIntoView({block:'nearest',inline:'center'});});}}),{rootMargin:'-45% 0px -50% 0px'});
 document.querySelectorAll('section[id]').forEach(s=>sio.observe(s));
-
-// countdown
 (function(){const t=Date.UTC(2026,9,20,15,40);const el=document.getElementById('countdown');
-function tick(){const d=t-Date.now();if(d<=0){el.textContent='Interview time: good luck!';return;}
-const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4);el.innerHTML='Starts in <b style="color:#fff">'+(h>=24?Math.floor(h/24)+'d '+(h%24)+'h':h+'h '+m+'m')+'</b>';}
-tick();setInterval(tick,30000);})();
+function tick(){const d=t-Date.now();if(d<=0){el.textContent='Interview time: good luck!';return;}const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4);el.innerHTML='Starts in <b style="color:#fff">'+(h>=24?Math.floor(h/24)+'d '+(h%24)+'h':h+'h '+m+'m')+'</b>';}tick();setInterval(tick,30000);})();
 
-// stepper
+function tabs(tabId,bodyId,items,render){const t=document.getElementById(tabId),b=document.getElementById(bodyId);
+items.forEach((it,k)=>{const x=document.createElement('button');x.textContent=it.t;x.onclick=()=>show(k);t.appendChild(x);});
+function show(k){[...t.children].forEach((x,j)=>x.classList.toggle('on',j===k));b.innerHTML='<div class="fade">'+render(items[k])+'</div>';if(items[k].after)items[k].after(b);}show(0);}
+
 const steps=[
-['Same-event check','Compare platforms on the same news moment, so it is like with like. You fixed 15 UK budget and economic events in advance, centred on the September 2022 mini-budget, before looking at any counts, so you could not pick events that suit the answer.'],
-['Reliability check','How much of a score comes from the platform, the AI model or the event? Measured against posts labelled by people.'],
-['“Same meaning” test','Does “negative” behave the same on Reddit, X, YouTube and Quora? Technical names: measurement invariance and DIF.'],
-['Adjust for crowd and timing','Different people post on each site at different times; adjust for that before comparing.'],
-['One common scale','Convert every platform onto one yardstick, like converting currencies before adding them up.'],
-['Simulation','A computer experiment where you set the true mood, to show what goes wrong if you skip steps 1 to 5: wrong direction on nearly a quarter of days.']];
+['Same-event check','<b>Plain:</b> compare platforms on posts about the same news moment, in the same time window, so it is like with like. <b>Detail:</b> 15 UK fiscal events from March 2020 to March 2025, centred on the 23 September 2022 mini-budget, fixed on 21 August 2026 before counting anything; 48-hour and two-week windows; minimum 200 comments per platform per event. <b>Technical:</b> same-event divergence test (Cramér\'s V with cluster-bootstrap intervals).'],
+['Reliability check','<b>Plain:</b> how much of a score comes from the platform, the event, the post or the coder, compared with posts labelled by people? Is the measure equally dependable on every platform? <b>Technical:</b> a fixed-facet generalizability study (G-study).'],
+['“Same meaning” test','<b>Plain:</b> does “negative” relate to the real feeling in the same way on Reddit, X, YouTube and Quora? A difference only counts if it is big enough and shows up in at least two events. <b>Technical:</b> categorical measurement invariance and differential item functioning (DIF), with effect-size cut-offs.'],
+['Adjust for crowd and timing','<b>Plain:</b> different people post at different times on each site; adjust before comparing. <b>Technical:</b> a multilevel model with posts nested in events, controlling for composition and timing.'],
+['One common scale','<b>Plain:</b> convert each platform onto one yardstick using the shared events, like converting currencies; if the evidence is too weak, don\'t link at all. <b>Technical:</b> anchor-based score linking (honestly labelled as the weakest form of linking).'],
+['Simulation','<b>Plain:</b> a computer experiment where you set the true mood, then show what goes wrong if you skip steps 1 to 5: the overall mood points the wrong way on 13.8 of 60 days, versus 0.8 when corrected. <b>Technical:</b> 500 replications with known measurement functions per platform.']];
 (function(){const box=document.getElementById('stepper'),dots=box.querySelector('.dots'),panel=box.querySelector('.panel');let i=0;
 steps.forEach((s,k)=>{const b=document.createElement('button');b.textContent=k+1;b.setAttribute('aria-label','Step '+(k+1));b.onclick=()=>show(k);dots.appendChild(b);});
 function show(k){i=(k+steps.length)%steps.length;[...dots.children].forEach((b,j)=>b.classList.toggle('on',j===i));panel.innerHTML='<div class="fade"><h4>Step '+(i+1)+': '+steps[i][0]+'</h4>'+steps[i][1]+'</div>';}
 box.querySelectorAll('.ctrl button').forEach(b=>b.onclick=()=>show(i+ +b.dataset.d));show(0);})();
 
-// STAR
-const stars=[
-{t:'1 · The circular check',use:'research project, setback, honesty',S:'MSc dissertation at Portsmouth: public reaction to UK economic policy on X, Reddit, YouTube and Quora.',T:'Build a reliable way to measure the public mood across platforms, and test it.',A:'Collected 255,446 comments under ethics approval, trained BERT against baselines, ran statistical tests. Then I re-examined my own validation and found the model had been checked against labels from the same word list it learned from.',R:'I reported it openly and turned it into my first paper with Dr Haig, which shows ignoring platform differences gets the mood wrong on nearly a quarter of days.',P:'I find flaws in my own work and turn them into research questions; that is the project I want to continue.'},
-{t:'2 · Chevening',use:'motivation, why this topic',S:'Working with online data in Pakistan, I saw public bodies have little reliable evidence of what citizens think.',T:'Win a fully funded UK master’s to build that skill.',A:'Proposed a cross-platform social media analytics system to give government evidence of public opinion, alongside helping students and junior colleagues into remote careers.',R:'Selected as a Chevening Scholar from 70,000+ applicants; the proposal became my dissertation and then my paper.',P:'the question is years old and useful to the public, not a fashion.'},
-{t:'3 · Dubizzle',use:'leadership, teamwork',S:'Dubizzle Labs had no system for collecting market and customer data across its regions.',T:'Design the company’s first one: 15 markets, English, Arabic, Urdu and Hindi.',A:'Designed the architecture, led three engineers, added testing, built dashboards on what customers said and how markets moved.',R:'Used by decision-makers; production incidents down 45%; promoted twice in about two years.',P:'I can lead a data effort and know how views read differently across languages, central to minority and migration discourse work.'},
-{t:'4 · Fluency',use:'industry work, reproducibility',S:'At M+C Saatchi Fluency, a twelve-month discourse study: about 271,000 Brandwatch and Reddit mentions.',T:'Code all of it reliably with AI, in a way that could be checked and repeated.',A:'Worked on a BERTopic codebook, LLM tagging where every label records its prompt version, and three pilot runs on the same 500 rows; separately built agents that repair broken collectors, with a person approving each fix.',R:'A traceable, repeatable dataset, and collectors that no longer fail silently.',P:'I can build reproducible corpora for “Understanding narratives at scale” from day one.'},
-{t:'5 · The agreement trap',use:'judging whether a model is right',S:'At Artemis AI we label millions of comments with AI models to train our own classifiers.',T:'Check whether our labelling models were still reliable over time.',A:'Noticed agreement between two models had risen on three of five tasks while both were collapsing onto the most common answer. We moved our checks to fixed, human-checked labels and added drift monitoring.',R:'Caught a silent failure; when one measure fell from 77% to 37% agreement, monitoring made it visible. We are moving every model to checks against people.',P:'validating AI labels against people is exactly Alexander Hoyle’s area at CSH.'},
-{t:'6 · What is “normal”?',use:'thinking like a researcher',S:'Clients wanted alerts for “comment storms”: sudden waves of hostile comments.',T:'Define a storm that is real, not a false alarm.',A:'Had the team screen 207,192 comments on 369 unusually busy posts (Feb–Jul), and added filters so banter and dialect aren’t read as abuse.',R:'Almost none were real storms aimed at the page: the hard part is each page’s baseline, not the alarm.',P:'polarisation and hostility need a baseline per community and platform, like commenters vs watchers in Chen et al.'}];
-(function(){const tabs=document.getElementById('starTabs'),body=document.getElementById('starBody'),phd=document.getElementById('starPhd');
-stars.forEach((s,k)=>{const b=document.createElement('button');b.textContent=s.t;b.onclick=()=>show(k);tabs.appendChild(b);});
-function show(k){[...tabs.children].forEach((b,j)=>b.classList.toggle('on',j===k));const s=stars[k];
-body.innerHTML='<p class="hint" style="margin:0 0 4px">Use for: '+s.use+'</p>'+['S','T','A','R'].map(L=>'<div class="row"><div class="L">'+L+'</div><div>'+s[L]+'</div></div>').join('');
-[...body.querySelectorAll('.row')].forEach((r,j)=>setTimeout(()=>r.classList.add('in'),120*j+60));phd.textContent=s.P;}
-show(0);})();
+const flu=[
+{t:'12-month discourse study',role:'Analyst and pipeline builder',need:'What did US consumers say about a sport over 12 months, nationally and in five cities: volume, spikes, sentiment, themes?',did:'Two Brandwatch exports (Twitter/forums and Reddit). Found a six-month Reddit gap in Brandwatch and filled it through the Reddit API (170,542 mentions after cleaning), kept as a separate, labelled source. Cleaned, deduplicated, ran BERTopic, and merged topics by hand into an 18-theme codebook the client approved. LLM tagging (relevance, voice, sentiment, up to 3 themes, place) with a prompt-version hash on every tag; three pilot runs on the same 500 rows; fixed systematic misses one by one; separate step classifying each account as consumer, media, club or promoter.',scale:'100,845 consumer mentions in the deck (89,549 Reddit + 11,296 Twitter/forums); pilots agreed on 85% of Reddit comments.',lesson:'Twitter and Reddit reported as “two publics”, never pooled: the paper\'s idea in practice. Prompts treated as instruments.'},
+{t:'Weekly brand analytics pipeline',role:'Engineer running and improving the pipeline',need:'One trusted weekly view of a global brand\'s organic social media across markets and platforms, in Tableau.',did:'AWS pipeline (Lambda steps, ECS Fargate merge task, Postgres) from Sprinklr exports and collaboration trackers: deduplicate, translate, apply business rules, load. You run the Monday checks and an 89-check data-quality sweep, improved translation reuse, handled schema changes, and built an XGBoost model that estimates missing collaboration metrics, written to separate “estimated” columns and tested on a read-only shadow run first.',scale:'A weekly master table of about 2.2–2.9 million rows.',lesson:'Estimates are labelled and never mixed with real values; quality is checked before anyone decides on it.'},
+{t:'Car-forum crawler fleet + AI agents',role:'Builder and owner of the system',need:'Continuous collection from car-owner forums across European markets for a global automaker\'s social listening.',did:'A Scrapy fleet run from a FastAPI server with a dashboard; data to S3, Postgres and Athena; CI-gated deploys. A self-healing agent: when a crawler breaks, it diagnoses the cause, first replays code that worked before (no model call), else Claude regenerates the spider, which must pass live tests before it ships, with every repair recorded and reversible. A builder agent creates new crawlers through an MCP server (Claude calls tools), with a cost cap, a 20-row quality sample and a human approval code before anything merges.',scale:'65–69 active crawlers; the healer fixed 86% of crawlers; the builder succeeded 92% of the time over 1,697 runs; about $2–12 per new crawler.',lesson:'A collector that breaks silently thins the time series: crawler health is a measurement problem.'},
+{t:'Motorcycle forum study',role:'Built the collection alone',need:'Discussion about a motorcycle brand and its launch across 20 enthusiast forums plus Reddit.',did:'A one-off Scrapy run plus the official Reddit API. Found that the client\'s own forum returned nothing (a dead proxy and a site redesign) and fixed it; added a last-post-date filter so old threads weren\'t re-collected; separated old data from new.',scale:'Tens of thousands of forum and Reddit rows over 3 to 24 months.',lesson:'Coverage gaps hide in plain sight; check where zero means “no data” rather than “no talk”.'},
+{t:'Multilingual and other studies',role:'Contributor',need:'Health and consumer brands wanting emotions and needs from posts and reviews.',did:'Contributed to LLM-assisted coding of about 170,000 multilingual posts and reviews from 12 platforms into emotions and need states (a health brand), and to a study comparing reviews with search data on one needs codebook (a consumer brand).',scale:'~170,000 posts, 12 platforms, a 24-emotion taxonomy.',lesson:'One codebook across languages and sources raises exactly the comparability question in your paper.'},
+{t:'Government and internal work',role:'Backup engineer and reviewer (not owner)',need:'A government communications dashboard (owned by a colleague) and an internal tagging tool.',did:'Read the whole government pipeline, checked Monday runs, and found failures the pipeline did not report. Reviewed a colleague\'s self-service tagging tool and proposed an architecture and cost plan. Designed (not built) an architecture for a voice-assistant brief.',scale:'About 15 government departments\' posts.',lesson:'Say “supported” or “contributed to”, never “built”.'}];
+tabs('fluTabs','fluBody',flu,f=>'<p class="hint" style="margin:0 0 6px">Your role: <b>'+f.role+'</b></p><p><b>The question:</b> '+f.need+'</p><p><b>What you did:</b> '+f.did+'</p><p><b>Scale:</b> '+f.scale+'</p><span class="phd">'+f.lesson+'</span>');
 
-// QA
+const mods=[
+{t:'Weekly labelling',items:[['Post NLP models','Our fine-tuned encoders (XLM-R, DistilBERT, DeBERTa-v3, Detoxify) label every post for sentiment, emotion, topic, intent, toxicity.','live'],['Comment NLP models','Read each comment with its parent post.','live'],['DeepSeek labeller','An LLM gives a label and a confidence score.','live'],['OCR hybrid','Reads words inside images (EasyOCR, then PaddleOCR on unsure lines).','live'],['CLIP fingerprints','A 512-number fingerprint for each picture, to find similar images.','live'],['Fusion classifier','Combines picture, image-text and caption into 5 content types (internal only).','live'],['Vision second opinion','Claude Haiku checks picture and video types.','live'],['Whisper video reader','Speech-to-text and a score for a video\'s opening hook (pilot).','pilot']]},
+{t:'Nightly scoring',items:[['Page normal and bands','Each page\'s expected engagement by era, time slot and format.','build'],['Era detector','Finds dates when a page\'s behaviour shifts (change-point detection).','build'],['Engagement outlook','Next week\'s likely range; ships only if it passes its test.','build'],['Similar-pages trend','A page\'s 90-day trend against similar pages, none named.','build'],['Comment intent and topics','Needs-a-reply flag; one fixed topic list.','build'],['Next-move and briefing lines','One suggested action per page per day, with a hold-out group to test it; up to 5 briefing lines a night.','build'],['Text-drift monitor','Alarm when a page\'s language moves away from what labels were checked on.','build'],['Cohort shrinkage','Steadies a small page\'s “normal” by borrowing from similar pages.','shadow']]},
+{t:'Network and Discovery',items:[['Page affinity graph','Links pages whose comments and content look alike.','prototype'],['Communities','Louvain community detection on the page graph.','prototype'],['Collaboration match score','A 0–100 score and the top 5 partner pages, rated on 100 pairs.','build'],['Collab outcome estimator','Did a collaboration lift both pages over 30 days?','build'],['Rising topics','Topics rising across the network vs a seasonal baseline; groups under 5 pages hidden.','planned']]},
+{t:'Live service',items:[['Storm detector','Hostile share of comments vs the page\'s normal, over two windows; several signals must agree.','build'],['Spam, language, banter filters','Keep junk, other languages and friendly banter out of storm detection.','build'],['Repost finder','Caption similarity plus image fingerprints.','build'],['Post-health check','Is a new post doing better or worse than normal in its first hours?','build'],['Page condition','Flags the riskiest 10% of page-days (the former “flop” model).','parked'],['Best hours','A page\'s best hours among those it already uses.','build'],['Reply drafts','Suggested replies to comments that need one.','build']]},
+{t:'Art-E advisor',items:[['Question router','Sends each question to the right tool (Amazon Nova Micro).','build'],['Answer model','Writes answers only from the client\'s own data (Nova Pro).','build'],['Search index','Embeddings plus pgvector, walled off per customer.','build'],['Guards','“No number without a source”; comment text cannot steer the answer.','build'],['Judge model','Grades answers nightly against a 200-question test set.','build']]}];
+tabs('modTabs','modBody',mods,g=>'<div class="mods">'+g.items.map(m=>'<div><span class="chip c-'+m[2]+'">'+m[2]+'</span><b>'+m[0]+'</b>'+m[1]+'</div>').join('')+'</div>');
+
+const stars=[
+{t:'1 · The circular check',use:'research project, setback, honesty',S:'MSc dissertation at Portsmouth: public reaction to UK economic policy on X, Reddit, YouTube and Quora.',T:'Build a reliable way to measure public mood across platforms, and test it.',A:'Collected 255,446 comments under ethics approval, fine-tuned BERT against BiLSTM and baselines, ran McNemar and bootstrap tests. Then I re-examined my own validation and found the model had been checked against labels from the same word list it learned from, and that I had assumed platforms were equal.',R:'I reported it openly and turned it into my first paper with Dr Haig: a six-step protocol, and a simulation showing that ignoring platform differences points the mood the wrong way on nearly a quarter of days.',P:'I find flaws in my own work and turn them into research; that is the project I want to continue.'},
+{t:'2 · Chevening',use:'motivation, why this topic',S:'In Pakistan in 2023, fuel and electricity price rises came close together and Karachi\'s trade bodies shut businesses in protest.',T:'Show how public sentiment data could help government time and explain such decisions, and win a scholarship to learn how.',A:'Proposed a central system collecting from major social platforms to analyse topics and sentiment for government and NGOs, building on my Dubizzle pipeline of 60+ sites and my work helping peers into remote careers.',R:'Selected as a Chevening Scholar for 2024/25; the proposal became my dissertation and then my paper.',P:'the question is years old and useful to the public, not a fashion.'},
+{t:'3 · Dubizzle',use:'leadership, teamwork',S:'Dubizzle Labs had no system for collecting market and customer data across its regions.',T:'Design the first one: 15 markets, English, Arabic, Urdu and Hindi.',A:'Designed the scraping architecture, led three engineers and hiring, set standards, added testing, and built dashboards on what customers said and how markets moved.',R:'60+ sites in a year feeding decision-makers; production incidents down 45%; promoted twice in about two years.',P:'I can lead a data effort, and I know how views read differently across languages, central to minority and migration discourse work.'},
+{t:'4 · Fluency study',use:'industry research, reproducibility',S:'A twelve-month discourse study for a client: what consumers said about a sport, nationally and in five cities.',T:'Code it reliably with AI so it could be checked and repeated, and fill a six-month Reddit gap in the vendor data.',A:'Built a BERTopic-derived codebook signed off by the client; LLM tagging with a prompt-version hash on every label; three pilots on the same 500 rows; filled the gap through the Reddit API as a separate source; reported Twitter and Reddit as two publics, never pooled.',R:'100,845 consumer mentions in the final deck, every figure traceable; when I re-checked the presented deck, every number held.',P:'I can build reproducible corpora for “Understanding narratives at scale” from day one.'},
+{t:'5 · Repair agents',use:'innovation, engineering judgement',S:'A fleet of 60+ forum crawlers for a global automaker; sites change and crawlers break silently.',T:'Keep the time series complete without an engineer fixing every break by hand.',A:'Built a self-healing agent that diagnoses a break, replays old working code first, else regenerates the crawler with Claude and tests it live before shipping; and a builder agent with a cost cap, a quality sample and human approval.',R:'The healer fixed 86% of crawlers; the builder succeeded 92% of the time over 1,697 runs.',P:'collection gaps are measurement error; I can keep a research corpus complete and auditable.'},
+{t:'6 · Agreement trap',use:'judging whether a model is right',S:'At Artemis AI we label millions of comments with AI models to train our own classifiers.',T:'Check whether our labelling models were still reliable over time.',A:'Noticed agreement between two models had risen on 3 of 5 tasks while both were collapsing onto the most common answer; moved checks to fixed human-checked labels and added drift monitoring.',R:'Caught silent failures, including post-sentiment agreement falling from 77% to 37%; we are now building a blind human gold set.',P:'validating AI labels against people is exactly Alexander Hoyle\'s area at CSH.'},
+{t:'7 · What is normal?',use:'thinking like a researcher',S:'Clients wanted alerts for “comment storms”.',T:'Define a storm that is real, not a false alarm.',A:'The team screened 207,192 comments on 369 busy posts (Feb–Jul); we turned busy-but-normal hours into a false-alarm test set and required several signals to agree against each page\'s normal.',R:'Almost none were real storms: the hard part is each page\'s baseline. We also found a 97% network-wide drop in July was a platform change, not content.',P:'polarisation and hostility need baselines per community and platform, like commenters vs watchers in Chen et al.'}];
+(function(){const tabsEl=document.getElementById('starTabs'),body=document.getElementById('starBody'),phd=document.getElementById('starPhd');
+stars.forEach((s,k)=>{const b=document.createElement('button');b.textContent=s.t;b.onclick=()=>show(k);tabsEl.appendChild(b);});
+function show(k){[...tabsEl.children].forEach((b,j)=>b.classList.toggle('on',j===k));const s=stars[k];
+body.innerHTML='<p class="hint" style="margin:0 0 4px">Use for: '+s.use+'</p>'+['S','T','A','R'].map(L=>'<div class="row"><div class="L">'+L+'</div><div>'+s[L]+'</div></div>').join('');
+[...body.querySelectorAll('.row')].forEach((r,j)=>setTimeout(()=>r.classList.add('in'),120*j+60));phd.textContent=s.P;}show(0);})();
+
 const qa=[
-['Tell us about yourself','The 60-second story in the cheat sheet: Dubizzle → Chevening → MSc → Fluency → Artemis AI → paper → CSH.'],
-['Describe a research project and what went wrong','STAR 1, the circular check. Finish on the lesson: always ask where the yardstick comes from.'],
-['What have you built in industry?','STAR 4 (Fluency) or STAR 5 (Artemis AI), then: “Brands and governments act on AI-labelled numbers rarely checked against people.”'],
-['Why a PhD, and why now?','Every job showed a new way measurements fail: languages at Dubizzle, my own check in the MSc, silent drift at Fluency, labels that look right while failing at Artemis AI. Industry let me find problems, not study them. CSH gives network science and causal inference.'],
-['Why CSH, why complexity science?','Opinion online is a system of people, platforms and algorithms; what we see is a selected slice. Chen et al. and Hoyle’s work match my question; I want to learn network science.'],
-['What would you study?','Answer 3: simulation → new data checked by people → effect on how narratives spread.'],
-['Strengths and gaps?','Strengths: data at scale, Python, AI labelling, careful checking. Gaps: network science, causal inference, with a plan to close them here.'],
-['Teamwork or leadership?','STAR 3 (Dubizzle); add: I lead the tech team of eight at Artemis AI.'],
-['How do you judge if a model is right?','STAR 5 or 6.'],
-['What drives you?','STAR 2 (Chevening).'],
+['Tell us about yourself','The 60-second story: Dubizzle → Chevening → MSc → Fluency → Artemis AI → paper → CSH.'],
+['Describe a research project and what went wrong','STAR 1. End on: always ask where the yardstick comes from.'],
+['Tell us about your paper','20-second version, then the six steps if they want more; mention the two-classifier check and the honest limits.'],
+['What did you do in your dissertation?','Aim, four platforms, 255,446 comments, BERT vs baselines, mini-budget dip; then the honest part about circular validation.'],
+['What have you built in industry?','STAR 4 (Fluency study) or STAR 5 (repair agents); then “brands act on AI-labelled numbers rarely checked against people”.'],
+['What is Artemis AI and your role?','CTO, team of eight, 20 consenting pages, 3M+ comments, 48 models for the beta, page graph for collaborations; then the honest bottom line.'],
+['Any network science experience?','Early page affinity graph and a Louvain community-detection prototype for collaboration matching; formal network science is what you want to learn at CSH.'],
+['Why a PhD, and why now?','Each job showed a new way measurements fail; industry let you find them, not study them. CSH gives network science and causal inference.'],
+['Why CSH, why complexity science?','Opinion online is a system of people, platforms and algorithms; what we see is a selected slice. Chen et al. and Hoyle\'s work match your question.'],
+['What would you study?','Answer 3: simulation → event-anchored data checked by people → remove the platform signal → effect on narrative spread.'],
+['Strengths and gaps?','Strengths: data at scale, Python, AI labelling, careful checking, early graph work. Gaps: network science, causal inference.'],
+['Teamwork or leadership?','STAR 3 (Dubizzle); add: you lead the technology at Artemis AI in a team of eight.'],
+['How do you judge if a model is right?','STAR 6 or 7.'],
+['What drives you?','STAR 2 (Chevening, the Karachi example).'],
 ['Where in five years?','Researching how online opinion is measured, so decisions rest on numbers checked against people.'],
 ['Questions for us?','“How are students matched with supervisors in the first year, and is co-supervision across groups common?”']];
 document.getElementById('qaList').innerHTML=qa.map(q=>'<details class="reveal in"><summary>'+q[0]+'</summary><div class="body">'+q[1]+'</div></details>').join('');
-
-// practice
 (function(){let cur=-1,left=60,tm=null;const pq=document.getElementById('pq'),pt=document.getElementById('pt'),ht=document.getElementById('pHintText');
 function render(){pt.textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');pt.classList.toggle('warn',left<=15);}
 document.getElementById('pNew').onclick=()=>{let n;do{n=Math.floor(Math.random()*qa.length)}while(n===cur&&qa.length>1);cur=n;pq.textContent=qa[n][0];pq.classList.remove('fade');void pq.offsetWidth;pq.classList.add('fade');ht.textContent='';clearInterval(tm);left=60;render();};
 document.getElementById('pStart').onclick=()=>{clearInterval(tm);left=60;render();tm=setInterval(()=>{left--;render();if(left<=0){clearInterval(tm);pt.textContent='Stop';}},1000);};
 document.getElementById('pHint').onclick=()=>{ht.textContent=cur>=0?qa[cur][1]:'Pick a question first.';};render();})();
-
-// glossary
-const gl=[['Sentiment analysis','Using a computer to judge if a text is positive, neutral or negative.'],['VADER','A simple tool that scores sentiment by looking words up in a list.'],['BERT, BiLSTM','AI models that learn to read text; BERT is newer and usually better.'],['LLM','Large language models (Claude, DeepSeek), used here to label posts instead of people.'],['Accuracy, F1','How often labels match a reference. Only meaningful if the reference is trustworthy.'],['Circular validation','Checking a model against labels from the same source it learned from. It proves little.'],['Measurement invariance','Does a measure mean the same thing in different groups (here, platforms)?'],['DIF','“Differential item functioning”: one label, like “negative”, behaving differently in one group.'],['Generalizability study','Splits a score’s variation into its sources: platform, model, event, people.'],['Score linking','Putting different scales onto one yardstick, like converting currencies.'],['Simulation with ground truth','A computer experiment where you set the true answer, to see how a method goes wrong.'],['Anchor events','Fixed news moments used to compare platforms on the same thing at the same time.'],['Data donation','People voluntarily share their own platform data (e.g. YouTube history) with researchers.'],['Polarisation','Groups moving apart; affective polarisation means disliking the other side.'],['Network diffusion','How ideas or narratives spread through connections between people or platforms.'],['Concept erasure','Removing one piece of information (such as which platform) from a model’s view of a text.'],['Preprint / arXiv','A public research paper shared before peer review.'],['Complexity science','Studying systems of many interacting parts (people, platforms, algorithms) whose overall behaviour emerges from those interactions.']];
+const gl=[['Sentiment analysis','Using a computer to judge if a text is positive, neutral or negative.'],['VADER','A simple tool that scores sentiment by looking words up in a list.'],['BERT, BiLSTM','AI models that learn to read text; BERT is newer and usually better.'],['XLM-R, DistilBERT, DeBERTa','Encoder models (they read text and sort it into classes); XLM-R handles many languages.'],['LLM','Large language models such as Claude and DeepSeek, used here to label posts.'],['BERTopic','Finds topics in a large set of texts by grouping similar ones.'],['Accuracy, F1, macro-F1','How often labels match a reference; macro-F1 treats each class equally. Only meaningful if the reference is trustworthy.'],['Cohen\'s kappa','Agreement between two labellers, corrected for chance.'],['Circular validation','Checking a model against labels from the same source it learned from. It proves little.'],['Calibration','Whether a model\'s “90% sure” really means right 90% of the time.'],['Measurement invariance','Does a measure mean the same thing in different groups (here, platforms)?'],['DIF','Differential item functioning: one label behaving differently in one group.'],['Generalizability study (G-study)','Splits a score\'s variation into its sources: platform, event, post, coder.'],['Score linking','Putting different scales onto one yardstick, like converting currencies.'],['Anchor events','Fixed news moments used to compare platforms on the same thing at the same time.'],['Simulation with ground truth','A computer experiment where you set the true answer to see how a method goes wrong.'],['Platform-affordance error','Error caused by a platform\'s features (limits, threading, audience) changing how people write (Sen et al. 2021).'],['Mode effect','Survey answers differing by how the question is asked (phone vs paper).'],['Data donation','People voluntarily share their own platform data with researchers.'],['Polarisation','Groups moving apart; affective polarisation means disliking the other side.'],['Network diffusion','How ideas or narratives spread through connections.'],['Community detection (Louvain)','An algorithm that finds tightly connected groups in a network.'],['Affinity graph','A network where links mean two things (here, pages) are similar.'],['Change-point detection','Finding the dates where a series suddenly changes behaviour.'],['Concept erasure','Removing one piece of information (such as which platform) from a model\'s view of a text.'],['MCP server','A server that gives an AI model a set of tools it can call safely.'],['Data drift','When incoming data changes so a model\'s labels stop being reliable.'],['Complexity science','Studying systems of many interacting parts whose overall behaviour emerges from those interactions.'],['Preprint / arXiv','A public research paper shared before peer review.']];
 (function(){const box=document.getElementById('gl'),s=document.getElementById('gs');function draw(q){q=(q||'').toLowerCase();box.innerHTML=gl.filter(g=>(g[0]+g[1]).toLowerCase().includes(q)).map(g=>'<div class="fade"><b>'+g[0]+'</b>'+g[1]+'</div>').join('')||'<div>No match.</div>';}s.oninput=()=>draw(s.value);draw();})();
 </script>
 </body>
