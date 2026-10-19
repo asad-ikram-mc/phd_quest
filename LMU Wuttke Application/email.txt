@@ -6,7 +6,7 @@ Dear Professor Wuttke,
 
 Your AI Conversational Interviewing paper found that voice and chat draw different answers out of the same people. I have spent the last two years on the same problem in social media, where every platform changes how an opinion gets written, and I would love to bring that to your Emmy Noether group as the PhD Researcher in Computational Social Science.
 
-In a paper with Dr Ella Haig (arXiv:2610.16757), we treat each platform as a survey mode; in our simulation, pooling platforms at face value gets the direction of public sentiment wrong on nearly a quarter of days. In industry I build the LLM side: at M+C Saatchi Fluency, self-healing agents that run to strict ground rules and approval gates, and at Artemis AI, the social media start-up I co-founded, a labelling chain in which Claude explains its labels and those explanations teach cheaper models, all checked against people before anything reaches users.
+In a paper with Dr Ella Haig (arXiv:2610.16757), we treat each platform as a survey mode; in our simulation, pooling platforms at face value gets the direction of public sentiment wrong on nearly a quarter of days. In industry I build the LLM side: at M+C Saatchi Fluency, self-healing agents that run to strict ground rules and approval gates, and at Artemis AI, the social media start-up I co-founded, a labelling chain in which Claude explains its labels and those explanations teach cheaper models, checked against posts our team labelled by hand.
 
 The question I would most like to work on with you: before democratic belief systems are compared across interview modes and your thirteen countries, do the topic and frame labels behind them mean the same thing in each?
 
