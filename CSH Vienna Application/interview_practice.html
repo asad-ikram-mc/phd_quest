@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>CSH preliminary interview: practice sheet</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>CSH interview practice, 20 Oct</title>
 <style>
 @page{size:A4;margin:14mm 16mm}
 body{font-family:Georgia,"Times New Roman",serif;font-size:10.6pt;line-height:1.34;color:#111;margin:0}
@@ -11,61 +11,67 @@ h2{font-size:11pt;color:#1d3f63;margin:9pt 0 2pt;border-bottom:.6pt solid #1d3f6
 ul{margin:2pt 0 2pt 14pt;padding:0}li{margin:0 0 1.5pt}
 .box{border:.6pt solid #bbb;background:#f6f7fa;padding:5pt 8pt;margin:6pt 0}
 </style></head><body>
-<h1>CSH preliminary interview: practice sheet</h1>
-<div class="sub">About 15 minutes, recorded, standard questions on your experience and interests, in English on Zoom. Aim for 60 to 90 seconds per answer, in your own words, not read out. Book on Calendly before 10 November.</div>
+<h1>CSH preliminary interview: practice sheet (v2)</h1>
+<div class="sub">Tue 20 Oct 2026, 4:40&ndash;4:55 pm UK = <b>8:40 pm Lahore</b> &middot; Zoom 843 5332 6447 (link in Carrie Cowan&rsquo;s email) &middot; about 10 minutes of standard questions, recorded, in English. Aim for <b>45&ndash;75 seconds</b> per answer, in your own words. They do not share questions in advance; they come from your experience and application.</div>
 
-<div class="box"><b>Three things to land in any answer.</b>
+<div class="box"><b>Three things to land in any answer.</b><br>
+<b>Your question:</b> do machine and LLM labels of online text mean the same thing across platforms, models and time, and how do we correct comparisons when they do not?<br>
+<b>Your proof:</b> your first paper, with Dr Ella Haig, published on arXiv on 14 October (2610.16757); it grew out of your own dissertation&rsquo;s circular validation.<br>
+<b>Your edge:</b> eight years collecting and labelling social media at scale (Dubizzle, Fluency, Artemis AI), so data is never your bottleneck, and you know where the labels go wrong in practice.</div>
+
+<h2>1. About you</h2>
+<p class="q">&ldquo;Tell us about yourself.&rdquo; (aim: 60 seconds)</p>
+<p class="a">I&rsquo;m a data engineer and researcher from Pakistan, and I work on social media data. I started web scraping on Fiverr as a computer science student and did more than 300 projects, then built Dubizzle Labs&rsquo; first scraping system across 15 markets in four languages and was promoted twice. A Chevening Scholarship took me to Portsmouth for an MSc in Data Analytics, where my dissertation compared public reaction to UK economic policy across X, Reddit, YouTube and Quora. Today I work on social media analysis at M+C Saatchi Fluency in London, for brands and UK government, and I&rsquo;m co-founder and CTO of Artemis AI, a social media intelligence start-up. Last week my first paper, with my supervisor, went live on arXiv.</p>
+<p class="tip">Chronological, ends on the paper, so the next question goes to research.</p>
+
+<h2>2. Research</h2>
+<p class="q">&ldquo;Describe a research project and your role.&rdquo;</p>
+<p class="a">My dissertation: I collected about 255,000 comments under ethics approval, fine-tuned BERT against BiLSTM and lexicon baselines, and tested the differences. The model looked very good, but I realised its labels had come from the VADER lexicon, so the check was circular. I&rsquo;d also assumed &ldquo;negative&rdquo; means the same on Reddit as on YouTube. With Dr Haig I turned that into a paper that treats each platform like a survey mode, the way survey researchers handle phone versus paper answers. I built the simulation: if you just add platforms together, the overall mood points the wrong way on nearly a quarter of days; correct each platform first and it drops to under one day in sixty.</p>
+<p class="q">&ldquo;What went wrong, and what did you learn?&rdquo;</p>
+<p class="a">That an agreement score describes the reference as much as the model. Now my first question is where the yardstick comes from and whether it&rsquo;s independent. At Artemis AI we check our labels against posts the team labelled by hand.</p>
+<p class="q">&ldquo;Explain your paper simply.&rdquo; (have the 20-second version ready)</p>
+<p class="a">AI reads opinions differently on Reddit than on YouTube, because people write differently on each. So adding platforms together can flip the answer. My paper gives a checklist to test whether a comparison is fair, and a way to correct it when it isn&rsquo;t.</p>
+
+<h2>3. Industry experience, told as research</h2>
+<p class="q">&ldquo;What have you built, and what did it teach you?&rdquo;</p>
 <ul>
-<li><b>Your question:</b> do machine and LLM labels of online text mean the same thing across platforms, models and time, and how do we correct comparisons when they do not?</li>
-<li><b>Your proof:</b> the paper with Dr Ella Haig, now on arXiv (2610.16757), which grew out of your own dissertation's circular validation.</li>
-<li><b>Your edge:</b> eight years collecting and labelling social media data at scale (Dubizzle, Fluency, Artemis AI), so data is never your bottleneck.</li>
-</ul></div>
-
-<h2>1. Introduce yourself</h2>
-<div class="q">"Tell us about yourself and your background."</div>
-<div class="a">I am a data engineer and researcher from Pakistan working on social media data. I started web scraping on Fiverr as a computer science student in 2018, built Dubizzle Labs' first scraping architecture across 15 markets in four languages, and was promoted twice. A Chevening Scholarship took me to Portsmouth for an MSc in Data Analytics, where my dissertation compared public reaction to UK economic policy across X, Reddit, YouTube and Quora. Today I analyse social media for global brands at M+C Saatchi Fluency and I am co-founder and CTO of Artemis AI, a social-media intelligence platform launching its beta in December. My paper with my supervisor is now on arXiv.</div>
-<div class="tip">Keep it chronological and end on the paper: it leads naturally into research.</div>
-
-<h2>2. Research experience</h2>
-<div class="q">"Describe a research project and your role."</div>
-<div class="a">My dissertation: I collected about 255,000 comments under ethics approval, compared a fine-tuned BERT classifier with BiLSTM and lexicon baselines, and tested differences with McNemar and bootstrap tests. The model scored a macro-F1 of 0.878, but I realised the labels it was scored against came from the VADER lexicon, so the validation was circular. That led to my paper with Dr Haig: we treat each platform as a survey mode and use generalizability theory, measurement invariance and score linking to test whether pooled sentiment means the same thing on each platform. I built the simulation; pooling at face value gets the sign of daily sentiment wrong on nearly a quarter of days.</div>
-<div class="q">"What went wrong, and what did you learn?"</div>
-<div class="a">That a high agreement score describes the reference as much as the model. Now the first thing I ask is where the criterion comes from and whether it is independent of what I am testing. I apply that at Artemis AI, where we are building evaluation around human-labelled data.</div>
-
-<h2>3. Motivation</h2>
-<div class="q">"Why do you want to do a PhD, and why now?"</div>
-<div class="a">Industry taught me to build systems that collect and label online data at scale; it did not teach me to show rigorously what those numbers say about people. Dashboards built on these pipelines inform brands and public bodies, and their numbers are rarely checked against people. I want the methods training to answer that properly, and to carry it back into how social media products are built. The paper showed me I enjoy that work most.</div>
-<div class="q">"Why CSH?"</div>
-<div class="a">Because the question needs network science and computational social science together. Chen, Kmetty, Iñiguez and Omodei showed that commenters are more polarised than people who only watch, which is my problem in another form: visible traces are a selected instrument. Alexander Hoyle's work on measurement and validation with NLP is the closest to mine, and the springboard projects on narratives at scale and polarisation online are where I want my question to go. I also want to learn the network science of diffusion, which I do not have yet.</div>
-
-<h2>4. Your PhD idea</h2>
-<div class="q">"What would you like to work on?"</div>
-<div class="a">Before we compare a narrative or polarisation measure across platforms, or across LLM annotators and time, we should test whether the comparison is licensed, and correct it when it is not. Step one extends my simulation so models and time are facets alongside platforms. Step two builds a corpus around events fixed in advance, coded by several LLMs, with a stratified hand-labelled sample per platform. Then I would put corrected and uncorrected measures into a diffusion analysis and report when conclusions change.</div>
-<div class="q">"Why is it tractable?"</div>
-<div class="a">The psychometric tools are mature, the simulation already runs, and data collection at scale has been my job for eight years. What is new is using platforms and annotator models as the groups.</div>
-
-<h2>5. Skills and working style</h2>
-<div class="q">"What are your technical strengths, and what are your gaps?"</div>
-<div class="a">Strengths: Python and SQL daily, large-scale collection, LLM labelling chains, fine-tuning classifiers, and the measurement-invariance and score-linking tools from the paper. Gaps: formal causal inference and network science. I would close them through the program's coursework and by applying them on a group project early.</div>
-<div class="q">"Tell us about working in a team or leading people."</div>
-<div class="a">At Dubizzle I led a three-engineer scraping and warehousing team; at VendueTech I led three engineers through an Azure-to-AWS migration; at Artemis AI I lead the technology team of a start-up heading to beta. I helped university students and junior colleagues into freelance and remote careers, which was part of why I won Chevening.</div>
-<div class="q">"How do you handle a setback?"</div>
-<div class="a">Use the dissertation story: I found my own validation was circular, said so openly, and turned it into a paper with my supervisor.</div>
-
-<h2>6. Practical and closing</h2>
-<div class="q">"Are you able to relocate to Vienna, and when could you start?"</div>
-<div class="a">Yes, I would relocate to Vienna for the program and can start on the program's timetable.</div>
-<div class="q">"Do you have any questions for us?"</div>
-<ul>
-<li>How are students matched with supervisors in the first year, and is co-supervision across groups common?</li>
-<li>How much access do students have to the Hub's data partnerships, for example donated or platform data?</li>
+<li><b>Fluency:</b> analyst on a twelve-month study of about 270,000 Brandwatch and Reddit mentions, with a topic codebook and LLM tagging where every tag records its prompt version, piloted three times before the full run. I also built AI agents that repair and create our collectors, with rules and approval gates.</li>
+<li><b>Artemis AI:</b> Claude labels posts and explains each label; rules mined from those explanations guide a cheaper model, whose labels train our own classifiers. We built a detector for sudden storms of hostile comments and filters so dialect and banter aren&rsquo;t read as toxicity, which is a measurement problem in miniature.</li>
+<li><b>Lesson:</b> the numbers that brands and governments act on are rarely checked against people. That&rsquo;s why I want a PhD.</li>
 </ul>
+
+<h2>4. Motivation and fit</h2>
+<p class="q">&ldquo;Why a PhD, and why now?&rdquo;</p>
+<p class="a">Industry taught me to collect and label online data at scale; it didn&rsquo;t teach me to show rigorously what those numbers say about people. Publishing the paper showed me this is the work I enjoy most, and I want the training to do it properly, then carry it back into how these tools are built.</p>
+<p class="q">&ldquo;Why CSH, and why complexity science?&rdquo;</p>
+<p class="a">Because opinion online is a system, not a pile of posts: people, platforms and algorithms shape each other, and what we can see is a selected slice. Chen, Kmetty, Iñiguez and Omodei showed that commenters are more polarised than people who only watch, which is my problem in another form. Alexander Hoyle&rsquo;s work on validating NLP measures is the closest to mine, and the narratives-at-scale and online polarisation projects are where my question goes next. I also want to learn network science and diffusion, which I don&rsquo;t have yet.</p>
+
+<h2>5. Your PhD idea</h2>
+<p class="q">&ldquo;What would you like to work on?&rdquo;</p>
+<p class="a">Before we compare a narrative or polarisation measure across platforms, LLM annotators or time, test whether the comparison is fair, and correct it when it isn&rsquo;t. First, extend my simulation so models and time are factors alongside platforms. Second, build a corpus around events fixed in advance, labelled by several LLMs with a hand-labelled sample per platform. Third, put corrected and uncorrected measures into a diffusion analysis and show when conclusions change.</p>
+<p class="q">&ldquo;Why is it doable?&rdquo;</p>
+<p class="a">The statistical tools are mature, the simulation already runs, and collecting data at scale has been my job for eight years. What&rsquo;s new is treating platforms and models as the groups being compared.</p>
+
+<h2>6. Working style</h2>
+<p class="q">&ldquo;Strengths and gaps?&rdquo;</p>
+<p class="a">Strengths: Python and SQL every day, large-scale collection, LLM labelling, fine-tuned classifiers, and the measurement tools from the paper. Gaps: formal causal inference and network science; I&rsquo;d close them through the coursework and an early group project.</p>
+<p class="q">&ldquo;Teamwork or leadership?&rdquo;</p>
+<p class="a">At Dubizzle I led three engineers; at VendueTech I led three through a cloud migration; at Artemis AI I lead the technology in a team of eight. I&rsquo;ve also helped students and junior colleagues into remote careers, which was part of my Chevening award.</p>
+<p class="q">&ldquo;A setback?&rdquo; Use the circular validation story: you found it yourself, said so, and turned it into a paper.</p>
+<p class="q">&ldquo;Where do you see yourself in five years?&rdquo;</p>
+<p class="a">Researching how online opinion is measured, working with platforms, public bodies or a lab, so that the numbers people act on are tested against people.</p>
+
+<h2>7. Practical and closing</h2>
+<p class="q">&ldquo;Relocate and start?&rdquo; Yes, I would move to Vienna and start on the program&rsquo;s timetable.</p>
+<p class="q">&ldquo;Questions for us?&rdquo; (pick one, there is little time)</p>
+<ul><li>How are students matched with supervisors in the first year, and is co-supervision across groups common?</li>
+<li>How much access do students have to the Hub&rsquo;s data partnerships, such as donated or platform data?</li></ul>
 
 <h2>On the day</h2>
 <ul>
-<li>Test Zoom, camera and microphone; quiet room, good light, look at the camera.</li>
-<li>Have your CV, answers and the arXiv page open, but do not read from them.</li>
-<li>Answer the question asked, then stop. Short and clear beats long.</li>
-<li>If you do not want the recording, they ask you to say so at the start; recording is normal, so just go ahead.</li>
+<li>Join at 8:35 pm Lahore time. Test Zoom, camera and microphone first; quiet room, light in front of you, look at the camera.</li>
+<li>Keep this sheet, your CV and the arXiv page open, but don&rsquo;t read. Answer the question, then stop.</li>
+<li>Recording is normal; only say something at the start if you object.</li>
+<li>Keep facts consistent with your CSH documents: 255,446 comments; team of eight at Artemis AI; paper on arXiv 2610.16757.</li>
 </ul>
 </body></html>
