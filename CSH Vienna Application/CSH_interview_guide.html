@@ -281,7 +281,15 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </div>
 <div class="card reveal" style="margin-top:14px;border-color:var(--coral)"><h4 style="color:var(--coral)">What you realised later</h4>BERT looked 88% accurate, but it was trained and checked on <b>VADER</b> labels, the same word list it learned from, so the score measured agreement with VADER, not with people. And you had assumed “negative” means the same on every platform. <b>That realisation became your paper.</b></div>
 <div class="say reveal"><span class="lbl">Say this</span>“My dissertation measured UK public mood about economic policy from 255,446 comments on four platforms. I labelled them with VADER, fine-tuned BERT on those labels and forecast mood with Prophet. BERT looked 88% accurate, but I realised it was checked against the same VADER labels it learned from, and I had assumed every platform measures the same way. That is exactly what my paper fixes.”</div>
-<details class="reveal"><summary>More detail, only if they ask</summary><div class="body">Models: BERT 88% vs BiLSTM 82% vs simple baselines, all measured against the word-list (VADER) labels. Tests: McNemar and bootstrap; forecasting with Prophet; emotions with the NRC word list. A few numbers in the text didn't match the code records (for example 279,000 vs 255,446 comments); the paper lists these openly. Ethics approved as low risk.</div></details>
+<details class="reveal"><summary>More detail, only if they ask</summary><div class="body"><ul style="margin:0;padding-left:18px">
+<li><b>Scores:</b> BERT 88% (macro-F1 0.878), BiLSTM 82%, logistic regression 71%, VADER 65%. All measured against the VADER labels, which is the problem.</li>
+<li><b>Hardest label:</b> “neutral”, often confused with “negative”.</li>
+<li><b>Tests:</b> McNemar (do two models make different mistakes?) and bootstrap (how sure are we?); chi-square (does mood differ by topic?).</li>
+<li><b>Confidence:</b> temperature scaling, so “90% sure” means right 90% of the time.</li>
+<li><b>Forecasting:</b> Prophet, trained to May 2025, tested on June 2025.</li>
+<li><b>Emotions and explanations:</b> NRC word list for emotions; LIME and integrated gradients show which words drove a decision.</li>
+<li><b>Records:</b> some numbers in the text don’t match the code (279,000 vs 255,446 comments). Your paper lists them openly. Always say 255,446.</li>
+<li><b>Ethics:</b> approved by Portsmouth as low risk (TETHIC-2025-111094).</li></ul></div></details>
 </section>
 
 <!-- 5 PAPER -->
@@ -351,12 +359,14 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <p class="hint" style="margin:10px 0 0">Days when the overall mood pointed the wrong way (happy when people were unhappy, or the reverse).</p></div>
 <div class="say reveal"><span class="lbl">Say this (20 seconds)</span>“People write differently on Reddit than on YouTube, so a sentiment model like BERT reads their opinions differently. Adding sites together can flip the answer: in my simulation the overall mood pointed the wrong way on nearly a quarter of days. My paper gives a checklist to test whether a comparison is fair, and a way to fix it.”</div>
 <details class="reveal"><summary>More detail, only if they ask</summary><div class="body"><ul style="margin:0;padding-left:18px">
-<li><b>Your part:</b> you built the computer experiment and the dissertation example; written with Dr Haig.</li>
-<li><b>The gap:</b> researchers knew platforms shape how people write (Sen et al. 2021 call it “platform-affordance error”) but nobody had a test for it.</li>
-<li><b>Technical names of the steps:</b> same-event comparison, reliability study, measurement invariance and DIF, multilevel adjustment, score linking, simulation.</li>
-<li><b>Fairness built in:</b> 15 UK budget events (centred on the 2022 mini-budget) were fixed before looking at data; every test is repeated with a second AI model.</li>
-<li><b>Limits:</b> it's a method plus an experiment; real data on all four platforms is the next study. UK and English only.</li>
-<li><b>Timeline:</b> idea from the MSc → written with Dr Haig → live on arXiv 14 Oct 2026.</li></ul></div></details>
+<li><b>Your part:</b> you built the simulation and the dissertation example; you wrote it with Dr Ella Haig.</li>
+<li><b>The gap:</b> researchers knew platforms change how people write (Sen et al. 2021: “platform-affordance error”) but nobody had a test for it.</li>
+<li><b>Step names:</b> same-event comparison → G-study → measurement invariance and DIF → multilevel model → score linking → simulation.</li>
+<li><b>Built-in fairness:</b> 15 UK budget events, centred on the 2022 mini-budget, chosen before looking at data; every test repeated with a second model (RoBERTa).</li>
+<li><b>What’s new:</b> earlier work treated annotators, prompts or surveys as the source of error; yours treats the platform itself.</li>
+<li><b>Limits:</b> who posts mixes with how the platform shapes posts; four platforms; UK and English only; feeling, not policy support; real data is the next study.</li>
+<li><b>Where:</b> arXiv 2610.16757 (cs.LG, also cs.CL, cs.CY, cs.SI); code on GitHub (asadfix/platform-measurement).</li>
+<li><b>When:</b> idea from the MSc (2025) → events fixed 21 Aug 2026 → live on arXiv 14 Oct 2026.</li></ul></div></details>
 </section>
 
 <!-- 6 FLUENCY -->
