@@ -299,6 +299,43 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <h3 class="reveal">The 6 steps (tap through)</h3>
 <div class="card stepper reveal" id="stepper"><div class="dots"></div><div class="panel"></div>
 <div class="ctrl"><button class="btn" data-d="-1">Back</button><button class="btn pri" data-d="1">Next</button></div></div>
+<h3 class="reveal">How your simulation works</h3>
+<div class="card reveal">
+<p style="margin-top:0">A <b>simulation</b> is a computer experiment: you invent data where you <b>already know the true answer</b>, then check whether a method finds it. You wrote it in <b>Python</b> (NumPy), and the code is public on GitHub (asadfix/platform-measurement).</p>
+<svg viewBox="0 0 680 470" width="100%" role="img" aria-label="How the simulator works">
+<defs><marker id="ah5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
+<g class="n-teal box"><rect x="170" y="10" width="340" height="62" rx="10"/><text x="340" y="33" text-anchor="middle" font-weight="700" font-size="14">1. True public mood (you set it)</text><text x="340" y="53" text-anchor="middle" class="sub">60 days; a drop at an event, recovering over ~10 days</text></g>
+<g class="flow" style="color:var(--mut)"><path d="M260 72 L130 112" marker-end="url(#ah5)"/><path d="M340 72 L340 112" marker-end="url(#ah5)"/><path d="M420 72 L550 112" marker-end="url(#ah5)"/></g>
+<g class="n-pur box"><rect x="30" y="116" width="200" height="70" rx="10"/><text x="130" y="138" text-anchor="middle" font-weight="700" font-size="13">Platform A</text><text x="130" y="156" text-anchor="middle" class="sub">own bias + noise</text><text x="130" y="172" text-anchor="middle" class="sub">own cut-offs</text></g>
+<g class="n-pur box"><rect x="240" y="116" width="200" height="70" rx="10"/><text x="340" y="138" text-anchor="middle" font-weight="700" font-size="13">Platform B</text><text x="340" y="156" text-anchor="middle" class="sub">own bias + noise</text><text x="340" y="172" text-anchor="middle" class="sub">own cut-offs</text></g>
+<g class="n-pur box"><rect x="450" y="116" width="200" height="70" rx="10"/><text x="550" y="138" text-anchor="middle" font-weight="700" font-size="13">Platform C</text><text x="550" y="156" text-anchor="middle" class="sub">own bias + noise</text><text x="550" y="172" text-anchor="middle" class="sub">own cut-offs</text></g>
+<g class="flow" style="color:var(--mut)"><path d="M130 186 L250 226" marker-end="url(#ah5)"/><path d="M340 186 L340 226" marker-end="url(#ah5)"/><path d="M550 186 L430 226" marker-end="url(#ah5)"/></g>
+<g class="n-gray box"><rect x="170" y="230" width="340" height="62" rx="10"/><text x="340" y="253" text-anchor="middle" font-weight="700" font-size="14">2. Each post becomes −, 0 or +</text><text x="340" y="273" text-anchor="middle" class="sub">like an AI label; each site’s share of posts drifts a little</text></g>
+<g class="flow" style="color:var(--mut)"><path d="M280 292 L170 332" marker-end="url(#ah5)"/><path d="M400 292 L510 332" marker-end="url(#ah5)"/></g>
+<g class="n-coral box"><rect x="40" y="336" width="260" height="62" rx="10"/><text x="170" y="359" text-anchor="middle" font-weight="700" font-size="14">3a. Naive index</text><text x="170" y="379" text-anchor="middle" class="sub">just average all sites</text></g>
+<g class="n-teal box"><rect x="380" y="336" width="260" height="62" rx="10"/><text x="510" y="359" text-anchor="middle" font-weight="700" font-size="14">3b. Adjusted index</text><text x="510" y="379" text-anchor="middle" class="sub">undo each site’s bias, then average</text></g>
+<g class="flow" style="color:var(--mut)"><path d="M170 398 L280 426" marker-end="url(#ah5)"/><path d="M510 398 L400 426" marker-end="url(#ah5)"/></g>
+<g class="n-gray box"><rect x="170" y="420" width="340" height="44" rx="10"/><text x="340" y="447" text-anchor="middle" font-weight="700" font-size="13">4. Compare with the truth, every day · repeat 500 times</text></g>
+</svg>
+<ul style="margin:8px 0 0;padding-left:18px">
+<li><b>What “bias, noise, cut-offs” mean:</b> on one site people sound harsher (bias), posts vary (noise), and the AI draws its positive/negative lines in different places (cut-offs). Same true mood, different labels.</li>
+<li><b>Result:</b> the naive index pointed the wrong way on <b>13.8 of 60 days</b>; the adjusted index on <b>0.8</b>. The more the sites differ, the worse the naive index gets.</li>
+<li><b>Honest note:</b> in the simulation you <i>know</i> each site’s bias; with real data it must be estimated, which is what steps 1–5 do.</li>
+</ul></div>
+
+<h3 class="reveal">VADER in the MSc, and what changes in the paper</h3>
+<table class="reveal">
+<tr><th></th><th>MSc dissertation</th><th>Paper (the protocol)</th></tr>
+<tr><td><b>Where labels come from</b></td><td><b>VADER</b> labelled every post; BERT learned from those labels</td><td>Machine labels are kept, but VADER is no longer the judge</td></tr>
+<tr><td><b>The yardstick</b></td><td>VADER’s own labels (circular)</td><td><b>People:</b> 1,000–1,500 comments labelled by hand, <b>blind</b> to the AI, sampled across platforms and events</td></tr>
+<tr><td><b>Second opinion</b></td><td>One person (you) reviewed 200 VADER labels</td><td>A <b>second human annotator</b> on a quarter to a third of the sample</td></tr>
+<tr><td><b>Second model</b></td><td>None</td><td>Every test repeated with a <b>non-word-list model</b> (a <b>RoBERTa</b> sentiment classifier); a platform difference only counts if <b>both</b> models show it</td></tr>
+<tr><td><b>Comparing platforms</b></td><td>Assumed equal; all posts pooled</td><td>Tested first (same events, invariance and DIF), then linked onto one scale</td></tr>
+<tr><td><b>Choices made</b></td><td>After seeing the data</td><td><b>Before</b>: 15 events fixed on 21 Aug 2026</td></tr>
+<tr><td><b>Evidence so far</b></td><td>Real data</td><td>The <b>simulation</b> (no VADER at all: data with a known truth). The real-data run is the next study.</td></tr>
+</table>
+<div class="say reveal"><span class="lbl">If asked “You used VADER, what do you do differently now?”</span>“In my MSc, VADER labelled everything and BERT was judged against VADER, so it was circular. In the paper, people become the yardstick: a blind, hand-labelled sample with a second annotator. Every test is repeated with a different kind of model, a RoBERTa classifier, so a difference only counts if both agree. And I fixed the events in advance. The paper shows in a simulation why this matters; running it on real data is the next study.”</div>
+
 <h3 class="reveal">The result</h3>
 <div class="card reveal" id="bars"><div class="bars">
 <div class="brow"><span>Just add sites together</span><div class="track"><div class="fill bad" data-w="23"></div></div><b>~14 of 60 days wrong</b></div>
