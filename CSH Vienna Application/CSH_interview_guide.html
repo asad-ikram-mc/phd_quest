@@ -160,6 +160,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 .needs{display:grid;gap:8px}.nrow{display:grid;grid-template-columns:1fr 1.5fr 1.1fr;gap:8px}.nrow>div{border-radius:10px;padding:10px 12px;font-size:14px;background:var(--card);border:1px solid var(--line)}.nrow>div:first-child{background:var(--purple-bg);color:var(--purple);border:none}.nrow>div:first-child span{display:block;font-size:12.5px;opacity:.85;margin-top:2px}.nrow .ok2{background:var(--teal-bg);color:var(--teal);border:none}.nrow .gap2{background:var(--amber-bg);color:var(--amber);border:none}.nrow.head>div{background:none!important;border:none;color:var(--mut);font-weight:600;padding:2px 12px}@media(max-width:620px){.nrow{grid-template-columns:1fr}.nrow.head{display:none}}
 .chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13.5px}.chain span{background:var(--purple-bg);color:var(--purple);border-radius:8px;padding:5px 9px}.chain i{color:var(--mut);font-style:normal}
 .pulse{animation:pulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes pulse{50%{transform:scale(1.35)}}.matchline{animation:dash 1.2s linear infinite}@media (prefers-reduced-motion: reduce){.pulse,.matchline{animation:none}}
+.gl .ex{display:block;margin-top:5px;font-size:12.5px;color:var(--teal);font-weight:600}
 </style>
 </head>
 <body>
@@ -512,7 +513,12 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </section>
 
 <section id="practice">
-<h2 class="reveal">12. Practice mode<small>Press “New question”, answer out loud, beat the timer.</small></h2>
+<h2 class="reveal">12. Practice mode<small>Rehearse out loud, like the real interview.</small></h2>
+<div class="grid g3 reveal" style="margin-bottom:12px">
+<div class="card"><h4>1. Get a question</h4>Press <b>New question</b>. It picks one of the likely questions at random.</div>
+<div class="card"><h4>2. Answer out loud</h4>Press <b>Start 60s</b> and answer: main point, one example with one technical name (VADER, BERT, the simulation), then stop.</div>
+<div class="card"><h4>3. Check</h4>Press <b>Show hint</b> to compare with the suggested answer. Repeat 5–6 times.</div>
+</div>
 <div class="card practice reveal">
 <div class="q" id="pq">Ready when you are.</div><div class="timer" id="pt">1:00</div>
 <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap"><button class="btn pri" id="pNew">New question</button><button class="btn" id="pStart">Start 60s</button><button class="btn" id="pHint">Show hint</button></div>
@@ -520,7 +526,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </section>
 
 <section id="gloss">
-<h2 class="reveal">13. Glossary<small>Hard words, made simple. Type to search.</small></h2>
+<h2 class="reveal">13. Glossary<small>Each technical word in plain English, and where it shows up in your work. Type to search.</small></h2>
 <input type="search" id="gs" placeholder="Search a term, e.g. invariance" class="reveal">
 <div class="gl" id="gl"></div>
 </section>
@@ -627,8 +633,42 @@ function render(){pt.textContent=Math.floor(left/60)+':'+String(left%60).padStar
 document.getElementById('pNew').onclick=()=>{let n;do{n=Math.floor(Math.random()*qa.length)}while(n===cur&&qa.length>1);cur=n;pq.textContent=qa[n][0];pq.classList.remove('fade');void pq.offsetWidth;pq.classList.add('fade');ht.textContent='';clearInterval(tm);left=60;render();};
 document.getElementById('pStart').onclick=()=>{clearInterval(tm);left=60;render();tm=setInterval(()=>{left--;render();if(left<=0){clearInterval(tm);pt.textContent='Stop';}},1000);};
 document.getElementById('pHint').onclick=()=>{ht.innerHTML=cur>=0?qa[cur][1]:'Pick a question first.';};render();})();
-const gl=[['Sentiment analysis','Using a computer to judge if a text is positive, neutral or negative.'],['VADER','A simple tool that scores sentiment by looking words up in a list.'],['BERT, BiLSTM','AI models that learn to read text; BERT is newer and usually better.'],['XLM-R, DistilBERT, DeBERTa','Encoder models (they read text and sort it into classes); XLM-R handles many languages.'],['LLM','Large language models such as Claude and DeepSeek, used here to label posts.'],['BERTopic','Finds topics in a large set of texts by grouping similar ones.'],['Accuracy, F1, macro-F1','How often labels match a reference; macro-F1 treats each class equally. Only meaningful if the reference is trustworthy.'],['Cohen\'s kappa','Agreement between two labellers, corrected for chance.'],['Circular validation','Checking a model against labels from the same source it learned from. It proves little.'],['Calibration','Whether a model\'s “90% sure” really means right 90% of the time.'],['Measurement invariance','Does a measure mean the same thing in different groups (here, platforms)?'],['DIF','Differential item functioning: one label behaving differently in one group.'],['Generalizability study (G-study)','Splits a score\'s variation into its sources: platform, event, post, coder.'],['Score linking','Putting different scales onto one yardstick, like converting currencies.'],['Anchor events','Fixed news moments used to compare platforms on the same thing at the same time.'],['Simulation with ground truth','A computer experiment where you set the true answer to see how a method goes wrong.'],['Platform-affordance error','Error caused by a platform\'s features (limits, threading, audience) changing how people write (Sen et al. 2021).'],['Mode effect','Survey answers differing by how the question is asked (phone vs paper).'],['Data donation','People voluntarily share their own platform data with researchers.'],['Polarisation','Groups moving apart; affective polarisation means disliking the other side.'],['Network diffusion','How ideas or narratives spread through connections.'],['Community detection (Louvain)','An algorithm that finds tightly connected groups in a network.'],['Affinity graph','A network where links mean two things (here, pages) are similar.'],['Change-point detection','Finding the dates where a series suddenly changes behaviour.'],['Concept erasure','Removing one piece of information (such as which platform) from a model\'s view of a text.'],['MCP server','A server that gives an AI model a set of tools it can call safely.'],['Data drift','When incoming data changes so a model\'s labels stop being reliable.'],['Complexity science','Studying systems of many interacting parts whose overall behaviour emerges from those interactions.'],['Preprint / arXiv','A public research paper shared before peer review.']];
-(function(){const box=document.getElementById('gl'),s=document.getElementById('gs');function draw(q){q=(q||'').toLowerCase();box.innerHTML=gl.filter(g=>(g[0]+g[1]).toLowerCase().includes(q)).map(g=>'<div class="fade"><b>'+g[0]+'</b>'+g[1]+'</div>').join('')||'<div>No match.</div>';}s.oninput=()=>draw(s.value);draw();})();
+const gl=[
+['Sentiment analysis','A computer deciding if a text is positive, neutral or negative.','Your MSc and Artemis AI.'],
+['VADER','A ready-made word list that scores sentiment by adding up word scores.','Gave the first labels in your MSc.'],
+['BERT','An AI language model that reads whole sentences; you can train (fine-tune) it on your own labels.','Your MSc model, 88% against VADER labels.'],
+['BiLSTM','An older AI model that reads text forwards and backwards.','Your MSc comparison model (82%).'],
+['XLM-R, DistilBERT, DeBERTa','Text-reading AI models (encoders). XLM-R understands many languages.','Your own models at Artemis AI.'],
+['LLM','Large language model, such as Claude, GPT or DeepSeek, used here to label posts instead of people.','Artemis AI labelling; Fluency tagging (GPT-4o-mini).'],
+['BERTopic','A tool that groups thousands of texts into topics automatically.','Found the themes in the Fluency study.'],
+['Prophet','A forecasting tool for data that changes over time.','Forecast daily mood in your MSc.'],
+['Accuracy, F1, macro-F1','Scores for how often labels match a reference. Macro-F1 treats each class equally. Only trustworthy if the reference is.','BERT’s 88% / 0.878.'],
+['Cohen’s kappa','How much two labellers agree, beyond luck.','Your MSc 0.78 was you vs VADER, not two people.'],
+['Circular validation','Checking a model against labels from the same source it learned from. It proves little.','The flaw you found in your MSc.'],
+['Calibration','Whether “90% sure” really means right 90% of the time.','Temperature scaling in your MSc.'],
+['McNemar test, bootstrap','McNemar: do two models really make different mistakes? Bootstrap: resample the data many times to see how certain a result is.','Your MSc model comparison.'],
+['Measurement invariance','Does a measure mean the same thing in different groups (here, platforms)?','Step 3 of your paper.'],
+['DIF','Differential item functioning: one label (like “negative”) behaving differently in one group.','Step 3 of your paper.'],
+['Generalizability study (G-study)','Splits a score’s variation into where it comes from: platform, event, post, coder.','Step 2 of your paper.'],
+['Score linking','Putting different scales onto one yardstick, like converting currencies before adding.','Step 5 of your paper.'],
+['Anchor events','Fixed news moments used to compare platforms on the same thing at the same time.','15 UK budget events, fixed before looking at data.'],
+['Simulation (with ground truth)','A computer experiment where you set the true answer, so you can see how a method goes wrong.','Your paper: 13.8 vs 0.8 wrong days out of 60.'],
+['Platform-affordance error','A platform’s features (length limits, threads, audience) change how people write, and so how AI scores them (Sen et al. 2021).','The gap your paper tests.'],
+['Mode effect','Survey answers changing with how the question is asked (phone vs paper).','The idea your paper borrows.'],
+['RoBERTa','Another AI text model, used as a second opinion so results aren’t one tool’s quirk.','The check model in your paper.'],
+['Data drift','Incoming data changes, so a model’s labels quietly stop being reliable.','Artemis AI: 77% → 37%.'],
+['Data donation','People share their own platform data (e.g. YouTube history) with researchers.','Chen et al., your Answer 2.'],
+['Polarisation','Groups moving apart in opinion. Affective polarisation: disliking the other side.','CSH springboard project.'],
+['Network diffusion','How ideas or narratives spread through connections.','Your planned Paper 3.'],
+['Affinity graph','A network where a link means two things (here, pages) are similar.','Artemis AI page network.'],
+['Louvain community detection','A method that finds tightly connected groups in a network.','Artemis AI page communities.'],
+['Change-point detection','Finding the dates where a series suddenly changes.','Artemis AI era detector.'],
+['Concept erasure','Removing one piece of information (such as which platform) from how a model represents text.','Step in your Answer 3.'],
+['MCP server','A server that gives an AI a safe set of tools it can use.','Fluency crawler agents (Claude).'],
+['Scrapy','A Python framework for building web crawlers.','Fluency and Dubizzle crawlers.'],
+['Complexity science','Studying systems of many interacting parts (people, platforms, algorithms) whose overall behaviour emerges from them.','The CSH program.'],
+['Preprint / arXiv','A public research paper shared before peer review.','Your paper, 2610.16757.']];
+(function(){const box=document.getElementById('gl'),s=document.getElementById('gs');function draw(q){q=(q||'').toLowerCase();box.innerHTML=gl.filter(g=>(g[0]+g[1]+g[2]).toLowerCase().includes(q)).map(g=>'<div class="fade"><b>'+g[0]+'</b>'+g[1]+'<span class="ex">In your work: '+g[2]+'</span></div>').join('')||'<div>No match.</div>';}s.oninput=()=>draw(s.value);draw();})();
 </script>
 </body>
 </html>
