@@ -157,6 +157,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 .c-pilot,.c-shadow,.c-prototype{background:var(--amber-bg);color:var(--amber)}.c-planned,.c-parked{background:var(--line);color:var(--mut)}
 .tl2{display:grid;gap:10px}.tl2>div{border-left:3px solid var(--purple);padding:2px 0 2px 12px;font-size:14.5px}.yrp{display:inline-block;background:var(--purple-bg);color:var(--purple);font-weight:800;font-size:12px;border-radius:999px;padding:1px 9px;margin-right:6px}.pg{display:block;font-size:12.5px;color:var(--teal);font-weight:600;margin-top:3px}.pg:before{content:"↳ "}
 .crit{display:grid;grid-template-columns:1.1fr 1.6fr .6fr;gap:8px;margin:8px 0}.crit>div{border-radius:10px;padding:10px 12px;font-size:14px}.crit .cq{background:var(--purple-bg);color:var(--purple)}.crit .cq span{display:block;font-size:12.5px;opacity:.85;margin-top:3px;font-style:italic}.crit .ce{background:var(--card);border:1px solid var(--line)}.crit .cs{background:var(--teal-bg);color:var(--teal);font-weight:700;font-size:13px}.crit.head>div{background:none;border:none;color:var(--mut);padding:2px 12px}@media(max-width:620px){.crit{grid-template-columns:1fr}.crit.head{display:none}}
+.needs{display:grid;gap:8px}.nrow{display:grid;grid-template-columns:1fr 1.5fr 1.1fr;gap:8px}.nrow>div{border-radius:10px;padding:10px 12px;font-size:14px;background:var(--card);border:1px solid var(--line)}.nrow>div:first-child{background:var(--purple-bg);color:var(--purple);border:none}.nrow>div:first-child span{display:block;font-size:12.5px;opacity:.85;margin-top:2px}.nrow .ok2{background:var(--teal-bg);color:var(--teal);border:none}.nrow .gap2{background:var(--amber-bg);color:var(--amber);border:none}.nrow.head>div{background:none!important;border:none;color:var(--mut);font-weight:600;padding:2px 12px}@media(max-width:620px){.nrow{grid-template-columns:1fr}.nrow.head{display:none}}
 </style>
 </head>
 <body>
@@ -315,24 +316,37 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 
 <!-- 6 FLUENCY -->
 <section id="fluency">
-<h2 class="reveal">6. Fluency: every project<small>M+C Saatchi Fluency, London · Data Engineer Consultant · Dec 2024 → · part-time remote. Use client names only if asked; “a global brand” is safest.</small></h2>
-<div class="card reveal"><div class="tabs" id="fluTabs"></div><div id="fluBody"></div></div>
-<h3 class="reveal">Habits that run through all of it</h3>
-<div class="grid g2">
-<div class="card reveal"><h4>A prompt is an instrument</h4>Version hashes, pilots on the same rows, hand checks before the full run.</div>
-<div class="card reveal"><h4>Silent failure is a measurement problem</h4>A collector that breaks quietly thins the time series, so you monitor and repair it.</div>
-<div class="card reveal"><h4>Estimates are labelled</h4>Model-estimated numbers go in separate “estimated” columns, never mixed with real ones.</div>
-<div class="card reveal"><h4>Never blend publics</h4>Twitter and Reddit reported as “two publics”, not pooled: your paper's idea, used in industry.</div>
+<h2 class="reveal">6. Fluency, simply<small>M+C Saatchi Fluency, London · Data Engineer Consultant · since Dec 2024 · part-time remote</small></h2>
+<div class="card reveal"><h4>In one sentence</h4>Fluency studies what people say about big brands on social media; you collect that data, label it with AI, check it, and help turn it into reports for clients.</div>
+<div class="grid g3" style="margin-top:14px">
+<div class="card reveal"><h4>Research</h4>A year-long study of what US fans said about a sport: <b>100,845 posts</b>, grouped into 18 themes, labelled by AI, every label traceable, tested three times on the same 500 posts first.</div>
+<div class="card reveal"><h4>Data collection</h4>60+ crawlers collecting car-owner forums across Europe, kept running by AI agents that <b>fix broken crawlers themselves</b> and test the fix before it goes live.</div>
+<div class="card reveal"><h4>Quality</h4>A weekly pipeline of about <b>2 million rows</b> for a global brand, with an 89-point quality check before anyone uses the numbers.</div>
 </div>
-<div class="say reveal"><span class="lbl">Say it</span>“In a twelve-month discourse study I built a codebook from BERTopic, tagged with an LLM that stamps every label with its prompt version, piloted three times on the same 500 rows, and reported Twitter and Reddit as two publics, never pooled. That is my paper's idea applied in industry.”</div>
-<div class="card reveal" style="border-color:var(--coral)"><h4 style="color:var(--coral)">Don't say in the interview</h4>Client incidents or confidential findings; security issues; anti-bot or proxy techniques (say “official APIs where available, polite rate limits, terms-of-service review”); and don't claim the UK government or Alexa+ work as built by you.</div>
+<div class="card reveal" style="margin-top:14px;border-color:var(--teal)"><h4 style="color:var(--teal)">The link to your PhD</h4>In the year-long study you reported Twitter and Reddit as <b>“two publics”, never added together</b>: your paper's idea, used in real client work.</div>
+<div class="say reveal"><span class="lbl">Say this</span>“At Fluency I collect and label social media data for global brands. In a year-long study I made every AI label traceable, tested it before the full run, and kept Twitter and Reddit as two separate publics, never pooled. It's my research question in practice.”</div>
+<details class="reveal"><summary>More detail: every project (only if they ask)</summary><div class="body"><div class="tabs" id="fluTabs"></div><div id="fluBody"></div>
+<p class="hint" style="margin-top:10px"><b>Don't say:</b> client incidents or confidential findings; anti-bot or proxy techniques (say “official APIs where available, polite rate limits”); don't claim the government dashboard or Alexa+ as built by you.</p></div></details>
 </section>
 
 <!-- 7 ARTEMIS -->
 <section id="artemis">
-<h2 class="reveal">7. Artemis AI in depth<small>Co-founder &amp; CTO · social media intelligence for creators and businesses · team of eight · beta 15 Dec 2026 · pilots 1 Dec</small></h2>
-<div class="card reveal">
-<h4>The system, end to end</h4>
+<h2 class="reveal">7. Artemis AI, simply<small>Co-founder and CTO · team of eight · beta on 15 Dec 2026</small></h2>
+<div class="card reveal"><h4>In one sentence</h4>Artemis AI helps creators and businesses understand their social media pages: what people are saying, what is working, when a wave of hostile comments starts, and which pages they could collaborate with.</div>
+<div class="grid g3" style="margin-top:14px">
+<div class="card reveal"><h4>The data</h4>20 consenting Facebook pages; <b>111,000+ posts and 3M+ comments</b>, plus images and videos, collected through Meta's official API.</div>
+<div class="card reveal"><h4>The AI</h4>A stronger AI labels a sample and explains why; a cheaper AI learns those rules and labels the rest; your own models learn from both; people check samples. <b>48 models</b> are planned for the beta.</div>
+<div class="card reveal"><h4>The network</h4>An early map of how pages relate (an <b>affinity graph</b>), grouping similar pages into communities, to suggest good collaborations. Mostly still being built.</div>
+</div>
+<h3 class="reveal">What it taught you (the research lessons)</h3>
+<div class="grid g2">
+<div class="card reveal"><h4>Agreement can lie</h4>Two AI models agreed <i>more</i> while both were getting <i>worse</i>. So you check AI against people, not against other AI.</div>
+<div class="card reveal"><h4>Labels drift</h4>One measure fell from 77% to 37% in weeks without anyone noticing. So you monitor labels all the time.</div>
+<div class="card reveal"><h4>“Normal” is hard</h4>Out of 207,192 comments on busy posts, almost none were real hostile storms. Every page needs its own baseline.</div>
+<div class="card reveal"><h4>Words depend on the group</h4>Banter and dialect get mistaken for abuse, so you built filters for them.</div>
+</div>
+<div class="say reveal"><span class="lbl">Say this</span>“At Artemis AI, my start-up, we label millions of comments with AI. I learned that labels can look reliable exactly when they're failing, and that every page needs its own baseline. We're building a human-checked test set now. Measuring whether AI labels are right is exactly what I want to study at CSH, and I'd like to learn network science to do the page network properly.”</div>
+<details class="reveal"><summary>More detail: architecture and all 48 models (only if they ask)</summary><div class="body">
 <svg viewBox="0 0 680 300" width="100%" role="img" aria-label="Artemis AI architecture from Meta to the app">
 <defs><marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
 <g class="n-gray box"><rect x="10" y="20" width="150" height="56" rx="10"/><text x="85" y="42" text-anchor="middle" font-weight="700" font-size="13">Meta Graph API</text><text x="85" y="60" text-anchor="middle" class="sub">20 consenting pages</text></g>
@@ -345,43 +359,10 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <g class="n-coral box"><rect x="10" y="144" width="150" height="56" rx="10"/><text x="85" y="166" text-anchor="middle" font-weight="700" font-size="13">App + Art-E</text><text x="85" y="184" text-anchor="middle" class="sub">briefing, alerts, advice</text></g>
 <g class="flow" style="color:var(--mut)"><line x1="370" y1="172" x2="344" y2="172" marker-end="url(#ah3)"/><line x1="190" y1="172" x2="164" y2="172" marker-end="url(#ah3)"/></g>
 <g class="n-gray box"><rect x="190" y="230" width="330" height="52" rx="10"/><text x="355" y="251" text-anchor="middle" font-weight="700" font-size="13">Admin panel: 1,438 tickets · accuracy tracker</text><text x="355" y="269" text-anchor="middle" class="sub">QA dashboard · alerts for checks that stopped running</text></g>
-</svg></div>
-<h3 class="reveal">The 48 models, by group (tap a group)</h3>
-<div class="card reveal"><div class="tabs" id="modTabs"></div><div id="modBody"></div>
-<p class="hint" style="margin:10px 0 0">Status today: 2 of 35 product models finished, 11 in progress; the rest planned. Say “48 models in the agreed architecture, being built for the beta”.</p></div>
-<h3 class="reveal">The labelling chain</h3>
-<div class="card reveal">
-<svg viewBox="0 0 680 130" width="100%" role="img" aria-label="Labelling chain">
-<defs><marker id="ah4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
-<g class="n-pur box"><rect x="4" y="30" width="122" height="64" rx="10"/><text x="65" y="54" text-anchor="middle" font-weight="700" font-size="13">Claude</text><text x="65" y="72" text-anchor="middle" class="sub">6,000 labels + reasons</text></g>
-<g class="n-pur box"><rect x="140" y="30" width="122" height="64" rx="10"/><text x="201" y="54" text-anchor="middle" font-weight="700" font-size="13">Mine rules</text><text x="201" y="72" text-anchor="middle" class="sub">IF signal THEN label</text></g>
-<g class="n-pur box"><rect x="276" y="30" width="122" height="64" rx="10"/><text x="337" y="54" text-anchor="middle" font-weight="700" font-size="13">DeepSeek</text><text x="337" y="72" text-anchor="middle" class="sub">12,000 more, cheaper</text></g>
-<g class="n-teal box"><rect x="412" y="30" width="122" height="64" rx="10"/><text x="473" y="54" text-anchor="middle" font-weight="700" font-size="13">Our models</text><text x="473" y="72" text-anchor="middle" class="sub">XLM-R, DeBERTa…</text></g>
-<g class="n-coral box"><rect x="548" y="30" width="128" height="64" rx="10"/><text x="612" y="54" text-anchor="middle" font-weight="700" font-size="13">Check vs people</text><text x="612" y="72" text-anchor="middle" class="sub">~500 hand labels</text></g>
-<g class="flow" style="color:var(--mut)"><line x1="126" y1="62" x2="138" y2="62" marker-end="url(#ah4)"/><line x1="262" y1="62" x2="274" y2="62" marker-end="url(#ah4)"/><line x1="398" y1="62" x2="410" y2="62" marker-end="url(#ah4)"/><line x1="534" y1="62" x2="546" y2="62" marker-end="url(#ah4)"/></g>
 </svg>
-<p class="hint" style="margin:6px 0 0">Five tasks on every post: sentiment, emotion, topic, intent, toxicity. Claude labels cost about $10 for 6,000; DeepSeek about $2.50 for 12,000. Next: a blind, stratified human gold set with a second labeller.</p></div>
-<h3 class="reveal">Network theory: built, planned and vision</h3>
-<div class="grid g3">
-<div class="card reveal" style="border-top:4px solid var(--teal)"><h4>Built (early)</h4>A first <b>page network</b> from warehouse data only (topics, content types, image fingerprints, formats, posting times), for consenting pilot pages, with no personal data. A <b>page-to-page affinity graph</b> links pages whose audiences comment alike; a prototype runs <b>Louvain community detection</b> (finds clusters in a graph) and a 0–100 match score.</div>
-<div class="card reveal" style="border-top:4px solid var(--purple)"><h4>Planned</h4><b>Audience communities</b> in the page graph; a <b>collaboration match score</b> rated on 100 page pairs; <b>“new-group reach”</b> (which partner opens a new audience); a <b>collab outcome estimator</b> (did a collab lift both pages over 30 days?); opt-in weekly <b>Discovery</b>; a rising-topics tool tested against a seasonal baseline, with groups under 5 pages hidden.</div>
-<div class="card reveal" style="border-top:4px solid var(--coral)"><h4>Vision (strategy, not built)</h4>Your CEO's ideas: <b>identity gravity</b> (creators whose content mix drifts together may suit a collab), a <b>signal economy</b> (different weights for likes, comments, shares, collabs) and <b>diffusion paths</b> (ideas spreading cluster → bridge → cluster), always as probabilities.</div>
-</div>
-<div class="say reveal"><span class="lbl">Two research catches you can mention</span>“Our Discovery plan assumed Meta gives commenter identity; it doesn't, so we rebuilt it on page-level signals only. And we had to define a good match before scoring one: similarity favours lookalike pages, but the goal is reaching a new audience. Both are exactly the measurement and network questions I want to study at CSH.”</div>
-<h3 class="reveal">Challenges: gap, what you found, what you did</h3>
-<div class="gfd reveal">
-<div class="row"><div class="g">Gap</div><div class="f">Found</div><div class="d">Done</div></div>
-<div class="row"><div class="g">The agreement trap</div><div class="f">Agreement between two models rose on 3 of 5 tasks while both collapsed onto the most common answer.</div><div class="d">Regression checks use fixed human-checked labels, never another model.</div></div>
-<div class="row"><div class="g">Silent drift</div><div class="f">Post-sentiment agreement fell from 77% to 37% after mid-September; emoji-heavy posts flipped positive labels.</div><div class="d">Drift monitoring, a text-drift alarm, a shared vocabulary for toxicity.</div></div>
-<div class="row"><div class="g">What is a storm?</div><div class="f">207,192 comments on 369 busy posts (Feb–Jul): no real storms, one comment aimed at the page.</div><div class="d">Busy-but-normal hours became a false-alarm test set; storms need several signals to agree, against each page's normal.</div></div>
-<div class="row"><div class="g">What is normal?</div><div class="f">Engagement across all 20 pages fell ~97% in late July: a platform change, not content.</div><div class="d">An era detector and a metric registry recording when Meta changed definitions.</div></div>
-<div class="row"><div class="g">Banter and dialect</div><div class="f">Labellers missed hostility people saw (2% vs 15% negative), and read banter as abuse.</div><div class="d">Banter/dialect filter and a language check that lets the model abstain.</div></div>
-<div class="row"><div class="g">Reposts</div><div class="f">A second poster of the same caption got ~31% less, but pages repost winners and matching was text-only.</div><div class="d">Image-hash repost check; show “your 3 most similar past posts did…” instead of predicting.</div></div>
-<div class="row"><div class="g">Predicting flops</div><div class="f">The flop model was barely above chance (55% pairwise), below published work.</div><div class="d">Compare each post only with the same page's earlier posts; keep a page-condition warning, drop single-draft scores.</div></div>
-<div class="row"><div class="g">Platform dependence</div><div class="f">Meta controls access through app review; commenter identity isn't available.</div><div class="d">Ask for permissions step by step; design around page-level data.</div></div>
-</div>
-<div class="say reveal"><span class="lbl">The honest bottom line</span>“None of our client-facing models yet has a held-out, human-checked accuracy figure. We're building a blind human gold set now. That gap, measuring whether AI labels are right, is exactly what I want to study properly.”</div>
-<div class="card reveal"><h4>Team of eight, and your role</h4>CEO (vision, strategy) · COO (operations, investors) · <b>you, CTO</b>: own the stack, API and data model; build the app server, Art-E integration and briefing · ML lead (models and evaluation) · ML backend engineer (data platform, collectors, page graph) · product and design · legal · a founding data partner.</div>
+<div class="tabs" id="modTabs" style="margin-top:10px"></div><div id="modBody"></div>
+<p class="hint" style="margin-top:10px">Status: 2 of 35 product models finished, 11 in progress. Say “48 models in the agreed architecture, being built for the beta”. Honest point: no client-facing model has a human-checked accuracy figure yet.</p>
+<p class="hint"><b>Network ideas from your CEO (not built):</b> identity gravity, signal economy, diffusion paths. <b>Two research catches:</b> Meta doesn't give commenter identity, so matching uses page-level data only; and you had to define a “good match” (new audience) before scoring one.</p></div></details>
 </section>
 
 <!-- 8 APP -->
@@ -395,25 +376,40 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 
 <!-- 9 FIT -->
 <section id="fit">
-<h2 class="reveal">9. What this PhD needs, and what you bring<small>Green: you have it. Amber: CSH teaches it, which is why CSH.</small></h2>
-<div class="sk reveal">
-<div class="ok"><b>A clear research question</b>Platform comparability; the paper</div>
-<div class="ok"><b>Data collection</b>8 years; 60+ crawler fleet; official APIs</div>
-<div class="ok"><b>Programming</b>Python and SQL every day</div>
-<div class="ok"><b>NLP and LLMs</b>BERT, XLM-R, DeBERTa, LLM labelling chains</div>
-<div class="ok"><b>Measurement and statistics</b>Invariance, linking, tests, simulation</div>
-<div class="ok"><b>Early network work</b>Page affinity graph, community detection prototype</div>
-<div class="gap"><b>Network science (gap)</b>Formal diffusion and network methods: CSH courses</div>
-<div class="gap"><b>Causal inference (gap)</b>Coursework and an early project</div>
+<h2 class="reveal">9. What this PhD needs, and what you bring<small>From the CSH program page, FAQ and referee instructions.</small></h2>
+<h3 class="reveal">How the program works</h3>
+<div class="grid g3">
+<div class="card reveal"><h4>Length and place</h4>About <b>3 years</b>, full-time and <b>in person in Vienna</b>, fully funded. The degree comes from a partner university.</div>
+<div class="card reveal"><h4>Learning</h4>Courses at CSH and partner universities, CSH master classes, workshops, research talks and conferences, plus career and transferable-skills support.</div>
+<div class="card reveal"><h4>Supervision</h4>Your own thesis research, guided by a <b>faculty mentor</b> and an <b>advisory team</b>.</div>
+<div class="card reveal"><h4>Two exchanges</h4>About <b>3 months each</b>: one in <b>government, public administration or an EU institution</b>, one in <b>industry or business</b>.</div>
+<div class="card reveal"><h4>Output</h4>At least <b>three first-author papers</b>.</div>
+<div class="card reveal"><h4>Purpose</h4>Big data, modelling and theory to solve real problems such as <b>misinformation</b>, working with decision-makers.</div>
 </div>
-<table class="reveal" style="margin-top:16px">
+<h3 class="reveal">What it needs from you: have, gap, plan</h3>
+<div class="needs reveal">
+<div class="nrow head"><div>Need</div><div>What you have</div><div>Gap or plan</div></div>
+<div class="nrow"><div><b>Quantitative basics</b><span>probability, regression, descriptive statistics</span></div><div>BS: probability and statistics, linear algebra, calculus. MSc: statistical tests, calibration, forecasting. Paper: invariance and linking.</div><div class="ok2">Have it. Plan: refresh regression theory before Year 1.</div></div>
+<div class="nrow"><div><b>Coding</b><span>design, read, validate, troubleshoot; simulations</span></div><div>Python and SQL daily for 8 years; built the paper's simulation; agents that test code before shipping.</div><div class="ok2">Strong.</div></div>
+<div class="nrow"><div><b>Data at scale</b><span>“proprietary datasets”</span></div><div>Fleets of crawlers, official APIs, millions of comments, data-quality checks.</div><div class="ok2">Strong.</div></div>
+<div class="nrow"><div><b>NLP and AI</b></div><div>BERT, XLM-R, DeBERTa; LLM labelling chains; checking labels against people.</div><div class="ok2">Strong.</div></div>
+<div class="nrow"><div><b>Network science</b><span>core of complexity science</span></div><div>Early page affinity graph and community detection prototype at Artemis AI.</div><div class="gap2">Gap. Plan: CSH courses and master classes in Year 1; use it on narrative spread in Paper 3.</div></div>
+<div class="nrow"><div><b>Causal inference</b></div><div>Aware of the limits (your paper says correlation is not cause).</div><div class="gap2">Gap. Plan: coursework and an early group project.</div></div>
+<div class="nrow"><div><b>Reading and critiquing papers</b><span>tested in Stage 2</span></div><div>Answer 2 on Chen et al.; your paper reviews prior work.</div><div class="gap2">Practise on the past Stage 2 papers (Watts &amp; Strogatz; Albert, Jeong &amp; Barabási).</div></div>
+<div class="nrow"><div><b>Independent, rigorous, curious</b></div><div>Found and fixed your own flaw; fixed events before looking at data.</div><div class="ok2">Show it with STAR 1.</div></div>
+<div class="nrow"><div><b>Collaboration across fields</b></div><div>Co-author with Dr Haig; led teams of 3 and the tech of a team of 8.</div><div class="ok2">Show it with STAR 3.</div></div>
+<div class="nrow"><div><b>Real-world impact</b></div><div>Chevening goal; reports used by government teams.</div><div class="ok2">Fits both exchanges.</div></div>
+<div class="nrow"><div><b>Full-time in Vienna</b></div><div>Willing to relocate.</div><div class="gap2">Decide your Artemis AI role in advance (research first).</div></div>
+</div>
+<h3 class="reveal">Where each part of you lands at CSH</h3>
+<table class="reveal">
 <tr><th>From</th><th>You bring</th><th>Where it lands at CSH</th></tr>
 <tr><td>Dubizzle</td><td>Multilingual data at scale</td><td>Polarization and minority representation</td></tr>
-<tr><td>Chevening</td><td>A long-held, policy-facing question</td><td>Evidence for public bodies</td></tr>
+<tr><td>Chevening</td><td>A long-held, policy-facing question</td><td>Public-sector exchange</td></tr>
 <tr><td>MSc</td><td>Full research cycle; self-critique</td><td>“Independent and rigorous scholarship”</td></tr>
-<tr><td>Fluency</td><td>Reproducible LLM coding; “two publics”</td><td>Understanding narratives at scale</td></tr>
-<tr><td>Artemis AI</td><td>Validating labels; baselines; page graph</td><td>Hoyle (validation); Omodei, Karimi (networks)</td></tr>
-<tr><td>First paper</td><td>Protocol and simulation ready</td><td>Your project, extended with diffusion</td></tr>
+<tr><td>Fluency</td><td>Reproducible AI labelling; “two publics”</td><td>Understanding narratives at scale</td></tr>
+<tr><td>Artemis AI</td><td>Checking labels against people; page network</td><td>Hoyle (validation); Omodei, Karimi (networks); industry exchange</td></tr>
+<tr><td>First paper</td><td>Checklist and experiment ready</td><td>Paper 1 of 3</td></tr>
 </table>
 </section>
 
