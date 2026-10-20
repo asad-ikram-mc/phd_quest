@@ -159,7 +159,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </head>
 <body>
 <nav><div class="in" id="nav">
-<a href="#cheat">Cheat sheet</a><a href="#story">Story</a><a href="#chev">Chevening</a><a href="#diss">Dissertation</a><a href="#paper">Paper</a><a href="#fluency">Fluency</a><a href="#artemis">Artemis AI</a><a href="#app">What you told CSH</a><a href="#fit">PhD fit</a><a href="#star">STAR</a><a href="#qa">Questions</a><a href="#practice">Practice</a><a href="#gloss">Glossary</a><a href="#day">On the day</a>
+<a href="#cheat">Cheat sheet</a><a href="#goals">Goals</a><a href="#story">Story</a><a href="#chev">Chevening</a><a href="#diss">Dissertation</a><a href="#paper">Paper</a><a href="#fluency">Fluency</a><a href="#artemis">Artemis AI</a><a href="#app">What you told CSH</a><a href="#fit">PhD fit</a><a href="#star">STAR</a><a href="#qa">Questions</a><a href="#practice">Practice</a><a href="#gloss">Glossary</a><a href="#day">On the day</a>
 </div></nav>
 <main>
 
@@ -186,6 +186,21 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <div class="say"><span class="lbl">One line that ties it to the PhD</span>“Every job showed me a new way social media measurements fail. The PhD is where I learn to test and fix them, and see how the fix changes what we conclude about narratives and polarisation.”</div>
 <h3>Numbers to keep the same as your application</h3>
 <div class="nums"><span>255,446 comments (MSc)</span><span>Team of eight at Artemis AI</span><span>111,000+ posts · 3M+ comments</span><span>100,845 Brandwatch + 170,542 Reddit (never added together)</span><span>arXiv 2610.16757</span><span>MSc Distinction · Chevening 2024/25</span></div>
+</section>
+
+<section id="goals">
+<h2 class="reveal">Program goals and your goals<small>From csh.ac.at/education/graduate-program. They align: say it in their words.</small></h2>
+<table class="reveal">
+<tr><th>CSH program goal (their words)</th><th>Your goal</th></tr>
+<tr><td>“Make a meaningful difference in society”; combat “misinformation”</td><td>Make social media analysis trustworthy for the public and government</td></tr>
+<tr><td>“Communicate and collaborate with decision-makers from government, industry”</td><td>Your Chevening idea: evidence of public opinion for government</td></tr>
+<tr><td>Two ~3-month research exchanges: one in government or public administration, one in industry</td><td>Public-sector exchange (Chevening) and industry exchange (Artemis AI, Fluency)</td></tr>
+<tr><td>“Improve practices and implement better policies”</td><td>Shape how social media is measured, with methods checked against people</td></tr>
+<tr><td>Digital Innovation School: “skills for managing transformation processes”</td><td>Turn research into tools others can use</td></tr>
+<tr><td>At least three first-author papers in about three years</td><td>1: protocol on real data · 2: AI annotators and time · 3: corrected measures and narrative spread</td></tr>
+</table>
+<div class="say reveal"><span class="lbl">Your goal, research-first</span>“My goal is research that changes how social media is measured. Artemis AI showed me the problem in practice, and the program's industry and public-sector exchanges are exactly where I'd test it. The methods would be published openly, so public bodies and any platform, including ours, can use them.”</div>
+<div class="card reveal" style="border-color:var(--amber)"><h4 style="color:var(--amber)">Careful</h4>The program is in person in Vienna and doesn't mention start-ups. Don't say the PhD is to build Artemis AI. If asked how you'd balance them, give an honest answer you've decided in advance, for example: “The PhD would be my full-time focus in Vienna; I'd stay involved with Artemis AI only in a limited advisory role.”</div>
 </section>
 
 <!-- 2 STORY -->
@@ -518,6 +533,8 @@ const qa=[
 ['How do you judge if a model is right?','STAR 6 or 7.'],
 ['What drives you?','STAR 2 (Chevening, the Karachi example).'],
 ['Where in five years?','Researching how online opinion is measured, so decisions rest on numbers checked against people.'],
+['How would you balance Artemis AI with the PhD?','Research first: the PhD is your full-time focus in Vienna; Artemis AI is where you saw the problem, and the industry exchange is where research gets tested. Say only what you have decided.'],
+['What do you want to do after the PhD?','Make social media measurement trustworthy for public bodies and platforms: open methods, evidence for government (your Chevening goal), and tools people can use.'],
 ['Questions for us?','“How are students matched with supervisors in the first year, and is co-supervision across groups common?”']];
 document.getElementById('qaList').innerHTML=qa.map(q=>'<details class="reveal in"><summary>'+q[0]+'</summary><div class="body">'+q[1]+'</div></details>').join('');
 (function(){let cur=-1,left=60,tm=null;const pq=document.getElementById('pq'),pt=document.getElementById('pt'),ht=document.getElementById('pHintText');
