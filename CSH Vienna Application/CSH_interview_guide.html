@@ -593,7 +593,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </section>
 
 <section id="gloss">
-<h2 class="reveal">13. Glossary<small>Each technical word in plain English, and where it shows up in your work. Type to search.</small></h2>
+<h2 class="reveal">13. Glossary<small>Technical words in plain English. Type to search.</small></h2>
 <input type="search" id="gs" placeholder="Search a term, e.g. invariance" class="reveal">
 <div class="gl" id="gl"></div>
 </section>
@@ -702,43 +702,43 @@ document.getElementById('pNew').onclick=()=>{let n;do{n=Math.floor(Math.random()
 document.getElementById('pStart').onclick=()=>{clearInterval(tm);left=60;render();tm=setInterval(()=>{left--;render();if(left<=0){clearInterval(tm);pt.textContent='Stop';}},1000);};
 document.getElementById('pHint').onclick=()=>{ht.innerHTML=cur>=0?qa[cur][1]:'Pick a question first.';};render();})();
 const gl=[
-['Sentiment analysis','A computer deciding if a text is positive, neutral or negative.','Your MSc and Artemis AI.'],
-['VADER','A ready-made word list that scores sentiment by adding up word scores.','Gave the first labels in your MSc.'],
-['BERT','An AI language model that reads whole sentences; you can train (fine-tune) it on your own labels.','Your MSc model, 88% against VADER labels.'],
-['BiLSTM','An older AI model that reads text forwards and backwards.','Your MSc comparison model (82%).'],
-['XLM-R, DistilBERT, DeBERTa','Text-reading AI models (encoders). XLM-R understands many languages.','Your own models at Artemis AI.'],
-['LLM','Large language model, such as Claude, GPT or DeepSeek, used here to label posts instead of people.','Artemis AI labelling; Fluency tagging (GPT-4o-mini).'],
-['BERTopic','A tool that groups thousands of texts into topics automatically.','Found the themes in the Fluency study.'],
-['Prophet','A forecasting tool for data that changes over time.','Forecast daily mood in your MSc.'],
-['Accuracy, F1, macro-F1','Scores for how often labels match a reference. Macro-F1 treats each class equally. Only trustworthy if the reference is.','BERT’s 88% / 0.878.'],
-['Cohen’s kappa','How much two labellers agree, beyond luck.','Your MSc 0.78 was you vs VADER, not two people.'],
-['Circular validation','Checking a model against labels from the same source it learned from. It proves little.','The flaw you found in your MSc.'],
-['Calibration','Whether “90% sure” really means right 90% of the time.','Temperature scaling in your MSc.'],
-['McNemar test, bootstrap','McNemar: do two models really make different mistakes? Bootstrap: resample the data many times to see how certain a result is.','Your MSc model comparison.'],
-['Measurement invariance','Does a measure mean the same thing in different groups (here, platforms)?','Step 3 of your paper.'],
-['DIF','Differential item functioning: one label (like “negative”) behaving differently in one group.','Step 3 of your paper.'],
-['Generalizability study (G-study)','Splits a score’s variation into where it comes from: platform, event, post, coder.','Step 2 of your paper.'],
-['Score linking','Putting different scales onto one yardstick, like converting currencies before adding.','Step 5 of your paper.'],
-['Anchor events','Fixed news moments used to compare platforms on the same thing at the same time.','15 UK budget events, fixed before looking at data.'],
-['Simulation (with ground truth)','A computer experiment where you set the true answer, so you can see how a method goes wrong.','Your paper: 13.8 vs 0.8 wrong days out of 60.'],
-['Platform-affordance error','A platform’s features (length limits, threads, audience) change how people write, and so how AI scores them (Sen et al. 2021).','The gap your paper tests.'],
-['Mode effect','Survey answers changing with how the question is asked (phone vs paper).','The idea your paper borrows.'],
-['RoBERTa','Another AI text model, used as a second opinion so results aren’t one tool’s quirk.','The check model in your paper.'],
-['Data drift','Incoming data changes, so a model’s labels quietly stop being reliable.','Artemis AI: 77% → 37%.'],
-['Data donation','People share their own platform data (e.g. YouTube history) with researchers.','Chen et al., your Answer 2.'],
-['Polarisation','Groups moving apart in opinion. Affective polarisation: disliking the other side.','CSH springboard project.'],
-['Network science','Studying things as dots (people, pages, ideas) and links (connections): who connects to whom, which groups form, how things spread.','Artemis AI page network; Paper 3.'],
-['Causal inference','Proving A causes B, not just that they happen together (e.g. difference-in-differences: compare affected and unaffected groups before and after).','Paper 3; your paper says it can’t prove cause.'],
-['Network diffusion','How ideas or narratives spread through connections.','Your planned Paper 3.'],
-['Affinity graph','A network where a link means two things (here, pages) are similar.','Artemis AI page network.'],
-['Louvain community detection','A method that finds tightly connected groups in a network.','Artemis AI page communities.'],
-['Change-point detection','Finding the dates where a series suddenly changes.','Artemis AI era detector.'],
-['Concept erasure','Removing one piece of information (such as which platform) from how a model represents text.','Step in your Answer 3.'],
-['MCP server','A server that gives an AI a safe set of tools it can use.','Fluency crawler agents (Claude).'],
-['Scrapy','A Python framework for building web crawlers.','Fluency and Dubizzle crawlers.'],
-['Complexity science','Studying systems of many interacting parts (people, platforms, algorithms) whose overall behaviour emerges from them.','The CSH program.'],
-['Preprint / arXiv','A public research paper shared before peer review.','Your paper, 2610.16757.']];
-(function(){const box=document.getElementById('gl'),s=document.getElementById('gs');function draw(q){q=(q||'').toLowerCase();box.innerHTML=gl.filter(g=>(g[0]+g[1]+g[2]).toLowerCase().includes(q)).map(g=>'<div class="fade"><b>'+g[0]+'</b>'+g[1]+'<span class="ex">In your work: '+g[2]+'</span></div>').join('')||'<div>No match.</div>';}s.oninput=()=>draw(s.value);draw();})();
+['Sentiment analysis','A computer deciding if text is positive, neutral or negative.','MSc, Artemis AI'],
+['VADER','A word list that scores sentiment.','MSc first labels'],
+['BERT','An AI model that reads sentences; can be trained on your labels.','MSc model'],
+['BiLSTM','An older AI model that reads text both ways.','MSc comparison'],
+['XLM-R, DistilBERT, DeBERTa','Text-reading AI models; XLM-R knows many languages.','Artemis AI models'],
+['LLM','Large AI models like Claude, GPT, DeepSeek, used to label posts.','Artemis AI, Fluency'],
+['BERTopic','Groups many texts into topics automatically.','Fluency study'],
+['Prophet','A tool for forecasting over time.','MSc forecasts'],
+['Accuracy, F1','How often labels match a reference. Only as good as the reference.','BERT 88%'],
+['Cohen’s kappa','How much two labellers agree, beyond luck.','MSc 0.78 (you vs VADER)'],
+['Circular validation','Checking a model against labels it learned from.','Your MSc mistake'],
+['Calibration','Does “90% sure” mean right 90% of the time?','MSc'],
+['McNemar, bootstrap','McNemar: do two models make different mistakes? Bootstrap: how sure is a result?','MSc'],
+['Measurement invariance','Does a measure mean the same in different groups?','Paper step 3'],
+['DIF','One label acting differently in one group.','Paper step 3'],
+['G-study','Shows where a score’s variation comes from.','Paper step 2'],
+['Score linking','Putting scales on one yardstick, like converting currencies.','Paper step 5'],
+['Anchor events','Fixed news moments to compare platforms fairly.','15 UK budget events'],
+['Simulation','A computer experiment with a known true answer.','Paper: 13.8 vs 0.8 days'],
+['Platform-affordance error','A platform changes how people write, so AI scores differ.','The gap in your paper'],
+['Mode effect','Answers change with how you ask (phone vs paper).','Your paper’s idea'],
+['RoBERTa','A second AI model used as a double-check.','Paper'],
+['Data drift','Data changes, so labels quietly get worse.','Artemis AI 77% → 37%'],
+['Data donation','People share their own platform data with researchers.','Chen et al.'],
+['Polarisation','Groups moving apart; affective = disliking the other side.','CSH project'],
+['Network science','Dots (people, pages) and links: who connects, groups, spread.','Artemis AI; Paper 3'],
+['Causal inference','Proving A causes B, not just that they happen together.','Paper 3'],
+['Network diffusion','How ideas spread through connections.','Paper 3'],
+['Affinity graph','A network where links mean “similar”.','Artemis AI'],
+['Louvain','Finds groups in a network.','Artemis AI'],
+['Change-point detection','Finds when a series suddenly changes.','Artemis AI'],
+['Concept erasure','Removing one piece of information (like platform) from a model.','Answer 3'],
+['MCP server','Gives an AI a safe set of tools.','Fluency agents'],
+['Scrapy','A Python tool for building web crawlers.','Fluency, Dubizzle'],
+['Complexity science','Studying many connected parts whose behaviour emerges together.','CSH'],
+['Preprint / arXiv','A public paper before peer review.','Your paper']];
+(function(){const box=document.getElementById('gl'),s=document.getElementById('gs');function draw(q){q=(q||'').toLowerCase();box.innerHTML=gl.filter(g=>(g[0]+g[1]+g[2]).toLowerCase().includes(q)).map(g=>'<div class="fade"><b>'+g[0]+'</b>'+g[1]+'<span class="ex">Used in: '+g[2]+'</span></div>').join('')||'<div>No match.</div>';}s.oninput=()=>draw(s.value);draw();})();
 </script>
 </body>
 </html>
