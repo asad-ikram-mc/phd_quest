@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>CSH Interview Cheat Sheet</title>
+<style>
+@page{size:A4 landscape;margin:5mm}
+*{box-sizing:border-box}
+body{font:7.9pt/1.27 -apple-system,"Helvetica Neue",Arial,sans-serif;color:#1d1d1f;margin:0;background:#fff}
+.top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #534ab7;padding-bottom:3px;margin-bottom:5px}
+.top h1{font-size:13pt;margin:0;color:#534ab7}
+.top span{font-size:8.6pt;color:#444}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.b{border:1px solid #d8d6ef;border-radius:6px;padding:4px 7px;margin-bottom:4px;break-inside:avoid}
+.b h2{font-size:9pt;margin:0 0 2px;color:#534ab7}
+.say{background:#e8f6f1;border-color:#9fd8c4}.say h2{color:#0f6e56}
+.warn{background:#fdf0eb;border-color:#f0b9a3}.warn h2{color:#993c1d}
+ul,ol{margin:0;padding-left:14px}li{margin:0 0 1px}
+b{color:#26215c}
+.flow{display:flex;flex-wrap:wrap;gap:2px;align-items:center;font-size:8pt}
+.flow span{background:#eeedfe;color:#3c3489;border-radius:4px;padding:1px 4px}
+.flow i{color:#888;font-style:normal}
+table{border-collapse:collapse;width:100%;font-size:8pt}td{padding:1px 3px;border-bottom:1px solid #eee;vertical-align:top}
+td:first-child{font-weight:700;color:#26215c;white-space:nowrap}
+</style></head><body>
+<div class="top"><h1>CSH Vienna · preliminary interview cheat sheet</h1><span>Tue 20 Oct · <b>16:40 UK / 20:40 Lahore</b> · Zoom 843 5332 6447 · ~10 min · recorded for the committee · smile, slow down, short answers</span></div>
+<div class="cols">
+
+<div>
+<div class="b say"><h2>Opening (30 s): “Tell us about yourself”</h2>
+“I’ve spent eight years collecting and analysing social media data, from scrapers in 15 markets at Dubizzle to ten platforms daily at Fluency. My MSc measured UK public mood from 255,446 comments, and it taught me that my validation was circular. That became my paper with Dr Ella Haig: before we add up AI-measured opinion across platforms, we must check each platform is measured the same way. I want to do that properly at CSH, with network science, and with Alexander Hoyle’s work on NLP measurement.”</div>
+
+<div class="b"><h2>Your story in one line</h2>
+<div class="flow"><span>Dubizzle: scrapers, 15 markets</span><i>→</i><span>Chevening idea: public mood for government</span><i>→</i><span>MSc: 255,446 comments</span><i>→</i><span>Fluency: brands + UK gov</span><i>→</i><span>arXiv paper</span><i>→</i><span>Artemis AI CTO</span><i>→</i><span>CSH</span></div></div>
+
+<div class="b"><h2>MSc dissertation (Portsmouth 2025, Dr Haig)</h2>
+<ul><li><b>Q:</b> how did UK reaction to economic policy differ across X, Reddit, YouTube, Quora?</li>
+<li><b>Did:</b> ethics, 255,446 comments (official APIs + licensed feeds), VADER, BiLSTM, fine-tuned <b>BERT</b> (macro-F1 0.878), McNemar, bootstrap, Prophet, NRC, LIME.</li>
+<li><b>Found:</b> mood dropped at the 2022 mini-budget; YouTube calmer, X angrier.</li>
+<li><b>What went wrong:</b> BERT was trained on VADER labels and checked against them; my 200-post check (κ≈0.78) reviewed VADER, so it was <b>circular</b>. And I assumed “negative” means the same on every platform.</li>
+<li><b>Lesson:</b> the yardstick must be independent; groups need an invariance test first.</li></ul></div>
+
+<div class="b"><h2>Q2 answer: CSH discovery (Omodei group)</h2>
+<b>Chen, Kmetty, Iñiguez &amp; Omodei (2025)</b>: Hungarian survey + donated YouTube histories show <b>commenters are more polarized than watchers</b>, so comment-based studies overstate division.<br>
+<b>My question:</b> is the commenter–watcher gap stable across platforms, topics, time, so a small donated panel could <b>correct</b> polarization estimates at scale? (Same logic as score linking.)</div>
+</div>
+
+<div>
+<div class="b"><h2>Paper: “Is the Platform Part of the Measurement?” (arXiv, Oct 2026, with Dr Haig)</h2>
+Idea: each platform is like a different <b>survey mode</b>. Check before you compare.
+<div class="flow" style="margin-top:3px"><span>1 Same moment: 15 anchor events, fixed in advance</span><i>→</i><span>2 Check vs people: G-study</span><i>→</i><span>3 Same meaning? invariance + DIF</span><i>→</i><span>4 Who posts: multilevel model</span><i>→</i><span>5 One yardstick: score linking</span><i>→</i><span>6 Show the cost: simulation</span></div>
+<div style="margin-top:3px"><b>Hook:</b> same time, check, meaning, crowd, convert, prove. (Exam marks from 4 schools; the AI is the marker.)</div>
+<ul style="margin-top:2px"><li><b>Simulation</b> (Python, 500 runs, known true mood): naive pooling gets the sign wrong on <b>13.8 of 60 days</b> (~a quarter); adjusted <b>0.8</b>.</li>
+<li>Every test repeated with a second model (<b>RoBERTa</b>).</li>
+<li>Next: gold sample 1,000–1,500 posts + a second annotator. <b>Real data is the next study.</b></li></ul></div>
+
+<div class="b say"><h2>“You used VADER…?”</h2>“Yes, and that’s why the paper exists. In my MSc BERT was judged against VADER, so it was circular. In the paper people are the yardstick, RoBERTa double-checks, and events are fixed in advance.”</div>
+
+<div class="b"><h2>PhD idea (Q3): 3 papers</h2>
+<b>Question:</b> when is a machine-labelled frame comparable across <b>platforms, LLM annotators and time</b>, and how do we correct it before tracking how narratives spread?
+<ol><li><b>Simulation extended</b>: platforms, models, time as facets; how many hand labels needed. No new data.</li>
+<li><b>Real corpus</b>: policy events fixed in advance, several LLMs + hand-labelled sample + second coder; G-study, DIF, concept erasure (LEACE).</li>
+<li><b>Narrative spread</b> with network methods, corrected vs uncorrected: when does the conclusion change?</li></ol>
+<b>Need to learn:</b> network science of diffusion (why CSH). “A starting plan; I’d shape it with my mentor.”</div>
+
+<div class="b"><h2>Fit at CSH</h2>
+<ul><li><b>Alexander Hoyle</b>: NLP measurement and validation (Fan et al. 2025 concept erasure; Gaynor et al. 2026 ideal points across venues; Hoyle 2021 metrics drift).</li>
+<li><b>Elisa Omodei</b> (Chen et al.), <b>Fariba Karimi</b> (networks, minorities).</li>
+<li>Springboards: <b>Understanding narratives at scale</b>; <b>Polarization and minority representation on online platforms</b>.</li></ul></div>
+</div>
+
+<div>
+<div class="b"><h2>Fluency (M+C Saatchi)</h2>
+<ul><li>Social listening for global brands and UK government; LLM labelling in production.</li>
+<li>Year-long study: Brandwatch + Reddit API, BERTopic (18 themes), GPT-4o-mini tags, prompt-version hash, 3 pilots on same 500 posts; <b>100,845 posts</b>; Twitter and Reddit reported <b>separately</b>.</li>
+<li>Self-healing crawlers: healer fixed <b>86%</b>; builder agent <b>92%</b> over 1,697 runs; human approval on every change.</li></ul></div>
+
+<div class="b"><h2>Artemis AI (co-founder, CTO)</h2>
+<ul><li>Creator/page analytics; leading build of a 48-model platform for the <b>December beta</b>.</li>
+<li>Page network: similarity (topics, CLIP image fingerprints, timing) → affinity graph → <b>Louvain communities</b> → collab match score. Early prototype.</li>
+<li>Evaluation designed around <b>human-labelled data</b>, not model agreement.</li></ul></div>
+
+<div class="b"><h2>Goals (match CSH)</h2>
+<ul><li><b>Short:</b> 3 first-author papers; learn network science + causal inference; industry and government exchanges.</li>
+<li><b>Long:</b> validated, open methods for social media measurement, used by researchers, public bodies and Artemis AI. Chevening idea: early warning of public reaction for government.</li></ul></div>
+
+<div class="b"><h2>What CSH wants → your proof</h2>
+<table>
+<tr><td>Self-directed</td><td>MSc mine end to end; found own flaw → paper</td></tr>
+<tr><td>Curious</td><td>Chen et al. follow-up question</td></tr>
+<tr><td>Rigour</td><td>pre-fixed events, human yardstick, 2nd model</td></tr>
+<tr><td>Collaboration</td><td>Dr Haig; Fluency teams; Artemis team</td></tr>
+<tr><td>Impact</td><td>UK gov work at Fluency; Chevening goal</td></tr></table></div>
+
+<div class="b say"><h2>Ask them (pick 1)</h2>
+<ul><li>How do students usually find their advisor in year 1?</li>
+<li>Is there interest in combining Hoyle’s measurement work with the narratives springboard?</li></ul></div>
+
+<div class="b warn"><h2>Be careful</h2>
+<ul><li>Paper = method + simulation; <b>real data is next</b>.</li><li>UK Gov MAPP: <b>supported</b>, not built. Alexa+: design only.</li><li>Data: “official APIs, polite rate limits”. No client names under NDA.</li><li>Don’t know? “Good question; I haven’t tested that yet, here’s how I would.”</li></ul></div>
+</div>
+</div>
+</body></html>
