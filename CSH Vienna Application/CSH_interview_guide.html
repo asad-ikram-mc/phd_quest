@@ -263,61 +263,23 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 
 <!-- 4 DISSERTATION -->
 <section id="diss">
-<h2 class="reveal">4. Your dissertation in depth<small>“Cross-Platform Sentiment Analysis of Public Reaction to UK Economic Policies” · MSc Data Analytics, Portsmouth · September 2025 · supervisor Dr Ella Haig · project 78/100, Distinction · ethics TETHIC-2025-111094 (low risk)</small></h2>
-<div class="card reveal">
-<svg viewBox="0 0 680 120" width="100%" role="img" aria-label="Dissertation pipeline">
-<defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
-<g class="n-pur box"><rect x="6" y="30" width="118" height="60" rx="10"/><text x="65" y="56" text-anchor="middle" font-weight="700" font-size="13">Collect</text><text x="65" y="74" text-anchor="middle" class="sub">4 platforms</text></g>
-<g class="n-pur box"><rect x="142" y="30" width="118" height="60" rx="10"/><text x="201" y="56" text-anchor="middle" font-weight="700" font-size="13">First labels</text><text x="201" y="74" text-anchor="middle" class="sub">VADER word list</text></g>
-<g class="n-pur box"><rect x="278" y="30" width="118" height="60" rx="10"/><text x="337" y="56" text-anchor="middle" font-weight="700" font-size="13">Train models</text><text x="337" y="74" text-anchor="middle" class="sub">BERT, BiLSTM</text></g>
-<g class="n-pur box"><rect x="414" y="30" width="118" height="60" rx="10"/><text x="473" y="56" text-anchor="middle" font-weight="700" font-size="13">Check</text><text x="473" y="74" text-anchor="middle" class="sub">tests, emotions</text></g>
-<g class="n-pur box"><rect x="550" y="30" width="124" height="60" rx="10"/><text x="612" y="56" text-anchor="middle" font-weight="700" font-size="13">Forecast</text><text x="612" y="74" text-anchor="middle" class="sub">Prophet</text></g>
-<g class="flow" style="color:var(--mut)"><line x1="124" y1="60" x2="140" y2="60" marker-end="url(#ah2)"/><line x1="260" y1="60" x2="276" y2="60" marker-end="url(#ah2)"/><line x1="396" y1="60" x2="412" y2="60" marker-end="url(#ah2)"/><line x1="532" y1="60" x2="548" y2="60" marker-end="url(#ah2)"/></g>
-</svg></div>
-<div class="grid g2" style="margin-top:14px">
-<div class="card reveal"><h4>Why and what</h4><b>Why:</b> public reaction to economic policy now appears first on social media, but it is spread across platforms, so warning signs are missed. <b>Aim:</b> a research-grade workflow to measure, and forecast, UK public sentiment on economic policy across platforms.<br><br><b>RQ1</b> How well do modern NLP methods capture it? <b>RQ2</b> How accurate are BERT and BiLSTM? <b>RQ3</b> Can past mood forecast short-term reactions? <b>RQ4</b> How does mood vary by topic and time?</div>
-<div class="card reveal"><h4>Data</h4><ul style="margin:0;padding-left:18px">
-<li>X/Twitter (licensed archive, 2018–2025), Reddit (official API, UK subreddits), YouTube (Data API v3, BBC, Sky, Channel 4 and government channels), Quora (licensed partner).</li>
-<li><b>255,446 comments on 6,650 posts</b> (the pipeline records; use this number).</li>
-<li>Six seed topics: tax, cost of living, welfare, energy, housing, jobs.</li></ul></div>
+<h2 class="reveal">4. Your dissertation, simply<small>MSc Data Analytics, University of Portsmouth, 2025 · supervisor Dr Ella Haig · Distinction</small></h2>
+<div class="card reveal"><h4>In one sentence</h4>You used AI to measure how the UK public felt about economic policies (tax, prices, welfare, energy, housing, jobs) from comments on four platforms: X, Reddit, YouTube and Quora.</div>
+<div class="grid g3" style="margin-top:14px">
+<div class="card reveal"><h4>Why</h4>People react to government money decisions online first, but the reaction is spread across many sites. One combined view could warn government early. (Your Chevening idea, built small.)</div>
+<div class="card reveal"><h4>What you did</h4><ol style="margin:0;padding-left:18px"><li>Collected <b>255,446 comments</b>.</li><li>Gave each a first label (positive, neutral, negative) with a simple word list.</li><li>Trained AI models to label them, then tracked the mood over time.</li></ol></div>
+<div class="card reveal"><h4>What it showed</h4><ul style="margin:0;padding-left:18px"><li>The mood dropped sharply around the 2022 mini-budget.</li><li>Each platform looked different: YouTube calmer, X angrier.</li><li>Angry and fearful words came with negative posts.</li></ul></div>
 </div>
-<h3 class="reveal">Methods, each in one line</h3>
-<div class="gl reveal">
-<div><b>VADER</b>Rule-based word list that gave every post its starting label.</div>
-<div><b>BERT</b>A pre-trained language model, fine-tuned on those labels.</div>
-<div><b>BiLSTM</b>An older neural network reading text forwards and backwards.</div>
-<div><b>Logistic regression</b>A simple word-count baseline.</div>
-<div><b>Temperature scaling</b>Adjusts confidence so “90% sure” means right about 90% of the time.</div>
-<div><b>McNemar test</b>Do two models' errors on the same posts really differ?</div>
-<div><b>Bootstrap</b>Resample the data many times to get confidence intervals.</div>
-<div><b>Chi-square</b>Does the sentiment mix differ by topic?</div>
-<div><b>Prophet</b>Forecasts trends and weekly or yearly cycles.</div>
-<div><b>NRC lexicon</b>Dictionary linking words to eight emotions.</div>
-<div><b>LIME, integrated gradients</b>Show which words pushed a model's decision.</div>
-</div>
-<h3 class="reveal">What it reported</h3>
-<div class="card reveal">
-<table><tr><th>Model</th><th>Accuracy</th><th>Macro-F1</th></tr>
-<tr><td>BERT</td><td>88.1%</td><td>0.878</td></tr><tr><td>BiLSTM</td><td>81.5%</td><td>0.811</td></tr><tr><td>Logistic regression</td><td>71.4%</td><td>0.71</td></tr><tr><td>VADER</td><td>65.2%</td><td>0.65</td></tr></table>
-<ul style="margin:10px 0 0;padding-left:18px"><li>“Neutral” was the hardest class; McNemar p &lt; 0.001.</li><li>A clear mood dip around the September 2022 mini-budget; forecasts beat simple baselines.</li><li>YouTube looked more positive (explainer videos); X had sharper negative spikes; Quora was sparse.</li><li>Anger and fear went with negative posts.</li></ul></div>
-<h3 class="reveal">The gaps you found later, and how you fixed them</h3>
-<div class="gfd reveal">
-<div class="row"><div class="g">Gap</div><div class="f">Found</div><div class="d">Done</div></div>
-<div class="row"><div class="g">Circular validation</div><div class="f">The 88% measured agreement with VADER-seeded labels, not with people.</div><div class="d">Paper discloses it; next study uses a blind human gold sample.</div></div>
-<div class="row"><div class="g">One labeller</div><div class="f">The 0.78 “agreement” was your 200 hand labels against VADER, not two people.</div><div class="d">Next study: second annotator on a quarter to a third of the sample.</div></div>
-<div class="row"><div class="g">Inconsistent figures</div><div class="f">Corpus size 279k in text vs 255,446 in records; a few other numbers didn't match the code.</div><div class="d">Paper lists every one openly; new study logs everything from the first request.</div></div>
-<div class="row"><div class="g">Implausible results</div><div class="f">Re-run figures showed every topic mostly positive during a cost-of-living crisis.</div><div class="d">Treated as a likely artefact of word-list labels, to be tested against people.</div></div>
-<div class="row"><div class="g">Platforms assumed equal</div><div class="f">You assumed “negative” means the same everywhere.</div><div class="d">The whole paper tests exactly this.</div></div>
-</div>
-<div class="say reveal"><span class="lbl">If asked about your results</span>“The 88% was agreement with labels from the same word list, so it proved less than it seemed, and when I rechecked my records a few numbers didn't match. I report all of that openly in my paper. It is exactly why the paper exists.”</div>
+<div class="card reveal" style="margin-top:14px;border-color:var(--coral)"><h4 style="color:var(--coral)">What you realised later</h4>The AI looked 88% accurate, but it was checked against labels from the <b>same word list</b> it learned from, so the score proved little. And you had assumed “negative” means the same on every platform. <b>That realisation became your paper.</b></div>
+<div class="say reveal"><span class="lbl">Say this</span>“My dissertation measured UK public mood about economic policy from 255,446 comments on four platforms. The model looked accurate, but I realised I had checked it against labels from the same word list, and assumed every platform measures the same way. That is exactly what my paper fixes.”</div>
+<details class="reveal"><summary>More detail, only if they ask</summary><div class="body">Models: BERT 88% vs BiLSTM 82% vs simple baselines, all measured against the word-list (VADER) labels. Tests: McNemar and bootstrap; forecasting with Prophet; emotions with the NRC word list. A few numbers in the text didn't match the code records (for example 279,000 vs 255,446 comments); the paper lists these openly. Ethics approved as low risk.</div></details>
 </section>
 
 <!-- 5 PAPER -->
 <section id="paper">
-<h2 class="reveal">5. Your paper in depth<small>“Is the Platform Part of the Measurement? A Protocol and Simulation Study for Cross-Platform Equivalence of Machine-Labelled Policy Sentiment” · Ikram &amp; Haig · arXiv 2610.16757 · cs.LG, cross-listed cs.CL, cs.CY, cs.SI · code: github.com/asadfix/platform-measurement</small></h2>
-<div class="card reveal">
-<h4>The problem, as a picture</h4>
-<svg viewBox="0 0 680 360" width="100%" role="img" aria-label="Same opinion, three platforms, one AI, wrong combined mood">
+<h2 class="reveal">5. Your paper, simply<small>“Is the Platform Part of the Measurement?” · Ikram &amp; Haig · arXiv 2610.16757 · October 2026 · your first paper (a preprint)</small></h2>
+<div class="card reveal"><h4>In one sentence</h4>Before you add up AI-measured opinions from different social media sites, check that each site is being measured the same way, because often it isn't.</div>
+<div class="card reveal" style="margin-top:14px"><h4>The problem, as a picture</h4><svg viewBox="0 0 680 360" width="100%" role="img" aria-label="Same opinion, three platforms, one AI, wrong combined mood">
 <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
 <g class="n-gray box"><rect x="220" y="14" width="240" height="52" rx="10"/><text x="340" y="36" text-anchor="middle" font-weight="700" font-size="14">Same public opinion</text><text x="340" y="54" text-anchor="middle" class="sub">e.g. about a new tax</text></g>
 <g class="flow" style="color:var(--mut)"><path d="M300 66 L150 108" marker-end="url(#ah)"/><path d="M340 66 L340 108" marker-end="url(#ah)"/><path d="M380 66 L530 108" marker-end="url(#ah)"/></g>
@@ -330,25 +292,25 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <g class="n-coral box"><rect x="160" y="300" width="360" height="52" rx="10"/><text x="340" y="322" text-anchor="middle" font-weight="700" font-size="14">Added-up daily mood</text><text x="340" y="340" text-anchor="middle" class="sub">can point the wrong way</text></g>
 </svg></div>
 <div class="grid g2" style="margin-top:14px">
-<div class="card reveal"><h4>Why: the gap</h4>Studies compare AI scores across platforms as if a score means the same everywhere. Sen et al. (2021) named this <b>platform-affordance error</b> (a platform's features, like character limits or threading, change how opinion is written and scored) but gave no test. Survey research solved the same problem for “mode effects” (phone vs paper). <b>Core claim: a platform is a mode.</b></div>
-<div class="card reveal"><h4>When: the timeline</h4><ul style="margin:0;padding-left:18px">
-<li>2025: MSc dissertation (the motivating case).</li><li>21 Aug 2026: 15 anchor events fixed in advance.</li><li>Sep 2026: draft with Dr Haig, reviewed.</li><li>30 Sep: Dr Haig approves posting.</li><li>10 Oct: endorsed for arXiv by Dr Rahim Taheri.</li><li>12 Oct: v1.1 after an 8-angle review.</li><li><b>14 Oct 2026: live on arXiv.</b></li></ul></div>
+<div class="card reveal"><h4>The simple idea</h4>Surveys know people answer differently on the phone and on paper, so they check before comparing. Your paper says each social media site is like a different “way of asking”, so check it the same way.</div>
+<div class="card reveal"><h4>What you did</h4>Wrote a <b>6-step checklist</b> to test and fix the comparison, and ran a <b>computer experiment</b> where the true mood was known, to show what goes wrong if you skip it.</div>
 </div>
-<h3 class="reveal">How: the six steps (click through)</h3>
+<h3 class="reveal">The 6 steps (tap through)</h3>
 <div class="card stepper reveal" id="stepper"><div class="dots"></div><div class="panel"></div>
 <div class="ctrl"><button class="btn" data-d="-1">Back</button><button class="btn pri" data-d="1">Next</button></div></div>
-<h3 class="reveal">The simulation result (500 repeats, 60 days each)</h3>
+<h3 class="reveal">The result</h3>
 <div class="card reveal" id="bars"><div class="bars">
-<div class="brow"><span>Just add platforms</span><div class="track"><div class="fill bad" data-w="23"></div></div><b>13.8 days</b></div>
-<div class="brow"><span>Correct each first</span><div class="track"><div class="fill good" data-w="1.4"></div></div><b>0.8 days</b></div></div>
-<p class="hint" style="margin:10px 0 0">Days when the overall mood pointed the wrong way, out of 60. <b>How it was built:</b> a known true mood with a shock at an event; each platform sees it through its own bias, noise and thresholds. <b>Sensitivity:</b> the bigger the difference between platforms, the worse it gets (0.8 → 1.8 → 4.5 → 13.8 → 42.9 wrong days). <b>Honest caveat:</b> the corrected index used the true platform settings; real estimates will be noisier.</p></div>
-<div class="grid g2" style="margin-top:14px">
-<div class="card reveal"><h4>Safeguard: two-classifier check</h4>Every test is repeated with a second, non-word-list AI model. A platform difference only counts if both models show it, so it isn't one tool's quirk.</div>
-<div class="card reveal"><h4>What's new vs earlier work</h4>Earlier studies treated <i>annotators</i> (Kennedy 2020; Sachdeva 2022), <i>prompts and models</i> (Camuffo 2026), <i>survey answers</i> (Boyd 2024) or <i>survey vs traces</i> (Cernat 2025) as the source of difference. <b>Yours treats the platform itself</b> as the source, for AI-labelled text.</div>
-<div class="card reveal"><h4>Five honest limits</h4><ol style="margin:0;padding-left:18px"><li>Who posts mixes with how the platform shapes posts.</li><li>Four platforms; maybe fewer after the data check.</li><li>Measures expressed feeling, not policy support.</li><li>UK and English only.</li><li>Some dissertation figures are inconsistent (disclosed).</li></ol></div>
-<div class="card reveal"><h4>What comes next</h4>Fresh data collection; 1,000–1,500 comments labelled by people, blind to the AI, sampled by platform, event and class; a second annotator on a quarter to a third; then all six steps on real data. In the PhD: add AI models, time and how narratives spread.</div>
-</div>
-<div class="say reveal"><span class="lbl">Your paper in 20 seconds</span>“People write differently on Reddit than on YouTube, so AI reads their opinions differently. Adding platforms together can flip the answer: in my simulation the overall mood pointed the wrong way on nearly a quarter of days. My paper gives a checklist to test whether a comparison is fair, and a way to fix it.”</div>
+<div class="brow"><span>Just add sites together</span><div class="track"><div class="fill bad" data-w="23"></div></div><b>~14 of 60 days wrong</b></div>
+<div class="brow"><span>Check and fix first</span><div class="track"><div class="fill good" data-w="1.4"></div></div><b>under 1 day</b></div></div>
+<p class="hint" style="margin:10px 0 0">Days when the overall mood pointed the wrong way (happy when people were unhappy, or the reverse).</p></div>
+<div class="say reveal"><span class="lbl">Say this (20 seconds)</span>“People write differently on Reddit than on YouTube, so AI reads their opinions differently. Adding sites together can flip the answer: in my experiment the overall mood pointed the wrong way on nearly a quarter of days. My paper gives a checklist to test whether a comparison is fair, and a way to fix it.”</div>
+<details class="reveal"><summary>More detail, only if they ask</summary><div class="body"><ul style="margin:0;padding-left:18px">
+<li><b>Your part:</b> you built the computer experiment and the dissertation example; written with Dr Haig.</li>
+<li><b>The gap:</b> researchers knew platforms shape how people write (Sen et al. 2021 call it “platform-affordance error”) but nobody had a test for it.</li>
+<li><b>Technical names of the steps:</b> same-event comparison, reliability study, measurement invariance and DIF, multilevel adjustment, score linking, simulation.</li>
+<li><b>Fairness built in:</b> 15 UK budget events (centred on the 2022 mini-budget) were fixed before looking at data; every test is repeated with a second AI model.</li>
+<li><b>Limits:</b> it's a method plus an experiment; real data on all four platforms is the next study. UK and English only.</li>
+<li><b>Timeline:</b> idea from the MSc → written with Dr Haig → live on arXiv 14 Oct 2026.</li></ul></div></details>
 </section>
 
 <!-- 6 FLUENCY -->
@@ -506,12 +468,12 @@ items.forEach((it,k)=>{const x=document.createElement('button');x.textContent=it
 function show(k){[...t.children].forEach((x,j)=>x.classList.toggle('on',j===k));b.innerHTML='<div class="fade">'+render(items[k])+'</div>';if(items[k].after)items[k].after(b);}show(0);}
 
 const steps=[
-['Same-event check','<b>Plain:</b> compare platforms on posts about the same news moment, in the same time window, so it is like with like. <b>Detail:</b> 15 UK fiscal events from March 2020 to March 2025, centred on the 23 September 2022 mini-budget, fixed on 21 August 2026 before counting anything; 48-hour and two-week windows; minimum 200 comments per platform per event. <b>Technical:</b> same-event divergence test (Cramér\'s V with cluster-bootstrap intervals).'],
-['Reliability check','<b>Plain:</b> how much of a score comes from the platform, the event, the post or the coder, compared with posts labelled by people? Is the measure equally dependable on every platform? <b>Technical:</b> a fixed-facet generalizability study (G-study).'],
-['“Same meaning” test','<b>Plain:</b> does “negative” relate to the real feeling in the same way on Reddit, X, YouTube and Quora? A difference only counts if it is big enough and shows up in at least two events. <b>Technical:</b> categorical measurement invariance and differential item functioning (DIF), with effect-size cut-offs.'],
-['Adjust for crowd and timing','<b>Plain:</b> different people post at different times on each site; adjust before comparing. <b>Technical:</b> a multilevel model with posts nested in events, controlling for composition and timing.'],
-['One common scale','<b>Plain:</b> convert each platform onto one yardstick using the shared events, like converting currencies; if the evidence is too weak, don\'t link at all. <b>Technical:</b> anchor-based score linking (honestly labelled as the weakest form of linking).'],
-['Simulation','<b>Plain:</b> a computer experiment where you set the true mood, then show what goes wrong if you skip steps 1 to 5: the overall mood points the wrong way on 13.8 of 60 days, versus 0.8 when corrected. <b>Technical:</b> 500 replications with known measurement functions per platform.']];
+['Compare like with like','Only compare sites on posts about the same news moment, at the same time. You chose 15 UK budget events in advance, before looking at the data.'],
+['Check against people','See how well the AI’s labels match labels given by real people, on each site.'],
+['Check the meaning','Does “negative” mean the same thing on Reddit, X, YouTube and Quora?'],
+['Allow for who posts','Different kinds of people use each site at different times. Adjust for that.'],
+['Use one yardstick','Convert every site onto one common scale, like converting currencies before adding them.'],
+['Show the cost','A computer experiment with a known true mood shows that skipping steps 1–5 gets the overall mood wrong on nearly a quarter of days.']];
 (function(){const box=document.getElementById('stepper'),dots=box.querySelector('.dots'),panel=box.querySelector('.panel');let i=0;
 steps.forEach((s,k)=>{const b=document.createElement('button');b.textContent=k+1;b.setAttribute('aria-label','Step '+(k+1));b.onclick=()=>show(k);dots.appendChild(b);});
 function show(k){i=(k+steps.length)%steps.length;[...dots.children].forEach((b,j)=>b.classList.toggle('on',j===i));panel.innerHTML='<div class="fade"><h4>Step '+(i+1)+': '+steps[i][0]+'</h4>'+steps[i][1]+'</div>';}
