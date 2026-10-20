@@ -295,14 +295,14 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <!-- 4 DISSERTATION -->
 <section id="diss">
 <h2 class="reveal">4. Your dissertation, simply<small>MSc Data Analytics, University of Portsmouth, 2025 · supervisor Dr Ella Haig · Distinction</small></h2>
-<div class="card reveal"><h4>In one sentence</h4>You used AI to measure how the UK public felt about economic policies (tax, prices, welfare, energy, housing, jobs) from comments on four platforms: X, Reddit, YouTube and Quora.</div>
+<div class="card reveal"><h4>In one sentence</h4>You used AI to measure how the UK public felt about economic policy, from comments on X, Reddit, YouTube and Quora.</div>
 <div class="grid g3" style="margin-top:14px">
-<div class="card reveal"><h4>Why</h4>People react to government money decisions online first, but the reaction is spread across many sites. One combined view could warn government early. (Your Chevening idea, built small.)</div>
-<div class="card reveal"><h4>What you did</h4><ol style="margin:0;padding-left:18px"><li>Collected <b>255,446 comments</b> through official APIs (Reddit API, YouTube Data API v3) and licensed archives (X, Quora), with Python.</li><li>Gave each a first label (positive, neutral, negative) with <b>VADER</b>, a rule-based sentiment word list.</li><li>Fine-tuned <b>BERT</b> (a transformer language model) and a <b>BiLSTM</b> (an older neural network), compared them with logistic regression, tested with <b>McNemar</b> and <b>bootstrap</b>, and forecast daily mood with <b>Prophet</b>.</li></ol></div>
-<div class="card reveal"><h4>What it showed</h4><ul style="margin:0;padding-left:18px"><li>The mood dropped sharply around the 2022 mini-budget.</li><li>Each platform looked different: YouTube calmer, X angrier.</li><li>Angry and fearful words came with negative posts (emotions from the <b>NRC</b> lexicon; explanations from <b>LIME</b>).</li></ul></div>
+<div class="card reveal"><h4>Why</h4>People react online first, but across many sites. One view could warn government early (your Chevening idea, built small).</div>
+<div class="card reveal"><h4>What you did</h4><ol style="margin:0;padding-left:18px"><li>Collected <b>255,446 comments</b> (APIs and archives).</li><li>Labelled them with <b>VADER</b> (a word list).</li><li>Trained <b>BERT</b> and a <b>BiLSTM</b>, tested them (McNemar, bootstrap), forecast mood with <b>Prophet</b>.</li></ol></div>
+<div class="card reveal"><h4>What it showed</h4><ul style="margin:0;padding-left:18px"><li>Mood dropped at the 2022 mini-budget.</li><li>YouTube calmer, X angrier.</li><li>Anger and fear came with negative posts (<b>NRC</b>).</li></ul></div>
 </div>
-<div class="card reveal" style="margin-top:14px;border-color:var(--coral)"><h4 style="color:var(--coral)">What you realised later</h4>BERT looked 88% accurate, but it was trained and checked on <b>VADER</b> labels, the same word list it learned from, so the score measured agreement with VADER, not with people. And you had assumed “negative” means the same on every platform. <b>That realisation became your paper.</b></div>
-<div class="say reveal"><span class="lbl">Say this</span>“My dissertation measured UK public mood about economic policy from 255,446 comments on four platforms. I labelled them with VADER, fine-tuned BERT on those labels and forecast mood with Prophet. BERT looked 88% accurate, but I realised it was checked against the same VADER labels it learned from, and I had assumed every platform measures the same way. That is exactly what my paper fixes.”</div>
+<div class="card reveal" style="margin-top:14px;border-color:var(--coral)"><h4 style="color:var(--coral)">What you realised later</h4>BERT looked 88% accurate, but it was checked against <b>VADER’s own labels</b>, not people. And you assumed every platform was the same. <b>That became your paper.</b></div>
+<div class="say reveal"><span class="lbl">Say this</span>“My MSc measured UK public mood from 255,446 comments with VADER and BERT. BERT looked 88% accurate, but it was checked against VADER’s own labels, and I assumed platforms were equal. My paper fixes that.”</div>
 <details class="reveal"><summary>More detail, only if they ask</summary><div class="body"><ul style="margin:0;padding-left:18px">
 <li><b>Scores:</b> BERT 88% (macro-F1 0.878), BiLSTM 82%, logistic regression 71%, VADER 65%. All measured against the VADER labels, which is the problem.</li>
 <li><b>Hardest label:</b> “neutral”, often confused with “negative”.</li>
@@ -317,7 +317,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <!-- 5 PAPER -->
 <section id="paper">
 <h2 class="reveal">5. Your paper, simply<small>“Is the Platform Part of the Measurement?” · Ikram &amp; Haig · arXiv 2610.16757 · October 2026 · your first paper (a preprint)</small></h2>
-<div class="card reveal"><h4>In one sentence</h4>Before you add up AI-measured opinions from different social media sites, check that each site is being measured the same way, because often it isn't.</div>
+<div class="card reveal"><h4>In one sentence</h4>Before adding up AI-measured opinions from different sites, check each site is measured the same way.</div>
 <div class="card reveal" style="margin-top:14px"><h4>The problem, as a picture</h4><svg viewBox="0 0 680 360" width="100%" role="img" aria-label="Same opinion, three platforms, one AI, wrong combined mood">
 <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
 <g class="n-gray box"><rect x="220" y="14" width="240" height="52" rx="10"/><text x="340" y="36" text-anchor="middle" font-weight="700" font-size="14">Same public opinion</text><text x="340" y="54" text-anchor="middle" class="sub">e.g. about a new tax</text></g>
@@ -331,15 +331,15 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <g class="n-coral box"><rect x="160" y="300" width="360" height="52" rx="10"/><text x="340" y="322" text-anchor="middle" font-weight="700" font-size="14">Added-up daily mood</text><text x="340" y="340" text-anchor="middle" class="sub">can point the wrong way</text></g>
 </svg></div>
 <div class="grid g2" style="margin-top:14px">
-<div class="card reveal"><h4>The simple idea</h4>Surveys know people answer differently on the phone and on paper, so they check before comparing. Your paper says each social media site is like a different “way of asking”, so check it the same way.</div>
-<div class="card reveal"><h4>What you did</h4>Wrote a <b>6-step protocol</b> using tools from survey research (<b>generalizability theory</b>, <b>measurement invariance and DIF</b>, <b>score linking</b>) to test and fix the comparison, and ran a <b>simulation</b> in Python (500 runs) where the true mood was known, to show what goes wrong if you skip it.</div>
+<div class="card reveal"><h4>The idea</h4>People answer surveys differently by phone and on paper. Each social media site is like a different “way of asking”, so check it first.</div>
+<div class="card reveal"><h4>What you did</h4>A <b>6-step protocol</b> from survey research (G-study, invariance, DIF, score linking), plus a Python <b>simulation</b> showing what goes wrong without it.</div>
 </div>
 <h3 class="reveal">The 6 steps (tap through)</h3>
 <div class="card stepper reveal" id="stepper"><div class="dots"></div><div class="panel"></div>
 <div class="ctrl"><button class="btn" data-d="-1">Back</button><button class="btn pri" data-d="1">Next</button></div></div>
 <h3 class="reveal">How your simulation works</h3>
 <div class="card reveal">
-<p style="margin-top:0">A <b>simulation</b> is a computer experiment: you invent data where you <b>already know the true answer</b>, then check whether a method finds it. You wrote it in <b>Python</b> (NumPy), and the code is public on GitHub (asadfix/platform-measurement).</p>
+<p style="margin-top:0">A <b>simulation</b> is a computer experiment where you <b>already know the true answer</b>. Yours is in Python, public on GitHub.</p>
 <svg viewBox="0 0 680 470" width="100%" role="img" aria-label="How the simulator works">
 <defs><marker id="ah5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
 <g class="n-teal box"><rect x="170" y="10" width="340" height="62" rx="10"/><text x="340" y="33" text-anchor="middle" font-weight="700" font-size="14">1. True public mood (you set it)</text><text x="340" y="53" text-anchor="middle" class="sub">60 days; a drop at an event, recovering over ~10 days</text></g>
@@ -356,23 +356,17 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <g class="n-gray box"><rect x="170" y="420" width="340" height="44" rx="10"/><text x="340" y="447" text-anchor="middle" font-weight="700" font-size="13">4. Compare with the truth, every day · repeat 500 times</text></g>
 </svg>
 <ul style="margin:8px 0 0;padding-left:18px">
-<li><b>What “bias, noise, cut-offs” mean:</b> on one site people sound harsher (bias), posts vary (noise), and the AI draws its positive/negative lines in different places (cut-offs). Same true mood, different labels.</li>
-<li><b>Result:</b> the naive index pointed the wrong way on <b>13.8 of 60 days</b>; the adjusted index on <b>0.8</b>. The more the sites differ, the worse the naive index gets.</li>
-<li><b>Honest note:</b> in the simulation you <i>know</i> each site’s bias; with real data it must be estimated, which is what steps 1–5 do.</li>
-</ul></div>
+<li><b>Bias, noise, cut-offs:</b> each site makes people sound harsher or softer, varies, and draws its lines differently.</li><li><b>Result:</b> just averaging was wrong on 13.8 of 60 days; adjusting, 0.8.</li><li><b>Note:</b> real data must estimate each site’s bias (steps 1–5).</li></ul></div>
 
-<h3 class="reveal">VADER in the MSc, and what changes in the paper</h3>
+<h3 class="reveal">VADER in the MSc vs the paper</h3>
 <table class="reveal">
-<tr><th></th><th>MSc dissertation</th><th>Paper (the protocol)</th></tr>
-<tr><td><b>Where labels come from</b></td><td><b>VADER</b> labelled every post; BERT learned from those labels</td><td>Machine labels are kept, but VADER is no longer the judge</td></tr>
-<tr><td><b>The yardstick</b></td><td>VADER’s own labels (circular)</td><td><b>People:</b> 1,000–1,500 comments labelled by hand, <b>blind</b> to the AI, sampled across platforms and events</td></tr>
-<tr><td><b>Second opinion</b></td><td>One person (you) reviewed 200 VADER labels</td><td>A <b>second human annotator</b> on a quarter to a third of the sample</td></tr>
-<tr><td><b>Second model</b></td><td>None</td><td>Every test repeated with a <b>non-word-list model</b> (a <b>RoBERTa</b> sentiment classifier); a platform difference only counts if <b>both</b> models show it</td></tr>
-<tr><td><b>Comparing platforms</b></td><td>Assumed equal; all posts pooled</td><td>Tested first (same events, invariance and DIF), then linked onto one scale</td></tr>
-<tr><td><b>Choices made</b></td><td>After seeing the data</td><td><b>Before</b>: 15 events fixed on 21 Aug 2026</td></tr>
-<tr><td><b>Evidence so far</b></td><td>Real data</td><td>The <b>simulation</b> (no VADER at all: data with a known truth). The real-data run is the next study.</td></tr>
+<tr><th></th><th>MSc</th><th>Paper</th></tr>
+<tr><td><b>Yardstick</b></td><td>VADER’s own labels</td><td><b>People</b>: 1,000–1,500 hand labels + a second labeller</td></tr>
+<tr><td><b>Double-check</b></td><td>None</td><td>A second model (<b>RoBERTa</b>)</td></tr>
+<tr><td><b>Platforms</b></td><td>Assumed equal</td><td>Tested first</td></tr>
+<tr><td><b>Choices</b></td><td>After seeing data</td><td>Before (15 events)</td></tr>
 </table>
-<div class="say reveal"><span class="lbl">If asked “You used VADER, what do you do differently now?”</span>“In my MSc, VADER labelled everything and BERT was judged against VADER, so it was circular. In the paper, people become the yardstick: a blind, hand-labelled sample with a second annotator. Every test is repeated with a different kind of model, a RoBERTa classifier, so a difference only counts if both agree. And I fixed the events in advance. The paper shows in a simulation why this matters; running it on real data is the next study.”</div>
+<div class="say reveal"><span class="lbl">If asked “You used VADER, what do you do differently now?”</span>“In my MSc, BERT was judged against VADER, so it was circular. In the paper, people are the yardstick, a RoBERTa model double-checks, and events are fixed in advance. Real data is the next study.”</div>
 
 <h3 class="reveal">The result</h3>
 <div class="card reveal" id="bars"><div class="bars">
