@@ -580,7 +580,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </section>
 
 <section id="qa">
-<h2 class="reveal">11. Likely questions<small>Short answers you can say out loud. Main point first, one example, then stop (45–75 seconds). “Use STAR” means tell that story.</small></h2>
+<h2 class="reveal">11. Likely questions<small>Tap a question for a short answer. “STAR” means tell that story.</small></h2>
 <div id="qaList"></div>
 </section>
 
@@ -671,30 +671,30 @@ body.innerHTML='<p class="hint" style="margin:0 0 4px">Use for: '+s.use+'</p>'+[
 [...body.querySelectorAll('.row')].forEach((r,j)=>setTimeout(()=>r.classList.add('in'),120*j+60));phd.textContent=s.P;}show(0);})();
 
 const qa=[
-['Tell us about yourself','Use the 60-second story (Cheat sheet): Dubizzle → Chevening idea → MSc → Fluency → Artemis AI → first paper → CSH as the next step.'],
-['Describe a research project and what went wrong','<b>Use STAR 1.</b> “In my MSc I measured UK public mood from 255,446 comments on four platforms with VADER and BERT. I found BERT was judged against the same VADER labels it learned from, so the 88% proved little. I reported it openly and it became my paper.” End on: always ask where the yardstick comes from.'],
-['Tell us about your paper','“People write differently on each platform, so a sentiment model reads them differently. My paper gives a 6-step protocol (invariance, DIF, score linking) to test and fix this, and a Python simulation shows that skipping it gets the overall mood wrong on nearly a quarter of days.” Add if asked: humans become the yardstick, a second RoBERTa model double-checks, and real data is next.'],
-['What did you do in your dissertation?','“I collected 255,446 comments from X, Reddit, YouTube and Quora about UK economic policy, labelled them with VADER, fine-tuned BERT, and forecast mood with Prophet. The mood dropped sharply at the 2022 mini-budget. Later I realised the check was circular, which led to my paper.”'],
-['What have you built in industry?','<b>Use STAR 4 or 5.</b> “At Fluency I ran a year-long study with BERTopic and LLM tagging where every label records its prompt version, and built AI agents that repair broken Scrapy crawlers. Brands and governments act on these numbers, but they’re rarely checked against people.”'],
-['What is Artemis AI and your role?','“I’m co-founder and CTO of Artemis AI, a social media intelligence start-up with a team of eight. We collect 3M+ comments through the Meta Graph API, label them with Claude, DeepSeek and our own models, and are building 48 models for a December beta. Our hardest problem is knowing whether the AI labels are right.”'],
-['Any network science experience?','“Early, practical experience: at Artemis AI we built a page affinity graph and use Louvain community detection to suggest collaborations. I haven’t studied network science formally, and that’s a big reason I want to do the PhD at CSH.”'],
-['Why a PhD, and why now?','“Every job showed me a new way social media measurement fails: languages at Dubizzle, my own check in the MSc, silent drift at Fluency, labels that look right while failing at Artemis AI. Industry let me find these problems, not study them. Now I have a paper and a clear question, and I need network science and causal inference to finish it.”'],
-['Why CSH, why complexity science?','“Opinion online is a system: people, platforms and algorithms shape each other, and what we see is a selected slice. Chen et al. at CSH showed commenters are more polarised than watchers, which is my problem in another form. Alexander Hoyle’s work on validating NLP measures is closest to mine, and I want to learn network science here.”'],
-['What would you study?','“When can AI-labelled opinions be compared across platforms, AI models and time? Three steps: extend my simulation; collect new data around fixed events, labelled by several LLMs and checked by people; then show how the corrected measures change what we conclude about how narratives spread.”'],
-['Strengths and gaps?','“Strengths: data collection at scale, Python, LLM labelling and checking labels against people, and the measurement tools from my paper. Gaps: network science and causal inference. I’d close them through CSH courses in year one and use them in my third paper.”'],
-['Teamwork or leadership?','<b>Use STAR 3.</b> “At Dubizzle I led three engineers and hiring across 15 markets. At Artemis AI I lead the technology in a team of eight. And I wrote my paper together with my supervisor, Dr Haig.”'],
-['How do you judge if a model is right?','<b>Use STAR 6 or 7.</b> “Never against another model. At Artemis AI two AIs agreed more while both got worse, so we check against fixed human labels and watch for drift. And every page needs its own baseline before you call something unusual.”'],
-['What drives you?','<b>Use STAR 2.</b> “In Karachi in 2023, price rises led to business shutdowns. Social media showed the public mood, but nobody could measure it reliably. My Chevening idea was to fix that for government, and that’s still what drives me.”'],
-['What are your goals? / Where in five years?','“Short term: three papers during the PhD (my protocol on real data, then AI annotators and time, then narratives and polarisation) with the industry and government exchanges. Long term: a trusted, open standard for measuring public opinion online that government, researchers and platforms can use.”'],
-['What would your three papers be?','“All on one question: when can AI-labelled opinion be compared? Paper 1: platforms, my protocol on real, human-checked data. Paper 2: AI labellers and time (Claude, GPT, DeepSeek; concept erasure). Paper 3: does correcting it change how narratives seem to spread (network diffusion)? A starting plan I’d shape with my mentor.”'],
-['How would you balance Artemis AI with the PhD?','“Research comes first: the PhD would be my full-time focus in Vienna. Artemis AI is where I saw the problem, and the program’s industry exchange is where research gets tested.” Only say what you’ve decided.'],
-['What do you want to do after the PhD?','“Make social media measurement trustworthy: open methods, reliable evidence for government (my Chevening goal), and research-backed tools that people and organisations can actually use.”'],
-['What makes you different from other applicants?','“I’ve built and checked social media data in industry for eight years, so I know where AI labels fail in real life, and my first paper came from finding a flaw in my own work. I bring both the data skills and the research honesty.”'],
-['Tell us about a time you persisted through a challenge','<b>Use STAR 1.</b> “Finding that my dissertation’s check was circular was hard. Instead of hiding it, I rebuilt it into a paper through review, endorsement and revision while working two jobs.”'],
-['How do you approach a new problem?','“First I ask where the yardstick comes from and test against people. Then I fix my choices in advance, like the 15 events in my paper, so I can’t fool myself. Then I build and measure.”'],
-['How do you work with others?','“I like mixed teams. At Artemis AI I work across ML, product, design and legal; at Dubizzle I led engineers and hiring; and my paper is a collaboration with my supervisor.”'],
-['What environment helps you do your best work?','“Clear questions, honest feedback and people from other fields. CSH’s mix of network science, social science and data, with mentors like Alexander Hoyle and Elisa Omodei, is exactly that.”'],
-['Questions for us?','Ask one: “How are students matched with supervisors in the first year, and is co-supervision across groups common?”']];
+['Tell us about yourself','The 60-second story: Dubizzle → Chevening → MSc → Fluency → Artemis AI → paper → CSH.'],
+['A research project, and what went wrong?','<b>STAR 1.</b> “My MSc used VADER and BERT on 255,446 comments. BERT was checked against its own VADER labels, so the 88% proved little. That became my paper.”'],
+['Tell us about your paper','“Platforms change how people write, so AI reads them differently. My 6-step protocol tests and fixes this; my simulation shows skipping it gets the mood wrong on nearly a quarter of days.”'],
+['What did your dissertation do?','“255,446 comments, four platforms, UK economic policy: VADER labels, BERT, Prophet forecasts. Mood dropped at the 2022 mini-budget. The check turned out circular.”'],
+['What have you built in industry?','<b>STAR 4 or 5.</b> “A year-long study with BERTopic and traceable LLM labels at Fluency, and AI agents that fix broken Scrapy crawlers.”'],
+['What is Artemis AI and your role?','“I’m co-founder and CTO, team of 8. We label 3M+ comments with Claude, DeepSeek and our own models. Our hardest question: are the labels right?”'],
+['Any network science experience?','“Early: a page network with Louvain communities at Artemis AI. Learning it properly is why I want CSH.”'],
+['Why a PhD, and why now?','“Every job showed a new way social media measurement fails. Industry let me find it; a PhD lets me study and fix it, with network science and causal inference.”'],
+['Why CSH?','“Online opinion is a system. Chen et al. (commenters vs watchers) and Alexander Hoyle’s validation work match my question.”'],
+['What would you study?','“When AI-labelled opinion can be compared across platforms, AI models and time, and how fixing it changes what we see about narratives.”'],
+['What would your three papers be?','“1: platforms, on real human-checked data. 2: AI labellers over time (Claude, GPT, DeepSeek). 3: how narratives spread, with fixed measures. A starting plan.”'],
+['Strengths and gaps?','“Strong: data, Python, LLM labelling, checking against people. Gaps: network science and causal inference, which I’d learn here.”'],
+['Teamwork or leadership?','<b>STAR 3.</b> “Led 3 engineers at Dubizzle; lead the tech in a team of 8 at Artemis AI; co-wrote my paper with Dr Haig.”'],
+['How do you judge if a model is right?','<b>STAR 6.</b> “Against people, never another model. Two AIs agreed more while both got worse.”'],
+['What drives you?','<b>STAR 2.</b> “Karachi’s 2023 price protests: the mood was online, but nobody could measure it reliably.”'],
+['Your goals?','“Short term: three papers and two exchanges. Long term: a trusted, open way to measure public opinion online.”'],
+['Balancing Artemis AI and the PhD?','“Research first; the PhD is my full-time focus in Vienna.” Say only what you’ve decided.'],
+['After the PhD?','“Trustworthy social media measurement: open methods, evidence for government, tools people use.”'],
+['What makes you different?','“Eight years with real social media data, plus a paper born from finding my own mistake.”'],
+['A time you persisted?','<b>STAR 1.</b> “I turned my MSc mistake into a paper while working two jobs.”'],
+['How do you approach a problem?','“Ask where the yardstick comes from, fix choices in advance (like the 15 events), then test against people.”'],
+['How do you work with others?','“Mixed teams: ML, product, design and legal at Artemis AI; engineers at Dubizzle; my supervisor on the paper.”'],
+['Best environment for you?','“Clear questions, honest feedback, people from other fields: CSH’s mix, with mentors like Hoyle and Omodei.”'],
+['Questions for us?','Ask: “How are students matched with supervisors in the first year?”']];
 document.getElementById('qaList').innerHTML=qa.map(q=>'<details class="reveal in"><summary>'+q[0]+'</summary><div class="body">'+q[1]+'</div></details>').join('');
 (function(){let cur=-1,left=60,tm=null;const pq=document.getElementById('pq'),pt=document.getElementById('pt'),ht=document.getElementById('pHintText');
 function render(){pt.textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');pt.classList.toggle('warn',left<=15);}
