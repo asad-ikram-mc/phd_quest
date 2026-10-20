@@ -176,7 +176,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <div class="when">
 <span class="pill"><b>Tue 20 Oct</b> · 8:40 pm Lahore · 4:40 pm UK</span>
 <span class="pill">Zoom <b>843 5332 6447</b></span>
-<span class="pill">About <b>10 minutes</b> · recorded · English</span>
+<span class="pill"><b>15 minutes</b> (16:40–16:55 UK) · recorded · English</span>
 <span class="pill" id="countdown">…</span>
 </div>
 </header>
@@ -210,25 +210,26 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <div class="card reveal" style="border-top:4px solid var(--purple)"><span class="yrp">Year 3</span><h4 style="margin-top:6px">Track how narratives spread</h4>Run a narrative-spread analysis with and without the corrections (network diffusion). Try it during the <b>government exchange</b>. <b>Paper 3</b> and an open toolkit.</div>
 </div>
 <h3 class="reveal">Your 3 papers, explained</h3>
-<div class="card reveal" style="margin-bottom:12px"><b>Who decides?</b> CSH asks for <b>at least three first-author papers</b>; <b>you choose the topics</b> and shape them with your mentor. Yours all answer one question: <i>can AI-labelled opinion from social media be compared, and what changes when we fix it?</i> It’s a starting plan.</div>
+<div class="card reveal" style="margin-bottom:12px"><b>One big question:</b> <i>when can we trust AI-measured opinion from social media, across sites, AI models and time?</i> CSH asks for <b>3 first-author papers</b>; <b>you pick the topics</b> with your mentor. Each paper answers one piece.</div>
 <div class="grid g3">
-<div class="card reveal" style="border-top:4px solid var(--purple)"><span class="yrp">Paper 1 · Year 1</span><h4 style="margin-top:6px">How many human labels do you need?</h4>Extend your simulation so <b>platforms, AI labeller models and time</b> are all sources of error. Find how many hand labels, and which anchor events, you need to catch a difference big enough to flip a conclusion.
-<div class="pp"><b>You’ll need</b><ul><li>Your Python simulation (NumPy), known ground truth</li><li>G-study with more facets (platform, model, prompt, time)</li><li>Power analysis: how big a sample to detect an effect</li></ul></div>
-<div class="pp"><b>How you’ll learn</b><ul><li>Year 1 stats courses; mentor Alexander Hoyle</li><li>R tools lavaan and mirt</li></ul></div>
-<div class="pp ok"><b>What it gives you</b><ul><li>A paper with <b>no new data</b>, fast to finish</li><li>The design for Paper 2 (sample size, anchors)</li></ul></div></div>
-
-<div class="card reveal" style="border-top:4px solid var(--purple)"><span class="yrp">Paper 2 · Year 2</span><h4 style="margin-top:6px">Are platforms and AI labellers comparable on real data?</h4>Collect posts around <b>policy events fixed in advance</b> on several platforms (official APIs). Code frames with several LLMs, plus a hand-labelled sample per platform with a second coder.
-<div class="pp"><b>You’ll need</b><ul><li>G-study: split variance into platform, model, prompt and time</li><li>DIF tests for each frame</li><li>Concept erasure (LEACE): does removing the platform signal also remove real differences?</li><li>Second coder agreement (Cohen’s kappa, Krippendorff’s alpha); ethics approval</li></ul></div>
-<div class="pp"><b>How you’ll learn</b><ul><li>Hoyle’s work on LLM measurement (Fan et al. 2025, Licht et al. 2025)</li><li>Industry exchange: test on a live platform</li></ul></div>
-<div class="pp ok"><b>What it gives you</b><ul><li>The first real-data answer to your arXiv question</li><li>A human-checked dataset for Paper 3; better checks for Artemis AI</li></ul></div></div>
-
-<div class="card reveal" style="border-top:4px solid var(--purple)"><span class="yrp">Paper 3 · Year 3</span><h4 style="margin-top:6px">Did the narrative really move between platforms?</h4>Put the <b>corrected and uncorrected</b> measures into a narrative-spread analysis with network methods, and report <b>when the conclusion changes</b>.
-<div class="pp"><b>You’ll need</b><ul><li>Network science: communities, diffusion, cascades</li><li>Causal inference: difference-in-differences, interrupted time series</li><li>Finding narratives with embeddings</li></ul></div>
-<div class="pp"><b>How you’ll learn</b><ul><li>CSH network science courses; Omodei and Karimi groups</li><li>Barabási, <i>Network Science</i>; government exchange</li></ul></div>
-<div class="pp ok"><b>What it gives you</b><ul><li>A real finding on narratives and polarisation</li><li>Evidence for government (your Chevening goal); completes the thesis</li></ul></div></div>
+<div class="card reveal" style="border-top:4px solid var(--purple)"><span class="yrp">Paper 1 · Year 1</span><h4 style="margin-top:6px">How many human checks do we need?</h4>
+<p style="margin:4px 0">Use your <b>simulation</b> (fake data where you know the true answer) to work out how many posts people must label to catch a real problem.</p>
+<p class="hint" style="margin:4px 0"><b>Like:</b> a doctor deciding how many patients a trial needs before it starts.</p>
+<div class="pp"><b>Tools</b><ul><li>Your Python simulation (NumPy)</li><li>G-study (where errors come from)</li><li>Power analysis (sample size)</li></ul></div>
+<div class="pp ok"><b>Why it matters</b><ul><li><b>No new data</b>, so quick to finish</li><li>Tells Paper 2 how big to make it</li></ul></div></div>
+<div class="card reveal" style="border-top:4px solid var(--purple)"><span class="yrp">Paper 2 · Year 2</span><h4 style="margin-top:6px">Do sites and AI models really agree?</h4>
+<p style="margin:4px 0">Collect real posts about the <b>same policy events</b> on several sites, label them with several <b>LLMs</b> (GPT, Claude, open models) and with <b>people</b>, then test if they agree.</p>
+<p class="hint" style="margin:4px 0"><b>Like:</b> checking whether four scales in four shops weigh the same apple the same.</p>
+<div class="pp"><b>Tools</b><ul><li>Official APIs; human labels + a second labeller</li><li>Invariance and DIF tests</li><li>Concept erasure (LEACE)</li></ul></div>
+<div class="pp ok"><b>Why it matters</b><ul><li>First answer on <b>real data</b></li><li>Better checks in Artemis AI</li></ul></div></div>
+<div class="card reveal" style="border-top:4px solid var(--purple)"><span class="yrp">Paper 3 · Year 3</span><h4 style="margin-top:6px">Did the story really spread?</h4>
+<p style="margin:4px 0">Track how a <b>narrative</b> moves between sites (network science), once <b>with</b> the fixes and once <b>without</b>, and see if the answer changes.</p>
+<p class="hint" style="margin:4px 0"><b>Like:</b> asking whether a rumour really moved, or the thermometers were just different.</p>
+<div class="pp"><b>Tools</b><ul><li>Network science: communities, diffusion</li><li>Causal inference: difference-in-differences</li><li>Narratives from embeddings</li></ul></div>
+<div class="pp ok"><b>Why it matters</b><ul><li>A real finding on narratives and polarisation</li><li>Evidence for government (your Chevening goal)</li></ul></div></div>
 </div>
-<div class="chain reveal" style="margin-top:12px"><span>Paper 1: simulation, no new data</span><i>→</i><span>Paper 2: real data, platforms + LLMs</span><i>→</i><span>Paper 3: narrative spread, corrected vs not</span></div>
-<div class="say reveal"><span class="lbl">If asked “What would your three papers be?”</span>“All three follow my application: when is a machine-labelled frame comparable across platforms, models and time? First, extend my simulation so models and time are facets too, to see how many hand labels I need; no new data. Second, build the real corpus around fixed policy events, with several LLMs and a hand-labelled sample, and test it with a G-study, DIF and concept erasure. Third, track how narratives spread with and without the corrections, and report when the conclusion changes. It’s a starting plan; I’d shape it with my mentor.”</div>
+<div class="chain reveal" style="margin-top:12px"><span>1: how many checks (simulation)</span><i>→</i><span>2: test on real data</span><i>→</i><span>3: does it change the story?</span></div>
+<div class="say reveal"><span class="lbl">Say this (20 seconds)</span>“My PhD asks when we can trust AI-measured opinion across platforms. First, using my simulation, how many human labels we need. Second, testing real posts with several AI models and people. Third, whether fixing the measurement changes what we conclude about how narratives spread. It’s a starting plan; I’d shape it with my mentor.”</div>
 <h3 class="reveal">Long term: after the PhD</h3>
 <div class="grid g2">
 <div class="card reveal" style="border-top:4px solid var(--teal)"><h4>1. A trusted way to measure</h4>Open methods anyone can use to check AI labels before comparing platforms.</div>
