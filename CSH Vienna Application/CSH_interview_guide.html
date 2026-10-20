@@ -268,11 +268,11 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <div class="card reveal"><h4>In one sentence</h4>You used AI to measure how the UK public felt about economic policies (tax, prices, welfare, energy, housing, jobs) from comments on four platforms: X, Reddit, YouTube and Quora.</div>
 <div class="grid g3" style="margin-top:14px">
 <div class="card reveal"><h4>Why</h4>People react to government money decisions online first, but the reaction is spread across many sites. One combined view could warn government early. (Your Chevening idea, built small.)</div>
-<div class="card reveal"><h4>What you did</h4><ol style="margin:0;padding-left:18px"><li>Collected <b>255,446 comments</b>.</li><li>Gave each a first label (positive, neutral, negative) with a simple word list.</li><li>Trained AI models to label them, then tracked the mood over time.</li></ol></div>
-<div class="card reveal"><h4>What it showed</h4><ul style="margin:0;padding-left:18px"><li>The mood dropped sharply around the 2022 mini-budget.</li><li>Each platform looked different: YouTube calmer, X angrier.</li><li>Angry and fearful words came with negative posts.</li></ul></div>
+<div class="card reveal"><h4>What you did</h4><ol style="margin:0;padding-left:18px"><li>Collected <b>255,446 comments</b> through official APIs (Reddit API, YouTube Data API v3) and licensed archives (X, Quora), with Python.</li><li>Gave each a first label (positive, neutral, negative) with <b>VADER</b>, a rule-based sentiment word list.</li><li>Fine-tuned <b>BERT</b> (a transformer language model) and a <b>BiLSTM</b> (an older neural network), compared them with logistic regression, tested with <b>McNemar</b> and <b>bootstrap</b>, and forecast daily mood with <b>Prophet</b>.</li></ol></div>
+<div class="card reveal"><h4>What it showed</h4><ul style="margin:0;padding-left:18px"><li>The mood dropped sharply around the 2022 mini-budget.</li><li>Each platform looked different: YouTube calmer, X angrier.</li><li>Angry and fearful words came with negative posts (emotions from the <b>NRC</b> lexicon; explanations from <b>LIME</b>).</li></ul></div>
 </div>
-<div class="card reveal" style="margin-top:14px;border-color:var(--coral)"><h4 style="color:var(--coral)">What you realised later</h4>The AI looked 88% accurate, but it was checked against labels from the <b>same word list</b> it learned from, so the score proved little. And you had assumed “negative” means the same on every platform. <b>That realisation became your paper.</b></div>
-<div class="say reveal"><span class="lbl">Say this</span>“My dissertation measured UK public mood about economic policy from 255,446 comments on four platforms. The model looked accurate, but I realised I had checked it against labels from the same word list, and assumed every platform measures the same way. That is exactly what my paper fixes.”</div>
+<div class="card reveal" style="margin-top:14px;border-color:var(--coral)"><h4 style="color:var(--coral)">What you realised later</h4>BERT looked 88% accurate, but it was trained and checked on <b>VADER</b> labels, the same word list it learned from, so the score measured agreement with VADER, not with people. And you had assumed “negative” means the same on every platform. <b>That realisation became your paper.</b></div>
+<div class="say reveal"><span class="lbl">Say this</span>“My dissertation measured UK public mood about economic policy from 255,446 comments on four platforms. I labelled them with VADER, fine-tuned BERT on those labels and forecast mood with Prophet. BERT looked 88% accurate, but I realised it was checked against the same VADER labels it learned from, and I had assumed every platform measures the same way. That is exactly what my paper fixes.”</div>
 <details class="reveal"><summary>More detail, only if they ask</summary><div class="body">Models: BERT 88% vs BiLSTM 82% vs simple baselines, all measured against the word-list (VADER) labels. Tests: McNemar and bootstrap; forecasting with Prophet; emotions with the NRC word list. A few numbers in the text didn't match the code records (for example 279,000 vs 255,446 comments); the paper lists these openly. Ethics approved as low risk.</div></details>
 </section>
 
@@ -294,7 +294,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </svg></div>
 <div class="grid g2" style="margin-top:14px">
 <div class="card reveal"><h4>The simple idea</h4>Surveys know people answer differently on the phone and on paper, so they check before comparing. Your paper says each social media site is like a different “way of asking”, so check it the same way.</div>
-<div class="card reveal"><h4>What you did</h4>Wrote a <b>6-step checklist</b> to test and fix the comparison, and ran a <b>computer experiment</b> where the true mood was known, to show what goes wrong if you skip it.</div>
+<div class="card reveal"><h4>What you did</h4>Wrote a <b>6-step protocol</b> using tools from survey research (<b>generalizability theory</b>, <b>measurement invariance and DIF</b>, <b>score linking</b>) to test and fix the comparison, and ran a <b>simulation</b> in Python (500 runs) where the true mood was known, to show what goes wrong if you skip it.</div>
 </div>
 <h3 class="reveal">The 6 steps (tap through)</h3>
 <div class="card stepper reveal" id="stepper"><div class="dots"></div><div class="panel"></div>
@@ -304,7 +304,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <div class="brow"><span>Just add sites together</span><div class="track"><div class="fill bad" data-w="23"></div></div><b>~14 of 60 days wrong</b></div>
 <div class="brow"><span>Check and fix first</span><div class="track"><div class="fill good" data-w="1.4"></div></div><b>under 1 day</b></div></div>
 <p class="hint" style="margin:10px 0 0">Days when the overall mood pointed the wrong way (happy when people were unhappy, or the reverse).</p></div>
-<div class="say reveal"><span class="lbl">Say this (20 seconds)</span>“People write differently on Reddit than on YouTube, so AI reads their opinions differently. Adding sites together can flip the answer: in my experiment the overall mood pointed the wrong way on nearly a quarter of days. My paper gives a checklist to test whether a comparison is fair, and a way to fix it.”</div>
+<div class="say reveal"><span class="lbl">Say this (20 seconds)</span>“People write differently on Reddit than on YouTube, so a sentiment model like BERT reads their opinions differently. Adding sites together can flip the answer: in my simulation the overall mood pointed the wrong way on nearly a quarter of days. My paper gives a checklist to test whether a comparison is fair, and a way to fix it.”</div>
 <details class="reveal"><summary>More detail, only if they ask</summary><div class="body"><ul style="margin:0;padding-left:18px">
 <li><b>Your part:</b> you built the computer experiment and the dissertation example; written with Dr Haig.</li>
 <li><b>The gap:</b> researchers knew platforms shape how people write (Sen et al. 2021 call it “platform-affordance error”) but nobody had a test for it.</li>
@@ -319,12 +319,12 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <h2 class="reveal">6. Fluency, simply<small>M+C Saatchi Fluency, London · Data Engineer Consultant · since Dec 2024 · part-time remote</small></h2>
 <div class="card reveal"><h4>In one sentence</h4>Fluency studies what people say about big brands on social media; you collect that data, label it with AI, check it, and help turn it into reports for clients.</div>
 <div class="grid g3" style="margin-top:14px">
-<div class="card reveal"><h4>Research</h4>A year-long study of what US fans said about a sport: <b>100,845 posts</b>, grouped into 18 themes, labelled by AI, every label traceable, tested three times on the same 500 posts first.</div>
-<div class="card reveal"><h4>Data collection</h4>60+ crawlers collecting car-owner forums across Europe, kept running by AI agents that <b>fix broken crawlers themselves</b> and test the fix before it goes live.</div>
-<div class="card reveal"><h4>Quality</h4>A weekly pipeline of about <b>2 million rows</b> for a global brand, with an 89-point quality check before anyone uses the numbers.</div>
+<div class="card reveal"><h4>Research</h4>A year-long study of what US fans said about a sport: <b>100,845 posts</b> from <b>Brandwatch</b> and the <b>Reddit API</b>, topics found with <b>BERTopic</b> and merged into 18 themes, labelled by an LLM (<b>GPT-4o-mini</b>) with a prompt-version hash on every label, tested three times on the same 500 posts first.</div>
+<div class="card reveal"><h4>Data collection</h4>60+ <b>Scrapy</b> crawlers collecting car-owner forums across Europe, run from a <b>FastAPI</b> server, kept running by <b>Claude</b>-based AI agents (through an <b>MCP</b> server) that <b>fix broken crawlers themselves</b> and test the fix before it goes live.</div>
+<div class="card reveal"><h4>Quality</h4>A weekly pipeline of about <b>2 million rows</b> for a global brand from <b>Sprinklr</b> exports, on <b>AWS</b> (Lambda, ECS Fargate, Postgres) into <b>Tableau</b>, with an 89-point quality check and an <b>XGBoost</b> model for missing metrics.</div>
 </div>
 <div class="card reveal" style="margin-top:14px;border-color:var(--teal)"><h4 style="color:var(--teal)">The link to your PhD</h4>In the year-long study you reported Twitter and Reddit as <b>“two publics”, never added together</b>: your paper's idea, used in real client work.</div>
-<div class="say reveal"><span class="lbl">Say this</span>“At Fluency I collect and label social media data for global brands. In a year-long study I made every AI label traceable, tested it before the full run, and kept Twitter and Reddit as two separate publics, never pooled. It's my research question in practice.”</div>
+<div class="say reveal"><span class="lbl">Say this</span>“At Fluency I collect and label social media data for global brands, with Brandwatch, Sprinklr, Scrapy and LLMs on AWS. In a year-long study I used BERTopic for themes, made every LLM label traceable, tested it before the full run, and kept Twitter and Reddit as two separate publics, never pooled. It's my research question in practice.”</div>
 <details class="reveal"><summary>More detail: every project (only if they ask)</summary><div class="body"><div class="tabs" id="fluTabs"></div><div id="fluBody"></div>
 <p class="hint" style="margin-top:10px"><b>Don't say:</b> client incidents or confidential findings; anti-bot or proxy techniques (say “official APIs where available, polite rate limits”); don't claim the government dashboard or Alexa+ as built by you.</p></div></details>
 </section>
@@ -334,16 +334,16 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <h2 class="reveal">7. Artemis AI, simply<small>Co-founder and CTO · team of eight · beta on 15 Dec 2026</small></h2>
 <div class="card reveal"><h4>In one sentence</h4>Artemis AI helps creators and businesses understand their social media pages: what people are saying, what is working, when a wave of hostile comments starts, and which pages they could collaborate with.</div>
 <div class="grid g3" style="margin-top:14px">
-<div class="card reveal"><h4>The data</h4>20 consenting Facebook pages; <b>111,000+ posts and 3M+ comments</b>, plus images and videos, collected through Meta's official API.</div>
-<div class="card reveal"><h4>The AI</h4>A stronger AI labels a sample and explains why; a cheaper AI learns those rules and labels the rest; your own models learn from both; people check samples. <b>48 models</b> are planned for the beta.</div>
-<div class="card reveal"><h4>The network</h4>An early map of how pages relate (an <b>affinity graph</b>), grouping similar pages into communities, to suggest good collaborations. Mostly still being built.</div>
+<div class="card reveal"><h4>The data</h4>20 consenting Facebook pages; <b>111,000+ posts and 3M+ comments</b>, plus images and videos, collected through the <b>Meta Graph API</b> into an <b>S3 / Apache Iceberg</b> data lake queried with <b>Athena</b>. Images read with <b>CLIP</b> and <b>OCR</b>, video with <b>Whisper</b>.</div>
+<div class="card reveal"><h4>The AI</h4><b>Claude</b> labels 6,000 posts and explains why; rules from those reasons guide <b>DeepSeek</b>, which labels 12,000 more; your own models (<b>XLM-R, DistilBERT, DeBERTa</b>) learn from both; people check samples. <b>48 models</b> are planned for the beta, plus <b>Art-E</b>, an advisor on <b>Amazon Bedrock</b>.</div>
+<div class="card reveal"><h4>The network</h4>An early map of how pages relate (an <b>affinity graph</b>), grouping similar pages with <b>Louvain community detection</b>, to suggest good collaborations with a match score. Mostly still being built.</div>
 </div>
 <h3 class="reveal">What it taught you (the research lessons)</h3>
 <div class="grid g2">
-<div class="card reveal"><h4>Agreement can lie</h4>Two AI models agreed <i>more</i> while both were getting <i>worse</i>. So you check AI against people, not against other AI.</div>
+<div class="card reveal"><h4>Agreement can lie</h4>Two AI models (Claude and DeepSeek) agreed <i>more</i> while both were getting <i>worse</i>. So you check AI against people, not against other AI.</div>
 <div class="card reveal"><h4>Labels drift</h4>One measure fell from 77% to 37% in weeks without anyone noticing. So you monitor labels all the time.</div>
 <div class="card reveal"><h4>“Normal” is hard</h4>Out of 207,192 comments on busy posts, almost none were real hostile storms. Every page needs its own baseline.</div>
-<div class="card reveal"><h4>Words depend on the group</h4>Banter and dialect get mistaken for abuse, so you built filters for them.</div>
+<div class="card reveal"><h4>Words depend on the group</h4>Banter, dialect and emoji (like 😂) get mistaken for abuse or flip labels, so you built filters and a language check.</div>
 </div>
 <div class="say reveal"><span class="lbl">Say this</span>“At Artemis AI, my start-up, we label millions of comments with AI. I learned that labels can look reliable exactly when they're failing, and that every page needs its own baseline. We're building a human-checked test set now. Measuring whether AI labels are right is exactly what I want to study at CSH, and I'd like to learn network science to do the page network properly.”</div>
 <details class="reveal"><summary>More detail: architecture and all 48 models (only if they ask)</summary><div class="body">
@@ -464,12 +464,12 @@ items.forEach((it,k)=>{const x=document.createElement('button');x.textContent=it
 function show(k){[...t.children].forEach((x,j)=>x.classList.toggle('on',j===k));b.innerHTML='<div class="fade">'+render(items[k])+'</div>';if(items[k].after)items[k].after(b);}show(0);}
 
 const steps=[
-['Compare like with like','Only compare sites on posts about the same news moment, at the same time. You chose 15 UK budget events in advance, before looking at the data.'],
-['Check against people','See how well the AI’s labels match labels given by real people, on each site.'],
-['Check the meaning','Does “negative” mean the same thing on Reddit, X, YouTube and Quora?'],
-['Allow for who posts','Different kinds of people use each site at different times. Adjust for that.'],
-['Use one yardstick','Convert every site onto one common scale, like converting currencies before adding them.'],
-['Show the cost','A computer experiment with a known true mood shows that skipping steps 1–5 gets the overall mood wrong on nearly a quarter of days.']];
+['Compare like with like','Only compare sites on posts about the same news moment, at the same time. You chose 15 UK budget events in advance (anchor events, centred on the 2022 mini-budget), before looking at the data.'],
+['Check against people','See how well the AI’s labels match labels given by real people, on each site, and where the differences come from (a generalizability study, or G-study).'],
+['Check the meaning','Does “negative” mean the same thing on Reddit, X, YouTube and Quora? (measurement invariance and DIF, differential item functioning)'],
+['Allow for who posts','Different kinds of people use each site at different times. Adjust for that (a multilevel model).'],
+['Use one yardstick','Convert every site onto one common scale, like converting currencies before adding them (score linking, anchored on the shared events).'],
+['Show the cost','A Python simulation with a known true mood (500 runs) shows that skipping steps 1–5 gets the overall mood wrong on nearly a quarter of days. The protocol also repeats every test with a second model (a RoBERTa classifier), so results aren’t one tool’s quirk.']];
 (function(){const box=document.getElementById('stepper'),dots=box.querySelector('.dots'),panel=box.querySelector('.panel');let i=0;
 steps.forEach((s,k)=>{const b=document.createElement('button');b.textContent=k+1;b.setAttribute('aria-label','Step '+(k+1));b.onclick=()=>show(k);dots.appendChild(b);});
 function show(k){i=(k+steps.length)%steps.length;[...dots.children].forEach((b,j)=>b.classList.toggle('on',j===i));panel.innerHTML='<div class="fade"><h4>Step '+(i+1)+': '+steps[i][0]+'</h4>'+steps[i][1]+'</div>';}
