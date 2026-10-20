@@ -27,6 +27,24 @@
   --red:#f07070;--red-bg:rgba(240,112,112,0.09);
   --gray-bg:rgba(148,163,184,0.06);
 }
+.top5{position:relative;z-index:1;margin:6px 0 34px;padding:22px 22px 18px;border:1px solid rgba(212,168,83,0.35);border-radius:16px;background:linear-gradient(180deg,rgba(212,168,83,0.07),transparent 70%)}
+.top5-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.top5-title{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold2)}
+.top5-sub{color:var(--text3);font-size:13.5px;margin-bottom:16px}
+.top5-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.t5{background:var(--surface);border:1px solid var(--border2);border-radius:12px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:7px}
+.t5 .rk{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.08em}
+.t5 h3{font-size:16.5px;font-weight:600;line-height:1.35;color:var(--text)}
+.t5 .who{font-size:13px;color:var(--cyan)}
+.t5 p{font-size:13.5px;color:var(--text2);line-height:1.55}
+.t5 .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.t5 .meta span{font-size:11.5px;font-family:'JetBrains Mono',monospace;padding:2px 8px;border-radius:999px;background:var(--gold-dim);color:var(--gold2)}
+.t5 .meta span.ok{background:var(--green-bg);color:var(--green)}
+.t5 .meta span.go{background:var(--red-bg);color:var(--red)}
+.t5 .next{font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:8px;margin-top:auto}
+.t5 a{color:var(--gold);font-size:12.5px;text-decoration:none}
+.t5-more{margin-top:12px;font-size:13px;color:var(--text3)}
+@media(max-width:600px){.top5{padding:16px 14px}.top5-title{font-size:24px}}
 html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%}
 body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 45% at 15% 0%,rgba(56,201,201,0.03) 0%,transparent 65%);pointer-events:none;z-index:0}
@@ -641,6 +659,20 @@ footer a:hover{color:var(--gold2)}
       <div class="stat-mini"><b>10</b><span>Warm</span></div>
       <div class="stat-mini"><b>2</b><span>Confirmed</span></div>
     </div>
+  </section>
+
+  <!-- TOP 5 BEST-FIT PhDs -->
+  <section class="top5" id="top5">
+    <div class="top5-head"><span class="sec-tag">Best fit</span><div class="top5-title">★ My top 5 PhDs</div></div>
+    <div class="top5-sub">Chosen from every row on this page: where my social media research, eight years of data collection and the arXiv paper make me the strongest candidate. Updated 20 Oct 2026.</div>
+    <div class="top5-grid">
+      <div class="t5"><div class="rk">★ #1</div><h3>CSH Vienna, Graduate Program in Complexity Science</h3><div class="who">Alexander Hoyle (NLP measurement and validation), Elisa Omodei, Fariba Karimi</div><p>Your paper is a measurement-validation paper and Hoyle’s whole agenda is measurement and validation with NLP. Two springboard projects (narratives at scale; polarisation on platforms) match your PhD plan, and the government and industry exchanges match Chevening and Artemis AI.</p><div class="meta"><span class="">5/5 fit</span><span class="ok">Interview done 20 Oct</span><span class="">€39,649/yr</span></div><div class="next"><b>Next:</b> Letters by 1 Nov (Ella, Fahad). If invited: paper presentation 7–14 Jan.</div><a href="https://csh.ac.at/education/graduate-program/" target="_blank" rel="noopener">Open ↗</a></div>
+      <div class="t5"><div class="rk">★ #2</div><h3>Indiana University, Observatory on Social Media (OSoMe)</h3><div class="who">Filippo Menczer, PhD in Informatics (Complex Networks and Systems)</div><p>The leading lab on large-scale social media data, bots and misinformation. It needs exactly what you have done for eight years: collecting platform data at scale, plus a measurement paper and network work (Artemis page network).</p><div class="meta"><span class="">5/5 fit</span><span class="">Closes 15 Dec</span><span class="">Funded on admission</span></div><div class="next"><b>Next:</b> Email Menczer with the arXiv paper in November; apply by 15 Dec.</div><a href="https://luddy.iu.edu/admissions/graduate/index.html" target="_blank" rel="noopener">Open ↗</a></div>
+      <div class="t5"><div class="rk">★ #3</div><h3>Queen Mary University of London, internet measurement</h3><div class="who">Ignacio Castro, 3 PhD positions (platform governance, fediverse, Bluesky, moderation)</div><p>Internet and platform measurement is your scraping and data-collection career turned into research; Castro uses measurement, NLP and network methods on platform data. Your Dubizzle crawlers and Fluency pipelines are direct evidence.</p><div class="meta"><span class="">5/5 fit</span><span class="go">Act by 31 Oct</span><span class="">Funding to confirm</span></div><div class="next"><b>Next:</b> Email Castro now: CV + 4–6 page proposal; confirm the international studentship.</div><a href="https://ignacio-castro.uk/hiring/phd-positions-2027.html" target="_blank" rel="noopener">Open ↗</a></div>
+      <div class="t5"><div class="rk">★ #4</div><h3>University of Jena, Strategic Narratives and influence campaigns</h3><div class="who">Prof. Edda Humprecht, Institute of Communication Science</div><p>Multilingual, cross-platform narrative analysis with manual and AI-supported coding: the exact question of your paper (is the platform part of the measurement?) applied to disinformation. English only, no nationality limit.</p><div class="meta"><span class="">4/5 fit</span><span class="go">Closes 31 Oct</span><span class="">TV-L E13 75%</span></div><div class="next"><b>Next:</b> Apply by 31 Oct; stress multilingual collection (Dubizzle: 4 languages) and cross-platform comparability.</div><a href="https://jobs.uni-jena.de/jobposting/058d65770f2b3a382fb7bf2a83c59c65d0ccacf50" target="_blank" rel="noopener">Open ↗</a></div>
+      <div class="t5"><div class="rk">★ #5</div><h3>Lund University, A Divisive Spiral? (affective polarisation on social media)</h3><div class="who">Prof. Hanna Bäck, Political Science</div><p>LLMs at scale on politicians’ and voters’ posts across platforms: your MSc, your paper and Artemis AI’s labelling work in one project. Already submitted, with a research plan built for WP2.</p><div class="meta"><span class="">5/5 topic</span><span class="ok">Applied 16 Oct</span><span class="">Salaried 4 yrs</span></div><div class="next"><b>Next:</b> Editable until 27 Oct: check certificates are attached; then wait for shortlist.</div><a href="https://lu.varbi.com/en/what:job/jobID:975769/" target="_blank" rel="noopener">Open ↗</a></div>
+    </div>
+    <div class="t5-more"><b>Next in line:</b> KCL Falkenberg (polarisation measurement; he reviews end of Nov) · NUS CNM Jaidka (closes 1 Nov) · Swiss Excellence + Gilardi (31 Oct) · ETH AI Center (27 Oct) · HKUST Tyson (platform measurement).</div>
   </section>
 
   <!-- PRIORITY LIST -->
