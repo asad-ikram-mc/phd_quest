@@ -493,41 +493,30 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 
 <!-- 8 APP -->
 <section id="app">
-<h2 class="reveal">8. What you told CSH in your application<small>Sent 13 Oct. The interview recording is read with these answers, so keep what you say consistent with them.</small></h2>
-
-<details class="reveal" open><summary>Answer 1 · A research project, and what went wrong</summary><div class="body">
-<p><b>In short:</b> your MSc dissertation, and the mistake you found in it.</p>
-<ul style="margin:0 0 8px;padding-left:18px">
-<li><b>What:</b> UK public reaction to economic policy, from <b>255,446 comments</b> on X, Reddit, YouTube and Quora (official APIs and licensed archives), ethics approved.</li>
-<li><b>How:</b> first labels from <b>VADER</b>; compared <b>BiLSTM</b> and a fine-tuned <b>BERT</b>; tested with <b>McNemar</b> and <b>bootstrap</b>, <b>chi-square</b> across topics; confidence fixed with <b>calibration</b>; forecasts with <b>Prophet</b>; emotions with <b>NRC</b>; explanations with <b>LIME</b> and <b>integrated gradients</b>; 200 posts checked by hand.</li>
-<li><b>What went wrong:</b> BERT scored <b>0.878 macro-F1</b>, but against <b>VADER-seeded labels</b>; your 200-post check reviewed VADER’s labels, so the <b>kappa of 0.78</b> measured agreement with VADER, not between people. And you’d assumed “negative” means the same on every platform.</li>
-<li><b>What you learned:</b> a score describes its yardstick as much as the model, so first ask where the yardstick comes from; and test that a measure works the same in each group before comparing (a normal step in survey research).</li>
-<li><b>What came of it:</b> the paper with Dr Haig, treating each platform as a <b>survey mode</b>; for the real-data study you fixed <b>15 policy events in advance</b>.</li></ul></div></details>
-
-<details class="reveal"><summary>Answer 2 · A discovery from a CSH group</summary><div class="body">
-<p><b>The paper:</b> Chen, Kmetty, Iñiguez &amp; Omodei (2025), “The public that engages invisibly”, <i>Communication Methods and Measures</i> 19(4).</p>
-<ul style="margin:0 0 8px;padding-left:18px">
-<li><b>Their finding, in one line:</b> by linking a survey of Hungarian internet users to the <b>YouTube histories they donated</b> (data donation), they show people who <b>comment</b> on political videos are more polarised than people who only <b>watch</b>, so comment-based studies overstate division.</li>
-<li><b>Your question:</b> is that commenter–watcher gap stable across platforms, topics and time? If so, a <b>small donated panel</b> could correct polarisation estimates from <b>millions of public comments</b>.</li>
-<li><b>Why it interests you:</b> same shape as your problem. Comments are a big, cheap, biased signal; donated data is small, costly and closer to the truth, just as a small hand-labelled sample anchors a machine-labelled corpus (<b>score linking</b>). If the gap isn’t stable, knowing where it breaks is itself a finding.</li>
-<li><b>Your link:</b> brands at Fluency and Artemis AI judge pages by comments, though most of their audience never comments.</li></ul></div></details>
-
-<details class="reveal"><summary>Answer 3 · A problem you want to study</summary><div class="body">
-<p><b>The question:</b> when can a machine-labelled measure (sentiment, stance or a narrative frame) be compared across <b>platforms</b>, <b>AI models</b> and <b>time</b>, and how do we correct it before tracking how narratives spread?</p>
-<ul style="margin:0 0 8px;padding-left:18px">
-<li><b>Why it matters:</b> research pools platforms and uses LLMs as labellers, so a difference can be real change, a platform effect, or the model (which changes version). Papers you cited: Gaynor et al. 2026 (legislators look different across votes, speeches and tweets); Fan et al. 2025 (removing the medium from embeddings with <b>concept erasure</b>); Licht et al. 2025 (LLMs measuring scales); Hoyle et al. 2021 (automated metrics drifting from human judgement).</li>
-<li><b>Why it’s doable, in four steps:</b> (1) extend your <b>simulation</b> with models and time as factors, no new data needed; (2) collect posts around fixed events through official APIs, labelled by several LLMs, with a larger hand-labelled sample per platform and a <b>second coder</b>; then a <b>G-study</b> and <b>DIF</b> tests; (3) <b>concept erasure</b> to test whether removing the platform signal removes real differences; (4) put corrected and uncorrected measures into a <b>network diffusion</b> analysis.</li>
-<li><b>Who it helps:</b> researchers who pool platforms or switch AI models; public bodies, NGOs and journalists reading social-listening dashboards; anyone asking if a narrative really moved between platforms.</li>
-<li><b>What you’d learn at CSH:</b> the network science of diffusion.</li></ul></div></details>
-
-<details class="reveal"><summary>Your CV and portfolio (also sent)</summary><div class="body">
-<p>The 3-page CV and portfolio listed six pieces, each with why it was there: the <b>paper</b>; the <b>dissertation</b>; the <b>Artemis AI labelling chain</b> (Claude → rules → DeepSeek → XLM-R, DistilBERT, DeBERTa, checked against ~500 hand labels); the <b>Fluency year-long study</b> (BERTopic codebook, prompt-version hashes, three pilots on 500 rows); the <b>self-healing and builder agents</b> (“a collector that breaks silently doesn’t stop a time series, it thins it”); and the <b>multilingual Dubizzle dashboards</b>.</p></div></details>
-
-<details class="reveal"><summary>People and projects you named (all checked)</summary><div class="body"><ul style="margin:0;padding-left:18px">
-<li><b>Alexander Hoyle</b>, CSH faculty: NLP in social science, measurement and validation. Closest to you.</li>
-<li><b>Elisa Omodei</b>, CSH faculty: online social systems; co-author of the Answer 2 paper.</li>
-<li><b>Fariba Karimi</b>, CSH faculty: bias in networks and algorithms.</li>
-<li>Springboard projects: <b>Understanding narratives at scale</b>; <b>Polarization and minority representation on online platforms</b>; also <b>Designing link recommendation to reduce polarization</b>.</li></ul></div></details>
+<h2 class="reveal">8. What you told CSH<small>Your written answers (13 Oct). Say the same things.</small></h2>
+<details class="reveal" open><summary>Answer 1 · Your project and what went wrong</summary><div class="body"><ul style="margin:0;padding-left:18px">
+<li><b>Project:</b> MSc dissertation, 255,446 comments, 4 platforms, UK economic policy.</li>
+<li><b>Tools:</b> VADER labels, BiLSTM and BERT, McNemar and bootstrap tests, calibration, Prophet, NRC emotions, LIME.</li>
+<li><b>What went wrong:</b> BERT (0.878) was checked against VADER’s own labels; your 200 hand checks (kappa 0.78) were you vs VADER, not two people; you assumed platforms were equal.</li>
+<li><b>Lesson:</b> check where your yardstick comes from, and test a measure works the same in every group.</li>
+<li><b>Result:</b> your paper with Dr Haig; 15 events fixed in advance.</li></ul></div></details>
+<details class="reveal"><summary>Answer 2 · A CSH discovery</summary><div class="body"><ul style="margin:0;padding-left:18px">
+<li><b>Paper:</b> Chen, Kmetty, Iñiguez &amp; Omodei (2025).</li>
+<li><b>Finding:</b> using donated YouTube data, people who <b>comment</b> are more polarised than people who only <b>watch</b>.</li>
+<li><b>Your question:</b> could a small donated group correct millions of public comments (like score linking)?</li>
+<li><b>Your link:</b> brands judge pages by comments, but most of the audience never comments.</li></ul></div></details>
+<details class="reveal"><summary>Answer 3 · What you want to study</summary><div class="body"><ul style="margin:0;padding-left:18px">
+<li><b>Question:</b> can AI-labelled opinion be compared across platforms, AI models and time?</li>
+<li><b>Four steps:</b> (1) extend the simulation; (2) new data labelled by several LLMs and checked by people (G-study, DIF); (3) concept erasure to remove the platform signal; (4) network diffusion of narratives.</li>
+<li><b>Papers you cited:</b> Gaynor et al. 2026; Fan et al. 2025; Licht et al. 2025; Hoyle et al. 2021.</li>
+<li><b>Who it helps:</b> researchers, government, NGOs, journalists.</li>
+<li><b>What you’d learn:</b> network science.</li></ul></div></details>
+<details class="reveal"><summary>Your CV and portfolio</summary><div class="body">Six pieces: the paper; the dissertation; the Artemis AI labelling chain (Claude → DeepSeek → XLM-R, DeBERTa, checked by people); the Fluency study (BERTopic, prompt versions); the repair agents; the Dubizzle dashboards.</div></details>
+<details class="reveal"><summary>People you named</summary><div class="body"><ul style="margin:0;padding-left:18px">
+<li><b>Alexander Hoyle:</b> checking AI measures (closest to you).</li>
+<li><b>Elisa Omodei:</b> online systems; co-author of Answer 2.</li>
+<li><b>Fariba Karimi:</b> bias in networks.</li>
+<li><b>Projects:</b> Understanding narratives at scale; Polarization and minority representation online.</li></ul></div></details>
 </section>
 
 <!-- 9 FIT -->
