@@ -194,6 +194,17 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <h3>Key numbers (say them the same way every time)</h3>
 <div class="nums"><span>MSc: 255,446 comments</span><span>Artemis AI: team of 8 · 3M+ comments</span><span>Fluency study: 100,845 posts</span><span>Paper: arXiv 2610.16757</span><span>MSc Distinction · Chevening 2024/25</span></div>
 <p class="hint">Don’t add Fluency’s 170,542 Reddit backup to the 100,845.</p>
+<h3>Fixes from the mock interviews (round 2 score 5/10 → aim 8+)</h3>
+<div class="say"><span class="lbl">45-second opening · ends on CSH</span>“I’ve worked with social media data for eight years, building scrapers at Dubizzle and now social listening for brands and UK government at Fluency. As a Chevening Scholar my idea was simple: help governments hear public reaction before decisions like fuel prices. My MSc tried that on 255,446 UK comments and taught me the measurement was circular. That became my paper with Dr Ella Haig: before we add up AI-measured opinion across platforms, check each one is measured the same way. CSH is where I take that further, with Alexander Hoyle’s work on NLP measurement and the narratives-at-scale project.”</div>
+<div class="grid g2">
+<div class="card"><h4>Paper to a non-expert: analogy first</h4>“People answer surveys differently on the phone and on paper, and survey research corrects for that. Each platform is like a different way of asking. My paper is a checklist to separate real opinion from platform effects.”</div>
+<div class="card"><h4>Result: say it exactly</h4>Naive: wrong mood direction on <b>13.8 of 60 days</b> (a quarter). Adjusted: <b>0.8</b> (under one day). 500 runs, known truth.</div>
+<div class="card"><h4>LLMs change over time?</h4><b>Problem first:</b> a new model version can read “negative” differently, so a change looks like a real mood shift. <b>Check:</b> re-label the same human-labelled set with each version; fix model and prompt versions (like the prompt-version hash at Fluency); treat model version as a facet in the G-study.</div>
+<div class="card"><h4>A result that surprised you</h4><b>Friendship paradox:</b> on average your friends have more friends than you, so what you see online is skewed toward popular accounts. <b>Karimi:</b> minorities can become less visible through homophily. Both are about who is visible online, like your work.</div>
+<div class="card"><h4>Commitment: sound decided</h4>“I’ll leave Fluency. Artemis AI moves to an advisory role after the December beta; the team runs it. I’ll be full-time in Vienna.”</div>
+<div class="card"><h4>Your question: research first</h4>“Is there interest in linking Alexander Hoyle’s measurement work with the narratives-at-scale project?” Then, if time: the 1 Nov referee letters.</div>
+</div>
+<p class="hint">Avoid: listing countries and companies; “funding and resources” as a reason; jargon (G-study, DIF) before the analogy; “potentially”.</p>
 </section>
 
 <section id="goals">
@@ -359,7 +370,27 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <g class="n-gray box"><rect x="170" y="420" width="340" height="44" rx="10"/><text x="340" y="447" text-anchor="middle" font-weight="700" font-size="13">4. Compare with the truth, every day · repeat 500 times</text></g>
 </svg>
 <ul style="margin:8px 0 0;padding-left:18px">
-<li><b>Bias, noise, cut-offs:</b> each site makes people sound harsher or softer, varies, and draws its lines differently.</li><li><b>Result:</b> just averaging was wrong on 13.8 of 60 days; adjusting, 0.8.</li><li><b>Note:</b> real data must estimate each site’s bias (steps 1–5).</li></ul></div>
+<li><b>The truth:</b> you invented the true mood for each of <b>60 days</b>, so you know the right answer every day.</li>
+<li><b>Three fake platforms</b> watch the same mood but distort it: <b>bias</b> (harsher or softer), <b>noise</b>, different <b>cut-offs</b> for −/0/+; their share of posts drifts a little.</li>
+<li><b>Naive:</b> average all labels together (what most studies, and your MSc, do). <b>Adjusted:</b> undo each platform’s distortion first, then combine, weighted by post volume.</li>
+<li><b>How you judge it:</b> each day, does the method say the overall mood is <b>positive or negative</b>, and does that match the truth? If not, it’s a <b>wrong-sign day</b>. Count them out of 60, average over <b>500 runs</b>.</li></ul></div>
+<h3 class="reveal">Your result, exactly (learn this)</h3>
+<table class="reveal">
+<tr><th></th><th>Wrong-sign days (of 60)</th><th>In words</th></tr>
+<tr><td><b>Naive average</b></td><td><b>13.8</b> on average (11–17)</td><td>About <b>a quarter of days</b> it tells a policymaker the mood points the wrong way</td></tr>
+<tr><td><b>Adjusted</b></td><td><b>0.8</b> on average (0–2)</td><td><b>Under one day in 60</b></td></tr>
+</table>
+<div class="card reveal" style="border-color:var(--coral)"><h4 style="color:var(--coral)">Don’t mix them up</h4>“A quarter” goes with the <b>naive</b> method (13.8 of 60 days). The adjusted one is “<b>under one day</b>”. Not “16 days”, not “a quarter of a day”.<br><b>If they push:</b> wrong days grow as platforms differ more (0.8 when identical, up to 42.9 when very different), so it’s caused by the platform differences, not chance.<br><b>Honest limit:</b> in the simulation the adjusted method is <i>given</i> each platform’s true distortion; on real data you must <i>estimate</i> it (steps 1–5). That’s why real data is the next study.</div>
+<div class="say reveal"><span class="lbl">Say this (15 seconds)</span>“I built a fake world where I know the true daily mood, and three platforms that each distort it differently. If you simply average them, the overall mood points the wrong way on 13.8 of 60 days, about a quarter. If you correct each platform first, it’s under one day. It’s a simulation, so the next step is real data with human labels.”</div>
+<h3 class="reveal">Where the MSc’s 88% came from</h3>
+<div class="grid g3">
+<div class="card reveal"><h4>1. VADER labelled</h4>VADER (a word list) gave every comment a label: positive, neutral or negative.</div>
+<div class="card reveal"><h4>2. BERT copied</h4>BERT was <b>trained on VADER’s labels</b> and tested on held-back comments <b>also labelled by VADER</b>.</div>
+<div class="card reveal"><h4>3. 88% = agreement</h4>BERT matched VADER on <b>88.06%</b> (macro-F1 0.878). The BiLSTM agreed with BERT 88.1%.</div>
+</div>
+<div class="card reveal" style="border-color:var(--coral)"><b>So 88% means “BERT copies VADER well”, not “BERT is right 88% of the time”.</b> No independent human labels checked it; your 200 hand-checked posts reviewed VADER’s labels (κ ≈ 0.78 with VADER). That’s the circularity, and why the paper uses <b>people</b> as the yardstick.</div>
+<div class="say reveal"><span class="lbl">Say this (10 seconds)</span>“My MSc’s 88% meant BERT agreed with VADER, the tool that made its labels, not that it was right. That’s why the paper uses people as the yardstick.”</div>
+
 
 <h3 class="reveal">VADER in the MSc vs the paper</h3>
 <table class="reveal">
@@ -658,7 +689,11 @@ const qa=[
 ['How do you approach a problem?','“Ask where the yardstick comes from, fix choices in advance (like the 15 events), then test against people.”'],
 ['How do you work with others?','“Mixed teams: ML, product, design and legal at Artemis AI; engineers at Dubizzle; my supervisor on the paper.”'],
 ['Best environment for you?','“Clear questions, honest feedback, people from other fields: CSH’s mix, with mentors like Hoyle and Omodei.”'],
-['Questions for us?','Ask: “How are students matched with supervisors in the first year?”']];
+['What exactly did your simulation show?','“A fake world with a known true mood and three platforms that distort it. Naive averaging gets the mood direction wrong on <b>13.8 of 60 days</b> (a quarter); adjusting, <b>0.8</b>. 500 runs.”'],
+['Where did your 88% come from?','“BERT agreed with VADER 88% of the time, the tool that made its labels. Agreement, not accuracy against people.”'],
+['How can LLM labels go wrong over time?','“A new model version can read ‘negative’ differently, so it looks like real change. I’d re-label a fixed human-labelled set with each version and pin model and prompt versions.”'],
+['A result that surprised you?','“The friendship paradox: your friends have more friends than you, so what we see online is skewed to popular accounts. Karimi shows minorities can become less visible through homophily.”'],
+['Questions for us?','Research first: “Is there interest in linking Alexander Hoyle’s measurement work with the narratives-at-scale project?” Then: “How are students matched with supervisors in year one?”']];
 document.getElementById('qaList').innerHTML=qa.map(q=>'<details class="reveal in"><summary>'+q[0]+'</summary><div class="body">'+q[1]+'</div></details>').join('');
 (function(){let cur=-1,left=60,tm=null;const pq=document.getElementById('pq'),pt=document.getElementById('pt'),ht=document.getElementById('pHintText');
 function render(){pt.textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');pt.classList.toggle('warn',left<=15);}
