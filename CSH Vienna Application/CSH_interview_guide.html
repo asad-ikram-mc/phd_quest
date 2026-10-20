@@ -397,11 +397,11 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <!-- 6 FLUENCY -->
 <section id="fluency">
 <h2 class="reveal">6. Fluency, simply<small>M+C Saatchi Fluency, London · Data Engineer Consultant · since Dec 2024 · part-time remote</small></h2>
-<div class="card reveal"><h4>In one sentence</h4>Fluency studies what people say about big brands on social media; you collect that data, label it with AI, check it, and help turn it into reports for clients.</div>
+<div class="card reveal"><h4>In one sentence</h4>Fluency tells big brands what people say about them online. You collect the posts, label them with AI, and check the numbers.</div>
 <div class="grid g3" style="margin-top:14px">
-<div class="card reveal"><h4>Research</h4>A year-long study of what US fans said about a sport: <b>100,845 posts</b> from <b>Brandwatch</b> and the <b>Reddit API</b>, topics found with <b>BERTopic</b> and merged into 18 themes, labelled by an LLM (<b>GPT-4o-mini</b>) with a prompt-version hash on every label, tested three times on the same 500 posts first.</div>
-<div class="card reveal"><h4>Data collection</h4>60+ <b>Scrapy</b> crawlers collecting car-owner forums across Europe, run from a <b>FastAPI</b> server, kept running by <b>Claude</b>-based AI agents (through an <b>MCP</b> server) that <b>fix broken crawlers themselves</b> and test the fix before it goes live.</div>
-<div class="card reveal"><h4>Quality</h4>A weekly pipeline of about <b>2 million rows</b> for a global brand from <b>Sprinklr</b> exports, on <b>AWS</b> (Lambda, ECS Fargate, Postgres) into <b>Tableau</b>, with an 89-point quality check and an <b>XGBoost</b> model for missing metrics.</div>
+<div class="card reveal"><h4>Research</h4>A year-long study of US sports fans: <b>100,845 posts</b> (Brandwatch, Reddit API). Themes found with <b>BERTopic</b>, labels by an LLM (<b>GPT-4o-mini</b>), every label traceable, tested 3 times first.</div>
+<div class="card reveal"><h4>Data collection</h4>60+ <b>Scrapy</b> crawlers on car forums. When one breaks, an AI agent (<b>Claude</b> via an <b>MCP</b> server) <b>fixes it</b> and tests it before it goes live.</div>
+<div class="card reveal"><h4>Quality</h4>About <b>2 million rows</b> a week from <b>Sprinklr</b>, on <b>AWS</b> into <b>Tableau</b>, with an 89-point quality check before anyone uses it.</div>
 </div>
 <h3 class="reveal">The year-long study, step by step</h3>
 <div class="card reveal">
@@ -435,8 +435,8 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 </svg>
 <p class="hint" style="margin:6px 0 0"><b>Why it matters for research:</b> a crawler that breaks silently doesn't stop a time series, it thins it, which quietly biases any trend. Repairing fast keeps the data complete.</p></div>
 
-<div class="card reveal" style="margin-top:14px;border-color:var(--teal)"><h4 style="color:var(--teal)">The link to your PhD</h4>In the year-long study you reported Twitter and Reddit as <b>“two publics”, never added together</b>: your paper's idea, used in real client work.</div>
-<div class="say reveal"><span class="lbl">Say this</span>“At Fluency I collect and label social media data for global brands, with Brandwatch, Sprinklr, Scrapy and LLMs on AWS. In a year-long study I used BERTopic for themes, made every LLM label traceable, tested it before the full run, and kept Twitter and Reddit as two separate publics, never pooled. It's my research question in practice.”</div>
+<div class="card reveal" style="margin-top:14px;border-color:var(--teal)"><h4 style="color:var(--teal)">The link to your PhD</h4>You kept Twitter and Reddit <b>separate (“two publics”)</b>, never added together: your paper’s idea, used at work.</div>
+<div class="say reveal"><span class="lbl">Say this</span>“At Fluency I collect and label social media data for global brands. In a year-long study I used BERTopic and an LLM, made every label traceable, and kept Twitter and Reddit separate. It’s my research question in practice.”</div>
 <details class="reveal"><summary>More detail: every project (only if they ask)</summary><div class="body"><div class="tabs" id="fluTabs"></div><div id="fluBody"></div>
 <p class="hint" style="margin-top:10px"><b>Don't say:</b> client incidents or confidential findings; anti-bot or proxy techniques (say “official APIs where available, polite rate limits”); don't claim the government dashboard or Alexa+ as built by you.</p></div></details>
 </section>
@@ -444,11 +444,11 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <!-- 7 ARTEMIS -->
 <section id="artemis">
 <h2 class="reveal">7. Artemis AI, simply<small>Co-founder and CTO · team of eight · beta on 15 Dec 2026</small></h2>
-<div class="card reveal"><h4>In one sentence</h4>Artemis AI helps creators and businesses understand their social media pages: what people are saying, what is working, when a wave of hostile comments starts, and which pages they could collaborate with.</div>
+<div class="card reveal"><h4>In one sentence</h4>Artemis AI helps creators and businesses understand their social media pages: what people say, what works, when hostile comments spike, and who to collaborate with.</div>
 <div class="grid g3" style="margin-top:14px">
-<div class="card reveal"><h4>The data</h4>20 consenting Facebook pages; <b>111,000+ posts and 3M+ comments</b>, plus images and videos, collected through the <b>Meta Graph API</b> into an <b>S3 / Apache Iceberg</b> data lake queried with <b>Athena</b>. Images read with <b>CLIP</b> and <b>OCR</b>, video with <b>Whisper</b>.</div>
-<div class="card reveal"><h4>The AI</h4><b>Claude</b> labels 6,000 posts and explains why; rules from those reasons guide <b>DeepSeek</b>, which labels 12,000 more; your own models (<b>XLM-R, DistilBERT, DeBERTa</b>) learn from both; people check samples. <b>48 models</b> are planned for the beta, plus <b>Art-E</b>, an advisor on <b>Amazon Bedrock</b>.</div>
-<div class="card reveal"><h4>The network</h4>An early map of how pages relate (an <b>affinity graph</b>), grouping similar pages with <b>Louvain community detection</b>, to suggest good collaborations with a match score. Mostly still being built.</div>
+<div class="card reveal"><h4>The data</h4>20 pages, <b>3M+ comments</b>, plus images and video, from the <b>Meta Graph API</b>, stored in an <b>S3 / Iceberg</b> data lake. Images read with <b>CLIP</b> and <b>OCR</b>, video with <b>Whisper</b>.</div>
+<div class="card reveal"><h4>The AI</h4><b>Claude</b> labels and explains, <b>DeepSeek</b> learns the rules, your own models (<b>XLM-R, DeBERTa</b>) learn from both, people check samples. <b>48 models</b> planned.</div>
+<div class="card reveal"><h4>The network</h4>A map of how pages relate (<b>affinity graph</b>), grouped with <b>Louvain</b> community detection, to suggest collaborations. Early stage.</div>
 </div>
 <h3 class="reveal">The page network, as a picture</h3>
 <div class="card reveal">
@@ -470,7 +470,7 @@ footer{color:var(--mut);font-size:13px;margin-top:30px}
 <div class="card reveal"><h4>“Normal” is hard</h4>Out of 207,192 comments on busy posts, almost none were real hostile storms. Every page needs its own baseline.</div>
 <div class="card reveal"><h4>Words depend on the group</h4>Banter, dialect and emoji (like 😂) get mistaken for abuse or flip labels, so you built filters and a language check.</div>
 </div>
-<div class="say reveal"><span class="lbl">Say this</span>“At Artemis AI, my start-up, we label millions of comments with AI. I learned that labels can look reliable exactly when they're failing, and that every page needs its own baseline. We're building a human-checked test set now. Measuring whether AI labels are right is exactly what I want to study at CSH, and I'd like to learn network science to do the page network properly.”</div>
+<div class="say reveal"><span class="lbl">Say this</span>“At Artemis AI we label millions of comments with AI. I learned labels can look reliable exactly when they’re failing. Checking whether AI labels are right is what I want to study at CSH, and I want network science to do our page network properly.”</div>
 <details class="reveal"><summary>More detail: the system and all 48 models (only if they ask)</summary><div class="body"><p style="margin-top:0"><b>The system, left to right:</b> Meta Graph API → collectors → S3 / Iceberg data lake (Athena) → weekly AI labels (text, image, video) → nightly scores → live service → the app and Art-E. Tap a group below to see its models.</p>
 <svg viewBox="0 0 680 300" width="100%" role="img" aria-label="Artemis AI architecture from Meta to the app">
 <defs><marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.6"/></marker></defs>
