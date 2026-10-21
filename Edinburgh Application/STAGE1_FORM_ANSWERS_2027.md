@@ -49,17 +49,19 @@ My research experience has one thread: measuring public opinion from social medi
 ## 3. Professional or other relevant experience
 *(about 400 words)*
 
-I have worked with social media and web data for eight years, and each role showed me a different way that NLP measurement can fail people who rely on it.
+I have worked with social media and web data for nearly eight years, and each role showed me a different way that NLP measurement can fail people who rely on it.
 
 **Fiverr (2018 onwards, starting while I was studying).** As a Level 2 seller I completed more than 300 projects, mostly data collection and analysis tools for clients around the world. It taught me to scope a problem with non-technical people and deliver to a deadline.
 
-**Dubizzle Labs (2022 to 2024).** Promoted twice to Senior Data Engineer, I built the company's first web-scraping and data system, collecting online listings and discussion in English, Arabic, Urdu and Hindi across 15 markets, and led a team of three engineers. Working across four languages showed me early that models trained on English text do not travel cleanly to other languages and cultures.
+**Dubizzle Labs, Lahore (2022 to 2024).** Promoted twice to Senior Data Engineer, I built the company's first web-scraping and data system for six products across nine countries in the Middle East, collecting online listings and discussion in English, Arabic, Urdu and Hindi, and led a team of three engineers. Working across four languages showed me early that models trained on English text do not travel cleanly to other languages and cultures.
+
+**CXG, Dubai (Data Engineer, since December 2025).** I collect and analyse product data for global fashion and luxury brands such as Prada. The same attribute is recorded differently in every region and language, so the first job is always building one shared vocabulary before anything is compared.
 
 **Chevening Scholarship (2024/25).** I was selected by the UK Government with a proposal for a cross-platform system to give governments early, honest evidence of public reaction to policy. That idea became my MSc dissertation and then my paper.
 
 **M+C Saatchi Fluency, London (current).** I work on social listening and social media analytics for global brands and for UK government clients. I see first-hand how sentiment dashboards are read by decision-makers, and how rarely the numbers are checked against people. I also built self-repairing data pipelines in which every automated fix needs human approval and is logged, because a pipeline that breaks silently thins a time series and quietly biases any trend drawn from it.
 
-**Artemis AI (co-founder and CTO).** We build analytics for creators and small businesses, including comment classification (sentiment, toxicity, intent), a detector for bursts of hostile comments, filters so that dialect and local banter are not misread as toxicity, and community detection on the network of pages. We have processed more than three million comments and are preparing a December beta. Running it has made the responsible-NLP questions concrete for me: who is misread by our models, how we explain a score to a small business owner, and what we owe the people whose comments we classify.
+**Artemis AI (co-founder and CTO, since February 2025).** We build analytics for creators and small businesses, including comment classification (sentiment, toxicity, intent), a detector for bursts of hostile comments, filters so that dialect and local banter are not misread as toxicity, and community detection on the network of pages. We have processed more than three million comments and are preparing a December beta. Running it has made the responsible-NLP questions concrete for me: who is misread by our models, how we explain a score to a small business owner, and what we owe the people whose comments we classify.
 
 Across these roles I collect data through official APIs where they exist, with polite rate limits and licensed sources otherwise, and I have learned to treat data documentation as part of the product. I would bring this practical experience of NLP deployed in-the-world to the cohort, and I am looking for the research training to do it properly.
 
