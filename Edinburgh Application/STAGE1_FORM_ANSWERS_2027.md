@@ -51,9 +51,9 @@ My research experience has one thread: measuring public opinion from social medi
 
 I have worked with social media and web data for eight years, and each role showed me a different way that NLP measurement can fail people who rely on it.
 
-**Fiverr (2018 to 2022, while studying).** I became a Top Seller with more than 300 clients, mostly building data collection and analysis tools. It taught me to scope a problem with non-technical people and deliver to a deadline.
+**Fiverr (2018 onwards, starting while I was studying).** As a Level 2 seller I completed more than 300 projects, mostly data collection and analysis tools for clients around the world. It taught me to scope a problem with non-technical people and deliver to a deadline.
 
-**Dubizzle Labs.** I built the company's first web-scraping and data system, collecting online listings and discussion in English, Arabic, Urdu and Hindi across 15 markets, and led a small engineering team. Working across four languages showed me early that models trained on English text do not travel cleanly to other languages and cultures.
+**Dubizzle Labs (2022 to 2024).** Promoted twice to Senior Data Engineer, I built the company's first web-scraping and data system, collecting online listings and discussion in English, Arabic, Urdu and Hindi across 15 markets, and led a team of three engineers. Working across four languages showed me early that models trained on English text do not travel cleanly to other languages and cultures.
 
 **Chevening Scholarship (2024/25).** I was selected by the UK Government with a proposal for a cross-platform system to give governments early, honest evidence of public reaction to policy. That idea became my MSc dissertation and then my paper.
 
