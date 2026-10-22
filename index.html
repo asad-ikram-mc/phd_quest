@@ -3327,7 +3327,10 @@ function renderPriorities(){
       const days=Math.round((d-now)/86400000);
       const label=d.getDate()+' '+MONTHS_SHORT[d.getMonth()]+(d.getFullYear()!==now.getFullYear()?' '+d.getFullYear():'');
       let cls='p-ok', txt=label+' · '+days+' days';
-      if(days<0){cls='p-due';txt=label+' · passed';}
+      const _ap=getStatus(p.id)==='applied';
+      if(_ap&&days<0){cls='p-ok';txt='\u2713 applied · waiting for reply';}
+      else if(_ap){cls='p-ok';txt='next: '+label+' · '+days+' days';}
+      else if(days<0){cls='p-due';txt=label+' · passed';}
       else if(days===0){cls='p-due';txt=label+' · TODAY';}
       else if(days<=10){cls='p-due';txt=label+' · '+days+' day'+(days===1?'':'s')+' left';}
       else if(days<=30){cls='p-soon';}
@@ -3361,19 +3364,20 @@ function renderPriorities(){
       const dd=new Date(p.due[0],p.due[1]-1,p.due[2]);
       const dys=Math.round((dd-now)/86400000);
       dueTxt=dd.getDate()+' '+MONTHS_SHORT[dd.getMonth()]+(dd.getFullYear()!==now.getFullYear()?' '+dd.getFullYear():'');
-      if(dys<0){dueTxt+=' \u00b7 passed';dueCls='f-due';}
+      if(getStatus(p.id)==='applied'){dueTxt=dys<0?'Applied \u2713 (closed '+dueTxt+')':dueTxt+' \u00b7 '+dys+'d';dueCls='f-ok';}
+      else if(dys<0){dueTxt+=' \u00b7 passed';dueCls='f-due';}
       else if(dys===0){dueTxt+=' \u00b7 today';dueCls='f-due';}
       else if(dys<=10){dueTxt+=' \u00b7 '+dys+'d left';dueCls='f-due';}
       else {dueTxt+=' \u00b7 '+dys+'d';dueCls=dys<=30?'f-soon':'f-ok';}
     }
-    const facts=[['Deadline',dueTxt,dueCls]];
+    const facts=[[getStatus(p.id)==='applied'?(dueTxt.indexOf('Applied')===0?'Deadline':'Next date'):'Deadline',dueTxt,dueCls]];
     if(effort) facts.push(['Effort',effort,'']);
     if(getStatus(p.id)!=='todo') facts.push(['Status',ST_LABEL[getStatus(p.id)],'']);
-    if(nReq) facts.push(['Steps done',nDone+' of '+nReq,'']);
+    if(nReq&&getStatus(p.id)!=='applied') facts.push(['Steps done',nDone+' of '+nReq,'']);
     item.innerHTML=
       '<div class="prio-rank r-'+p.tier+'">'+(idx+1)+'</div>'
       +'<div class="prio-body">'
-      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+escHtml(ttl)+'</div><div class="prio-meta">'+(getStatus(p.id)!=='todo'?'<span class="st-pill st-'+getStatus(p.id)+'">'+ST_LABEL[getStatus(p.id)]+'</span>':'')+prioPill(p,'prio-pill')+duePill+(nReq?'<span class="prio-pill pc-count" title="Steps ticked off">'+nDone+'/'+nReq+'</span>':'')+'</div></div>'
+      +  '<div class="prio-top" onclick="this.closest(\'.prio-item\').classList.toggle(\'collapsed\')"><div class="prio-name">'+escHtml(ttl)+'</div><div class="prio-meta">'+(getStatus(p.id)!=='todo'?'<span class="st-pill st-'+getStatus(p.id)+'">'+ST_LABEL[getStatus(p.id)]+'</span>':'')+prioPill(p,'prio-pill')+duePill+((nReq&&getStatus(p.id)!=='applied')?'<span class="prio-pill pc-count" title="Steps ticked off">'+nDone+'/'+nReq+'</span>':'')+'</div></div>'
       +  (flag?'<div class="pc-flag"><span>&#9888;</span><span>'+escHtml(flag)+'</span></div>':'')
       +  '<div class="pc-facts">'+facts.map(f=>'<div class="pc-fact '+f[2]+'"><i>'+f[0]+'</i><b>'+escHtml(f[1])+'</b></div>').join('')+'</div>'
       +  (tnote?'<div class="pc-note">'+escHtml(tnote)+'</div>':'')
