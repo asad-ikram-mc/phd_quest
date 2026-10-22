@@ -13,6 +13,11 @@ Apply online via NUS Graduate Admissions (Research), FASS > Communications and N
 ## Scholarship
 NUS Research Scholarship (international): S$3,000/month + full tuition subsidy, very competitive; needs Second Upper or equivalent (MSc Distinction qualifies). Dean's PhD Fellowship is nomination-only.
 
-## Supervisors
-- A/P Kokil Jaidka (computational communication; Facebook vs Twitter self-disclosure, ICWSM 2018; "telic errors" in VLM annotation; CommunityFact multilingual misinformation benchmark). Email jaidka@nus.edu.sg (from arXiv 2605.30241). Email drafted 22 Oct.
-- Dr Subhayan Mukerjee (news audiences across platforms) as second.
+## Supervisors (corrected 22 Oct after deep research)
+- **Primary (name in GDA3 "Thesis Advisor"): Dr Subhayan Mukerjee** (mukerjee@nus.edu.sg). Computational communication; audience networks, platform-dependent news metrics (IJPP 2026), polarisation, LLM/VLM labelling; PI of MOE "LLMs and Online News". Supervises CNM PhDs.
+- **Co-supervisor: Asst Prof Zening Duan** (zening.duan@nus.edu.sg). Presidential Young Professor; LLM coding and validation, cross-platform studies; "currently recruiting PhD students".
+- **A/P Kokil Jaidka: NOT taking new PhD students for Fall 2027/2028** (her profile). Cite her; ask for advice only. The drafted Jaidka email must be rewritten.
+- Taberez Neyazi (India/WhatsApp/Facebook political communication): strong fit, availability unconfirmed (IAS 2025-26).
+- Ozan Kuru (poll literacy): likely QE committee; cite.
+- Proposal section 5 still names Jaidka as closest fit: update before submitting.
+- Full guide (private, gitignored): NUS CNM Application/story/nus_alignment_story.html
