@@ -22,3 +22,8 @@ NUS Research Scholarship (international): S$3,000/month + full tuition subsidy, 
 - 23 Oct: proposal v2 done (Mukerjee primary, Duan co; cites Mukerjee 2023 JoC, Ouyang et al. 2026 IJPP, Duan 2025 PA, Chen/Duan/Kim 2024 JCMC, Neyazi/Tan/Kuru 2026 IJPOR; South & Southeast Asia; audience-network RQ). ~1,100 words, 3 pages. v1 backed up in scratchpad.
 - 23 Oct Gmail drafts: Mukerjee (advisor ask), Duan (co-supervisor ask), Jaidka (rewritten: advice question only), cnm.graduate (English + RS degree bar + Commonwealth). Attach CV + proposal PDFs by hand to the three professor emails.
 - Full guide (private, gitignored): NUS CNM Application/story/nus_alignment_story.html
+
+## 23 Oct: reframed after critique (option 1)
+- Proposal v3: "Same Message, Different Reading? Testing Whether LLM-Labelled Political Opinion Travels Across Scripts and Platforms in Pakistan and India". Scripts (Urdu, Roman Urdu, English, Hinglish) + same-story YouTube/Facebook comments; parallel-message design; Roman Urdu/Urdu stance gold set. Dropped WhatsApp, Telegram, TikTok, networks, concept erasure, Singapore. Cites Baumann 2025, Messing 2026, Lind 2025, Sen 2021 TED-On, Kim 2025, Kim et al. 2021. Simulation described honestly (no bare 13.8 vs 0.8). ~1,150 words, 3 pages.
+- Emails rewritten to match (Mukerjee, Duan, Jaidka). Gmail may wrap the arXiv link in a google.com redirect: check before sending.
+- Critique report (private): NUS CNM Application/story/critique_review_23Oct2026.md
