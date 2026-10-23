@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><title>Motivation letter, Asad Ikram, PhD in Communications and New Media, NUS</title>
 <style>
-  @page { size: A4; margin: 12mm 17mm 11mm 17mm; }
-  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt; line-height: 1.24;
+  @page { size: A4; margin: 15mm 18mm 14mm 18mm; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.8pt; line-height: 1.28;
          color: #000; margin: 0; text-align: justify; hyphens: manual; }
   a { color: #000; text-decoration: none; }
   .hdr { text-align: left; font-size: 9pt; color: #333; margin-bottom: 8pt; }
@@ -30,54 +30,76 @@
 <p>Dear Committee members,</p>
 
 <p>In my MSc I built a system to read public reaction to economic policy, and only later found that it had silently thrown
-  away every comment written in Urdu or Hindi. That discovery is why I am applying to CNM. Large language models are now the
-  default way to read political opinion from social media, yet we rarely check whether they read the same message the same way
-  in Urdu script, Roman Urdu, English and Hinglish, or under the same story on YouTube and on Facebook. My proposal sits where CNM's
-  computational and political communication meet: a
-  test of whether LLM-labelled political opinion in Pakistan and India means the same across scripts and platforms, and
-  whether it changes what we conclude when it does not.</p>
+  away every comment written in Urdu or Hindi. By then I had spent six years building data systems for companies, and I had
+  never once been asked whether the numbers were right for the people behind them. That question now runs through my
+  start-up, my industry work and my research, and it is why I am applying to CNM. My proposal asks whether LLM-labelled
+  political opinion in Pakistan and India means the same thing across Urdu script, Roman Urdu, English and Hinglish, and
+  across YouTube and Facebook comments on the same stories, and whether our conclusions change when it does not.</p>
 
-<p><span class="lead">Fit with CNM's faculty.</span> Dr Subhayan Mukerjee's work with Yang and Peng on how engagement
-  metrics shape news production on Facebook, and its replication on another platform, shows that platform matters on the
-  producer side; my second study asks the same question of how audience reaction under the same stories is measured. Dr Zening
-  Duan's work on how operationalisation changes what a text measure captures, and on comparison across YouTube and TikTok, is
-  the basis for my first study on scripts. I have proposed Dr Mukerjee as advisor and Dr Duan as co-supervisor; the work of Associate
-  Professors Taberez Neyazi and Kokil Jaidka on South Asian politics also informs the design.</p>
+<p><span class="lead">Where it started.</span> I began as a computer science student in Lahore taking web-data orders on
+  Fiverr, and completed more than 300 projects as a Level 2 seller while helping other students into freelance work. That
+  taught me where online data comes from and how messy it is before anyone models it. At Dubizzle Labs (2022 to 2024), the
+  company behind marketplaces across the Middle East, I designed its first web-data architecture, serving six products across
+  nine countries in English, Arabic, Urdu and Hindi. I led a team of three engineers and was promoted twice. It was there I
+  first saw that the same thing is written, and counted, differently in different languages and markets.</p>
 
-<p><span class="lead">A good Master's degree in a relevant discipline.</span> I hold an MSc in Data Analytics with
-  Distinction from the University of Portsmouth (master's project 78/100), studied as a Chevening Scholar. My dissertation
-  compared public reaction to UK economic policy across 255,446 comments from X, Reddit, YouTube and Quora, under university
-  ethics approval. Its weakness taught me most: the classifier had been checked against labels produced by a lexicon, so its
-  apparent accuracy measured agreement, not truth.</p>
+<p><span class="lead">The vision: helping governments hear people.</span> In 2023 protests over electricity bills spread
+  across Pakistan. My Chevening Scholarship proposal grew from
+  that: a cross-platform system that would let public bodies read public reaction before such decisions, not after. As a
+  Chevening Scholar I took an MSc in Data Analytics at the University of Portsmouth and graduated with Distinction (master's
+  project 78/100). My dissertation built a small version of the idea, 255,446 comments on UK economic policy from X, Reddit,
+  YouTube and Quora, and taught me its hardest lesson: my classifier had been checked against labels produced by a lexicon,
+  so its apparent accuracy measured agreement, not truth.</p>
 
-<p><span class="lead">Evidence of research experience.</span> That lesson became a preprint with my supervisor, Dr Ella Haig,
-  <i>Is the Platform Part of the Measurement?</i> (arXiv:2610.16757). It sets out a protocol for testing whether the platform
-  acts as a source of measurement error and uses a known-truth simulation to show how pooling misleads when the platform mix
-  shifts. It has not yet been applied to real data, and it is not peer reviewed; the PhD is its first real test. Model and prompt
-  effects are already well documented (Baumann et al. 2025; Messing 2026), so my contribution is the South Asian script and
-  platform test and a Roman Urdu political-stance gold set.</p>
+<p><span class="lead">Seeing the problem at scale.</span> Since December 2024 I have worked for M+C Saatchi Fluency, London,
+  building social listening and AI pipelines for global brands in consumer health, automotive, e-commerce and sport, and
+  supporting work for UK government. I built a year-long discourse study of more than 100,000 posts tagged by an LLM against a
+  codebook that humans signed off, with every prompt version tracked; a fleet of 68 forum crawlers that AI agents repair, but
+  only after their fixes pass verification; and multilingual emotion coding across twelve platforms. Since December 2025 I
+  have also worked as a data engineer at CXG in Dubai, collecting and analysing product data for global fashion brands such
+  as Prada, where the same attribute is written differently in every region and language. Across five companies the lesson
+  was the same: the people who act on these numbers rarely see how fragile they are.</p>
 
-<p><span class="lead">Quantitative and computational skills.</span> For nearly eight years I have collected, labelled and
-  analysed public online text. At Dubizzle Labs in Lahore I built the first web-data system for six products across nine
-  Middle Eastern countries, in English, Arabic, Urdu and Hindi, and was promoted twice. At M+C Saatchi Fluency in London I build
-  LLM tagging and social listening for global brands and support work for UK government. As co-founder and CTO of Artemis AI
-  I lead the architecture of a social media intelligence system for creators, where our own evaluation showed that agreement
-  between models is not accuracy.</p>
+<p><span class="lead">Building it myself: Artemis AI.</span> In February 2025 I co-founded Artemis AI, a UK start-up building
+  an AI advisor that reads creators' and small businesses' Facebook and Instagram pages and tells them what their audience is
+  saying and what to do next. As CTO I lead the architecture and evaluation of an eight-person team's system: 48 models
+  across text, image, video, time series, crisis detection and a page network built with community detection, about ten of
+  them running weekly over 3.4 million public comments, with a beta launch on 15 December 2026. It reads Meta data
+  read-only and stores no commenter identities. Building it taught me that the hardest problem is not modelling but trust.
+  Our own accuracy tracker had to admit that agreement between models is not accuracy, a problem now documented at scale
+  (Kim et al. 2025), and dialect, banter and non-English text are where the models fail first. The problem from my MSc was
+  live inside my own product.</p>
+
+<p><span class="lead">From lesson to research.</span> I turned that lesson into a preprint with my supervisor, Dr Ella Haig,
+  <i>Is the Platform Part of the Measurement?</i> (arXiv:2610.16757): a protocol for testing whether the platform acts as a
+  source of measurement error, with a known-truth simulation showing how pooling misleads when the platform mix shifts. It is
+  not peer reviewed and has not yet been applied to real data. Preparing this application also showed me where my
+  contribution lies: model and prompt effects are already well documented (Baumann et al. 2025; Messing 2026), so the PhD
+  would add the South Asian script and platform test, with designs that hold the message fixed, and a Roman Urdu
+  political-stance gold set, which I have not found in existing work.</p>
+
+<p><span class="lead">Why CNM.</span> CNM is a communication department doing computational work on Asian publics, and that is
+  the training I lack. Dr Subhayan Mukerjee's work with Yang and Peng shows that the link between engagement metrics and news
+  production depends on the platform; my second study asks the same of how audience reaction under the same stories is
+  measured. Dr Zening Duan's work on how operationalisation changes what a text measure captures is the basis for my first
+  study on scripts. I have proposed Dr Mukerjee as advisor and Dr Duan as co-supervisor, and the work of Associate Professors
+  Taberez Neyazi and Kokil Jaidka on South Asian political communication also informs the design.</p>
 
 <p><span class="lead">Why a PhD, and why now.</span> Industry keeps giving me questions it cannot answer: whether a negative
   comment means the same thing on two platforms, whether a model reads Roman Urdu fairly, whether agreement between models is
-  accuracy. I want the training to answer them
-  properly, and to carry the results back to the people who rely on these numbers, from small businesses to public bodies in
-  Pakistan, which is the promise I made in my Chevening application.</p>
+  accuracy. A product ships by Friday; nobody pays for a gold set until the numbers are already wrong. I want four years to
+  answer these questions properly, then carry the answers back into Artemis and, as I promised in my Chevening application,
+  into how public bodies in Pakistan read the public.</p>
 
-<p><span class="lead">What I do not yet bring, and what I can offer.</span> I have no peer-reviewed publication yet, and my
-  training in communication theory and causal inference is limited; CNM's core modules in theory and methods are a main reason I
-  am applying. In return, I can support teaching in social media analytics through the Graduate Assistantship Programme.</p>
+<p><span class="lead">What I do not yet bring, and what I offer.</span> I have no peer-reviewed publication yet, and my
+  training in communication theory and causal inference is limited; CNM's core modules are a main reason I am applying. I
+  can offer nearly eight years of hands-on data work, Urdu and Hindi for codebook design, and support for teaching in social
+  media analytics through the Graduate Assistantship Programme.</p>
 
-<p><span class="lead">Practicalities.</span> Both my degrees were taught in English. I am applying for the NUS Research
+<p><span class="lead">Practicalities.</span> Both my degrees were taught in English, and I am applying for the NUS Research
   Scholarship. My referees are Dr Ella Haig, Associate Professor in AI, University of Portsmouth, my dissertation supervisor
-  and co-author, and Dr Fahad Ahmad, Senior Lecturer, University of Portsmouth, who taught and assessed me on the MSc. Thank you
-  for considering my application.</p>
+  and co-author, and Dr Fahad Ahmad, Senior Lecturer, University of Portsmouth, who taught and assessed me on the MSc. Thank
+  you for considering my application.</p>
 
 <div class="sig">Yours sincerely,<br><span class="n">Asad Ikram</span></div>
 
