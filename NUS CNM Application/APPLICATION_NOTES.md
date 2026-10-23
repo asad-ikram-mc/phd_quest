@@ -19,5 +19,6 @@ NUS Research Scholarship (international): S$3,000/month + full tuition subsidy, 
 - **A/P Kokil Jaidka: NOT taking new PhD students for Fall 2027/2028** (her profile). Cite her; ask for advice only. The drafted Jaidka email must be rewritten.
 - Taberez Neyazi (India/WhatsApp/Facebook political communication): strong fit, availability unconfirmed (IAS 2025-26).
 - Ozan Kuru (poll literacy): likely QE committee; cite.
-- Proposal section 5 still names Jaidka as closest fit: update before submitting.
+- 23 Oct: proposal v2 done (Mukerjee primary, Duan co; cites Mukerjee 2023 JoC, Ouyang et al. 2026 IJPP, Duan 2025 PA, Chen/Duan/Kim 2024 JCMC, Neyazi/Tan/Kuru 2026 IJPOR; South & Southeast Asia; audience-network RQ). ~1,100 words, 3 pages. v1 backed up in scratchpad.
+- 23 Oct Gmail drafts: Mukerjee (advisor ask), Duan (co-supervisor ask), Jaidka (rewritten: advice question only), cnm.graduate (English + RS degree bar + Commonwealth). Attach CV + proposal PDFs by hand to the three professor emails.
 - Full guide (private, gitignored): NUS CNM Application/story/nus_alignment_story.html
