@@ -293,6 +293,19 @@ details.fold>.fold-body{padding:4px 18px 18px;border-top:1px solid var(--border)
 .prio-legend span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
 .prio-legend .lg-now::before{background:var(--red)} .prio-legend .lg-week::before{background:var(--amber)} .prio-legend .lg-month::before{background:var(--cyan)} .prio-legend .lg-later::before{background:var(--purple)}
 .prio-list{display:flex;flex-direction:column;gap:10px}
+.prio-grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px;align-items:start}
+.prio-side{position:sticky;top:16px;display:flex;flex-direction:column;gap:14px;max-height:calc(100vh - 32px);overflow:auto}
+.ps-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 14px}
+.ps-h{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;display:flex;justify-content:space-between}
+.ps-h b{color:var(--text2)}
+.ps-i{padding:7px 0;border-top:1px solid var(--border);font-size:13px;line-height:1.35}
+.ps-i:first-of-type{border-top:0}
+.ps-i .ps-n{color:var(--text);display:block}
+.ps-i .ps-d{color:var(--text3);font-size:11.5px}
+.ps-i a{color:inherit;text-decoration:none}
+.ps-sent .ps-h{color:var(--green)} .ps-rej .ps-h{color:#e8806b}
+.prio-top10 .prio-rank{background:linear-gradient(135deg,#d4a437,#e8c35a)!important;color:#1a1a1a!important}
+@media (max-width:1000px){.prio-grid{grid-template-columns:1fr}.prio-side{position:static;max-height:none}}
 .prio-item{display:flex;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.15s}
 .prio-item:hover{border-color:var(--border2)}
 .prio-item.done{opacity:0.42}
@@ -704,7 +717,7 @@ footer a:hover{color:var(--gold2)}
       </div>
     </div>
     <div class="prio-filters" id="prio-filters"></div>
-    <div class="prio-list" id="prio-list"></div>
+    <div class="prio-grid"><div class="prio-list" id="prio-list"></div><aside class="prio-side" id="prio-side"></aside></div>
     <div class="prio-hint">Tap a row to open it. "Do now" rows start open; the rest stay folded until you need them.</div>
     <div class="prio-kit">
       <div class="prio-kit-title">Build once, reuse everywhere (do these on day one, before any application)</div>
@@ -3458,6 +3471,21 @@ function renderPriorities(){
       +'<div class="prio-check'+(isDone?' on':'')+'" title="Mark the whole item done" onclick="togglePrio(\''+p.id+'\',this)">&#10003;</div>';
     el.appendChild(item);
   }
+  /* 27 Oct: Top 10 most suitable open options first; submitted, rejected, parked and done move to the side panel */
+  const top10=actives.filter(p=>TOP10.includes(p.id)).sort(byDeadline);
+  const restAct=actives.filter(p=>!TOP10.includes(p.id));
+  renderSide(fups,rejectedItems,parked,doneItems);
+  if(top10.length){
+    const ht=document.createElement('div');ht.className='prio-sec';ht.textContent='Top '+top10.length+' — most suitable open PhDs, by deadline';el.appendChild(ht);
+    top10.forEach((p,i)=>{renderOne(p,i);el.lastChild.classList.add('prio-top10');});
+  }
+  if(readyItems.length){
+    const h0=document.createElement('div');h0.className='prio-sec';h0.textContent='Ready to apply — documents or email ready, just submit or send';el.appendChild(h0);
+    readyItems.forEach((p,i)=>renderOne(p,top10.length+i));
+  }
+  const ho=document.createElement('div');ho.className='prio-sec';ho.textContent='Other open options and tasks';el.appendChild(ho);
+  restAct.forEach((p,i)=>renderOne(p,top10.length+readyItems.length+i));
+  return;
   let n0=0;
   if(readyItems.length){
     const h0=document.createElement('div');h0.className='prio-sec';h0.textContent='Ready to apply \u2014 documents or email ready, just submit or send';el.appendChild(h0);
@@ -3481,6 +3509,16 @@ function renderPriorities(){
     const h3=document.createElement('div');h3.className='prio-sec';h3.textContent='Done \u2014 finished, kept for the record';el.appendChild(h3);
     doneItems.forEach((p,i)=>renderOne(p,n0+actives.length+fups.length+rejectedItems.length+parked.length+i));
   }
+}
+const TOP10=['p-swiss-sges','p-jena-humprecht','p-qmul-castro','p-ellis-phd-2027','p-syracuse','p-ntu-wkwsci','p-hkust-tyson','p-us-misinfo-dec','p-iu-osome','p-mbzuai'];
+function renderSide(fups,rej,parked,done){
+  const side=document.getElementById('prio-side'); if(!side) return;
+  const now=new Date(); now.setHours(0,0,0,0);
+  const row=p=>{let d='';if(p.due){const dd=new Date(p.due[0],p.due[1]-1,p.due[2]);const dy=Math.round((dd-now)/86400000);d=(dy>=0?'next: ':'')+dd.getDate()+' '+MONTHS_SHORT[dd.getMonth()]+(dy>=0?' \u00b7 '+dy+'d':'');}
+    const t=String(p.time||'').split('\u00b7')[0].replace(/^[\u2705\u274c\u23f8\u23f9\u26a0\u2709 ]+/,'').trim();
+    return '<div class="ps-i"><span class="ps-n">'+escHtml(shortName(p.name))+'</span><span class="ps-d">'+escHtml((d?d+' \u00b7 ':'')+t).slice(0,120)+'</span></div>';};
+  const box=(cls,title,arr)=>arr.length?'<div class="ps-box '+cls+'"><div class="ps-h"><span>'+title+'</span><b>'+arr.length+'</b></div>'+arr.map(row).join('')+'</div>':'';
+  side.innerHTML=box('ps-sent','\u2713 Submitted \u00b7 waiting',fups)+box('ps-rej','Not selected',rej)+box('','Parked',parked)+box('','Done',done);
 }
 let prioAllOpen=false;
 function togglePrioAll(){
