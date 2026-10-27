@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Motivation letter, Asad Ikram, ETH AI Center Doctoral Fellowship 2027</title>
+<style>
+  @page { size: A4; margin: 13mm 17mm 12mm 17mm; }
+  body { font-family: "Times New Roman", Times, "Liberation Serif", serif; font-size: 10.5pt; line-height: 1.25;
+         color: #000; margin: 0; text-align: justify; hyphens: manual; }
+  a { color: #000; text-decoration: none; }
+  .hdr { text-align: left; font-size: 9pt; color: #333; margin-bottom: 8pt; }
+  .hdr b { font-size: 12pt; color: #000; display: block; margin-bottom: 1pt; }
+  .to { text-align: left; margin-bottom: 5pt; }
+  .date { text-align: left; margin-bottom: 5pt; }
+  .re { font-weight: bold; margin-bottom: 6pt; text-align: left; }
+  p { margin: 0 0 5pt; }
+  .lead { font-weight: bold; }
+  .sig { margin-top: 7pt; text-align: left; }
+  .sig .n { font-weight: bold; }
+</style></head><body>
+
+<div class="hdr"><b>Asad Ikram</b>
+  Lahore, Pakistan &middot; asad.ikram53@gmail.com &middot;
+  linkedin.com/in/asad-ikram98 &middot; arxiv.org/abs/2610.16757</div>
+
+<div class="to">Selection Committee, ETH AI Center Doctoral Fellowship 2027<br>
+  ETH AI Center, ETH Zurich</div>
+
+<div class="date">27 October 2026</div>
+
+<div class="re">Re: Proposed mentors Prof. Elliott Ash (main, D-GESS) and Prof. Celestine Mendler-Dünner (D-INFK)<br>
+  Core areas: Trustworthy AI Systems; LLMs and Natural Language Understanding<br>
+  Impact areas: Foundations of Data Science; Apertus / Open Source LLMs; computational social science</div>
+
+<p>Dear Members of the Selection Committee,</p>
+
+<p>When an LLM says Reddit is angrier than X about the same budget, three things could be true: the people differ, the
+  instrument differs, or the platform chose what we saw. My MSc system, which read public reaction to UK economic policy
+  on X, Reddit, YouTube and Quora, assumed the answer. When I looked closely, it treated the four platforms as if they
+  measured alike, silently dropped comments written in Urdu or Hindi, and looked accurate only because it agreed with the
+  lexicon that had made its training labels. My research interest is one question: when AI reads what the public
+  thinks, is it right, and equally right on every platform and in every language? Professor Ash's group asks when LLMs can measure social-science constructs;
+  Professor Mendler-Dünner asks how much a platform shapes what people see. My doctorate would sit where those questions
+  meet. It would make the instruments that now read the public what the ETH AI Center calls &ldquo;trustworthy,
+  accessible, and inclusive AI systems&rdquo;: checked against people, open to audit, and fair to Urdu and Roman Urdu.</p>
+
+<p><span class="lead">Research area: is the platform part of the measurement?</span> My project would separate those three
+  sources. It builds on my preprint with Dr Ella Haig (Ikram and Haig 2026, arXiv:2610.16757), which adapts
+  generalizability theory, measurement invariance and score linking to machine-labelled sentiment, treating the platform
+  like a survey mode. Its known-truth simulation shows that pooling platforms misleads when they measure differently and
+  the mix shifts, and that relative linking corrects this when the true measurement functions are known; with a realistic
+  reference point the advantage shrinks, so how much survives estimation is what the doctorate must show. Study 1 tests
+  the instrument: does an LLM give the same stance and sentiment to the same political message in Urdu script, Roman Urdu
+  and English? Each LLM annotator is treated as a test item and each script as a group (differential item functioning),
+  against disagreement-aware labels from native-speaker coders, with the message held fixed. Study 2 holds the story
+  fixed instead: the same story from the same outlet on YouTube and Facebook. LLM error is measured against human labels
+  on each platform, and the comments a platform shows first are compared with all comments, so a cross-platform gap
+  splits into instrument error, platform selection and what remains, audience and expression. A small, consented donation
+  pilot of what users were actually shown is a stretch goal, to be designed with Prof. Mendler-Dünner. Study 3 asks what
+  correction costs: how many human labels design-based correction (Egami et al. 2023) needs before a cross-platform or
+  cross-language comparison can be trusted, and whether correcting changes a substantive conclusion. A null result would
+  support comparisons researchers already make. Study 1 needs no platform data; for Study 2 I would apply to the YouTube
+  Researcher Program and the Meta Content Library, and if access fails, Study 1 and YouTube alone still answer the core
+  question. Model and prompt choices are known to change LLM-based conclusions (Baumann et al. 2025; Messing 2026),
+  equivalence across languages has to be validated rather than assumed (Lind et al. 2025), and the platform has been
+  named as an error source (Sen et al. 2021). What these leave open is whether LLM labels mean the same across South
+  Asian scripts and across platforms when the content is held fixed. I have not found a Roman Urdu political-stance gold
+  set; the project would build one.</p>
+
+<p><span class="lead">Why it needs both mentors.</span> Prof. Ash's group defines what is being measured: how LLMs can
+  measure scalar social-science constructs (Licht et al., EMNLP 2025), whether they can capture human annotator
+  disagreement (Ni et al., EACL 2026), and point-in-time LLMs, which bear on whether opinion changed or the model did.
+  With him I would fix the construct and the estimand and run Study 1. Prof. Mendler-Dünner's work supplies the other
+  half. A ranking system is performative: the comments it shows first can change which comments get replies and likes,
+  so the opinion mix we collect is partly produced by the platform. Her measurement of a search engine's performative
+  power (Mendler-Dünner, Carovano and Hardt, NeurIPS 2024) is the model for Study 2, and her finding that LLM survey
+  answers carry ordering and labelling biases (Dominguez-Olmedo, Hardt and Mendler-Dünner, NeurIPS 2024) is the warning
+  for Study 1. An instrument study that ignores the platform is incomplete; a platform audit with an unvalidated
+  instrument measures nothing.</p>
+
+<p><span class="lead">Competence for Trustworthy AI and LLMs.</span> In my MSc (Distinction, including the Explainable AI
+  module) I compared a VADER lexicon baseline, a BiLSTM and a fine-tuned BERT, used temperature-scaling calibration,
+  compared models with McNemar and bootstrap tests, and explained predictions with LIME and integrated gradients. The
+  preprint adds DIF tests, a multilevel model and a 500-replication known-truth simulation, with public code. At M+C
+  Saatchi Fluency (since December 2024) I apply the same discipline to LLM labelling. In a twelve-month consumer
+  discourse study for the New York team, people signed off an 18-theme codebook, a 500-row hand-checked pilot compared
+  three prompt versions, and every GPT-4o-mini label carries a prompt-version hash, because the prompt is part of the
+  instrument. I also built Ford Crawler IQ, where AI agents repair and build more than 60 forum crawlers and changes ship
+  only after verification. As co-founder and CTO of Artemis AI (since February 2025) I lead the architecture and
+  evaluation of a social-media intelligence system with 48 models in the architecture, about ten running weekly over
+  3.39 million public comments, read-only through the official Meta Graph API. Our labelling cascade passes comments from
+  our own models to an LLM when confidence is low, and our tracker had to call model agreement &ldquo;an accuracy
+  proxy&rdquo;: when one model becomes the benchmark for another, a rising score can mean agreement with that model rather
+  than with people (Kim et al. 2025).</p>
+
+<p><span class="lead">Strengths for my impact areas, Foundations of Data Science and Apertus / Open Source LLMs.</span> I am
+  a native Urdu speaker and have worked with public text in English, Arabic, Urdu and Hindi, so I can design the Urdu and
+  Roman Urdu codebook and gold set with native-speaker coders, not at second hand. My dissertation measured public
+  reaction to UK economic policy across four platforms, and my preprint brings survey methodology and psychometrics to
+  machine-labelled data. An open, frozen multilingual model such as Apertus is the auditable annotator this design needs:
+  because it does not change silently, a shift in labels can be traced to opinion rather than to the instrument, and its
+  labelling of Urdu script and Roman Urdu could be traced back to the crawl it was trained on.</p>
+
+<p><span class="lead">Track record relative to opportunities.</span> I began a BS in Computer Science at FAST-NUCES with no
+  computing background and started freelancing on Fiverr in my second year (442 completed orders, Level 2 Seller). At
+  Dubizzle Labs, Lahore (2022 to 2024), I rose from Associate Software Engineer to Senior Data Engineer, designed with one
+  colleague the company's first web-data architecture for six products across ten countries, and led a team of three. My
+  2023 Chevening application proposed a cross-platform system to help public bodies read public reaction in time, with
+  the Karachi business shutdowns over fuel and electricity price rises as its example. As a Chevening Scholar (2024/25),
+  selected in a cycle of more than 70,000 applications, I took an MSc in Data Analytics at the University of Portsmouth
+  with Distinction (master's project 78); what my dissertation on 255,446 public comments taught me led to the
+  preprint.</p>
+
+<p><span class="lead">Interdisciplinary teams.</span> At Artemis I lead four contractors across machine learning, back end,
+  design and legal; at Fluency I work between engineers, analysts and clients in London and New York. I am usually the
+  person who checks the labels against people and also keeps the pipeline running, and I want mentors who care about
+  both.</p>
+
+<p><span class="lead">Entrepreneurial interests.</span> Artemis AI exists so that creators and small businesses who cannot
+  afford social-media intelligence can still compete with those who can. Building it taught me that the hardest problem is
+  not modelling but trust, so its advisor may only state numbers that come from a checked tool. Pilots begin on 1 December
+  2026 and an invited beta on 15 December. I would join the optional entrepreneurial or industry track, with Artemis as a
+  live test of whether validated measurement changes what an owner decides.</p>
+
+<p><span class="lead">Community and culture.</span> I helped several fellow students from remote Punjab start freelancing,
+  and have mentored junior engineers and MSc classmates. I write web-scraping-guide.com, a free guide to responsible web
+  data collection, updated weekly. At the Center I would run a data-collection clinic for fellows on research-access
+  programmes, official APIs and ethics, and contribute the Urdu and Roman Urdu evaluation data the project builds to
+  multilingual evaluation of Apertus.</p>
+
+<p><span class="lead">What I do not yet bring, and why now.</span> I have no peer-reviewed publication yet; the preprint is a
+  protocol and an illustrative simulation, not yet applied to real data. My formal grounding is a BS that included
+  Probability and Statistics, Linear Algebra, Calculus, Numerical Methods and Applied Machine Learning, and an MSc in
+  applied machine learning and explainable AI; the causal design of Study 2 and the estimation questions of Study 3 need
+  more statistical learning and causal inference than that, which is why ETH's coursework and a mentor in AI foundations
+  are part of this plan. Industry keeps raising questions like these without the time to answer them: a product ships by
+  Friday, and nobody pays for a gold set until the numbers are already wrong. I want my doctorate to answer them
+  properly, then carry the answers into Artemis AI and, as I promised in my Chevening application, into how public bodies
+  read the public.</p>
+
+<p>My referees are Dr Ella Haig (Associate Professor in AI, my supervisor and co-author) and Dr Fahad Ahmad (Senior
+  Lecturer, who taught and assessed me on the MSc), both at the University of Portsmouth. Thank you for considering my
+  application.</p>
+
+<div class="sig">Yours sincerely,<br><span class="n">Asad Ikram</span></div>
+
+</body></html>
