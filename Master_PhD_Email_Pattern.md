@@ -6,6 +6,14 @@
 
 **What changed in v2:** the paper with Dr Ella Haig is finished (25 pages, on arXiv shortly), so every email upgrades from "dissertation finding" to "finished methods paper". Two new checks (novelty survival, one-new-fact follow-ups), the pitch-page escalation, and a lessons log from the live campaign (Nelimarkka, Ella, Theocharis).
 
+**What changed on 30 Oct 2026 (v4, from Stevie Chancellor's guide "How to Email a Professor and Actually Get a Response About PhD Programs", notatechdemo.substack.com):** professors now get 100+ near-identical emails a season (paper summary, CV recap, "15-minute call?") and auto-respond to them. These rules override anything below:
+- **Three parts, short.** (1) Who you are, your interest in 2-3 sentences, your purpose stated plainly. (2) Fit in 3-5 specific sentences: where YOUR question meets THEIR current work. Rule 3 still holds (hook on their own paper), but connect to it, never summarise it or echo their abstract. (3) ONE concrete ask: are you taking students for 2027, or is this a fit. Drop the default "15-minute call" unless their page invites meetings.
+- **Use recent work:** one or two papers from Google Scholar sorted by date, plus what their current students do. Verify every cited paper exists and is theirs.
+- **Banned:** "intriguing", "resonates", "innovative research", "esteemed", generic praise, keyword-matching, questions the department website answers, asking to skip the process.
+- **Subject:** school + programme + topic. **Salutation:** "Dr/Professor Surname", spelled right. **Attach:** CV and at most the one paper. One email each, no CCs.
+- **Timing:** 6-8 weeks before the deadline; one gentle follow-up after about a week.
+- **Voice:** it must sound like Asad. Short, plain sentences; nothing that reads machine-polished.
+
 **What changed on 1 Oct 2026 (after the Utrecht and VU rejections): READ `LESSONS_FROM_REJECTIONS.md` FIRST.** Four rules now override anything below that conflicts with them. (1) Map every criterion in the advert's profile to a sentence of evidence in the advert's own words. (2) Lead with research and analysis; collection infrastructure gets one line at most (Section 3 below is amended). (3) Open on their phenomenon and papers, never "my question transfers directly to your project". (4) Never promise an arXiv date; say "complete, not yet submitted" until it is live.
 
 ---
